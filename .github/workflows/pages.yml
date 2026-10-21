@@ -32,14 +32,23 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends ffmpeg
           ffmpeg -version
-      - run: node scripts/fetch-test-fixtures.mjs
+      - name: Verify preserved complete model evidence
+        run: node scripts/verify-model-evidence.mjs
+      - name: Fetch required integration fixtures
+        run: |
+          node scripts/fetch-yolo26-models.mjs --size=N
+          node scripts/fetch-yolo26-validation-fixtures.mjs
       - name: Unit, geometry, lifecycle and PWA checks
         run: npm test
         env:
           FETCH_E2E_FIXTURES: '1'
-      - name: Execute every required real YOLO26 export
-        run: npm run validate:models
       - run: npm run build
+      - name: Install pinned CI browser test runner
+        run: |
+          npm install --prefix /tmp/local-yolo-browser-qa --no-save playwright@1.64.1
+          /tmp/local-yolo-browser-qa/node_modules/.bin/playwright install --with-deps chromium
+      - name: Execute real browser backend and PWA release integration
+        run: node scripts/validate-browser-release.mjs
       - name: Refuse publication without current complete model, browser and PWA evidence
         run: node scripts/check-release-gate.mjs
       - uses: actions/upload-artifact@v4
@@ -50,6 +59,7 @@ jobs:
             docs/model-validation-matrix.json
             docs/browser-validation-matrix.json
             docs/pwa-validation.json
+            test-results/browser-release/
           if-no-files-found: warn
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4

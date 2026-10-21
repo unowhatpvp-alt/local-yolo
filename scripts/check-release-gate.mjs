@@ -58,7 +58,10 @@ export function validateReleaseEvidence({fingerprint,catalog,node,browser,pwa}){
   const gpu=b?.webgpu;
   if(n)need((n.sourceFingerprint||node?.sourceFingerprint)===fingerprint,`${id}: Node model record was tested against a different source fingerprint.`);
   if(b)need((b.sourceFingerprint||browser?.sourceFingerprint)===fingerprint,`${id}: browser model record was tested against a different source fingerprint.`);
-  if(gpu?.status==='unsupported-operator-fallback'){
+  if(gpu?.status==='environment-wasm-fallback'){
+   need(gpu.attempt?.secureContext===true&&gpu.attempt?.adapterAcquired===false&&typeof gpu.attempt?.reason==='string'&&gpu.attempt.reason.length>5,`${id}/gpu: unavailable hardware requires an actual secure-browser capability observation; it is not a WebGPU pass.`);
+   runtime(gpu.fallback,task,`${id}/environment-wasm-fallback`,'WASM');
+  }else if(gpu?.status==='unsupported-operator-fallback'){
    need(gpu.attempt?.navigatorGpu===true&&gpu.attempt?.adapterAcquired===true&&['initialization','inference'].includes(gpu.attempt?.phase)&&typeof gpu.attempt?.error==='string'&&/operator|kernel|unsupported|not implemented/i.test(gpu.attempt.error),`${id}/gpu: operator fallback requires a genuine GPU adapter and observed operator/kernel error.`);
    runtime(gpu.fallback,task,`${id}/gpu-wasm-fallback`,'WASM');
   }else runtime(gpu,task,`${id}/webgpu`,'WebGPU');

@@ -6,3 +6,4 @@ tests/fixtures/
 
 __pycache__/
 *.pyc
+test-results/
