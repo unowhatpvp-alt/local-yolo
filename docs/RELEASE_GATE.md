@@ -4,15 +4,15 @@ Current acceptance policy follows the user’s 2026-10-21 instruction: [device l
 
 Production publication requires this complete gate to pass. The user has authorized completing and publishing the project when its release conditions are satisfied; an unverified candidate must not be published. Required online scope is **25 genuine YOLO26 exports**: detection, segmentation, pose, classification and OBB, each N/S/M/L/X. YOLO11 is a local-import regression target; it does not substitute for any required YOLO26 model.
 
-## Current candidate observations — 2026-10-21
+## Verified application observations — 2026-10-21
 
-Current fingerprint: `3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c`. Fresh Node WASM25/25, actual Chrome155 WASM25/25, genuine NVIDIA Blackwell WebGPU25/25, 56 automated tests and 14 UI checks passed. Secure PWA11/11, four Chromium-emulated touch checks, the strict local gate (errors=[]), reproducible build revision fe0bf848230e and six static-artifact groups passed. Final GitHub CI, commit, production deployment and live acceptance remain pending. This paragraph records observations only and changes no gate requirement, model scope or failure assertion. See [current validation](VALIDATION.md).
+Current fingerprint: `3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c`. Fresh Node WASM25/25, actual Chrome155 WASM25/25, genuine NVIDIA Blackwell WebGPU25/25, 56 automated tests and 14 UI checks passed. Secure PWA11/11, four Chromium-emulated touch checks, the strict local gate (errors=[]), reproducible build revision fe0bf848230e and six static-artifact groups passed. The first verified application commit, exact GitHub CI results, Pages run and live observations are recorded in the [release receipt](DELIVERY.md). This paragraph records observations only and changes no gate requirement, model scope or failure assertion. See [current validation](VALIDATION.md).
 
 ## Preserved baseline
 
 - Baseline commit: `2cea0ebebd3399a77a2d649c44755e54ca0e16b0`.
 - Preserved remote branch: `backup/minimal-v1-2cea0eb`.
-- Current isolated development branch: `codex/minimal-v1-release` (continues `develop/minimal-v1.1`).
+- Implementation branch: `codex/minimal-v1-release` (continued `develop/minimal-v1.1`; merged through the reviewed PR).
 - Production branch: `main`.
 
 Only `main` can run the production Pages build/deploy jobs. A manual dispatch on any other branch skips both production jobs. Development push/PR validation has only `contents: read`, no Pages permission, no Pages environment and no publication step. Production build has Pages read permission; only the successful deployment job receives Pages write and OIDC permissions. Do not move, weaken or bypass the gate after a failed check.

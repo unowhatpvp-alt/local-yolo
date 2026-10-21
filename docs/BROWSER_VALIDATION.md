@@ -32,4 +32,4 @@
 
 ## 发布状态
 
-安全PWA为11/11，本地严格Gate及完整构建验收通过；最终GitHub CI、提交、Pages部署和线上验收未完成。本浏览器通过不单独构成发布结论。旧Chrome154与GPU不可用报告保存在[接手前报告](diagnostics/pre-takeover-BROWSER_VALIDATION.md)，未重标为当前结果。
+安全PWA为11/11，本地严格Gate及完整构建验收通过；首次GitHub CI、应用提交、Pages运行及线上实测状态见[发布收据](DELIVERY.md)。本浏览器通过不单独构成发布结论。旧Chrome154与GPU不可用报告保存在[接手前报告](diagnostics/pre-takeover-BROWSER_VALIDATION.md)，未重标为当前结果。

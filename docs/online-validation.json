@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "type": "actual-github-pages-validation",
+  "checkedAt": "2026-10-21T21:42:05.977Z",
+  "status": "pass",
+  "site": "https://unowhatpvp-alt.github.io/local-yolo/",
+  "applicationCommit": "e791802f395fa47a2464ceb5b283025b7093c619",
+  "implementationCommit": "038a1a4ac6a044060aa170dfbdcc8480b1181dd0",
+  "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
+  "productionRun": "https://github.com/unowhatpvp-alt/local-yolo/actions/runs/39678500898",
+  "assets": [
+    "https://unowhatpvp-alt.github.io/local-yolo/assets/index-BppwNdth.js"
+  ],
+  "languageSwitch": "English to Chinese observed",
+  "cache": "YOLO26n 9.4 MB listed; cached start observed before WASM reload",
+  "webgpu": {
+    "actualBackend": "WebGPU",
+    "model": "YOLO26n",
+    "resultCount": 5,
+    "bus": 1,
+    "person": 4,
+    "json": "online-webgpu-results.json"
+  },
+  "wasm": {
+    "actualBackend": "WASM",
+    "model": "YOLO26n",
+    "resultCount": 5,
+    "json": "online-wasm-results.json"
+  },
+  "coordinateSpace": {
+    "width": 810,
+    "height": 1080,
+    "maxBackendBoxDifference": 0.000274658203125,
+    "boxesWithinSource": true
+  },
+  "png": {
+    "downloaded": true,
+    "width": 810,
+    "height": 1080,
+    "bytes": 1616039,
+    "visuallyInspected": true
+  },
+  "consoleErrors": [],
+  "limitations": [
+    "Physical camera unavailable: app displayed the actual no-device error.",
+    "No physical iPhone/Safari/iOS installation or touch hardware verification.",
+    "Viewport/touch tests are Chromium emulation, not device certification."
+  ]
+}

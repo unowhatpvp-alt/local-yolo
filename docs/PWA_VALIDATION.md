@@ -1,6 +1,6 @@
 # 当前PWA验收与真机限制
 
-**安全上下文中的11项真实PWA检查全部通过，包括实际存储故障恢复。本地严格Gate通过，最终GitHub CI、提交、Pages部署和线上验收仍待完成。** 当前指纹为`3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c`。依据[实际PWA JSON](pwa-validation.json)，不是静态构建或API单元替身。
+**安全上下文中的11项真实PWA检查全部通过，包括实际存储故障恢复。本地严格Gate通过；首次GitHub CI、应用提交、Pages运行及线上实测状态见[发布收据](DELIVERY.md)。** 当前指纹为`3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c`。依据[实际PWA JSON](pwa-validation.json)，不是静态构建或API单元替身。
 
 本轮在Windows Playwright Chromium、浏览器信任的`http://127.0.0.1:4175/local-yolo/`执行。localhost被浏览器视为安全上下文；这与旧报告中的远程不安全HTTP环境不同。测试使用两份真实finalized生产构建，先前版本只增加HTML验证标记并有独立SW版本；没有替换推理代码、IndexedDB或Service Worker API。
 
