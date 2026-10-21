@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
+  "applicationCommit": "83acca20217317255f135a074cb3ed3ded888be1",
+  "audit": "Independent read-only comparison of committed catalog, Node/browser records and CSVs",
+  "requiredModels": 25,
+  "decodedSamplesChecked": 410,
+  "nodeRawTensorsChecked": 90,
+  "renderPngHashesAndDimensionsChecked": 25,
+  "checks": [
+    "Exact IDs/task/size/bytes/SHA and model signatures agree",
+    "Nonempty segmentation masks",
+    "Seventeen-keypoint human poses",
+    "Four-point oriented polygons",
+    "Finite normalized classification probabilities",
+    "Awaited Node releases and observed browser worker termination",
+    "Required5tasks\u00d7N/S/M/L/Xscope retained",
+    "GPU/PWA unavailable and physical devices unverified, not passed"
+  ],
+  "materialContradictions": 0,
+  "sourceMutated": false,
+  "scope": "Evidence consistency and qualitative artifacts; not a new inference execution, hardware run or secure PWA run."
+}

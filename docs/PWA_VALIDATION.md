@@ -26,18 +26,11 @@ The lifecycle checks exercise hidden/unsafe precache rejection, partial-cache cl
 
 The release-gate checks confirm that missing or stale evidence, a reduced model set, unavailable GPU context and a non-main production dispatch cannot produce an eligible release.
 
-## Current build verification is pending
+## Current clean production artifact verified
 
-No build, public HTML, application source, manifest or harness HTML was changed during this QA refresh because root is running the real browser matrix. The dependency patch changes the application fingerprint. Previous artifact verification cannot therefore be presented as verification of this current source.
+After the actual Node/browser matrix, root executed a fresh serialized production build and the independent static verifier. At `2026-10-21T02:15:38.687Z`, all six static groups passed: 24 production files, 15 actual shell precache entries, revision `395743021b71`, `/local-yolo/` URLs, all four entries/backlinks, manifest scope/start and real PNG dimensions, matching ONNX runtime modules/WASM, and a revision recomputed from the emitted bytes. No development harness, fixtures, model weights or validation configuration entered the artifact. See [actual artifact checks](build-verification.json) and [build log](evidence/final-build.txt).
 
-After browser validation, serialize the final build and run:
-
-```sh
-npm run build
-node scripts/verify-build.mjs --output docs/build-verification.json
-```
-
-The verifier must check production-only output, `/local-yolo/` URLs, all four entry paths/backlinks, manifest scope/start and real PNG dimensions, every actual visible precache resource, runtime modules/WASM and consistency of the revision with emitted bytes. A build exit code alone is insufficient. Keep it separate from actual secure-browser PWA validation.
+This is current-source static evidence. It does not execute a service worker or prove installation, offline inference, updating, physical camera or WebGPU. All eleven actual secure-browser PWA checks remain unavailable and continue to block release.
 
 ## Required secure-browser retest
 

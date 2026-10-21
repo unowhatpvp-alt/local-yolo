@@ -92,4 +92,10 @@ Nano 另外完成 250 次真实串行持续推理及释放。最后窗口 RSS �
 
 ## GitHub 独立 CI 的实际结果
 
-修复运行 [39530445411](https://github.com/unowhatpvp-alt/local-yolo/actions/runs/39530445411) 已完成：37 项测试通过、0 失败，1 项因新运行器缺旧 YOLO11 可选素材跳过；本地完整38项全部实际通过。全部25个真实Node模型和生产构建通过。整体失败于严格Gate：代码修补提交尚带旧browser/PWA报告，64项错误包括过期指纹及既有GPU/PWA缺口；未重写为绿色。最终本地全部报告已重跑，Gate仅余37项环境证据缺口，另保留全屏最终透明度未确认问题。详见 [CI结构记录](ci-validation.json)、[原日志](diagnostics/github-ci-015d9db.txt)。后续开发分支验证仍不会发布。
+最终证据提交 `83acca20217317255f135a074cb3ed3ded888be1` 的 [CI 39531783945](https://github.com/unowhatpvp-alt/local-yolo/actions/runs/39531783945) 已完成：37项测试通过、0失败，1项因新runner缺旧YOLO11可选素材跳过；本地完整38项全部实际通过。全部25个真实Node模型通过，无失败、缺失或待测，生产构建通过。
+
+整体CI为 **failure**，不是绿色：严格Gate仅有预期37项WebGPU/HTTPS-PWA环境证据缺口，没有过期指纹、Node或browserWASM错误。所有25组合仍保留，未发布。见 [最终CI记录](ci-validation.json)、[原生日志](diagnostics/github-ci-83acca2.txt)。最早FFmpeg缺失失败和修补时旧报告64项Gate错误也保留于诊断记录，未被覆盖成通过。
+
+最后一次文档提交仅补充静态构建、PWA限制说明及CI/audit收据，使用 `[skip ci]` 避免“记录CI结果”再次触发相同验证。没有改动应用、依赖、模型、工作流或37项失败结论；完整应用指纹仍为 `ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e`。这不绕过生产发布门槛；main及Pages保持原版。
+
+独立只读复核另外检查410个输出样本、90个原始张量、25张PNG哈希/尺寸及任务/lifecycle证据，未发现实质矛盾：[审计收据](evidence/independent-audit.json)。该复核是证据一致性检查，不冒充新的硬件或真实PWA测试。

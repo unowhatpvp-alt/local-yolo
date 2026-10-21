@@ -99,7 +99,7 @@
       "status": "unverified",
       "steps": [
         "Open the reviewed V1.1 build on an approved HTTPS test origin in physical iPhone Safari.",
-        "Use Share → Add to Home Screen and open the installed app.",
+        "Use Share \u2192 Add to Home Screen and open the installed app.",
         "Record device/iOS version, standalone launch, icon, safe areas and both orientations."
       ]
     },
@@ -145,16 +145,15 @@
     }
   },
   "staticVerification": {
-    "status": "pending-current-final-build",
+    "status": "pass-static-only",
     "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
-    "reason": "No build was run during the root browser matrix. Previous source artifact verification must not be relabelled as current dependency-patched build evidence.",
-    "previousEvidence": {
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
-      "report": "docs/diagnostics/pwa-validation-0f995593.json",
-      "revision": "12d09067cbcc",
-      "status": "historical-intermediate-diagnostics-only"
-    },
-    "requiredCommand": "npm run build && node scripts/verify-build.mjs --output docs/build-verification.json"
+    "checkedAt": "2026-10-21T02:15:38.687Z",
+    "revision": "395743021b71",
+    "artifactFileCount": 24,
+    "precacheEntries": 15,
+    "checksPassed": 6,
+    "report": "docs/build-verification.json",
+    "reason": "Root executed a clean serialized production build after Node/browser inference and independently verified the actual emitted bytes. This is static artifact evidence only; all11 secure PWA checks stay unavailable."
   },
   "lifecycleUnitTests": {
     "status": "pass",
@@ -172,8 +171,11 @@
     "vulnerabilities": 0
   },
   "finalReleaseArtifactVerification": {
-    "status": "pending",
-    "reason": "Await a serialized final build after current Node/browser validation; no build started by this QA refresh."
+    "status": "pass-static-only",
+    "checkedAt": "2026-10-21T02:15:38.687Z",
+    "report": "docs/build-verification.json",
+    "revision": "395743021b71",
+    "securePwaPassed": false
   },
   "releaseDecision": "Blocked. All11 secure-browser PWA checks remain environment-unavailable; no previous actual result or static artifact is promoted to current secure-PWA pass."
 }

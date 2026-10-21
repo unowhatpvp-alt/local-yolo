@@ -2,16 +2,16 @@
   "schemaVersion": 1,
   "type": "static-build-verification",
   "status": "pass",
-  "checkedAt": "2026-10-21T02:11:10.930Z",
+  "checkedAt": "2026-10-21T02:15:38.687Z",
   "base": "/local-yolo/",
   "revision": "395743021b71",
-  "artifactFileCount": 26,
+  "artifactFileCount": 24,
   "checks": [
     {
       "id": "productionOnly",
       "status": "pass",
       "observations": [
-        "26 production artifact files; no test harness, validation configuration, image/video fixtures or model weights."
+        "24 production artifact files; no test harness, validation configuration, image/video fixtures or model weights."
       ]
     },
     {

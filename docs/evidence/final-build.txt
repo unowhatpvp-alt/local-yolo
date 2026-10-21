@@ -14,5 +14,5 @@ dist/assets/ort-wasm-simd-threaded.asyncify-BJtBjfiH.wasm  25,499.39 kB │ gzip
 dist/assets/index-BgXhbuy3.css                                 35.39 kB │ gzip:     7.34 kB
 dist/assets/engine-DBoOEBMO.js                                132.85 kB │ gzip:    44.60 kB
 dist/assets/index-CeiFdrkD.js                                 133.84 kB │ gzip:    31.55 kB
-✓ built in 2.47s
+✓ built in 1.70s
 Service worker shell: 15 files, revision 395743021b71
