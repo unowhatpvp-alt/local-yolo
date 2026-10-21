@@ -1,0 +1,175 @@
+{
+  "scope": "Native resolution officialUltralytics bus.jpg classification known-scene diagnostic; top-five observations, not benchmarkaccuracy",
+  "rows": [
+    {
+      "model": "yolo26n-cls",
+      "image": "bus.jpg",
+      "nativeWidth": 810,
+      "nativeHeight": 1080,
+      "top5": [
+        {
+          "classId": 654,
+          "label": "minibus",
+          "score": 0.809373
+        },
+        {
+          "classId": 734,
+          "label": "police_van",
+          "score": 0.143051
+        },
+        {
+          "classId": 874,
+          "label": "trolleybus",
+          "score": 0.024137
+        },
+        {
+          "classId": 656,
+          "label": "minivan",
+          "score": 0.005675
+        },
+        {
+          "classId": 575,
+          "label": "golfcart",
+          "score": 0.004252
+        }
+      ],
+      "containsBusClass": true
+    },
+    {
+      "model": "yolo26s-cls",
+      "image": "bus.jpg",
+      "nativeWidth": 810,
+      "nativeHeight": 1080,
+      "top5": [
+        {
+          "classId": 654,
+          "label": "minibus",
+          "score": 0.794408
+        },
+        {
+          "classId": 734,
+          "label": "police_van",
+          "score": 0.082539
+        },
+        {
+          "classId": 874,
+          "label": "trolleybus",
+          "score": 0.059671
+        },
+        {
+          "classId": 757,
+          "label": "recreational_vehicle",
+          "score": 0.030812
+        },
+        {
+          "classId": 829,
+          "label": "streetcar",
+          "score": 0.007391
+        }
+      ],
+      "containsBusClass": true
+    },
+    {
+      "model": "yolo26m-cls",
+      "image": "bus.jpg",
+      "nativeWidth": 810,
+      "nativeHeight": 1080,
+      "top5": [
+        {
+          "classId": 654,
+          "label": "minibus",
+          "score": 0.943802
+        },
+        {
+          "classId": 734,
+          "label": "police_van",
+          "score": 0.020407
+        },
+        {
+          "classId": 874,
+          "label": "trolleybus",
+          "score": 0.01175
+        },
+        {
+          "classId": 757,
+          "label": "recreational_vehicle",
+          "score": 0.005028
+        },
+        {
+          "classId": 705,
+          "label": "passenger_car",
+          "score": 0.003472
+        }
+      ],
+      "containsBusClass": true
+    },
+    {
+      "model": "yolo26l-cls",
+      "image": "bus.jpg",
+      "nativeWidth": 810,
+      "nativeHeight": 1080,
+      "top5": [
+        {
+          "classId": 654,
+          "label": "minibus",
+          "score": 0.843599
+        },
+        {
+          "classId": 734,
+          "label": "police_van",
+          "score": 0.077494
+        },
+        {
+          "classId": 874,
+          "label": "trolleybus",
+          "score": 0.05681
+        },
+        {
+          "classId": 569,
+          "label": "garbage_truck",
+          "score": 0.003862
+        },
+        {
+          "classId": 829,
+          "label": "streetcar",
+          "score": 0.003056
+        }
+      ],
+      "containsBusClass": true
+    },
+    {
+      "model": "yolo26x-cls",
+      "image": "bus.jpg",
+      "nativeWidth": 810,
+      "nativeHeight": 1080,
+      "top5": [
+        {
+          "classId": 654,
+          "label": "minibus",
+          "score": 0.952327
+        },
+        {
+          "classId": 734,
+          "label": "police_van",
+          "score": 0.027937
+        },
+        {
+          "classId": 575,
+          "label": "golfcart",
+          "score": 0.007753
+        },
+        {
+          "classId": 874,
+          "label": "trolleybus",
+          "score": 0.004578
+        },
+        {
+          "classId": 757,
+          "label": "recreational_vehicle",
+          "score": 0.002124
+        }
+      ],
+      "containsBusClass": true
+    }
+  ]
+}

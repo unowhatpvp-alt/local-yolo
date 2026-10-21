@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "type": "static-build-verification",
+  "status": "pass",
+  "checkedAt": "2026-10-21T00:58:52.271Z",
+  "base": "/local-yolo/",
+  "revision": "84e16b10d1f9",
+  "artifactFileCount": 26,
+  "checks": [
+    {
+      "id": "productionOnly",
+      "status": "pass",
+      "observations": [
+        "26 production artifact files; no test harness, validation configuration, image/video fixtures or model weights."
+      ]
+    },
+    {
+      "id": "subpathResources",
+      "status": "pass",
+      "observations": [
+        "Main script/CSS are emitted below /local-yolo/assets/.",
+        "./manifest.webmanifest",
+        "./icons/icon-192.png",
+        "./icons/icon-192.png",
+        "/local-yolo/assets/index-AQyO8gLK.js",
+        "/local-yolo/assets/index-BgXhbuy3.css"
+      ]
+    },
+    {
+      "id": "fourEntriesAndBacklinks",
+      "status": "pass",
+      "observations": [
+        "/local-yolo/",
+        "/local-yolo/studio/",
+        "/local-yolo/experimental-training/",
+        "/local-yolo/studio/experimental-training/"
+      ]
+    },
+    {
+      "id": "manifestAndActualPngDimensions",
+      "status": "pass",
+      "observations": [
+        {
+          "scope": "./",
+          "start_url": "./",
+          "display": "standalone",
+          "icons": [
+            {
+              "src": "icons/icon-192.png",
+              "width": 192,
+              "height": 192,
+              "purpose": "any"
+            },
+            {
+              "src": "icons/icon-512.png",
+              "width": 512,
+              "height": 512,
+              "purpose": "any"
+            },
+            {
+              "src": "icons/maskable-512.png",
+              "width": 512,
+              "height": 512,
+              "purpose": "maskable"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "precacheAndRevision",
+      "status": "pass",
+      "observations": [
+        "17 precache entries resolve to actual visible artifact files.",
+        {
+          "revision": "84e16b10d1f9",
+          "noHiddenEntries": true,
+          "runtimeCachedLazily": true
+        }
+      ]
+    },
+    {
+      "id": "runtimeAssets",
+      "status": "pass",
+      "observations": [
+        "Single-thread WASM, JSEP and Asyncify runtime binaries/modules are present under the application subpath; every runtime WASM has its matching module and valid binary magic."
+      ]
+    }
+  ],
+  "limitations": [
+    "Does not execute a service worker or prove browser installation, offline use, update behavior, physical camera or WebGPU."
+  ]
+}

@@ -1,0 +1,1791 @@
+{
+  "recordedAt": "2026-10-21T00:46:50.513Z",
+  "scope": "10 labeled held-out ImageNet10 images; diagnostic only, not a validation-set benchmark",
+  "preprocessing": {
+    "square": "RGB center crop preserving aspect, resize to fixed square, NCHW float32 /255",
+    "rectangular": "RGB resize to exact exported H×W, NCHW float32 /255",
+    "reference": "https://github.com/ultralytics/ultralytics/blob/v8.4.100/ultralytics/data/augment.py"
+  },
+  "rows": [
+    {
+      "directory": "tests/fixtures/yolo26",
+      "model": "yolo26n-cls",
+      "bytes": 11292967,
+      "sha256": "b6fb3cc3e7fad2af37863b5d927b046e00a1c47a1101cbda2f3c6499739f29f8",
+      "inputs": [
+        {
+          "name": "images",
+          "dims": [
+            1,
+            3,
+            480,
+            640
+          ],
+          "elemType": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output0",
+          "dims": [
+            1,
+            1000
+          ],
+          "elemType": 1
+        }
+      ],
+      "description": "Ultralytics YOLO26n-cls model trained on ../datasets/imagenet",
+      "version": "8.4.174",
+      "tests": [
+        {
+          "file": "classification-val-0.jpg",
+          "expectedClassId": 0,
+          "expectedLabel": "tench",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 0,
+            "label": "tench",
+            "score": 0.375643
+          },
+          "expectedInTop5": 0.37564337253570557,
+          "latencyMs": 192.45
+        },
+        {
+          "file": "classification-val-1.jpg",
+          "expectedClassId": 1,
+          "expectedLabel": "goldfish",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 339,
+            "label": "sorrel",
+            "score": 0.226717
+          },
+          "expectedInTop5": null,
+          "latencyMs": 192.91
+        },
+        {
+          "file": "classification-val-2.jpg",
+          "expectedClassId": 2,
+          "expectedLabel": "great_white_shark",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 147,
+            "label": "grey_whale",
+            "score": 0.134797
+          },
+          "expectedInTop5": null,
+          "latencyMs": 127.6
+        },
+        {
+          "file": "classification-val-3.jpg",
+          "expectedClassId": 3,
+          "expectedLabel": "tiger_shark",
+          "top1": false,
+          "top5": true,
+          "actualTop1": {
+            "id": 149,
+            "label": "dugong",
+            "score": 0.800406
+          },
+          "expectedInTop5": 0.06269767880439758,
+          "latencyMs": 125.45
+        },
+        {
+          "file": "classification-val-4.jpg",
+          "expectedClassId": 4,
+          "expectedLabel": "hammerhead",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 149,
+            "label": "dugong",
+            "score": 0.960409
+          },
+          "expectedInTop5": null,
+          "latencyMs": 124.08
+        },
+        {
+          "file": "classification-val-5.jpg",
+          "expectedClassId": 5,
+          "expectedLabel": "electric_ray",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 149,
+            "label": "dugong",
+            "score": 0.165169
+          },
+          "expectedInTop5": null,
+          "latencyMs": 129.69
+        },
+        {
+          "file": "classification-val-6.jpg",
+          "expectedClassId": 6,
+          "expectedLabel": "stingray",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 103,
+            "label": "platypus",
+            "score": 0.30514
+          },
+          "expectedInTop5": null,
+          "latencyMs": 141.55
+        },
+        {
+          "file": "classification-val-7.jpg",
+          "expectedClassId": 7,
+          "expectedLabel": "cock",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 80,
+            "label": "black_grouse",
+            "score": 0.490768
+          },
+          "expectedInTop5": null,
+          "latencyMs": 162.61
+        },
+        {
+          "file": "classification-val-8.jpg",
+          "expectedClassId": 8,
+          "expectedLabel": "hen",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 373,
+            "label": "macaque",
+            "score": 0.223124
+          },
+          "expectedInTop5": null,
+          "latencyMs": 159.43
+        },
+        {
+          "file": "classification-val-9.jpg",
+          "expectedClassId": 9,
+          "expectedLabel": "ostrich",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 128,
+            "label": "black_stork",
+            "score": 0.155356
+          },
+          "expectedInTop5": null,
+          "latencyMs": 147.81
+        }
+      ],
+      "inputSize": [
+        480,
+        640
+      ],
+      "top1Correct": 1,
+      "top5Correct": 2
+    },
+    {
+      "directory": "tests/fixtures/yolo26",
+      "model": "yolo26s-cls",
+      "bytes": 26925511,
+      "sha256": "5cba791a814c1a7eadab241fff35d5eb64672179e86d2723afe3cc9fc686ba17",
+      "inputs": [
+        {
+          "name": "images",
+          "dims": [
+            1,
+            3,
+            480,
+            640
+          ],
+          "elemType": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output0",
+          "dims": [
+            1,
+            1000
+          ],
+          "elemType": 1
+        }
+      ],
+      "description": "Ultralytics YOLO26s-cls model trained on ../datasets/imagenet",
+      "version": "8.4.174",
+      "tests": [
+        {
+          "file": "classification-val-0.jpg",
+          "expectedClassId": 0,
+          "expectedLabel": "tench",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 0,
+            "label": "tench",
+            "score": 0.526718
+          },
+          "expectedInTop5": 0.5267180800437927,
+          "latencyMs": 410.16
+        },
+        {
+          "file": "classification-val-1.jpg",
+          "expectedClassId": 1,
+          "expectedLabel": "goldfish",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 885,
+            "label": "velvet",
+            "score": 0.291733
+          },
+          "expectedInTop5": null,
+          "latencyMs": 460.77
+        },
+        {
+          "file": "classification-val-2.jpg",
+          "expectedClassId": 2,
+          "expectedLabel": "great_white_shark",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 147,
+            "label": "grey_whale",
+            "score": 0.239389
+          },
+          "expectedInTop5": null,
+          "latencyMs": 441.86
+        },
+        {
+          "file": "classification-val-3.jpg",
+          "expectedClassId": 3,
+          "expectedLabel": "tiger_shark",
+          "top1": false,
+          "top5": true,
+          "actualTop1": {
+            "id": 149,
+            "label": "dugong",
+            "score": 0.966132
+          },
+          "expectedInTop5": 0.002535477513447404,
+          "latencyMs": 482.24
+        },
+        {
+          "file": "classification-val-4.jpg",
+          "expectedClassId": 4,
+          "expectedLabel": "hammerhead",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 149,
+            "label": "dugong",
+            "score": 0.839474
+          },
+          "expectedInTop5": null,
+          "latencyMs": 418.54
+        },
+        {
+          "file": "classification-val-5.jpg",
+          "expectedClassId": 5,
+          "expectedLabel": "electric_ray",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 149,
+            "label": "dugong",
+            "score": 0.229292
+          },
+          "expectedInTop5": null,
+          "latencyMs": 426.81
+        },
+        {
+          "file": "classification-val-6.jpg",
+          "expectedClassId": 6,
+          "expectedLabel": "stingray",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 103,
+            "label": "platypus",
+            "score": 0.164282
+          },
+          "expectedInTop5": null,
+          "latencyMs": 401.14
+        },
+        {
+          "file": "classification-val-7.jpg",
+          "expectedClassId": 7,
+          "expectedLabel": "cock",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 98,
+            "label": "red-breasted_merganser",
+            "score": 0.128022
+          },
+          "expectedInTop5": null,
+          "latencyMs": 404.93
+        },
+        {
+          "file": "classification-val-8.jpg",
+          "expectedClassId": 8,
+          "expectedLabel": "hen",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 291,
+            "label": "lion",
+            "score": 0.389641
+          },
+          "expectedInTop5": null,
+          "latencyMs": 420.81
+        },
+        {
+          "file": "classification-val-9.jpg",
+          "expectedClassId": 9,
+          "expectedLabel": "ostrich",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 147,
+            "label": "grey_whale",
+            "score": 0.462581
+          },
+          "expectedInTop5": null,
+          "latencyMs": 417.57
+        }
+      ],
+      "inputSize": [
+        480,
+        640
+      ],
+      "top1Correct": 1,
+      "top5Correct": 2
+    },
+    {
+      "directory": "tests/fixtures/yolo26",
+      "model": "yolo26m-cls",
+      "bytes": 46567454,
+      "sha256": "99caf239fafe63050416b6df19bc31926ad08b186c81061d7d37b54a5d8ceadb",
+      "inputs": [
+        {
+          "name": "images",
+          "dims": [
+            1,
+            3,
+            480,
+            640
+          ],
+          "elemType": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output0",
+          "dims": [
+            1,
+            1000
+          ],
+          "elemType": 1
+        }
+      ],
+      "description": "Ultralytics YOLO26m-cls model trained on ../datasets/imagenet",
+      "version": "8.4.174",
+      "tests": [
+        {
+          "file": "classification-val-0.jpg",
+          "expectedClassId": 0,
+          "expectedLabel": "tench",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 0,
+            "label": "tench",
+            "score": 0.625972
+          },
+          "expectedInTop5": 0.625971794128418,
+          "latencyMs": 1316.81
+        },
+        {
+          "file": "classification-val-1.jpg",
+          "expectedClassId": 1,
+          "expectedLabel": "goldfish",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 885,
+            "label": "velvet",
+            "score": 0.327238
+          },
+          "expectedInTop5": null,
+          "latencyMs": 1266.67
+        },
+        {
+          "file": "classification-val-2.jpg",
+          "expectedClassId": 2,
+          "expectedLabel": "great_white_shark",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 149,
+            "label": "dugong",
+            "score": 0.277669
+          },
+          "expectedInTop5": null,
+          "latencyMs": 1248.01
+        },
+        {
+          "file": "classification-val-3.jpg",
+          "expectedClassId": 3,
+          "expectedLabel": "tiger_shark",
+          "top1": false,
+          "top5": true,
+          "actualTop1": {
+            "id": 149,
+            "label": "dugong",
+            "score": 0.940965
+          },
+          "expectedInTop5": 0.006156938150525093,
+          "latencyMs": 1254.7
+        },
+        {
+          "file": "classification-val-4.jpg",
+          "expectedClassId": 4,
+          "expectedLabel": "hammerhead",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 149,
+            "label": "dugong",
+            "score": 0.901936
+          },
+          "expectedInTop5": null,
+          "latencyMs": 1238.29
+        },
+        {
+          "file": "classification-val-5.jpg",
+          "expectedClassId": 5,
+          "expectedLabel": "electric_ray",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 148,
+            "label": "killer_whale",
+            "score": 0.1608
+          },
+          "expectedInTop5": null,
+          "latencyMs": 1271.11
+        },
+        {
+          "file": "classification-val-6.jpg",
+          "expectedClassId": 6,
+          "expectedLabel": "stingray",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 103,
+            "label": "platypus",
+            "score": 0.66429
+          },
+          "expectedInTop5": null,
+          "latencyMs": 1262.42
+        },
+        {
+          "file": "classification-val-7.jpg",
+          "expectedClassId": 7,
+          "expectedLabel": "cock",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 335,
+            "label": "fox_squirrel",
+            "score": 0.567968
+          },
+          "expectedInTop5": null,
+          "latencyMs": 1240.56
+        },
+        {
+          "file": "classification-val-8.jpg",
+          "expectedClassId": 8,
+          "expectedLabel": "hen",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 291,
+            "label": "lion",
+            "score": 0.144487
+          },
+          "expectedInTop5": null,
+          "latencyMs": 1290.83
+        },
+        {
+          "file": "classification-val-9.jpg",
+          "expectedClassId": 9,
+          "expectedLabel": "ostrich",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 98,
+            "label": "red-breasted_merganser",
+            "score": 0.220813
+          },
+          "expectedInTop5": null,
+          "latencyMs": 1215.26
+        }
+      ],
+      "inputSize": [
+        480,
+        640
+      ],
+      "top1Correct": 1,
+      "top5Correct": 2
+    },
+    {
+      "directory": "tests/fixtures/yolo26",
+      "model": "yolo26l-cls",
+      "bytes": 56514435,
+      "sha256": "ead5d9bcf10f4c80729d7d41cf6fe8d8376b9047b0130091257edc2d2d798295",
+      "inputs": [
+        {
+          "name": "images",
+          "dims": [
+            1,
+            3,
+            480,
+            640
+          ],
+          "elemType": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output0",
+          "dims": [
+            1,
+            1000
+          ],
+          "elemType": 1
+        }
+      ],
+      "description": "Ultralytics YOLO26l-cls model trained on ../datasets/imagenet",
+      "version": "8.4.174",
+      "tests": [
+        {
+          "file": "classification-val-0.jpg",
+          "expectedClassId": 0,
+          "expectedLabel": "tench",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 0,
+            "label": "tench",
+            "score": 0.932022
+          },
+          "expectedInTop5": 0.932021975517273,
+          "latencyMs": 1761.39
+        },
+        {
+          "file": "classification-val-1.jpg",
+          "expectedClassId": 1,
+          "expectedLabel": "goldfish",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 885,
+            "label": "velvet",
+            "score": 0.27818
+          },
+          "expectedInTop5": null,
+          "latencyMs": 1657.69
+        },
+        {
+          "file": "classification-val-2.jpg",
+          "expectedClassId": 2,
+          "expectedLabel": "great_white_shark",
+          "top1": false,
+          "top5": true,
+          "actualTop1": {
+            "id": 147,
+            "label": "grey_whale",
+            "score": 0.507289
+          },
+          "expectedInTop5": 0.007562690414488316,
+          "latencyMs": 1611.87
+        },
+        {
+          "file": "classification-val-3.jpg",
+          "expectedClassId": 3,
+          "expectedLabel": "tiger_shark",
+          "top1": false,
+          "top5": true,
+          "actualTop1": {
+            "id": 149,
+            "label": "dugong",
+            "score": 0.9083
+          },
+          "expectedInTop5": 0.03585793077945709,
+          "latencyMs": 1573.17
+        },
+        {
+          "file": "classification-val-4.jpg",
+          "expectedClassId": 4,
+          "expectedLabel": "hammerhead",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 149,
+            "label": "dugong",
+            "score": 0.937059
+          },
+          "expectedInTop5": null,
+          "latencyMs": 1611.47
+        },
+        {
+          "file": "classification-val-5.jpg",
+          "expectedClassId": 5,
+          "expectedLabel": "electric_ray",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 147,
+            "label": "grey_whale",
+            "score": 0.351261
+          },
+          "expectedInTop5": null,
+          "latencyMs": 1688.26
+        },
+        {
+          "file": "classification-val-6.jpg",
+          "expectedClassId": 6,
+          "expectedLabel": "stingray",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 103,
+            "label": "platypus",
+            "score": 0.599577
+          },
+          "expectedInTop5": null,
+          "latencyMs": 1681.68
+        },
+        {
+          "file": "classification-val-7.jpg",
+          "expectedClassId": 7,
+          "expectedLabel": "cock",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 7,
+            "label": "cock",
+            "score": 0.202858
+          },
+          "expectedInTop5": 0.20285797119140625,
+          "latencyMs": 1566.57
+        },
+        {
+          "file": "classification-val-8.jpg",
+          "expectedClassId": 8,
+          "expectedLabel": "hen",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 291,
+            "label": "lion",
+            "score": 0.266416
+          },
+          "expectedInTop5": null,
+          "latencyMs": 1569.39
+        },
+        {
+          "file": "classification-val-9.jpg",
+          "expectedClassId": 9,
+          "expectedLabel": "ostrich",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 135,
+            "label": "limpkin",
+            "score": 0.204862
+          },
+          "expectedInTop5": null,
+          "latencyMs": 1623.02
+        }
+      ],
+      "inputSize": [
+        480,
+        640
+      ],
+      "top1Correct": 2,
+      "top5Correct": 4
+    },
+    {
+      "directory": "tests/fixtures/yolo26",
+      "model": "yolo26x-cls",
+      "bytes": 118570389,
+      "sha256": "bfd88a10597ead98a8593dff3eaddc2e761f586bae5b438c8ddeb37b1c7d4cb6",
+      "inputs": [
+        {
+          "name": "images",
+          "dims": [
+            1,
+            3,
+            480,
+            640
+          ],
+          "elemType": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output0",
+          "dims": [
+            1,
+            1000
+          ],
+          "elemType": 1
+        }
+      ],
+      "description": "Ultralytics YOLO26x-cls model trained on ../datasets/imagenet",
+      "version": "8.4.174",
+      "tests": [
+        {
+          "file": "classification-val-0.jpg",
+          "expectedClassId": 0,
+          "expectedLabel": "tench",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 0,
+            "label": "tench",
+            "score": 0.975713
+          },
+          "expectedInTop5": 0.9757134914398193,
+          "latencyMs": 3307.12
+        },
+        {
+          "file": "classification-val-1.jpg",
+          "expectedClassId": 1,
+          "expectedLabel": "goldfish",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 885,
+            "label": "velvet",
+            "score": 0.467529
+          },
+          "expectedInTop5": null,
+          "latencyMs": 3226.9
+        },
+        {
+          "file": "classification-val-2.jpg",
+          "expectedClassId": 2,
+          "expectedLabel": "great_white_shark",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 149,
+            "label": "dugong",
+            "score": 0.26851
+          },
+          "expectedInTop5": null,
+          "latencyMs": 3683.75
+        },
+        {
+          "file": "classification-val-3.jpg",
+          "expectedClassId": 3,
+          "expectedLabel": "tiger_shark",
+          "top1": false,
+          "top5": true,
+          "actualTop1": {
+            "id": 149,
+            "label": "dugong",
+            "score": 0.95626
+          },
+          "expectedInTop5": 0.02001158334314823,
+          "latencyMs": 3413.69
+        },
+        {
+          "file": "classification-val-4.jpg",
+          "expectedClassId": 4,
+          "expectedLabel": "hammerhead",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 149,
+            "label": "dugong",
+            "score": 0.843051
+          },
+          "expectedInTop5": null,
+          "latencyMs": 3205.51
+        },
+        {
+          "file": "classification-val-5.jpg",
+          "expectedClassId": 5,
+          "expectedLabel": "electric_ray",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 147,
+            "label": "grey_whale",
+            "score": 0.417944
+          },
+          "expectedInTop5": null,
+          "latencyMs": 3665.02
+        },
+        {
+          "file": "classification-val-6.jpg",
+          "expectedClassId": 6,
+          "expectedLabel": "stingray",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 126,
+            "label": "isopod",
+            "score": 0.233085
+          },
+          "expectedInTop5": null,
+          "latencyMs": 3926.28
+        },
+        {
+          "file": "classification-val-7.jpg",
+          "expectedClassId": 7,
+          "expectedLabel": "cock",
+          "top1": false,
+          "top5": true,
+          "actualTop1": {
+            "id": 359,
+            "label": "black-footed_ferret",
+            "score": 0.206417
+          },
+          "expectedInTop5": 0.042228709906339645,
+          "latencyMs": 3517.2
+        },
+        {
+          "file": "classification-val-8.jpg",
+          "expectedClassId": 8,
+          "expectedLabel": "hen",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 291,
+            "label": "lion",
+            "score": 0.526611
+          },
+          "expectedInTop5": null,
+          "latencyMs": 3557.39
+        },
+        {
+          "file": "classification-val-9.jpg",
+          "expectedClassId": 9,
+          "expectedLabel": "ostrich",
+          "top1": false,
+          "top5": true,
+          "actualTop1": {
+            "id": 135,
+            "label": "limpkin",
+            "score": 0.427997
+          },
+          "expectedInTop5": 0.06136084347963333,
+          "latencyMs": 3518.47
+        }
+      ],
+      "inputSize": [
+        480,
+        640
+      ],
+      "top1Correct": 1,
+      "top5Correct": 4
+    },
+    {
+      "directory": "tests/fixtures/yolo26-classify224",
+      "model": "yolo26n-cls",
+      "bytes": 11293163,
+      "sha256": "1323630be528baebcaf4d831fde58853d9e70628a78aef898695dedcb070e2f8",
+      "inputs": [
+        {
+          "name": "images",
+          "dims": [
+            1,
+            3,
+            224,
+            224
+          ],
+          "elemType": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output0",
+          "dims": [
+            1,
+            1000
+          ],
+          "elemType": 1
+        }
+      ],
+      "description": "Ultralytics YOLO26n-cls model trained on ../datasets/imagenet",
+      "version": "8.4.100",
+      "tests": [
+        {
+          "file": "classification-val-0.jpg",
+          "expectedClassId": 0,
+          "expectedLabel": "tench",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 0,
+            "label": "tench",
+            "score": 0.980325
+          },
+          "expectedInTop5": 0.980324923992157,
+          "latencyMs": 25.02
+        },
+        {
+          "file": "classification-val-1.jpg",
+          "expectedClassId": 1,
+          "expectedLabel": "goldfish",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 339,
+            "label": "sorrel",
+            "score": 0.191776
+          },
+          "expectedInTop5": null,
+          "latencyMs": 22.21
+        },
+        {
+          "file": "classification-val-2.jpg",
+          "expectedClassId": 2,
+          "expectedLabel": "great_white_shark",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 2,
+            "label": "great_white_shark",
+            "score": 0.468037
+          },
+          "expectedInTop5": 0.46803686022758484,
+          "latencyMs": 23.15
+        },
+        {
+          "file": "classification-val-3.jpg",
+          "expectedClassId": 3,
+          "expectedLabel": "tiger_shark",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 3,
+            "label": "tiger_shark",
+            "score": 0.813095
+          },
+          "expectedInTop5": 0.8130947947502136,
+          "latencyMs": 22.27
+        },
+        {
+          "file": "classification-val-4.jpg",
+          "expectedClassId": 4,
+          "expectedLabel": "hammerhead",
+          "top1": false,
+          "top5": true,
+          "actualTop1": {
+            "id": 3,
+            "label": "tiger_shark",
+            "score": 0.404981
+          },
+          "expectedInTop5": 0.017723947763442993,
+          "latencyMs": 22.41
+        },
+        {
+          "file": "classification-val-5.jpg",
+          "expectedClassId": 5,
+          "expectedLabel": "electric_ray",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 103,
+            "label": "platypus",
+            "score": 0.479561
+          },
+          "expectedInTop5": null,
+          "latencyMs": 23.18
+        },
+        {
+          "file": "classification-val-6.jpg",
+          "expectedClassId": 6,
+          "expectedLabel": "stingray",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 103,
+            "label": "platypus",
+            "score": 0.781006
+          },
+          "expectedInTop5": null,
+          "latencyMs": 22.64
+        },
+        {
+          "file": "classification-val-7.jpg",
+          "expectedClassId": 7,
+          "expectedLabel": "cock",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 8,
+            "label": "hen",
+            "score": 0.288361
+          },
+          "expectedInTop5": null,
+          "latencyMs": 22.5
+        },
+        {
+          "file": "classification-val-8.jpg",
+          "expectedClassId": 8,
+          "expectedLabel": "hen",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 371,
+            "label": "patas",
+            "score": 0.384395
+          },
+          "expectedInTop5": null,
+          "latencyMs": 22.7
+        },
+        {
+          "file": "classification-val-9.jpg",
+          "expectedClassId": 9,
+          "expectedLabel": "ostrich",
+          "top1": false,
+          "top5": true,
+          "actualTop1": {
+            "id": 135,
+            "label": "limpkin",
+            "score": 0.659017
+          },
+          "expectedInTop5": 0.33306899666786194,
+          "latencyMs": 23.19
+        }
+      ],
+      "inputSize": [
+        224,
+        224
+      ],
+      "top1Correct": 3,
+      "top5Correct": 5
+    },
+    {
+      "directory": "tests/fixtures/yolo26-classify224",
+      "model": "yolo26s-cls",
+      "bytes": 26925705,
+      "sha256": "471dc921d6b37c7fc7670adc58b247c5c474dc16b1065b1a150db79ed7de7314",
+      "inputs": [
+        {
+          "name": "images",
+          "dims": [
+            1,
+            3,
+            224,
+            224
+          ],
+          "elemType": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output0",
+          "dims": [
+            1,
+            1000
+          ],
+          "elemType": 1
+        }
+      ],
+      "description": "Ultralytics YOLO26s-cls model trained on ../datasets/imagenet",
+      "version": "8.4.100",
+      "tests": [
+        {
+          "file": "classification-val-0.jpg",
+          "expectedClassId": 0,
+          "expectedLabel": "tench",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 0,
+            "label": "tench",
+            "score": 0.998314
+          },
+          "expectedInTop5": 0.9983144998550415,
+          "latencyMs": 72.05
+        },
+        {
+          "file": "classification-val-1.jpg",
+          "expectedClassId": 1,
+          "expectedLabel": "goldfish",
+          "top1": false,
+          "top5": true,
+          "actualTop1": {
+            "id": 51,
+            "label": "triceratops",
+            "score": 0.261382
+          },
+          "expectedInTop5": 0.07154805958271027,
+          "latencyMs": 67.85
+        },
+        {
+          "file": "classification-val-2.jpg",
+          "expectedClassId": 2,
+          "expectedLabel": "great_white_shark",
+          "top1": false,
+          "top5": true,
+          "actualTop1": {
+            "id": 3,
+            "label": "tiger_shark",
+            "score": 0.425748
+          },
+          "expectedInTop5": 0.07323436439037323,
+          "latencyMs": 72.14
+        },
+        {
+          "file": "classification-val-3.jpg",
+          "expectedClassId": 3,
+          "expectedLabel": "tiger_shark",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 3,
+            "label": "tiger_shark",
+            "score": 0.465068
+          },
+          "expectedInTop5": 0.465067982673645,
+          "latencyMs": 69.17
+        },
+        {
+          "file": "classification-val-4.jpg",
+          "expectedClassId": 4,
+          "expectedLabel": "hammerhead",
+          "top1": false,
+          "top5": true,
+          "actualTop1": {
+            "id": 149,
+            "label": "dugong",
+            "score": 0.429729
+          },
+          "expectedInTop5": 0.08471532166004181,
+          "latencyMs": 70.66
+        },
+        {
+          "file": "classification-val-5.jpg",
+          "expectedClassId": 5,
+          "expectedLabel": "electric_ray",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 148,
+            "label": "killer_whale",
+            "score": 0.558385
+          },
+          "expectedInTop5": null,
+          "latencyMs": 68.78
+        },
+        {
+          "file": "classification-val-6.jpg",
+          "expectedClassId": 6,
+          "expectedLabel": "stingray",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 126,
+            "label": "isopod",
+            "score": 0.282955
+          },
+          "expectedInTop5": null,
+          "latencyMs": 69.12
+        },
+        {
+          "file": "classification-val-7.jpg",
+          "expectedClassId": 7,
+          "expectedLabel": "cock",
+          "top1": false,
+          "top5": true,
+          "actualTop1": {
+            "id": 8,
+            "label": "hen",
+            "score": 0.728959
+          },
+          "expectedInTop5": 0.2591509521007538,
+          "latencyMs": 68.59
+        },
+        {
+          "file": "classification-val-8.jpg",
+          "expectedClassId": 8,
+          "expectedLabel": "hen",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 273,
+            "label": "dingo",
+            "score": 0.19639
+          },
+          "expectedInTop5": null,
+          "latencyMs": 68.14
+        },
+        {
+          "file": "classification-val-9.jpg",
+          "expectedClassId": 9,
+          "expectedLabel": "ostrich",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 9,
+            "label": "ostrich",
+            "score": 0.989536
+          },
+          "expectedInTop5": 0.9895364046096802,
+          "latencyMs": 68.17
+        }
+      ],
+      "inputSize": [
+        224,
+        224
+      ],
+      "top1Correct": 3,
+      "top5Correct": 7
+    },
+    {
+      "directory": "tests/fixtures/yolo26-classify224",
+      "model": "yolo26m-cls",
+      "bytes": 46567573,
+      "sha256": "0b9bb0e6fa8e725ffca6b67f658043b90af844951ee217cd4aef83ce60d3f0a9",
+      "inputs": [
+        {
+          "name": "images",
+          "dims": [
+            1,
+            3,
+            224,
+            224
+          ],
+          "elemType": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output0",
+          "dims": [
+            1,
+            1000
+          ],
+          "elemType": 1
+        }
+      ],
+      "description": "Ultralytics YOLO26m-cls model trained on ../datasets/imagenet",
+      "version": "8.4.100",
+      "tests": [
+        {
+          "file": "classification-val-0.jpg",
+          "expectedClassId": 0,
+          "expectedLabel": "tench",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 0,
+            "label": "tench",
+            "score": 0.999985
+          },
+          "expectedInTop5": 0.9999853372573853,
+          "latencyMs": 199.81
+        },
+        {
+          "file": "classification-val-1.jpg",
+          "expectedClassId": 1,
+          "expectedLabel": "goldfish",
+          "top1": false,
+          "top5": true,
+          "actualTop1": {
+            "id": 78,
+            "label": "tick",
+            "score": 0.10466
+          },
+          "expectedInTop5": 0.057811085134744644,
+          "latencyMs": 202.32
+        },
+        {
+          "file": "classification-val-2.jpg",
+          "expectedClassId": 2,
+          "expectedLabel": "great_white_shark",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 2,
+            "label": "great_white_shark",
+            "score": 0.491184
+          },
+          "expectedInTop5": 0.49118414521217346,
+          "latencyMs": 201.31
+        },
+        {
+          "file": "classification-val-3.jpg",
+          "expectedClassId": 3,
+          "expectedLabel": "tiger_shark",
+          "top1": false,
+          "top5": true,
+          "actualTop1": {
+            "id": 149,
+            "label": "dugong",
+            "score": 0.579775
+          },
+          "expectedInTop5": 0.4180162250995636,
+          "latencyMs": 208.63
+        },
+        {
+          "file": "classification-val-4.jpg",
+          "expectedClassId": 4,
+          "expectedLabel": "hammerhead",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 149,
+            "label": "dugong",
+            "score": 0.601133
+          },
+          "expectedInTop5": null,
+          "latencyMs": 212.36
+        },
+        {
+          "file": "classification-val-5.jpg",
+          "expectedClassId": 5,
+          "expectedLabel": "electric_ray",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 148,
+            "label": "killer_whale",
+            "score": 0.613343
+          },
+          "expectedInTop5": null,
+          "latencyMs": 221.41
+        },
+        {
+          "file": "classification-val-6.jpg",
+          "expectedClassId": 6,
+          "expectedLabel": "stingray",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 126,
+            "label": "isopod",
+            "score": 0.378552
+          },
+          "expectedInTop5": null,
+          "latencyMs": 205.38
+        },
+        {
+          "file": "classification-val-7.jpg",
+          "expectedClassId": 7,
+          "expectedLabel": "cock",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 7,
+            "label": "cock",
+            "score": 0.676067
+          },
+          "expectedInTop5": 0.6760668754577637,
+          "latencyMs": 198.57
+        },
+        {
+          "file": "classification-val-8.jpg",
+          "expectedClassId": 8,
+          "expectedLabel": "hen",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 278,
+            "label": "kit_fox",
+            "score": 0.335619
+          },
+          "expectedInTop5": null,
+          "latencyMs": 202.64
+        },
+        {
+          "file": "classification-val-9.jpg",
+          "expectedClassId": 9,
+          "expectedLabel": "ostrich",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 9,
+            "label": "ostrich",
+            "score": 0.989889
+          },
+          "expectedInTop5": 0.9898890852928162,
+          "latencyMs": 200.85
+        }
+      ],
+      "inputSize": [
+        224,
+        224
+      ],
+      "top1Correct": 4,
+      "top5Correct": 6
+    },
+    {
+      "directory": "tests/fixtures/yolo26-classify224",
+      "model": "yolo26l-cls",
+      "bytes": 56514543,
+      "sha256": "6c34e63f747b469d748c10212bb1d9d5bd609e84fea5d26881aa6f3716701725",
+      "inputs": [
+        {
+          "name": "images",
+          "dims": [
+            1,
+            3,
+            224,
+            224
+          ],
+          "elemType": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output0",
+          "dims": [
+            1,
+            1000
+          ],
+          "elemType": 1
+        }
+      ],
+      "description": "Ultralytics YOLO26l-cls model trained on ../datasets/imagenet",
+      "version": "8.4.100",
+      "tests": [
+        {
+          "file": "classification-val-0.jpg",
+          "expectedClassId": 0,
+          "expectedLabel": "tench",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 0,
+            "label": "tench",
+            "score": 0.999641
+          },
+          "expectedInTop5": 0.999640941619873,
+          "latencyMs": 263.82
+        },
+        {
+          "file": "classification-val-1.jpg",
+          "expectedClassId": 1,
+          "expectedLabel": "goldfish",
+          "top1": false,
+          "top5": true,
+          "actualTop1": {
+            "id": 51,
+            "label": "triceratops",
+            "score": 0.137663
+          },
+          "expectedInTop5": 0.0930180773139,
+          "latencyMs": 258.37
+        },
+        {
+          "file": "classification-val-2.jpg",
+          "expectedClassId": 2,
+          "expectedLabel": "great_white_shark",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 2,
+            "label": "great_white_shark",
+            "score": 0.866462
+          },
+          "expectedInTop5": 0.8664619326591492,
+          "latencyMs": 266.09
+        },
+        {
+          "file": "classification-val-3.jpg",
+          "expectedClassId": 3,
+          "expectedLabel": "tiger_shark",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 3,
+            "label": "tiger_shark",
+            "score": 0.997216
+          },
+          "expectedInTop5": 0.9972155094146729,
+          "latencyMs": 258.06
+        },
+        {
+          "file": "classification-val-4.jpg",
+          "expectedClassId": 4,
+          "expectedLabel": "hammerhead",
+          "top1": false,
+          "top5": true,
+          "actualTop1": {
+            "id": 149,
+            "label": "dugong",
+            "score": 0.780316
+          },
+          "expectedInTop5": 0.0431949719786644,
+          "latencyMs": 284.31
+        },
+        {
+          "file": "classification-val-5.jpg",
+          "expectedClassId": 5,
+          "expectedLabel": "electric_ray",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 148,
+            "label": "killer_whale",
+            "score": 0.541776
+          },
+          "expectedInTop5": null,
+          "latencyMs": 334.94
+        },
+        {
+          "file": "classification-val-6.jpg",
+          "expectedClassId": 6,
+          "expectedLabel": "stingray",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 5,
+            "label": "electric_ray",
+            "score": 0.583493
+          },
+          "expectedInTop5": null,
+          "latencyMs": 294.05
+        },
+        {
+          "file": "classification-val-7.jpg",
+          "expectedClassId": 7,
+          "expectedLabel": "cock",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 7,
+            "label": "cock",
+            "score": 0.577207
+          },
+          "expectedInTop5": 0.5772067308425903,
+          "latencyMs": 272.28
+        },
+        {
+          "file": "classification-val-8.jpg",
+          "expectedClassId": 8,
+          "expectedLabel": "hen",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 273,
+            "label": "dingo",
+            "score": 0.32308
+          },
+          "expectedInTop5": null,
+          "latencyMs": 279.05
+        },
+        {
+          "file": "classification-val-9.jpg",
+          "expectedClassId": 9,
+          "expectedLabel": "ostrich",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 9,
+            "label": "ostrich",
+            "score": 0.996402
+          },
+          "expectedInTop5": 0.9964016675949097,
+          "latencyMs": 281.77
+        }
+      ],
+      "inputSize": [
+        224,
+        224
+      ],
+      "top1Correct": 5,
+      "top5Correct": 7
+    },
+    {
+      "directory": "tests/fixtures/yolo26-classify224",
+      "model": "yolo26x-cls",
+      "bytes": 118570497,
+      "sha256": "2b6f1386dd3d403f62b1cb68896b6ca3827b1157e451af49bc8105454a05ef78",
+      "inputs": [
+        {
+          "name": "images",
+          "dims": [
+            1,
+            3,
+            224,
+            224
+          ],
+          "elemType": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output0",
+          "dims": [
+            1,
+            1000
+          ],
+          "elemType": 1
+        }
+      ],
+      "description": "Ultralytics YOLO26x-cls model trained on ../datasets/imagenet",
+      "version": "8.4.100",
+      "tests": [
+        {
+          "file": "classification-val-0.jpg",
+          "expectedClassId": 0,
+          "expectedLabel": "tench",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 0,
+            "label": "tench",
+            "score": 0.999992
+          },
+          "expectedInTop5": 0.9999915361404419,
+          "latencyMs": 560.1
+        },
+        {
+          "file": "classification-val-1.jpg",
+          "expectedClassId": 1,
+          "expectedLabel": "goldfish",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 1,
+            "label": "goldfish",
+            "score": 0.769063
+          },
+          "expectedInTop5": 0.7690625786781311,
+          "latencyMs": 566.68
+        },
+        {
+          "file": "classification-val-2.jpg",
+          "expectedClassId": 2,
+          "expectedLabel": "great_white_shark",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 2,
+            "label": "great_white_shark",
+            "score": 0.885044
+          },
+          "expectedInTop5": 0.8850441575050354,
+          "latencyMs": 555.41
+        },
+        {
+          "file": "classification-val-3.jpg",
+          "expectedClassId": 3,
+          "expectedLabel": "tiger_shark",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 3,
+            "label": "tiger_shark",
+            "score": 0.928364
+          },
+          "expectedInTop5": 0.9283639788627625,
+          "latencyMs": 590.23
+        },
+        {
+          "file": "classification-val-4.jpg",
+          "expectedClassId": 4,
+          "expectedLabel": "hammerhead",
+          "top1": false,
+          "top5": true,
+          "actualTop1": {
+            "id": 149,
+            "label": "dugong",
+            "score": 0.568003
+          },
+          "expectedInTop5": 0.15317174792289734,
+          "latencyMs": 540.53
+        },
+        {
+          "file": "classification-val-5.jpg",
+          "expectedClassId": 5,
+          "expectedLabel": "electric_ray",
+          "top1": false,
+          "top5": true,
+          "actualTop1": {
+            "id": 148,
+            "label": "killer_whale",
+            "score": 0.500627
+          },
+          "expectedInTop5": 0.014369121752679348,
+          "latencyMs": 544.2
+        },
+        {
+          "file": "classification-val-6.jpg",
+          "expectedClassId": 6,
+          "expectedLabel": "stingray",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 126,
+            "label": "isopod",
+            "score": 0.55365
+          },
+          "expectedInTop5": null,
+          "latencyMs": 542.45
+        },
+        {
+          "file": "classification-val-7.jpg",
+          "expectedClassId": 7,
+          "expectedLabel": "cock",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 7,
+            "label": "cock",
+            "score": 0.970076
+          },
+          "expectedInTop5": 0.970076322555542,
+          "latencyMs": 546.45
+        },
+        {
+          "file": "classification-val-8.jpg",
+          "expectedClassId": 8,
+          "expectedLabel": "hen",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 277,
+            "label": "red_fox",
+            "score": 0.298157
+          },
+          "expectedInTop5": null,
+          "latencyMs": 543.35
+        },
+        {
+          "file": "classification-val-9.jpg",
+          "expectedClassId": 9,
+          "expectedLabel": "ostrich",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 9,
+            "label": "ostrich",
+            "score": 0.999974
+          },
+          "expectedInTop5": 0.9999740123748779,
+          "latencyMs": 541.99
+        }
+      ],
+      "inputSize": [
+        224,
+        224
+      ],
+      "top1Correct": 6,
+      "top5Correct": 8
+    }
+  ]
+}

@@ -1,0 +1,613 @@
+{
+  "capturedDownloads": [
+    {
+      "filename": "local-yolo-results.json",
+      "observedAt": "2026-10-21T01:12:37.329Z",
+      "status": "pass",
+      "transport": "actual app Blob download; captured by development harness only",
+      "bytes": 1814,
+      "type": "application/json",
+      "sha256": "9f08363e47bcfa2ebcb417c7b5b185fc2304a8751f5edc80aa05f734e68d58ca",
+      "content": {
+        "model": "YOLO26n",
+        "backend": "WASM",
+        "capturedAt": "2026-10-21T01:12:37.328Z",
+        "task": "detect",
+        "items": [
+          {
+            "box": {
+              "x": 488.120361328125,
+              "y": 275.15822778621185,
+              "width": 948.4405517578125,
+              "height": 605.9131165625345
+            },
+            "classId": 5,
+            "label": "bus",
+            "score": 0.8839160799980164
+          },
+          {
+            "box": {
+              "x": 532.6739730834961,
+              "y": 466.94821840384753,
+              "width": 225.78456115722656,
+              "height": 610.7380101736724
+            },
+            "classId": 0,
+            "label": "person",
+            "score": 0.8490615487098694
+          },
+          {
+            "box": {
+              "x": 1273.4830169677734,
+              "y": 475.75093830807106,
+              "width": 170.23452758789062,
+              "height": 561.9051519402876
+            },
+            "classId": 0,
+            "label": "person",
+            "score": 0.8322793245315552
+          },
+          {
+            "box": {
+              "x": 743.9870681762695,
+              "y": 477.4156615208012,
+              "width": 147.43968200683594,
+              "height": 543.5562719783871
+            },
+            "classId": 0,
+            "label": "person",
+            "score": 0.7914350032806396
+          },
+          {
+            "box": {
+              "x": 480.73217010498047,
+              "y": 698.952443619849,
+              "width": 81.02174377441406,
+              "height": 334.203286542579
+            },
+            "classId": 0,
+            "label": "person",
+            "score": 0.48555848002433777
+          }
+        ],
+        "latency": 268.19999999925494,
+        "sourceWidth": 1920,
+        "sourceHeight": 1279,
+        "crop": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1279
+        },
+        "format": "ultralytics-raw",
+        "iouApplicable": true,
+        "coordinateSpace": {
+          "width": 1920,
+          "height": 1279,
+          "originalWidth": 3002,
+          "originalHeight": 2000,
+          "scale": 0.6395736175882745,
+          "scaleX": 0.6395736175882745,
+          "scaleY": 0.6395
+        }
+      }
+    },
+    {
+      "filename": "local-yolo-result.png",
+      "observedAt": "2026-10-21T01:12:47.305Z",
+      "status": "pass",
+      "transport": "actual app Blob download; captured by development harness only",
+      "bytes": 2136157,
+      "type": "image/png",
+      "sha256": "0ae3fdec1a1e6ce8769c5ad82eeef87a921a3002bb6845de7f58f23e90726146",
+      "width": 1920,
+      "height": 1279
+    }
+  ],
+  "resourceRequests": [
+    {
+      "name": "http://terminal.local:4173/local-yolo/@vite/client",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/main.js",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/node_modules/vite/dist/client/env.mjs",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/ui/styles.css?t=1792544116935",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/catalog.js?t=1792543708909",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/ui/i18n.js",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/model-cache.js",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/engine-client.js?t=1792543785965",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/render.js?t=1792543760872",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/media.js",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/model-manifest.json?import&t=1792543708888",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/@noble_hashes_sha2__js.js?v=3b87ae60",
+      "initiatorType": "script",
+      "transferSize": 0
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/chunk-DGUM43GV.js?v=bb3c34d7",
+      "initiatorType": "script",
+      "transferSize": 0
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/engine-worker.js?worker_file&type=module",
+      "initiatorType": "other",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/node_modules/vite/dist/client/env.mjs",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/engine.js",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/onnxruntime-web_webgpu.js?v=5cfe98f1",
+      "initiatorType": "script",
+      "transferSize": 0
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/onnx-info.js",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/adapters.js",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/@vite/client",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/chunk-DGUM43GV.js?v=bb3c34d7",
+      "initiatorType": "script",
+      "transferSize": 0
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/engine-worker.js?worker_file&type=module",
+      "initiatorType": "other",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/node_modules/vite/dist/client/env.mjs",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/engine.js",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/onnxruntime-web_webgpu.js?v=5cfe98f1",
+      "initiatorType": "script",
+      "transferSize": 0
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/onnx-info.js",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/adapters.js",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/@vite/client",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/chunk-DGUM43GV.js?v=bb3c34d7",
+      "initiatorType": "script",
+      "transferSize": 0
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/engine-worker.js?worker_file&type=module",
+      "initiatorType": "other",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/node_modules/vite/dist/client/env.mjs",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/engine.js",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/onnxruntime-web_webgpu.js?v=5cfe98f1",
+      "initiatorType": "script",
+      "transferSize": 0
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/onnx-info.js",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/adapters.js",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/@vite/client",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/chunk-DGUM43GV.js?v=bb3c34d7",
+      "initiatorType": "script",
+      "transferSize": 0
+    }
+  ],
+  "measuredAt": "2026-10-21T01:16:08.972Z",
+  "scope": "Chromium iframe viewport only",
+  "url": "http://terminal.local:4173/local-yolo/?viewport-test=1",
+  "viewport": {
+    "requested": {
+      "width": "390",
+      "height": "844"
+    },
+    "frame": {
+      "x": 20,
+      "y": 171,
+      "width": 390,
+      "height": 844,
+      "top": 171,
+      "right": 410,
+      "bottom": 1015,
+      "left": 20
+    },
+    "innerWidth": 390,
+    "innerHeight": 844,
+    "devicePixelRatio": 1,
+    "visualWidth": 375,
+    "visualHeight": 844
+  },
+  "document": {
+    "clientWidth": 375,
+    "scrollWidth": 375,
+    "clientHeight": 844,
+    "scrollHeight": 1083,
+    "bodyScrollWidth": 375,
+    "bodyScrollHeight": 1083,
+    "horizontalOverflow": false,
+    "verticalOverflow": true
+  },
+  "state": {
+    "phase": "choose",
+    "workbenchVisible": false,
+    "fullscreen": false
+  },
+  "stage": {
+    "visible": false,
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0,
+    "top": 0,
+    "right": 0,
+    "bottom": 0,
+    "left": 0,
+    "computedHeight": "100%"
+  },
+  "canvas": {
+    "visible": false,
+    "x": 0,
+    "y": 0,
+    "width": 640,
+    "height": 360,
+    "top": 0,
+    "right": 0,
+    "bottom": 0,
+    "left": 0,
+    "objectFit": "contain",
+    "objectPosition": "50% 50%",
+    "cssWidth": "100%",
+    "cssHeight": "100%"
+  },
+  "source": {
+    "video": {
+      "videoWidth": 0,
+      "videoHeight": 0,
+      "readyState": 0
+    },
+    "image": {
+      "naturalWidth": 0,
+      "naturalHeight": 0
+    }
+  },
+  "targets": {
+    "visibleCount": 15,
+    "below44Count": 0,
+    "items": [
+      {
+        "id": null,
+        "tag": "a",
+        "name": "Local YOLO",
+        "disabled": false,
+        "x": 17,
+        "y": 14,
+        "width": 106.17,
+        "height": 44,
+        "top": 14,
+        "right": 123.17,
+        "bottom": 58,
+        "left": 17,
+        "below44": false
+      },
+      {
+        "id": "language-toggle",
+        "tag": "button",
+        "name": "切换为英文",
+        "disabled": false,
+        "x": 232,
+        "y": 14,
+        "width": 44,
+        "height": 44,
+        "top": 14,
+        "right": 276,
+        "bottom": 58,
+        "left": 232,
+        "below44": false
+      },
+      {
+        "id": "theme-toggle",
+        "tag": "button",
+        "name": "切换主题",
+        "disabled": false,
+        "x": 276,
+        "y": 14,
+        "width": 44,
+        "height": 44,
+        "top": 14,
+        "right": 320,
+        "bottom": 58,
+        "left": 276,
+        "below44": false
+      },
+      {
+        "id": "settings-open",
+        "tag": "button",
+        "name": "设置",
+        "disabled": false,
+        "x": 320,
+        "y": 14,
+        "width": 44,
+        "height": 44,
+        "top": 14,
+        "right": 364,
+        "bottom": 58,
+        "left": 320,
+        "below44": false
+      },
+      {
+        "id": "task-picker-button",
+        "tag": "button",
+        "name": "任务Detection",
+        "disabled": false,
+        "x": 75.89,
+        "y": 82,
+        "width": 177.94,
+        "height": 64,
+        "top": 82,
+        "right": 253.83,
+        "bottom": 146,
+        "left": 75.89,
+        "below44": false
+      },
+      {
+        "id": "size-picker-button",
+        "tag": "button",
+        "name": "大小N",
+        "disabled": false,
+        "x": 261.83,
+        "y": 82,
+        "width": 96.17,
+        "height": 64,
+        "top": 82,
+        "right": 358,
+        "bottom": 146,
+        "left": 261.83,
+        "below44": false
+      },
+      {
+        "id": "load-model",
+        "tag": "button",
+        "name": "加载本地模型",
+        "disabled": false,
+        "x": 25,
+        "y": 293.69,
+        "width": 325,
+        "height": 50,
+        "top": 293.69,
+        "right": 350,
+        "bottom": 343.69,
+        "left": 25,
+        "below44": false
+      },
+      {
+        "id": "source-local",
+        "tag": "button",
+        "name": "导入本地 ONNX",
+        "disabled": false,
+        "x": 110.58,
+        "y": 460.17,
+        "width": 153.83,
+        "height": 44,
+        "top": 460.17,
+        "right": 264.41,
+        "bottom": 504.17,
+        "left": 110.58,
+        "below44": false
+      },
+      {
+        "id": null,
+        "tag": "button",
+        "name": "自动检查",
+        "disabled": false,
+        "x": 25,
+        "y": 672.56,
+        "width": 74.02,
+        "height": 44,
+        "top": 672.56,
+        "right": 99.02,
+        "bottom": 716.56,
+        "left": 25,
+        "below44": false
+      },
+      {
+        "id": null,
+        "tag": "button",
+        "name": "Detection",
+        "disabled": false,
+        "x": 105.02,
+        "y": 672.56,
+        "width": 80.17,
+        "height": 44,
+        "top": 672.56,
+        "right": 185.19,
+        "bottom": 716.56,
+        "left": 105.02,
+        "below44": false
+      },
+      {
+        "id": null,
+        "tag": "button",
+        "name": "Segmentation",
+        "disabled": false,
+        "x": 191.19,
+        "y": 672.56,
+        "width": 104.75,
+        "height": 44,
+        "top": 672.56,
+        "right": 295.94,
+        "bottom": 716.56,
+        "left": 191.19,
+        "below44": false
+      },
+      {
+        "id": null,
+        "tag": "button",
+        "name": "Pose",
+        "disabled": false,
+        "x": 25,
+        "y": 722.56,
+        "width": 52.81,
+        "height": 44,
+        "top": 722.56,
+        "right": 77.81,
+        "bottom": 766.56,
+        "left": 25,
+        "below44": false
+      },
+      {
+        "id": null,
+        "tag": "button",
+        "name": "Classification",
+        "disabled": false,
+        "x": 83.81,
+        "y": 722.56,
+        "width": 100.55,
+        "height": 44,
+        "top": 722.56,
+        "right": 184.36,
+        "bottom": 766.56,
+        "left": 83.81,
+        "below44": false
+      },
+      {
+        "id": null,
+        "tag": "button",
+        "name": "OBB",
+        "disabled": false,
+        "x": 190.36,
+        "y": 722.56,
+        "width": 50.69,
+        "height": 44,
+        "top": 722.56,
+        "right": 241.05,
+        "bottom": 766.56,
+        "left": 190.36,
+        "below44": false
+      },
+      {
+        "id": "local-labels",
+        "tag": "textarea",
+        "name": "textarea",
+        "disabled": false,
+        "x": 25,
+        "y": 815.56,
+        "width": 325,
+        "height": 90.28,
+        "top": 815.56,
+        "right": 350,
+        "bottom": 905.84,
+        "left": 25,
+        "below44": false,
+        "labelTarget": {
+          "width": 325,
+          "height": 17
+        },
+        "labelAtLeast44": false
+      }
+    ]
+  },
+  "invalidImport": {
+    "filename": "truncated.onnx",
+    "realBytes": 128,
+    "error": "ONNX protobuf is truncated.",
+    "clearedStatus": ""
+  }
+}

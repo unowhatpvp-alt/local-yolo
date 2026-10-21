@@ -8,6 +8,6 @@ self.onmessage=async ({data})=>{
   else if(type==='dispose')value=await engine.dispose();
   else throw new Error('Unknown engine command');
   self.postMessage({id,value});
- }catch(error){self.postMessage({id,error:{message:error.message,stack:error.stack}})}
+ }catch(error){self.postMessage({id,error:{name:error.name,message:error.message,stack:error.stack}})}
  finally{args.bitmap?.close()}
 };

@@ -75,7 +75,10 @@ export function renderResult(ctx, result, { show = true, mirror = false, crop, k
   ctx.lineCap = 'round';
   const items = result.items || [];
   if (['classify', 'classification'].includes(result.task)) {
-    items.slice(0, 5).forEach((item, index) => label(ctx, `${item.label ?? item.classId ?? 'Class'}  ${(item.score * 100).toFixed(1)}%`, 12, 12 + (index + 1) * (fontSize * 1.9), fontSize, '#fff'));
+    const visible = items.slice(0, 5);
+    const margin = Math.min(12, ctx.canvas.height * .05);
+    const textSize = Math.min(fontSize, (ctx.canvas.height - margin * 2) / Math.max(1, visible.length) / 1.9);
+    visible.forEach((item, index) => label(ctx, `${item.label ?? item.classId ?? 'Class'}  ${(item.score * 100).toFixed(1)}%`, margin, margin + (index + 1) * textSize * 1.9, textSize, '#fff'));
     ctx.restore();
     return;
   }

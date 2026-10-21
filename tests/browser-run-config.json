@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+  "frozenAt": "2026-10-21T01:11:16.743Z",
+  "requiredModels": [
+    "yolo26-detect-n",
+    "yolo26-detect-s",
+    "yolo26-detect-m",
+    "yolo26-detect-l",
+    "yolo26-detect-x",
+    "yolo26-segment-n",
+    "yolo26-segment-s",
+    "yolo26-segment-m",
+    "yolo26-segment-l",
+    "yolo26-segment-x",
+    "yolo26-pose-n",
+    "yolo26-pose-s",
+    "yolo26-pose-m",
+    "yolo26-pose-l",
+    "yolo26-pose-x",
+    "yolo26-classify-n",
+    "yolo26-classify-s",
+    "yolo26-classify-m",
+    "yolo26-classify-l",
+    "yolo26-classify-x",
+    "yolo26-obb-n",
+    "yolo26-obb-s",
+    "yolo26-obb-m",
+    "yolo26-obb-l",
+    "yolo26-obb-x"
+  ],
+  "scope": "Actual browser EngineClient validation only; production availability is unchanged."
+}

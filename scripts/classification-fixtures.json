@@ -1,0 +1,72 @@
+[
+  {
+    "file": "classification-val-0.jpg",
+    "archiveMember": "val/n01440764/ILSVRC2012_val_00041939.JPEG",
+    "sha256": "d5f97131d20a9305875f35b44013fea231f1afbe4cc35de29db320870c40eaf4",
+    "expectedClassId": 0,
+    "expectedLabel": "tench"
+  },
+  {
+    "file": "classification-val-1.jpg",
+    "archiveMember": "val/n01443537/ILSVRC2012_val_00002241.JPEG",
+    "sha256": "d0ea314a491f9c3572549b4a89db6d005b786b1a38f33037aacc5e2e86bc5168",
+    "expectedClassId": 1,
+    "expectedLabel": "goldfish"
+  },
+  {
+    "file": "classification-val-2.jpg",
+    "archiveMember": "val/n01484850/ILSVRC2012_val_00044052.JPEG",
+    "sha256": "1c11003a2cba9db6f991e90c57165ae25b250f0be11c846ba12c3f48a801036a",
+    "expectedClassId": 2,
+    "expectedLabel": "great_white_shark"
+  },
+  {
+    "file": "classification-val-3.jpg",
+    "archiveMember": "val/n01491361/ILSVRC2012_val_00030926.JPEG",
+    "sha256": "eb2cad6f857b09e6eb012de7f2253329cb7c2faa663c6f856d4aadb288ee873f",
+    "expectedClassId": 3,
+    "expectedLabel": "tiger_shark"
+  },
+  {
+    "file": "classification-val-4.jpg",
+    "archiveMember": "val/n01494475/ILSVRC2012_val_00021325.JPEG",
+    "sha256": "bdeab0afc3270972ff29e80a8564e418e5ecb579e32478edba88852be22c245b",
+    "expectedClassId": 4,
+    "expectedLabel": "hammerhead"
+  },
+  {
+    "file": "classification-val-5.jpg",
+    "archiveMember": "val/n01496331/ILSVRC2012_val_00042751.JPEG",
+    "sha256": "e577ddf3129daccf31f77039cfc539a3fe3b9e40d5af8e3169241fd3371ef40a",
+    "expectedClassId": 5,
+    "expectedLabel": "electric_ray"
+  },
+  {
+    "file": "classification-val-6.jpg",
+    "archiveMember": "val/n01498041/ILSVRC2012_val_00006402.JPEG",
+    "sha256": "93da6852b1196f4f1405108770aba45036cc45262cd3ee005c1d923703f3b1c0",
+    "expectedClassId": 6,
+    "expectedLabel": "stingray"
+  },
+  {
+    "file": "classification-val-7.jpg",
+    "archiveMember": "val/n01514668/ILSVRC2012_val_00003606.JPEG",
+    "sha256": "f7bfe4994ea335bb47fa514a234a2963c81b2e7038623dc3f783241376ba96e2",
+    "expectedClassId": 7,
+    "expectedLabel": "cock"
+  },
+  {
+    "file": "classification-val-8.jpg",
+    "archiveMember": "val/n01514859/ILSVRC2012_val_00021430.JPEG",
+    "sha256": "7d8a25dbd1b53797208262aed8df3c8c68f2898dc571f2c5e2891f3dc42f41d0",
+    "expectedClassId": 8,
+    "expectedLabel": "hen"
+  },
+  {
+    "file": "classification-val-9.jpg",
+    "archiveMember": "val/n01518878/ILSVRC2012_val_00017839.JPEG",
+    "sha256": "cddca8d4550a8c57c4834a2734ea02fb98018c3f50ee52dbbc1cc04410437d09",
+    "expectedClassId": 9,
+    "expectedLabel": "ostrich"
+  }
+]

@@ -1,120 +1,113 @@
 <!doctype html>
 <html lang="zh-CN" data-theme="system">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="theme-color" content="#fafafa" />
-    <meta name="description" content="Local YOLO — Private, on-device vision. Run real YOLO inference entirely in your browser." />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <link rel="manifest" href="./manifest.webmanifest" />
-    <link rel="icon" href="./icons/icon-192.png" type="image/png" />
-    <link rel="apple-touch-icon" href="./icons/icon-192.png" />
-    <title>Local YOLO · Minimal</title>
-  </head>
-  <body>
-    <svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <symbol id="icon-focus" viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3m13-5h3a2 2 0 0 1 2 2v3M3 16v3a2 2 0 0 0 2 2h3m8 0h3a2 2 0 0 0 2-2v-3"/><circle cx="12" cy="12" r="4"/></symbol>
-      <symbol id="icon-chevron" viewBox="0 0 24 24"><path d="m8 10 4 4 4-4"/></symbol>
-      <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
-      <symbol id="icon-camera" viewBox="0 0 24 24"><path d="M8 5 6 8H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-2l-2-3Z"/><circle cx="12" cy="14" r="4"/></symbol>
-      <symbol id="icon-upload" viewBox="0 0 24 24"><path d="M12 16V3m-5 5 5-5 5 5M3 15v5a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-5"/></symbol>
-      <symbol id="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol>
-      <symbol id="icon-settings" viewBox="0 0 24 24"><path d="M4 7h16M4 17h16"/><circle cx="8" cy="7" r="3"/><circle cx="16" cy="17" r="3"/></symbol>
-      <symbol id="icon-shield" viewBox="0 0 24 24"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6Z"/><path d="m8 12 3 3 5-6"/></symbol>
-      <symbol id="icon-file" viewBox="0 0 24 24"><path d="M14 2H5a1 1 0 0 0-1 1v18a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V8Z"/><path d="M14 2v6h6M8 13h8m-8 4h6"/></symbol>
-      <symbol id="icon-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
-      <symbol id="icon-fullscreen" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></symbol>
-      <symbol id="icon-mirror" viewBox="0 0 24 24"><path d="M12 3v18M8 6 3 17h5Zm8 0 5 11h-5Z"/></symbol>
-      <symbol id="icon-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
-      <symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 3v13m-5-5 5 5 5-5M4 17v4h16v-4"/></symbol>
-      <symbol id="icon-play" viewBox="0 0 24 24"><path d="m8 4 12 8-12 8Z"/></symbol>
-      <symbol id="icon-restart" viewBox="0 0 24 24"><path d="M3 10a9 9 0 1 1 2 8M3 4v6h6"/></symbol>
-      <symbol id="icon-box" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M4 9h16M9 4v16"/></symbol>
-    </svg>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#fafafa" />
+  <meta name="description" content="Local YOLO — real YOLO vision, entirely on your device." />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" href="./icons/icon-192.png" type="image/png" />
+  <link rel="apple-touch-icon" href="./icons/icon-192.png" />
+  <title>Local YOLO · Minimal</title>
+</head>
+<body>
+  <svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="icon-focus" viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3m13-5h3a2 2 0 0 1 2 2v3M3 16v3a2 2 0 0 0 2 2h3m8 0h3a2 2 0 0 0 2-2v-3"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="icon-chevron" viewBox="0 0 24 24"><path d="m7 10 5 5 5-5"/></symbol>
+    <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+    <symbol id="icon-camera" viewBox="0 0 24 24"><path d="m8 5-2 3H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-2l-2-3Z"/><circle cx="12" cy="14" r="4"/></symbol>
+    <symbol id="icon-upload" viewBox="0 0 24 24"><path d="M12 16V3m-5 5 5-5 5 5M3 16v4a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-4"/></symbol>
+    <symbol id="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol>
+    <symbol id="icon-settings" viewBox="0 0 24 24"><path d="M4 7h16M4 17h16"/><circle cx="8" cy="7" r="3"/><circle cx="16" cy="17" r="3"/></symbol>
+    <symbol id="icon-file" viewBox="0 0 24 24"><path d="M14 2H5a1 1 0 0 0-1 1v18a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V8Z"/><path d="M14 2v6h6M8 13h8m-8 4h6"/></symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="icon-fullscreen" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></symbol>
+    <symbol id="icon-exit" viewBox="0 0 24 24"><path d="M3 8h5V3m8 0v5h5M3 16h5v5m8 0v-5h5"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 3v13m-5-5 5 5 5-5M4 17v4h16v-4"/></symbol>
+    <symbol id="icon-stop" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="1"/></symbol><symbol id="icon-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol><symbol id="icon-play" viewBox="0 0 24 24"><path d="m8 4 12 8-12 8Z"/></symbol>
+    <symbol id="icon-restart" viewBox="0 0 24 24"><path d="M3 10a9 9 0 1 1 2 8M3 4v6h6"/></symbol>
+    <symbol id="icon-language" viewBox="0 0 24 24"><path d="M3 5h12M9 3v2m3 0c0 7-3 10-8 12m1-9c1 4 4 7 8 9m1 4 4-11 4 11m-6-4h4"/></symbol>
+    <symbol id="icon-more" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></symbol>
+  </svg>
 
-    <header class="app-header">
-      <a class="brand" href="./" aria-label="Local YOLO home">
-        <span class="brand-mark"><svg><use href="#icon-focus"/></svg></span>
-        <span>Local YOLO</span>
-        <span class="edition">Minimal</span>
-      </a>
-      <div class="header-actions">
-        <span id="current-model" class="header-model" hidden></span>
-        <button id="switch-model" class="button button-ghost compact" hidden data-i18n="switchModel">切换模型</button>
-        <button id="theme-toggle" class="icon-button" data-i18n-title="theme" data-i18n-aria="theme" title="切换主题" aria-label="切换主题"><svg><use href="#icon-sun"/></svg></button>
-        <button id="settings-open" class="icon-button" data-i18n-title="settings" data-i18n-aria="settings" title="设置" aria-label="设置"><svg><use href="#icon-settings"/></svg></button>
-      </div>
-    </header>
+  <header class="app-header">
+    <a class="brand" href="./" aria-label="Local YOLO"><svg><use href="#icon-focus"/></svg><span>Local YOLO</span></a>
+    <div class="header-actions">
+      <span id="current-model" class="current-model" hidden></span>
+      <button id="switch-model" class="text-button switch-model" hidden data-i18n="backToModels">选择模型</button>
+      <button id="language-toggle" class="icon-button language-toggle" data-i18n-title="language" data-i18n-aria="language" title="语言" aria-label="语言"><span id="language-label">EN</span></button>
+      <button id="theme-toggle" class="icon-button" data-i18n-title="theme" data-i18n-aria="theme" title="切换主题" aria-label="切换主题"><svg><use href="#icon-sun"/></svg></button>
+      <button id="settings-open" class="icon-button" data-i18n-title="settings" data-i18n-aria="settings" title="设置" aria-label="设置"><svg><use href="#icon-settings"/></svg></button>
+    </div>
+  </header>
 
-    <main id="model-page" class="model-page">
-      <section class="intro">
-        <div class="eyebrow"><span class="status-dot"></span> ON-DEVICE VISION <span class="eyebrow-separator">/</span> MINIMAL V1</div>
-        <h1 data-i18n="modelTitle">让视觉，在本地发生。</h1>
-        <p data-i18n="modelSubtitle">选择一个模型，开启你的视觉工作台。所有推理都在你的设备上完成。</p>
-      </section>
-
-      <div class="model-layout">
-        <section class="model-config panel" aria-labelledby="model-config-title">
-          <div class="panel-heading"><h2 id="model-config-title" data-i18n="chooseModel">选择模型</h2><span class="step-label">01 / 02</span></div>
-          <div class="source-tabs" role="tablist" aria-label="Model source">
-            <button id="source-online" class="source-tab active" role="tab" aria-selected="true" aria-controls="online-panel"><svg><use href="#icon-download"/></svg><span data-i18n="onlineModels">在线模型</span></button>
-            <button id="source-local" class="source-tab" role="tab" aria-selected="false" aria-controls="local-panel"><svg><use href="#icon-file"/></svg><span data-i18n="localOnnx">本地 ONNX</span></button>
+  <main id="model-page" class="model-page">
+    <nav id="online-panel" class="model-topnav" aria-label="Model selection">
+        <p class="model-family">YOLO26</p>
+        <div class="model-selectors">
+          <div class="custom-picker task-picker">
+            <button id="task-picker-button" class="picker-button" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="task-picker-menu"><span><small data-i18n="visionTask">任务</small><strong id="task-picker-label">Detection</strong></span><svg><use href="#icon-chevron"/></svg></button>
+            <div id="task-picker-menu" class="picker-menu" role="listbox" aria-labelledby="task-picker-button" hidden><div class="menu-heading"><span data-i18n="visionTask">任务</span><button class="icon-button" data-close-picker data-i18n-aria="closeMenu" aria-label="关闭"><svg><use href="#icon-close"/></svg></button></div><div id="task-options" class="option-list"></div></div>
           </div>
-
-          <div id="online-panel" role="tabpanel" aria-labelledby="source-online">
-            <div class="field-group"><div class="field-label"><span data-i18n="series">模型系列</span><span class="field-index">01</span></div><div id="series-options" class="series-options choice-row" role="group" aria-label="Model series"></div></div>
-            <div class="field-group"><div class="field-label"><span data-i18n="task">任务类型</span><span class="field-index">02</span></div><div id="task-options" class="task-grid" role="group" aria-label="Model task"></div></div>
-            <div class="field-group last"><div class="field-label"><span data-i18n="modelSize">模型大小</span><span class="field-index">03</span></div><div id="size-options" class="size-options choice-row" role="group" aria-label="Model size"></div><p id="size-hint" class="field-hint"></p></div>
+          <div class="custom-picker size-picker">
+            <button id="size-picker-button" class="picker-button" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="size-picker-menu"><span><small data-i18n="modelScale">大小</small><strong id="size-picker-label">N</strong></span><svg><use href="#icon-chevron"/></svg></button>
+            <div id="size-picker-menu" class="picker-menu size-menu" role="listbox" aria-labelledby="size-picker-button" hidden><div class="menu-heading"><span data-i18n="modelScale">大小</span><button class="icon-button" data-close-picker data-i18n-aria="closeMenu" aria-label="关闭"><svg><use href="#icon-close"/></svg></button></div><div id="size-options" class="size-option-list"></div><p id="size-hint" class="field-hint" data-i18n="sizeHint">小模型偏重速度，大模型需要更多内存。</p></div>
           </div>
-
-          <div id="local-panel" role="tabpanel" aria-labelledby="source-local" hidden>
-            <label class="file-dropzone" for="local-model-input"><span class="dropzone-icon"><svg><use href="#icon-file"/></svg></span><strong data-i18n="localTitle">导入本地 ONNX 模型</strong><span data-i18n="localHint">选择你的 .onnx 文件，模型将留在设备上</span><span class="button button-secondary" data-i18n="chooseOnnx">选择 ONNX 文件</span><input id="local-model-input" type="file" accept=".onnx" class="sr-only" /></label>
-            <p id="local-file-name" class="local-file-name" aria-live="polite"></p>
-            <div class="field-group"><div class="field-label"><span data-i18n="taskType">任务类型</span></div><div id="local-task-options" class="local-task-options choice-row" role="group" aria-label="Local model task"></div></div>
-            <div class="field-group last"><label for="local-labels" class="field-label" data-i18n="classNames">类别名称（可选）</label><textarea id="local-labels" rows="3" data-i18n-placeholder="classNamesHint" placeholder="每行一个类别，或使用 JSON 数组"></textarea></div>
-            <p class="compatibility-note"><svg><use href="#icon-file"/></svg><span data-i18n="compatibilityNote">仅支持兼容的 YOLO ONNX 输入和输出格式。需要外部权重文件的模型暂不支持。</span></p>
-          </div>
-        </section>
-
-        <aside class="model-summary">
-          <section class="summary-card panel">
-            <div class="summary-kicker" data-i18n="modelReady">即将加载</div>
-            <div class="model-art" aria-hidden="true"><div class="model-art-grid"></div><div class="model-art-frame frame-one"></div><div class="model-art-frame frame-two"></div><span>YOLO</span><small>VISION MODEL</small></div>
-            <div class="summary-content"><h2 id="model-name">—</h2><p id="model-description" class="summary-description"></p><dl class="model-details"><div><dt data-i18n="modelSize">模型大小</dt><dd id="model-size">—</dd></div><div><dt data-i18n="modelSource">模型来源</dt><dd><span id="model-license">—</span> · <a id="model-source-link" target="_blank" rel="noopener noreferrer">↗</a></dd></div><div><dt data-i18n="cachedModels">本地缓存</dt><dd id="model-cache-state">—</dd></div></dl><button id="load-model" class="button button-primary load-button"><span data-i18n="downloadLoad">下载并进入工作台</span><svg><use href="#icon-arrow"/></svg></button><div class="load-feedback" aria-live="polite"><progress id="load-progress" max="100" value="0" hidden></progress><p id="load-status"></p><p id="load-error" class="error-text" role="alert" hidden></p></div></div>
-          </section>
-          <div class="privacy-note"><svg><use href="#icon-shield"/></svg><div><strong data-i18n="privacyTitle">你的画面，只属于你</strong><p data-i18n="privacyDescription">摄像头、图片和视频均在本地处理，不上传到服务器。</p></div></div>
-        </aside>
-      </div>
-      <footer class="model-footer"><span data-i18n="offlineNote">下载后可缓存模型，离线可用性取决于浏览器存储。</span><div><a href="./studio/">Studio <span>↗</span></a><a href="./experimental-training/" data-i18n="experimentalTraining">实验训练 ↗</a></div></footer>
-    </main>
-
-    <main id="workbench" class="workbench" hidden>
-      <div class="workbench-heading"><div><div class="eyebrow">LOCAL YOLO <span class="eyebrow-separator">/</span> WORKSPACE</div><h1 data-i18n="workbench">视觉工作台</h1></div><div class="mode-tabs" role="tablist" aria-label="Input source"><button id="mode-camera" class="mode-tab active" role="tab" aria-selected="true"><svg><use href="#icon-camera"/></svg><span data-i18n="camera">摄像头</span></button><button id="mode-file" class="mode-tab" role="tab" aria-selected="false"><svg><use href="#icon-upload"/></svg><span data-i18n="uploadFile">上传文件</span></button></div></div>
-
-      <section class="stage-panel" aria-label="Inference preview">
-        <div id="stage" class="stage">
-          <video id="camera-video" class="media-source" autoplay muted playsinline hidden></video>
-          <video id="file-video" class="media-source" playsinline hidden></video>
-          <img id="file-image" class="media-source" alt="" hidden />
-          <canvas id="overlay-canvas" aria-label="YOLO detection overlay"></canvas>
-          <div class="stage-topbar"><span id="stage-source-label" class="stage-source-label"><span class="status-dot"></span><span data-i18n="camera">摄像头</span></span><button id="fullscreen-toggle" class="stage-icon" data-i18n-title="fullscreen" data-i18n-aria="fullscreen" title="全屏" aria-label="全屏"><svg><use href="#icon-fullscreen"/></svg></button></div>
-          <div id="stage-empty" class="stage-empty"><span class="camera-empty-icon"><svg><use href="#icon-camera"/></svg></span><h2 id="stage-empty-title" data-i18n="cameraTitle">准备好看见更多了吗？</h2><p id="stage-message" data-i18n="cameraHint">开启摄像头，在画面中实时识别。<br />浏览器会向你请求摄像头权限。</p><button id="camera-start" class="button stage-start"><svg><use href="#icon-camera"/></svg><span data-i18n="startCamera">开启摄像头</span></button><button id="choose-file-empty" class="button stage-start" hidden><svg><use href="#icon-upload"/></svg><span data-i18n="chooseFile">选择图片或视频</span></button><small data-i18n="localFilesStayLocal">所有画面仅在此设备上处理</small></div>
-          <div id="camera-controls" class="stage-controls"><button id="camera-toggle" class="stage-button"><svg><use href="#icon-camera"/></svg><span data-i18n="startCamera">开启摄像头</span></button><div class="device-picker"><button id="camera-device-button" class="stage-button device-button" aria-expanded="false" aria-controls="camera-device-menu"><span data-i18n="selectCamera">选择摄像头</span><svg><use href="#icon-chevron"/></svg></button><div id="camera-device-menu" class="device-menu" role="menu" hidden></div></div><span class="control-divider"></span><button id="mirror-toggle" class="stage-icon" aria-pressed="false" data-i18n-title="mirror" data-i18n-aria="mirror" title="镜像" aria-label="镜像"><svg><use href="#icon-mirror"/></svg></button><div id="zoom-controls" class="zoom-controls"><span id="zoom-label">1×</span><input id="zoom-range" type="range" min="1" max="3" value="1" step="0.1" aria-label="Camera zoom"/><div id="zoom-shortcuts" class="zoom-shortcuts"></div><small id="zoom-type"></small></div></div>
-          <div id="video-controls" class="stage-controls file-video-controls" hidden><button id="video-play" class="stage-button"><svg><use href="#icon-play"/></svg><span data-i18n="play">播放</span></button><button id="video-restart" class="stage-icon" data-i18n-title="restart" data-i18n-aria="restart" title="重新开始" aria-label="重新开始"><svg><use href="#icon-restart"/></svg></button><span id="video-time" class="video-time">0:00 / 0:00</span></div>
         </div>
-        <div class="stage-statusbar"><div class="stage-metrics"><div class="metric"><span data-i18n="fps">检测 FPS</span><strong id="fps-value">—</strong></div><span class="metric-divider"></span><div class="metric"><span data-i18n="latency">检测延迟</span><strong><span id="latency-value">—</span><small>ms</small></strong></div><span class="metric-divider"></span><div class="metric"><span data-i18n="backend">推理后端</span><strong id="backend-value">—</strong></div></div><div id="run-status" class="run-status" aria-live="polite"><span class="status-dot"></span><span data-i18n="ready">已就绪</span></div></div>
-      </section>
+    </nav>
+    <section class="launcher" aria-label="Launch workbench">
+      <div class="model-ready">
+        <h1 id="model-name">YOLO26n</h1>
+        <p id="model-description" class="model-description" hidden></p>
+        <p class="model-meta"><span id="model-size">—</span><span aria-hidden="true">·</span><span id="model-cache-state" data-i18n="downloadOnFirstUse">首次使用需要下载</span></p>
+        <p id="memory-note" class="field-hint memory-note" hidden></p>
+      </div>
+      <button id="load-model" class="primary-button load-button"><span id="load-model-label" data-i18n="launchWorkbench">打开工作台</span><svg><use href="#icon-arrow"/></svg></button>
+      <div class="load-feedback" aria-live="polite"><progress id="load-progress" max="100" value="0" hidden></progress><p id="load-status" class="field-hint"></p><button id="load-cancel" class="text-button" data-i18n="cancel" hidden>取消</button><p id="load-error" class="error-text" role="alert" hidden></p></div>
+      <p class="privacy-line" data-i18n="standardPrivacy">画面只在你的设备上处理</p>
 
-      <div class="workbench-bottom"><section class="parameters-panel panel"><details id="parameters"><summary><span><svg><use href="#icon-settings"/></svg><span data-i18n="parameters">检测参数</span></span><svg class="details-chevron"><use href="#icon-chevron"/></svg></summary><div class="parameters-content"><div class="parameter"><label for="confidence"><span data-i18n="confidence">置信度阈值</span><output id="confidence-value" for="confidence">0.25</output></label><input id="confidence" type="range" min="0.01" max="0.99" step="0.01" value="0.25" /></div><div id="iou-row" class="parameter"><label for="iou"><span data-i18n="iou">IoU 阈值</span><output id="iou-value" for="iou">0.45</output></label><input id="iou" type="range" min="0.05" max="0.95" step="0.01" value="0.45" /><p id="iou-note" class="field-hint"></p></div><label class="toggle-label" for="show-results"><span data-i18n="showResults">显示检测结果</span><input id="show-results" class="toggle" type="checkbox" checked /></label></div></details></section><div class="file-actions"><input id="file-input" class="sr-only" type="file" accept="image/*,video/*"/><button id="choose-file" class="button button-secondary" hidden><svg><use href="#icon-upload"/></svg><span data-i18n="chooseFile">选择图片或视频</span></button><button id="save-image" class="button button-secondary" disabled><svg><use href="#icon-download"/></svg><span data-i18n="saveImage">保存画面</span></button><button id="save-json" class="button button-ghost" disabled data-i18n="saveJson">导出 JSON</button></div></div>
-      <p id="runtime-notice" class="measurement-note" aria-live="polite" hidden></p>
-      <p class="measurement-note" data-i18n="latencyDefinition">检测延迟包含预处理、模型推理与后处理；检测 FPS 按实际完成的推理计算。</p>
-      <section id="result-summary" class="result-summary" aria-live="polite" hidden></section>
-      <p id="workbench-error" class="error-banner" role="alert" hidden></p>
-    </main>
+      <div class="local-import">
+        <button id="source-local" class="local-import-toggle" aria-expanded="false" aria-controls="local-panel"><svg><use href="#icon-file"/></svg><span data-i18n="localImportLink">导入本地 ONNX</span><svg class="disclosure-chevron"><use href="#icon-chevron"/></svg></button>
+        <div id="local-panel" class="local-panel" hidden>
+          <label class="file-import-button" for="local-model-input"><span data-i18n="chooseOnnx">选择 ONNX 文件</span><svg><use href="#icon-upload"/></svg><input id="local-model-input" class="sr-only" type="file" accept=".onnx" /></label>
+          <p id="local-file-name" class="field-hint" aria-live="polite"></p>
+          <div class="local-field"><span class="field-label" data-i18n="taskType">任务类型</span><div id="local-task-options" class="local-task-options" role="group" aria-label="Local model task"></div></div>
+          <div class="local-field"><label class="field-label" for="local-labels" data-i18n="classNames">类别名称</label><textarea id="local-labels" rows="3" data-i18n-placeholder="classNamesHint" placeholder="每行一个类别，或使用 JSON 数组"></textarea></div>
+          <p class="field-hint" data-i18n="compatibilityNote">仅支持兼容的 YOLO ONNX。外部权重、自定义算子和其他输出格式可能不受支持。</p>
+          <button id="source-online" class="text-button" data-i18n="onlineModels">返回在线模型</button>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <dialog id="settings-dialog" class="settings-dialog" aria-labelledby="settings-title"><div class="dialog-heading"><div><div class="eyebrow">PREFERENCES</div><h2 id="settings-title" data-i18n="settings">设置</h2></div><button id="settings-close" class="icon-button" data-i18n-title="close" data-i18n-aria="close" title="关闭" aria-label="关闭"><svg><use href="#icon-close"/></svg></button></div><div class="settings-body"><section class="settings-section"><h3 data-i18n="language">语言</h3><div id="language-options" class="settings-choices"><button data-language="zh">简体中文</button><button data-language="en">English</button></div></section><section class="settings-section"><h3 data-i18n="appearance">外观</h3><div id="theme-options" class="settings-choices"><button data-theme="system" data-i18n="system">跟随系统</button><button data-theme="light" data-i18n="light">浅色</button><button data-theme="dark" data-i18n="dark">深色</button></div></section><section class="settings-section"><h3 data-i18n="executionBackend">运行后端</h3><div id="backend-options" class="settings-choices"><button data-backend="auto" data-i18n="autoBackend">自动 · 优先 WebGPU</button><button data-backend="wasm" data-i18n="wasmBackend">WASM</button></div><p class="field-hint" data-i18n="backendHint">更改后在下次加载模型时生效。</p></section><section class="settings-section"><div class="settings-section-title"><h3 data-i18n="cachedModels">已缓存的模型</h3><button id="cache-clear" class="text-button" data-i18n="clearCache">清空缓存</button></div><div id="cache-list" class="cache-list"></div><p id="storage-status" class="field-hint"></p><p class="field-hint" data-i18n="offlineNote">下载后可缓存模型，离线可用性取决于浏览器存储。</p></section><button id="install-app" class="button button-secondary install-button" hidden><svg><use href="#icon-download"/></svg><span data-i18n="installApp">安装 Local YOLO</span></button></div><div class="dialog-footer"><span>Local YOLO</span><span>Minimal V1.0</span></div></dialog>
-    <div id="toast" class="toast" role="status" hidden></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+  <main id="workbench" class="workbench" hidden>
+    <nav class="workspace-nav" aria-label="Input source"><div class="mode-tabs"><button id="mode-camera" class="mode-tab active" aria-pressed="true"><svg><use href="#icon-camera"/></svg><span data-i18n="camera">摄像头</span></button><button id="mode-file" class="mode-tab" aria-pressed="false"><svg><use href="#icon-upload"/></svg><span data-i18n="uploadFile">上传文件</span></button></div><div class="workspace-nav-actions"><button id="choose-file" class="text-button" hidden><svg><use href="#icon-upload"/></svg><span data-i18n="chooseFile">选择图片或视频</span></button><div class="file-actions"><input id="file-input" hidden type="file" accept="image/*,video/*"/><button id="results-menu-toggle" class="text-button" aria-expanded="false" aria-controls="results-options-panel" data-i18n-aria="resultsOptions" aria-label="结果选项"><svg><use href="#icon-more"/></svg></button><div id="results-options-panel" class="results-options-panel" hidden><p id="file-name" class="field-hint" hidden></p><button id="save-image" class="text-button" disabled><svg><use href="#icon-download"/></svg><span data-i18n="saveImage">保存图片</span></button><button id="save-json" class="text-button" disabled data-i18n="saveJson">导出 JSON</button></div></div></div></nav>
+    <section class="preview-area" aria-label="Inference preview">
+      <div id="stage" class="stage" tabindex="0" aria-label="YOLO preview">
+        <video id="camera-video" class="media-source" autoplay muted playsinline hidden></video>
+        <video id="file-video" class="media-source" playsinline hidden></video>
+        <img id="file-image" class="media-source" alt="" hidden />
+        <canvas id="overlay-canvas" aria-label="YOLO results"></canvas>
+        <div id="stage-empty" class="stage-empty"><svg class="empty-camera"><use href="#icon-camera"/></svg><h2 id="stage-empty-title" data-i18n="camera">摄像头</h2><p id="stage-message" data-i18n="cameraHint">启动摄像头，开始实时、本地推理。</p><button id="camera-start" class="primary-button"><svg><use href="#icon-camera"/></svg><span data-i18n="startCamera">启动摄像头</span></button><button id="choose-file-empty" class="primary-button" hidden><svg><use href="#icon-upload"/></svg><span data-i18n="chooseFile">选择图片或视频</span></button></div>
+        <button id="fullscreen-exit" class="preview-button fullscreen-exit" data-i18n-title="exitFullscreen" data-i18n-aria="exitFullscreen" title="退出全屏" aria-label="退出全屏" hidden><svg><use href="#icon-exit"/></svg></button>
+        <div id="stage-toolbar" class="stage-toolbar">
+          <div id="camera-controls" class="camera-controls"><button id="camera-toggle" class="preview-button camera-toggle" data-i18n-title="startCamera" data-i18n-aria="startCamera" title="启动摄像头" aria-label="启动摄像头"><svg><use href="#icon-camera"/></svg></button><button id="camera-menu-toggle" class="preview-button" aria-expanded="false" aria-controls="camera-options-panel" data-i18n-title="cameraOptions" data-i18n-aria="cameraOptions" title="摄像头选项" aria-label="摄像头选项"><svg><use href="#icon-more"/></svg></button></div>
+          <div id="video-controls" class="video-controls" hidden><button id="video-play" class="preview-button" data-i18n-title="play" data-i18n-aria="play" title="播放" aria-label="播放"><svg><use href="#icon-play"/></svg></button><button id="video-restart" class="preview-button" data-i18n-title="restart" data-i18n-aria="restart" title="重新开始" aria-label="重新开始"><svg><use href="#icon-restart"/></svg></button><span id="video-time" class="video-time">0:00 / 0:00</span></div>
+          <button id="fullscreen-toggle" class="preview-button" data-i18n-title="fullscreen" data-i18n-aria="fullscreen" title="全屏" aria-label="全屏"><svg><use href="#icon-fullscreen"/></svg></button>
+        </div>
+        <div id="camera-options-panel" class="camera-options-panel" hidden><div class="camera-options-heading"><strong data-i18n="cameraOptions">摄像头选项</strong><button id="camera-options-close" class="preview-button" data-i18n-aria="close" aria-label="关闭"><svg><use href="#icon-close"/></svg></button></div><div class="camera-option"><span class="field-label" data-i18n="cameraSource">摄像头</span><button id="camera-device-button" class="device-button" aria-expanded="false" aria-controls="camera-device-menu"><span data-i18n="selectCamera">选择摄像头</span><svg><use href="#icon-chevron"/></svg></button><div id="camera-device-menu" class="device-menu" role="menu" hidden></div></div><label class="toggle-label"><span data-i18n="mirror">镜像</span><input id="mirror-toggle" class="toggle" type="checkbox" /></label><div id="zoom-controls" class="camera-option"><div class="zoom-heading"><label for="zoom-range" data-i18n="zoom">倍率</label><span id="zoom-label">1.0×</span></div><input id="zoom-range" type="range" min="1" max="3" value="1" step="0.1" aria-label="Camera zoom"/><div class="zoom-footer"><div id="zoom-shortcuts" class="zoom-shortcuts"></div><small id="zoom-type"></small></div></div></div>
+      </div>
+    </section>
+    <div class="workspace-footer"><label class="confidence-control" for="confidence"><span data-i18n="confidence">置信度</span><input id="confidence" type="range" min="0.01" max="0.99" step="0.01" value="0.25"/><output id="confidence-value" for="confidence">0.25</output></label><div class="quiet-metrics"><span><span id="fps-value">—</span> <span>FPS</span></span><span><span id="latency-value">—</span> <span>ms</span></span><span id="backend-value">—</span><span id="run-status" hidden></span></div></div>
+    <p id="runtime-notice" class="runtime-notice" hidden></p><section id="result-summary" class="sr-only" aria-live="polite"></section><p id="workbench-error" class="error-text workbench-error" role="alert" hidden></p>
+  </main>
+
+  <dialog id="settings-dialog" class="settings-dialog" aria-labelledby="settings-title"><div class="dialog-heading"><h2 id="settings-title" data-i18n="settings">设置</h2><button id="settings-close" class="icon-button" data-i18n-aria="close" aria-label="关闭"><svg><use href="#icon-close"/></svg></button></div><div class="settings-body"><section class="settings-section"><h3 data-i18n="language">语言</h3><div id="language-options" class="settings-choices"></div></section><section class="settings-section"><h3 data-i18n="appearance">外观</h3><div id="theme-options" class="settings-choices"></div></section><section class="settings-section"><h3 data-i18n="executionBackend">推理后端</h3><div id="backend-options" class="settings-choices"></div><p class="field-hint" data-i18n="backendHint">下次加载模型时生效。</p><p id="session-info" class="field-hint" hidden></p><details id="model-inspection-details" class="inspection-details" hidden><summary data-i18n="modelInspection">模型信息</summary><pre id="model-inspection" class="model-inspection"></pre></details></section><section class="settings-section"><div class="settings-row"><h3 data-i18n="cachedModels">已缓存模型</h3><button id="cache-clear" class="text-button" data-i18n="clearCache">清除模型缓存</button></div><div id="cache-list" class="cache-list"></div><p id="storage-status" class="field-hint"></p><p class="field-hint" data-i18n="offlineNote">浏览器可能清理缓存，无法保证大型模型永久保留。</p></section><section class="settings-section model-origin"><div class="settings-row"><h3 data-i18n="modelSource">模型来源</h3><a id="model-source-link" class="text-button" target="_blank" rel="noopener noreferrer" data-i18n="modelDetails">查看详情</a></div><p id="model-license" class="field-hint">—</p><p class="field-hint" data-i18n="latencyDefinition">延迟包含预处理、推理和后处理；FPS 按完成检测统计。</p></section><button id="app-update" class="secondary-button app-update" data-i18n="updateApp" hidden>更新应用</button><button id="install-app" class="secondary-button install-button" hidden><svg><use href="#icon-download"/></svg><span data-i18n="installApp">安装应用</span></button></div><div class="dialog-footer"><span>Local YOLO</span><span>Minimal V1.1</span></div></dialog>
+  <div id="picker-scrim" class="picker-scrim" hidden></div>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
 </html>

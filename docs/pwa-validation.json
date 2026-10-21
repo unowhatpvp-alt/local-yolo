@@ -1,0 +1,354 @@
+{
+  "schemaVersion": 1,
+  "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+  "run": {
+    "id": "pwa-environment-48857bf4-23ca-4a05-9d58-96de104d1cde",
+    "environment": "browser",
+    "kind": "Current frozen-build environment limitation record; separate fresh static/lifecycle verification",
+    "startedAt": "2026-10-21T01:11:16.743Z",
+    "completedAt": "2026-10-21T01:11:16.743Z",
+    "url": "http://terminal.local:4173/local-yolo/",
+    "browser": "Cloud Chromium",
+    "physicalDevice": false,
+    "observationSource": "Root actual browser QA reports the current cloud HTTP origin remains insecure and navigator.gpu absent. These timestamps record this current blocked-environment report, not a secure service-worker execution."
+  },
+  "secureContext": false,
+  "navigatorGpu": false,
+  "status": "blocked-environment",
+  "checks": {
+    "manifest": {
+      "status": "environment-unavailable",
+      "observations": [
+        "The available actual cloud Chromium origin is HTTP http://terminal.local:4173/local-yolo/ with secureContext=false and navigator.gpu absent, as observed by root browser QA. The required secure service-worker/PWA lifecycle check was not executed for this frozen build. No old service-worker pass is reused."
+      ],
+      "requiredRetest": "Run this check in an approved HTTPS Chromium/Safari environment using the exact frozen source fingerprint. Static artifact and lifecycle-unit-test evidence is separate."
+    },
+    "serviceWorkerInstalled": {
+      "status": "environment-unavailable",
+      "observations": [
+        "The available actual cloud Chromium origin is HTTP http://terminal.local:4173/local-yolo/ with secureContext=false and navigator.gpu absent, as observed by root browser QA. The required secure service-worker/PWA lifecycle check was not executed for this frozen build. No old service-worker pass is reused."
+      ],
+      "requiredRetest": "Run this check in an approved HTTPS Chromium/Safari environment using the exact frozen source fingerprint. Static artifact and lifecycle-unit-test evidence is separate."
+    },
+    "offlineColdStart": {
+      "status": "environment-unavailable",
+      "observations": [
+        "The available actual cloud Chromium origin is HTTP http://terminal.local:4173/local-yolo/ with secureContext=false and navigator.gpu absent, as observed by root browser QA. The required secure service-worker/PWA lifecycle check was not executed for this frozen build. No old service-worker pass is reused."
+      ],
+      "requiredRetest": "Run this check in an approved HTTPS Chromium/Safari environment using the exact frozen source fingerprint. Static artifact and lifecycle-unit-test evidence is separate."
+    },
+    "cachedModelOfflineInference": {
+      "status": "environment-unavailable",
+      "observations": [
+        "The available actual cloud Chromium origin is HTTP http://terminal.local:4173/local-yolo/ with secureContext=false and navigator.gpu absent, as observed by root browser QA. The required secure service-worker/PWA lifecycle check was not executed for this frozen build. No old service-worker pass is reused."
+      ],
+      "requiredRetest": "Run this check in an approved HTTPS Chromium/Safari environment using the exact frozen source fingerprint. Static artifact and lifecycle-unit-test evidence is separate."
+    },
+    "cacheDeletion": {
+      "status": "environment-unavailable",
+      "observations": [
+        "The available actual cloud Chromium origin is HTTP http://terminal.local:4173/local-yolo/ with secureContext=false and navigator.gpu absent, as observed by root browser QA. The required secure service-worker/PWA lifecycle check was not executed for this frozen build. No old service-worker pass is reused."
+      ],
+      "requiredRetest": "Run this check in an approved HTTPS Chromium/Safari environment using the exact frozen source fingerprint. Static artifact and lifecycle-unit-test evidence is separate."
+    },
+    "updateWaiting": {
+      "status": "environment-unavailable",
+      "observations": [
+        "The available actual cloud Chromium origin is HTTP http://terminal.local:4173/local-yolo/ with secureContext=false and navigator.gpu absent, as observed by root browser QA. The required secure service-worker/PWA lifecycle check was not executed for this frozen build. No old service-worker pass is reused."
+      ],
+      "requiredRetest": "Run this check in an approved HTTPS Chromium/Safari environment using the exact frozen source fingerprint. Static artifact and lifecycle-unit-test evidence is separate."
+    },
+    "oldTabConsistency": {
+      "status": "environment-unavailable",
+      "observations": [
+        "The available actual cloud Chromium origin is HTTP http://terminal.local:4173/local-yolo/ with secureContext=false and navigator.gpu absent, as observed by root browser QA. The required secure service-worker/PWA lifecycle check was not executed for this frozen build. No old service-worker pass is reused."
+      ],
+      "requiredRetest": "Run this check in an approved HTTPS Chromium/Safari environment using the exact frozen source fingerprint. Static artifact and lifecycle-unit-test evidence is separate."
+    },
+    "activateNewVersion": {
+      "status": "environment-unavailable",
+      "observations": [
+        "The available actual cloud Chromium origin is HTTP http://terminal.local:4173/local-yolo/ with secureContext=false and navigator.gpu absent, as observed by root browser QA. The required secure service-worker/PWA lifecycle check was not executed for this frozen build. No old service-worker pass is reused."
+      ],
+      "requiredRetest": "Run this check in an approved HTTPS Chromium/Safari environment using the exact frozen source fingerprint. Static artifact and lifecycle-unit-test evidence is separate."
+    },
+    "noVersionMix": {
+      "status": "environment-unavailable",
+      "observations": [
+        "The available actual cloud Chromium origin is HTTP http://terminal.local:4173/local-yolo/ with secureContext=false and navigator.gpu absent, as observed by root browser QA. The required secure service-worker/PWA lifecycle check was not executed for this frozen build. No old service-worker pass is reused."
+      ],
+      "requiredRetest": "Run this check in an approved HTTPS Chromium/Safari environment using the exact frozen source fingerprint. Static artifact and lifecycle-unit-test evidence is separate."
+    },
+    "storageFailureRecovery": {
+      "status": "environment-unavailable",
+      "observations": [
+        "The available actual cloud Chromium origin is HTTP http://terminal.local:4173/local-yolo/ with secureContext=false and navigator.gpu absent, as observed by root browser QA. The required secure service-worker/PWA lifecycle check was not executed for this frozen build. No old service-worker pass is reused."
+      ],
+      "requiredRetest": "Run this check in an approved HTTPS Chromium/Safari environment using the exact frozen source fingerprint. Static artifact and lifecycle-unit-test evidence is separate."
+    },
+    "subpathResources": {
+      "status": "environment-unavailable",
+      "observations": [
+        "The available actual cloud Chromium origin is HTTP http://terminal.local:4173/local-yolo/ with secureContext=false and navigator.gpu absent, as observed by root browser QA. The required secure service-worker/PWA lifecycle check was not executed for this frozen build. No old service-worker pass is reused."
+      ],
+      "requiredRetest": "Run this check in an approved HTTPS Chromium/Safari environment using the exact frozen source fingerprint. Static artifact and lifecycle-unit-test evidence is separate."
+    }
+  },
+  "deviceChecks": {
+    "iPhoneSafariInstall": {
+      "status": "unverified",
+      "steps": [
+        "Open the reviewed V1.1 build on an approved HTTPS test origin in physical iPhone Safari.",
+        "Use Share → Add to Home Screen and open the installed app.",
+        "Record device/iOS version, standalone launch, icon, safe areas and both orientations."
+      ]
+    },
+    "physicalCamera": {
+      "status": "unverified",
+      "steps": [
+        "On a physical device, open the exact reviewed build over HTTPS and load a compatible model.",
+        "Grant camera access, verify genuine live inference, then deny permission in a fresh session.",
+        "Record capture behavior, explanatory denial handling and track shutdown after stopping."
+      ]
+    },
+    "cameraSwitching": {
+      "status": "unverified",
+      "steps": [
+        "Authorize camera access on a device with multiple cameras or a connected USB camera.",
+        "Switch each enumerated camera while inference is active and then disconnect an external camera.",
+        "Record real labels, frame transitions, resource release and disconnect feedback."
+      ]
+    },
+    "nativeZoom": {
+      "status": "unverified",
+      "steps": [
+        "Read actual camera track capabilities on the physical browser/device.",
+        "If native zoom is exposed, change supported values and record returned settings and frame behavior.",
+        "If unavailable, verify the explicitly labelled digital-crop fallback and source-coordinate overlays; do not claim control of all iPhone lenses."
+      ]
+    },
+    "backgroundResume": {
+      "status": "unverified",
+      "steps": [
+        "Start camera/video inference on a physical device, then background or lock it.",
+        "Verify camera tracks stop and file playback pauses.",
+        "Return and explicitly resume; check that no obsolete worker result or duplicated loop is shown."
+      ]
+    },
+    "physicalFullscreen": {
+      "status": "unverified",
+      "steps": [
+        "On physical iPhone, iPad and Android browsers, request fullscreen from the reviewed workspace.",
+        "Record whether native Fullscreen API or the viewport fallback is used.",
+        "Verify aspect ratio, overlay coordinates, camera/zoom controls, orientation and exit behavior."
+      ]
+    }
+  },
+  "staticVerification": {
+    "status": "pass",
+    "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+    "command": "npm run build; node scripts/finalize-sw.mjs; node scripts/verify-build.mjs --output docs/build-verification.json",
+    "report": "docs/build-verification.json",
+    "reportSha256": "f9e15ca5c3a6e62704e8375f800af2790d917f2962a9776117cc9c3bb940918d",
+    "checkedAt": "2026-10-21T01:10:28.043Z",
+    "revision": "12d09067cbcc",
+    "artifactFileCount": 24,
+    "checks": [
+      {
+        "id": "productionOnly",
+        "status": "pass",
+        "observations": [
+          "24 production artifact files; no test harness, validation configuration, image/video fixtures or model weights."
+        ]
+      },
+      {
+        "id": "subpathResources",
+        "status": "pass",
+        "observations": [
+          "Main script/CSS are emitted below /local-yolo/assets/.",
+          "./manifest.webmanifest",
+          "./icons/icon-192.png",
+          "./icons/icon-192.png",
+          "/local-yolo/assets/index-BqRy-ccF.js",
+          "/local-yolo/assets/index-BgXhbuy3.css"
+        ]
+      },
+      {
+        "id": "fourEntriesAndBacklinks",
+        "status": "pass",
+        "observations": [
+          "/local-yolo/",
+          "/local-yolo/studio/",
+          "/local-yolo/experimental-training/",
+          "/local-yolo/studio/experimental-training/"
+        ]
+      },
+      {
+        "id": "manifestAndActualPngDimensions",
+        "status": "pass",
+        "observations": [
+          {
+            "scope": "./",
+            "start_url": "./",
+            "display": "standalone",
+            "icons": [
+              {
+                "src": "icons/icon-192.png",
+                "width": 192,
+                "height": 192,
+                "purpose": "any"
+              },
+              {
+                "src": "icons/icon-512.png",
+                "width": 512,
+                "height": 512,
+                "purpose": "any"
+              },
+              {
+                "src": "icons/maskable-512.png",
+                "width": 512,
+                "height": 512,
+                "purpose": "maskable"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "precacheAndRevision",
+        "status": "pass",
+        "observations": [
+          "15 precache entries resolve to actual visible artifact files.",
+          {
+            "revision": "12d09067cbcc",
+            "noHiddenEntries": true,
+            "runtimeCachedLazily": true
+          }
+        ]
+      },
+      {
+        "id": "runtimeAssets",
+        "status": "pass",
+        "observations": [
+          "Single-thread WASM, JSEP and Asyncify runtime binaries/modules are present under the application subpath; every runtime WASM has its matching module and valid binary magic."
+        ]
+      }
+    ],
+    "scope": "Fresh production artifact bytes/path checks only. The first independent check detected a changed artifact revision after build; finalization and independent verification were repeated against the stable dist. No service worker was installed by these checks.",
+    "artifactStage": "Intermediate build diagnostics. Root will run and independently verify the final serialized build after status promotions and before browser testing. This record is not final release artifact approval."
+  },
+  "lifecycleUnitTests": {
+    "status": "pass",
+    "command": "node --test tests/pwa-lifecycle.test.mjs",
+    "passed": 8,
+    "failed": 0,
+    "skipped": 0,
+    "recordedAt": "2026-10-21T01:11:16.743Z",
+    "scope": "Freshly executed service-worker template event/cache logic in Node VM with controlled API doubles. Not an actual secure-browser installation/offline/update/device pass."
+  },
+  "releaseDecision": "Blocked. All11 required secure-browser PWA checks remain environment-unavailable. Current static/unit passes do not waive or satisfy them.",
+  "finalReleaseArtifactVerification": {
+    "status": "pass",
+    "checkedAt": "2026-10-21T01:35:51.558Z",
+    "revision": "395743021b71",
+    "artifactFileCount": 24,
+    "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+    "scope": "Static production artifact only; all secure-browser PWA checks remain environment-unavailable."
+  },
+  "staticBuild": {
+    "schemaVersion": 1,
+    "type": "static-build-verification",
+    "status": "pass",
+    "checkedAt": "2026-10-21T01:35:51.558Z",
+    "base": "/local-yolo/",
+    "revision": "395743021b71",
+    "artifactFileCount": 24,
+    "checks": [
+      {
+        "id": "productionOnly",
+        "status": "pass",
+        "observations": [
+          "24 production artifact files; no test harness, validation configuration, image/video fixtures or model weights."
+        ]
+      },
+      {
+        "id": "subpathResources",
+        "status": "pass",
+        "observations": [
+          "Main script/CSS are emitted below /local-yolo/assets/.",
+          "./manifest.webmanifest",
+          "./icons/icon-192.png",
+          "./icons/icon-192.png",
+          "/local-yolo/assets/index-CeiFdrkD.js",
+          "/local-yolo/assets/index-BgXhbuy3.css"
+        ]
+      },
+      {
+        "id": "fourEntriesAndBacklinks",
+        "status": "pass",
+        "observations": [
+          "/local-yolo/",
+          "/local-yolo/studio/",
+          "/local-yolo/experimental-training/",
+          "/local-yolo/studio/experimental-training/"
+        ]
+      },
+      {
+        "id": "manifestAndActualPngDimensions",
+        "status": "pass",
+        "observations": [
+          {
+            "scope": "./",
+            "start_url": "./",
+            "display": "standalone",
+            "icons": [
+              {
+                "src": "icons/icon-192.png",
+                "width": 192,
+                "height": 192,
+                "purpose": "any"
+              },
+              {
+                "src": "icons/icon-512.png",
+                "width": 512,
+                "height": 512,
+                "purpose": "any"
+              },
+              {
+                "src": "icons/maskable-512.png",
+                "width": 512,
+                "height": 512,
+                "purpose": "maskable"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "precacheAndRevision",
+        "status": "pass",
+        "observations": [
+          "15 precache entries resolve to actual visible artifact files.",
+          {
+            "revision": "395743021b71",
+            "noHiddenEntries": true,
+            "runtimeCachedLazily": true
+          }
+        ]
+      },
+      {
+        "id": "runtimeAssets",
+        "status": "pass",
+        "observations": [
+          "Single-thread WASM, JSEP and Asyncify runtime binaries/modules are present under the application subpath; every runtime WASM has its matching module and valid binary magic."
+        ]
+      }
+    ],
+    "limitations": [
+      "Does not execute a service worker or prove browser installation, offline use, update behavior, physical camera or WebGPU."
+    ],
+    "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+    "command": "npm run build; node scripts/verify-build.mjs --output docs/build-verification.json",
+    "artifactStage": "Final serialized build after all model/browser validation-label updates. Static artifacts only, not actual secure-browser SW execution."
+  }
+}

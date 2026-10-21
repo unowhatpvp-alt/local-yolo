@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Local YOLO · Chromium viewport checks</title>
+<style>
+*{box-sizing:border-box}body{margin:0;padding:20px;background:#e9e9e9;color:#222;font:14px/1.5 system-ui,sans-serif}h1{font-size:18px;margin:0 0 5px}p{margin:0 0 14px;color:#666}.controls{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:15px 0}button,input{font:inherit}button{min-height:44px;border:1px solid #bbb;border-radius:6px;padding:9px 13px;background:#fff;cursor:pointer}button[aria-pressed=true]{background:#222;color:#fff;border-color:#222}label{display:flex;align-items:center;gap:6px}input{width:76px;min-height:44px;border:1px solid #bbb;border-radius:5px;padding:9px;background:#fff}.workspace{display:flex;gap:20px;align-items:flex-start;max-width:100%;overflow:auto;padding-bottom:16px}.frame-holder{flex:none;background:white;outline:1px solid #bbb;box-shadow:0 5px 25px #0001}iframe{display:block;width:390px;height:844px;border:0;background:white;max-width:none}aside{width:520px;flex:none;max-width:calc(100vw - 40px)}pre{margin:0;padding:15px;border:1px solid #ccc;border-radius:7px;background:#fafafa;font:12px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere;max-height:850px;overflow:auto}.summary{padding:12px 0;font-size:13px;color:#555}#status{font-size:13px;min-height:24px}a{color:inherit}details{margin-top:12px}summary{cursor:pointer;min-height:44px;padding:10px 0}@media(max-width:800px){.workspace{flex-direction:column}aside{width:min(100%,620px)}}
+</style>
+</head>
+<body>
+<h1>Local YOLO · responsive checks</h1>
+<p>Development fixture. Chromium iframe viewport only — this does not emulate Safari, iOS hardware, or browser camera support.</p>
+<div class="controls" aria-label="Viewport presets">
+<button type="button" data-width="375" data-height="812" aria-pressed="false">375 × 812</button>
+<button type="button" data-width="390" data-height="844" aria-pressed="true">390 × 844</button>
+<button type="button" data-width="844" data-height="390" aria-pressed="false">844 × 390</button>
+<button type="button" data-width="768" data-height="1024" aria-pressed="false">768 × 1024</button>
+<label>Width <input id="width" type="number" min="280" max="2000" value="390" /></label><label>Height <input id="height" type="number" min="280" max="2000" value="844" /></label><button id="apply" type="button">Apply</button><button id="inspect" type="button">Inspect current app</button><button id="copy" type="button">Copy report</button>
+</div>
+<div id="status" role="status">Loading same-origin app…</div>
+<div class="workspace"><div class="frame-holder"><iframe id="app-frame" title="Local YOLO viewport under test" allow="camera; fullscreen" allowfullscreen></iframe></div><aside><div id="summary" class="summary">Choose and load a real model inside the app, then inspect again.</div><pre id="report" aria-label="Viewport measurement report"></pre></aside></div>
+<script type="module">
+import {sha256} from '@noble/hashes/sha2.js';
+const capturedDownloads = [];
+const frame = document.querySelector('#app-frame');
+const appURL = new URL('../', location.href);
+appURL.searchParams.set('viewport-test', '1');
+frame.src = appURL.href;
+const round = value => Math.round(value * 100) / 100;
+const rect = element => {
+  if (!element) return null;
+  const r = element.getBoundingClientRect();
+  return Object.fromEntries(['x','y','width','height','top','right','bottom','left'].map(key => [key, round(r[key])]));
+};
+let lastReport;
+function visible(element, win) {
+  const bounds = element.getBoundingClientRect();
+  if (!element.getClientRects().length || bounds.width <= 0 || bounds.height <= 0 || element.closest('[hidden],.sr-only')) return false;
+  if (bounds.right <= 0 || bounds.bottom <= 0 || bounds.left >= win.innerWidth || bounds.top >= win.innerHeight) return false;
+  for (let ancestor = element; ancestor; ancestor = ancestor.parentElement) {
+    const style = win.getComputedStyle(ancestor);
+    if (style.display === 'none' || style.visibility === 'hidden' || Number(style.opacity) === 0) return false;
+  }
+  return true;
+}
+function targetName(element) {
+  return (element.getAttribute('aria-label') || element.getAttribute('title') || element.textContent || element.name || element.type || element.tagName).trim().replace(/\s+/g,' ').slice(0,100);
+}
+function inspect() {
+  try {
+    const doc = frame.contentDocument, win = frame.contentWindow;
+    if (!doc?.documentElement) throw new Error('The app has not loaded yet.');
+    const root = doc.documentElement, body = doc.body;
+    const stage = doc.querySelector('#stage'), canvas = doc.querySelector('#overlay-canvas');
+    const video = doc.querySelector('#camera-video'), image = doc.querySelector('#file-image');
+    const targets = [...doc.querySelectorAll('button,a[href],input:not([type=hidden]),textarea,select,summary,[role=button],[tabindex="0"]')]
+      .filter(element => visible(element,win)).map(element => {
+        const bounds = rect(element);
+        const label = element.closest('label') || (element.id && doc.querySelector('label[for="' + CSS.escape(element.id) + '"]'));
+        const labelBounds = label && visible(label,win) ? rect(label) : null;
+        return {id:element.id || null,tag:element.tagName.toLowerCase(),name:targetName(element),disabled:Boolean(element.disabled),...bounds,
+          below44:bounds.width<44||bounds.height<44,
+          ...(labelBounds ? {labelTarget:{width:labelBounds.width,height:labelBounds.height},labelAtLeast44:labelBounds.width>=44&&labelBounds.height>=44} : {})};
+      });
+    const rootWidth = root.clientWidth;
+    const appHeight = root.clientHeight;
+    const cs = canvas ? win.getComputedStyle(canvas) : null;
+    lastReport = {
+      capturedDownloads,resourceRequests:win.performance.getEntriesByType('resource').map(r=>({name:r.name,initiatorType:r.initiatorType,transferSize:r.transferSize})),measuredAt:new Date().toISOString(),scope:'Chromium iframe viewport only',url:win.location.href,
+      viewport:{requested:{width:frame.width || frame.style.width,height:frame.height || frame.style.height},frame:rect(frame),innerWidth:win.innerWidth,innerHeight:win.innerHeight,devicePixelRatio:win.devicePixelRatio,visualWidth:win.visualViewport?.width,visualHeight:win.visualViewport?.height},
+      document:{clientWidth:rootWidth,scrollWidth:root.scrollWidth,clientHeight:appHeight,scrollHeight:root.scrollHeight,bodyScrollWidth:body.scrollWidth,bodyScrollHeight:body.scrollHeight,horizontalOverflow:root.scrollWidth>rootWidth,verticalOverflow:root.scrollHeight>appHeight},
+      state:{phase:body.dataset.phase || null,workbenchVisible:!doc.querySelector('#workbench')?.hidden,fullscreen:body.classList.contains('is-fullscreen')},
+      stage:stage ? {visible:visible(stage,win),...rect(stage),computedHeight:win.getComputedStyle(stage).height} : null,
+      canvas:canvas ? {visible:visible(canvas,win),...rect(canvas),width:canvas.width,height:canvas.height,objectFit:cs.objectFit,objectPosition:cs.objectPosition,cssWidth:cs.width,cssHeight:cs.height} : null,
+      source:{video:video ? {videoWidth:video.videoWidth,videoHeight:video.videoHeight,readyState:video.readyState} : null,image:image ? {naturalWidth:image.naturalWidth,naturalHeight:image.naturalHeight} : null},
+      targets:{visibleCount:targets.length,below44Count:targets.filter(item=>item.below44).length,items:targets},
+    };
+    document.querySelector('#report').textContent=JSON.stringify(lastReport,null,2);
+    document.querySelector('#summary').textContent=`${win.innerWidth} × ${win.innerHeight} · horizontal overflow: ${lastReport.document.horizontalOverflow ? 'YES' : 'none'} · ${targets.length} visible targets · ${targets.filter(item=>item.below44).length} direct targets below 44px`;
+    document.querySelector('#status').textContent='Measured the current iframe document. Model and camera state were preserved.';
+  } catch(error) {
+    document.querySelector('#status').textContent=error.message;
+  }
+}
+function resize(width,height) {
+  width=Math.max(280,Math.min(2000,Number(width)||390));
+  height=Math.max(280,Math.min(2000,Number(height)||844));
+  frame.style.width=width+'px';frame.style.height=height+'px';
+  frame.width=String(width);frame.height=String(height);
+  document.querySelector('#width').value=width;document.querySelector('#height').value=height;
+  document.querySelectorAll('[data-width]').forEach(button=>button.setAttribute('aria-pressed',String(Number(button.dataset.width)===width&&Number(button.dataset.height)===height)));
+  requestAnimationFrame(()=>requestAnimationFrame(inspect));
+}
+document.querySelectorAll('[data-width]').forEach(button=>button.addEventListener('click',()=>resize(button.dataset.width,button.dataset.height)));
+document.querySelector('#apply').addEventListener('click',()=>resize(document.querySelector('#width').value,document.querySelector('#height').value));
+document.querySelector('#inspect').addEventListener('click',inspect);
+document.querySelector('#copy').addEventListener('click',async()=>{
+  inspect();if(!lastReport)return;
+  try{await navigator.clipboard.writeText(JSON.stringify(lastReport,null,2));document.querySelector('#status').textContent='Report copied.';}catch{document.querySelector('#status').textContent='Clipboard unavailable. Select the report text to copy it.';}
+});
+frame.addEventListener('load',()=>{
+  capturedDownloads.length=0;
+  const captureDownload = async link=>{
+    if(!link || !link.href.startsWith('blob:')) return;
+    const record={filename:link.download,observedAt:new Date().toISOString(),status:'reading',transport:'actual app Blob download; captured by development harness only'};
+    capturedDownloads.push(record);
+    try {
+      const response=await frame.contentWindow.fetch(link.href);
+      const blob=await response.blob();const bytes=new Uint8Array(await blob.arrayBuffer());
+      record.bytes=bytes.length;record.type=blob.type;
+      record.sha256=Array.from(sha256(bytes),v=>v.toString(16).padStart(2,'0')).join('');
+      if(/json/.test(blob.type)) record.content=JSON.parse(new TextDecoder().decode(bytes));
+      if(/image/.test(blob.type)){const bitmap=await createImageBitmap(blob);record.width=bitmap.width;record.height=bitmap.height;bitmap.close();}
+      record.status='pass';
+    } catch(error){record.status='fail';record.error=error.message;}
+    inspect();
+  };
+  const originalAnchorClick=frame.contentWindow.HTMLAnchorElement.prototype.click;
+  frame.contentWindow.HTMLAnchorElement.prototype.click=function(){captureDownload(this);return originalAnchorClick.apply(this,arguments);};
+  resize(390,844);document.querySelector('#status').textContent='Ready. Use the app normally, then inspect its current state.';});
+</script>
+</body>
+</html>

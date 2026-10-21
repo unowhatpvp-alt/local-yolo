@@ -63,3 +63,33 @@ test('segmentation raster occupies the original source box after letterbox and c
   assert.deepEqual(items[0].mask.box,{x:350,y:150,width:100,height:100});
   assert(items[0].mask.data.every(v=>v===255));
 });
+
+test('end-to-end OBB rows retain center xywh geometry instead of detection xyxy',()=>{
+  const tensor={type:'float32',dims:[1,1,7],data:Float32Array.from([320,240,160,80,.9,0,Math.PI/2])};
+  const adapter=createAdapter({out:tensor},{task:'obb',end2end:'True',names:"{0:'ship'}",head:'OBB26'});
+  assert.equal(adapter.format,'ultralytics-end-to-end');assert.equal(adapter.iouApplicable,false);
+  const result=decodeOutputs({out:tensor},adapter,letterboxGeometry(640,480,640,480));
+  assert.equal(result.length,1);assert.equal(result[0].polygon.length,4);
+  assert(Math.abs(result[0].box.width-80)<.001);assert(Math.abs(result[0].box.height-160)<.001);
+  assert(Math.abs(result[0].box.x-280)<.001);assert(Math.abs(result[0].box.y-160)<.001);
+});
+
+test('end-to-end pose and segmentation decode task extras for small max_det',()=>{
+  const pose={type:'float32',dims:[1,1,9],data:Float32Array.from([100,100,200,200,.9,0,150,150,.8])};
+  const a=createAdapter({out:pose},{task:'pose',names:"{0:'person'}",end2end:'true',kpt_shape:'[1,3]'});
+  const t=letterboxGeometry(640,480,640,480),items=decodeOutputs({out:pose},a,t);
+  assert.deepEqual(items[0].box,{x:100,y:100,width:100,height:100});
+  assert.equal(items[0].keypoints[0].x,150);
+  const out={type:'float32',dims:[1,1,7],data:Float32Array.from([100,100,200,200,.9,0,1])};
+  const proto={type:'float32',dims:[1,1,4,4],data:new Float32Array(16).fill(1)};
+  const b=createAdapter({out,proto},{task:'segment',names:"{0:'object'}",end2end:'True'});
+  assert(decodeOutputs({out,proto},b,t)[0].mask.data.every(v=>v===255));
+});
+
+test('inconsistent end-to-end flags, malformed pose shapes and fractional classes are rejected',()=>{
+  assert.throws(()=>createAdapter({out:{type:'float32',dims:[1,84,8400],data:new Float32Array(84*8400)}},{task:'detect',end2end:'True'}),/consistent head metadata/);
+  assert.throws(()=>createAdapter({out:{type:'float32',dims:[1,56,100],data:new Float32Array(5600)}},{task:'pose',kpt_shape:'bad'}),/invalid JSON/);
+  const out={type:'float32',dims:[1,1,6],data:Float32Array.from([10,10,20,20,.9,.4])};
+  const adapter=createAdapter({out},{task:'detect',end2end:'True',names:"{0:'person'}"});
+  assert.equal(decodeOutputs({out},adapter,letterboxGeometry(100,100,640,640)).length,0);
+});

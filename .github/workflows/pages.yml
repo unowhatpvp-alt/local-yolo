@@ -1,18 +1,21 @@
-name: Test and deploy GitHub Pages
+name: Gated production Pages release
 on:
   push:
     branches: [main]
   workflow_dispatch:
 permissions:
   contents: read
-  pages: write
-  id-token: write
 concurrency:
-  group: pages
-  cancel-in-progress: true
+  group: local-yolo-production-pages
+  cancel-in-progress: false
 jobs:
   build:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: read
+      pages: read
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -20,20 +23,42 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - uses: actions/cache@v4
+        with:
+          path: tests/fixtures
+          key: yolo26-fixtures-${{ hashFiles('src/core/model-manifest.json') }}
       - run: node scripts/fetch-test-fixtures.mjs
-      - run: npm test
+      - name: Unit, geometry, lifecycle and PWA checks
+        run: npm test
+      - name: Execute every required real YOLO26 export
+        run: npm run validate:models
       - run: npm run build
+      - name: Refuse publication without current complete model, browser and PWA evidence
+        run: node scripts/check-release-gate.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: production-release-evidence-${{ github.sha }}
+          path: |
+            docs/model-validation-matrix.json
+            docs/browser-validation-matrix.json
+            docs/pwa-validation.json
+          if-no-files-found: warn
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:
           path: dist
   deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      pages: write
+      id-token: write
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Deploy
+      - name: Deploy only the artifact that passed the release gate
         id: deployment
         uses: actions/deploy-pages@v4

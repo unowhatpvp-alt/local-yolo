@@ -1,0 +1,3665 @@
+{
+  "schemaVersion": 1,
+  "sourceFingerprint": "5b7fe7d60660dc1639a580892b3c7e52f6ef8559cab4b6e42c06367194d88696",
+  "run": {
+    "id": "f4daa8ed-e171-4fb2-b9ec-4c4c1dcdc6fe",
+    "environment": "node",
+    "backend": "WASM",
+    "runtimeVersion": "1.23.2",
+    "startedAt": "2026-10-21T00:53:22.070Z",
+    "completedAt": null,
+    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node /workspace/scratch/71226e6aca43/local-yolo-v1.1/scripts/validate-yolo26-matrix.mjs",
+    "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
+    "physicalDevice": false,
+    "nodeVersion": "v24.19.0",
+    "os": "linux x64",
+    "cpu": "AMD EPYC 9V74 80-Core Processor",
+    "cpuCount": 9,
+    "totalMemoryBytes": 10451439616,
+    "browserWasm": "not tested by this runner",
+    "webgpu": "not tested by this runner"
+  },
+  "plannedCount": 25,
+  "executedCount": 9,
+  "partial": false,
+  "models": [
+    {
+      "id": "yolo26-detect-n",
+      "name": "YOLO26n",
+      "task": "detect",
+      "size": "N",
+      "sha256": "4f44c33cea12d4b5785e5e7c0a20c13d0c62a77de607ce96a40d6036c7d7bbcf",
+      "bytes": 9887916,
+      "status": "pass",
+      "sourceFingerprint": "5b7fe7d60660dc1639a580892b3c7e52f6ef8559cab4b6e42c06367194d88696",
+      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
+      "startedAt": "2026-10-21T00:53:22.177Z",
+      "completedAt": "2026-10-21T00:53:25.391Z",
+      "source": {
+        "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26n.onnx",
+        "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
+        "license": "AGPL-3.0",
+        "metadata": {
+          "description": "Ultralytics YOLO26n model trained on /home/lq/codes/ultralytics/ultralytics/cfg/datasets/coco.yaml",
+          "author": "Ultralytics",
+          "date": "2026-10-09T11:59:48.296460+02:00",
+          "version": "8.4.174",
+          "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+          "docs": "https://docs.ultralytics.com",
+          "stride": "32",
+          "task": "detect",
+          "head": "Detect",
+          "batch": "1",
+          "imgsz": "[480, 640]",
+          "names": "{0: 'person', 1: 'bicycle', 2: 'car', 3: 'motorcycle', 4: 'airplane', 5: 'bus', 6: 'train', 7: 'truck', 8: 'boat', 9: 'traffic light', 10: 'fire hydrant', 11: 'stop sign', 12: 'parking meter', 13: 'bench', 14: 'bird', 15: 'cat', 16: 'dog', 17: 'horse', 18: 'sheep', 19: 'cow', 20: 'elephant', 21: 'bear', 22: 'zebra', 23: 'giraffe', 24: 'backpack', 25: 'umbrella', 26: 'handbag', 27: 'tie', 28: 'suitcase', 29: 'frisbee', 30: 'skis', 31: 'snowboard', 32: 'sports ball', 33: 'kite', 34: 'baseball bat', 35: 'baseball glove', 36: 'skateboard', 37: 'surfboard', 38: 'tennis racket', 39: 'bottle', 40: 'wine glass', 41: 'cup', 42: 'fork', 43: 'knife', 44: 'spoon', 45: 'bowl', 46: 'banana', 47: 'apple', 48: 'sandwich', 49: 'orange', 50: 'broccoli', 51: 'carrot', 52: 'hot dog', 53: 'pizza', 54: 'donut', 55: 'cake', 56: 'chair', 57: 'couch', 58: 'potted plant', 59: 'bed', 60: 'dining table', 61: 'toilet', 62: 'tv', 63: 'laptop', 64: 'mouse', 65: 'remote', 66: 'keyboard', 67: 'cell phone', 68: 'microwave', 69: 'oven', 70: 'toaster', 71: 'sink', 72: 'refrigerator', 73: 'book', 74: 'clock', 75: 'vase', 76: 'scissors', 77: 'teddy bear', 78: 'hair drier', 79: 'toothbrush'}",
+          "args": "{'data': None, 'batch': 1, 'fraction': 1.0, 'quantize': None, 'nms': None, 'dynamic': False, 'simplify': True, 'opset': 12}",
+          "channels": "3",
+          "end2end": "False"
+        },
+        "producer": "pytorch"
+      },
+      "wasmNode": {
+        "status": "pass",
+        "backend": "WASM",
+        "initializeMs": 780.439,
+        "input": [
+          {
+            "name": "images",
+            "dims": [
+              1,
+              3,
+              480,
+              640
+            ],
+            "elemType": 1
+          }
+        ],
+        "outputs": [
+          {
+            "name": "output0",
+            "dims": [
+              1,
+              84,
+              6300
+            ],
+            "elemType": 1
+          }
+        ],
+        "image": {
+          "fixture": {
+            "file": "tests/fixtures/bus.jpg",
+            "url": "https://raw.githubusercontent.com/ultralytics/ultralytics/main/ultralytics/assets/bus.jpg",
+            "sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
+            "width": 810,
+            "height": 1080
+          },
+          "latencyMs": 252.668,
+          "resultCount": 5,
+          "samples": [
+            {
+              "label": "bus",
+              "classId": 5,
+              "score": 0.89,
+              "box": {
+                "x": 25.252761840820312,
+                "y": 228.97691345214844,
+                "width": 779.4835510253906,
+                "height": 511.8585891723633
+              }
+            },
+            {
+              "label": "person",
+              "classId": 0,
+              "score": 0.844,
+              "box": {
+                "x": 50.74871635437012,
+                "y": 397.69131088256836,
+                "width": 180.96696853637695,
+                "height": 508.7637405395508
+              }
+            },
+            {
+              "label": "person",
+              "classId": 0,
+              "score": 0.825,
+              "box": {
+                "x": 670.86474609375,
+                "y": 388.8304252624512,
+                "width": 139.13525390625,
+                "height": 488.87491607666016
+              }
+            }
+          ],
+          "outputTensorStats": [
+            {
+              "name": "output0",
+              "dims": [
+                1,
+                84,
+                6300
+              ],
+              "type": "float32",
+              "count": 529200,
+              "nonFinite": 0,
+              "min": 0,
+              "max": 638.4138793945312,
+              "sum": 4197110.339167297,
+              "sha256": "d703008c2a198238c502ee972e55a20228cb207603b4a5cf6e4c40c64a70143f"
+            }
+          ]
+        },
+        "video": {
+          "fixture": {
+            "file": "tests/fixtures/yolo26/real-video.mp4",
+            "url": "https://github.com/ultralytics/assets/releases/download/v0.0.0/solutions_ci_demo.mp4",
+            "sha256": "a8b0df3073740f808aa0aca3cff7787140837bfa24e01c934ba2cca474fd03cc",
+            "bytes": 270967
+          },
+          "decodedBy": "ffmpeg (real H.264 MP4 frames; browser playback is separate)",
+          "frames": [
+            {
+              "timeSeconds": 0,
+              "fixture": {
+                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "width": 640,
+                "height": 360
+              },
+              "latencyMs": 254.327,
+              "resultCount": 24,
+              "samples": [
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.767,
+                  "box": {
+                    "x": 380.33702087402344,
+                    "y": 316.4656219482422,
+                    "width": 34.925811767578125,
+                    "height": 43.118804931640625
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.755,
+                  "box": {
+                    "x": 221.8927230834961,
+                    "y": 216.05120849609375,
+                    "width": 26.703140258789062,
+                    "height": 67.67340087890625
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.739,
+                  "box": {
+                    "x": 10.830322265625,
+                    "y": 265.1475830078125,
+                    "width": 36.6239013671875,
+                    "height": 64.81329345703125
+                  }
+                }
+              ],
+              "outputTensorStats": [
+                {
+                  "name": "output0",
+                  "dims": [
+                    1,
+                    84,
+                    6300
+                  ],
+                  "type": "float32",
+                  "count": 529200,
+                  "nonFinite": 0,
+                  "min": 0,
+                  "max": 638.0106201171875,
+                  "sum": 4055373.636454433,
+                  "sha256": "9276756bcd36e6f18bb0b67e9b60cec3ebf6eb26f8bef1de46ffb6831cc03f1e"
+                }
+              ]
+            },
+            {
+              "timeSeconds": 1,
+              "fixture": {
+                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "width": 640,
+                "height": 360
+              },
+              "latencyMs": 254.199,
+              "resultCount": 21,
+              "samples": [
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.831,
+                  "box": {
+                    "x": 369.2761535644531,
+                    "y": 266.0921936035156,
+                    "width": 32.18060302734375,
+                    "height": 65.68524169921875
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.754,
+                  "box": {
+                    "x": 224.1720733642578,
+                    "y": 175.65740966796875,
+                    "width": 24.5257568359375,
+                    "height": 65.703857421875
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.752,
+                  "box": {
+                    "x": 77.29781723022461,
+                    "y": 172.60640716552734,
+                    "width": 24.044837951660156,
+                    "height": 60.92024230957031
+                  }
+                }
+              ],
+              "outputTensorStats": [
+                {
+                  "name": "output0",
+                  "dims": [
+                    1,
+                    84,
+                    6300
+                  ],
+                  "type": "float32",
+                  "count": 529200,
+                  "nonFinite": 0,
+                  "min": 0,
+                  "max": 638.1011962890625,
+                  "sum": 4065980.576941818,
+                  "sha256": "2bebfe45eef326c1b5354522a3956e02a4d9d79d75459f8cd2ed81ea1925a581"
+                }
+              ]
+            }
+          ]
+        },
+        "digitalCrop": {
+          "crop": {
+            "x": 202.5,
+            "y": 270,
+            "width": 405,
+            "height": 540
+          },
+          "resultCount": 2,
+          "latencyMs": 246.891
+        },
+        "render": {
+          "path": "docs/evidence/yolo26/yolo26-detect-n.png",
+          "sha256": "1fed2af2b7ad4acbf93165e0934273364bde81ec1f5ecdd5728c66de67397d9d",
+          "width": 480,
+          "height": 640,
+          "changedPixels": 38677,
+          "visualReview": "pending"
+        },
+        "lifecycle": {
+          "releaseResolved": true,
+          "releaseCallCount": 3,
+          "sessionCleared": true,
+          "canvasCleared": true,
+          "reloadRounds": [
+            {
+              "round": 1,
+              "loadInferDisposeMs": 592.612,
+              "resultCount": 5,
+              "memory": {
+                "rssBytes": 497295360,
+                "heapUsedBytes": 11917464,
+                "externalBytes": 21127107,
+                "arrayBuffersBytes": 10894681
+              }
+            },
+            {
+              "round": 2,
+              "loadInferDisposeMs": 500.083,
+              "resultCount": 5,
+              "memory": {
+                "rssBytes": 511713280,
+                "heapUsedBytes": 10497336,
+                "externalBytes": 17435463,
+                "arrayBuffersBytes": 13011481
+              }
+            }
+          ],
+          "initBefore": {
+            "rssBytes": 71634944,
+            "heapUsedBytes": 9116592,
+            "externalBytes": 14042379,
+            "arrayBuffersBytes": 10238090
+          },
+          "beforeRelease": {
+            "rssBytes": 391258112,
+            "heapUsedBytes": 12477864,
+            "externalBytes": 21127107,
+            "arrayBuffersBytes": 16697881
+          },
+          "afterRelease": {
+            "rssBytes": 391520256,
+            "heapUsedBytes": 11841104,
+            "externalBytes": 21127107,
+            "arrayBuffersBytes": 10894681
+          },
+          "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
+        }
+      },
+      "browserWasm": {
+        "status": "pending"
+      },
+      "webgpu": {
+        "status": "pending"
+      }
+    },
+    {
+      "id": "yolo26-detect-s",
+      "name": "YOLO26s",
+      "task": "detect",
+      "size": "S",
+      "sha256": "e3f5515ea1cdbb16d8c6c1a8e58048a0991d5a3b2ee48cc1c82d35b492bcc265",
+      "bytes": 38237095,
+      "status": "pass",
+      "sourceFingerprint": "5b7fe7d60660dc1639a580892b3c7e52f6ef8559cab4b6e42c06367194d88696",
+      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
+      "startedAt": "2026-10-21T00:53:25.506Z",
+      "completedAt": "2026-10-21T00:53:30.192Z",
+      "source": {
+        "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26s.onnx",
+        "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
+        "license": "AGPL-3.0",
+        "metadata": {
+          "description": "Ultralytics YOLO26s model trained on /home/lq/codes/ultralytics/ultralytics/cfg/datasets/coco.yaml",
+          "author": "Ultralytics",
+          "date": "2026-10-09T12:08:37.633820+02:00",
+          "version": "8.4.174",
+          "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+          "docs": "https://docs.ultralytics.com",
+          "stride": "32",
+          "task": "detect",
+          "head": "Detect",
+          "batch": "1",
+          "imgsz": "[480, 640]",
+          "names": "{0: 'person', 1: 'bicycle', 2: 'car', 3: 'motorcycle', 4: 'airplane', 5: 'bus', 6: 'train', 7: 'truck', 8: 'boat', 9: 'traffic light', 10: 'fire hydrant', 11: 'stop sign', 12: 'parking meter', 13: 'bench', 14: 'bird', 15: 'cat', 16: 'dog', 17: 'horse', 18: 'sheep', 19: 'cow', 20: 'elephant', 21: 'bear', 22: 'zebra', 23: 'giraffe', 24: 'backpack', 25: 'umbrella', 26: 'handbag', 27: 'tie', 28: 'suitcase', 29: 'frisbee', 30: 'skis', 31: 'snowboard', 32: 'sports ball', 33: 'kite', 34: 'baseball bat', 35: 'baseball glove', 36: 'skateboard', 37: 'surfboard', 38: 'tennis racket', 39: 'bottle', 40: 'wine glass', 41: 'cup', 42: 'fork', 43: 'knife', 44: 'spoon', 45: 'bowl', 46: 'banana', 47: 'apple', 48: 'sandwich', 49: 'orange', 50: 'broccoli', 51: 'carrot', 52: 'hot dog', 53: 'pizza', 54: 'donut', 55: 'cake', 56: 'chair', 57: 'couch', 58: 'potted plant', 59: 'bed', 60: 'dining table', 61: 'toilet', 62: 'tv', 63: 'laptop', 64: 'mouse', 65: 'remote', 66: 'keyboard', 67: 'cell phone', 68: 'microwave', 69: 'oven', 70: 'toaster', 71: 'sink', 72: 'refrigerator', 73: 'book', 74: 'clock', 75: 'vase', 76: 'scissors', 77: 'teddy bear', 78: 'hair drier', 79: 'toothbrush'}",
+          "args": "{'data': None, 'batch': 1, 'fraction': 1.0, 'quantize': None, 'nms': None, 'dynamic': False, 'simplify': True, 'opset': 12}",
+          "channels": "3",
+          "end2end": "False"
+        },
+        "producer": "pytorch"
+      },
+      "wasmNode": {
+        "status": "pass",
+        "backend": "WASM",
+        "initializeMs": 1450.38,
+        "input": [
+          {
+            "name": "images",
+            "dims": [
+              1,
+              3,
+              480,
+              640
+            ],
+            "elemType": 1
+          }
+        ],
+        "outputs": [
+          {
+            "name": "output0",
+            "dims": [
+              1,
+              84,
+              6300
+            ],
+            "elemType": 1
+          }
+        ],
+        "image": {
+          "fixture": {
+            "file": "tests/fixtures/bus.jpg",
+            "url": "https://raw.githubusercontent.com/ultralytics/ultralytics/main/ultralytics/assets/bus.jpg",
+            "sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
+            "width": 810,
+            "height": 1080
+          },
+          "latencyMs": 710.977,
+          "resultCount": 5,
+          "samples": [
+            {
+              "label": "bus",
+              "classId": 5,
+              "score": 0.928,
+              "box": {
+                "x": 23.070877075195312,
+                "y": 229.85204315185547,
+                "width": 778.8162689208984,
+                "height": 515.2831649780273
+              }
+            },
+            {
+              "label": "person",
+              "classId": 0,
+              "score": 0.914,
+              "box": {
+                "x": 49.731863021850586,
+                "y": 400.70383071899414,
+                "width": 191.08331680297852,
+                "height": 502.5211715698242
+              }
+            },
+            {
+              "label": "person",
+              "classId": 0,
+              "score": 0.898,
+              "box": {
+                "x": 669.3281364440918,
+                "y": 395.21207427978516,
+                "width": 140.6718635559082,
+                "height": 482.4923400878906
+              }
+            }
+          ],
+          "outputTensorStats": [
+            {
+              "name": "output0",
+              "dims": [
+                1,
+                84,
+                6300
+              ],
+              "type": "float32",
+              "count": 529200,
+              "nonFinite": 0,
+              "min": 0,
+              "max": 667.6700439453125,
+              "sum": 4162484.77668795,
+              "sha256": "218b8be1a5130d2be1853c35aa24c37a714b329fc456018c8665fa31a38be894"
+            }
+          ]
+        },
+        "video": {
+          "fixture": {
+            "file": "tests/fixtures/yolo26/real-video.mp4",
+            "url": "https://github.com/ultralytics/assets/releases/download/v0.0.0/solutions_ci_demo.mp4",
+            "sha256": "a8b0df3073740f808aa0aca3cff7787140837bfa24e01c934ba2cca474fd03cc",
+            "bytes": 270967
+          },
+          "decodedBy": "ffmpeg (real H.264 MP4 frames; browser playback is separate)",
+          "frames": [
+            {
+              "timeSeconds": 0,
+              "fixture": {
+                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "width": 640,
+                "height": 360
+              },
+              "latencyMs": 699.289,
+              "resultCount": 16,
+              "samples": [
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.831,
+                  "box": {
+                    "x": 222.0739517211914,
+                    "y": 216.98519897460938,
+                    "width": 25.724411010742188,
+                    "height": 68.44195556640625
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.815,
+                  "box": {
+                    "x": 470.09034729003906,
+                    "y": 234.23468017578125,
+                    "width": 37.565032958984375,
+                    "height": 61.92779541015625
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.777,
+                  "box": {
+                    "x": 10.835895538330078,
+                    "y": 264.9292755126953,
+                    "width": 36.08455276489258,
+                    "height": 64.03695678710938
+                  }
+                }
+              ],
+              "outputTensorStats": [
+                {
+                  "name": "output0",
+                  "dims": [
+                    1,
+                    84,
+                    6300
+                  ],
+                  "type": "float32",
+                  "count": 529200,
+                  "nonFinite": 0,
+                  "min": 0,
+                  "max": 677.2017822265625,
+                  "sum": 3964894.4295972288,
+                  "sha256": "3f795114b054f47d9286909ecdcf5611f0c5d3cc2df55fcb28b9493a9de15f5b"
+                }
+              ]
+            },
+            {
+              "timeSeconds": 1,
+              "fixture": {
+                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "width": 640,
+                "height": 360
+              },
+              "latencyMs": 718.702,
+              "resultCount": 16,
+              "samples": [
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.857,
+                  "box": {
+                    "x": 369.49342346191406,
+                    "y": 266.1035919189453,
+                    "width": 31.468475341796875,
+                    "height": 64.60360717773438
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.802,
+                  "box": {
+                    "x": 436.3453826904297,
+                    "y": 236.01419067382812,
+                    "width": 35.940582275390625,
+                    "height": 57.2515869140625
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.739,
+                  "box": {
+                    "x": 223.8920669555664,
+                    "y": 176.6007843017578,
+                    "width": 24.577499389648438,
+                    "height": 64.70382690429688
+                  }
+                }
+              ],
+              "outputTensorStats": [
+                {
+                  "name": "output0",
+                  "dims": [
+                    1,
+                    84,
+                    6300
+                  ],
+                  "type": "float32",
+                  "count": 529200,
+                  "nonFinite": 0,
+                  "min": 0,
+                  "max": 670.4572143554688,
+                  "sum": 3991343.0017208457,
+                  "sha256": "9685b00b0cf86b0ef4beb9f70b8b23f0990ee4c16df88e82d36efd0809cea72a"
+                }
+              ]
+            }
+          ]
+        },
+        "digitalCrop": {
+          "crop": {
+            "x": 202.5,
+            "y": 270,
+            "width": 405,
+            "height": 540
+          },
+          "resultCount": 2,
+          "latencyMs": 772.722
+        },
+        "render": {
+          "path": "docs/evidence/yolo26/yolo26-detect-s.png",
+          "sha256": "b9a53416562cada0dfea5d6f80cddb34d47510bf8a897dfc61f2b607ec12780a",
+          "width": 480,
+          "height": 640,
+          "changedPixels": 40961,
+          "visualReview": "pending"
+        },
+        "lifecycle": {
+          "releaseResolved": true,
+          "releaseCallCount": 1,
+          "sessionCleared": true,
+          "canvasCleared": true,
+          "reloadRounds": [],
+          "initBefore": {
+            "rssBytes": 99315712,
+            "heapUsedBytes": 9539992,
+            "externalBytes": 42393366,
+            "arrayBuffersBytes": 38589077
+          },
+          "beforeRelease": {
+            "rssBytes": 457797632,
+            "heapUsedBytes": 13492112,
+            "externalBytes": 55279483,
+            "arrayBuffersBytes": 50850260
+          },
+          "afterRelease": {
+            "rssBytes": 458059776,
+            "heapUsedBytes": 11839576,
+            "externalBytes": 55279483,
+            "arrayBuffersBytes": 39243860
+          },
+          "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
+        }
+      },
+      "browserWasm": {
+        "status": "pending"
+      },
+      "webgpu": {
+        "status": "pending"
+      }
+    },
+    {
+      "id": "yolo26-detect-m",
+      "name": "YOLO26m",
+      "task": "detect",
+      "size": "M",
+      "sha256": "8d1c032e6f67670e00e0256fd83390fac2e1f9341e2eb627f94ff4a565b4fcce",
+      "bytes": 81909133,
+      "status": "pass",
+      "sourceFingerprint": "5b7fe7d60660dc1639a580892b3c7e52f6ef8559cab4b6e42c06367194d88696",
+      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
+      "startedAt": "2026-10-21T00:53:30.319Z",
+      "completedAt": "2026-10-21T00:53:42.482Z",
+      "source": {
+        "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26m.onnx",
+        "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
+        "license": "AGPL-3.0",
+        "metadata": {
+          "description": "Ultralytics YOLO26m model trained on /home/lq/codes/ultralytics/ultralytics/cfg/datasets/coco.yaml",
+          "author": "Ultralytics",
+          "date": "2026-10-09T12:09:09.008201+02:00",
+          "version": "8.4.174",
+          "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+          "docs": "https://docs.ultralytics.com",
+          "stride": "32",
+          "task": "detect",
+          "head": "Detect",
+          "batch": "1",
+          "imgsz": "[480, 640]",
+          "names": "{0: 'person', 1: 'bicycle', 2: 'car', 3: 'motorcycle', 4: 'airplane', 5: 'bus', 6: 'train', 7: 'truck', 8: 'boat', 9: 'traffic light', 10: 'fire hydrant', 11: 'stop sign', 12: 'parking meter', 13: 'bench', 14: 'bird', 15: 'cat', 16: 'dog', 17: 'horse', 18: 'sheep', 19: 'cow', 20: 'elephant', 21: 'bear', 22: 'zebra', 23: 'giraffe', 24: 'backpack', 25: 'umbrella', 26: 'handbag', 27: 'tie', 28: 'suitcase', 29: 'frisbee', 30: 'skis', 31: 'snowboard', 32: 'sports ball', 33: 'kite', 34: 'baseball bat', 35: 'baseball glove', 36: 'skateboard', 37: 'surfboard', 38: 'tennis racket', 39: 'bottle', 40: 'wine glass', 41: 'cup', 42: 'fork', 43: 'knife', 44: 'spoon', 45: 'bowl', 46: 'banana', 47: 'apple', 48: 'sandwich', 49: 'orange', 50: 'broccoli', 51: 'carrot', 52: 'hot dog', 53: 'pizza', 54: 'donut', 55: 'cake', 56: 'chair', 57: 'couch', 58: 'potted plant', 59: 'bed', 60: 'dining table', 61: 'toilet', 62: 'tv', 63: 'laptop', 64: 'mouse', 65: 'remote', 66: 'keyboard', 67: 'cell phone', 68: 'microwave', 69: 'oven', 70: 'toaster', 71: 'sink', 72: 'refrigerator', 73: 'book', 74: 'clock', 75: 'vase', 76: 'scissors', 77: 'teddy bear', 78: 'hair drier', 79: 'toothbrush'}",
+          "args": "{'data': None, 'batch': 1, 'fraction': 1.0, 'quantize': None, 'nms': None, 'dynamic': False, 'simplify': True, 'opset': 12}",
+          "channels": "3",
+          "end2end": "False"
+        },
+        "producer": "pytorch"
+      },
+      "wasmNode": {
+        "status": "pass",
+        "backend": "WASM",
+        "initializeMs": 2847.069,
+        "input": [
+          {
+            "name": "images",
+            "dims": [
+              1,
+              3,
+              480,
+              640
+            ],
+            "elemType": 1
+          }
+        ],
+        "outputs": [
+          {
+            "name": "output0",
+            "dims": [
+              1,
+              84,
+              6300
+            ],
+            "elemType": 1
+          }
+        ],
+        "image": {
+          "fixture": {
+            "file": "tests/fixtures/bus.jpg",
+            "url": "https://raw.githubusercontent.com/ultralytics/ultralytics/main/ultralytics/assets/bus.jpg",
+            "sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
+            "width": 810,
+            "height": 1080
+          },
+          "latencyMs": 2180.681,
+          "resultCount": 5,
+          "samples": [
+            {
+              "label": "bus",
+              "classId": 5,
+              "score": 0.937,
+              "box": {
+                "x": 11.499526977539062,
+                "y": 229.77149963378906,
+                "width": 792.7263336181641,
+                "height": 507.62562561035156
+              }
+            },
+            {
+              "label": "person",
+              "classId": 0,
+              "score": 0.91,
+              "box": {
+                "x": 668.803882598877,
+                "y": 394.1143341064453,
+                "width": 141.19611740112305,
+                "height": 486.3438720703125
+              }
+            },
+            {
+              "label": "person",
+              "classId": 0,
+              "score": 0.909,
+              "box": {
+                "x": 47.89587593078613,
+                "y": 400.65257263183594,
+                "width": 199.27286911010742,
+                "height": 502.44557189941406
+              }
+            }
+          ],
+          "outputTensorStats": [
+            {
+              "name": "output0",
+              "dims": [
+                1,
+                84,
+                6300
+              ],
+              "type": "float32",
+              "count": 529200,
+              "nonFinite": 0,
+              "min": -38.8157958984375,
+              "max": 638.780029296875,
+              "sum": 4140883.9032904506,
+              "sha256": "dde490f3b0d990fefdf9296a613bc5ab3d65423bdc512160cbbe6568d8bde464"
+            }
+          ]
+        },
+        "video": {
+          "fixture": {
+            "file": "tests/fixtures/yolo26/real-video.mp4",
+            "url": "https://github.com/ultralytics/assets/releases/download/v0.0.0/solutions_ci_demo.mp4",
+            "sha256": "a8b0df3073740f808aa0aca3cff7787140837bfa24e01c934ba2cca474fd03cc",
+            "bytes": 270967
+          },
+          "decodedBy": "ffmpeg (real H.264 MP4 frames; browser playback is separate)",
+          "frames": [
+            {
+              "timeSeconds": 0,
+              "fixture": {
+                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "width": 640,
+                "height": 360
+              },
+              "latencyMs": 2249.637,
+              "resultCount": 15,
+              "samples": [
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.771,
+                  "box": {
+                    "x": 221.72383880615234,
+                    "y": 216.7440948486328,
+                    "width": 26.527664184570312,
+                    "height": 67.00668334960938
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.705,
+                  "box": {
+                    "x": 469.45314025878906,
+                    "y": 234.45616149902344,
+                    "width": 38.210174560546875,
+                    "height": 61.459136962890625
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.683,
+                  "box": {
+                    "x": 379.636962890625,
+                    "y": 169.03341674804688,
+                    "width": 24.34490966796875,
+                    "height": 50.2320556640625
+                  }
+                }
+              ],
+              "outputTensorStats": [
+                {
+                  "name": "output0",
+                  "dims": [
+                    1,
+                    84,
+                    6300
+                  ],
+                  "type": "float32",
+                  "count": 529200,
+                  "nonFinite": 0,
+                  "min": -46.73890686035156,
+                  "max": 638.7471923828125,
+                  "sum": 3954267.725876361,
+                  "sha256": "f16b463615605e513be24521986cfcc76cf0c5329b96294d9d151aa955d9d158"
+                }
+              ]
+            },
+            {
+              "timeSeconds": 1,
+              "fixture": {
+                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "width": 640,
+                "height": 360
+              },
+              "latencyMs": 2287.18,
+              "resultCount": 16,
+              "samples": [
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.813,
+                  "box": {
+                    "x": 223.96721649169922,
+                    "y": 176.32526397705078,
+                    "width": 24.860244750976562,
+                    "height": 64.82835388183594
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.723,
+                  "box": {
+                    "x": 369.673828125,
+                    "y": 266.06996154785156,
+                    "width": 31.36334228515625,
+                    "height": 65.07296752929688
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.677,
+                  "box": {
+                    "x": 77.5445556640625,
+                    "y": 172.7221908569336,
+                    "width": 24.586166381835938,
+                    "height": 61.44050598144531
+                  }
+                }
+              ],
+              "outputTensorStats": [
+                {
+                  "name": "output0",
+                  "dims": [
+                    1,
+                    84,
+                    6300
+                  ],
+                  "type": "float32",
+                  "count": 529200,
+                  "nonFinite": 0,
+                  "min": -46.81426239013672,
+                  "max": 638.687744140625,
+                  "sum": 3977989.9497467577,
+                  "sha256": "af4d53daeb31d777c6c9ddfb5b14e91a03914a095919e1be5cf135d25404f20d"
+                }
+              ]
+            }
+          ]
+        },
+        "digitalCrop": {
+          "crop": {
+            "x": 202.5,
+            "y": 270,
+            "width": 405,
+            "height": 540
+          },
+          "resultCount": 3,
+          "latencyMs": 2200.449
+        },
+        "render": {
+          "path": "docs/evidence/yolo26/yolo26-detect-m.png",
+          "sha256": "e039aad2f9b6a9dad701f9bb3cd1a6dfe0e0296c265713537c5ff26716b7d6e0",
+          "width": 480,
+          "height": 640,
+          "changedPixels": 40104,
+          "visualReview": "pending"
+        },
+        "lifecycle": {
+          "releaseResolved": true,
+          "releaseCallCount": 1,
+          "sessionCleared": true,
+          "canvasCleared": true,
+          "reloadRounds": [],
+          "initBefore": {
+            "rssBytes": 143286272,
+            "heapUsedBytes": 9201456,
+            "externalBytes": 86096424,
+            "arrayBuffersBytes": 82292135
+          },
+          "beforeRelease": {
+            "rssBytes": 670191616,
+            "heapUsedBytes": 13227000,
+            "externalBytes": 93148426,
+            "arrayBuffersBytes": 88719098
+          },
+          "afterRelease": {
+            "rssBytes": 670453760,
+            "heapUsedBytes": 11860400,
+            "externalBytes": 93148426,
+            "arrayBuffersBytes": 82915898
+          },
+          "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
+        }
+      },
+      "browserWasm": {
+        "status": "pending"
+      },
+      "webgpu": {
+        "status": "pending"
+      }
+    },
+    {
+      "id": "yolo26-detect-l",
+      "name": "YOLO26l",
+      "task": "detect",
+      "size": "L",
+      "sha256": "339eb3bdd2a8855399d5b4e9c53a2b370eb9e319d495600237a252223c981732",
+      "bytes": 99559195,
+      "status": "pass",
+      "sourceFingerprint": "5b7fe7d60660dc1639a580892b3c7e52f6ef8559cab4b6e42c06367194d88696",
+      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
+      "startedAt": "2026-10-21T00:53:42.652Z",
+      "completedAt": "2026-10-21T00:53:58.111Z",
+      "source": {
+        "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26l.onnx",
+        "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
+        "license": "AGPL-3.0",
+        "metadata": {
+          "description": "Ultralytics YOLO26l model trained on /home/lq/codes/ultralytics/ultralytics/cfg/datasets/coco.yaml",
+          "author": "Ultralytics",
+          "date": "2026-10-09T12:09:49.522583+02:00",
+          "version": "8.4.174",
+          "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+          "docs": "https://docs.ultralytics.com",
+          "stride": "32",
+          "task": "detect",
+          "head": "Detect",
+          "batch": "1",
+          "imgsz": "[480, 640]",
+          "names": "{0: 'person', 1: 'bicycle', 2: 'car', 3: 'motorcycle', 4: 'airplane', 5: 'bus', 6: 'train', 7: 'truck', 8: 'boat', 9: 'traffic light', 10: 'fire hydrant', 11: 'stop sign', 12: 'parking meter', 13: 'bench', 14: 'bird', 15: 'cat', 16: 'dog', 17: 'horse', 18: 'sheep', 19: 'cow', 20: 'elephant', 21: 'bear', 22: 'zebra', 23: 'giraffe', 24: 'backpack', 25: 'umbrella', 26: 'handbag', 27: 'tie', 28: 'suitcase', 29: 'frisbee', 30: 'skis', 31: 'snowboard', 32: 'sports ball', 33: 'kite', 34: 'baseball bat', 35: 'baseball glove', 36: 'skateboard', 37: 'surfboard', 38: 'tennis racket', 39: 'bottle', 40: 'wine glass', 41: 'cup', 42: 'fork', 43: 'knife', 44: 'spoon', 45: 'bowl', 46: 'banana', 47: 'apple', 48: 'sandwich', 49: 'orange', 50: 'broccoli', 51: 'carrot', 52: 'hot dog', 53: 'pizza', 54: 'donut', 55: 'cake', 56: 'chair', 57: 'couch', 58: 'potted plant', 59: 'bed', 60: 'dining table', 61: 'toilet', 62: 'tv', 63: 'laptop', 64: 'mouse', 65: 'remote', 66: 'keyboard', 67: 'cell phone', 68: 'microwave', 69: 'oven', 70: 'toaster', 71: 'sink', 72: 'refrigerator', 73: 'book', 74: 'clock', 75: 'vase', 76: 'scissors', 77: 'teddy bear', 78: 'hair drier', 79: 'toothbrush'}",
+          "args": "{'data': None, 'batch': 1, 'fraction': 1.0, 'quantize': None, 'nms': None, 'dynamic': False, 'simplify': True, 'opset': 12}",
+          "channels": "3",
+          "end2end": "False"
+        },
+        "producer": "pytorch"
+      },
+      "wasmNode": {
+        "status": "pass",
+        "backend": "WASM",
+        "initializeMs": 3608.642,
+        "input": [
+          {
+            "name": "images",
+            "dims": [
+              1,
+              3,
+              480,
+              640
+            ],
+            "elemType": 1
+          }
+        ],
+        "outputs": [
+          {
+            "name": "output0",
+            "dims": [
+              1,
+              84,
+              6300
+            ],
+            "elemType": 1
+          }
+        ],
+        "image": {
+          "fixture": {
+            "file": "tests/fixtures/bus.jpg",
+            "url": "https://raw.githubusercontent.com/ultralytics/ultralytics/main/ultralytics/assets/bus.jpg",
+            "sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
+            "width": 810,
+            "height": 1080
+          },
+          "latencyMs": 2696.747,
+          "resultCount": 5,
+          "samples": [
+            {
+              "label": "bus",
+              "classId": 5,
+              "score": 0.935,
+              "box": {
+                "x": 16.16645050048828,
+                "y": 229.95950317382812,
+                "width": 789.7247314453125,
+                "height": 518.0852279663086
+              }
+            },
+            {
+              "label": "person",
+              "classId": 0,
+              "score": 0.922,
+              "box": {
+                "x": 48.10370635986328,
+                "y": 398.1684265136719,
+                "width": 197.69176483154297,
+                "height": 505.979736328125
+              }
+            },
+            {
+              "label": "person",
+              "classId": 0,
+              "score": 0.913,
+              "box": {
+                "x": 669.955867767334,
+                "y": 394.37889862060547,
+                "width": 140.04413223266602,
+                "height": 484.046630859375
+              }
+            }
+          ],
+          "outputTensorStats": [
+            {
+              "name": "output0",
+              "dims": [
+                1,
+                84,
+                6300
+              ],
+              "type": "float32",
+              "count": 529200,
+              "nonFinite": 0,
+              "min": -0.02626800537109375,
+              "max": 638.5223388671875,
+              "sum": 4197990.471727878,
+              "sha256": "73378607b251f4a998dc3a99c9a68cf5adde89daffac13755e0f60d217c786e7"
+            }
+          ]
+        },
+        "video": {
+          "fixture": {
+            "file": "tests/fixtures/yolo26/real-video.mp4",
+            "url": "https://github.com/ultralytics/assets/releases/download/v0.0.0/solutions_ci_demo.mp4",
+            "sha256": "a8b0df3073740f808aa0aca3cff7787140837bfa24e01c934ba2cca474fd03cc",
+            "bytes": 270967
+          },
+          "decodedBy": "ffmpeg (real H.264 MP4 frames; browser playback is separate)",
+          "frames": [
+            {
+              "timeSeconds": 0,
+              "fixture": {
+                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "width": 640,
+                "height": 360
+              },
+              "latencyMs": 3120.486,
+              "resultCount": 15,
+              "samples": [
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.748,
+                  "box": {
+                    "x": 221.71080780029297,
+                    "y": 216.5052490234375,
+                    "width": 26.660476684570312,
+                    "height": 68.24365234375
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.735,
+                  "box": {
+                    "x": 469.67919921875,
+                    "y": 234.40301513671875,
+                    "width": 38.03839111328125,
+                    "height": 61.9884033203125
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.697,
+                  "box": {
+                    "x": 250.21399688720703,
+                    "y": 150.91559600830078,
+                    "width": 24.496688842773438,
+                    "height": 57.28581237792969
+                  }
+                }
+              ],
+              "outputTensorStats": [
+                {
+                  "name": "output0",
+                  "dims": [
+                    1,
+                    84,
+                    6300
+                  ],
+                  "type": "float32",
+                  "count": 529200,
+                  "nonFinite": 0,
+                  "min": -0.280029296875,
+                  "max": 638.5926513671875,
+                  "sum": 3973720.753888458,
+                  "sha256": "7187c5167abdecfe60a558d3ff1e059535384ce31cf5d23d3c00344bdea7aa22"
+                }
+              ]
+            },
+            {
+              "timeSeconds": 1,
+              "fixture": {
+                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "width": 640,
+                "height": 360
+              },
+              "latencyMs": 2796.845,
+              "resultCount": 17,
+              "samples": [
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.771,
+                  "box": {
+                    "x": 369.7217712402344,
+                    "y": 266.0179748535156,
+                    "width": 31.2652587890625,
+                    "height": 65.00811767578125
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.753,
+                  "box": {
+                    "x": 25.38494873046875,
+                    "y": 275.1737976074219,
+                    "width": 37.576560974121094,
+                    "height": 59.0291748046875
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.748,
+                  "box": {
+                    "x": 436.24151611328125,
+                    "y": 235.6502227783203,
+                    "width": 36.39215087890625,
+                    "height": 58.180633544921875
+                  }
+                }
+              ],
+              "outputTensorStats": [
+                {
+                  "name": "output0",
+                  "dims": [
+                    1,
+                    84,
+                    6300
+                  ],
+                  "type": "float32",
+                  "count": 529200,
+                  "nonFinite": 0,
+                  "min": -0.230499267578125,
+                  "max": 638.631591796875,
+                  "sum": 3978003.3522087038,
+                  "sha256": "653fc819df5a50f97d9a9eaabb361facbb1c70c8e516dde7992dccc40379416b"
+                }
+              ]
+            }
+          ]
+        },
+        "digitalCrop": {
+          "crop": {
+            "x": 202.5,
+            "y": 270,
+            "width": 405,
+            "height": 540
+          },
+          "resultCount": 2,
+          "latencyMs": 2728.808
+        },
+        "render": {
+          "path": "docs/evidence/yolo26/yolo26-detect-l.png",
+          "sha256": "b443300dfaf0530c15e1f13c6cdc569dfb0103ab4e227692495d96bbd583f7d3",
+          "width": 480,
+          "height": 640,
+          "changedPixels": 40037,
+          "visualReview": "pending"
+        },
+        "lifecycle": {
+          "releaseResolved": true,
+          "releaseCallCount": 1,
+          "sessionCleared": true,
+          "canvasCleared": true,
+          "reloadRounds": [],
+          "initBefore": {
+            "rssBytes": 161714176,
+            "heapUsedBytes": 9477456,
+            "externalBytes": 103753350,
+            "arrayBuffersBytes": 99949061
+          },
+          "beforeRelease": {
+            "rssBytes": 672522240,
+            "heapUsedBytes": 12320072,
+            "externalBytes": 110798463,
+            "arrayBuffersBytes": 106369160
+          },
+          "afterRelease": {
+            "rssBytes": 672653312,
+            "heapUsedBytes": 11861176,
+            "externalBytes": 110798463,
+            "arrayBuffersBytes": 100565960
+          },
+          "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
+        }
+      },
+      "browserWasm": {
+        "status": "pending"
+      },
+      "webgpu": {
+        "status": "pending"
+      }
+    },
+    {
+      "id": "yolo26-detect-x",
+      "name": "YOLO26x",
+      "task": "detect",
+      "size": "X",
+      "sha256": "cdb052ff612f4aa018adc982b393fa7e0502d750d970844e393152d030eef095",
+      "bytes": 223233339,
+      "status": "pass",
+      "sourceFingerprint": "5b7fe7d60660dc1639a580892b3c7e52f6ef8559cab4b6e42c06367194d88696",
+      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
+      "startedAt": "2026-10-21T00:53:58.276Z",
+      "completedAt": "2026-10-21T00:54:29.510Z",
+      "source": {
+        "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26x.onnx",
+        "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
+        "license": "AGPL-3.0",
+        "metadata": {
+          "description": "Ultralytics YOLO26x model trained on /home/lq/codes/ultralytics/ultralytics/cfg/datasets/coco.yaml",
+          "author": "Ultralytics",
+          "date": "2026-10-09T12:10:47.370450+02:00",
+          "version": "8.4.174",
+          "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+          "docs": "https://docs.ultralytics.com",
+          "stride": "32",
+          "task": "detect",
+          "head": "Detect",
+          "batch": "1",
+          "imgsz": "[480, 640]",
+          "names": "{0: 'person', 1: 'bicycle', 2: 'car', 3: 'motorcycle', 4: 'airplane', 5: 'bus', 6: 'train', 7: 'truck', 8: 'boat', 9: 'traffic light', 10: 'fire hydrant', 11: 'stop sign', 12: 'parking meter', 13: 'bench', 14: 'bird', 15: 'cat', 16: 'dog', 17: 'horse', 18: 'sheep', 19: 'cow', 20: 'elephant', 21: 'bear', 22: 'zebra', 23: 'giraffe', 24: 'backpack', 25: 'umbrella', 26: 'handbag', 27: 'tie', 28: 'suitcase', 29: 'frisbee', 30: 'skis', 31: 'snowboard', 32: 'sports ball', 33: 'kite', 34: 'baseball bat', 35: 'baseball glove', 36: 'skateboard', 37: 'surfboard', 38: 'tennis racket', 39: 'bottle', 40: 'wine glass', 41: 'cup', 42: 'fork', 43: 'knife', 44: 'spoon', 45: 'bowl', 46: 'banana', 47: 'apple', 48: 'sandwich', 49: 'orange', 50: 'broccoli', 51: 'carrot', 52: 'hot dog', 53: 'pizza', 54: 'donut', 55: 'cake', 56: 'chair', 57: 'couch', 58: 'potted plant', 59: 'bed', 60: 'dining table', 61: 'toilet', 62: 'tv', 63: 'laptop', 64: 'mouse', 65: 'remote', 66: 'keyboard', 67: 'cell phone', 68: 'microwave', 69: 'oven', 70: 'toaster', 71: 'sink', 72: 'refrigerator', 73: 'book', 74: 'clock', 75: 'vase', 76: 'scissors', 77: 'teddy bear', 78: 'hair drier', 79: 'toothbrush'}",
+          "args": "{'data': None, 'batch': 1, 'fraction': 1.0, 'quantize': None, 'nms': None, 'dynamic': False, 'simplify': True, 'opset': 12}",
+          "channels": "3",
+          "end2end": "False"
+        },
+        "producer": "pytorch"
+      },
+      "wasmNode": {
+        "status": "pass",
+        "backend": "WASM",
+        "initializeMs": 6984.301,
+        "input": [
+          {
+            "name": "images",
+            "dims": [
+              1,
+              3,
+              480,
+              640
+            ],
+            "elemType": 1
+          }
+        ],
+        "outputs": [
+          {
+            "name": "output0",
+            "dims": [
+              1,
+              84,
+              6300
+            ],
+            "elemType": 1
+          }
+        ],
+        "image": {
+          "fixture": {
+            "file": "tests/fixtures/bus.jpg",
+            "url": "https://raw.githubusercontent.com/ultralytics/ultralytics/main/ultralytics/assets/bus.jpg",
+            "sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
+            "width": 810,
+            "height": 1080
+          },
+          "latencyMs": 6168.915,
+          "resultCount": 5,
+          "samples": [
+            {
+              "label": "bus",
+              "classId": 5,
+              "score": 0.941,
+              "box": {
+                "x": 10.000408172607422,
+                "y": 230.1917266845703,
+                "width": 794.5738906860352,
+                "height": 507.89588928222656
+              }
+            },
+            {
+              "label": "person",
+              "classId": 0,
+              "score": 0.917,
+              "box": {
+                "x": 669.3145065307617,
+                "y": 394.14746475219727,
+                "width": 140.68549346923828,
+                "height": 485.15206146240234
+              }
+            },
+            {
+              "label": "person",
+              "classId": 0,
+              "score": 0.912,
+              "box": {
+                "x": 49.23735809326172,
+                "y": 397.8394889831543,
+                "width": 195.67357635498047,
+                "height": 506.5261001586914
+              }
+            }
+          ],
+          "outputTensorStats": [
+            {
+              "name": "output0",
+              "dims": [
+                1,
+                84,
+                6300
+              ],
+              "type": "float32",
+              "count": 529200,
+              "nonFinite": 0,
+              "min": -3.01910400390625,
+              "max": 634.549072265625,
+              "sum": 4188086.777321726,
+              "sha256": "28f5cfcfc65e87049e47756bc2c2141f2f439b34600a5f86ea454017720ab24e"
+            }
+          ]
+        },
+        "video": {
+          "fixture": {
+            "file": "tests/fixtures/yolo26/real-video.mp4",
+            "url": "https://github.com/ultralytics/assets/releases/download/v0.0.0/solutions_ci_demo.mp4",
+            "sha256": "a8b0df3073740f808aa0aca3cff7787140837bfa24e01c934ba2cca474fd03cc",
+            "bytes": 270967
+          },
+          "decodedBy": "ffmpeg (real H.264 MP4 frames; browser playback is separate)",
+          "frames": [
+            {
+              "timeSeconds": 0,
+              "fixture": {
+                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "width": 640,
+                "height": 360
+              },
+              "latencyMs": 5924.424,
+              "resultCount": 22,
+              "samples": [
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.809,
+                  "box": {
+                    "x": 221.72701263427734,
+                    "y": 216.3133087158203,
+                    "width": 26.581619262695312,
+                    "height": 68.39950561523438
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.777,
+                  "box": {
+                    "x": 10.607345581054688,
+                    "y": 265.2821044921875,
+                    "width": 36.65451431274414,
+                    "height": 63.83489990234375
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.761,
+                  "box": {
+                    "x": 250.15450286865234,
+                    "y": 150.79977416992188,
+                    "width": 24.775344848632812,
+                    "height": 57.30548095703125
+                  }
+                }
+              ],
+              "outputTensorStats": [
+                {
+                  "name": "output0",
+                  "dims": [
+                    1,
+                    84,
+                    6300
+                  ],
+                  "type": "float32",
+                  "count": 529200,
+                  "nonFinite": 0,
+                  "min": 0,
+                  "max": 638.6295776367188,
+                  "sum": 4081177.469057232,
+                  "sha256": "98438610b3ea6c2e75a4080a5534f67ad30e9bab93a0b687355e7ede6c7a5556"
+                }
+              ]
+            },
+            {
+              "timeSeconds": 1,
+              "fixture": {
+                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "width": 640,
+                "height": 360
+              },
+              "latencyMs": 5655.947,
+              "resultCount": 22,
+              "samples": [
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.814,
+                  "box": {
+                    "x": 369.6265411376953,
+                    "y": 266.1758270263672,
+                    "width": 31.617889404296875,
+                    "height": 64.56838989257812
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.8,
+                  "box": {
+                    "x": 224.27342224121094,
+                    "y": 176.20928192138672,
+                    "width": 24.26324462890625,
+                    "height": 64.31489562988281
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.734,
+                  "box": {
+                    "x": 25.262537002563477,
+                    "y": 275.318359375,
+                    "width": 37.90085983276367,
+                    "height": 58.7392578125
+                  }
+                }
+              ],
+              "outputTensorStats": [
+                {
+                  "name": "output0",
+                  "dims": [
+                    1,
+                    84,
+                    6300
+                  ],
+                  "type": "float32",
+                  "count": 529200,
+                  "nonFinite": 0,
+                  "min": 0,
+                  "max": 638.3983154296875,
+                  "sum": 4108939.050539732,
+                  "sha256": "af764e14e8b7bcade6d614387cc9e0ab1b4ed223d53ac0d002d6e4782785cc5e"
+                }
+              ]
+            }
+          ]
+        },
+        "digitalCrop": {
+          "crop": {
+            "x": 202.5,
+            "y": 270,
+            "width": 405,
+            "height": 540
+          },
+          "resultCount": 3,
+          "latencyMs": 5933.781
+        },
+        "render": {
+          "path": "docs/evidence/yolo26/yolo26-detect-x.png",
+          "sha256": "fb68bbacc776a763b0f04479d09077f3f6b255c93c50a96e33565b644ec2ab37",
+          "width": 480,
+          "height": 640,
+          "changedPixels": 40342,
+          "visualReview": "pending"
+        },
+        "lifecycle": {
+          "releaseResolved": true,
+          "releaseCallCount": 1,
+          "sessionCleared": true,
+          "canvasCleared": true,
+          "reloadRounds": [],
+          "initBefore": {
+            "rssBytes": 285048832,
+            "heapUsedBytes": 9741096,
+            "externalBytes": 227476582,
+            "arrayBuffersBytes": 223672293
+          },
+          "beforeRelease": {
+            "rssBytes": 1116479488,
+            "heapUsedBytes": 12649480,
+            "externalBytes": 240276287,
+            "arrayBuffersBytes": 235846504
+          },
+          "afterRelease": {
+            "rssBytes": 1116741632,
+            "heapUsedBytes": 11865568,
+            "externalBytes": 240276287,
+            "arrayBuffersBytes": 224240104
+          },
+          "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
+        }
+      },
+      "browserWasm": {
+        "status": "pending"
+      },
+      "webgpu": {
+        "status": "pending"
+      }
+    },
+    {
+      "id": "yolo26-segment-n",
+      "name": "YOLO26n-seg",
+      "task": "segment",
+      "size": "N",
+      "sha256": "d4a4da5077847338d50788670b6a81f8f5525b516399bb656247a87b64f85964",
+      "bytes": 11161769,
+      "status": "pass",
+      "sourceFingerprint": "5b7fe7d60660dc1639a580892b3c7e52f6ef8559cab4b6e42c06367194d88696",
+      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
+      "startedAt": "2026-10-21T00:54:29.634Z",
+      "completedAt": "2026-10-21T00:54:33.715Z",
+      "source": {
+        "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26n-seg.onnx",
+        "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
+        "license": "AGPL-3.0",
+        "metadata": {
+          "description": "Ultralytics YOLO26n-seg model trained on /home/lq/codes/ultralytics/ultralytics/cfg/datasets/coco.yaml",
+          "author": "Ultralytics",
+          "date": "2026-10-09T11:59:51.336313+02:00",
+          "version": "8.4.174",
+          "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+          "docs": "https://docs.ultralytics.com",
+          "stride": "32",
+          "task": "segment",
+          "head": "Segment26",
+          "batch": "1",
+          "imgsz": "[480, 640]",
+          "names": "{0: 'person', 1: 'bicycle', 2: 'car', 3: 'motorcycle', 4: 'airplane', 5: 'bus', 6: 'train', 7: 'truck', 8: 'boat', 9: 'traffic light', 10: 'fire hydrant', 11: 'stop sign', 12: 'parking meter', 13: 'bench', 14: 'bird', 15: 'cat', 16: 'dog', 17: 'horse', 18: 'sheep', 19: 'cow', 20: 'elephant', 21: 'bear', 22: 'zebra', 23: 'giraffe', 24: 'backpack', 25: 'umbrella', 26: 'handbag', 27: 'tie', 28: 'suitcase', 29: 'frisbee', 30: 'skis', 31: 'snowboard', 32: 'sports ball', 33: 'kite', 34: 'baseball bat', 35: 'baseball glove', 36: 'skateboard', 37: 'surfboard', 38: 'tennis racket', 39: 'bottle', 40: 'wine glass', 41: 'cup', 42: 'fork', 43: 'knife', 44: 'spoon', 45: 'bowl', 46: 'banana', 47: 'apple', 48: 'sandwich', 49: 'orange', 50: 'broccoli', 51: 'carrot', 52: 'hot dog', 53: 'pizza', 54: 'donut', 55: 'cake', 56: 'chair', 57: 'couch', 58: 'potted plant', 59: 'bed', 60: 'dining table', 61: 'toilet', 62: 'tv', 63: 'laptop', 64: 'mouse', 65: 'remote', 66: 'keyboard', 67: 'cell phone', 68: 'microwave', 69: 'oven', 70: 'toaster', 71: 'sink', 72: 'refrigerator', 73: 'book', 74: 'clock', 75: 'vase', 76: 'scissors', 77: 'teddy bear', 78: 'hair drier', 79: 'toothbrush'}",
+          "args": "{'data': None, 'batch': 1, 'fraction': 1.0, 'quantize': None, 'nms': None, 'dynamic': False, 'simplify': True, 'opset': 12}",
+          "channels": "3",
+          "end2end": "False"
+        },
+        "producer": "pytorch"
+      },
+      "wasmNode": {
+        "status": "pass",
+        "backend": "WASM",
+        "initializeMs": 959.21,
+        "input": [
+          {
+            "name": "images",
+            "dims": [
+              1,
+              3,
+              480,
+              640
+            ],
+            "elemType": 1
+          }
+        ],
+        "outputs": [
+          {
+            "name": "output0",
+            "dims": [
+              1,
+              116,
+              6300
+            ],
+            "elemType": 1
+          },
+          {
+            "name": "output1",
+            "dims": [
+              1,
+              32,
+              120,
+              160
+            ],
+            "elemType": 1
+          }
+        ],
+        "image": {
+          "fixture": {
+            "file": "tests/fixtures/bus.jpg",
+            "url": "https://raw.githubusercontent.com/ultralytics/ultralytics/main/ultralytics/assets/bus.jpg",
+            "sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
+            "width": 810,
+            "height": 1080
+          },
+          "latencyMs": 406.207,
+          "resultCount": 5,
+          "samples": [
+            {
+              "label": "bus",
+              "classId": 5,
+              "score": 0.89,
+              "box": {
+                "x": 22.854721069335938,
+                "y": 227.91041564941406,
+                "width": 785.3300628662109,
+                "height": 498.46900177001953
+              },
+              "mask": {
+                "width": 384,
+                "height": 244,
+                "box": {
+                  "x": 22.854721069335938,
+                  "y": 227.91041564941406,
+                  "width": 785.3300628662109,
+                  "height": 498.46900177001953
+                },
+                "nonZero": 60979,
+                "sha256": "ac6cf29ae96fbc831a3bd66495e474fd4a8d55da857a54cac460348dec3ce45e"
+              }
+            },
+            {
+              "label": "person",
+              "classId": 0,
+              "score": 0.833,
+              "box": {
+                "x": 52.870107650756836,
+                "y": 394.8486328125,
+                "width": 188.3085823059082,
+                "height": 510.12913513183594
+              },
+              "mask": {
+                "width": 142,
+                "height": 384,
+                "box": {
+                  "x": 52.870107650756836,
+                  "y": 394.8486328125,
+                  "width": 188.3085823059082,
+                  "height": 510.12913513183594
+                },
+                "nonZero": 28799,
+                "sha256": "1f83ad099a8e55321efa8d39b66073f6d2b8493420932dc7df270c64e922f2d7"
+              }
+            },
+            {
+              "label": "person",
+              "classId": 0,
+              "score": 0.818,
+              "box": {
+                "x": 669.7971153259277,
+                "y": 390.1381244659424,
+                "width": 140.20288467407227,
+                "height": 489.8760795593262
+              },
+              "mask": {
+                "width": 110,
+                "height": 384,
+                "box": {
+                  "x": 669.7971153259277,
+                  "y": 390.1381244659424,
+                  "width": 140.20288467407227,
+                  "height": 489.8760795593262
+                },
+                "nonZero": 12790,
+                "sha256": "b4805543b89d75238e362e6a0ea9ec931f0c0382ebe88573c5a3f1063d21225c"
+              }
+            }
+          ],
+          "outputTensorStats": [
+            {
+              "name": "output0",
+              "dims": [
+                1,
+                116,
+                6300
+              ],
+              "type": "float32",
+              "count": 730800,
+              "nonFinite": 0,
+              "min": -6.39874792098999,
+              "max": 637.414794921875,
+              "sum": 4119180.9156485354,
+              "sha256": "06cd32eef27ee120fadad315bc2dd7cb26234d38f087f121ed6bfc51336e2146"
+            },
+            {
+              "name": "output1",
+              "dims": [
+                1,
+                32,
+                120,
+                160
+              ],
+              "type": "float32",
+              "count": 614400,
+              "nonFinite": 0,
+              "min": -0.2784646153450012,
+              "max": 4.001974582672119,
+              "sum": 190592.34332372568,
+              "sha256": "f0a06978268ea30a1c751b126474f9a01f62cc03fc96cdedc9d99f3163142c4e"
+            }
+          ]
+        },
+        "video": {
+          "fixture": {
+            "file": "tests/fixtures/yolo26/real-video.mp4",
+            "url": "https://github.com/ultralytics/assets/releases/download/v0.0.0/solutions_ci_demo.mp4",
+            "sha256": "a8b0df3073740f808aa0aca3cff7787140837bfa24e01c934ba2cca474fd03cc",
+            "bytes": 270967
+          },
+          "decodedBy": "ffmpeg (real H.264 MP4 frames; browser playback is separate)",
+          "frames": [
+            {
+              "timeSeconds": 0,
+              "fixture": {
+                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "width": 640,
+                "height": 360
+              },
+              "latencyMs": 420.718,
+              "resultCount": 17,
+              "samples": [
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.741,
+                  "box": {
+                    "x": 11.003894805908203,
+                    "y": 264.5242919921875,
+                    "width": 36.04682540893555,
+                    "height": 64.704345703125
+                  },
+                  "mask": {
+                    "width": 37,
+                    "height": 65,
+                    "box": {
+                      "x": 11.003894805908203,
+                      "y": 264.5242919921875,
+                      "width": 36.04682540893555,
+                      "height": 64.704345703125
+                    },
+                    "nonZero": 1088,
+                    "sha256": "c714be911b2b1be692cad1c69d5dd3f934ef69466918559dea21fc9cbee97d18"
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.713,
+                  "box": {
+                    "x": 221.80205535888672,
+                    "y": 216.43292236328125,
+                    "width": 26.173110961914062,
+                    "height": 67.84228515625
+                  },
+                  "mask": {
+                    "width": 27,
+                    "height": 68,
+                    "box": {
+                      "x": 221.80205535888672,
+                      "y": 216.43292236328125,
+                      "width": 26.173110961914062,
+                      "height": 67.84228515625
+                    },
+                    "nonZero": 1113,
+                    "sha256": "0b0d24f30deea86ee9a6f97620cfd85ccf573e12cc2db9079b84419a6d00c2e1"
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.703,
+                  "box": {
+                    "x": 469.62095642089844,
+                    "y": 233.8937225341797,
+                    "width": 37.961334228515625,
+                    "height": 62.468536376953125
+                  },
+                  "mask": {
+                    "width": 38,
+                    "height": 63,
+                    "box": {
+                      "x": 469.62095642089844,
+                      "y": 233.8937225341797,
+                      "width": 37.961334228515625,
+                      "height": 62.468536376953125
+                    },
+                    "nonZero": 1207,
+                    "sha256": "21b6b400c23290bf5708c1b7223ea995fc7cd63ae9e5ea8d014d26bd1a258158"
+                  }
+                }
+              ],
+              "outputTensorStats": [
+                {
+                  "name": "output0",
+                  "dims": [
+                    1,
+                    116,
+                    6300
+                  ],
+                  "type": "float32",
+                  "count": 730800,
+                  "nonFinite": 0,
+                  "min": -3.7884716987609863,
+                  "max": 638.608642578125,
+                  "sum": 3981943.1468688566,
+                  "sha256": "b591b78896bcbeda897f3121577247cb61e4e22b7654e5806d9f61538180f420"
+                },
+                {
+                  "name": "output1",
+                  "dims": [
+                    1,
+                    32,
+                    120,
+                    160
+                  ],
+                  "type": "float32",
+                  "count": 614400,
+                  "nonFinite": 0,
+                  "min": -0.27846458554267883,
+                  "max": 5.777235984802246,
+                  "sum": 194614.04054359463,
+                  "sha256": "4195518e27272666d34408b4c4291a5c23ea60f09aef405b835b611e82ff5974"
+                }
+              ]
+            },
+            {
+              "timeSeconds": 1,
+              "fixture": {
+                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "width": 640,
+                "height": 360
+              },
+              "latencyMs": 418.233,
+              "resultCount": 16,
+              "samples": [
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.76,
+                  "box": {
+                    "x": 369.05914306640625,
+                    "y": 265.96629333496094,
+                    "width": 31.9256591796875,
+                    "height": 65.36538696289062
+                  },
+                  "mask": {
+                    "width": 32,
+                    "height": 66,
+                    "box": {
+                      "x": 369.05914306640625,
+                      "y": 265.96629333496094,
+                      "width": 31.9256591796875,
+                      "height": 65.36538696289062
+                    },
+                    "nonZero": 1141,
+                    "sha256": "9f261de7ac174ef06ce799eac80802b40499071cb9e47da59d239b220efa0915"
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.708,
+                  "box": {
+                    "x": 77.28792953491211,
+                    "y": 172.6680145263672,
+                    "width": 24.48542022705078,
+                    "height": 61.377227783203125
+                  },
+                  "mask": {
+                    "width": 25,
+                    "height": 62,
+                    "box": {
+                      "x": 77.28792953491211,
+                      "y": 172.6680145263672,
+                      "width": 24.48542022705078,
+                      "height": 61.377227783203125
+                    },
+                    "nonZero": 973,
+                    "sha256": "22c46fda9211efbd98e728622263f9cb767e0095e5d8c076f6d19ffb4e9a89cb"
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.7,
+                  "box": {
+                    "x": 223.73583221435547,
+                    "y": 175.76612854003906,
+                    "width": 24.792678833007812,
+                    "height": 65.16549682617188
+                  },
+                  "mask": {
+                    "width": 25,
+                    "height": 66,
+                    "box": {
+                      "x": 223.73583221435547,
+                      "y": 175.76612854003906,
+                      "width": 24.792678833007812,
+                      "height": 65.16549682617188
+                    },
+                    "nonZero": 1001,
+                    "sha256": "a4b085f4607249d4324b64e84e0e002b4ddc5eed3b8b0cee5dcf1814aaa1bdc4"
+                  }
+                }
+              ],
+              "outputTensorStats": [
+                {
+                  "name": "output0",
+                  "dims": [
+                    1,
+                    116,
+                    6300
+                  ],
+                  "type": "float32",
+                  "count": 730800,
+                  "nonFinite": 0,
+                  "min": -4.01981258392334,
+                  "max": 638.6392211914062,
+                  "sum": 4001915.8126704553,
+                  "sha256": "8cc4420bf712633e2005053667206863bcafebea6d3ea261e210363eb02a01ed"
+                },
+                {
+                  "name": "output1",
+                  "dims": [
+                    1,
+                    32,
+                    120,
+                    160
+                  ],
+                  "type": "float32",
+                  "count": 614400,
+                  "nonFinite": 0,
+                  "min": -0.27846458554267883,
+                  "max": 4.918364524841309,
+                  "sum": 194864.97565045752,
+                  "sha256": "9777cc38edb010ff092b428d17784918a8f64be02946c6fac231f5a8754b29c0"
+                }
+              ]
+            }
+          ]
+        },
+        "render": {
+          "path": "docs/evidence/yolo26/yolo26-segment-n.png",
+          "sha256": "d287ad684294332516249e2083a3ebffa620c11183c91160dd5897503f323ae4",
+          "width": 480,
+          "height": 640,
+          "changedPixels": 147151,
+          "visualReview": "pending"
+        },
+        "lifecycle": {
+          "releaseResolved": true,
+          "releaseCallCount": 3,
+          "sessionCleared": true,
+          "canvasCleared": true,
+          "reloadRounds": [
+            {
+              "round": 1,
+              "loadInferDisposeMs": 793.59,
+              "resultCount": 5,
+              "memory": {
+                "rssBytes": 532643840,
+                "heapUsedBytes": 12013152,
+                "externalBytes": 26087253,
+                "arrayBuffersBytes": 12445294
+              }
+            },
+            {
+              "round": 2,
+              "loadInferDisposeMs": 758.351,
+              "resultCount": 5,
+              "memory": {
+                "rssBytes": 542912512,
+                "heapUsedBytes": 10538896,
+                "externalBytes": 26566563,
+                "arrayBuffersBytes": 12445294
+              }
+            }
+          ],
+          "initBefore": {
+            "rssBytes": 72691712,
+            "heapUsedBytes": 9282104,
+            "externalBytes": 15316232,
+            "arrayBuffersBytes": 11511943
+          },
+          "beforeRelease": {
+            "rssBytes": 394887168,
+            "heapUsedBytes": 16095608,
+            "externalBytes": 26929461,
+            "arrayBuffersBytes": 22508302
+          },
+          "afterRelease": {
+            "rssBytes": 395018240,
+            "heapUsedBytes": 11911656,
+            "externalBytes": 26929461,
+            "arrayBuffersBytes": 12191140
+          },
+          "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
+        }
+      },
+      "browserWasm": {
+        "status": "pending"
+      },
+      "webgpu": {
+        "status": "pending"
+      }
+    },
+    {
+      "id": "yolo26-segment-s",
+      "name": "YOLO26s-seg",
+      "task": "segment",
+      "size": "S",
+      "sha256": "83db44ad9f930e062506099e03388aa523bfeb0c378efe94696013ac9e4ceae2",
+      "bytes": 41855456,
+      "status": "pass",
+      "sourceFingerprint": "5b7fe7d60660dc1639a580892b3c7e52f6ef8559cab4b6e42c06367194d88696",
+      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
+      "startedAt": "2026-10-21T00:54:33.844Z",
+      "completedAt": "2026-10-21T00:54:39.472Z",
+      "source": {
+        "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26s-seg.onnx",
+        "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
+        "license": "AGPL-3.0",
+        "metadata": {
+          "description": "Ultralytics YOLO26s-seg model trained on /home/lq/codes/ultralytics/ultralytics/cfg/datasets/coco.yaml",
+          "author": "Ultralytics",
+          "date": "2026-10-09T12:08:47.098291+02:00",
+          "version": "8.4.174",
+          "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+          "docs": "https://docs.ultralytics.com",
+          "stride": "32",
+          "task": "segment",
+          "head": "Segment26",
+          "batch": "1",
+          "imgsz": "[480, 640]",
+          "names": "{0: 'person', 1: 'bicycle', 2: 'car', 3: 'motorcycle', 4: 'airplane', 5: 'bus', 6: 'train', 7: 'truck', 8: 'boat', 9: 'traffic light', 10: 'fire hydrant', 11: 'stop sign', 12: 'parking meter', 13: 'bench', 14: 'bird', 15: 'cat', 16: 'dog', 17: 'horse', 18: 'sheep', 19: 'cow', 20: 'elephant', 21: 'bear', 22: 'zebra', 23: 'giraffe', 24: 'backpack', 25: 'umbrella', 26: 'handbag', 27: 'tie', 28: 'suitcase', 29: 'frisbee', 30: 'skis', 31: 'snowboard', 32: 'sports ball', 33: 'kite', 34: 'baseball bat', 35: 'baseball glove', 36: 'skateboard', 37: 'surfboard', 38: 'tennis racket', 39: 'bottle', 40: 'wine glass', 41: 'cup', 42: 'fork', 43: 'knife', 44: 'spoon', 45: 'bowl', 46: 'banana', 47: 'apple', 48: 'sandwich', 49: 'orange', 50: 'broccoli', 51: 'carrot', 52: 'hot dog', 53: 'pizza', 54: 'donut', 55: 'cake', 56: 'chair', 57: 'couch', 58: 'potted plant', 59: 'bed', 60: 'dining table', 61: 'toilet', 62: 'tv', 63: 'laptop', 64: 'mouse', 65: 'remote', 66: 'keyboard', 67: 'cell phone', 68: 'microwave', 69: 'oven', 70: 'toaster', 71: 'sink', 72: 'refrigerator', 73: 'book', 74: 'clock', 75: 'vase', 76: 'scissors', 77: 'teddy bear', 78: 'hair drier', 79: 'toothbrush'}",
+          "args": "{'data': None, 'batch': 1, 'fraction': 1.0, 'quantize': None, 'nms': None, 'dynamic': False, 'simplify': True, 'opset': 12}",
+          "channels": "3",
+          "end2end": "False"
+        },
+        "producer": "pytorch"
+      },
+      "wasmNode": {
+        "status": "pass",
+        "backend": "WASM",
+        "initializeMs": 1766.68,
+        "input": [
+          {
+            "name": "images",
+            "dims": [
+              1,
+              3,
+              480,
+              640
+            ],
+            "elemType": 1
+          }
+        ],
+        "outputs": [
+          {
+            "name": "output0",
+            "dims": [
+              1,
+              116,
+              6300
+            ],
+            "elemType": 1
+          },
+          {
+            "name": "output1",
+            "dims": [
+              1,
+              32,
+              120,
+              160
+            ],
+            "elemType": 1
+          }
+        ],
+        "image": {
+          "fixture": {
+            "file": "tests/fixtures/bus.jpg",
+            "url": "https://raw.githubusercontent.com/ultralytics/ultralytics/main/ultralytics/assets/bus.jpg",
+            "sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
+            "width": 810,
+            "height": 1080
+          },
+          "latencyMs": 1147.078,
+          "resultCount": 5,
+          "samples": [
+            {
+              "label": "bus",
+              "classId": 5,
+              "score": 0.91,
+              "box": {
+                "x": 14.756389617919922,
+                "y": 230.51465606689453,
+                "width": 787.9343032836914,
+                "height": 507.06250762939453
+              },
+              "mask": {
+                "width": 384,
+                "height": 248,
+                "box": {
+                  "x": 14.756389617919922,
+                  "y": 230.51465606689453,
+                  "width": 787.9343032836914,
+                  "height": 507.06250762939453
+                },
+                "nonZero": 61826,
+                "sha256": "a1823a10cd6dda2b0b9eb56629222da13ff64be782b105e8503a4aff54b9b50e"
+              }
+            },
+            {
+              "label": "person",
+              "classId": 0,
+              "score": 0.889,
+              "box": {
+                "x": 667.9479446411133,
+                "y": 394.52357482910156,
+                "width": 141.92633056640625,
+                "height": 484.6996307373047
+              },
+              "mask": {
+                "width": 113,
+                "height": 384,
+                "box": {
+                  "x": 667.9479446411133,
+                  "y": 394.52357482910156,
+                  "width": 141.92633056640625,
+                  "height": 484.6996307373047
+                },
+                "nonZero": 13335,
+                "sha256": "f909dc07ec7db3fa4d94fa3962bf781425e8683e58f65514bd23925132d4a9ae"
+              }
+            },
+            {
+              "label": "person",
+              "classId": 0,
+              "score": 0.886,
+              "box": {
+                "x": 50.7366828918457,
+                "y": 397.356502532959,
+                "width": 195.8865737915039,
+                "height": 505.98694610595703
+              },
+              "mask": {
+                "width": 149,
+                "height": 384,
+                "box": {
+                  "x": 50.7366828918457,
+                  "y": 397.356502532959,
+                  "width": 195.8865737915039,
+                  "height": 505.98694610595703
+                },
+                "nonZero": 29173,
+                "sha256": "83e1503c3cbeb8803d223247bfac9e59f0092be835b0bbfa5e90937cbc24ea54"
+              }
+            }
+          ],
+          "outputTensorStats": [
+            {
+              "name": "output0",
+              "dims": [
+                1,
+                116,
+                6300
+              ],
+              "type": "float32",
+              "count": 730800,
+              "nonFinite": 0,
+              "min": -6.036147594451904,
+              "max": 638.4390869140625,
+              "sum": 4164714.5530022406,
+              "sha256": "b0b5b53d14fc4d903a7864a7a486e2fead1677b80835b7d4a00511cabacef7c5"
+            },
+            {
+              "name": "output1",
+              "dims": [
+                1,
+                32,
+                120,
+                160
+              ],
+              "type": "float32",
+              "count": 614400,
+              "nonFinite": 0,
+              "min": -0.27846458554267883,
+              "max": 4.273323059082031,
+              "sum": 161374.24430635507,
+              "sha256": "372e662e619c8decc89a3c36889f0204a6fbb32b6379b95a9a7362b0f30bddd9"
+            }
+          ]
+        },
+        "video": {
+          "fixture": {
+            "file": "tests/fixtures/yolo26/real-video.mp4",
+            "url": "https://github.com/ultralytics/assets/releases/download/v0.0.0/solutions_ci_demo.mp4",
+            "sha256": "a8b0df3073740f808aa0aca3cff7787140837bfa24e01c934ba2cca474fd03cc",
+            "bytes": 270967
+          },
+          "decodedBy": "ffmpeg (real H.264 MP4 frames; browser playback is separate)",
+          "frames": [
+            {
+              "timeSeconds": 0,
+              "fixture": {
+                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "width": 640,
+                "height": 360
+              },
+              "latencyMs": 1205.864,
+              "resultCount": 26,
+              "samples": [
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.843,
+                  "box": {
+                    "x": 221.75989532470703,
+                    "y": 216.58335876464844,
+                    "width": 26.395187377929688,
+                    "height": 68.07083129882812
+                  },
+                  "mask": {
+                    "width": 27,
+                    "height": 69,
+                    "box": {
+                      "x": 221.75989532470703,
+                      "y": 216.58335876464844,
+                      "width": 26.395187377929688,
+                      "height": 68.07083129882812
+                    },
+                    "nonZero": 1125,
+                    "sha256": "37384b5d05c5101de7044ead35991e566f0016ca1363467fcd2f1ffb868b413b"
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.814,
+                  "box": {
+                    "x": 469.75640869140625,
+                    "y": 234.09442138671875,
+                    "width": 38.3477783203125,
+                    "height": 61.8968505859375
+                  },
+                  "mask": {
+                    "width": 39,
+                    "height": 62,
+                    "box": {
+                      "x": 469.75640869140625,
+                      "y": 234.09442138671875,
+                      "width": 38.3477783203125,
+                      "height": 61.8968505859375
+                    },
+                    "nonZero": 1220,
+                    "sha256": "625ed64efb18c8914931d0597dc7b3fe0774c065232f394a1fdb85afe3033e92"
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.806,
+                  "box": {
+                    "x": 11.215160369873047,
+                    "y": 264.7712097167969,
+                    "width": 35.760189056396484,
+                    "height": 64.75225830078125
+                  },
+                  "mask": {
+                    "width": 36,
+                    "height": 65,
+                    "box": {
+                      "x": 11.215160369873047,
+                      "y": 264.7712097167969,
+                      "width": 35.760189056396484,
+                      "height": 64.75225830078125
+                    },
+                    "nonZero": 1031,
+                    "sha256": "b72447ca6a08c0eaf788c5573cf2ee47b1f5b58f656af831d9e2806740656b94"
+                  }
+                }
+              ],
+              "outputTensorStats": [
+                {
+                  "name": "output0",
+                  "dims": [
+                    1,
+                    116,
+                    6300
+                  ],
+                  "type": "float32",
+                  "count": 730800,
+                  "nonFinite": 0,
+                  "min": -5.07226037979126,
+                  "max": 690.7633056640625,
+                  "sum": 3878992.4301320044,
+                  "sha256": "362134f130110028b0aae0c4278983ea9e488d1475f8fa06d740446cc30b3e23"
+                },
+                {
+                  "name": "output1",
+                  "dims": [
+                    1,
+                    32,
+                    120,
+                    160
+                  ],
+                  "type": "float32",
+                  "count": 614400,
+                  "nonFinite": 0,
+                  "min": -0.27846458554267883,
+                  "max": 5.011404514312744,
+                  "sum": 148530.3604555995,
+                  "sha256": "b577c84613e1c3fcdf1c55d35a0a99a304256d224578a32b230f23098bd2cee3"
+                }
+              ]
+            },
+            {
+              "timeSeconds": 1,
+              "fixture": {
+                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "width": 640,
+                "height": 360
+              },
+              "latencyMs": 1146.079,
+              "resultCount": 19,
+              "samples": [
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.823,
+                  "box": {
+                    "x": 369.302001953125,
+                    "y": 265.77650451660156,
+                    "width": 31.77349853515625,
+                    "height": 65.32077026367188
+                  },
+                  "mask": {
+                    "width": 32,
+                    "height": 66,
+                    "box": {
+                      "x": 369.302001953125,
+                      "y": 265.77650451660156,
+                      "width": 31.77349853515625,
+                      "height": 65.32077026367188
+                    },
+                    "nonZero": 1168,
+                    "sha256": "2b57fcfc3239fcfd51d38dd15cd95fa2fdfcade960b7dbd4d98859dbfe354943"
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.803,
+                  "box": {
+                    "x": 224.07046508789062,
+                    "y": 176.5603790283203,
+                    "width": 24.508544921875,
+                    "height": 64.45687866210938
+                  },
+                  "mask": {
+                    "width": 25,
+                    "height": 65,
+                    "box": {
+                      "x": 224.07046508789062,
+                      "y": 176.5603790283203,
+                      "width": 24.508544921875,
+                      "height": 64.45687866210938
+                    },
+                    "nonZero": 1008,
+                    "sha256": "5e090ac714381a0ec6b8d8953ad4c1b155c7cb696bddb18ccaa1400eddf5df64"
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.757,
+                  "box": {
+                    "x": 77.29951095581055,
+                    "y": 172.2958221435547,
+                    "width": 24.450965881347656,
+                    "height": 61.827301025390625
+                  },
+                  "mask": {
+                    "width": 25,
+                    "height": 62,
+                    "box": {
+                      "x": 77.29951095581055,
+                      "y": 172.2958221435547,
+                      "width": 24.450965881347656,
+                      "height": 61.827301025390625
+                    },
+                    "nonZero": 957,
+                    "sha256": "47fc0e29456f9f3eceb3d7e5f906e9eb271a4b21a32e5737433fffd8b385c95b"
+                  }
+                }
+              ],
+              "outputTensorStats": [
+                {
+                  "name": "output0",
+                  "dims": [
+                    1,
+                    116,
+                    6300
+                  ],
+                  "type": "float32",
+                  "count": 730800,
+                  "nonFinite": 0,
+                  "min": -4.953337669372559,
+                  "max": 720.6220703125,
+                  "sum": 3908168.611706535,
+                  "sha256": "b75a2c5b9650958e5cdf0bbeec464d01445239b3c24ec3f8bf7e05ed1aadcb42"
+                },
+                {
+                  "name": "output1",
+                  "dims": [
+                    1,
+                    32,
+                    120,
+                    160
+                  ],
+                  "type": "float32",
+                  "count": 614400,
+                  "nonFinite": 0,
+                  "min": -0.27846458554267883,
+                  "max": 4.397164344787598,
+                  "sum": 142741.2195616382,
+                  "sha256": "579cb54f9d8ad222ec8e217a2a9f80c940124240d99471d99ac97209ea10f0fa"
+                }
+              ]
+            }
+          ]
+        },
+        "render": {
+          "path": "docs/evidence/yolo26/yolo26-segment-s.png",
+          "sha256": "f63b305ec1428ba0b80b2acc52be141fb63f87f532c5170c7d7f5329b90ff174",
+          "width": 480,
+          "height": 640,
+          "changedPixels": 148589,
+          "visualReview": "pending"
+        },
+        "lifecycle": {
+          "releaseResolved": true,
+          "releaseCallCount": 1,
+          "sessionCleared": true,
+          "canvasCleared": true,
+          "reloadRounds": [],
+          "initBefore": {
+            "rssBytes": 103792640,
+            "heapUsedBytes": 8295864,
+            "externalBytes": 46025247,
+            "arrayBuffersBytes": 42205594
+          },
+          "beforeRelease": {
+            "rssBytes": 520245248,
+            "heapUsedBytes": 13272216,
+            "externalBytes": 57862463,
+            "arrayBuffersBytes": 53442175
+          },
+          "afterRelease": {
+            "rssBytes": 520376320,
+            "heapUsedBytes": 11914536,
+            "externalBytes": 57862463,
+            "arrayBuffersBytes": 42887000
+          },
+          "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
+        }
+      },
+      "browserWasm": {
+        "status": "pending"
+      },
+      "webgpu": {
+        "status": "pending"
+      }
+    },
+    {
+      "id": "yolo26-segment-m",
+      "name": "YOLO26m-seg",
+      "task": "segment",
+      "size": "M",
+      "sha256": "8e8235dde37895c45c2fa7248e9fd2a5df1d9e6e32f9591e66e93533fce1057c",
+      "bytes": 94558924,
+      "status": "pass",
+      "sourceFingerprint": "5b7fe7d60660dc1639a580892b3c7e52f6ef8559cab4b6e42c06367194d88696",
+      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
+      "startedAt": "2026-10-21T00:54:39.583Z",
+      "completedAt": "2026-10-21T00:54:55.021Z",
+      "source": {
+        "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26m-seg.onnx",
+        "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
+        "license": "AGPL-3.0",
+        "metadata": {
+          "description": "Ultralytics YOLO26m-seg model trained on /home/lq/codes/ultralytics/ultralytics/cfg/datasets/coco.yaml",
+          "author": "Ultralytics",
+          "date": "2026-10-09T12:09:15.522370+02:00",
+          "version": "8.4.174",
+          "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+          "docs": "https://docs.ultralytics.com",
+          "stride": "32",
+          "task": "segment",
+          "head": "Segment26",
+          "batch": "1",
+          "imgsz": "[480, 640]",
+          "names": "{0: 'person', 1: 'bicycle', 2: 'car', 3: 'motorcycle', 4: 'airplane', 5: 'bus', 6: 'train', 7: 'truck', 8: 'boat', 9: 'traffic light', 10: 'fire hydrant', 11: 'stop sign', 12: 'parking meter', 13: 'bench', 14: 'bird', 15: 'cat', 16: 'dog', 17: 'horse', 18: 'sheep', 19: 'cow', 20: 'elephant', 21: 'bear', 22: 'zebra', 23: 'giraffe', 24: 'backpack', 25: 'umbrella', 26: 'handbag', 27: 'tie', 28: 'suitcase', 29: 'frisbee', 30: 'skis', 31: 'snowboard', 32: 'sports ball', 33: 'kite', 34: 'baseball bat', 35: 'baseball glove', 36: 'skateboard', 37: 'surfboard', 38: 'tennis racket', 39: 'bottle', 40: 'wine glass', 41: 'cup', 42: 'fork', 43: 'knife', 44: 'spoon', 45: 'bowl', 46: 'banana', 47: 'apple', 48: 'sandwich', 49: 'orange', 50: 'broccoli', 51: 'carrot', 52: 'hot dog', 53: 'pizza', 54: 'donut', 55: 'cake', 56: 'chair', 57: 'couch', 58: 'potted plant', 59: 'bed', 60: 'dining table', 61: 'toilet', 62: 'tv', 63: 'laptop', 64: 'mouse', 65: 'remote', 66: 'keyboard', 67: 'cell phone', 68: 'microwave', 69: 'oven', 70: 'toaster', 71: 'sink', 72: 'refrigerator', 73: 'book', 74: 'clock', 75: 'vase', 76: 'scissors', 77: 'teddy bear', 78: 'hair drier', 79: 'toothbrush'}",
+          "args": "{'data': None, 'batch': 1, 'fraction': 1.0, 'quantize': None, 'nms': None, 'dynamic': False, 'simplify': True, 'opset': 12}",
+          "channels": "3",
+          "end2end": "False"
+        },
+        "producer": "pytorch"
+      },
+      "wasmNode": {
+        "status": "pass",
+        "backend": "WASM",
+        "initializeMs": 4132.903,
+        "input": [
+          {
+            "name": "images",
+            "dims": [
+              1,
+              3,
+              480,
+              640
+            ],
+            "elemType": 1
+          }
+        ],
+        "outputs": [
+          {
+            "name": "output0",
+            "dims": [
+              1,
+              116,
+              6300
+            ],
+            "elemType": 1
+          },
+          {
+            "name": "output1",
+            "dims": [
+              1,
+              32,
+              120,
+              160
+            ],
+            "elemType": 1
+          }
+        ],
+        "image": {
+          "fixture": {
+            "file": "tests/fixtures/bus.jpg",
+            "url": "https://raw.githubusercontent.com/ultralytics/ultralytics/main/ultralytics/assets/bus.jpg",
+            "sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
+            "width": 810,
+            "height": 1080
+          },
+          "latencyMs": 3548.011,
+          "resultCount": 5,
+          "samples": [
+            {
+              "label": "person",
+              "classId": 0,
+              "score": 0.918,
+              "box": {
+                "x": 48.35232353210449,
+                "y": 400.28336334228516,
+                "width": 196.04639053344727,
+                "height": 502.2539978027344
+              },
+              "mask": {
+                "width": 150,
+                "height": 384,
+                "box": {
+                  "x": 48.35232353210449,
+                  "y": 400.28336334228516,
+                  "width": 196.04639053344727,
+                  "height": 502.2539978027344
+                },
+                "nonZero": 29417,
+                "sha256": "d6ee2b78fb194504e10168fb0936d378fe5eb1db8536ac97e8c807b89f8a3451"
+              }
+            },
+            {
+              "label": "bus",
+              "classId": 5,
+              "score": 0.909,
+              "box": {
+                "x": 27.913650512695312,
+                "y": 229.3052158355713,
+                "width": 773.9577026367188,
+                "height": 506.88593673706055
+              },
+              "mask": {
+                "width": 384,
+                "height": 252,
+                "box": {
+                  "x": 27.913650512695312,
+                  "y": 229.3052158355713,
+                  "width": 773.9577026367188,
+                  "height": 506.88593673706055
+                },
+                "nonZero": 63679,
+                "sha256": "11596a198fac0b6ab011fff8f735b6c5ca8473e51b88d7440f7df3d2f3088b32"
+              }
+            },
+            {
+              "label": "person",
+              "classId": 0,
+              "score": 0.877,
+              "box": {
+                "x": 668.3290672302246,
+                "y": 389.5728950500488,
+                "width": 141.6709327697754,
+                "height": 489.20848846435547
+              },
+              "mask": {
+                "width": 112,
+                "height": 384,
+                "box": {
+                  "x": 668.3290672302246,
+                  "y": 389.5728950500488,
+                  "width": 141.6709327697754,
+                  "height": 489.20848846435547
+                },
+                "nonZero": 14158,
+                "sha256": "696f6064a51c734a4f9228f61c39b0d7ba6c93ff9eda50bc8041410b9c52cca4"
+              }
+            }
+          ],
+          "outputTensorStats": [
+            {
+              "name": "output0",
+              "dims": [
+                1,
+                116,
+                6300
+              ],
+              "type": "float32",
+              "count": 730800,
+              "nonFinite": 0,
+              "min": -7.388606548309326,
+              "max": 638.4525756835938,
+              "sum": 4164382.3501015063,
+              "sha256": "14b4ab11c7c323b7a49be9754855565802a366d7c86301b06ac4d6f13dcd400d"
+            },
+            {
+              "name": "output1",
+              "dims": [
+                1,
+                32,
+                120,
+                160
+              ],
+              "type": "float32",
+              "count": 614400,
+              "nonFinite": 0,
+              "min": -0.27846458554267883,
+              "max": 5.915131568908691,
+              "sum": 91581.80285797299,
+              "sha256": "faa34e5994975e499a4cafd4e73c384f3c3609f29b2923bfcb85951cc0b9ac51"
+            }
+          ]
+        },
+        "video": {
+          "fixture": {
+            "file": "tests/fixtures/yolo26/real-video.mp4",
+            "url": "https://github.com/ultralytics/assets/releases/download/v0.0.0/solutions_ci_demo.mp4",
+            "sha256": "a8b0df3073740f808aa0aca3cff7787140837bfa24e01c934ba2cca474fd03cc",
+            "bytes": 270967
+          },
+          "decodedBy": "ffmpeg (real H.264 MP4 frames; browser playback is separate)",
+          "frames": [
+            {
+              "timeSeconds": 0,
+              "fixture": {
+                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "width": 640,
+                "height": 360
+              },
+              "latencyMs": 3645.626,
+              "resultCount": 17,
+              "samples": [
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.802,
+                  "box": {
+                    "x": 221.60584259033203,
+                    "y": 216.498291015625,
+                    "width": 26.555282592773438,
+                    "height": 68.29681396484375
+                  },
+                  "mask": {
+                    "width": 27,
+                    "height": 69,
+                    "box": {
+                      "x": 221.60584259033203,
+                      "y": 216.498291015625,
+                      "width": 26.555282592773438,
+                      "height": 68.29681396484375
+                    },
+                    "nonZero": 1074,
+                    "sha256": "001ce6ebd67a078314b02518e1eb975efcecae28168b8019c7e5a6e35717e2cc"
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.782,
+                  "box": {
+                    "x": 250.11546325683594,
+                    "y": 151.00272369384766,
+                    "width": 24.438995361328125,
+                    "height": 57.49211120605469
+                  },
+                  "mask": {
+                    "width": 25,
+                    "height": 58,
+                    "box": {
+                      "x": 250.11546325683594,
+                      "y": 151.00272369384766,
+                      "width": 24.438995361328125,
+                      "height": 57.49211120605469
+                    },
+                    "nonZero": 809,
+                    "sha256": "837b3182af8e71a2382f5560a8e255c96940f73be461ca929a9b7fc8d9de2e2c"
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.725,
+                  "box": {
+                    "x": 470.6204528808594,
+                    "y": 234.89297485351562,
+                    "width": 37.24359130859375,
+                    "height": 61.41473388671875
+                  },
+                  "mask": {
+                    "width": 38,
+                    "height": 62,
+                    "box": {
+                      "x": 470.6204528808594,
+                      "y": 234.89297485351562,
+                      "width": 37.24359130859375,
+                      "height": 61.41473388671875
+                    },
+                    "nonZero": 1211,
+                    "sha256": "9e50444e1f242cd9854b385f3acd62cf055b9e373cb599576685579f84705639"
+                  }
+                }
+              ],
+              "outputTensorStats": [
+                {
+                  "name": "output0",
+                  "dims": [
+                    1,
+                    116,
+                    6300
+                  ],
+                  "type": "float32",
+                  "count": 730800,
+                  "nonFinite": 0,
+                  "min": -8.133692741394043,
+                  "max": 646.7039794921875,
+                  "sum": 3907338.666072663,
+                  "sha256": "0b75009b3d6aedca684a7feb7da285e9a1c3e906461594294523ea0e6bddb692"
+                },
+                {
+                  "name": "output1",
+                  "dims": [
+                    1,
+                    32,
+                    120,
+                    160
+                  ],
+                  "type": "float32",
+                  "count": 614400,
+                  "nonFinite": 0,
+                  "min": -0.27846458554267883,
+                  "max": 3.937422752380371,
+                  "sum": 78780.58206064654,
+                  "sha256": "8ce68d69f19bc25a03fa9ad6ad442a753f9c95509b1faaf533b14ce963860978"
+                }
+              ]
+            },
+            {
+              "timeSeconds": 1,
+              "fixture": {
+                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "width": 640,
+                "height": 360
+              },
+              "latencyMs": 3694.027,
+              "resultCount": 16,
+              "samples": [
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.795,
+                  "box": {
+                    "x": 223.97354125976562,
+                    "y": 176.28875732421875,
+                    "width": 24.715118408203125,
+                    "height": 64.59539794921875
+                  },
+                  "mask": {
+                    "width": 25,
+                    "height": 65,
+                    "box": {
+                      "x": 223.97354125976562,
+                      "y": 176.28875732421875,
+                      "width": 24.715118408203125,
+                      "height": 64.59539794921875
+                    },
+                    "nonZero": 964,
+                    "sha256": "2fb98e3bc3b170b6b178e68e0587fe8fa026c18d1fb3bf4d27d7210c76e4561d"
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.71,
+                  "box": {
+                    "x": 436.3750305175781,
+                    "y": 235.73446655273438,
+                    "width": 35.819091796875,
+                    "height": 57.94354248046875
+                  },
+                  "mask": {
+                    "width": 36,
+                    "height": 58,
+                    "box": {
+                      "x": 436.3750305175781,
+                      "y": 235.73446655273438,
+                      "width": 35.819091796875,
+                      "height": 57.94354248046875
+                    },
+                    "nonZero": 919,
+                    "sha256": "86861d92ad854b836e90f8990b400d3b689abd9a2a8c9f7f1750057b57b3e5b8"
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.708,
+                  "box": {
+                    "x": 77.37178421020508,
+                    "y": 172.65872192382812,
+                    "width": 24.78282928466797,
+                    "height": 61.1943359375
+                  },
+                  "mask": {
+                    "width": 25,
+                    "height": 62,
+                    "box": {
+                      "x": 77.37178421020508,
+                      "y": 172.65872192382812,
+                      "width": 24.78282928466797,
+                      "height": 61.1943359375
+                    },
+                    "nonZero": 956,
+                    "sha256": "462afc4dca95972a6bdea7c3a281280e5b30db174603ab5effa78adb2a6cc406"
+                  }
+                }
+              ],
+              "outputTensorStats": [
+                {
+                  "name": "output0",
+                  "dims": [
+                    1,
+                    116,
+                    6300
+                  ],
+                  "type": "float32",
+                  "count": 730800,
+                  "nonFinite": 0,
+                  "min": -8.533493041992188,
+                  "max": 646.0066528320312,
+                  "sum": 3925496.247831461,
+                  "sha256": "f036749c9347bb43d080ab607b5b99edf1c3c42d21c6603654ff4a3de56cb838"
+                },
+                {
+                  "name": "output1",
+                  "dims": [
+                    1,
+                    32,
+                    120,
+                    160
+                  ],
+                  "type": "float32",
+                  "count": 614400,
+                  "nonFinite": 0,
+                  "min": -0.27846458554267883,
+                  "max": 3.217529296875,
+                  "sum": 78793.91595949547,
+                  "sha256": "0609f74bc357862140c69c3fd09ab5bd82e7a79cdf7239bdfb7f5af7e25ddc0c"
+                }
+              ]
+            }
+          ]
+        },
+        "render": {
+          "path": "docs/evidence/yolo26/yolo26-segment-m.png",
+          "sha256": "00fe84a1242c2bbbe0241a146ad0b6c4cf4239101c51edbbfb27de573d144074",
+          "width": 480,
+          "height": 640,
+          "changedPixels": 148419,
+          "visualReview": "pending"
+        },
+        "lifecycle": {
+          "releaseResolved": true,
+          "releaseCallCount": 1,
+          "sessionCleared": true,
+          "canvasCleared": true,
+          "reloadRounds": [],
+          "initBefore": {
+            "rssBytes": 156057600,
+            "heapUsedBytes": 9294320,
+            "externalBytes": 98751207,
+            "arrayBuffersBytes": 94946918
+          },
+          "beforeRelease": {
+            "rssBytes": 780582912,
+            "heapUsedBytes": 11317432,
+            "externalBytes": 110327251,
+            "arrayBuffersBytes": 105906842
+          },
+          "afterRelease": {
+            "rssBytes": 780627968,
+            "heapUsedBytes": 10492448,
+            "externalBytes": 110323128,
+            "arrayBuffersBytes": 95588434
+          },
+          "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
+        }
+      },
+      "browserWasm": {
+        "status": "pending"
+      },
+      "webgpu": {
+        "status": "pending"
+      }
+    },
+    {
+      "id": "yolo26-segment-l",
+      "name": "YOLO26l-seg",
+      "task": "segment",
+      "size": "L",
+      "sha256": "9c06456a2b4cce5bcf1bd73b12b3146938408cc62e56251133e36dce71c8f417",
+      "bytes": 112208986,
+      "status": "pass",
+      "sourceFingerprint": "5b7fe7d60660dc1639a580892b3c7e52f6ef8559cab4b6e42c06367194d88696",
+      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
+      "startedAt": "2026-10-21T00:54:55.153Z",
+      "completedAt": "2026-10-21T00:55:13.985Z",
+      "source": {
+        "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26l-seg.onnx",
+        "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
+        "license": "AGPL-3.0",
+        "metadata": {
+          "description": "Ultralytics YOLO26l-seg model trained on /home/lq/codes/ultralytics/ultralytics/cfg/datasets/coco.yaml",
+          "author": "Ultralytics",
+          "date": "2026-10-09T12:09:58.058547+02:00",
+          "version": "8.4.174",
+          "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+          "docs": "https://docs.ultralytics.com",
+          "stride": "32",
+          "task": "segment",
+          "head": "Segment26",
+          "batch": "1",
+          "imgsz": "[480, 640]",
+          "names": "{0: 'person', 1: 'bicycle', 2: 'car', 3: 'motorcycle', 4: 'airplane', 5: 'bus', 6: 'train', 7: 'truck', 8: 'boat', 9: 'traffic light', 10: 'fire hydrant', 11: 'stop sign', 12: 'parking meter', 13: 'bench', 14: 'bird', 15: 'cat', 16: 'dog', 17: 'horse', 18: 'sheep', 19: 'cow', 20: 'elephant', 21: 'bear', 22: 'zebra', 23: 'giraffe', 24: 'backpack', 25: 'umbrella', 26: 'handbag', 27: 'tie', 28: 'suitcase', 29: 'frisbee', 30: 'skis', 31: 'snowboard', 32: 'sports ball', 33: 'kite', 34: 'baseball bat', 35: 'baseball glove', 36: 'skateboard', 37: 'surfboard', 38: 'tennis racket', 39: 'bottle', 40: 'wine glass', 41: 'cup', 42: 'fork', 43: 'knife', 44: 'spoon', 45: 'bowl', 46: 'banana', 47: 'apple', 48: 'sandwich', 49: 'orange', 50: 'broccoli', 51: 'carrot', 52: 'hot dog', 53: 'pizza', 54: 'donut', 55: 'cake', 56: 'chair', 57: 'couch', 58: 'potted plant', 59: 'bed', 60: 'dining table', 61: 'toilet', 62: 'tv', 63: 'laptop', 64: 'mouse', 65: 'remote', 66: 'keyboard', 67: 'cell phone', 68: 'microwave', 69: 'oven', 70: 'toaster', 71: 'sink', 72: 'refrigerator', 73: 'book', 74: 'clock', 75: 'vase', 76: 'scissors', 77: 'teddy bear', 78: 'hair drier', 79: 'toothbrush'}",
+          "args": "{'data': None, 'batch': 1, 'fraction': 1.0, 'quantize': None, 'nms': None, 'dynamic': False, 'simplify': True, 'opset': 12}",
+          "channels": "3",
+          "end2end": "False"
+        },
+        "producer": "pytorch"
+      },
+      "wasmNode": {
+        "status": "pass",
+        "backend": "WASM",
+        "initializeMs": 4890.037,
+        "input": [
+          {
+            "name": "images",
+            "dims": [
+              1,
+              3,
+              480,
+              640
+            ],
+            "elemType": 1
+          }
+        ],
+        "outputs": [
+          {
+            "name": "output0",
+            "dims": [
+              1,
+              116,
+              6300
+            ],
+            "elemType": 1
+          },
+          {
+            "name": "output1",
+            "dims": [
+              1,
+              32,
+              120,
+              160
+            ],
+            "elemType": 1
+          }
+        ],
+        "image": {
+          "fixture": {
+            "file": "tests/fixtures/bus.jpg",
+            "url": "https://raw.githubusercontent.com/ultralytics/ultralytics/main/ultralytics/assets/bus.jpg",
+            "sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
+            "width": 810,
+            "height": 1080
+          },
+          "latencyMs": 4328.94,
+          "resultCount": 5,
+          "samples": [
+            {
+              "label": "bus",
+              "classId": 5,
+              "score": 0.911,
+              "box": {
+                "x": 27.728530883789062,
+                "y": 229.9380111694336,
+                "width": 775.9223327636719,
+                "height": 509.6253433227539
+              },
+              "mask": {
+                "width": 384,
+                "height": 253,
+                "box": {
+                  "x": 27.728530883789062,
+                  "y": 229.9380111694336,
+                  "width": 775.9223327636719,
+                  "height": 509.6253433227539
+                },
+                "nonZero": 62809,
+                "sha256": "7b3ce1314b65ade5066e5b3a595639114ad339033102063b7cfe638351d95915"
+              }
+            },
+            {
+              "label": "person",
+              "classId": 0,
+              "score": 0.91,
+              "box": {
+                "x": 49.356319427490234,
+                "y": 397.38441467285156,
+                "width": 196.5736312866211,
+                "height": 505.88072204589844
+              },
+              "mask": {
+                "width": 150,
+                "height": 384,
+                "box": {
+                  "x": 49.356319427490234,
+                  "y": 397.38441467285156,
+                  "width": 196.5736312866211,
+                  "height": 505.88072204589844
+                },
+                "nonZero": 29532,
+                "sha256": "154755be35ac7734c30175b663586662673a5f1cf7115b91de465718b073c380"
+              }
+            },
+            {
+              "label": "person",
+              "classId": 0,
+              "score": 0.905,
+              "box": {
+                "x": 222.9565944671631,
+                "y": 406.79236793518066,
+                "width": 121.64052200317383,
+                "height": 451.06042098999023
+              },
+              "mask": {
+                "width": 104,
+                "height": 384,
+                "box": {
+                  "x": 222.9565944671631,
+                  "y": 406.79236793518066,
+                  "width": 121.64052200317383,
+                  "height": 451.06042098999023
+                },
+                "nonZero": 25693,
+                "sha256": "e716cbd4c9c7519cd0f97efab1393adf902c5140c37b7fd5c6969b4459f13460"
+              }
+            }
+          ],
+          "outputTensorStats": [
+            {
+              "name": "output0",
+              "dims": [
+                1,
+                116,
+                6300
+              ],
+              "type": "float32",
+              "count": 730800,
+              "nonFinite": 0,
+              "min": -9.309346199035645,
+              "max": 635.08056640625,
+              "sum": 4187762.391550325,
+              "sha256": "ae5234b57139b72074d762f8cc828278bcf61aebb309827a43b520c2d8850c1a"
+            },
+            {
+              "name": "output1",
+              "dims": [
+                1,
+                32,
+                120,
+                160
+              ],
+              "type": "float32",
+              "count": 614400,
+              "nonFinite": 0,
+              "min": -0.27846458554267883,
+              "max": 3.6469123363494873,
+              "sum": 96657.73197090591,
+              "sha256": "9ab577b9307d9ed84f1481397d005fbd47b0294d6907399bc6aa3f82f41eaae0"
+            }
+          ]
+        },
+        "video": {
+          "fixture": {
+            "file": "tests/fixtures/yolo26/real-video.mp4",
+            "url": "https://github.com/ultralytics/assets/releases/download/v0.0.0/solutions_ci_demo.mp4",
+            "sha256": "a8b0df3073740f808aa0aca3cff7787140837bfa24e01c934ba2cca474fd03cc",
+            "bytes": 270967
+          },
+          "decodedBy": "ffmpeg (real H.264 MP4 frames; browser playback is separate)",
+          "frames": [
+            {
+              "timeSeconds": 0,
+              "fixture": {
+                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "width": 640,
+                "height": 360
+              },
+              "latencyMs": 4440.159,
+              "resultCount": 20,
+              "samples": [
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.874,
+                  "box": {
+                    "x": 221.65345001220703,
+                    "y": 216.35438537597656,
+                    "width": 26.862289428710938,
+                    "height": 68.10739135742188
+                  },
+                  "mask": {
+                    "width": 27,
+                    "height": 69,
+                    "box": {
+                      "x": 221.65345001220703,
+                      "y": 216.35438537597656,
+                      "width": 26.862289428710938,
+                      "height": 68.10739135742188
+                    },
+                    "nonZero": 1068,
+                    "sha256": "13fbcaa3a97ca79df48368d643965b88378cc82a56e10beceaa93f6592247df7"
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.834,
+                  "box": {
+                    "x": 469.6330108642578,
+                    "y": 234.40750122070312,
+                    "width": 37.936981201171875,
+                    "height": 62.138916015625
+                  },
+                  "mask": {
+                    "width": 38,
+                    "height": 63,
+                    "box": {
+                      "x": 469.6330108642578,
+                      "y": 234.40750122070312,
+                      "width": 37.936981201171875,
+                      "height": 62.138916015625
+                    },
+                    "nonZero": 1207,
+                    "sha256": "2a963645e0ab2ddd4785181f198a0045d998c1bc8d838bf6092b8aa37392403c"
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.81,
+                  "box": {
+                    "x": 10.799053192138672,
+                    "y": 265.22544860839844,
+                    "width": 36.49706268310547,
+                    "height": 64.26089477539062
+                  },
+                  "mask": {
+                    "width": 37,
+                    "height": 65,
+                    "box": {
+                      "x": 10.799053192138672,
+                      "y": 265.22544860839844,
+                      "width": 36.49706268310547,
+                      "height": 64.26089477539062
+                    },
+                    "nonZero": 1087,
+                    "sha256": "f4fbd9d8aa5f75fcd6a6c082d6c7d931dc8804f75f14f77784dbc2ae99d35920"
+                  }
+                }
+              ],
+              "outputTensorStats": [
+                {
+                  "name": "output0",
+                  "dims": [
+                    1,
+                    116,
+                    6300
+                  ],
+                  "type": "float32",
+                  "count": 730800,
+                  "nonFinite": 0,
+                  "min": -20.248687744140625,
+                  "max": 638.8170776367188,
+                  "sum": 3937664.8193549947,
+                  "sha256": "a6e3f7d11746bd5422e4cb427f3862541da5a76c1604f9afcfaa918d605c18c1"
+                },
+                {
+                  "name": "output1",
+                  "dims": [
+                    1,
+                    32,
+                    120,
+                    160
+                  ],
+                  "type": "float32",
+                  "count": 614400,
+                  "nonFinite": 0,
+                  "min": -0.27846455574035645,
+                  "max": 3.6637191772460938,
+                  "sum": 98575.43045030348,
+                  "sha256": "83059f55626ffd8fc67d32818f9fea1b397983b966bdfea4dd80fc76f9ba6907"
+                }
+              ]
+            },
+            {
+              "timeSeconds": 1,
+              "fixture": {
+                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "width": 640,
+                "height": 360
+              },
+              "latencyMs": 4732.596,
+              "resultCount": 22,
+              "samples": [
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.861,
+                  "box": {
+                    "x": 369.5823974609375,
+                    "y": 266.10435485839844,
+                    "width": 31.74139404296875,
+                    "height": 64.57498168945312
+                  },
+                  "mask": {
+                    "width": 32,
+                    "height": 65,
+                    "box": {
+                      "x": 369.5823974609375,
+                      "y": 266.10435485839844,
+                      "width": 31.74139404296875,
+                      "height": 64.57498168945312
+                    },
+                    "nonZero": 1062,
+                    "sha256": "21d5322e5fa4f111f502db52d7e9e85f0af736e9e148bb16ab01b84f250a69a9"
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.86,
+                  "box": {
+                    "x": 224.0693359375,
+                    "y": 176.3980941772461,
+                    "width": 24.8853759765625,
+                    "height": 64.44758605957031
+                  },
+                  "mask": {
+                    "width": 25,
+                    "height": 65,
+                    "box": {
+                      "x": 224.0693359375,
+                      "y": 176.3980941772461,
+                      "width": 24.8853759765625,
+                      "height": 64.44758605957031
+                    },
+                    "nonZero": 953,
+                    "sha256": "1970ed48031136b0219c3a8e682be128cf66d18655e7e9f3d617b9671b1d26e4"
+                  }
+                },
+                {
+                  "label": "person",
+                  "classId": 0,
+                  "score": 0.852,
+                  "box": {
+                    "x": 436.0169677734375,
+                    "y": 235.69784545898438,
+                    "width": 36.3963623046875,
+                    "height": 58.02166748046875
+                  },
+                  "mask": {
+                    "width": 37,
+                    "height": 59,
+                    "box": {
+                      "x": 436.0169677734375,
+                      "y": 235.69784545898438,
+                      "width": 36.3963623046875,
+                      "height": 58.02166748046875
+                    },
+                    "nonZero": 936,
+                    "sha256": "49744fe076f4e16ad737fd5894ba18402c656839822fb20097b6f17ebfc50446"
+                  }
+                }
+              ],
+              "outputTensorStats": [
+                {
+                  "name": "output0",
+                  "dims": [
+                    1,
+                    116,
+                    6300
+                  ],
+                  "type": "float32",
+                  "count": 730800,
+                  "nonFinite": 0,
+                  "min": -7.199122905731201,
+                  "max": 638.552001953125,
+                  "sum": 3945795.4044025787,
+                  "sha256": "99ccb6e43e47a3b85fe865d9236e5cb55891750da61341db99885de171bc3c06"
+                },
+                {
+                  "name": "output1",
+                  "dims": [
+                    1,
+                    32,
+                    120,
+                    160
+                  ],
+                  "type": "float32",
+                  "count": 614400,
+                  "nonFinite": 0,
+                  "min": -0.27846458554267883,
+                  "max": 3.944646120071411,
+                  "sum": 93964.2909869448,
+                  "sha256": "cf481efaab885eed26d8a33465d1832e02fc30aa64aff3507f53e638d2d25f6e"
+                }
+              ]
+            }
+          ]
+        },
+        "render": {
+          "path": "docs/evidence/yolo26/yolo26-segment-l.png",
+          "sha256": "bf197dcc9e605ab817c4efc68a1749181f3e27f7010aa3d1175c7c31cdef37b8",
+          "width": 480,
+          "height": 640,
+          "changedPixels": 148220,
+          "visualReview": "pending"
+        },
+        "lifecycle": {
+          "releaseResolved": true,
+          "releaseCallCount": 1,
+          "sessionCleared": true,
+          "canvasCleared": true,
+          "reloadRounds": [],
+          "initBefore": {
+            "rssBytes": 173998080,
+            "heapUsedBytes": 9586704,
+            "externalBytes": 116408341,
+            "arrayBuffersBytes": 112604052
+          },
+          "beforeRelease": {
+            "rssBytes": 730955776,
+            "heapUsedBytes": 12777816,
+            "externalBytes": 128441856,
+            "arrayBuffersBytes": 124021861
+          },
+          "afterRelease": {
+            "rssBytes": 731086848,
+            "heapUsedBytes": 11920808,
+            "externalBytes": 128441856,
+            "arrayBuffersBytes": 113241337
+          },
+          "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
+        }
+      },
+      "browserWasm": {
+        "status": "pending"
+      },
+      "webgpu": {
+        "status": "pending"
+      }
+    },
+    {
+      "id": "yolo26-segment-x",
+      "status": "pending",
+      "browserWasm": {
+        "status": "pending"
+      },
+      "webgpu": {
+        "status": "pending"
+      }
+    },
+    {
+      "id": "yolo26-pose-n",
+      "status": "pending",
+      "browserWasm": {
+        "status": "pending"
+      },
+      "webgpu": {
+        "status": "pending"
+      }
+    },
+    {
+      "id": "yolo26-pose-s",
+      "status": "pending",
+      "browserWasm": {
+        "status": "pending"
+      },
+      "webgpu": {
+        "status": "pending"
+      }
+    },
+    {
+      "id": "yolo26-pose-m",
+      "status": "pending",
+      "browserWasm": {
+        "status": "pending"
+      },
+      "webgpu": {
+        "status": "pending"
+      }
+    },
+    {
+      "id": "yolo26-pose-l",
+      "status": "pending",
+      "browserWasm": {
+        "status": "pending"
+      },
+      "webgpu": {
+        "status": "pending"
+      }
+    },
+    {
+      "id": "yolo26-pose-x",
+      "status": "pending",
+      "browserWasm": {
+        "status": "pending"
+      },
+      "webgpu": {
+        "status": "pending"
+      }
+    },
+    {
+      "id": "yolo26-classify-n",
+      "status": "pending",
+      "browserWasm": {
+        "status": "pending"
+      },
+      "webgpu": {
+        "status": "pending"
+      }
+    },
+    {
+      "id": "yolo26-classify-s",
+      "status": "pending",
+      "browserWasm": {
+        "status": "pending"
+      },
+      "webgpu": {
+        "status": "pending"
+      }
+    },
+    {
+      "id": "yolo26-classify-m",
+      "status": "pending",
+      "browserWasm": {
+        "status": "pending"
+      },
+      "webgpu": {
+        "status": "pending"
+      }
+    },
+    {
+      "id": "yolo26-classify-l",
+      "status": "pending",
+      "browserWasm": {
+        "status": "pending"
+      },
+      "webgpu": {
+        "status": "pending"
+      }
+    },
+    {
+      "id": "yolo26-classify-x",
+      "status": "pending",
+      "browserWasm": {
+        "status": "pending"
+      },
+      "webgpu": {
+        "status": "pending"
+      }
+    },
+    {
+      "id": "yolo26-obb-n",
+      "status": "pending",
+      "browserWasm": {
+        "status": "pending"
+      },
+      "webgpu": {
+        "status": "pending"
+      }
+    },
+    {
+      "id": "yolo26-obb-s",
+      "status": "pending",
+      "browserWasm": {
+        "status": "pending"
+      },
+      "webgpu": {
+        "status": "pending"
+      }
+    },
+    {
+      "id": "yolo26-obb-m",
+      "status": "pending",
+      "browserWasm": {
+        "status": "pending"
+      },
+      "webgpu": {
+        "status": "pending"
+      }
+    },
+    {
+      "id": "yolo26-obb-l",
+      "status": "pending",
+      "browserWasm": {
+        "status": "pending"
+      },
+      "webgpu": {
+        "status": "pending"
+      }
+    },
+    {
+      "id": "yolo26-obb-x",
+      "status": "pending",
+      "browserWasm": {
+        "status": "pending"
+      },
+      "webgpu": {
+        "status": "pending"
+      }
+    }
+  ]
+}

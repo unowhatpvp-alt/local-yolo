@@ -1,0 +1,392 @@
+{
+  "resourceRequests": [
+    {
+      "name": "http://terminal.local:4173/local-yolo/@vite/client",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/main.js",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/node_modules/vite/dist/client/env.mjs",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/ui/styles.css?t=1792544116935",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/catalog.js?t=1792543708909",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/ui/i18n.js",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/engine-client.js?t=1792543785965",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/model-cache.js",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/media.js",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/render.js?t=1792543760872",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/model-manifest.json?import&t=1792543708888",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/@noble_hashes_sha2__js.js?v=3b87ae60",
+      "initiatorType": "script",
+      "transferSize": 0
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/chunk-DGUM43GV.js?v=bb3c34d7",
+      "initiatorType": "script",
+      "transferSize": 0
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/engine-worker.js?worker_file&type=module",
+      "initiatorType": "other",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/node_modules/vite/dist/client/env.mjs",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/engine.js",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/onnxruntime-web_webgpu.js?v=5cfe98f1",
+      "initiatorType": "script",
+      "transferSize": 0
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/onnx-info.js",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/adapters.js",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/@vite/client",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/chunk-DGUM43GV.js?v=bb3c34d7",
+      "initiatorType": "script",
+      "transferSize": 0
+    }
+  ],
+  "measuredAt": "2026-10-21T01:01:20.178Z",
+  "scope": "Chromium iframe viewport only",
+  "url": "http://terminal.local:4173/local-yolo/?viewport-test=1",
+  "viewport": {
+    "requested": {
+      "width": "375",
+      "height": "812"
+    },
+    "frame": {
+      "x": 20,
+      "y": 171,
+      "width": 375,
+      "height": 812,
+      "top": 171,
+      "right": 395,
+      "bottom": 983,
+      "left": 20
+    },
+    "innerWidth": 375,
+    "innerHeight": 812,
+    "devicePixelRatio": 1,
+    "visualWidth": 375,
+    "visualHeight": 812
+  },
+  "document": {
+    "clientWidth": 375,
+    "scrollWidth": 375,
+    "clientHeight": 812,
+    "scrollHeight": 812,
+    "bodyScrollWidth": 375,
+    "bodyScrollHeight": 812,
+    "horizontalOverflow": false,
+    "verticalOverflow": false
+  },
+  "state": {
+    "phase": "stopped",
+    "workbenchVisible": true,
+    "fullscreen": true
+  },
+  "stage": {
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "width": 375,
+    "height": 812,
+    "top": 0,
+    "right": 375,
+    "bottom": 812,
+    "left": 0,
+    "computedHeight": "812px"
+  },
+  "canvas": {
+    "visible": true,
+    "x": 0,
+    "y": 0,
+    "width": 810,
+    "height": 1080,
+    "top": 0,
+    "right": 375,
+    "bottom": 812,
+    "left": 0,
+    "objectFit": "contain",
+    "objectPosition": "50% 50%",
+    "cssWidth": "375px",
+    "cssHeight": "812px"
+  },
+  "source": {
+    "video": {
+      "videoWidth": 0,
+      "videoHeight": 0,
+      "readyState": 0
+    },
+    "image": {
+      "naturalWidth": 810,
+      "naturalHeight": 1080
+    }
+  },
+  "targets": {
+    "visibleCount": 13,
+    "below44Count": 0,
+    "items": [
+      {
+        "id": null,
+        "tag": "a",
+        "name": "Local YOLO",
+        "disabled": false,
+        "x": 17,
+        "y": 14,
+        "width": 109.58,
+        "height": 44,
+        "top": 14,
+        "right": 126.58,
+        "bottom": 58,
+        "left": 17,
+        "below44": false
+      },
+      {
+        "id": "switch-model",
+        "tag": "button",
+        "name": "Choose model",
+        "disabled": false,
+        "x": 154,
+        "y": 10,
+        "width": 77,
+        "height": 52,
+        "top": 10,
+        "right": 231,
+        "bottom": 62,
+        "left": 154,
+        "below44": false
+      },
+      {
+        "id": "language-toggle",
+        "tag": "button",
+        "name": "Switch to Chinese",
+        "disabled": false,
+        "x": 232,
+        "y": 14,
+        "width": 44,
+        "height": 44,
+        "top": 14,
+        "right": 276,
+        "bottom": 58,
+        "left": 232,
+        "below44": false
+      },
+      {
+        "id": "theme-toggle",
+        "tag": "button",
+        "name": "Change theme",
+        "disabled": false,
+        "x": 276,
+        "y": 14,
+        "width": 44,
+        "height": 44,
+        "top": 14,
+        "right": 320,
+        "bottom": 58,
+        "left": 276,
+        "below44": false
+      },
+      {
+        "id": "settings-open",
+        "tag": "button",
+        "name": "Settings",
+        "disabled": false,
+        "x": 320,
+        "y": 14,
+        "width": 44,
+        "height": 44,
+        "top": 14,
+        "right": 364,
+        "bottom": 58,
+        "left": 320,
+        "below44": false
+      },
+      {
+        "id": "mode-camera",
+        "tag": "button",
+        "name": "Camera",
+        "disabled": false,
+        "x": 11,
+        "y": 77.5,
+        "width": 87.69,
+        "height": 48,
+        "top": 77.5,
+        "right": 98.69,
+        "bottom": 125.5,
+        "left": 11,
+        "below44": false
+      },
+      {
+        "id": "mode-file",
+        "tag": "button",
+        "name": "Upload file",
+        "disabled": false,
+        "x": 99.69,
+        "y": 77.5,
+        "width": 97,
+        "height": 48,
+        "top": 77.5,
+        "right": 196.69,
+        "bottom": 125.5,
+        "left": 99.69,
+        "below44": false
+      },
+      {
+        "id": "choose-file",
+        "tag": "button",
+        "name": "Choose image or video",
+        "disabled": false,
+        "x": 208.69,
+        "y": 75.5,
+        "width": 104.31,
+        "height": 52,
+        "top": 75.5,
+        "right": 313,
+        "bottom": 127.5,
+        "left": 208.69,
+        "below44": false
+      },
+      {
+        "id": "results-menu-toggle",
+        "tag": "button",
+        "name": "Results and export",
+        "disabled": false,
+        "x": 318,
+        "y": 79.5,
+        "width": 44,
+        "height": 44,
+        "top": 79.5,
+        "right": 362,
+        "bottom": 123.5,
+        "left": 318,
+        "below44": false
+      },
+      {
+        "id": "stage",
+        "tag": "div",
+        "name": "YOLO preview",
+        "disabled": false,
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 812,
+        "top": 0,
+        "right": 375,
+        "bottom": 812,
+        "left": 0,
+        "below44": false
+      },
+      {
+        "id": "fullscreen-exit",
+        "tag": "button",
+        "name": "Exit fullscreen",
+        "disabled": false,
+        "x": 319,
+        "y": 12,
+        "width": 44,
+        "height": 44,
+        "top": 12,
+        "right": 363,
+        "bottom": 56,
+        "left": 319,
+        "below44": false
+      },
+      {
+        "id": "fullscreen-toggle",
+        "tag": "button",
+        "name": "Exit fullscreen",
+        "disabled": false,
+        "x": 315,
+        "y": 752,
+        "width": 44,
+        "height": 44,
+        "top": 752,
+        "right": 359,
+        "bottom": 796,
+        "left": 315,
+        "below44": false
+      },
+      {
+        "id": "confidence",
+        "tag": "input",
+        "name": "range",
+        "disabled": false,
+        "x": 137.42,
+        "y": 727,
+        "width": 182.58,
+        "height": 44,
+        "top": 727,
+        "right": 320,
+        "bottom": 771,
+        "left": 137.42,
+        "below44": false,
+        "labelTarget": {
+          "width": 349,
+          "height": 44
+        },
+        "labelAtLeast44": true
+      }
+    ]
+  }
+}

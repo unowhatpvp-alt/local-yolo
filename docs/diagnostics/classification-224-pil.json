@@ -1,0 +1,240 @@
+{
+  "method": "Official v8.4.100 PIL bilinear Resize(shortedge224) then CenterCrop224, RGB /255 NCHW vs browserCanvas; no normalization offsets",
+  "rows": [
+    {
+      "model": "yolo26n-cls",
+      "blurGoldfish": [
+        {
+          "classId": 1,
+          "label": "goldfish",
+          "score": 0.4191262125968933
+        },
+        {
+          "classId": 731,
+          "label": "plunger",
+          "score": 0.10274450480937958
+        },
+        {
+          "classId": 714,
+          "label": "pick",
+          "score": 0.060852572321891785
+        }
+      ],
+      "heldoutGoldfishOfficialPIL": [
+        {
+          "score": 0.18272259831428528,
+          "classId": 339,
+          "label": "sorrel"
+        },
+        {
+          "score": 0.09398508071899414,
+          "classId": 885,
+          "label": "velvet"
+        },
+        {
+          "score": 0.046509042382240295,
+          "classId": 43,
+          "label": "frilled_lizard"
+        },
+        {
+          "score": 0.04540671408176422,
+          "classId": 51,
+          "label": "triceratops"
+        },
+        {
+          "score": 0.04106350615620613,
+          "classId": 122,
+          "label": "American_lobster"
+        }
+      ]
+    },
+    {
+      "model": "yolo26s-cls",
+      "blurGoldfish": [
+        {
+          "classId": 1,
+          "label": "goldfish",
+          "score": 0.9869670271873474
+        },
+        {
+          "classId": 301,
+          "label": "ladybug",
+          "score": 0.004490067716687918
+        },
+        {
+          "classId": 989,
+          "label": "hip",
+          "score": 0.0023138646502047777
+        }
+      ],
+      "heldoutGoldfishOfficialPIL": [
+        {
+          "score": 0.2863369286060333,
+          "classId": 51,
+          "label": "triceratops"
+        },
+        {
+          "score": 0.07803300023078918,
+          "classId": 277,
+          "label": "red_fox"
+        },
+        {
+          "score": 0.07003049552440643,
+          "classId": 1,
+          "label": "goldfish"
+        },
+        {
+          "score": 0.06429283320903778,
+          "classId": 271,
+          "label": "red_wolf"
+        },
+        {
+          "score": 0.0545293465256691,
+          "classId": 103,
+          "label": "platypus"
+        }
+      ]
+    },
+    {
+      "model": "yolo26m-cls",
+      "blurGoldfish": [
+        {
+          "classId": 1,
+          "label": "goldfish",
+          "score": 0.8652060031890869
+        },
+        {
+          "classId": 111,
+          "label": "nematode",
+          "score": 0.025951191782951355
+        },
+        {
+          "classId": 301,
+          "label": "ladybug",
+          "score": 0.020614422857761383
+        }
+      ],
+      "heldoutGoldfishOfficialPIL": [
+        {
+          "score": 0.11926485598087311,
+          "classId": 78,
+          "label": "tick"
+        },
+        {
+          "score": 0.09616846591234207,
+          "classId": 351,
+          "label": "hartebeest"
+        },
+        {
+          "score": 0.05701583996415138,
+          "classId": 122,
+          "label": "American_lobster"
+        },
+        {
+          "score": 0.04836830124258995,
+          "classId": 358,
+          "label": "polecat"
+        },
+        {
+          "score": 0.04808994010090828,
+          "classId": 271,
+          "label": "red_wolf"
+        }
+      ]
+    },
+    {
+      "model": "yolo26l-cls",
+      "blurGoldfish": [
+        {
+          "classId": 1,
+          "label": "goldfish",
+          "score": 0.9982749223709106
+        },
+        {
+          "classId": 111,
+          "label": "nematode",
+          "score": 0.0007273483206517994
+        },
+        {
+          "classId": 149,
+          "label": "dugong",
+          "score": 0.00016032227722462267
+        }
+      ],
+      "heldoutGoldfishOfficialPIL": [
+        {
+          "score": 0.16772772371768951,
+          "classId": 51,
+          "label": "triceratops"
+        },
+        {
+          "score": 0.10812299698591232,
+          "classId": 274,
+          "label": "dhole"
+        },
+        {
+          "score": 0.09620088338851929,
+          "classId": 126,
+          "label": "isopod"
+        },
+        {
+          "score": 0.07740868628025055,
+          "classId": 1,
+          "label": "goldfish"
+        },
+        {
+          "score": 0.0691281333565712,
+          "classId": 103,
+          "label": "platypus"
+        }
+      ]
+    },
+    {
+      "model": "yolo26x-cls",
+      "blurGoldfish": [
+        {
+          "classId": 1,
+          "label": "goldfish",
+          "score": 0.9875442981719971
+        },
+        {
+          "classId": 111,
+          "label": "nematode",
+          "score": 0.0025048379320651293
+        },
+        {
+          "classId": 149,
+          "label": "dugong",
+          "score": 0.002166758058592677
+        }
+      ],
+      "heldoutGoldfishOfficialPIL": [
+        {
+          "score": 0.7433866858482361,
+          "classId": 1,
+          "label": "goldfish"
+        },
+        {
+          "score": 0.04339608922600746,
+          "classId": 351,
+          "label": "hartebeest"
+        },
+        {
+          "score": 0.025496309623122215,
+          "classId": 271,
+          "label": "red_wolf"
+        },
+        {
+          "score": 0.021289194002747536,
+          "classId": 51,
+          "label": "triceratops"
+        },
+        {
+          "score": 0.018307246267795563,
+          "classId": 339,
+          "label": "sorrel"
+        }
+      ]
+    }
+  ]
+}

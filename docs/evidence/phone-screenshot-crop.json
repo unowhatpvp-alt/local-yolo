@@ -1,0 +1,14 @@
+{
+  "source": "phone-375x650-context.jpg",
+  "cssViewport": [
+    375,
+    650
+  ],
+  "rasterCrop": [
+    20,
+    169,
+    391,
+    812
+  ],
+  "method": "Crop only the application rectangle from the browser screenshot; no pixel/result modification."
+}

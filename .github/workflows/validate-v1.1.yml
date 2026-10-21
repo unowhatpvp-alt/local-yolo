@@ -1,0 +1,43 @@
+name: Minimal V1.1 validation only
+on:
+  push:
+    branches: [develop/minimal-v1.1]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: validate-v1.1-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - uses: actions/cache@v4
+        with:
+          path: tests/fixtures
+          key: yolo26-fixtures-${{ hashFiles('src/core/model-manifest.json') }}
+      - run: node scripts/fetch-test-fixtures.mjs
+      - run: npm test
+      - name: Actual 25-model Node WASM matrix
+        run: npm run validate:models
+      - run: npm run build
+      - name: Check release readiness without publishing
+        run: node scripts/check-release-gate.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v1.1-validation-${{ github.sha }}
+          path: |
+            docs/model-validation-matrix.json
+            docs/browser-validation-matrix.json
+            docs/pwa-validation.json
+          if-no-files-found: warn

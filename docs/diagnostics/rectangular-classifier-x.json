@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "kind": "superseded-classifier-accuracy-diagnostic",
+  "releaseEvidence": false,
+  "modelId": "yolo26-classify-x",
+  "modelSha256": "bfd88a10597ead98a8593dff3eaddc2e761f586bae5b438c8ddeb37b1c7d4cb6",
+  "inputShape": [
+    1,
+    3,
+    480,
+    640
+  ],
+  "backend": "WASM",
+  "environment": "Node + Canvas",
+  "preprocessing": "Ultralytics rectangular resize to 480x640, RGB /255; no custom normalization",
+  "observations": [
+    {
+      "fixture": "classification.jpg",
+      "top5": [
+        {
+          "classId": 149,
+          "label": "dugong",
+          "score": 0.25267294049263
+        },
+        {
+          "classId": 644,
+          "label": "matchstick",
+          "score": 0.06888063997030258
+        },
+        {
+          "classId": 653,
+          "label": "milk_can",
+          "score": 0.06103251874446869
+        },
+        {
+          "classId": 714,
+          "label": "pick",
+          "score": 0.054857101291418076
+        },
+        {
+          "classId": 111,
+          "label": "nematode",
+          "score": 0.05312059819698334
+        }
+      ],
+      "latency": 3215.2178459999996,
+      "fixtureSha256": "d628b7c08a891ef4a5c8765a4f751d1db01adaa02149f291082e4f72f624b995"
+    },
+    {
+      "fixture": "classification-validation.jpg",
+      "top5": [
+        {
+          "classId": 885,
+          "label": "velvet",
+          "score": 0.46752920746803284
+        },
+        {
+          "classId": 493,
+          "label": "chiffonier",
+          "score": 0.2562449872493744
+        },
+        {
+          "classId": 940,
+          "label": "spaghetti_squash",
+          "score": 0.030706243589520454
+        },
+        {
+          "classId": 699,
+          "label": "panpipe",
+          "score": 0.023712158203125
+        },
+        {
+          "classId": 339,
+          "label": "sorrel",
+          "score": 0.01902805082499981
+        }
+      ],
+      "latency": 3478.3874620000006,
+      "fixtureSha256": "d0ea314a491f9c3572549b4a89db6d005b786b1a38f33037aacc5e2e86bc5168"
+    },
+    {
+      "fixture": "classification-tench.jpg",
+      "top5": [
+        {
+          "classId": 0,
+          "label": "tench",
+          "score": 0.9757134914398193
+        },
+        {
+          "classId": 103,
+          "label": "platypus",
+          "score": 0.018238550052046776
+        },
+        {
+          "classId": 389,
+          "label": "barracouta",
+          "score": 0.0023972466588020325
+        },
+        {
+          "classId": 390,
+          "label": "eel",
+          "score": 0.0005572034860961139
+        },
+        {
+          "classId": 395,
+          "label": "gar",
+          "score": 0.0005537738907150924
+        }
+      ],
+      "latency": 3604.162479999999,
+      "fixtureSha256": "d5f97131d20a9305875f35b44013fea231f1afbe4cc35de29db320870c40eaf4"
+    }
+  ],
+  "note": "The initial strongly blurred goldfish reference and a clear held-out goldfish were misclassified; held-out tench was correct. These observations are retained while native 224x224 classifier exports are evaluated. This diagnostic does not imply all outputs were correct or that rectangular classifier quality passed."
+}
