@@ -1,5 +1,7 @@
 # V1.1 PWA validation and environmental limitations
 
+后续验收：仅修正模型验证引用后，受影响的生产 bundle 已重新构建；6 组静态检查通过，当前 SW revision 为 `e639ad67e128`，24 个文件、15 个 shell 条目。[当前构建证据](evidence/acceptance-build.json)。以下真实安全 PWA/真机未验证状态不变，历史静态构建记录保留。
+
 Current dependency-patched application fingerprint: `ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e`.
 
 Actual secure-browser PWA validation remains blocked. The current root browser uses cloud Chromium at `http://terminal.local:4173/local-yolo/`, where root QA observed an insecure context and no `navigator.gpu`. No installation, registered service worker, cold offline run or old-to-new worker transition is claimed for this build.

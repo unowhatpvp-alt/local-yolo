@@ -99,7 +99,7 @@
       "status": "unverified",
       "steps": [
         "Open the reviewed V1.1 build on an approved HTTPS test origin in physical iPhone Safari.",
-        "Use Share \u2192 Add to Home Screen and open the installed app.",
+        "Use Share → Add to Home Screen and open the installed app.",
         "Record device/iOS version, standalone launch, icon, safe areas and both orientations."
       ]
     },
@@ -147,13 +147,13 @@
   "staticVerification": {
     "status": "pass-static-only",
     "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
-    "checkedAt": "2026-10-21T02:15:38.687Z",
-    "revision": "395743021b71",
+    "checkedAt": "2026-10-21T03:36:35.759Z",
+    "revision": "e639ad67e128",
     "artifactFileCount": 24,
     "precacheEntries": 15,
     "checksPassed": 6,
-    "report": "docs/build-verification.json",
-    "reason": "Root executed a clean serialized production build after Node/browser inference and independently verified the actual emitted bytes. This is static artifact evidence only; all11 secure PWA checks stay unavailable."
+    "report": "docs/evidence/acceptance-build.json",
+    "reason": "Rebuilt after correcting only stale model validation-reference annotations. Six static checks pass; no secure-browser/PWA status is promoted."
   },
   "lifecycleUnitTests": {
     "status": "pass",
@@ -172,10 +172,23 @@
   },
   "finalReleaseArtifactVerification": {
     "status": "pass-static-only",
-    "checkedAt": "2026-10-21T02:15:38.687Z",
-    "report": "docs/build-verification.json",
-    "revision": "395743021b71",
+    "checkedAt": "2026-10-21T03:36:35.759Z",
+    "report": "docs/evidence/acceptance-build.json",
+    "revision": "e639ad67e128",
     "securePwaPassed": false
   },
-  "releaseDecision": "Blocked. All11 secure-browser PWA checks remain environment-unavailable; no previous actual result or static artifact is promoted to current secure-PWA pass."
+  "releaseDecision": "Blocked. All11 secure-browser PWA checks remain environment-unavailable; no previous actual result or static artifact is promoted to current secure-PWA pass.",
+  "previousStaticVerifications": [
+    {
+      "status": "pass-static-only",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
+      "checkedAt": "2026-10-21T02:15:38.687Z",
+      "revision": "395743021b71",
+      "artifactFileCount": 24,
+      "precacheEntries": 15,
+      "checksPassed": 6,
+      "report": "docs/build-verification.json",
+      "reason": "Root executed a clean serialized production build after Node/browser inference and independently verified the actual emitted bytes. This is static artifact evidence only; all11 secure PWA checks stay unavailable."
+    }
+  ]
 }

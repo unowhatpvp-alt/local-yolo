@@ -1,0 +1,283 @@
+{
+  "schemaVersion": 1,
+  "scope": "Read-only integrity/evidence audit plus targeted previously-unconfirmed fullscreen observations; no completed 25-model matrix rerun.",
+  "baselineCommit": "e92166e193f2a32a592a21c28574b832aa1fad37",
+  "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
+  "integrity": {
+    "checkedAt": "2026-10-21T03:29:02.228Z",
+    "commit": "e92166e193f2a32a592a21c28574b832aa1fad37",
+    "trackedFiles": 175,
+    "problems": [],
+    "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
+    "evidenceFingerprints": [
+      "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
+      "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
+      "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e"
+    ],
+    "models": [
+      {
+        "id": "yolo26-detect-n",
+        "wasmNode": "pass",
+        "browserWasm": "pass",
+        "webgpu": "environment-unavailable"
+      },
+      {
+        "id": "yolo26-detect-s",
+        "wasmNode": "pass",
+        "browserWasm": "pass",
+        "webgpu": "environment-unavailable"
+      },
+      {
+        "id": "yolo26-detect-m",
+        "wasmNode": "pass",
+        "browserWasm": "pass",
+        "webgpu": "environment-unavailable"
+      },
+      {
+        "id": "yolo26-detect-l",
+        "wasmNode": "pass",
+        "browserWasm": "pass",
+        "webgpu": "environment-unavailable"
+      },
+      {
+        "id": "yolo26-detect-x",
+        "wasmNode": "pass",
+        "browserWasm": "pass",
+        "webgpu": "environment-unavailable"
+      },
+      {
+        "id": "yolo26-segment-n",
+        "wasmNode": "pass",
+        "browserWasm": "pass",
+        "webgpu": "environment-unavailable"
+      },
+      {
+        "id": "yolo26-segment-s",
+        "wasmNode": "pass",
+        "browserWasm": "pass",
+        "webgpu": "environment-unavailable"
+      },
+      {
+        "id": "yolo26-segment-m",
+        "wasmNode": "pass",
+        "browserWasm": "pass",
+        "webgpu": "environment-unavailable"
+      },
+      {
+        "id": "yolo26-segment-l",
+        "wasmNode": "pass",
+        "browserWasm": "pass",
+        "webgpu": "environment-unavailable"
+      },
+      {
+        "id": "yolo26-segment-x",
+        "wasmNode": "pass",
+        "browserWasm": "pass",
+        "webgpu": "environment-unavailable"
+      },
+      {
+        "id": "yolo26-pose-n",
+        "wasmNode": "pass",
+        "browserWasm": "pass",
+        "webgpu": "environment-unavailable"
+      },
+      {
+        "id": "yolo26-pose-s",
+        "wasmNode": "pass",
+        "browserWasm": "pass",
+        "webgpu": "environment-unavailable"
+      },
+      {
+        "id": "yolo26-pose-m",
+        "wasmNode": "pass",
+        "browserWasm": "pass",
+        "webgpu": "environment-unavailable"
+      },
+      {
+        "id": "yolo26-pose-l",
+        "wasmNode": "pass",
+        "browserWasm": "pass",
+        "webgpu": "environment-unavailable"
+      },
+      {
+        "id": "yolo26-pose-x",
+        "wasmNode": "pass",
+        "browserWasm": "pass",
+        "webgpu": "environment-unavailable"
+      },
+      {
+        "id": "yolo26-classify-n",
+        "wasmNode": "pass",
+        "browserWasm": "pass",
+        "webgpu": "environment-unavailable"
+      },
+      {
+        "id": "yolo26-classify-s",
+        "wasmNode": "pass",
+        "browserWasm": "pass",
+        "webgpu": "environment-unavailable"
+      },
+      {
+        "id": "yolo26-classify-m",
+        "wasmNode": "pass",
+        "browserWasm": "pass",
+        "webgpu": "environment-unavailable"
+      },
+      {
+        "id": "yolo26-classify-l",
+        "wasmNode": "pass",
+        "browserWasm": "pass",
+        "webgpu": "environment-unavailable"
+      },
+      {
+        "id": "yolo26-classify-x",
+        "wasmNode": "pass",
+        "browserWasm": "pass",
+        "webgpu": "environment-unavailable"
+      },
+      {
+        "id": "yolo26-obb-n",
+        "wasmNode": "pass",
+        "browserWasm": "pass",
+        "webgpu": "environment-unavailable"
+      },
+      {
+        "id": "yolo26-obb-s",
+        "wasmNode": "pass",
+        "browserWasm": "pass",
+        "webgpu": "environment-unavailable"
+      },
+      {
+        "id": "yolo26-obb-m",
+        "wasmNode": "pass",
+        "browserWasm": "pass",
+        "webgpu": "environment-unavailable"
+      },
+      {
+        "id": "yolo26-obb-l",
+        "wasmNode": "pass",
+        "browserWasm": "pass",
+        "webgpu": "environment-unavailable"
+      },
+      {
+        "id": "yolo26-obb-x",
+        "wasmNode": "pass",
+        "browserWasm": "pass",
+        "webgpu": "environment-unavailable"
+      }
+    ],
+    "pngs": 25,
+    "gateErrors": 37,
+    "gatePass": false
+  },
+  "source": {
+    "syntaxChecked": 32,
+    "jsonParsedInIntegrityAudit": 62,
+    "relativeImportsChecked": 38,
+    "problems": []
+  },
+  "evidence": {
+    "models": 25,
+    "pngHashes": 25,
+    "tensorCount": 90,
+    "sampleCount": 410,
+    "errors": []
+  },
+  "metadataCorrection": "acceptance-model-reference-fix.json",
+  "newBuild": "acceptance-build.json",
+  "fullscreen": "acceptance-fullscreen.json",
+  "phoneFullscreen": "acceptance-phone-fullscreen.json",
+  "browserEnvironment": "acceptance-browser-environment.json",
+  "latestCi": {
+    "runId": 39531783945,
+    "jobId": 118999117158,
+    "commit": "83acca20217317255f135a074cb3ed3ded888be1",
+    "overall": "failure",
+    "tests": {
+      "pass": 37,
+      "fail": 0,
+      "optionalLegacySkip": 1
+    },
+    "mandatoryModels": {
+      "pass": 25,
+      "fail": 0
+    },
+    "build": "pass",
+    "releaseGate": "failure",
+    "gateErrors": 37
+  },
+  "releaseApproved": false,
+  "deployed": false,
+  "metadataCorrectionVerified": true,
+  "gateRecheckedAt": "2026-10-21T03:40:39.252Z",
+  "gate": {
+    "pass": false,
+    "errors": [
+      "yolo26-detect-n/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
+      "yolo26-detect-s/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
+      "yolo26-detect-m/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
+      "yolo26-detect-l/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
+      "yolo26-detect-x/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
+      "yolo26-segment-n/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
+      "yolo26-segment-s/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
+      "yolo26-segment-m/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
+      "yolo26-segment-l/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
+      "yolo26-segment-x/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
+      "yolo26-pose-n/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
+      "yolo26-pose-s/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
+      "yolo26-pose-m/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
+      "yolo26-pose-l/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
+      "yolo26-pose-x/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
+      "yolo26-classify-n/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
+      "yolo26-classify-s/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
+      "yolo26-classify-m/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
+      "yolo26-classify-l/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
+      "yolo26-classify-x/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
+      "yolo26-obb-n/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
+      "yolo26-obb-s/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
+      "yolo26-obb-m/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
+      "yolo26-obb-l/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
+      "yolo26-obb-x/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
+      "PWA must be tested in a real secure browser context.",
+      "PWA check manifest: actual secure-browser observations and pass required.",
+      "PWA check serviceWorkerInstalled: actual secure-browser observations and pass required.",
+      "PWA check offlineColdStart: actual secure-browser observations and pass required.",
+      "PWA check cachedModelOfflineInference: actual secure-browser observations and pass required.",
+      "PWA check cacheDeletion: actual secure-browser observations and pass required.",
+      "PWA check updateWaiting: actual secure-browser observations and pass required.",
+      "PWA check oldTabConsistency: actual secure-browser observations and pass required.",
+      "PWA check activateNewVersion: actual secure-browser observations and pass required.",
+      "PWA check noVersionMix: actual secure-browser observations and pass required.",
+      "PWA check storageFailureRecovery: actual secure-browser observations and pass required.",
+      "PWA check subpathResources: actual secure-browser observations and pass required."
+    ],
+    "requiredModels": [
+      "yolo26-detect-n",
+      "yolo26-detect-s",
+      "yolo26-detect-m",
+      "yolo26-detect-l",
+      "yolo26-detect-x",
+      "yolo26-segment-n",
+      "yolo26-segment-s",
+      "yolo26-segment-m",
+      "yolo26-segment-l",
+      "yolo26-segment-x",
+      "yolo26-pose-n",
+      "yolo26-pose-s",
+      "yolo26-pose-m",
+      "yolo26-pose-l",
+      "yolo26-pose-x",
+      "yolo26-classify-n",
+      "yolo26-classify-s",
+      "yolo26-classify-m",
+      "yolo26-classify-l",
+      "yolo26-classify-x",
+      "yolo26-obb-n",
+      "yolo26-obb-s",
+      "yolo26-obb-m",
+      "yolo26-obb-l",
+      "yolo26-obb-x"
+    ],
+    "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e"
+  }
+}

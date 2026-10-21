@@ -1,0 +1,26 @@
+{
+  "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
+  "scope": "actual Chrome Linux fallback fullscreen; real YOLO26n WASM on a 15-repeat derivative of the pinned real MP4; not a physical device/native fullscreen test",
+  "idle": {
+    "classes": "stage-toolbar is-idle",
+    "exitVisible": true,
+    "focus": "camera-video",
+    "fullscreen": true,
+    "nativeFullscreen": false,
+    "observedAt": "2026-10-21T03:31:45.477Z",
+    "opacity": "0",
+    "paused": false,
+    "results": "20 results",
+    "time": 29.835664,
+    "transform": "matrix(1, 0, 0, 1, 0, 5)"
+  },
+  "wake": {
+    "classes": "stage-toolbar",
+    "observedAt": "2026-10-21T03:31:45.851Z",
+    "opacity": "1"
+  },
+  "exit": {
+    "exitHidden": true,
+    "fullscreen": false
+  }
+}
