@@ -1,0 +1,18 @@
+{
+  "runId": 39663322195,
+  "jobId": 119441724690,
+  "commit": "e037359e7a711fe6855e9d33fec5edb233933373",
+  "overall": "failure",
+  "automaticBackendModels": {
+    "pass": 25,
+    "hardwareWebGpu": "unavailable, not a GPU pass",
+    "actualBackend": "WASM"
+  },
+  "pwaPassed": [
+    "manifest",
+    "serviceWorkerInstalled"
+  ],
+  "remainingFailure": "Viewport observation read vertical overflow at immediate resize; retain actual result and await settled rendering in the follow-up check. Export helper also corrected to honor the existing application closing its results menu.",
+  "artifactId": 12376801958,
+  "artifactSha256": "3531ff55001637681f0d6a71f765293fec88bcb275cda67392f801203e4ef2a4"
+}

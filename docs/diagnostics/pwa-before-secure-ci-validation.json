@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
+  "run": {
+    "id": "pwa-environment-607fa7d5-d11d-4d33-a6ca-2dbd8aeda34f",
+    "environment": "browser",
+    "kind": "Current HTTP environment limitation record after dependency patch; not a secure PWA run",
+    "startedAt": "2026-10-21T01:57:41.712Z",
+    "completedAt": "2026-10-21T01:57:41.712Z",
+    "url": "http://terminal.local:4173/local-yolo/",
+    "browser": "Cloud Chromium",
+    "physicalDevice": false,
+    "observationSource": "Current root browser QA environmental facts. Timestamps record report consolidation and fresh lifecycle-unit verification, not service-worker installation/execution."
+  },
+  "secureContext": false,
+  "navigatorGpu": false,
+  "status": "blocked-environment",
+  "checks": {
+    "manifest": {
+      "status": "environment-unavailable",
+      "observations": [
+        "Root actual browser QA uses HTTP http://terminal.local:4173/local-yolo/; the available cloud Chromium origin is not a secure context and navigator.gpu is absent. This current source has no actual secure service-worker/PWA pass."
+      ],
+      "requiredRetest": "Use an approved HTTPS context and the exact current application fingerprint. Execute and record this real PWA lifecycle check; do not substitute static or controlled unit tests."
+    },
+    "serviceWorkerInstalled": {
+      "status": "environment-unavailable",
+      "observations": [
+        "Root actual browser QA uses HTTP http://terminal.local:4173/local-yolo/; the available cloud Chromium origin is not a secure context and navigator.gpu is absent. This current source has no actual secure service-worker/PWA pass."
+      ],
+      "requiredRetest": "Use an approved HTTPS context and the exact current application fingerprint. Execute and record this real PWA lifecycle check; do not substitute static or controlled unit tests."
+    },
+    "offlineColdStart": {
+      "status": "environment-unavailable",
+      "observations": [
+        "Root actual browser QA uses HTTP http://terminal.local:4173/local-yolo/; the available cloud Chromium origin is not a secure context and navigator.gpu is absent. This current source has no actual secure service-worker/PWA pass."
+      ],
+      "requiredRetest": "Use an approved HTTPS context and the exact current application fingerprint. Execute and record this real PWA lifecycle check; do not substitute static or controlled unit tests."
+    },
+    "cachedModelOfflineInference": {
+      "status": "environment-unavailable",
+      "observations": [
+        "Root actual browser QA uses HTTP http://terminal.local:4173/local-yolo/; the available cloud Chromium origin is not a secure context and navigator.gpu is absent. This current source has no actual secure service-worker/PWA pass."
+      ],
+      "requiredRetest": "Use an approved HTTPS context and the exact current application fingerprint. Execute and record this real PWA lifecycle check; do not substitute static or controlled unit tests."
+    },
+    "cacheDeletion": {
+      "status": "environment-unavailable",
+      "observations": [
+        "Root actual browser QA uses HTTP http://terminal.local:4173/local-yolo/; the available cloud Chromium origin is not a secure context and navigator.gpu is absent. This current source has no actual secure service-worker/PWA pass."
+      ],
+      "requiredRetest": "Use an approved HTTPS context and the exact current application fingerprint. Execute and record this real PWA lifecycle check; do not substitute static or controlled unit tests."
+    },
+    "updateWaiting": {
+      "status": "environment-unavailable",
+      "observations": [
+        "Root actual browser QA uses HTTP http://terminal.local:4173/local-yolo/; the available cloud Chromium origin is not a secure context and navigator.gpu is absent. This current source has no actual secure service-worker/PWA pass."
+      ],
+      "requiredRetest": "Use an approved HTTPS context and the exact current application fingerprint. Execute and record this real PWA lifecycle check; do not substitute static or controlled unit tests."
+    },
+    "oldTabConsistency": {
+      "status": "environment-unavailable",
+      "observations": [
+        "Root actual browser QA uses HTTP http://terminal.local:4173/local-yolo/; the available cloud Chromium origin is not a secure context and navigator.gpu is absent. This current source has no actual secure service-worker/PWA pass."
+      ],
+      "requiredRetest": "Use an approved HTTPS context and the exact current application fingerprint. Execute and record this real PWA lifecycle check; do not substitute static or controlled unit tests."
+    },
+    "activateNewVersion": {
+      "status": "environment-unavailable",
+      "observations": [
+        "Root actual browser QA uses HTTP http://terminal.local:4173/local-yolo/; the available cloud Chromium origin is not a secure context and navigator.gpu is absent. This current source has no actual secure service-worker/PWA pass."
+      ],
+      "requiredRetest": "Use an approved HTTPS context and the exact current application fingerprint. Execute and record this real PWA lifecycle check; do not substitute static or controlled unit tests."
+    },
+    "noVersionMix": {
+      "status": "environment-unavailable",
+      "observations": [
+        "Root actual browser QA uses HTTP http://terminal.local:4173/local-yolo/; the available cloud Chromium origin is not a secure context and navigator.gpu is absent. This current source has no actual secure service-worker/PWA pass."
+      ],
+      "requiredRetest": "Use an approved HTTPS context and the exact current application fingerprint. Execute and record this real PWA lifecycle check; do not substitute static or controlled unit tests."
+    },
+    "storageFailureRecovery": {
+      "status": "environment-unavailable",
+      "observations": [
+        "Root actual browser QA uses HTTP http://terminal.local:4173/local-yolo/; the available cloud Chromium origin is not a secure context and navigator.gpu is absent. This current source has no actual secure service-worker/PWA pass."
+      ],
+      "requiredRetest": "Use an approved HTTPS context and the exact current application fingerprint. Execute and record this real PWA lifecycle check; do not substitute static or controlled unit tests."
+    },
+    "subpathResources": {
+      "status": "environment-unavailable",
+      "observations": [
+        "Root actual browser QA uses HTTP http://terminal.local:4173/local-yolo/; the available cloud Chromium origin is not a secure context and navigator.gpu is absent. This current source has no actual secure service-worker/PWA pass."
+      ],
+      "requiredRetest": "Use an approved HTTPS context and the exact current application fingerprint. Execute and record this real PWA lifecycle check; do not substitute static or controlled unit tests."
+    }
+  },
+  "deviceChecks": {
+    "iPhoneSafariInstall": {
+      "status": "unverified",
+      "steps": [
+        "Open the reviewed V1.1 build on an approved HTTPS test origin in physical iPhone Safari.",
+        "Use Share → Add to Home Screen and open the installed app.",
+        "Record device/iOS version, standalone launch, icon, safe areas and both orientations."
+      ]
+    },
+    "physicalCamera": {
+      "status": "unverified",
+      "steps": [
+        "On a physical device, open the exact reviewed build over HTTPS and load a compatible model.",
+        "Grant camera access, verify genuine live inference, then deny permission in a fresh session.",
+        "Record capture behavior, explanatory denial handling and track shutdown after stopping."
+      ]
+    },
+    "cameraSwitching": {
+      "status": "unverified",
+      "steps": [
+        "Authorize camera access on a device with multiple cameras or a connected USB camera.",
+        "Switch each enumerated camera while inference is active and then disconnect an external camera.",
+        "Record real labels, frame transitions, resource release and disconnect feedback."
+      ]
+    },
+    "nativeZoom": {
+      "status": "unverified",
+      "steps": [
+        "Read actual camera track capabilities on the physical browser/device.",
+        "If native zoom is exposed, change supported values and record returned settings and frame behavior.",
+        "If unavailable, verify the explicitly labelled digital-crop fallback and source-coordinate overlays; do not claim control of all iPhone lenses."
+      ]
+    },
+    "backgroundResume": {
+      "status": "unverified",
+      "steps": [
+        "Start camera/video inference on a physical device, then background or lock it.",
+        "Verify camera tracks stop and file playback pauses.",
+        "Return and explicitly resume; check that no obsolete worker result or duplicated loop is shown."
+      ]
+    },
+    "physicalFullscreen": {
+      "status": "unverified",
+      "steps": [
+        "On physical iPhone, iPad and Android browsers, request fullscreen from the reviewed workspace.",
+        "Record whether native Fullscreen API or the viewport fallback is used.",
+        "Verify aspect ratio, overlay coordinates, camera/zoom controls, orientation and exit behavior."
+      ]
+    }
+  },
+  "staticVerification": {
+    "status": "pass-static-only",
+    "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
+    "checkedAt": "2026-10-21T03:36:35.759Z",
+    "revision": "e639ad67e128",
+    "artifactFileCount": 24,
+    "precacheEntries": 15,
+    "checksPassed": 6,
+    "report": "docs/evidence/acceptance-build.json",
+    "reason": "Rebuilt after correcting only stale model validation-reference annotations. Six static checks pass; no secure-browser/PWA status is promoted."
+  },
+  "lifecycleUnitTests": {
+    "status": "pass",
+    "command": "node --test tests/pwa-lifecycle.test.mjs tests/release-gate.test.mjs",
+    "pwaPassed": 8,
+    "releaseGatePassed": 5,
+    "failed": 0,
+    "skipped": 0,
+    "recordedAt": "2026-10-21T01:57:41.712Z",
+    "scope": "Freshly executed PWA lifecycle and fail-closed release gate unit checks. Controlled service-worker API test doubles do not establish actual secure-browser installation, offline, update or physical device passes."
+  },
+  "dependencyAudit": {
+    "report": "docs/dependency-audit.json",
+    "record": "docs/dependency-audit-record.json",
+    "vulnerabilities": 0
+  },
+  "finalReleaseArtifactVerification": {
+    "status": "pass-static-only",
+    "checkedAt": "2026-10-21T03:36:35.759Z",
+    "report": "docs/evidence/acceptance-build.json",
+    "revision": "e639ad67e128",
+    "securePwaPassed": false
+  },
+  "releaseDecision": "Blocked. All11 secure-browser PWA checks remain environment-unavailable; no previous actual result or static artifact is promoted to current secure-PWA pass.",
+  "previousStaticVerifications": [
+    {
+      "status": "pass-static-only",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
+      "checkedAt": "2026-10-21T02:15:38.687Z",
+      "revision": "395743021b71",
+      "artifactFileCount": 24,
+      "precacheEntries": 15,
+      "checksPassed": 6,
+      "report": "docs/build-verification.json",
+      "reason": "Root executed a clean serialized production build after Node/browser inference and independently verified the actual emitted bytes. This is static artifact evidence only; all11 secure PWA checks stay unavailable."
+    }
+  ]
+}

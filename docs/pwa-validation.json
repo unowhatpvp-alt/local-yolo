@@ -1,97 +1,96 @@
 {
   "schemaVersion": 1,
   "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
+  "secureContext": true,
+  "status": "fail",
   "run": {
-    "id": "pwa-environment-607fa7d5-d11d-4d33-a6ca-2dbd8aeda34f",
+    "id": "b37e7e5d-eb17-4f44-8b34-92285ec8245e",
     "environment": "browser",
-    "kind": "Current HTTP environment limitation record after dependency patch; not a secure PWA run",
-    "startedAt": "2026-10-21T01:57:41.712Z",
-    "completedAt": "2026-10-21T01:57:41.712Z",
-    "url": "http://terminal.local:4173/local-yolo/",
-    "browser": "Cloud Chromium",
+    "kind": "Actual GitHub CI Chromium on browser-trusted localhost; not an iPhone",
+    "startedAt": "2026-10-21T19:39:32.672Z",
+    "completedAt": "2026-10-21T19:45:28.949Z",
+    "url": "http://127.0.0.1:4175/local-yolo/",
     "physicalDevice": false,
-    "observationSource": "Current root browser QA environmental facts. Timestamps record report consolidation and fresh lifecycle-unit verification, not service-worker installation/execution."
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
   },
-  "secureContext": false,
-  "navigatorGpu": false,
-  "status": "blocked-environment",
   "checks": {
     "manifest": {
-      "status": "environment-unavailable",
+      "status": "pass",
       "observations": [
-        "Root actual browser QA uses HTTP http://terminal.local:4173/local-yolo/; the available cloud Chromium origin is not a secure context and navigator.gpu is absent. This current source has no actual secure service-worker/PWA pass."
+        {
+          "name": "Local YOLO",
+          "display": "standalone",
+          "scope": "./",
+          "icons": [
+            {
+              "src": "icons/icon-192.png",
+              "sizes": "192x192",
+              "type": "image/png",
+              "purpose": "any"
+            },
+            {
+              "src": "icons/icon-512.png",
+              "sizes": "512x512",
+              "type": "image/png",
+              "purpose": "any"
+            },
+            {
+              "src": "icons/maskable-512.png",
+              "sizes": "512x512",
+              "type": "image/png",
+              "purpose": "maskable"
+            }
+          ]
+        }
       ],
-      "requiredRetest": "Use an approved HTTPS context and the exact current application fingerprint. Execute and record this real PWA lifecycle check; do not substitute static or controlled unit tests."
+      "observedAt": "2026-10-21T19:45:25.882Z"
     },
     "serviceWorkerInstalled": {
-      "status": "environment-unavailable",
+      "status": "pass",
       "observations": [
-        "Root actual browser QA uses HTTP http://terminal.local:4173/local-yolo/; the available cloud Chromium origin is not a secure context and navigator.gpu is absent. This current source has no actual secure service-worker/PWA pass."
+        {
+          "controller": "http://127.0.0.1:4175/local-yolo/sw.js",
+          "version": "b99b2d0ef1ee",
+          "secureContext": true
+        }
       ],
-      "requiredRetest": "Use an approved HTTPS context and the exact current application fingerprint. Execute and record this real PWA lifecycle check; do not substitute static or controlled unit tests."
+      "observedAt": "2026-10-21T19:45:25.887Z"
     },
     "offlineColdStart": {
-      "status": "environment-unavailable",
-      "observations": [
-        "Root actual browser QA uses HTTP http://terminal.local:4173/local-yolo/; the available cloud Chromium origin is not a secure context and navigator.gpu is absent. This current source has no actual secure service-worker/PWA pass."
-      ],
-      "requiredRetest": "Use an approved HTTPS context and the exact current application fingerprint. Execute and record this real PWA lifecycle check; do not substitute static or controlled unit tests."
+      "status": "pending",
+      "observations": []
     },
     "cachedModelOfflineInference": {
-      "status": "environment-unavailable",
-      "observations": [
-        "Root actual browser QA uses HTTP http://terminal.local:4173/local-yolo/; the available cloud Chromium origin is not a secure context and navigator.gpu is absent. This current source has no actual secure service-worker/PWA pass."
-      ],
-      "requiredRetest": "Use an approved HTTPS context and the exact current application fingerprint. Execute and record this real PWA lifecycle check; do not substitute static or controlled unit tests."
+      "status": "pending",
+      "observations": []
     },
     "cacheDeletion": {
-      "status": "environment-unavailable",
-      "observations": [
-        "Root actual browser QA uses HTTP http://terminal.local:4173/local-yolo/; the available cloud Chromium origin is not a secure context and navigator.gpu is absent. This current source has no actual secure service-worker/PWA pass."
-      ],
-      "requiredRetest": "Use an approved HTTPS context and the exact current application fingerprint. Execute and record this real PWA lifecycle check; do not substitute static or controlled unit tests."
+      "status": "pending",
+      "observations": []
     },
     "updateWaiting": {
-      "status": "environment-unavailable",
-      "observations": [
-        "Root actual browser QA uses HTTP http://terminal.local:4173/local-yolo/; the available cloud Chromium origin is not a secure context and navigator.gpu is absent. This current source has no actual secure service-worker/PWA pass."
-      ],
-      "requiredRetest": "Use an approved HTTPS context and the exact current application fingerprint. Execute and record this real PWA lifecycle check; do not substitute static or controlled unit tests."
+      "status": "pending",
+      "observations": []
     },
     "oldTabConsistency": {
-      "status": "environment-unavailable",
-      "observations": [
-        "Root actual browser QA uses HTTP http://terminal.local:4173/local-yolo/; the available cloud Chromium origin is not a secure context and navigator.gpu is absent. This current source has no actual secure service-worker/PWA pass."
-      ],
-      "requiredRetest": "Use an approved HTTPS context and the exact current application fingerprint. Execute and record this real PWA lifecycle check; do not substitute static or controlled unit tests."
+      "status": "pending",
+      "observations": []
     },
     "activateNewVersion": {
-      "status": "environment-unavailable",
-      "observations": [
-        "Root actual browser QA uses HTTP http://terminal.local:4173/local-yolo/; the available cloud Chromium origin is not a secure context and navigator.gpu is absent. This current source has no actual secure service-worker/PWA pass."
-      ],
-      "requiredRetest": "Use an approved HTTPS context and the exact current application fingerprint. Execute and record this real PWA lifecycle check; do not substitute static or controlled unit tests."
+      "status": "pending",
+      "observations": []
     },
     "noVersionMix": {
-      "status": "environment-unavailable",
-      "observations": [
-        "Root actual browser QA uses HTTP http://terminal.local:4173/local-yolo/; the available cloud Chromium origin is not a secure context and navigator.gpu is absent. This current source has no actual secure service-worker/PWA pass."
-      ],
-      "requiredRetest": "Use an approved HTTPS context and the exact current application fingerprint. Execute and record this real PWA lifecycle check; do not substitute static or controlled unit tests."
+      "status": "pending",
+      "observations": []
     },
     "storageFailureRecovery": {
-      "status": "environment-unavailable",
-      "observations": [
-        "Root actual browser QA uses HTTP http://terminal.local:4173/local-yolo/; the available cloud Chromium origin is not a secure context and navigator.gpu is absent. This current source has no actual secure service-worker/PWA pass."
-      ],
-      "requiredRetest": "Use an approved HTTPS context and the exact current application fingerprint. Execute and record this real PWA lifecycle check; do not substitute static or controlled unit tests."
+      "status": "pending",
+      "observations": []
     },
     "subpathResources": {
-      "status": "environment-unavailable",
-      "observations": [
-        "Root actual browser QA uses HTTP http://terminal.local:4173/local-yolo/; the available cloud Chromium origin is not a secure context and navigator.gpu is absent. This current source has no actual secure service-worker/PWA pass."
-      ],
-      "requiredRetest": "Use an approved HTTPS context and the exact current application fingerprint. Execute and record this real PWA lifecycle check; do not substitute static or controlled unit tests."
+      "status": "pending",
+      "observations": []
     }
   },
   "deviceChecks": {
@@ -155,40 +154,173 @@
     "report": "docs/evidence/acceptance-build.json",
     "reason": "Rebuilt after correcting only stale model validation-reference annotations. Six static checks pass; no secure-browser/PWA status is promoted."
   },
-  "lifecycleUnitTests": {
-    "status": "pass",
-    "command": "node --test tests/pwa-lifecycle.test.mjs tests/release-gate.test.mjs",
-    "pwaPassed": 8,
-    "releaseGatePassed": 5,
-    "failed": 0,
-    "skipped": 0,
-    "recordedAt": "2026-10-21T01:57:41.712Z",
-    "scope": "Freshly executed PWA lifecycle and fail-closed release gate unit checks. Controlled service-worker API test doubles do not establish actual secure-browser installation, offline, update or physical device passes."
+  "environment": {
+    "secureContext": true,
+    "navigatorGpu": true,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
   },
-  "dependencyAudit": {
-    "report": "docs/dependency-audit.json",
-    "record": "docs/dependency-audit-record.json",
-    "vulnerabilities": 0
+  "revisions": {
+    "prior": "b99b2d0ef1ee",
+    "candidate": "e639ad67e128",
+    "method": "Two real finalized production artifacts; prior differs by an HTML-only validation marker. No inference code differs."
   },
-  "finalReleaseArtifactVerification": {
-    "status": "pass-static-only",
-    "checkedAt": "2026-10-21T03:36:35.759Z",
-    "report": "docs/evidence/acceptance-build.json",
-    "revision": "e639ad67e128",
-    "securePwaPassed": false
+  "onlineInference": {
+    "task": "detect",
+    "backend": "WASM",
+    "count": 5,
+    "sourceWidth": 810,
+    "sourceHeight": 1080
   },
-  "releaseDecision": "Blocked. All11 secure-browser PWA checks remain environment-unavailable; no previous actual result or static artifact is promoted to current secure-PWA pass.",
-  "previousStaticVerifications": [
-    {
-      "status": "pass-static-only",
-      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
-      "checkedAt": "2026-10-21T02:15:38.687Z",
-      "revision": "395743021b71",
-      "artifactFileCount": 24,
-      "precacheEntries": 15,
-      "checksPassed": 6,
-      "report": "docs/build-verification.json",
-      "reason": "Root executed a clean serialized production build after Node/browser inference and independently verified the actual emitted bytes. This is static artifact evidence only; all11 secure PWA checks stay unavailable."
-    }
-  ]
+  "failure": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\ntrue !== false\n\n    at observeViewport (file:///home/runner/work/local-yolo/local-yolo/scripts/validate-browser-release.mjs:50:878)\n    at async file:///home/runner/work/local-yolo/local-yolo/scripts/validate-browser-release.mjs:70:63",
+  "console": {
+    "uncaughtPageErrors": [],
+    "observedMessages": [
+      {
+        "type": "warning",
+        "text": "No available adapters.",
+        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+      },
+      {
+        "type": "warning",
+        "text": "No available adapters.",
+        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+      },
+      {
+        "type": "error",
+        "text": "\u001b[0;93m2026-10-21 19:39:36.079499 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+      },
+      {
+        "type": "error",
+        "text": "\u001b[0;93m2026-10-21 19:39:39.268499 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+      },
+      {
+        "type": "warning",
+        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+      },
+      {
+        "type": "error",
+        "text": "\u001b[0;93m2026-10-21 19:39:43.100399 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+      },
+      {
+        "type": "error",
+        "text": "\u001b[0;93m2026-10-21 19:39:47.161599 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+      },
+      {
+        "type": "error",
+        "text": "\u001b[0;93m2026-10-21 19:39:49.470599 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+      },
+      {
+        "type": "error",
+        "text": "\u001b[0;93m2026-10-21 19:39:53.926599 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+      },
+      {
+        "type": "error",
+        "text": "\u001b[0;93m2026-10-21 19:40:00.414499 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+      },
+      {
+        "type": "error",
+        "text": "\u001b[0;93m2026-10-21 19:40:08.417498 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+      },
+      {
+        "type": "error",
+        "text": "\u001b[0;93m2026-10-21 19:40:14.506398 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+      },
+      {
+        "type": "error",
+        "text": "\u001b[0;93m2026-10-21 19:40:17.961599 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+      },
+      {
+        "type": "error",
+        "text": "\u001b[0;93m2026-10-21 19:40:25.651499 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+      },
+      {
+        "type": "error",
+        "text": "\u001b[0;93m2026-10-21 19:40:39.502400 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+      },
+      {
+        "type": "error",
+        "text": "\u001b[0;93m2026-10-21 19:40:59.540499 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+      },
+      {
+        "type": "error",
+        "text": "\u001b[0;93m2026-10-21 19:41:12.812399 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+      },
+      {
+        "type": "error",
+        "text": "\u001b[0;93m2026-10-21 19:41:18.324600 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+      },
+      {
+        "type": "error",
+        "text": "\u001b[0;93m2026-10-21 19:41:32.565499 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+      },
+      {
+        "type": "error",
+        "text": "\u001b[0;93m2026-10-21 19:41:49.263399 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+      },
+      {
+        "type": "error",
+        "text": "\u001b[0;93m2026-10-21 19:42:12.448499 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+      },
+      {
+        "type": "error",
+        "text": "\u001b[0;93m2026-10-21 19:42:28.388499 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+      },
+      {
+        "type": "error",
+        "text": "\u001b[0;93m2026-10-21 19:42:34.677498 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+      },
+      {
+        "type": "error",
+        "text": "\u001b[0;93m2026-10-21 19:42:55.182300 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+      },
+      {
+        "type": "error",
+        "text": "\u001b[0;93m2026-10-21 19:43:29.010498 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+      },
+      {
+        "type": "error",
+        "text": "\u001b[0;93m2026-10-21 19:44:17.315400 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+      },
+      {
+        "type": "error",
+        "text": "\u001b[0;93m2026-10-21 19:44:48.150300 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+      },
+      {
+        "type": "error",
+        "text": "\u001b[0;93m2026-10-21 19:44:59.380599 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+      },
+      {
+        "type": "error",
+        "text": "\u001b[0;93m2026-10-21 19:45:27.160600 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "url": "http://127.0.0.1:4175/local-yolo/"
+      }
+    ]
+  },
+  "viewports": []
 }
