@@ -1,51 +1,41 @@
-# V1.1 PWA validation and environmental limitations
+# 当前PWA验收与真机限制
 
-后续验收：仅修正模型验证引用后，受影响的生产 bundle 已重新构建；6 组静态检查通过，当前 SW revision 为 `e639ad67e128`，24 个文件、15 个 shell 条目。[当前构建证据](evidence/acceptance-build.json)。以下真实安全 PWA/真机未验证状态不变，历史静态构建记录保留。
+**安全上下文中的11项真实PWA检查全部通过，包括实际存储故障恢复。本地严格Gate通过，最终GitHub CI、提交、Pages部署和线上验收仍待完成。** 当前指纹为`3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c`。依据[实际PWA JSON](pwa-validation.json)，不是静态构建或API单元替身。
 
-Current dependency-patched application fingerprint: `ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e`.
+本轮在Windows Playwright Chromium、浏览器信任的`http://127.0.0.1:4175/local-yolo/`执行。localhost被浏览器视为安全上下文；这与旧报告中的远程不安全HTTP环境不同。测试使用两份真实finalized生产构建，先前版本只增加HTML验证标记并有独立SW版本；没有替换推理代码、IndexedDB或Service Worker API。
 
-Actual secure-browser PWA validation remains blocked. The current root browser uses cloud Chromium at `http://terminal.local:4173/local-yolo/`, where root QA observed an insecure context and no `navigator.gpu`. No installation, registered service worker, cold offline run or old-to-new worker transition is claimed for this build.
+| 必需检查 | 当前状态 | 真实观察范围 |
+| --- | --- | --- |
+| manifest | 通过 | standalone、scope/start及图标配置 |
+| serviceWorkerInstalled | 通过 | 实际controller及版本消息 |
+| offlineColdStart | 通过 | 关闭原应用页，断网后新页冷启动 |
+| cachedModelOfflineInference | 通过 | 断网实际缓存模型推理公交图 |
+| cacheDeletion | 通过 | 设置界面删除实际模型缓存 |
+| updateWaiting | 通过 | 新worker等待，旧controller保持 |
+| oldTabConsistency | 通过 | 旧页重新加载保持旧文档/版本 |
+| activateNewVersion | 通过 | 应用更新按钮停止活动并显式激活 |
+| noVersionMix | 通过 | 新worker/资源一致，旧缓存清理 |
+| subpathResources | 通过 | `/local-yolo/`子路径缓存资源 |
+| storageFailureRecovery | 通过 | 实际配额限制/新隔离库，警告、内存推理5个结果，解除限制后缓存重建 |
 
-## Current evidence
+本轮run `b3c14655-4a08-43f2-8027-4fc94144af40`，UTC 2026-10-21T20:43:57.750Z至20:44:49.820Z，整体status=pass。存储实验的前三次真实失败保留在`docs/diagnostics/takeover-pwa-*-attempt.json`，配额调查保留在[takeover-real-quota-diagnostic.json](diagnostics/takeover-real-quota-diagnostic.json)。
 
-`docs/pwa-validation.json` records all eleven required secure-browser checks as `environment-unavailable`, with **zero secure-browser passes**. Those checks cover manifest/runtime integration, installation, cold offline start, actual cached-model offline inference, deletion, waiting update, old-tab consistency, explicit activation, no mixed versions, storage failure recovery and application-subpath resources.
+根因是Chromium已建立IndexedDB的预留空间使quota override不立即阻止写入。使用实际CDP配额限制1字节，在隔离测试库中重新建立连接后，真实缓存写入失败、应用显示缓存警告，模型仍在内存推理出5个公交图结果；取消配额后重新加载，缓存重建通过。测试没有替换IndexedDB/存储API或降低断言；reported storage estimate不保证直接显示CDP强制配额。
 
-This is an environmental limitation, not an automatic waiver. It blocks publication under the release gate. Repeat the checks using the exact current source on an approved HTTPS test origin before marking any as passed; do not publish to production merely to make the test context secure.
+最终生产构建可复现revision `fe0bf848230e`，6组静态产物验证通过；这些静态结果与上述11项真实PWA执行分别记录。
 
-The previous `0f995593…` report is retained at `docs/diagnostics/pwa-validation-0f995593.json`. Its artifact/lifecycle observations remain historical. They have not been relabelled as current secure-browser results.
+## 单元、真实浏览器与物理设备的区分
 
-## Fresh unit checks after the dependency patch
+56项自动化测试包含PWA生命周期/发布Gate等回归；受控API单元测试不替代上表真实SW和离线执行。上表的serviceWorkerInstalled是浏览器中的实际注册/控制，不表示桌面或iOS主屏幕安装已被物理验证。
 
-Executed:
+以下设备检查仍未验证：iPhone Safari/iOS主屏幕安装、物理摄像头采集、前后/多镜头切换、原生倍率、实际触摸硬件、系统后台恢复及手机原生全屏。六种桌面浏览器视口、真实桌面NVIDIA WebGPU、页面级全屏以及[4项Chromium触摸模拟](touch-validation.json)通过都不能推广为上述真机通过。
 
-```sh
-node --test tests/pwa-lifecycle.test.mjs tests/release-gate.test.mjs
-```
+## 真机复查步骤
 
-Results: **8 PWA lifecycle checks and 5 release-gate checks passed; 0 failed, 0 skipped**.
+1. 在目标设备的HTTPS地址打开相同已验收版本，记录设备、系统、浏览器版本、URL和提交。
+2. Safari通过分享→添加到主屏幕安装；首次在线加载模型后关闭应用，再断网冷启动并实际推理。
+3. 允许/拒绝摄像头权限，启动/停止、切换可用设备，核实镜像、数字裁切与真实原生倍率标签。
+4. 分别检查横/竖屏、安全区域、触摸目标、全屏进入/淡出/恢复/退出、后台停止与返回后的明确恢复操作。
+5. 使用两份可区分真实构建确认等待更新、旧页一致性、显式激活和离线返回。删除模型并核对存储状态；不要保证永久缓存。
 
-The lifecycle checks exercise hidden/unsafe precache rejection, partial-cache cleanup, offline route lookup, lazy runtime caching/quota handling, noninterception of uploads/external origins, explicit waiting-version activation, app-scope isolation and deterministic finalization. They execute generated worker logic in a Node VM with controlled API test doubles. They are not actual PWA installation, offline, update or physical-device evidence.
-
-The release-gate checks confirm that missing or stale evidence, a reduced model set, unavailable GPU context and a non-main production dispatch cannot produce an eligible release.
-
-## Current clean production artifact verified
-
-After the actual Node/browser matrix, root executed a fresh serialized production build and the independent static verifier. At `2026-10-21T02:15:38.687Z`, all six static groups passed: 24 production files, 15 actual shell precache entries, revision `395743021b71`, `/local-yolo/` URLs, all four entries/backlinks, manifest scope/start and real PNG dimensions, matching ONNX runtime modules/WASM, and a revision recomputed from the emitted bytes. No development harness, fixtures, model weights or validation configuration entered the artifact. See [actual artifact checks](build-verification.json) and [build log](evidence/final-build.txt).
-
-This is current-source static evidence. It does not execute a service worker or prove installation, offline inference, updating, physical camera or WebGPU. All eleven actual secure-browser PWA checks remain unavailable and continue to block release.
-
-## Required secure-browser retest
-
-Install the current build on an approved HTTPS test origin, cache a real model/runtime, close all app tabs and cold-start offline. Perform actual inference, delete a cached model and observe actual storage behavior. Exercise a storage failure and record an honest cache warning instead of a fabricated offline guarantee.
-
-For an update, use two distinguishable real builds and an already-open old tab. Verify waiting behavior and old-tab consistency. Confirm that explicit consent stops active inference/media before activation, that controller change produces one reload, and that the new shell, worker, runtime and resources agree. Repeat an offline return and a multiple-tab case. Record browser/version, URL, timestamps and actual observations, including failures.
-
-## Physical-device checks remain unverified
-
-The JSON report retains explicit steps for physical iPhone Safari installation, genuine camera capture, multiple-camera switching, native zoom, background/resume and physical fullscreen. All six remain `unverified`. Desktop viewports, feature detection and controlled media tests do not establish physical-device passes. Native zoom must follow the actual track capabilities and never imply access to every iPhone lens.
-
-## CI and dependency evidence
-
-Both CI workflows explicitly install and report the version of `ffmpeg` before actual video validation. `FETCH_E2E_FIXTURES=1` is set only for `npm test`: the supplementary test then downloads five integrity-pinned genuine Nano end-to-end exports into its separate test directory. This does not replace, reduce or alter the mandatory 25-model online matrix, which still runs independently through `npm run validate:models`.
-
-The latest actual `npm audit --json` response is saved at `docs/dependency-audit.json`, with command/time/fingerprint metadata in `docs/dependency-audit-record.json`. It reports zero known vulnerabilities. Dependency audit status does not waive model, browser, GPU or PWA release requirements.
+保留真实失败和不可用状态，记录可复现步骤；不以其他平台或特征检测代替设备结果。接手前报告完整保存在[历史PWA报告](diagnostics/pre-takeover-PWA_VALIDATION.md)。

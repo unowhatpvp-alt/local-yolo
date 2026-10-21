@@ -18,7 +18,9 @@ export function createAdapter(outputs, metadata = {}, config = {}) {
   if (!entries.length) throw new Error('The model returned no tensors.');
   entries.forEach(([,t])=>checkedTensor(t));
   let task = config.task && config.task !== 'auto' ? config.task : metadata.task;
-  let labels = parseLabels(config.labels?.length ? config.labels : metadata.names);
+  const labelSource = config.labels?.length ? config.labels : metadata.names;
+  let labels = parseLabels(labelSource);
+  if (labelSource && !labels.length) throw new Error('Class names must be nonempty strings with consecutive class IDs starting at 0.');
   const primary = entries.find(([,t])=>t.dims.length === 3) || entries[0];
   const [outputName, tensor] = primary;
   const dims = tensor.dims;
@@ -79,7 +81,7 @@ export function letterboxGeometry(sourceWidth, sourceHeight, inputWidth, inputHe
   const c = crop || {x:0,y:0,width:sourceWidth,height:sourceHeight};
   if (![c.x,c.y,c.width,c.height].every(Number.isFinite) || c.width <= 0 || c.height <= 0 || c.x < 0 || c.y < 0 || c.x+c.width > sourceWidth+.01 || c.y+c.height > sourceHeight+.01) throw new Error('The source crop is outside the media bounds.');
   const ratio = Math.min(inputWidth/c.width,inputHeight/c.height);
-  const resizedWidth = Math.round(c.width*ratio),resizedHeight = Math.round(c.height*ratio);
+  const resizedWidth = Math.max(1,Math.round(c.width*ratio)),resizedHeight = Math.max(1,Math.round(c.height*ratio));
   return {sourceWidth,sourceHeight,inputWidth,inputHeight,crop:c,resizedWidth,resizedHeight,padX:Math.floor((inputWidth-resizedWidth)/2),padY:Math.floor((inputHeight-resizedHeight)/2),scaleX:resizedWidth/c.width,scaleY:resizedHeight/c.height};
 }
 
@@ -159,7 +161,7 @@ export function decodeOutputs(outputs,adapter,t,{confidence=.25,iou=.45}={}) {
     const items=Array.from(data,(score,classId)=>({classId,label:adapter.labels[classId],score}));
     // Ultralytics exports probabilities. Reject arbitrary logits instead of
     // silently pretending a classifier with different normalization is valid.
-    if(items.some(x=>!Number.isFinite(x.score)||x.score<0||x.score>1.0001)) throw new Error('Classification output is not a probability vector. A logits adapter is required.');
+    if(items.some(x=>!Number.isFinite(x.score)||x.score<0||x.score>1.0001)||Math.abs(items.reduce((sum,item)=>sum+item.score,0)-1)>.001) throw new Error('Classification output is not a probability vector normalized to one. A logits adapter is required.');
     return items.sort((a,b)=>b.score-a.score).slice(0,5).filter(x=>x.score>=confidence);
   }
   const end=adapter.format==='ultralytics-end-to-end',rows=end?tensor.dims[1]:tensor.dims[2],columns=end?tensor.dims[2]:tensor.dims[1];
@@ -176,6 +178,9 @@ export function decodeOutputs(outputs,adapter,t,{confidence=.25,iou=.45}={}) {
     if(box.width<=0||box.height<=0)continue;
     const item={box,classId,label:adapter.labels[classId],score};
     const start=end?6:4+adapter.classes;
+    // Invalid task extras must not reach Canvas, exported coordinates or mask
+    // reconstruction. The box/score checks above alone do not cover them.
+    if(Array.from({length:adapter.extras},(_,i)=>value(r,start+i)).some(v=>!Number.isFinite(v)))continue;
     if(adapter.task==='pose')item.keypoints=Array.from({length:adapter.kptShape[0]},(_,i)=>({x:value(r,start+i*adapter.kptShape[1]),y:value(r,start+i*adapter.kptShape[1]+1),score:adapter.kptShape[1]===3?value(r,start+i*3+2):1}));
     if(adapter.task==='segment')item.coefficients=Array.from({length:adapter.masks},(_,i)=>value(r,start+i));
     if(adapter.task==='obb') {

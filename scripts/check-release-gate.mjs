@@ -12,7 +12,7 @@ async function filesUnder(root,dir){const out=[];try{for(const e of await readdi
 export async function sourceFingerprint(root=process.cwd()){
  root=resolve(root);const hash=createHash('sha256');
  const paths=[...APP_FILES,...await filesUnder(root,'src'),...await filesUnder(root,'public/icons') ,'public/manifest.webmanifest'].filter(p=>!['src/core/catalog.js','src/core/model-manifest.json'].includes(p));
- for(const path of [...new Set(paths)].sort()){try{const bytes=await readFile(join(root,path));hash.update(path+'\0');hash.update(bytes);hash.update('\0')}catch(e){if(e.code!=='ENOENT')throw e;hash.update(path+'\0MISSING\0')}}
+ for(const path of [...new Set(paths)].sort()){try{const bytes=await readFile(join(root,path));hash.update(path+'\0');hash.update(/\.(?:html|js|mjs|css|json|webmanifest)$/.test(path)?bytes.toString('utf8').replace(/\r\n/g,'\n'):bytes);hash.update('\0')}catch(e){if(e.code!=='ENOENT')throw e;hash.update(path+'\0MISSING\0')}}
  const {MODELS}=await import(pathToFileURL(join(root,'src/core/catalog.js')).href);
  const models=MODELS.map(m=>Object.fromEntries(['id','series','task','size','sha256','bytes','url','revision','inputShape','outputShapes','format'].map(k=>[k,m[k]??null]))).sort((a,b)=>a.id.localeCompare(b.id));
  hash.update('canonical-models\0'+JSON.stringify(models));return hash.digest('hex');

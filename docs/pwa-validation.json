@@ -1,17 +1,18 @@
 {
   "schemaVersion": 1,
-  "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
+  "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
   "secureContext": true,
-  "status": "fail",
+  "status": "pass",
   "run": {
-    "id": "b37e7e5d-eb17-4f44-8b34-92285ec8245e",
+    "id": "b3c14655-4a08-43f2-8027-4fc94144af40",
     "environment": "browser",
-    "kind": "Actual GitHub CI Chromium on browser-trusted localhost; not an iPhone",
-    "startedAt": "2026-10-21T19:39:32.672Z",
-    "completedAt": "2026-10-21T19:45:28.949Z",
+    "kind": "Actual Chromium on browser-trusted localhost; not an iPhone",
+    "os": "win32",
+    "startedAt": "2026-10-21T20:43:57.750Z",
+    "completedAt": "2026-10-21T20:44:49.820Z",
     "url": "http://127.0.0.1:4175/local-yolo/",
     "physicalDevice": false,
-    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
   },
   "checks": {
     "manifest": {
@@ -43,54 +44,127 @@
           ]
         }
       ],
-      "observedAt": "2026-10-21T19:45:25.882Z"
+      "observedAt": "2026-10-21T20:44:33.784Z"
     },
     "serviceWorkerInstalled": {
       "status": "pass",
       "observations": [
         {
           "controller": "http://127.0.0.1:4175/local-yolo/sw.js",
-          "version": "b99b2d0ef1ee",
+          "version": "e3b96869d37b",
           "secureContext": true
         }
       ],
-      "observedAt": "2026-10-21T19:45:25.887Z"
+      "observedAt": "2026-10-21T20:44:33.788Z"
     },
     "offlineColdStart": {
-      "status": "pending",
-      "observations": []
+      "status": "pass",
+      "observations": [
+        {
+          "freshPage": true,
+          "allPreviousAppPagesClosed": true,
+          "networkOffline": true,
+          "controllerVersion": "e3b96869d37b",
+          "title": "Local YOLO · Minimal"
+        }
+      ],
+      "observedAt": "2026-10-21T20:44:35.908Z"
     },
     "cachedModelOfflineInference": {
-      "status": "pending",
-      "observations": []
+      "status": "pass",
+      "observations": [
+        {
+          "cachedModel": "yolo26-detect-n",
+          "backend": "WASM",
+          "realBusResults": 5,
+          "networkOffline": true,
+          "coldSession": true
+        }
+      ],
+      "observedAt": "2026-10-21T20:44:37.412Z"
     },
     "cacheDeletion": {
-      "status": "pending",
-      "observations": []
+      "status": "pass",
+      "observations": [
+        "Actual UI cache-clear removed all IndexedDB model entries."
+      ],
+      "observedAt": "2026-10-21T20:44:44.216Z"
     },
     "updateWaiting": {
-      "status": "pending",
-      "observations": []
+      "status": "pass",
+      "observations": [
+        {
+          "activeVersion": "e3b96869d37b",
+          "waitingVersion": "fe0bf848230e",
+          "explicitActivationRequired": true
+        }
+      ],
+      "observedAt": "2026-10-21T20:44:44.375Z"
     },
     "oldTabConsistency": {
-      "status": "pending",
-      "observations": []
+      "status": "pass",
+      "observations": [
+        "Existing tab reload keeps the old cached document and old controller while update waits."
+      ],
+      "observedAt": "2026-10-21T20:44:44.403Z"
     },
     "activateNewVersion": {
-      "status": "pending",
-      "observations": []
+      "status": "pass",
+      "observations": [
+        {
+          "version": "fe0bf848230e",
+          "actualAppUpdateButton": true,
+          "priorMarkerGone": true
+        }
+      ],
+      "observedAt": "2026-10-21T20:44:45.898Z"
     },
     "noVersionMix": {
-      "status": "pending",
-      "observations": []
+      "status": "pass",
+      "observations": [
+        {
+          "currentVersion": "fe0bf848230e",
+          "cacheKeys": [
+            "local-yolo:http://127.0.0.1:4175/local-yolo/:fe0bf848230e"
+          ],
+          "oldCacheRemoved": true
+        }
+      ],
+      "observedAt": "2026-10-21T20:44:45.900Z"
     },
     "storageFailureRecovery": {
-      "status": "pending",
-      "observations": []
+      "status": "pass",
+      "observations": [
+        {
+          "method": "Actual Chromium CDP quota override and fresh isolated IndexedDB; no API replacement",
+          "quota": 1,
+          "overrideActive": true,
+          "reportedEstimate": {
+            "quota": 10738559923,
+            "usage": 1141683,
+            "usageDetails": {
+              "caches": 1065639,
+              "indexedDB": 73728,
+              "serviceWorkerRegistrations": 2316
+            }
+          },
+          "memoryOnlyBusResults": 5,
+          "warning": "The model loaded, but could not be saved offline. Free browser storage and download it again to cache it.",
+          "cacheRestoredAfterQuotaReset": true
+        }
+      ],
+      "observedAt": "2026-10-21T20:44:49.818Z"
     },
     "subpathResources": {
-      "status": "pending",
-      "observations": []
+      "status": "pass",
+      "observations": [
+        {
+          "scope": "/local-yolo/",
+          "cachedResourceCount": 15,
+          "allUnderScope": true
+        }
+      ],
+      "observedAt": "2026-10-21T20:44:45.905Z"
     }
   },
   "deviceChecks": {
@@ -144,24 +218,107 @@
     }
   },
   "staticVerification": {
-    "status": "pass-static-only",
-    "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
-    "checkedAt": "2026-10-21T03:36:35.759Z",
-    "revision": "e639ad67e128",
+    "schemaVersion": 1,
+    "type": "static-build-verification",
+    "status": "pass",
+    "checkedAt": "2026-10-21T20:13:42.678Z",
+    "base": "/local-yolo/",
+    "revision": "fe0bf848230e",
     "artifactFileCount": 24,
-    "precacheEntries": 15,
-    "checksPassed": 6,
-    "report": "docs/evidence/acceptance-build.json",
-    "reason": "Rebuilt after correcting only stale model validation-reference annotations. Six static checks pass; no secure-browser/PWA status is promoted."
+    "checks": [
+      {
+        "id": "productionOnly",
+        "status": "pass",
+        "observations": [
+          "24 production artifact files; no test harness, validation configuration, image/video fixtures or model weights."
+        ]
+      },
+      {
+        "id": "subpathResources",
+        "status": "pass",
+        "observations": [
+          "Main script/CSS are emitted below /local-yolo/assets/.",
+          "./manifest.webmanifest",
+          "./icons/icon-192.png",
+          "./icons/icon-192.png",
+          "/local-yolo/assets/index-BppwNdth.js",
+          "/local-yolo/assets/index-Busj7JGf.css"
+        ]
+      },
+      {
+        "id": "fourEntriesAndBacklinks",
+        "status": "pass",
+        "observations": [
+          "/local-yolo/",
+          "/local-yolo/studio/",
+          "/local-yolo/experimental-training/",
+          "/local-yolo/studio/experimental-training/"
+        ]
+      },
+      {
+        "id": "manifestAndActualPngDimensions",
+        "status": "pass",
+        "observations": [
+          {
+            "scope": "./",
+            "start_url": "./",
+            "display": "standalone",
+            "icons": [
+              {
+                "src": "icons/icon-192.png",
+                "width": 192,
+                "height": 192,
+                "purpose": "any"
+              },
+              {
+                "src": "icons/icon-512.png",
+                "width": 512,
+                "height": 512,
+                "purpose": "any"
+              },
+              {
+                "src": "icons/maskable-512.png",
+                "width": 512,
+                "height": 512,
+                "purpose": "maskable"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "precacheAndRevision",
+        "status": "pass",
+        "observations": [
+          "15 precache entries resolve to actual visible artifact files.",
+          {
+            "revision": "fe0bf848230e",
+            "noHiddenEntries": true,
+            "runtimeCachedLazily": true
+          }
+        ]
+      },
+      {
+        "id": "runtimeAssets",
+        "status": "pass",
+        "observations": [
+          "Single-thread WASM, JSEP and Asyncify runtime binaries/modules are present under the application subpath; every runtime WASM has its matching module and valid binary magic."
+        ]
+      }
+    ],
+    "limitations": [
+      "Does not execute a service worker or prove browser installation, offline use, update behavior, physical camera or WebGPU."
+    ]
   },
+  "backendEvidenceReusedFromRun": "8ce26457-6628-4815-bafe-9849599e6f11",
   "environment": {
     "secureContext": true,
     "navigatorGpu": true,
-    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
   },
   "revisions": {
-    "prior": "b99b2d0ef1ee",
-    "candidate": "e639ad67e128",
+    "prior": "e3b96869d37b",
+    "candidate": "fe0bf848230e",
     "method": "Two real finalized production artifacts; prior differs by an HTML-only validation marker. No inference code differs."
   },
   "onlineInference": {
@@ -171,156 +328,219 @@
     "sourceWidth": 810,
     "sourceHeight": 1080
   },
-  "failure": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\ntrue !== false\n\n    at observeViewport (file:///home/runner/work/local-yolo/local-yolo/scripts/validate-browser-release.mjs:50:878)\n    at async file:///home/runner/work/local-yolo/local-yolo/scripts/validate-browser-release.mjs:70:63",
+  "confidence": {
+    "status": "pass",
+    "highThreshold": 0.99,
+    "highResults": 0,
+    "lowThreshold": 0.01,
+    "lowSummary": "25 results"
+  },
+  "localImport": {
+    "status": "pass",
+    "model": "yolo26n.onnx",
+    "count": 25
+  },
+  "videoFullscreen": {
+    "status": "pass",
+    "pauseTime": 0.3514,
+    "autoType": "video",
+    "fadeOpacity": 0,
+    "wakeOpacity": 1,
+    "independentExit": true,
+    "scope": "CI Chromium, not native iPhone fullscreen"
+  },
+  "storageFailureAttempt": {
+    "quota": {
+      "usage": 1141683,
+      "quota": 1,
+      "overrideActive": true,
+      "usageBreakdown": [
+        {
+          "storageType": "file_systems",
+          "usage": 0
+        },
+        {
+          "storageType": "indexeddb",
+          "usage": 73728
+        },
+        {
+          "storageType": "cache_storage",
+          "usage": 1065639
+        },
+        {
+          "storageType": "service_workers",
+          "usage": 2316
+        }
+      ]
+    },
+    "reportedEstimate": {
+      "quota": 10738559923,
+      "usage": 1141683,
+      "usageDetails": {
+        "caches": 1065639,
+        "indexedDB": 73728,
+        "serviceWorkerRegistrations": 2316
+      }
+    },
+    "modelState": "Downloads on first use",
+    "after": {
+      "warning": "The model loaded, but could not be saved offline. Free browser storage and download it again to cache it.",
+      "quota": {
+        "usage": 1141683,
+        "quota": 1,
+        "overrideActive": true,
+        "usageBreakdown": [
+          {
+            "storageType": "file_systems",
+            "usage": 0
+          },
+          {
+            "storageType": "indexeddb",
+            "usage": 73728
+          },
+          {
+            "storageType": "cache_storage",
+            "usage": 1065639
+          },
+          {
+            "storageType": "service_workers",
+            "usage": 2316
+          }
+        ]
+      }
+    }
+  },
   "console": {
     "uncaughtPageErrors": [],
     "observedMessages": [
       {
-        "type": "warning",
-        "text": "No available adapters.",
-        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
-      },
-      {
-        "type": "warning",
-        "text": "No available adapters.",
-        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+        "type": "error",
+        "text": "\u001b[0;93m2026-10-21 16:44:25.127600 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "url": "http://127.0.0.1:4175/local-yolo/"
       },
       {
         "type": "error",
-        "text": "\u001b[0;93m2026-10-21 19:39:36.079499 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
-        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+        "text": "\u001b[0;93m2026-10-21 16:44:26.285199 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "url": "http://127.0.0.1:4175/local-yolo/"
       },
       {
         "type": "error",
-        "text": "\u001b[0;93m2026-10-21 19:39:39.268499 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
-        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
-      },
-      {
-        "type": "warning",
-        "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
-        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+        "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+        "url": "http://127.0.0.1:4175/local-yolo/"
       },
       {
         "type": "error",
-        "text": "\u001b[0;93m2026-10-21 19:39:43.100399 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
-        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+        "text": "Failed to load resource: net::ERR_FILE_NOT_FOUND",
+        "url": "http://127.0.0.1:4175/local-yolo/"
       },
       {
         "type": "error",
-        "text": "\u001b[0;93m2026-10-21 19:39:47.161599 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
-        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+        "text": "\u001b[0;93m2026-10-21 16:44:31.279199 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "url": "http://127.0.0.1:4175/local-yolo/"
       },
       {
         "type": "error",
-        "text": "\u001b[0;93m2026-10-21 19:39:49.470599 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
-        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+        "text": "\u001b[0;93m2026-10-21 16:44:33.995299 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "url": "http://127.0.0.1:4175/local-yolo/"
       },
       {
         "type": "error",
-        "text": "\u001b[0;93m2026-10-21 19:39:53.926599 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
-        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+        "text": "\u001b[0;93m2026-10-21 16:44:36.114299 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "url": "http://127.0.0.1:4175/local-yolo/"
       },
       {
         "type": "error",
-        "text": "\u001b[0;93m2026-10-21 19:40:00.414499 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
-        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+        "text": "\u001b[0;93m2026-10-21 16:44:38.653198 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "url": "http://127.0.0.1:4175/local-yolo/"
       },
       {
         "type": "error",
-        "text": "\u001b[0;93m2026-10-21 19:40:08.417498 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
-        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
+        "text": "\u001b[0;93m2026-10-21 16:44:46.565398 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "url": "http://127.0.0.1:4175/local-yolo/"
       },
       {
         "type": "error",
-        "text": "\u001b[0;93m2026-10-21 19:40:14.506398 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
-        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
-      },
-      {
-        "type": "error",
-        "text": "\u001b[0;93m2026-10-21 19:40:17.961599 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
-        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
-      },
-      {
-        "type": "error",
-        "text": "\u001b[0;93m2026-10-21 19:40:25.651499 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
-        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
-      },
-      {
-        "type": "error",
-        "text": "\u001b[0;93m2026-10-21 19:40:39.502400 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
-        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
-      },
-      {
-        "type": "error",
-        "text": "\u001b[0;93m2026-10-21 19:40:59.540499 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
-        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
-      },
-      {
-        "type": "error",
-        "text": "\u001b[0;93m2026-10-21 19:41:12.812399 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
-        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
-      },
-      {
-        "type": "error",
-        "text": "\u001b[0;93m2026-10-21 19:41:18.324600 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
-        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
-      },
-      {
-        "type": "error",
-        "text": "\u001b[0;93m2026-10-21 19:41:32.565499 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
-        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
-      },
-      {
-        "type": "error",
-        "text": "\u001b[0;93m2026-10-21 19:41:49.263399 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
-        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
-      },
-      {
-        "type": "error",
-        "text": "\u001b[0;93m2026-10-21 19:42:12.448499 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
-        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
-      },
-      {
-        "type": "error",
-        "text": "\u001b[0;93m2026-10-21 19:42:28.388499 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
-        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
-      },
-      {
-        "type": "error",
-        "text": "\u001b[0;93m2026-10-21 19:42:34.677498 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
-        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
-      },
-      {
-        "type": "error",
-        "text": "\u001b[0;93m2026-10-21 19:42:55.182300 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
-        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
-      },
-      {
-        "type": "error",
-        "text": "\u001b[0;93m2026-10-21 19:43:29.010498 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
-        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
-      },
-      {
-        "type": "error",
-        "text": "\u001b[0;93m2026-10-21 19:44:17.315400 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
-        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
-      },
-      {
-        "type": "error",
-        "text": "\u001b[0;93m2026-10-21 19:44:48.150300 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
-        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
-      },
-      {
-        "type": "error",
-        "text": "\u001b[0;93m2026-10-21 19:44:59.380599 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
-        "url": "http://127.0.0.1:4173/local-yolo/tests/browser-harness.html"
-      },
-      {
-        "type": "error",
-        "text": "\u001b[0;93m2026-10-21 19:45:27.160600 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
+        "text": "\u001b[0;93m2026-10-21 16:44:48.870300 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0\u001b[m",
         "url": "http://127.0.0.1:4175/local-yolo/"
       }
     ]
   },
-  "viewports": []
+  "network": {
+    "requests": 68,
+    "nonGetRequests": 0
+  },
+  "viewports": [
+    {
+      "width": 375,
+      "height": 650,
+      "scrollHeight": 650,
+      "clientHeight": 650,
+      "visualHeight": 650,
+      "cssVisualHeight": "650px",
+      "horizontalOverflow": false,
+      "verticalOverflow": false,
+      "canvasFit": "contain",
+      "smallTargets": []
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "scrollHeight": 812,
+      "clientHeight": 812,
+      "visualHeight": 812,
+      "cssVisualHeight": "812px",
+      "horizontalOverflow": false,
+      "verticalOverflow": false,
+      "canvasFit": "contain",
+      "smallTargets": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "scrollHeight": 844,
+      "clientHeight": 844,
+      "visualHeight": 844,
+      "cssVisualHeight": "844px",
+      "horizontalOverflow": false,
+      "verticalOverflow": false,
+      "canvasFit": "contain",
+      "smallTargets": []
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "scrollHeight": 390,
+      "clientHeight": 390,
+      "visualHeight": 390,
+      "cssVisualHeight": "390px",
+      "horizontalOverflow": false,
+      "verticalOverflow": false,
+      "canvasFit": "contain",
+      "smallTargets": []
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "scrollHeight": 1024,
+      "clientHeight": 1024,
+      "visualHeight": 1024,
+      "cssVisualHeight": "1024px",
+      "horizontalOverflow": false,
+      "verticalOverflow": false,
+      "canvasFit": "contain",
+      "smallTargets": []
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "scrollHeight": 900,
+      "clientHeight": 900,
+      "visualHeight": 900,
+      "cssVisualHeight": "900px",
+      "horizontalOverflow": false,
+      "verticalOverflow": false,
+      "canvasFit": "contain",
+      "smallTargets": []
+    }
+  ]
 }

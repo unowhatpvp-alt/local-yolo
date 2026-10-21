@@ -1,0 +1,68 @@
+✔ letterbox restores original pixels and digital crop offsets without stretching (1.605ms)
+✔ very narrow source images keep finite letterbox scales and coordinates (0.1526ms)
+✔ class-aware NMS keeps distinct classes and rotated IoU respects angle (0.5051ms)
+✔ two-class raw output [1,6,N] is not confused with NMS rows (0.735ms)
+✔ unsupported logits, ambiguous outputs and truncation fail with useful errors (0.5055ms)
+✔ class dictionaries preserve output IDs and malformed names never fall back to COCO (0.4139ms)
+✔ classification rejects unnormalized scores even when each score is in range (0.1469ms)
+✔ raw output boxes and pose keypoints map to the same uncropped source frame (0.3739ms)
+✔ segmentation raster occupies the original source box after letterbox and crop (2.502ms)
+✔ end-to-end OBB rows retain center xywh geometry instead of detection xyxy (0.3583ms)
+✔ end-to-end pose and segmentation decode task extras for small max_det (1.4973ms)
+✔ inconsistent end-to-end flags, malformed pose shapes and fractional classes are rejected (0.3196ms)
+✔ non-finite pose coordinates, OBB angles and mask coefficients never reach results (0.3846ms)
+✔ large standalone model buffers transfer ownership without a second copy (1.0807ms)
+✔ subarray loading preserves unrelated bytes and cancel rejects pending initialization promptly (1.6509ms)
+✔ source evidence survives Git line-ending conversion but detects code and binary changes (35.1399ms)
+✔ camera release stops tracks and digital crop remains source-aligned (2.34ms)
+✔ native zoom constraints preserve full source crop (0.3227ms)
+✔ camera permission failure is actionable in both languages (0.6925ms)
+✔ cancelled camera acquisition releases a late stream (0.2879ms)
+✔ device change continues across release and stops after final dispose (3.2951ms)
+✔ crop and mirror are applied once to actual overlay geometry (0.7707ms)
+✔ real pinned ONNX bytes survive streaming and SHA-256 integrity verification (31.652ms)
+✔ corrupt real ONNX bytes fail integrity before model initialization (12.1523ms)
+✔ an aborted download does not make a network request (0.2261ms)
+✔ switching uploaded images releases prior blob URLs without storing media (0.5616ms)
+✔ camera hardware disconnect releases stream and notifies UI (0.2007ms)
+✔ desktop menu arrows enter visible choices, skipping hidden sheet controls and unavailable choices (1.0688ms)
+✔ mobile sheet close control remains keyboard reachable when visible; empty menus are safe (0.8975ms)
+✔ cancellation during cached model hashing never reports ready or downloads again (14.4165ms)
+✔ importing Node evidence utilities never starts validation or downloads (59.2432ms)
+✔ a failed runtime cannot hide behind top-level model passes (0.8095ms)
+✔ an incorrect actual output signature is retained as a blocking Node error (0.3563ms)
+✔ simulated and mocked Node reports are explicitly rejected (0.2524ms)
+✔ stale report and per-model fingerprints are both rejected (0.1537ms)
+✔ partial execution and source changes cannot be reused as a complete matrix (0.1104ms)
+✔ precache excludes unsafe and invisible artifact paths (1.7275ms)
+✔ failed installation removes its partial cache (17.8277ms)
+✔ cold offline app root and reserved route use their matching cached documents (3.329ms)
+✔ runtime resources cache lazily; storage failure does not replace successful network response (2.3183ms)
+✔ external requests, media uploads, and other origin scopes are not intercepted (0.6475ms)
+✔ waiting update requires explicit matching-version activation (1.3091ms)
+✔ activation deletes old caches only in this app scope (0.906ms)
+✔ build finalizer rejects the historic hidden-file issue and produces deterministic revision (106.609ms)
+[0;93m2026-10-21 16:46:32.934149 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+REAL_YOLO26_E2E_EVIDENCE [{"task":"detect","shape":[1,300,6],"count":5,"top":[{"label":"bus","score":0.925},{"label":"person","score":0.9154},{"label":"person","score":0.8994}]},{"task":"segment","shape":[1,300,38],"count":4,"top":[{"label":"bus","score":0.9187},{"label":"person","score":0.8947},{"label":"person","score":0.8207}]},{"task":"pose","shape":[1,300,57],"count":4,"top":[{"label":"person","score":0.8868},{"label":"person","score":0.8744},{"label":"person","score":0.8516}]},{"task":"obb","shape":[1,300,7],"count":168,"top":[{"label":"ship","score":0.9263},{"label":"ship","score":0.9111},{"label":"ship","score":0.909}]},{"task":"classify","shape":[1,1000],"count":3,"top":[{"label":"minibus","score":0.8094},{"label":"police_van","score":0.1431},{"label":"trolleybus","score":0.0241}]}]
+✔ genuine YOLO26 N end-to-end exports run all five tasks on real images (2737.2338ms)
+[0;93m2026-10-21 16:46:32.928373 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+REAL_INFERENCE_EVIDENCE [{"task":"detect","format":"ultralytics-raw","input":[480,640],"count":5,"top":[{"label":"bus","score":0.9275},{"label":"person","score":0.8866},{"label":"person","score":0.8413}],"latency":166.6},{"task":"segment","format":"ultralytics-raw","input":[480,640],"count":5,"top":[{"label":"bus","score":0.8941},{"label":"person","score":0.8612},{"label":"person","score":0.8485}],"latency":230.9},{"task":"pose","format":"ultralytics-raw","input":[480,640],"count":3,"top":[{"label":"person","score":0.8934},{"label":"person","score":0.8805},{"label":"person","score":0.8316}],"latency":161.5},{"task":"classify","format":"ultralytics-classification","input":[480,640],"count":5,"top":[{"label":"police_van","score":0.171},{"label":"moving_van","score":0.0761},{"label":"bullet_train","score":0.0566}],"latency":75.7},{"task":"obb","format":"ultralytics-raw","input":[480,640],"count":167,"top":[{"label":"ship","score":0.8281},{"label":"ship","score":0.8273},{"label":"ship","score":0.8269}],"latency":161.6}]
+✔ real YOLO11 N five task ONNX models initialize and infer real images (2491.8702ms)
+✔ required set is fixed at all five tasks and five YOLO26 sizes (1.3701ms)
+✔ missing actual evidence fails closed rather than inferring passes from model inventory (0.9594ms)
+✔ reduced catalog and stale reports cannot satisfy the release gate (0.2262ms)
+✔ unavailable browser GPU and absent secure PWA evidence stay blockers (0.3193ms)
+✔ documented hardware absence still requires secure observations and real automatic WASM results (0.2325ms)
+✔ development workflow cannot publish and production dispatch is guarded to main (4.544ms)
+✔ validation static resources stay inside POSIX and Windows build directories (1.2266ms)
+✔ Python selection handles Windows launcher fallback and explicit paths with spaces (1.1562ms)
+✔ FFmpeg executable can be supplied without shell interpolation (0.13ms)
+✔ real YOLO26 Nano five-task import, image and decoded-video inference, rendering and release (9808.681ms)
+ℹ tests 56
+ℹ suites 0
+ℹ pass 56
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9977.4862

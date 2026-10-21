@@ -32,8 +32,8 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends ffmpeg
           ffmpeg -version
-      - name: Verify preserved complete model evidence
-        run: node scripts/verify-model-evidence.mjs
+      - name: Verify current Node matrix or execute all 25 models when changed
+        run: node scripts/ensure-node-evidence.mjs
       - name: Fetch required integration fixtures
         run: |
           node scripts/fetch-yolo26-models.mjs --size=N
@@ -43,6 +43,8 @@ jobs:
         env:
           FETCH_E2E_FIXTURES: '1'
       - run: npm run build
+      - name: Inspect actual production artifact and subpath resources
+        run: node scripts/verify-build.mjs --output docs/build-verification.json
       - name: Install pinned CI browser test runner
         run: |
           npm install --prefix /tmp/local-yolo-browser-qa --no-save playwright@1.64.1
@@ -59,7 +61,9 @@ jobs:
             docs/model-validation-matrix.json
             docs/browser-validation-matrix.json
             docs/pwa-validation.json
+            docs/touch-validation.json
             test-results/browser-release/
+            test-results/touch/
           if-no-files-found: warn
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4

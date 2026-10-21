@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
+  "status": "pass",
+  "simulated": false,
+  "mocked": false,
+  "scope": "Actual trusted tap interactions in Playwright Chromium touch emulation. This is not a physical phone, iPhone Safari, iOS PWA or hardware touchscreen certification.",
+  "run": {
+    "id": "2507b960-2bea-4239-aa84-c8454d57d6d4",
+    "environment": "browser",
+    "startedAt": "2026-10-21T20:46:12.626Z",
+    "completedAt": "2026-10-21T20:46:21.914Z",
+    "url": "http://127.0.0.1:5174/local-yolo/",
+    "physicalDevice": false,
+    "touchEmulated": true,
+    "browserVersion": "156.0.8078.4",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36"
+  },
+  "emulation": {
+    "viewport": {
+      "width": 375,
+      "height": 812
+    },
+    "hasTouch": true,
+    "isMobile": true,
+    "actual": {
+      "width": 375,
+      "height": 812,
+      "maxTouchPoints": 1,
+      "coarsePointer": true,
+      "secureContext": true
+    }
+  },
+  "checks": {
+    "taskAndSizeBottomMenus": {
+      "status": "pass",
+      "observedAt": "2026-10-21T20:46:14.730Z",
+      "observations": {
+        "taskMenu": {
+          "top": 457,
+          "bottom": 800,
+          "width": 375,
+          "height": 343,
+          "viewportWidth": 375,
+          "viewportHeight": 812,
+          "position": "fixed"
+        },
+        "sizeMenu": {
+          "top": 388.21875,
+          "bottom": 800,
+          "width": 375,
+          "height": 411.78125,
+          "viewportWidth": 375,
+          "viewportHeight": 812,
+          "position": "fixed"
+        },
+        "selectedIntermediate": "YOLO26m-seg",
+        "restored": "YOLO26n",
+        "interaction": "Trusted locator.tap, no synthetic DOM events."
+      }
+    },
+    "realImageInference": {
+      "status": "pass",
+      "observedAt": "2026-10-21T20:46:16.888Z",
+      "observations": {
+        "backend": "WASM",
+        "model": "YOLO26n",
+        "count": 5,
+        "top": [
+          {
+            "label": "bus",
+            "score": 0.8942739963531494
+          },
+          {
+            "label": "person",
+            "score": 0.8381400108337402
+          },
+          {
+            "label": "person",
+            "score": 0.8236299753189087
+          }
+        ],
+        "fixtureSha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
+        "inputMethod": "Actual file input bytes after trusted file-mode tap."
+      }
+    },
+    "confidenceTapRerunsImage": {
+      "status": "pass",
+      "observedAt": "2026-10-21T20:46:17.545Z",
+      "observations": {
+        "before": 0.25,
+        "after": 0.99,
+        "beforeCount": 5,
+        "afterCount": 0,
+        "interaction": "Trusted range.tap at the high end; real change handler reran the actual model."
+      }
+    },
+    "videoFullscreenTouch": {
+      "status": "pass",
+      "observedAt": "2026-10-21T20:46:21.913Z",
+      "observations": {
+        "playing": {
+          "currentTime": 0.773,
+          "duration": 30.066667,
+          "paused": false,
+          "width": 640,
+          "height": 360
+        },
+        "actualVideoInference": {
+          "backend": "WASM",
+          "count": 29,
+          "sourceWidth": 640,
+          "sourceHeight": 360,
+          "latencyMs": 127.40000000596046,
+          "top": [
+            {
+              "label": "person",
+              "score": 0.8049114942550659
+            },
+            {
+              "label": "person",
+              "score": 0.761497974395752
+            },
+            {
+              "label": "person",
+              "score": 0.7139191627502441
+            }
+          ]
+        },
+        "hidden": {
+          "opacity": "0",
+          "idle": true,
+          "focusVisible": false
+        },
+        "restoredOpacity": "1",
+        "exited": {
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "fullscreen": false,
+          "bodyFullscreen": false
+        },
+        "noStageTapBeforeIdle": true,
+        "interaction": "Trusted fullscreen-toggle.tap -> idle opacity0 -> stage.tap -> opacity1 -> fullscreen-exit.tap.",
+        "sourceVideoSha256": "a8b0df3073740f808aa0aca3cff7787140837bfa24e01c934ba2cca474fd03cc"
+      }
+    }
+  },
+  "console": [],
+  "sourceFingerprintAfter": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
+  "sourceChangedDuringRun": false
+}

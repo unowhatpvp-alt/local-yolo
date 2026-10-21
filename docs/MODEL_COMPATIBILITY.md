@@ -1,43 +1,49 @@
-# YOLO26 model compatibility matrix
+# YOLO26当前逐模型兼容性矩阵
 
-**Actual Node WASM: 25/25 passed.** This is the full required five-task × five-size scope, with no missing, skipped or substituted model. It is separate from the [browser WASM/WebGPU report](browser-validation-matrix.json), [PWA report](PWA_VALIDATION.md) and physical-device checks. A Node pass does not mark those checks passed.
+当前固定范围为5任务×N/S/M/L/X，共25模型。**Node WASM、内置Chrome155 WASM、真实NVIDIA Blackwell WebGPU均25/25通过**；没有缺失、替换、跳过或把WASM回退算成GPU通过。源码指纹：`3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c`。
 
-Run `b1d9dcb7-8dce-48ab-8990-c347ef04e6a3` used ONNX Runtime Web `1.23.2` on Linux/Node `v24.19.0`, from `2026-10-21T01:56:14.966Z` to `2026-10-21T02:01:15.810Z`. The start/end fingerprint and every actual model-row fingerprint are `ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e`; the application did not change during the run.
+表内数字为真实主任务图片的结果数；分类数字表示返回的类别数量，不是准确率。每项还包含两帧真实视频、任务后处理/绘制及资源释放。各后端数值/边界或计数可能因浮点差异不同，原始记录保留，不据此宣称逐位一致或模型速度基准。
 
-The model links below point to each exact pinned source file. Detection/segmentation/pose/OBB use `unileon-robotics/YOLO26-ONNX@e046fc5125ee6b579f1801f0b6df68a60b949c42`; classification uses `prithivMLmods/YOLO26-ONNX@c526dae7a5a5b4f1d79d704903b4406011da2716`. The precise repository path for every classifier is its linked URL, not an inferred filename. All exports are genuine YOLO26 ONNX FP32 models under AGPL-3.0. See [provenance and export metadata](MODEL_PROVENANCE.md), [download/integrity evidence](model-download-evidence.json) and [exact model metadata](../src/core/model-manifest.json). Full SHA-256 digests, byte counts, source revisions, actual output tensor statistics and fixture hashes are retained in the [machine-readable matrix](model-validation-matrix.json).
+| 模型 | 实际输入 | 实际输出签名 | 精确字节数 | Node WASM / 数量 | Chrome WASM / 数量 | 硬件WebGPU / 数量 |
+| --- | --- | --- | ---: | --- | --- | --- |
+| yolo26-detect-n | `[1,3,480,640]` | `[1,84,6300]` | 9,887,916 | 通过 / 5 | 通过 / 5 | 通过 / 5 |
+| yolo26-detect-s | `[1,3,480,640]` | `[1,84,6300]` | 38,237,095 | 通过 / 5 | 通过 / 5 | 通过 / 5 |
+| yolo26-detect-m | `[1,3,480,640]` | `[1,84,6300]` | 81,909,133 | 通过 / 5 | 通过 / 5 | 通过 / 5 |
+| yolo26-detect-l | `[1,3,480,640]` | `[1,84,6300]` | 99,559,195 | 通过 / 5 | 通过 / 5 | 通过 / 5 |
+| yolo26-detect-x | `[1,3,480,640]` | `[1,84,6300]` | 223,233,339 | 通过 / 5 | 通过 / 5 | 通过 / 5 |
+| yolo26-segment-n | `[1,3,480,640]` | `[1,116,6300] / [1,32,120,160]` | 11,161,769 | 通过 / 5 | 通过 / 5 | 通过 / 5 |
+| yolo26-segment-s | `[1,3,480,640]` | `[1,116,6300] / [1,32,120,160]` | 41,855,456 | 通过 / 5 | 通过 / 5 | 通过 / 5 |
+| yolo26-segment-m | `[1,3,480,640]` | `[1,116,6300] / [1,32,120,160]` | 94,558,924 | 通过 / 5 | 通过 / 5 | 通过 / 5 |
+| yolo26-segment-l | `[1,3,480,640]` | `[1,116,6300] / [1,32,120,160]` | 112,208,986 | 通过 / 5 | 通过 / 5 | 通过 / 5 |
+| yolo26-segment-x | `[1,3,480,640]` | `[1,116,6300] / [1,32,120,160]` | 251,623,808 | 通过 / 5 | 通过 / 5 | 通过 / 5 |
+| yolo26-pose-n | `[1,3,480,640]` | `[1,56,6300]` | 12,044,096 | 通过 / 4 | 通过 / 4 | 通过 / 4 |
+| yolo26-pose-s | `[1,3,480,640]` | `[1,56,6300]` | 41,777,468 | 通过 / 4 | 通过 / 4 | 通过 / 4 |
+| yolo26-pose-m | `[1,3,480,640]` | `[1,56,6300]` | 86,503,202 | 通过 / 4 | 通过 / 4 | 通过 / 4 |
+| yolo26-pose-l | `[1,3,480,640]` | `[1,56,6300]` | 104,153,264 | 通过 / 4 | 通过 / 4 | 通过 / 4 |
+| yolo26-pose-x | `[1,3,480,640]` | `[1,56,6300]` | 230,646,812 | 通过 / 4 | 通过 / 4 | 通过 / 4 |
+| yolo26-classify-n | `[1,3,224,224]` | `[1,1000]` | 11,293,163 | 通过 / 5 | 通过 / 5 | 通过 / 5 |
+| yolo26-classify-s | `[1,3,224,224]` | `[1,1000]` | 26,925,705 | 通过 / 4 | 通过 / 5 | 通过 / 5 |
+| yolo26-classify-m | `[1,3,224,224]` | `[1,1000]` | 46,567,573 | 通过 / 5 | 通过 / 5 | 通过 / 5 |
+| yolo26-classify-l | `[1,3,224,224]` | `[1,1000]` | 56,514,543 | 通过 / 1 | 通过 / 5 | 通过 / 5 |
+| yolo26-classify-x | `[1,3,224,224]` | `[1,1000]` | 118,570,497 | 通过 / 4 | 通过 / 5 | 通过 / 5 |
+| yolo26-obb-n | `[1,3,480,640]` | `[1,20,6300]` | 10,008,685 | 通过 / 170 | 通过 / 172 | 通过 / 172 |
+| yolo26-obb-s | `[1,3,480,640]` | `[1,20,6300]` | 39,239,617 | 通过 / 163 | 通过 / 163 | 通过 / 163 |
+| yolo26-obb-m | `[1,3,480,640]` | `[1,20,6300]` | 85,061,671 | 通过 / 181 | 通过 / 181 | 通过 / 181 |
+| yolo26-obb-l | `[1,3,480,640]` | `[1,20,6300]` | 102,711,733 | 通过 / 184 | 通过 / 184 | 通过 / 184 |
+| yolo26-obb-x | `[1,3,480,640]` | `[1,20,6300]` | 230,526,559 | 通过 / 184 | 通过 / 185 | 通过 / 185 |
 
-MB is decimal bytes/1,000,000. Shapes are actual NCHW input → output tensor signatures. Image results show the actual decoded count, top sample label/confidence and instrumented host latency; classification counts are returned labels, not object counts. Video shows actual decoded-frame result counts at 0s and 1s. Zero is a valid result for this overhead people scene. Lifecycle shows actual awaited ONNX releases, with cleared engine references; Nano models complete three load/infer/dispose cycles. `Finite; exact` means every recorded image/video raw tensor has zero nonfinite values and the pinned output dimensions. PNG links show actual rendered outputs, not mock results.
+## 证据与来源
 
-| Model / pinned source | Task | MB | Input → output | Node image: count · top label · latency | Video 0s / 1s | Session release | Raw tensors | Actual render |
-| --- | --- | ---: | --- | --- | --- | --- | --- | --- |
-| [YOLO26n](https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26n.onnx) | detect | 9.89 | `1×3×480×640 → 1×84×6300` | 5 · bus 89.0% · 281.8 ms | 24 / 21 | Awaited ×3 | Finite; exact | [PNG](evidence/yolo26/yolo26-detect-n.png) |
-| [YOLO26s](https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26s.onnx) | detect | 38.24 | `1×3×480×640 → 1×84×6300` | 5 · bus 92.8% · 884.3 ms | 16 / 16 | Awaited ×1 | Finite; exact | [PNG](evidence/yolo26/yolo26-detect-s.png) |
-| [YOLO26m](https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26m.onnx) | detect | 81.91 | `1×3×480×640 → 1×84×6300` | 5 · bus 93.7% · 2234.0 ms | 15 / 16 | Awaited ×1 | Finite; exact | [PNG](evidence/yolo26/yolo26-detect-m.png) |
-| [YOLO26l](https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26l.onnx) | detect | 99.56 | `1×3×480×640 → 1×84×6300` | 5 · bus 93.5% · 3292.6 ms | 15 / 17 | Awaited ×1 | Finite; exact | [PNG](evidence/yolo26/yolo26-detect-l.png) |
-| [YOLO26x](https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26x.onnx) | detect | 223.23 | `1×3×480×640 → 1×84×6300` | 5 · bus 94.1% · 6457.8 ms | 22 / 22 | Awaited ×1 | Finite; exact | [PNG](evidence/yolo26/yolo26-detect-x.png) |
-| [YOLO26n-seg](https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26n-seg.onnx) | segment | 11.16 | `1×3×480×640 → 1×116×6300 + 1×32×120×160` | 5 · bus 89.0% · 416.5 ms | 17 / 16 | Awaited ×3 | Finite; exact | [PNG](evidence/yolo26/yolo26-segment-n.png) |
-| [YOLO26s-seg](https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26s-seg.onnx) | segment | 41.86 | `1×3×480×640 → 1×116×6300 + 1×32×120×160` | 5 · bus 91.0% · 1160.5 ms | 26 / 19 | Awaited ×1 | Finite; exact | [PNG](evidence/yolo26/yolo26-segment-s.png) |
-| [YOLO26m-seg](https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26m-seg.onnx) | segment | 94.56 | `1×3×480×640 → 1×116×6300 + 1×32×120×160` | 5 · person 91.8% · 4032.9 ms | 17 / 16 | Awaited ×1 | Finite; exact | [PNG](evidence/yolo26/yolo26-segment-m.png) |
-| [YOLO26l-seg](https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26l-seg.onnx) | segment | 112.21 | `1×3×480×640 → 1×116×6300 + 1×32×120×160` | 5 · bus 91.1% · 4280.1 ms | 20 / 22 | Awaited ×1 | Finite; exact | [PNG](evidence/yolo26/yolo26-segment-l.png) |
-| [YOLO26x-seg](https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26x-seg.onnx) | segment | 251.62 | `1×3×480×640 → 1×116×6300 + 1×32×120×160` | 5 · bus 93.7% · 9769.1 ms | 16 / 20 | Awaited ×1 | Finite; exact | [PNG](evidence/yolo26/yolo26-segment-x.png) |
-| [YOLO26n-pose](https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26n-pose.onnx) | pose | 12.04 | `1×3×480×640 → 1×56×6300` | 4 · person 84.9% · 289.6 ms | 7 / 5 | Awaited ×3 | Finite; exact | [PNG](evidence/yolo26/yolo26-pose-n.png) |
-| [YOLO26s-pose](https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26s-pose.onnx) | pose | 41.78 | `1×3×480×640 → 1×56×6300` | 4 · person 88.4% · 827.2 ms | 4 / 4 | Awaited ×1 | Finite; exact | [PNG](evidence/yolo26/yolo26-pose-s.png) |
-| [YOLO26m-pose](https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26m-pose.onnx) | pose | 86.50 | `1×3×480×640 → 1×56×6300` | 4 · person 87.8% · 2313.8 ms | 4 / 1 | Awaited ×1 | Finite; exact | [PNG](evidence/yolo26/yolo26-pose-m.png) |
-| [YOLO26l-pose](https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26l-pose.onnx) | pose | 104.15 | `1×3×480×640 → 1×56×6300` | 4 · person 89.3% · 2932.8 ms | 4 / 2 | Awaited ×1 | Finite; exact | [PNG](evidence/yolo26/yolo26-pose-l.png) |
-| [YOLO26x-pose](https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26x-pose.onnx) | pose | 230.65 | `1×3×480×640 → 1×56×6300` | 4 · person 91.4% · 5898.8 ms | 3 / 2 | Awaited ×1 | Finite; exact | [PNG](evidence/yolo26/yolo26-pose-x.png) |
-| [YOLO26n-cls](https://huggingface.co/prithivMLmods/YOLO26-ONNX/resolve/c526dae7a5a5b4f1d79d704903b4406011da2716/yolo26n-cls/yolo26n-cls.onnx) | classify | 11.29 | `1×3×224×224 → 1×1000` | 5 · goldfish 41.9% · 49.5 ms | 5 / 5 | Awaited ×3 | Finite; exact | [PNG](evidence/yolo26/yolo26-classify-n.png) |
-| [YOLO26s-cls](https://huggingface.co/prithivMLmods/YOLO26-ONNX/resolve/c526dae7a5a5b4f1d79d704903b4406011da2716/yolo26s-cls/yolo26s-cls.onnx) | classify | 26.93 | `1×3×224×224 → 1×1000` | 4 · goldfish 98.7% · 111.4 ms | 5 / 5 | Awaited ×1 | Finite; exact | [PNG](evidence/yolo26/yolo26-classify-s.png) |
-| [YOLO26m-cls](https://huggingface.co/prithivMLmods/YOLO26-ONNX/resolve/c526dae7a5a5b4f1d79d704903b4406011da2716/yolo26m-cls/yolo26m-cls.onnx) | classify | 46.57 | `1×3×224×224 → 1×1000` | 5 · goldfish 86.5% · 235.8 ms | 5 / 5 | Awaited ×1 | Finite; exact | [PNG](evidence/yolo26/yolo26-classify-m.png) |
-| [YOLO26l-cls](https://huggingface.co/prithivMLmods/YOLO26-ONNX/resolve/c526dae7a5a5b4f1d79d704903b4406011da2716/yolo26l-cls/yolo26l-cls.onnx) | classify | 56.51 | `1×3×224×224 → 1×1000` | 1 · goldfish 99.8% · 297.6 ms | 5 / 5 | Awaited ×1 | Finite; exact | [PNG](evidence/yolo26/yolo26-classify-l.png) |
-| [YOLO26x-cls](https://huggingface.co/prithivMLmods/YOLO26-ONNX/resolve/c526dae7a5a5b4f1d79d704903b4406011da2716/yolo26x-cls/yolo26x-cls.onnx) | classify | 118.57 | `1×3×224×224 → 1×1000` | 4 · goldfish 98.8% · 578.9 ms | 5 / 5 | Awaited ×1 | Finite; exact | [PNG](evidence/yolo26/yolo26-classify-x.png) |
-| [YOLO26n-obb](https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26n-obb.onnx) | obb | 10.01 | `1×3×480×640 → 1×20×6300` | 170 · ship 84.1% · 305.7 ms | 0 / 0 | Awaited ×3 | Finite; exact | [PNG](evidence/yolo26/yolo26-obb-n.png) |
-| [YOLO26s-obb](https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26s-obb.onnx) | obb | 39.24 | `1×3×480×640 → 1×20×6300` | 163 · ship 86.4% · 799.3 ms | 0 / 0 | Awaited ×1 | Finite; exact | [PNG](evidence/yolo26/yolo26-obb-s.png) |
-| [YOLO26m-obb](https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26m-obb.onnx) | obb | 85.06 | `1×3×480×640 → 1×20×6300` | 181 · ship 87.2% · 2368.6 ms | 0 / 2 | Awaited ×1 | Finite; exact | [PNG](evidence/yolo26/yolo26-obb-m.png) |
-| [YOLO26l-obb](https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26l-obb.onnx) | obb | 102.71 | `1×3×480×640 → 1×20×6300` | 184 · ship 88.2% · 2952.1 ms | 17 / 14 | Awaited ×1 | Finite; exact | [PNG](evidence/yolo26/yolo26-obb-l.png) |
-| [YOLO26x-obb](https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26x-obb.onnx) | obb | 230.53 | `1×3×480×640 → 1×20×6300` | 184 · ship 88.2% · 6322.7 ms | 16 / 21 | Awaited ×1 | Finite; exact | [PNG](evidence/yolo26/yolo26-obb-x.png) |
+- [当前Node完整JSON](model-validation-matrix.json)：实际张量签名/统计/哈希、输出、裁切、绘制、释放。
+- [当前浏览器完整JSON](browser-validation-matrix.json)：实际WASM/WebGPU、视频解码、UI14项与额外回归。
+- [独立硬件WebGPU JSON](hardware-webgpu-matrix.json)：真实GPU适配器、25项执行与各自后端。
+- [不可变模型清单](../src/core/model-manifest.json)：每模型固定URL/revision、SHA-256、字节数、精度与许可。
+- [来源说明](MODEL_PROVENANCE.md)：20个空间模型使用固定480×640导出；5分类使用固定224×224导出。额外兼容YOLO11/端到端本地导入不替代这些25项。
 
-All 25 primary-image renders were manually inspected in the [original-resolution contact sheet](evidence/yolo26-matrix.png). Boxes, nonempty masks, 17-keypoint skeletons, classification labels and rotated polygons use the actual output of their respective models. Representative full-resolution classification-N, segmentation-X and OBB-X renders were also inspected. This verifies qualitative rendering behavior; it is not a ground-truth mAP or IoU benchmark.
+## 分类兼容与精度
 
-The primary goldfish remained unchanged during classifier investigation. All five selected 224×224 classifiers correctly identify it. The first 480×640 classifier-X failure is retained in [the initial diagnostic report](diagnostics/initial-node-matrix.json). Further ten-image known-label diagnostics retain every miss: top-1 N 3/10, S 3/10, M 4/10, L 5/10 and X 6/10; top-5 N 5/10, S 7/10, M 6/10, L 7/10 and X 8/10. These tiny ImageNet10 images do not establish benchmark accuracy. Correct signature/preprocessing/label mapping, finite normalized probabilities, known-label primary inference and actual task rendering define the compatibility check; no claim of 100% prediction accuracy is made. See [Node validation methodology and sustained Nano memory observations](NODE_WASM_VALIDATION.md).
+标准金鱼参考五模型均top-1正确。十张独立小图诊断N/S/M/L/X分别为3/10、3/10、4/10、5/10、6/10，所有误判和top-5保留在Node JSON。兼容通过证明预处理、概率输出、标签、真实执行与渲染符合支持格式，不代表100%准确率，也不是完整ImageNet基准。旧矩形分类源误判与调查记录仍保留，未改成成功。
 
-Browser WASM, actual WebGPU or genuine operator fallback, secure PWA behavior and physical iPhone/Safari camera/GPU behavior are tracked independently. The complete strict release gate must pass before production changes. No smaller model scope is substituted for these 25.
+## 适用界限
+
+当前25模型的真实桌面GPU通过不保证所有移动GPU/内存容量。iPhone Safari、iOS安装和物理摄像头/触摸仍未验证。PWA11/11和本地严格Gate通过，GitHub CI/部署及线上验收尚待完成；此模型矩阵不单独构成正式发布证明。历史矩阵说明保存在[接手前文档](diagnostics/pre-takeover-MODEL_COMPATIBILITY.md)。

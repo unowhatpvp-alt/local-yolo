@@ -1,0 +1,17 @@
+
+> local-yolo@1.1.0 build
+> node scripts/prepare.mjs && vite build && node scripts/finalize-sw.mjs
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 21 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                                17.49 kB │ gzip:     5.01 kB
+dist/assets/engine-worker-D5FUsQKs.js                         133.74 kB
+dist/assets/ort-wasm-simd-threaded.asyncify-BJtBjfiH.wasm  25,499.39 kB │ gzip: 6,125.24 kB
+dist/assets/index-Busj7JGf.css                                 35.40 kB │ gzip:     7.34 kB
+dist/assets/engine-NI5HTqoa.js                                133.34 kB │ gzip:    44.80 kB
+dist/assets/index-BppwNdth.js                                 134.74 kB │ gzip:    31.67 kB
+✓ built in 917ms
+Service worker shell: 15 files, revision fe0bf848230e

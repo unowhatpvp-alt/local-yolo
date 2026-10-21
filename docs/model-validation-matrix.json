@@ -1,21 +1,21 @@
 {
   "schemaVersion": 1,
-  "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
+  "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
   "run": {
-    "id": "b1d9dcb7-8dce-48ab-8990-c347ef04e6a3",
+    "id": "f81baebd-d0ba-4787-aa28-17e57659e8be",
     "environment": "node",
     "backend": "WASM",
     "runtimeVersion": "1.23.2",
-    "startedAt": "2026-10-21T01:56:14.966Z",
-    "completedAt": "2026-10-21T02:01:15.810Z",
-    "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node /workspace/scratch/71226e6aca43/local-yolo-v1.1/scripts/validate-yolo26-matrix.mjs",
-    "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
+    "startedAt": "2026-10-21T20:10:33.774Z",
+    "completedAt": "2026-10-21T20:13:18.443Z",
+    "command": "C:\\Users\\vusyo\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe C:\\Users\\vusyo\\Documents\\Codex\\2026-10-21\\ni\\work\\local-yolo\\scripts\\validate-yolo26-matrix.mjs",
+    "validatorSha256": "f4da932bea629409008584eb0362f049a9f1ae6b607e5373db67ed50b0792106",
     "physicalDevice": false,
     "nodeVersion": "v24.19.0",
-    "os": "linux x64",
-    "cpu": "AMD EPYC 9V74 80-Core Processor",
-    "cpuCount": 9,
-    "totalMemoryBytes": 10451439616,
+    "os": "win32 x64",
+    "cpu": "AMD Ryzen 7 9800X3D 8-Core Processor           ",
+    "cpuCount": 16,
+    "totalMemoryBytes": 33945907200,
     "browserWasm": "not tested by this runner",
     "webgpu": "not tested by this runner"
   },
@@ -31,10 +31,10 @@
       "sha256": "4f44c33cea12d4b5785e5e7c0a20c13d0c62a77de607ce96a40d6036c7d7bbcf",
       "bytes": 9887916,
       "status": "pass",
-      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
-      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:56:15.072Z",
-      "completedAt": "2026-10-21T01:56:18.719Z",
+      "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
+      "validatorSha256": "f4da932bea629409008584eb0362f049a9f1ae6b607e5373db67ed50b0792106",
+      "startedAt": "2026-10-21T20:10:33.832Z",
+      "completedAt": "2026-10-21T20:10:35.661Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26n.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -61,7 +61,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 1133.496,
+        "initializeMs": 538.96,
         "input": [
           {
             "name": "images",
@@ -87,13 +87,13 @@
         ],
         "image": {
           "fixture": {
-            "file": "tests/fixtures/bus.jpg",
+            "file": "tests\\fixtures\\bus.jpg",
             "url": "https://raw.githubusercontent.com/ultralytics/ultralytics/main/ultralytics/assets/bus.jpg",
             "sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 281.807,
+          "latencyMs": 147.434,
           "resultCount": 5,
           "samples": [
             {
@@ -160,11 +160,11 @@
             {
               "timeSeconds": 0,
               "fixture": {
-                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "sha256": "96b5fc8d5a16c0eb75477bedba5ee6e949f03f9bc243515539d35795d9ceaecd",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 265.923,
+              "latencyMs": 131.202,
               "resultCount": 24,
               "samples": [
                 {
@@ -222,11 +222,11 @@
             {
               "timeSeconds": 1,
               "fixture": {
-                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "sha256": "9fb24a244ba376804d8924faafcbedc27ae719b005e641f0346f3a938f4ffc56",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 253.259,
+              "latencyMs": 133.119,
               "resultCount": 21,
               "samples": [
                 {
@@ -291,17 +291,15 @@
             "height": 540
           },
           "resultCount": 2,
-          "latencyMs": 238.91
+          "latencyMs": 139.836
         },
         "render": {
-          "path": "docs/evidence/yolo26/yolo26-detect-n.png",
-          "sha256": "1fed2af2b7ad4acbf93165e0934273364bde81ec1f5ecdd5728c66de67397d9d",
+          "path": "docs\\evidence\\yolo26\\yolo26-detect-n.png",
+          "sha256": "089054f84864b1080995799419ac0658dcec2930828cf16e5c830d2eeb81e75f",
           "width": 480,
           "height": 640,
-          "changedPixels": 38677,
-          "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
-          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
+          "changedPixels": 36866,
+          "visualReview": "pending"
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -311,44 +309,44 @@
           "reloadRounds": [
             {
               "round": 1,
-              "loadInferDisposeMs": 523.251,
+              "loadInferDisposeMs": 279.781,
               "resultCount": 5,
               "memory": {
-                "rssBytes": 492871680,
-                "heapUsedBytes": 11948168,
-                "externalBytes": 21127107,
-                "arrayBuffersBytes": 10894681
+                "rssBytes": 361693184,
+                "heapUsedBytes": 9314096,
+                "externalBytes": 13943521,
+                "arrayBuffersBytes": 10826169
               }
             },
             {
               "round": 2,
-              "loadInferDisposeMs": 551.492,
+              "loadInferDisposeMs": 285.559,
               "resultCount": 5,
               "memory": {
-                "rssBytes": 509935616,
-                "heapUsedBytes": 10489416,
-                "externalBytes": 21121863,
-                "arrayBuffersBytes": 10894681
+                "rssBytes": 238379008,
+                "heapUsedBytes": 9256248,
+                "externalBytes": 19744500,
+                "arrayBuffersBytes": 12942969
               }
             }
           ],
           "initBefore": {
-            "rssBytes": 71786496,
-            "heapUsedBytes": 9097480,
-            "externalBytes": 14042379,
-            "arrayBuffersBytes": 10238090
+            "rssBytes": 95424512,
+            "heapUsedBytes": 7082872,
+            "externalBytes": 12625647,
+            "arrayBuffersBytes": 10235142
           },
           "beforeRelease": {
-            "rssBytes": 375824384,
-            "heapUsedBytes": 12391352,
-            "externalBytes": 23243907,
-            "arrayBuffersBytes": 18814681
+            "rssBytes": 238075904,
+            "heapUsedBytes": 11241608,
+            "externalBytes": 19749412,
+            "arrayBuffersBytes": 16629369
           },
           "afterRelease": {
-            "rssBytes": 376086528,
-            "heapUsedBytes": 11857512,
-            "externalBytes": 23243907,
-            "arrayBuffersBytes": 10894681
+            "rssBytes": 235864064,
+            "heapUsedBytes": 10280136,
+            "externalBytes": 19749412,
+            "arrayBuffersBytes": 12942969
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
         }
@@ -368,10 +366,10 @@
       "sha256": "e3f5515ea1cdbb16d8c6c1a8e58048a0991d5a3b2ee48cc1c82d35b492bcc265",
       "bytes": 38237095,
       "status": "pass",
-      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
-      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:56:19.030Z",
-      "completedAt": "2026-10-21T01:56:24.641Z",
+      "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
+      "validatorSha256": "f4da932bea629409008584eb0362f049a9f1ae6b607e5373db67ed50b0792106",
+      "startedAt": "2026-10-21T20:10:35.735Z",
+      "completedAt": "2026-10-21T20:10:38.342Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26s.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -398,7 +396,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 1684.805,
+        "initializeMs": 807.573,
         "input": [
           {
             "name": "images",
@@ -424,13 +422,13 @@
         ],
         "image": {
           "fixture": {
-            "file": "tests/fixtures/bus.jpg",
+            "file": "tests\\fixtures\\bus.jpg",
             "url": "https://raw.githubusercontent.com/ultralytics/ultralytics/main/ultralytics/assets/bus.jpg",
             "sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 884.253,
+          "latencyMs": 400.55,
           "resultCount": 5,
           "samples": [
             {
@@ -497,11 +495,11 @@
             {
               "timeSeconds": 0,
               "fixture": {
-                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "sha256": "96b5fc8d5a16c0eb75477bedba5ee6e949f03f9bc243515539d35795d9ceaecd",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 949.839,
+              "latencyMs": 401.509,
               "resultCount": 16,
               "samples": [
                 {
@@ -559,11 +557,11 @@
             {
               "timeSeconds": 1,
               "fixture": {
-                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "sha256": "9fb24a244ba376804d8924faafcbedc27ae719b005e641f0346f3a938f4ffc56",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 838.446,
+              "latencyMs": 408.181,
               "resultCount": 16,
               "samples": [
                 {
@@ -628,17 +626,15 @@
             "height": 540
           },
           "resultCount": 2,
-          "latencyMs": 832.422
+          "latencyMs": 399.982
         },
         "render": {
-          "path": "docs/evidence/yolo26/yolo26-detect-s.png",
-          "sha256": "b9a53416562cada0dfea5d6f80cddb34d47510bf8a897dfc61f2b607ec12780a",
+          "path": "docs\\evidence\\yolo26\\yolo26-detect-s.png",
+          "sha256": "81a62be7b8f22634fa053528375438ffcfc00989542239610dc3aec67c64fd4b",
           "width": 480,
           "height": 640,
-          "changedPixels": 40961,
-          "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
-          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
+          "changedPixels": 39180,
+          "visualReview": "pending"
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -647,22 +643,22 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 99532800,
-            "heapUsedBytes": 9635552,
-            "externalBytes": 42397526,
-            "arrayBuffersBytes": 38593237
+            "rssBytes": 124850176,
+            "heapUsedBytes": 7193544,
+            "externalBytes": 40974826,
+            "arrayBuffersBytes": 38584321
           },
           "beforeRelease": {
-            "rssBytes": 422494208,
-            "heapUsedBytes": 12332976,
-            "externalBytes": 49476283,
-            "arrayBuffersBytes": 45047060
+            "rssBytes": 330317824,
+            "heapUsedBytes": 11195240,
+            "externalBytes": 48098292,
+            "arrayBuffersBytes": 44978548
           },
           "afterRelease": {
-            "rssBytes": 422756352,
-            "heapUsedBytes": 11872960,
-            "externalBytes": 49476283,
-            "arrayBuffersBytes": 39243860
+            "rssBytes": 328052736,
+            "heapUsedBytes": 10298064,
+            "externalBytes": 48098292,
+            "arrayBuffersBytes": 41292148
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
         }
@@ -682,10 +678,10 @@
       "sha256": "8d1c032e6f67670e00e0256fd83390fac2e1f9341e2eb627f94ff4a565b4fcce",
       "bytes": 81909133,
       "status": "pass",
-      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
-      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:56:24.787Z",
-      "completedAt": "2026-10-21T01:56:38.693Z",
+      "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
+      "validatorSha256": "f4da932bea629409008584eb0362f049a9f1ae6b607e5373db67ed50b0792106",
+      "startedAt": "2026-10-21T20:10:38.415Z",
+      "completedAt": "2026-10-21T20:10:45.196Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26m.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -712,7 +708,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 3219.371,
+        "initializeMs": 1606.516,
         "input": [
           {
             "name": "images",
@@ -738,13 +734,13 @@
         ],
         "image": {
           "fixture": {
-            "file": "tests/fixtures/bus.jpg",
+            "file": "tests\\fixtures\\bus.jpg",
             "url": "https://raw.githubusercontent.com/ultralytics/ultralytics/main/ultralytics/assets/bus.jpg",
             "sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 2234.028,
+          "latencyMs": 1189.161,
           "resultCount": 5,
           "samples": [
             {
@@ -811,11 +807,11 @@
             {
               "timeSeconds": 0,
               "fixture": {
-                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "sha256": "96b5fc8d5a16c0eb75477bedba5ee6e949f03f9bc243515539d35795d9ceaecd",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 2388.313,
+              "latencyMs": 1238.784,
               "resultCount": 15,
               "samples": [
                 {
@@ -873,11 +869,11 @@
             {
               "timeSeconds": 1,
               "fixture": {
-                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "sha256": "9fb24a244ba376804d8924faafcbedc27ae719b005e641f0346f3a938f4ffc56",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 2841.249,
+              "latencyMs": 1225.003,
               "resultCount": 16,
               "samples": [
                 {
@@ -942,17 +938,15 @@
             "height": 540
           },
           "resultCount": 3,
-          "latencyMs": 2754.886
+          "latencyMs": 1283.98
         },
         "render": {
-          "path": "docs/evidence/yolo26/yolo26-detect-m.png",
-          "sha256": "e039aad2f9b6a9dad701f9bb3cd1a6dfe0e0296c265713537c5ff26716b7d6e0",
+          "path": "docs\\evidence\\yolo26\\yolo26-detect-m.png",
+          "sha256": "b926ab5a02246adefa8c946df8b274a64e909484955b97a7287c47cb2d607d37",
           "width": 480,
           "height": 640,
-          "changedPixels": 40104,
-          "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
-          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
+          "changedPixels": 38363,
+          "visualReview": "pending"
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -961,22 +955,22 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 143753216,
-            "heapUsedBytes": 9179896,
-            "externalBytes": 86096424,
-            "arrayBuffersBytes": 82292135
+            "rssBytes": 167141376,
+            "heapUsedBytes": 7455640,
+            "externalBytes": 84614135,
+            "arrayBuffersBytes": 82223651
           },
           "beforeRelease": {
-            "rssBytes": 613732352,
-            "heapUsedBytes": 12705680,
-            "externalBytes": 93148426,
-            "arrayBuffersBytes": 88719098
+            "rssBytes": 464855040,
+            "heapUsedBytes": 11282928,
+            "externalBytes": 91770578,
+            "arrayBuffersBytes": 88650586
           },
           "afterRelease": {
-            "rssBytes": 613994496,
-            "heapUsedBytes": 11874360,
-            "externalBytes": 93148426,
-            "arrayBuffersBytes": 82915898
+            "rssBytes": 462196736,
+            "heapUsedBytes": 10299832,
+            "externalBytes": 91770578,
+            "arrayBuffersBytes": 84964186
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
         }
@@ -996,10 +990,10 @@
       "sha256": "339eb3bdd2a8855399d5b4e9c53a2b370eb9e319d495600237a252223c981732",
       "bytes": 99559195,
       "status": "pass",
-      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
-      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:56:38.824Z",
-      "completedAt": "2026-10-21T01:56:55.790Z",
+      "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
+      "validatorSha256": "f4da932bea629409008584eb0362f049a9f1ae6b607e5373db67ed50b0792106",
+      "startedAt": "2026-10-21T20:10:45.333Z",
+      "completedAt": "2026-10-21T20:10:54.286Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26l.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -1026,7 +1020,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 4061.76,
+        "initializeMs": 2335.655,
         "input": [
           {
             "name": "images",
@@ -1052,13 +1046,13 @@
         ],
         "image": {
           "fixture": {
-            "file": "tests/fixtures/bus.jpg",
+            "file": "tests\\fixtures\\bus.jpg",
             "url": "https://raw.githubusercontent.com/ultralytics/ultralytics/main/ultralytics/assets/bus.jpg",
             "sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 3292.582,
+          "latencyMs": 1673.827,
           "resultCount": 5,
           "samples": [
             {
@@ -1125,11 +1119,11 @@
             {
               "timeSeconds": 0,
               "fixture": {
-                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "sha256": "96b5fc8d5a16c0eb75477bedba5ee6e949f03f9bc243515539d35795d9ceaecd",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 2988.144,
+              "latencyMs": 1541.851,
               "resultCount": 15,
               "samples": [
                 {
@@ -1187,11 +1181,11 @@
             {
               "timeSeconds": 1,
               "fixture": {
-                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "sha256": "9fb24a244ba376804d8924faafcbedc27ae719b005e641f0346f3a938f4ffc56",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 3215.346,
+              "latencyMs": 1530.643,
               "resultCount": 17,
               "samples": [
                 {
@@ -1256,17 +1250,15 @@
             "height": 540
           },
           "resultCount": 2,
-          "latencyMs": 2878.969
+          "latencyMs": 1562.81
         },
         "render": {
-          "path": "docs/evidence/yolo26/yolo26-detect-l.png",
-          "sha256": "b443300dfaf0530c15e1f13c6cdc569dfb0103ab4e227692495d96bbd583f7d3",
+          "path": "docs\\evidence\\yolo26\\yolo26-detect-l.png",
+          "sha256": "324b2cdea4982f5a185cfe2ee75c73d1c608edfada3f8e40742280d3380126ec",
           "width": 480,
           "height": 640,
-          "changedPixels": 40037,
-          "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
-          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
+          "changedPixels": 38290,
+          "visualReview": "pending"
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -1275,22 +1267,22 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 161509376,
-            "heapUsedBytes": 9494208,
-            "externalBytes": 103753350,
-            "arrayBuffersBytes": 99949061
+            "rssBytes": 186712064,
+            "heapUsedBytes": 7796224,
+            "externalBytes": 102271061,
+            "arrayBuffersBytes": 99880577
           },
           "beforeRelease": {
-            "rssBytes": 613232640,
-            "heapUsedBytes": 12823184,
-            "externalBytes": 116601663,
-            "arrayBuffersBytes": 112172360
+            "rssBytes": 521093120,
+            "heapUsedBytes": 11040016,
+            "externalBytes": 109420561,
+            "arrayBuffersBytes": 106300648
           },
           "afterRelease": {
-            "rssBytes": 613363712,
-            "heapUsedBytes": 11882176,
-            "externalBytes": 116601663,
-            "arrayBuffersBytes": 100565960
+            "rssBytes": 518549504,
+            "heapUsedBytes": 10280080,
+            "externalBytes": 109420561,
+            "arrayBuffersBytes": 102614248
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
         }
@@ -1310,10 +1302,10 @@
       "sha256": "cdb052ff612f4aa018adc982b393fa7e0502d750d970844e393152d030eef095",
       "bytes": 223233339,
       "status": "pass",
-      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
-      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:56:55.913Z",
-      "completedAt": "2026-10-21T01:57:29.767Z",
+      "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
+      "validatorSha256": "f4da932bea629409008584eb0362f049a9f1ae6b607e5373db67ed50b0792106",
+      "startedAt": "2026-10-21T20:10:54.380Z",
+      "completedAt": "2026-10-21T20:11:12.029Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26x.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -1340,7 +1332,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 7228.881,
+        "initializeMs": 3847.313,
         "input": [
           {
             "name": "images",
@@ -1366,13 +1358,13 @@
         ],
         "image": {
           "fixture": {
-            "file": "tests/fixtures/bus.jpg",
+            "file": "tests\\fixtures\\bus.jpg",
             "url": "https://raw.githubusercontent.com/ultralytics/ultralytics/main/ultralytics/assets/bus.jpg",
             "sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 6457.797,
+          "latencyMs": 3471.583,
           "resultCount": 5,
           "samples": [
             {
@@ -1439,11 +1431,11 @@
             {
               "timeSeconds": 0,
               "fixture": {
-                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "sha256": "96b5fc8d5a16c0eb75477bedba5ee6e949f03f9bc243515539d35795d9ceaecd",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 6473.254,
+              "latencyMs": 3382.38,
               "resultCount": 22,
               "samples": [
                 {
@@ -1501,11 +1493,11 @@
             {
               "timeSeconds": 1,
               "fixture": {
-                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "sha256": "9fb24a244ba376804d8924faafcbedc27ae719b005e641f0346f3a938f4ffc56",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 6178.431,
+              "latencyMs": 3354.6,
               "resultCount": 22,
               "samples": [
                 {
@@ -1570,17 +1562,15 @@
             "height": 540
           },
           "resultCount": 3,
-          "latencyMs": 6824.011
+          "latencyMs": 3278.909
         },
         "render": {
-          "path": "docs/evidence/yolo26/yolo26-detect-x.png",
-          "sha256": "fb68bbacc776a763b0f04479d09077f3f6b255c93c50a96e33565b644ec2ab37",
+          "path": "docs\\evidence\\yolo26\\yolo26-detect-x.png",
+          "sha256": "bc3f8c3de87de1a5f8ef266e832a9a673c2106a48eb76d73e9e86556d45c56b9",
           "width": 480,
           "height": 640,
-          "changedPixels": 40342,
-          "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
-          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
+          "changedPixels": 38503,
+          "visualReview": "pending"
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -1589,22 +1579,22 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 285147136,
-            "heapUsedBytes": 9738160,
-            "externalBytes": 227476582,
-            "arrayBuffersBytes": 223672293
+            "rssBytes": 308850688,
+            "heapUsedBytes": 8048400,
+            "externalBytes": 225994293,
+            "arrayBuffersBytes": 223603809
           },
           "beforeRelease": {
-            "rssBytes": 1013399552,
-            "heapUsedBytes": 12261464,
-            "externalBytes": 240276287,
-            "arrayBuffersBytes": 235846504
+            "rssBytes": 920801280,
+            "heapUsedBytes": 11327552,
+            "externalBytes": 238898420,
+            "arrayBuffersBytes": 235777992
           },
           "afterRelease": {
-            "rssBytes": 1013530624,
-            "heapUsedBytes": 11902352,
-            "externalBytes": 240276287,
-            "arrayBuffersBytes": 224240104
+            "rssBytes": 917962752,
+            "heapUsedBytes": 10305776,
+            "externalBytes": 238898420,
+            "arrayBuffersBytes": 232091592
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
         }
@@ -1624,10 +1614,10 @@
       "sha256": "d4a4da5077847338d50788670b6a81f8f5525b516399bb656247a87b64f85964",
       "bytes": 11161769,
       "status": "pass",
-      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
-      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:57:29.895Z",
-      "completedAt": "2026-10-21T01:57:34.358Z",
+      "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
+      "validatorSha256": "f4da932bea629409008584eb0362f049a9f1ae6b607e5373db67ed50b0792106",
+      "startedAt": "2026-10-21T20:11:12.122Z",
+      "completedAt": "2026-10-21T20:11:14.491Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26n-seg.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -1654,7 +1644,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 1254.531,
+        "initializeMs": 637.582,
         "input": [
           {
             "name": "images",
@@ -1690,13 +1680,13 @@
         ],
         "image": {
           "fixture": {
-            "file": "tests/fixtures/bus.jpg",
+            "file": "tests\\fixtures\\bus.jpg",
             "url": "https://raw.githubusercontent.com/ultralytics/ultralytics/main/ultralytics/assets/bus.jpg",
             "sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 416.521,
+          "latencyMs": 231.164,
           "resultCount": 5,
           "samples": [
             {
@@ -1815,11 +1805,11 @@
             {
               "timeSeconds": 0,
               "fixture": {
-                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "sha256": "96b5fc8d5a16c0eb75477bedba5ee6e949f03f9bc243515539d35795d9ceaecd",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 407.361,
+              "latencyMs": 238.903,
               "resultCount": 17,
               "samples": [
                 {
@@ -1929,11 +1919,11 @@
             {
               "timeSeconds": 1,
               "fixture": {
-                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "sha256": "9fb24a244ba376804d8924faafcbedc27ae719b005e641f0346f3a938f4ffc56",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 393.71,
+              "latencyMs": 221.014,
               "resultCount": 16,
               "samples": [
                 {
@@ -2043,14 +2033,12 @@
           ]
         },
         "render": {
-          "path": "docs/evidence/yolo26/yolo26-segment-n.png",
-          "sha256": "d287ad684294332516249e2083a3ebffa620c11183c91160dd5897503f323ae4",
+          "path": "docs\\evidence\\yolo26\\yolo26-segment-n.png",
+          "sha256": "2d5199a859740854cceb5fb801ce8f97eedae016eeb325102fb1ef27ee3c6304",
           "width": 480,
           "height": 640,
-          "changedPixels": 147151,
-          "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
-          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
+          "changedPixels": 146904,
+          "visualReview": "pending"
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -2060,44 +2048,44 @@
           "reloadRounds": [
             {
               "round": 1,
-              "loadInferDisposeMs": 831.465,
+              "loadInferDisposeMs": 440.507,
               "resultCount": 5,
               "memory": {
-                "rssBytes": 548368384,
-                "heapUsedBytes": 12012528,
-                "externalBytes": 26317653,
-                "arrayBuffersBytes": 12445294
+                "rssBytes": 397348864,
+                "heapUsedBytes": 9332304,
+                "externalBytes": 24704524,
+                "arrayBuffersBytes": 17834382
               }
             },
             {
               "round": 2,
-              "loadInferDisposeMs": 827.187,
+              "loadInferDisposeMs": 426.672,
               "resultCount": 5,
               "memory": {
-                "rssBytes": 473505792,
-                "heapUsedBytes": 10555880,
-                "externalBytes": 26566563,
-                "arrayBuffersBytes": 12445294
+                "rssBytes": 258924544,
+                "heapUsedBytes": 9326584,
+                "externalBytes": 25035478,
+                "arrayBuffersBytes": 18088536
               }
             }
           ],
           "initBefore": {
-            "rssBytes": 72286208,
-            "heapUsedBytes": 9730912,
-            "externalBytes": 15321224,
-            "arrayBuffersBytes": 11516935
+            "rssBytes": 97251328,
+            "heapUsedBytes": 7040128,
+            "externalBytes": 13899500,
+            "arrayBuffersBytes": 11508995
           },
           "beforeRelease": {
-            "rssBytes": 468021248,
-            "heapUsedBytes": 14179280,
-            "externalBytes": 35996661,
-            "arrayBuffersBytes": 31575502
+            "rssBytes": 260579328,
+            "heapUsedBytes": 14813224,
+            "externalBytes": 25551644,
+            "arrayBuffersBytes": 22439790
           },
           "afterRelease": {
-            "rssBytes": 468283392,
-            "heapUsedBytes": 11927160,
-            "externalBytes": 16612299,
-            "arrayBuffersBytes": 12191140
+            "rssBytes": 258322432,
+            "heapUsedBytes": 10352704,
+            "externalBytes": 25551644,
+            "arrayBuffersBytes": 17514261
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
         }
@@ -2117,10 +2105,10 @@
       "sha256": "83db44ad9f930e062506099e03388aa523bfeb0c378efe94696013ac9e4ceae2",
       "bytes": 41855456,
       "status": "pass",
-      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
-      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:57:34.497Z",
-      "completedAt": "2026-10-21T01:57:40.339Z",
+      "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
+      "validatorSha256": "f4da932bea629409008584eb0362f049a9f1ae6b607e5373db67ed50b0792106",
+      "startedAt": "2026-10-21T20:11:14.564Z",
+      "completedAt": "2026-10-21T20:11:17.898Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26s-seg.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -2147,7 +2135,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 1889.54,
+        "initializeMs": 1151.171,
         "input": [
           {
             "name": "images",
@@ -2183,13 +2171,13 @@
         ],
         "image": {
           "fixture": {
-            "file": "tests/fixtures/bus.jpg",
+            "file": "tests\\fixtures\\bus.jpg",
             "url": "https://raw.githubusercontent.com/ultralytics/ultralytics/main/ultralytics/assets/bus.jpg",
             "sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 1160.471,
+          "latencyMs": 648.993,
           "resultCount": 5,
           "samples": [
             {
@@ -2308,11 +2296,11 @@
             {
               "timeSeconds": 0,
               "fixture": {
-                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "sha256": "96b5fc8d5a16c0eb75477bedba5ee6e949f03f9bc243515539d35795d9ceaecd",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 1194.778,
+              "latencyMs": 665.402,
               "resultCount": 26,
               "samples": [
                 {
@@ -2422,11 +2410,11 @@
             {
               "timeSeconds": 1,
               "fixture": {
-                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "sha256": "9fb24a244ba376804d8924faafcbedc27ae719b005e641f0346f3a938f4ffc56",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 1148.753,
+              "latencyMs": 675.545,
               "resultCount": 19,
               "samples": [
                 {
@@ -2536,14 +2524,12 @@
           ]
         },
         "render": {
-          "path": "docs/evidence/yolo26/yolo26-segment-s.png",
-          "sha256": "f63b305ec1428ba0b80b2acc52be141fb63f87f532c5170c7d7f5329b90ff174",
+          "path": "docs\\evidence\\yolo26\\yolo26-segment-s.png",
+          "sha256": "ad3e5a0bc228dcab59fe8da1724dd8c84e4f61d5099abd55cb09094324d05a08",
           "width": 480,
           "height": 640,
-          "changedPixels": 148589,
-          "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
-          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
+          "changedPixels": 148319,
+          "visualReview": "pending"
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -2552,22 +2538,22 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 103337984,
-            "heapUsedBytes": 9769728,
-            "externalBytes": 46024831,
-            "arrayBuffersBytes": 42220542
+            "rssBytes": 127684608,
+            "heapUsedBytes": 7032648,
+            "externalBytes": 44593187,
+            "arrayBuffersBytes": 42202682
           },
           "beforeRelease": {
-            "rssBytes": 527765504,
-            "heapUsedBytes": 13904400,
-            "externalBytes": 57862463,
-            "arrayBuffersBytes": 53442175
+            "rssBytes": 367964160,
+            "heapUsedBytes": 11749960,
+            "externalBytes": 56484835,
+            "arrayBuffersBytes": 53373663
           },
           "afterRelease": {
-            "rssBytes": 528027648,
-            "heapUsedBytes": 11928832,
-            "externalBytes": 57862463,
-            "arrayBuffersBytes": 42887000
+            "rssBytes": 365678592,
+            "heapUsedBytes": 10353928,
+            "externalBytes": 56484835,
+            "arrayBuffersBytes": 48201151
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
         }
@@ -2587,10 +2573,10 @@
       "sha256": "8e8235dde37895c45c2fa7248e9fd2a5df1d9e6e32f9591e66e93533fce1057c",
       "bytes": 94558924,
       "status": "pass",
-      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
-      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:57:40.456Z",
-      "completedAt": "2026-10-21T01:57:56.912Z",
+      "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
+      "validatorSha256": "f4da932bea629409008584eb0362f049a9f1ae6b607e5373db67ed50b0792106",
+      "startedAt": "2026-10-21T20:11:17.973Z",
+      "completedAt": "2026-10-21T20:11:27.041Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26m-seg.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -2617,7 +2603,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 4777.092,
+        "initializeMs": 2486.322,
         "input": [
           {
             "name": "images",
@@ -2653,13 +2639,13 @@
         ],
         "image": {
           "fixture": {
-            "file": "tests/fixtures/bus.jpg",
+            "file": "tests\\fixtures\\bus.jpg",
             "url": "https://raw.githubusercontent.com/ultralytics/ultralytics/main/ultralytics/assets/bus.jpg",
             "sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 4032.896,
+          "latencyMs": 2081.508,
           "resultCount": 5,
           "samples": [
             {
@@ -2778,11 +2764,11 @@
             {
               "timeSeconds": 0,
               "fixture": {
-                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "sha256": "96b5fc8d5a16c0eb75477bedba5ee6e949f03f9bc243515539d35795d9ceaecd",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 3685.505,
+              "latencyMs": 2120.58,
               "resultCount": 17,
               "samples": [
                 {
@@ -2892,11 +2878,11 @@
             {
               "timeSeconds": 1,
               "fixture": {
-                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "sha256": "9fb24a244ba376804d8924faafcbedc27ae719b005e641f0346f3a938f4ffc56",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 3519.61,
+              "latencyMs": 2134.894,
               "resultCount": 16,
               "samples": [
                 {
@@ -3006,14 +2992,12 @@
           ]
         },
         "render": {
-          "path": "docs/evidence/yolo26/yolo26-segment-m.png",
-          "sha256": "00fe84a1242c2bbbe0241a146ad0b6c4cf4239101c51edbbfb27de573d144074",
+          "path": "docs\\evidence\\yolo26\\yolo26-segment-m.png",
+          "sha256": "1046323547aa4773d38eb88502aa879f0864ca512b8454aa1871f59971448c9d",
           "width": 480,
           "height": 640,
-          "changedPixels": 148419,
-          "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
-          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
+          "changedPixels": 148115,
+          "visualReview": "pending"
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -3022,22 +3006,22 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 156135424,
-            "heapUsedBytes": 9310576,
-            "externalBytes": 98751207,
-            "arrayBuffersBytes": 94946918
+            "rssBytes": 180224000,
+            "heapUsedBytes": 7595832,
+            "externalBytes": 97268918,
+            "arrayBuffersBytes": 94878434
           },
           "beforeRelease": {
-            "rssBytes": 683610112,
-            "heapUsedBytes": 13148768,
-            "externalBytes": 110327251,
-            "arrayBuffersBytes": 105906842
+            "rssBytes": 551604224,
+            "heapUsedBytes": 10903424,
+            "externalBytes": 118016756,
+            "arrayBuffersBytes": 114905530
           },
           "afterRelease": {
-            "rssBytes": 683601920,
-            "heapUsedBytes": 10509144,
-            "externalBytes": 110323128,
-            "arrayBuffersBytes": 95588434
+            "rssBytes": 548900864,
+            "heapUsedBytes": 10336520,
+            "externalBytes": 118016756,
+            "arrayBuffersBytes": 109990330
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
         }
@@ -3057,10 +3041,10 @@
       "sha256": "9c06456a2b4cce5bcf1bd73b12b3146938408cc62e56251133e36dce71c8f417",
       "bytes": 112208986,
       "status": "pass",
-      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
-      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:57:57.032Z",
-      "completedAt": "2026-10-21T01:58:15.819Z",
+      "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
+      "validatorSha256": "f4da932bea629409008584eb0362f049a9f1ae6b607e5373db67ed50b0792106",
+      "startedAt": "2026-10-21T20:11:27.125Z",
+      "completedAt": "2026-10-21T20:11:37.625Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26l-seg.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -3087,7 +3071,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 5038.703,
+        "initializeMs": 2797.587,
         "input": [
           {
             "name": "images",
@@ -3123,13 +3107,13 @@
         ],
         "image": {
           "fixture": {
-            "file": "tests/fixtures/bus.jpg",
+            "file": "tests\\fixtures\\bus.jpg",
             "url": "https://raw.githubusercontent.com/ultralytics/ultralytics/main/ultralytics/assets/bus.jpg",
             "sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 4280.082,
+          "latencyMs": 2456.896,
           "resultCount": 5,
           "samples": [
             {
@@ -3248,11 +3232,11 @@
             {
               "timeSeconds": 0,
               "fixture": {
-                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "sha256": "96b5fc8d5a16c0eb75477bedba5ee6e949f03f9bc243515539d35795d9ceaecd",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 4316.688,
+              "latencyMs": 2460.279,
               "resultCount": 20,
               "samples": [
                 {
@@ -3362,11 +3346,11 @@
             {
               "timeSeconds": 1,
               "fixture": {
-                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "sha256": "9fb24a244ba376804d8924faafcbedc27ae719b005e641f0346f3a938f4ffc56",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 4637.976,
+              "latencyMs": 2541.942,
               "resultCount": 22,
               "samples": [
                 {
@@ -3476,14 +3460,12 @@
           ]
         },
         "render": {
-          "path": "docs/evidence/yolo26/yolo26-segment-l.png",
-          "sha256": "bf197dcc9e605ab817c4efc68a1749181f3e27f7010aa3d1175c7c31cdef37b8",
+          "path": "docs\\evidence\\yolo26\\yolo26-segment-l.png",
+          "sha256": "51898e58f2e99f06bbc12e90763fe1a328d3e7cae7c13c36b5eb6e9f13e4f308",
           "width": 480,
           "height": 640,
-          "changedPixels": 148220,
-          "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
-          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
+          "changedPixels": 147935,
+          "visualReview": "pending"
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -3492,22 +3474,22 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 174530560,
-            "heapUsedBytes": 9607616,
-            "externalBytes": 116408341,
-            "arrayBuffersBytes": 112604052
+            "rssBytes": 197763072,
+            "heapUsedBytes": 7907864,
+            "externalBytes": 114926052,
+            "arrayBuffersBytes": 112535568
           },
           "beforeRelease": {
-            "rssBytes": 727920640,
-            "heapUsedBytes": 11846568,
-            "externalBytes": 128441856,
-            "arrayBuffersBytes": 124021861
+            "rssBytes": 575619072,
+            "heapUsedBytes": 11271328,
+            "externalBytes": 127064342,
+            "arrayBuffersBytes": 123953349
           },
           "afterRelease": {
-            "rssBytes": 728051712,
-            "heapUsedBytes": 10533064,
-            "externalBytes": 128437733,
-            "arrayBuffersBytes": 113241337
+            "rssBytes": 573349888,
+            "heapUsedBytes": 10343424,
+            "externalBytes": 127064342,
+            "arrayBuffersBytes": 119340549
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
         }
@@ -3527,10 +3509,10 @@
       "sha256": "c815dd6377a436a3c453c435a8da6b88c5136135148304750aa9d8c2300eb25d",
       "bytes": 251623808,
       "status": "pass",
-      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
-      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:58:15.960Z",
-      "completedAt": "2026-10-21T01:58:55.869Z",
+      "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
+      "validatorSha256": "f4da932bea629409008584eb0362f049a9f1ae6b607e5373db67ed50b0792106",
+      "startedAt": "2026-10-21T20:11:37.706Z",
+      "completedAt": "2026-10-21T20:11:59.483Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26x-seg.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -3557,7 +3539,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 10377.74,
+        "initializeMs": 5657.623,
         "input": [
           {
             "name": "images",
@@ -3593,13 +3575,13 @@
         ],
         "image": {
           "fixture": {
-            "file": "tests/fixtures/bus.jpg",
+            "file": "tests\\fixtures\\bus.jpg",
             "url": "https://raw.githubusercontent.com/ultralytics/ultralytics/main/ultralytics/assets/bus.jpg",
             "sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 9769.09,
+          "latencyMs": 5273.774,
           "resultCount": 5,
           "samples": [
             {
@@ -3718,11 +3700,11 @@
             {
               "timeSeconds": 0,
               "fixture": {
-                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "sha256": "96b5fc8d5a16c0eb75477bedba5ee6e949f03f9bc243515539d35795d9ceaecd",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 9590.389,
+              "latencyMs": 5240.137,
               "resultCount": 16,
               "samples": [
                 {
@@ -3832,11 +3814,11 @@
             {
               "timeSeconds": 1,
               "fixture": {
-                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "sha256": "9fb24a244ba376804d8924faafcbedc27ae719b005e641f0346f3a938f4ffc56",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 9402.422,
+              "latencyMs": 5274.272,
               "resultCount": 20,
               "samples": [
                 {
@@ -3946,14 +3928,12 @@
           ]
         },
         "render": {
-          "path": "docs/evidence/yolo26/yolo26-segment-x.png",
-          "sha256": "91210fd5f4de60ee0cb5133c3899bb839609a013ab63f1b29e589e3a8bf0b1ab",
+          "path": "docs\\evidence\\yolo26\\yolo26-segment-x.png",
+          "sha256": "5e66e68c2aa3a74f85213f88c5460f9f708235091186e4a30cf34b9fa412e0a0",
           "width": 480,
           "height": 640,
-          "changedPixels": 149382,
-          "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
-          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
+          "changedPixels": 149135,
+          "visualReview": "pending"
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -3962,22 +3942,22 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 313655296,
-            "heapUsedBytes": 9880736,
-            "externalBytes": 255878283,
-            "arrayBuffersBytes": 252073994
+            "rssBytes": 337317888,
+            "heapUsedBytes": 8172872,
+            "externalBytes": 254395994,
+            "arrayBuffersBytes": 252005510
           },
           "beforeRelease": {
-            "rssBytes": 1148768256,
-            "heapUsedBytes": 11499400,
-            "externalBytes": 267698970,
-            "arrayBuffersBytes": 263278706
+            "rssBytes": 1008078848,
+            "heapUsedBytes": 11557376,
+            "externalBytes": 266321005,
+            "arrayBuffersBytes": 263210194
           },
           "afterRelease": {
-            "rssBytes": 1149030400,
-            "heapUsedBytes": 10532672,
-            "externalBytes": 267694847,
-            "arrayBuffersBytes": 252655055
+            "rssBytes": 1005592576,
+            "heapUsedBytes": 10358688,
+            "externalBytes": 264861805,
+            "arrayBuffersBytes": 258064594
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
         }
@@ -3997,10 +3977,10 @@
       "sha256": "af993717f4427d15dc96fc25eb091b3a9d136aba4fd06d8b8e990bc74212d564",
       "bytes": 12044096,
       "status": "pass",
-      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
-      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:58:56.010Z",
-      "completedAt": "2026-10-21T01:58:59.651Z",
+      "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
+      "validatorSha256": "f4da932bea629409008584eb0362f049a9f1ae6b607e5373db67ed50b0792106",
+      "startedAt": "2026-10-21T20:11:59.581Z",
+      "completedAt": "2026-10-21T20:12:01.534Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26n-pose.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -4029,7 +4009,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 1032.67,
+        "initializeMs": 580.988,
         "input": [
           {
             "name": "images",
@@ -4055,13 +4035,13 @@
         ],
         "image": {
           "fixture": {
-            "file": "tests/fixtures/bus.jpg",
+            "file": "tests\\fixtures\\bus.jpg",
             "url": "https://raw.githubusercontent.com/ultralytics/ultralytics/main/ultralytics/assets/bus.jpg",
             "sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 289.582,
+          "latencyMs": 170.493,
           "resultCount": 4,
           "samples": [
             {
@@ -4395,11 +4375,11 @@
             {
               "timeSeconds": 0,
               "fixture": {
-                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "sha256": "96b5fc8d5a16c0eb75477bedba5ee6e949f03f9bc243515539d35795d9ceaecd",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 313.8,
+              "latencyMs": 159.093,
               "resultCount": 7,
               "samples": [
                 {
@@ -4724,11 +4704,11 @@
             {
               "timeSeconds": 1,
               "fixture": {
-                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "sha256": "9fb24a244ba376804d8924faafcbedc27ae719b005e641f0346f3a938f4ffc56",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 306.072,
+              "latencyMs": 161.47,
               "resultCount": 5,
               "samples": [
                 {
@@ -5053,14 +5033,12 @@
           ]
         },
         "render": {
-          "path": "docs/evidence/yolo26/yolo26-pose-n.png",
-          "sha256": "712eee3e540fea0cf990c260575c248f3153680aa3d68cd4a8a58fa6f401a65e",
+          "path": "docs\\evidence\\yolo26\\yolo26-pose-n.png",
+          "sha256": "d913319e359f9a20c3fc0d633739a7a87de82eb8f03ee91ba113ccd3708ed4d0",
           "width": 480,
           "height": 640,
-          "changedPixels": 39388,
-          "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
-          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
+          "changedPixels": 38131,
+          "visualReview": "pending"
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -5070,44 +5048,44 @@
           "reloadRounds": [
             {
               "round": 1,
-              "loadInferDisposeMs": 668.366,
+              "loadInferDisposeMs": 354.311,
               "resultCount": 4,
               "memory": {
-                "rssBytes": 468230144,
-                "heapUsedBytes": 11928224,
-                "externalBytes": 17489540,
-                "arrayBuffersBytes": 13050861
+                "rssBytes": 375308288,
+                "heapUsedBytes": 10334808,
+                "externalBytes": 27535468,
+                "arrayBuffersBytes": 19491149
               }
             },
             {
               "round": 2,
-              "loadInferDisposeMs": 664.625,
+              "loadInferDisposeMs": 344.821,
               "resultCount": 4,
               "memory": {
-                "rssBytes": 483172352,
-                "heapUsedBytes": 11962560,
-                "externalBytes": 18900740,
-                "arrayBuffersBytes": 13050861
+                "rssBytes": 235868160,
+                "heapUsedBytes": 10359936,
+                "externalBytes": 17522668,
+                "arrayBuffersBytes": 12982349
               }
             }
           ],
           "initBefore": {
-            "rssBytes": 73781248,
-            "heapUsedBytes": 9211048,
-            "externalBytes": 16198559,
-            "arrayBuffersBytes": 12394270
+            "rssBytes": 97685504,
+            "heapUsedBytes": 7051152,
+            "externalBytes": 14781827,
+            "arrayBuffersBytes": 12391322
           },
           "beforeRelease": {
-            "rssBytes": 423686144,
-            "heapUsedBytes": 14161992,
-            "externalBytes": 58281730,
-            "arrayBuffersBytes": 53843051
+            "rssBytes": 251813888,
+            "heapUsedBytes": 10945536,
+            "externalBytes": 26306668,
+            "arrayBuffersBytes": 23177549
           },
           "afterRelease": {
-            "rssBytes": 421433344,
-            "heapUsedBytes": 11895344,
-            "externalBytes": 58281730,
-            "arrayBuffersBytes": 28343661
+            "rssBytes": 248815616,
+            "heapUsedBytes": 10305400,
+            "externalBytes": 26306668,
+            "arrayBuffersBytes": 19491149
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
         }
@@ -5127,10 +5105,10 @@
       "sha256": "b388778b05291db4d8d30c36322aea6723f0b9ffb7c5dd0d078051cd78edb727",
       "bytes": 41777468,
       "status": "pass",
-      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
-      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:58:59.777Z",
-      "completedAt": "2026-10-21T01:59:04.295Z",
+      "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
+      "validatorSha256": "f4da932bea629409008584eb0362f049a9f1ae6b607e5373db67ed50b0792106",
+      "startedAt": "2026-10-21T20:12:01.605Z",
+      "completedAt": "2026-10-21T20:12:04.002Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26s-pose.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -5159,7 +5137,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 1474.204,
+        "initializeMs": 854.717,
         "input": [
           {
             "name": "images",
@@ -5185,13 +5163,13 @@
         ],
         "image": {
           "fixture": {
-            "file": "tests/fixtures/bus.jpg",
+            "file": "tests\\fixtures\\bus.jpg",
             "url": "https://raw.githubusercontent.com/ultralytics/ultralytics/main/ultralytics/assets/bus.jpg",
             "sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 827.191,
+          "latencyMs": 453.292,
           "resultCount": 4,
           "samples": [
             {
@@ -5525,11 +5503,11 @@
             {
               "timeSeconds": 0,
               "fixture": {
-                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "sha256": "96b5fc8d5a16c0eb75477bedba5ee6e949f03f9bc243515539d35795d9ceaecd",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 875.402,
+              "latencyMs": 444.125,
               "resultCount": 4,
               "samples": [
                 {
@@ -5854,11 +5832,11 @@
             {
               "timeSeconds": 1,
               "fixture": {
-                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "sha256": "9fb24a244ba376804d8924faafcbedc27ae719b005e641f0346f3a938f4ffc56",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 848.872,
+              "latencyMs": 455.209,
               "resultCount": 4,
               "samples": [
                 {
@@ -6183,14 +6161,12 @@
           ]
         },
         "render": {
-          "path": "docs/evidence/yolo26/yolo26-pose-s.png",
-          "sha256": "22eee220adddb507a6c21eec0c5cc4938c30a233267a44dd87df230a08d74130",
+          "path": "docs\\evidence\\yolo26\\yolo26-pose-s.png",
+          "sha256": "8e08947ab95e28fdf72f91e7598703884bf925751004e03f711c67daf8442e61",
           "width": 480,
           "height": 640,
-          "changedPixels": 41051,
-          "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
-          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
+          "changedPixels": 39795,
+          "visualReview": "pending"
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -6199,22 +6175,22 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 102916096,
-            "heapUsedBytes": 9698016,
-            "externalBytes": 45936235,
-            "arrayBuffersBytes": 42131946
+            "rssBytes": 128094208,
+            "heapUsedBytes": 7037320,
+            "externalBytes": 44515199,
+            "arrayBuffersBytes": 42124694
           },
           "beforeRelease": {
-            "rssBytes": 473907200,
-            "heapUsedBytes": 39523648,
-            "externalBytes": 66205462,
-            "arrayBuffersBytes": 58077865
+            "rssBytes": 361357312,
+            "heapUsedBytes": 12309672,
+            "externalBytes": 50944984,
+            "arrayBuffersBytes": 47813321
           },
           "afterRelease": {
-            "rssBytes": 474300416,
-            "heapUsedBytes": 11881912,
-            "externalBytes": 52323030,
-            "arrayBuffersBytes": 42784233
+            "rssBytes": 358567936,
+            "heapUsedBytes": 10281808,
+            "externalBytes": 50944984,
+            "arrayBuffersBytes": 44126921
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
         }
@@ -6234,10 +6210,10 @@
       "sha256": "ebc8a97c876a7a557e765b6dccc784e12e7f689ae1607f6e7f800530641f402a",
       "bytes": 86503202,
       "status": "pass",
-      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
-      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:59:04.423Z",
-      "completedAt": "2026-10-21T01:59:14.811Z",
+      "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
+      "validatorSha256": "f4da932bea629409008584eb0362f049a9f1ae6b607e5373db67ed50b0792106",
+      "startedAt": "2026-10-21T20:12:04.079Z",
+      "completedAt": "2026-10-21T20:12:09.987Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26m-pose.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -6266,7 +6242,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 2944.31,
+        "initializeMs": 1734.381,
         "input": [
           {
             "name": "images",
@@ -6292,13 +6268,13 @@
         ],
         "image": {
           "fixture": {
-            "file": "tests/fixtures/bus.jpg",
+            "file": "tests\\fixtures\\bus.jpg",
             "url": "https://raw.githubusercontent.com/ultralytics/ultralytics/main/ultralytics/assets/bus.jpg",
             "sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 2313.75,
+          "latencyMs": 1321.17,
           "resultCount": 4,
           "samples": [
             {
@@ -6632,11 +6608,11 @@
             {
               "timeSeconds": 0,
               "fixture": {
-                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "sha256": "96b5fc8d5a16c0eb75477bedba5ee6e949f03f9bc243515539d35795d9ceaecd",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 2280.633,
+              "latencyMs": 1311.968,
               "resultCount": 4,
               "samples": [
                 {
@@ -6961,11 +6937,11 @@
             {
               "timeSeconds": 1,
               "fixture": {
-                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "sha256": "9fb24a244ba376804d8924faafcbedc27ae719b005e641f0346f3a938f4ffc56",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 2373.604,
+              "latencyMs": 1313.11,
               "resultCount": 1,
               "samples": [
                 {
@@ -7090,14 +7066,12 @@
           ]
         },
         "render": {
-          "path": "docs/evidence/yolo26/yolo26-pose-m.png",
-          "sha256": "25e3a9ef5145cfab5da092c0bccbd977ed8a81d16d46aaeccd89bdd3dcdde8f2",
+          "path": "docs\\evidence\\yolo26\\yolo26-pose-m.png",
+          "sha256": "3e5312aa99d98bb4690fd4d919c540c983c75141763b14bfe64fd89d2115979f",
           "width": 480,
           "height": 640,
-          "changedPixels": 40534,
-          "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
-          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
+          "changedPixels": 39265,
+          "visualReview": "pending"
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -7106,22 +7080,22 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 147849216,
-            "heapUsedBytes": 9223880,
-            "externalBytes": 90692157,
-            "arrayBuffersBytes": 86887868
+            "rssBytes": 171970560,
+            "heapUsedBytes": 7461680,
+            "externalBytes": 89209868,
+            "arrayBuffersBytes": 86819384
           },
           "beforeRelease": {
-            "rssBytes": 676188160,
-            "heapUsedBytes": 15963152,
-            "externalBytes": 102145556,
-            "arrayBuffersBytes": 97705167
+            "rssBytes": 503070720,
+            "heapUsedBytes": 14479208,
+            "externalBytes": 100767587,
+            "arrayBuffersBytes": 97636655
           },
           "afterRelease": {
-            "rssBytes": 676450304,
-            "heapUsedBytes": 11874232,
-            "externalBytes": 102145556,
-            "arrayBuffersBytes": 87509967
+            "rssBytes": 500809728,
+            "heapUsedBytes": 10295000,
+            "externalBytes": 100767587,
+            "arrayBuffersBytes": 93950255
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
         }
@@ -7141,10 +7115,10 @@
       "sha256": "631b9e1f655d5fec30f457dbed9fe87938100af68322b02f32e1609196725e8e",
       "bytes": 104153264,
       "status": "pass",
-      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
-      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:59:14.947Z",
-      "completedAt": "2026-10-21T01:59:28.280Z",
+      "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
+      "validatorSha256": "f4da932bea629409008584eb0362f049a9f1ae6b607e5373db67ed50b0792106",
+      "startedAt": "2026-10-21T20:12:10.070Z",
+      "completedAt": "2026-10-21T20:12:17.137Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26l-pose.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -7173,7 +7147,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 3686.326,
+        "initializeMs": 2036.731,
         "input": [
           {
             "name": "images",
@@ -7199,13 +7173,13 @@
         ],
         "image": {
           "fixture": {
-            "file": "tests/fixtures/bus.jpg",
+            "file": "tests\\fixtures\\bus.jpg",
             "url": "https://raw.githubusercontent.com/ultralytics/ultralytics/main/ultralytics/assets/bus.jpg",
             "sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 2932.755,
+          "latencyMs": 1601.544,
           "resultCount": 4,
           "samples": [
             {
@@ -7539,11 +7513,11 @@
             {
               "timeSeconds": 0,
               "fixture": {
-                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "sha256": "96b5fc8d5a16c0eb75477bedba5ee6e949f03f9bc243515539d35795d9ceaecd",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 3123.526,
+              "latencyMs": 1593.483,
               "resultCount": 4,
               "samples": [
                 {
@@ -7868,11 +7842,11 @@
             {
               "timeSeconds": 1,
               "fixture": {
-                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "sha256": "9fb24a244ba376804d8924faafcbedc27ae719b005e641f0346f3a938f4ffc56",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 2951.998,
+              "latencyMs": 1598.816,
               "resultCount": 2,
               "samples": [
                 {
@@ -8097,14 +8071,12 @@
           ]
         },
         "render": {
-          "path": "docs/evidence/yolo26/yolo26-pose-l.png",
-          "sha256": "331526af9b2403e4eeb24dfe4a2ebe3da9fe76413cdba40afcf3fb40e77a91b3",
+          "path": "docs\\evidence\\yolo26\\yolo26-pose-l.png",
+          "sha256": "9e67217779895cede5ce4ddb01a749c972409bc42a35888baec3a8b86298ed1a",
           "width": 480,
           "height": 640,
-          "changedPixels": 41288,
-          "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
-          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
+          "changedPixels": 39988,
+          "visualReview": "pending"
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -8113,22 +8085,22 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 166019072,
-            "heapUsedBytes": 9517216,
-            "externalBytes": 108349291,
-            "arrayBuffersBytes": 104545002
+            "rssBytes": 189521920,
+            "heapUsedBytes": 7776656,
+            "externalBytes": 106867002,
+            "arrayBuffersBytes": 104476518
           },
           "beforeRelease": {
-            "rssBytes": 680083456,
-            "heapUsedBytes": 12034776,
-            "externalBytes": 119796333,
-            "arrayBuffersBytes": 115355229
+            "rssBytes": 538476544,
+            "heapUsedBytes": 10848456,
+            "externalBytes": 118418122,
+            "arrayBuffersBytes": 115286717
           },
           "afterRelease": {
-            "rssBytes": 680214528,
-            "heapUsedBytes": 11883136,
-            "externalBytes": 119796333,
-            "arrayBuffersBytes": 105160029
+            "rssBytes": 536285184,
+            "heapUsedBytes": 10302240,
+            "externalBytes": 118418122,
+            "arrayBuffersBytes": 111600317
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
         }
@@ -8148,10 +8120,10 @@
       "sha256": "f9fa35b3181b72328414649cad937bf752c15ad0bf5131d91dea12f1bf4090e7",
       "bytes": 230646812,
       "status": "pass",
-      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
-      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:59:28.415Z",
-      "completedAt": "2026-10-21T01:59:54.401Z",
+      "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
+      "validatorSha256": "f4da932bea629409008584eb0362f049a9f1ae6b607e5373db67ed50b0792106",
+      "startedAt": "2026-10-21T20:12:17.222Z",
+      "completedAt": "2026-10-21T20:12:31.993Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26x-pose.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -8180,7 +8152,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 6849.62,
+        "initializeMs": 3849.207,
         "input": [
           {
             "name": "images",
@@ -8206,13 +8178,13 @@
         ],
         "image": {
           "fixture": {
-            "file": "tests/fixtures/bus.jpg",
+            "file": "tests\\fixtures\\bus.jpg",
             "url": "https://raw.githubusercontent.com/ultralytics/ultralytics/main/ultralytics/assets/bus.jpg",
             "sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 5898.756,
+          "latencyMs": 3473.186,
           "resultCount": 4,
           "samples": [
             {
@@ -8546,11 +8518,11 @@
             {
               "timeSeconds": 0,
               "fixture": {
-                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "sha256": "96b5fc8d5a16c0eb75477bedba5ee6e949f03f9bc243515539d35795d9ceaecd",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 6363.835,
+              "latencyMs": 3603.879,
               "resultCount": 3,
               "samples": [
                 {
@@ -8875,11 +8847,11 @@
             {
               "timeSeconds": 1,
               "fixture": {
-                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "sha256": "9fb24a244ba376804d8924faafcbedc27ae719b005e641f0346f3a938f4ffc56",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 6221.954,
+              "latencyMs": 3524.89,
               "resultCount": 2,
               "samples": [
                 {
@@ -9104,14 +9076,12 @@
           ]
         },
         "render": {
-          "path": "docs/evidence/yolo26/yolo26-pose-x.png",
-          "sha256": "450b43c9fb6d2f339544220833e6f02430c4febe8fd979eb6c85065baf015019",
+          "path": "docs\\evidence\\yolo26\\yolo26-pose-x.png",
+          "sha256": "de73432e04be4f86f6b4c1da094bab40e3ac6ace37ad6c74a6bb0b8e86f4f9c2",
           "width": 480,
           "height": 640,
-          "changedPixels": 41433,
-          "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
-          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
+          "changedPixels": 40084,
+          "visualReview": "pending"
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -9120,22 +9090,22 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 292368384,
-            "heapUsedBytes": 9769912,
-            "externalBytes": 234892967,
-            "arrayBuffersBytes": 231088678
+            "rssBytes": 316018688,
+            "heapUsedBytes": 7995448,
+            "externalBytes": 233410678,
+            "arrayBuffersBytes": 231020194
           },
           "beforeRelease": {
-            "rssBytes": 1085681664,
-            "heapUsedBytes": 11947592,
-            "externalBytes": 246289799,
-            "arrayBuffersBytes": 241848777
+            "rssBytes": 941891584,
+            "heapUsedBytes": 11367192,
+            "externalBytes": 244911457,
+            "arrayBuffersBytes": 241780265
           },
           "afterRelease": {
-            "rssBytes": 1085943808,
-            "heapUsedBytes": 11880016,
-            "externalBytes": 246289799,
-            "arrayBuffersBytes": 231653577
+            "rssBytes": 938676224,
+            "heapUsedBytes": 10300856,
+            "externalBytes": 244911457,
+            "arrayBuffersBytes": 238093865
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
         }
@@ -9155,10 +9125,10 @@
       "sha256": "1323630be528baebcaf4d831fde58853d9e70628a78aef898695dedcb070e2f8",
       "bytes": 11293163,
       "status": "pass",
-      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
-      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:59:54.530Z",
-      "completedAt": "2026-10-21T01:59:55.869Z",
+      "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
+      "validatorSha256": "f4da932bea629409008584eb0362f049a9f1ae6b607e5373db67ed50b0792106",
+      "startedAt": "2026-10-21T20:12:32.103Z",
+      "completedAt": "2026-10-21T20:12:33.022Z",
       "source": {
         "url": "https://huggingface.co/prithivMLmods/YOLO26-ONNX/resolve/c526dae7a5a5b4f1d79d704903b4406011da2716/yolo26n-cls/yolo26n-cls.onnx",
         "revision": "c526dae7a5a5b4f1d79d704903b4406011da2716",
@@ -9185,7 +9155,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 504.228,
+        "initializeMs": 360.214,
         "input": [
           {
             "name": "images",
@@ -9210,14 +9180,14 @@
         ],
         "image": {
           "fixture": {
-            "file": "tests/fixtures/yolo26/classification.jpg",
+            "file": "tests\\fixtures\\yolo26\\classification.jpg",
             "url": "https://github.com/ultralytics/assets/releases/download/v0.0.0/imagenet10.zip",
             "sha256": "d628b7c08a891ef4a5c8765a4f751d1db01adaa02149f291082e4f72f624b995",
             "width": 160,
             "height": 120,
             "archiveMember": "train/n01443537/n01443537_22323.JPEG"
           },
-          "latencyMs": 49.549,
+          "latencyMs": 29.767,
           "resultCount": 5,
           "samples": [
             {
@@ -9246,7 +9216,7 @@
               "type": "float32",
               "count": 1000,
               "nonFinite": 0,
-              "min": 1.8144672431219533e-09,
+              "min": 1.8144672431219533e-9,
               "max": 0.4191262125968933,
               "sum": 0.9999999643674786,
               "sha256": "9c3ef2c8f531f1289ec3cfa6ea0ac00127350329d3130082a708f18c01acaf44"
@@ -9267,11 +9237,11 @@
             {
               "timeSeconds": 0,
               "fixture": {
-                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "sha256": "96b5fc8d5a16c0eb75477bedba5ee6e949f03f9bc243515539d35795d9ceaecd",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 31.514,
+              "latencyMs": 26.369,
               "resultCount": 5,
               "samples": [
                 {
@@ -9300,7 +9270,7 @@
                   "type": "float32",
                   "count": 1000,
                   "nonFinite": 0,
-                  "min": 3.3659861564672156e-09,
+                  "min": 3.3659861564672156e-9,
                   "max": 0.4849250018596649,
                   "sum": 0.9999999448669841,
                   "sha256": "485bb4024af1f8b8d2799ef8d1a8010b7227018d4dd664c121457ef103830b5f"
@@ -9310,11 +9280,11 @@
             {
               "timeSeconds": 1,
               "fixture": {
-                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "sha256": "9fb24a244ba376804d8924faafcbedc27ae719b005e641f0346f3a938f4ffc56",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 28.646,
+              "latencyMs": 26.853,
               "resultCount": 5,
               "samples": [
                 {
@@ -9372,7 +9342,7 @@
               "predictedLabel": "tench",
               "confidence": 0.980324923992157,
               "correct": true,
-              "latencyMs": 28.186,
+              "latencyMs": 25.67,
               "top5": [
                 {
                   "label": "tench",
@@ -9432,7 +9402,7 @@
               "predictedLabel": "sorrel",
               "confidence": 0.19177572429180145,
               "correct": false,
-              "latencyMs": 27.607,
+              "latencyMs": 24.667,
               "top5": [
                 {
                   "label": "sorrel",
@@ -9471,7 +9441,7 @@
                   "type": "float32",
                   "count": 1000,
                   "nonFinite": 0,
-                  "min": 1.6294466220756476e-08,
+                  "min": 1.6294466220756476e-8,
                   "max": 0.19177572429180145,
                   "sum": 0.9999997053266423,
                   "sha256": "c50e07f9c5a8578ddd8fd355b793a62ac2c6a86703fc4a5839fa4480b4f2b8f4"
@@ -9492,7 +9462,7 @@
               "predictedLabel": "great_white_shark",
               "confidence": 0.46803686022758484,
               "correct": true,
-              "latencyMs": 29.286,
+              "latencyMs": 24.398,
               "top5": [
                 {
                   "label": "great_white_shark",
@@ -9552,7 +9522,7 @@
               "predictedLabel": "tiger_shark",
               "confidence": 0.8130947947502136,
               "correct": true,
-              "latencyMs": 27.252,
+              "latencyMs": 24.264,
               "top5": [
                 {
                   "label": "tiger_shark",
@@ -9612,7 +9582,7 @@
               "predictedLabel": "tiger_shark",
               "confidence": 0.40498098731040955,
               "correct": false,
-              "latencyMs": 27.264,
+              "latencyMs": 23.866,
               "top5": [
                 {
                   "label": "tiger_shark",
@@ -9672,7 +9642,7 @@
               "predictedLabel": "platypus",
               "confidence": 0.4795607030391693,
               "correct": false,
-              "latencyMs": 25.552,
+              "latencyMs": 24.494,
               "top5": [
                 {
                   "label": "platypus",
@@ -9732,7 +9702,7 @@
               "predictedLabel": "platypus",
               "confidence": 0.781005859375,
               "correct": false,
-              "latencyMs": 26.016,
+              "latencyMs": 23.996,
               "top5": [
                 {
                   "label": "platypus",
@@ -9792,7 +9762,7 @@
               "predictedLabel": "hen",
               "confidence": 0.28836071491241455,
               "correct": false,
-              "latencyMs": 26.035,
+              "latencyMs": 26.575,
               "top5": [
                 {
                   "label": "hen",
@@ -9831,7 +9801,7 @@
                   "type": "float32",
                   "count": 1000,
                   "nonFinite": 0,
-                  "min": 2.5596014197049044e-09,
+                  "min": 2.5596014197049044e-9,
                   "max": 0.28836071491241455,
                   "sum": 1.000000028302665,
                   "sha256": "c51c4d5613316ead65df452b8fe5d4c54e440d590544e7ad4e03fb7aeef4a0f3"
@@ -9852,7 +9822,7 @@
               "predictedLabel": "patas",
               "confidence": 0.3843952715396881,
               "correct": false,
-              "latencyMs": 23.997,
+              "latencyMs": 16.379,
               "top5": [
                 {
                   "label": "patas",
@@ -9891,7 +9861,7 @@
                   "type": "float32",
                   "count": 1000,
                   "nonFinite": 0,
-                  "min": 2.797684084399066e-09,
+                  "min": 2.797684084399066e-9,
                   "max": 0.3843952715396881,
                   "sum": 0.9999997126608009,
                   "sha256": "f413bbb4ff8dc4ada71537ba4eb8b2cce921f369dfb198ce3eeea987912e2db3"
@@ -9912,7 +9882,7 @@
               "predictedLabel": "limpkin",
               "confidence": 0.6590170860290527,
               "correct": false,
-              "latencyMs": 25.301,
+              "latencyMs": 15.504,
               "top5": [
                 {
                   "label": "limpkin",
@@ -9962,14 +9932,12 @@
           "note": "These ten tiny held-out ImageNet10 images are a known-label diagnostic, not an ImageNet accuracy benchmark. Every observation, including misses, is retained. Compatibility requires valid probabilities and labels, exact source signatures, the primary known-label reference, and actual rendering/release; it does not promise 100% prediction accuracy."
         },
         "render": {
-          "path": "docs/evidence/yolo26/yolo26-classify-n.png",
-          "sha256": "3de3d7661a0f1c2b7c63323b64668292c63b9f8e1f1e817fde8f1584a85586e4",
+          "path": "docs\\evidence\\yolo26\\yolo26-classify-n.png",
+          "sha256": "76c2c3a4eeb99eaf3e718fd157978e57b8c70b8f90455a9fbef0d945db987802",
           "width": 160,
           "height": 120,
-          "changedPixels": 9281,
-          "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
-          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
+          "changedPixels": 7480,
+          "visualReview": "pending"
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -9979,44 +9947,44 @@
           "reloadRounds": [
             {
               "round": 1,
-              "loadInferDisposeMs": 97.601,
+              "loadInferDisposeMs": 52.419,
               "resultCount": 5,
               "memory": {
-                "rssBytes": 434745344,
-                "heapUsedBytes": 12018880,
-                "externalBytes": 17602539,
-                "arrayBuffersBytes": 13405504
+                "rssBytes": 229216256,
+                "heapUsedBytes": 10472336,
+                "externalBytes": 15618749,
+                "arrayBuffersBytes": 12124768
               }
             },
             {
               "round": 2,
-              "loadInferDisposeMs": 88.304,
+              "loadInferDisposeMs": 47.082,
               "resultCount": 5,
               "memory": {
-                "rssBytes": 439455744,
-                "heapUsedBytes": 12068416,
-                "externalBytes": 17606539,
-                "arrayBuffersBytes": 12193280
+                "rssBytes": 236265472,
+                "heapUsedBytes": 10470656,
+                "externalBytes": 15618749,
+                "arrayBuffersBytes": 12124768
               }
             }
           ],
           "initBefore": {
-            "rssBytes": 69615616,
-            "heapUsedBytes": 9301296,
-            "externalBytes": 15311697,
-            "arrayBuffersBytes": 11507408
+            "rssBytes": 93904896,
+            "heapUsedBytes": 7497248,
+            "externalBytes": 13894965,
+            "arrayBuffersBytes": 11504460
           },
           "beforeRelease": {
-            "rssBytes": 509091840,
-            "heapUsedBytes": 15115616,
-            "externalBytes": 48348601,
-            "arrayBuffersBytes": 41943822
+            "rssBytes": 243085312,
+            "heapUsedBytes": 11162720,
+            "externalBytes": 42728395,
+            "arrayBuffersBytes": 38234894
           },
           "afterRelease": {
-            "rssBytes": 509247488,
-            "heapUsedBytes": 11991472,
-            "externalBytes": 48348601,
-            "arrayBuffersBytes": 12197280
+            "rssBytes": 242778112,
+            "heapUsedBytes": 10413568,
+            "externalBytes": 42728395,
+            "arrayBuffersBytes": 12128768
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
         }
@@ -10036,10 +10004,10 @@
       "sha256": "471dc921d6b37c7fc7670adc58b247c5c474dc16b1065b1a150db79ed7de7314",
       "bytes": 26925705,
       "status": "pass",
-      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
-      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:59:56.002Z",
-      "completedAt": "2026-10-21T01:59:58.085Z",
+      "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
+      "validatorSha256": "f4da932bea629409008584eb0362f049a9f1ae6b607e5373db67ed50b0792106",
+      "startedAt": "2026-10-21T20:12:33.093Z",
+      "completedAt": "2026-10-21T20:12:34.272Z",
       "source": {
         "url": "https://huggingface.co/prithivMLmods/YOLO26-ONNX/resolve/c526dae7a5a5b4f1d79d704903b4406011da2716/yolo26s-cls/yolo26s-cls.onnx",
         "revision": "c526dae7a5a5b4f1d79d704903b4406011da2716",
@@ -10066,7 +10034,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 602.453,
+        "initializeMs": 407.185,
         "input": [
           {
             "name": "images",
@@ -10091,14 +10059,14 @@
         ],
         "image": {
           "fixture": {
-            "file": "tests/fixtures/yolo26/classification.jpg",
+            "file": "tests\\fixtures\\yolo26\\classification.jpg",
             "url": "https://github.com/ultralytics/assets/releases/download/v0.0.0/imagenet10.zip",
             "sha256": "d628b7c08a891ef4a5c8765a4f751d1db01adaa02149f291082e4f72f624b995",
             "width": 160,
             "height": 120,
             "archiveMember": "train/n01443537/n01443537_22323.JPEG"
           },
-          "latencyMs": 111.363,
+          "latencyMs": 57.685,
           "resultCount": 4,
           "samples": [
             {
@@ -10148,11 +10116,11 @@
             {
               "timeSeconds": 0,
               "fixture": {
-                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "sha256": "96b5fc8d5a16c0eb75477bedba5ee6e949f03f9bc243515539d35795d9ceaecd",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 112.419,
+              "latencyMs": 59.014,
               "resultCount": 5,
               "samples": [
                 {
@@ -10181,7 +10149,7 @@
                   "type": "float32",
                   "count": 1000,
                   "nonFinite": 0,
-                  "min": 8.899835535203238e-09,
+                  "min": 8.899835535203238e-9,
                   "max": 0.10319340229034424,
                   "sum": 1.000000127843954,
                   "sha256": "2747d72ba8492af6665e61c2e3f9198f1aa6dda286248553a64e5846b8009fc3"
@@ -10191,11 +10159,11 @@
             {
               "timeSeconds": 1,
               "fixture": {
-                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "sha256": "9fb24a244ba376804d8924faafcbedc27ae719b005e641f0346f3a938f4ffc56",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 108.928,
+              "latencyMs": 57.484,
               "resultCount": 5,
               "samples": [
                 {
@@ -10224,7 +10192,7 @@
                   "type": "float32",
                   "count": 1000,
                   "nonFinite": 0,
-                  "min": 7.353172737367686e-09,
+                  "min": 7.353172737367686e-9,
                   "max": 0.07284170389175415,
                   "sum": 1.0000001569892443,
                   "sha256": "d56b98bfe1e8fed29208f8faa9fb2369d270430bd441f2480d1c6ba08cd03c52"
@@ -10253,7 +10221,7 @@
               "predictedLabel": "tench",
               "confidence": 0.9983144998550415,
               "correct": true,
-              "latencyMs": 110.048,
+              "latencyMs": 55.865,
               "top5": [
                 {
                   "label": "tench",
@@ -10313,7 +10281,7 @@
               "predictedLabel": "triceratops",
               "confidence": 0.26138216257095337,
               "correct": false,
-              "latencyMs": 97.977,
+              "latencyMs": 49.459,
               "top5": [
                 {
                   "label": "triceratops",
@@ -10352,7 +10320,7 @@
                   "type": "float32",
                   "count": 1000,
                   "nonFinite": 0,
-                  "min": 1.344831357386056e-08,
+                  "min": 1.344831357386056e-8,
                   "max": 0.26138216257095337,
                   "sum": 1.0000001883964273,
                   "sha256": "630ef7d0e24f2d4c9f4331ed81512bc27a96b8762d8386b356919f4cf8d12272"
@@ -10373,7 +10341,7 @@
               "predictedLabel": "tiger_shark",
               "confidence": 0.425747811794281,
               "correct": false,
-              "latencyMs": 92.508,
+              "latencyMs": 41.156,
               "top5": [
                 {
                   "label": "tiger_shark",
@@ -10433,7 +10401,7 @@
               "predictedLabel": "tiger_shark",
               "confidence": 0.465067982673645,
               "correct": true,
-              "latencyMs": 76.959,
+              "latencyMs": 41.328,
               "top5": [
                 {
                   "label": "tiger_shark",
@@ -10493,7 +10461,7 @@
               "predictedLabel": "dugong",
               "confidence": 0.4297294616699219,
               "correct": false,
-              "latencyMs": 73.859,
+              "latencyMs": 42.982,
               "top5": [
                 {
                   "label": "dugong",
@@ -10553,7 +10521,7 @@
               "predictedLabel": "killer_whale",
               "confidence": 0.5583845973014832,
               "correct": false,
-              "latencyMs": 74.684,
+              "latencyMs": 42.754,
               "top5": [
                 {
                   "label": "killer_whale",
@@ -10613,7 +10581,7 @@
               "predictedLabel": "isopod",
               "confidence": 0.28295451402664185,
               "correct": false,
-              "latencyMs": 73.747,
+              "latencyMs": 44.625,
               "top5": [
                 {
                   "label": "isopod",
@@ -10652,7 +10620,7 @@
                   "type": "float32",
                   "count": 1000,
                   "nonFinite": 0,
-                  "min": 1.2481718991708135e-09,
+                  "min": 1.2481718991708135e-9,
                   "max": 0.28295451402664185,
                   "sum": 1.0000000801155964,
                   "sha256": "a010a43854a6f666b1fef9b70b3720daff25e03d98ade07f5942e8adb464b3f8"
@@ -10673,7 +10641,7 @@
               "predictedLabel": "hen",
               "confidence": 0.728958785533905,
               "correct": false,
-              "latencyMs": 75.418,
+              "latencyMs": 44.299,
               "top5": [
                 {
                   "label": "hen",
@@ -10733,7 +10701,7 @@
               "predictedLabel": "dingo",
               "confidence": 0.19639022648334503,
               "correct": false,
-              "latencyMs": 74.144,
+              "latencyMs": 43.265,
               "top5": [
                 {
                   "label": "dingo",
@@ -10772,7 +10740,7 @@
                   "type": "float32",
                   "count": 1000,
                   "nonFinite": 0,
-                  "min": 9.63658308705817e-09,
+                  "min": 9.63658308705817e-9,
                   "max": 0.19639022648334503,
                   "sum": 0.9999999318919599,
                   "sha256": "2a938812a45bc7164d8b5fd511cffca638695037b233722a6d1ac9aa9d2e4dbd"
@@ -10793,7 +10761,7 @@
               "predictedLabel": "ostrich",
               "confidence": 0.9895364046096802,
               "correct": true,
-              "latencyMs": 74.622,
+              "latencyMs": 43.184,
               "top5": [
                 {
                   "label": "ostrich",
@@ -10843,14 +10811,12 @@
           "note": "These ten tiny held-out ImageNet10 images are a known-label diagnostic, not an ImageNet accuracy benchmark. Every observation, including misses, is retained. Compatibility requires valid probabilities and labels, exact source signatures, the primary known-label reference, and actual rendering/release; it does not promise 100% prediction accuracy."
         },
         "render": {
-          "path": "docs/evidence/yolo26/yolo26-classify-s.png",
-          "sha256": "4fba467a439cf15ddfe8d2e44494b16dca6c10de86ff10160ba796e351a7a1e2",
+          "path": "docs\\evidence\\yolo26\\yolo26-classify-s.png",
+          "sha256": "fce92397c57d011a40eb36c9b4160391823d5a1a7c64338bcd7d21ccca30d462",
           "width": 160,
           "height": 120,
-          "changedPixels": 10658,
-          "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
-          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
+          "changedPixels": 8666,
+          "visualReview": "pending"
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -10859,22 +10825,22 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 84553728,
-            "heapUsedBytes": 9654000,
-            "externalBytes": 30946879,
-            "arrayBuffersBytes": 27142590
+            "rssBytes": 109817856,
+            "heapUsedBytes": 7503480,
+            "externalBytes": 29527507,
+            "arrayBuffersBytes": 27137002
           },
           "beforeRelease": {
-            "rssBytes": 401010688,
-            "heapUsedBytes": 13595464,
-            "externalBytes": 36259852,
-            "arrayBuffersBytes": 30256766
+            "rssBytes": 269807616,
+            "heapUsedBytes": 14250472,
+            "externalBytes": 35484568,
+            "arrayBuffersBytes": 30790990
           },
           "afterRelease": {
-            "rssBytes": 401272832,
-            "heapUsedBytes": 12021552,
-            "externalBytes": 36259852,
-            "arrayBuffersBytes": 27644173
+            "rssBytes": 269799424,
+            "heapUsedBytes": 10428224,
+            "externalBytes": 35484568,
+            "arrayBuffersBytes": 27569493
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
         }
@@ -10894,10 +10860,10 @@
       "sha256": "0b9bb0e6fa8e725ffca6b67f658043b90af844951ee217cd4aef83ce60d3f0a9",
       "bytes": 46567573,
       "status": "pass",
-      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
-      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:59:58.204Z",
-      "completedAt": "2026-10-21T02:00:02.221Z",
+      "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
+      "validatorSha256": "f4da932bea629409008584eb0362f049a9f1ae6b607e5373db67ed50b0792106",
+      "startedAt": "2026-10-21T20:12:34.347Z",
+      "completedAt": "2026-10-21T20:12:36.558Z",
       "source": {
         "url": "https://huggingface.co/prithivMLmods/YOLO26-ONNX/resolve/c526dae7a5a5b4f1d79d704903b4406011da2716/yolo26m-cls/yolo26m-cls.onnx",
         "revision": "c526dae7a5a5b4f1d79d704903b4406011da2716",
@@ -10924,7 +10890,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 823.843,
+        "initializeMs": 492.548,
         "input": [
           {
             "name": "images",
@@ -10949,14 +10915,14 @@
         ],
         "image": {
           "fixture": {
-            "file": "tests/fixtures/yolo26/classification.jpg",
+            "file": "tests\\fixtures\\yolo26\\classification.jpg",
             "url": "https://github.com/ultralytics/assets/releases/download/v0.0.0/imagenet10.zip",
             "sha256": "d628b7c08a891ef4a5c8765a4f751d1db01adaa02149f291082e4f72f624b995",
             "width": 160,
             "height": 120,
             "archiveMember": "train/n01443537/n01443537_22323.JPEG"
           },
-          "latencyMs": 235.783,
+          "latencyMs": 127.106,
           "resultCount": 5,
           "samples": [
             {
@@ -10985,7 +10951,7 @@
               "type": "float32",
               "count": 1000,
               "nonFinite": 0,
-              "min": 1.894419510151124e-09,
+              "min": 1.894419510151124e-9,
               "max": 0.8652060031890869,
               "sum": 1.0000000617098626,
               "sha256": "a7b08c7421c695bccbe697c1e32882a641ae63b277a3a28b19cf3bca5812d815"
@@ -11006,11 +10972,11 @@
             {
               "timeSeconds": 0,
               "fixture": {
-                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "sha256": "96b5fc8d5a16c0eb75477bedba5ee6e949f03f9bc243515539d35795d9ceaecd",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 219.209,
+              "latencyMs": 123.522,
               "resultCount": 5,
               "samples": [
                 {
@@ -11049,11 +11015,11 @@
             {
               "timeSeconds": 1,
               "fixture": {
-                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "sha256": "9fb24a244ba376804d8924faafcbedc27ae719b005e641f0346f3a938f4ffc56",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 220.205,
+              "latencyMs": 119.473,
               "resultCount": 5,
               "samples": [
                 {
@@ -11111,7 +11077,7 @@
               "predictedLabel": "tench",
               "confidence": 0.9999853372573853,
               "correct": true,
-              "latencyMs": 202.353,
+              "latencyMs": 120.087,
               "top5": [
                 {
                   "label": "tench",
@@ -11171,7 +11137,7 @@
               "predictedLabel": "tick",
               "confidence": 0.10465993732213974,
               "correct": false,
-              "latencyMs": 207.808,
+              "latencyMs": 122.436,
               "top5": [
                 {
                   "label": "tick",
@@ -11210,7 +11176,7 @@
                   "type": "float32",
                   "count": 1000,
                   "nonFinite": 0,
-                  "min": 1.6005989422751554e-08,
+                  "min": 1.6005989422751554e-8,
                   "max": 0.10465993732213974,
                   "sum": 1.000000207631432,
                   "sha256": "e75ab99d9ec7ed960a178a991d56399dd49daa6cac32e874b5811bdc3248fdda"
@@ -11231,7 +11197,7 @@
               "predictedLabel": "great_white_shark",
               "confidence": 0.49118414521217346,
               "correct": true,
-              "latencyMs": 207.16,
+              "latencyMs": 120.823,
               "top5": [
                 {
                   "label": "great_white_shark",
@@ -11291,7 +11257,7 @@
               "predictedLabel": "dugong",
               "confidence": 0.5797749757766724,
               "correct": false,
-              "latencyMs": 207.953,
+              "latencyMs": 120.639,
               "top5": [
                 {
                   "label": "dugong",
@@ -11351,7 +11317,7 @@
               "predictedLabel": "dugong",
               "confidence": 0.6011330485343933,
               "correct": false,
-              "latencyMs": 209.261,
+              "latencyMs": 121.747,
               "top5": [
                 {
                   "label": "dugong",
@@ -11411,7 +11377,7 @@
               "predictedLabel": "killer_whale",
               "confidence": 0.6133428812026978,
               "correct": false,
-              "latencyMs": 208.362,
+              "latencyMs": 116.733,
               "top5": [
                 {
                   "label": "killer_whale",
@@ -11471,7 +11437,7 @@
               "predictedLabel": "isopod",
               "confidence": 0.3785521984100342,
               "correct": false,
-              "latencyMs": 207.91,
+              "latencyMs": 116.855,
               "top5": [
                 {
                   "label": "isopod",
@@ -11510,7 +11476,7 @@
                   "type": "float32",
                   "count": 1000,
                   "nonFinite": 0,
-                  "min": 1.1071008554353057e-09,
+                  "min": 1.1071008554353057e-9,
                   "max": 0.3785521984100342,
                   "sum": 1.0000000302425742,
                   "sha256": "0be3c51c730b42db38886b39929fb8606e686fdce0eff3b2c2144d7109eeea60"
@@ -11531,7 +11497,7 @@
               "predictedLabel": "cock",
               "confidence": 0.6760668754577637,
               "correct": true,
-              "latencyMs": 218.806,
+              "latencyMs": 117.175,
               "top5": [
                 {
                   "label": "cock",
@@ -11591,7 +11557,7 @@
               "predictedLabel": "kit_fox",
               "confidence": 0.33561912178993225,
               "correct": false,
-              "latencyMs": 212.427,
+              "latencyMs": 117.487,
               "top5": [
                 {
                   "label": "kit_fox",
@@ -11651,7 +11617,7 @@
               "predictedLabel": "ostrich",
               "confidence": 0.9898890852928162,
               "correct": true,
-              "latencyMs": 239.996,
+              "latencyMs": 117.064,
               "top5": [
                 {
                   "label": "ostrich",
@@ -11701,14 +11667,12 @@
           "note": "These ten tiny held-out ImageNet10 images are a known-label diagnostic, not an ImageNet accuracy benchmark. Every observation, including misses, is retained. Compatibility requires valid probabilities and labels, exact source signatures, the primary known-label reference, and actual rendering/release; it does not promise 100% prediction accuracy."
         },
         "render": {
-          "path": "docs/evidence/yolo26/yolo26-classify-m.png",
-          "sha256": "cef2486d1083111f6458537b85484f46a8e275ab20ba98ec85f29708deb970df",
+          "path": "docs\\evidence\\yolo26\\yolo26-classify-m.png",
+          "sha256": "4f5c501773c36b18fe5598bde18aebcb6609478e4a3a4f893b1e9d1bf3303665",
           "width": 160,
           "height": 120,
-          "changedPixels": 9364,
-          "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
-          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
+          "changedPixels": 7589,
+          "visualReview": "pending"
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -11717,22 +11681,22 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 105357312,
-            "heapUsedBytes": 8634520,
-            "externalBytes": 50586071,
-            "arrayBuffersBytes": 46781782
+            "rssBytes": 129552384,
+            "heapUsedBytes": 7596384,
+            "externalBytes": 49169375,
+            "arrayBuffersBytes": 46778870
           },
           "beforeRelease": {
-            "rssBytes": 445603840,
-            "heapUsedBytes": 12613752,
-            "externalBytes": 53476290,
-            "arrayBuffersBytes": 48075050
+            "rssBytes": 335134720,
+            "heapUsedBytes": 12641256,
+            "externalBytes": 55130936,
+            "arrayBuffersBytes": 50436858
           },
           "afterRelease": {
-            "rssBytes": 445865984,
-            "heapUsedBytes": 12022080,
-            "externalBytes": 53476290,
-            "arrayBuffersBytes": 48074842
+            "rssBytes": 335773696,
+            "heapUsedBytes": 10409032,
+            "externalBytes": 55130936,
+            "arrayBuffersBytes": 48620650
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
         }
@@ -11752,10 +11716,10 @@
       "sha256": "6c34e63f747b469d748c10212bb1d9d5bd609e84fea5d26881aa6f3716701725",
       "bytes": 56514543,
       "status": "pass",
-      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
-      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T02:00:02.352Z",
-      "completedAt": "2026-10-21T02:00:07.191Z",
+      "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
+      "validatorSha256": "f4da932bea629409008584eb0362f049a9f1ae6b607e5373db67ed50b0792106",
+      "startedAt": "2026-10-21T20:12:36.633Z",
+      "completedAt": "2026-10-21T20:12:39.441Z",
       "source": {
         "url": "https://huggingface.co/prithivMLmods/YOLO26-ONNX/resolve/c526dae7a5a5b4f1d79d704903b4406011da2716/yolo26l-cls/yolo26l-cls.onnx",
         "revision": "c526dae7a5a5b4f1d79d704903b4406011da2716",
@@ -11782,7 +11746,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 931.642,
+        "initializeMs": 584.368,
         "input": [
           {
             "name": "images",
@@ -11807,14 +11771,14 @@
         ],
         "image": {
           "fixture": {
-            "file": "tests/fixtures/yolo26/classification.jpg",
+            "file": "tests\\fixtures\\yolo26\\classification.jpg",
             "url": "https://github.com/ultralytics/assets/releases/download/v0.0.0/imagenet10.zip",
             "sha256": "d628b7c08a891ef4a5c8765a4f751d1db01adaa02149f291082e4f72f624b995",
             "width": 160,
             "height": 120,
             "archiveMember": "train/n01443537/n01443537_22323.JPEG"
           },
-          "latencyMs": 297.631,
+          "latencyMs": 164.39,
           "resultCount": 1,
           "samples": [
             {
@@ -11854,11 +11818,11 @@
             {
               "timeSeconds": 0,
               "fixture": {
-                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "sha256": "96b5fc8d5a16c0eb75477bedba5ee6e949f03f9bc243515539d35795d9ceaecd",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 275.116,
+              "latencyMs": 151.463,
               "resultCount": 5,
               "samples": [
                 {
@@ -11897,11 +11861,11 @@
             {
               "timeSeconds": 1,
               "fixture": {
-                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "sha256": "9fb24a244ba376804d8924faafcbedc27ae719b005e641f0346f3a938f4ffc56",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 269.57,
+              "latencyMs": 152.18,
               "resultCount": 5,
               "samples": [
                 {
@@ -11959,7 +11923,7 @@
               "predictedLabel": "tench",
               "confidence": 0.999640941619873,
               "correct": true,
-              "latencyMs": 256.641,
+              "latencyMs": 159.071,
               "top5": [
                 {
                   "label": "tench",
@@ -12019,7 +11983,7 @@
               "predictedLabel": "triceratops",
               "confidence": 0.13766321539878845,
               "correct": false,
-              "latencyMs": 266.739,
+              "latencyMs": 158.651,
               "top5": [
                 {
                   "label": "triceratops",
@@ -12058,7 +12022,7 @@
                   "type": "float32",
                   "count": 1000,
                   "nonFinite": 0,
-                  "min": 7.2120305283362995e-09,
+                  "min": 7.2120305283362995e-9,
                   "max": 0.13766321539878845,
                   "sum": 0.9999995286418177,
                   "sha256": "d6b93f7b30ba9cd82115cdf7a6318c66abe163c107989c9276ae62a921141c1a"
@@ -12079,7 +12043,7 @@
               "predictedLabel": "great_white_shark",
               "confidence": 0.8664619326591492,
               "correct": true,
-              "latencyMs": 266.848,
+              "latencyMs": 156.213,
               "top5": [
                 {
                   "label": "great_white_shark",
@@ -12139,7 +12103,7 @@
               "predictedLabel": "tiger_shark",
               "confidence": 0.9972155094146729,
               "correct": true,
-              "latencyMs": 261.403,
+              "latencyMs": 157.716,
               "top5": [
                 {
                   "label": "tiger_shark",
@@ -12199,7 +12163,7 @@
               "predictedLabel": "dugong",
               "confidence": 0.7803155779838562,
               "correct": false,
-              "latencyMs": 259.968,
+              "latencyMs": 160.721,
               "top5": [
                 {
                   "label": "dugong",
@@ -12259,7 +12223,7 @@
               "predictedLabel": "killer_whale",
               "confidence": 0.5417762994766235,
               "correct": false,
-              "latencyMs": 264.069,
+              "latencyMs": 155.915,
               "top5": [
                 {
                   "label": "killer_whale",
@@ -12319,7 +12283,7 @@
               "predictedLabel": "electric_ray",
               "confidence": 0.5834927558898926,
               "correct": false,
-              "latencyMs": 271.961,
+              "latencyMs": 160.234,
               "top5": [
                 {
                   "label": "electric_ray",
@@ -12379,7 +12343,7 @@
               "predictedLabel": "cock",
               "confidence": 0.5772067308425903,
               "correct": true,
-              "latencyMs": 268.183,
+              "latencyMs": 156.747,
               "top5": [
                 {
                   "label": "cock",
@@ -12439,7 +12403,7 @@
               "predictedLabel": "dingo",
               "confidence": 0.32308048009872437,
               "correct": false,
-              "latencyMs": 270.718,
+              "latencyMs": 162.987,
               "top5": [
                 {
                   "label": "dingo",
@@ -12478,7 +12442,7 @@
                   "type": "float32",
                   "count": 1000,
                   "nonFinite": 0,
-                  "min": 4.848586865335847e-09,
+                  "min": 4.848586865335847e-9,
                   "max": 0.32308048009872437,
                   "sum": 1.0000001515811263,
                   "sha256": "8e634cac72620ef52ca26ee296d44b88a6291c29458cb242644c575b4df35564"
@@ -12499,7 +12463,7 @@
               "predictedLabel": "ostrich",
               "confidence": 0.9964016675949097,
               "correct": true,
-              "latencyMs": 261.479,
+              "latencyMs": 155.441,
               "top5": [
                 {
                   "label": "ostrich",
@@ -12549,14 +12513,12 @@
           "note": "These ten tiny held-out ImageNet10 images are a known-label diagnostic, not an ImageNet accuracy benchmark. Every observation, including misses, is retained. Compatibility requires valid probabilities and labels, exact source signatures, the primary known-label reference, and actual rendering/release; it does not promise 100% prediction accuracy."
         },
         "render": {
-          "path": "docs/evidence/yolo26/yolo26-classify-l.png",
-          "sha256": "a5dde40295995c9842a81c0583c55f996baa13db8037575c7123344a393c5fd2",
+          "path": "docs\\evidence\\yolo26\\yolo26-classify-l.png",
+          "sha256": "79c85e5ce7a8ed97de55583759cb3bfebed21fb5128d9b6584dc292ba2f8b04e",
           "width": 160,
           "height": 120,
-          "changedPixels": 2829,
-          "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
-          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
+          "changedPixels": 2323,
+          "visualReview": "pending"
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -12565,22 +12527,22 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 114995200,
-            "heapUsedBytes": 8854112,
-            "externalBytes": 60533041,
-            "arrayBuffersBytes": 56728752
+            "rssBytes": 139014144,
+            "heapUsedBytes": 7732816,
+            "externalBytes": 59116345,
+            "arrayBuffersBytes": 56725840
           },
           "beforeRelease": {
-            "rssBytes": 533045248,
-            "heapUsedBytes": 14050560,
-            "externalBytes": 66249725,
-            "arrayBuffersBytes": 60448340
+            "rssBytes": 374870016,
+            "heapUsedBytes": 13593272,
+            "externalBytes": 65880294,
+            "arrayBuffersBytes": 60987188
           },
           "afterRelease": {
-            "rssBytes": 533307392,
-            "heapUsedBytes": 12022208,
-            "externalBytes": 66249725,
-            "arrayBuffersBytes": 57233011
+            "rssBytes": 375087104,
+            "heapUsedBytes": 10407912,
+            "externalBytes": 65880294,
+            "arrayBuffersBytes": 57346148
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
         }
@@ -12600,10 +12562,10 @@
       "sha256": "2b6f1386dd3d403f62b1cb68896b6ca3827b1157e451af49bc8105454a05ef78",
       "bytes": 118570497,
       "status": "pass",
-      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
-      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T02:00:07.323Z",
-      "completedAt": "2026-10-21T02:00:17.069Z",
+      "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
+      "validatorSha256": "f4da932bea629409008584eb0362f049a9f1ae6b607e5373db67ed50b0792106",
+      "startedAt": "2026-10-21T20:12:39.520Z",
+      "completedAt": "2026-10-21T20:12:44.948Z",
       "source": {
         "url": "https://huggingface.co/prithivMLmods/YOLO26-ONNX/resolve/c526dae7a5a5b4f1d79d704903b4406011da2716/yolo26x-cls/yolo26x-cls.onnx",
         "revision": "c526dae7a5a5b4f1d79d704903b4406011da2716",
@@ -12630,7 +12592,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 1344.237,
+        "initializeMs": 771.538,
         "input": [
           {
             "name": "images",
@@ -12655,14 +12617,14 @@
         ],
         "image": {
           "fixture": {
-            "file": "tests/fixtures/yolo26/classification.jpg",
+            "file": "tests\\fixtures\\yolo26\\classification.jpg",
             "url": "https://github.com/ultralytics/assets/releases/download/v0.0.0/imagenet10.zip",
             "sha256": "d628b7c08a891ef4a5c8765a4f751d1db01adaa02149f291082e4f72f624b995",
             "width": 160,
             "height": 120,
             "archiveMember": "train/n01443537/n01443537_22323.JPEG"
           },
-          "latencyMs": 578.924,
+          "latencyMs": 336.042,
           "resultCount": 4,
           "samples": [
             {
@@ -12712,11 +12674,11 @@
             {
               "timeSeconds": 0,
               "fixture": {
-                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "sha256": "96b5fc8d5a16c0eb75477bedba5ee6e949f03f9bc243515539d35795d9ceaecd",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 608.515,
+              "latencyMs": 321.873,
               "resultCount": 5,
               "samples": [
                 {
@@ -12745,7 +12707,7 @@
                   "type": "float32",
                   "count": 1000,
                   "nonFinite": 0,
-                  "min": 1.7030407084561716e-09,
+                  "min": 1.7030407084561716e-9,
                   "max": 0.7036246061325073,
                   "sum": 0.9999999539781409,
                   "sha256": "613fbe509c5cad412511919b66b2f255945da4fb1209aadcded025e52f64600a"
@@ -12755,11 +12717,11 @@
             {
               "timeSeconds": 1,
               "fixture": {
-                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "sha256": "9fb24a244ba376804d8924faafcbedc27ae719b005e641f0346f3a938f4ffc56",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 606.021,
+              "latencyMs": 323.746,
               "resultCount": 5,
               "samples": [
                 {
@@ -12788,7 +12750,7 @@
                   "type": "float32",
                   "count": 1000,
                   "nonFinite": 0,
-                  "min": 3.0853228860650006e-09,
+                  "min": 3.0853228860650006e-9,
                   "max": 0.3426017761230469,
                   "sum": 1.000000019310226,
                   "sha256": "bfed7f326db042afbad543a5b6eef316dc32403cc3e5e317f7ecedd88beaeaa8"
@@ -12817,7 +12779,7 @@
               "predictedLabel": "tench",
               "confidence": 0.9999915361404419,
               "correct": true,
-              "latencyMs": 588.413,
+              "latencyMs": 319.898,
               "top5": [
                 {
                   "label": "tench",
@@ -12877,7 +12839,7 @@
               "predictedLabel": "goldfish",
               "confidence": 0.7690625786781311,
               "correct": true,
-              "latencyMs": 619.287,
+              "latencyMs": 320.464,
               "top5": [
                 {
                   "label": "goldfish",
@@ -12916,7 +12878,7 @@
                   "type": "float32",
                   "count": 1000,
                   "nonFinite": 0,
-                  "min": 1.1050607096052545e-09,
+                  "min": 1.1050607096052545e-9,
                   "max": 0.7690625786781311,
                   "sum": 1.0000005328682158,
                   "sha256": "15a11e93b3db1cf9f8c540459d074d9d060e71c63aea63998d8312eaa7ad87da"
@@ -12937,7 +12899,7 @@
               "predictedLabel": "great_white_shark",
               "confidence": 0.8850441575050354,
               "correct": true,
-              "latencyMs": 593.919,
+              "latencyMs": 325.866,
               "top5": [
                 {
                   "label": "great_white_shark",
@@ -12997,7 +12959,7 @@
               "predictedLabel": "tiger_shark",
               "confidence": 0.9283639788627625,
               "correct": true,
-              "latencyMs": 639.934,
+              "latencyMs": 357.345,
               "top5": [
                 {
                   "label": "tiger_shark",
@@ -13057,7 +13019,7 @@
               "predictedLabel": "dugong",
               "confidence": 0.5680029988288879,
               "correct": false,
-              "latencyMs": 625.473,
+              "latencyMs": 352.359,
               "top5": [
                 {
                   "label": "dugong",
@@ -13117,7 +13079,7 @@
               "predictedLabel": "killer_whale",
               "confidence": 0.5006272792816162,
               "correct": false,
-              "latencyMs": 584.334,
+              "latencyMs": 331.675,
               "top5": [
                 {
                   "label": "killer_whale",
@@ -13177,7 +13139,7 @@
               "predictedLabel": "isopod",
               "confidence": 0.5536495447158813,
               "correct": false,
-              "latencyMs": 589.374,
+              "latencyMs": 369.716,
               "top5": [
                 {
                   "label": "isopod",
@@ -13237,7 +13199,7 @@
               "predictedLabel": "cock",
               "confidence": 0.970076322555542,
               "correct": true,
-              "latencyMs": 589.256,
+              "latencyMs": 372.366,
               "top5": [
                 {
                   "label": "cock",
@@ -13297,7 +13259,7 @@
               "predictedLabel": "red_fox",
               "confidence": 0.2981571853160858,
               "correct": false,
-              "latencyMs": 612.54,
+              "latencyMs": 369.084,
               "top5": [
                 {
                   "label": "red_fox",
@@ -13357,7 +13319,7 @@
               "predictedLabel": "ostrich",
               "confidence": 0.9999740123748779,
               "correct": true,
-              "latencyMs": 586.11,
+              "latencyMs": 346.094,
               "top5": [
                 {
                   "label": "ostrich",
@@ -13407,14 +13369,12 @@
           "note": "These ten tiny held-out ImageNet10 images are a known-label diagnostic, not an ImageNet accuracy benchmark. Every observation, including misses, is retained. Compatibility requires valid probabilities and labels, exact source signatures, the primary known-label reference, and actual rendering/release; it does not promise 100% prediction accuracy."
         },
         "render": {
-          "path": "docs/evidence/yolo26/yolo26-classify-x.png",
-          "sha256": "56b1028c588aea9d243fffe3432cfa0dd1960a9030d66b55f49b5196a77b6b04",
+          "path": "docs\\evidence\\yolo26\\yolo26-classify-x.png",
+          "sha256": "004d9427686e445b6c2e84ec078f5e18078b7aca16d63e2b32ddfa217d2bbb69",
           "width": 160,
           "height": 120,
-          "changedPixels": 10828,
-          "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
-          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
+          "changedPixels": 8924,
+          "visualReview": "pending"
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -13423,22 +13383,22 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 176738304,
-            "heapUsedBytes": 9442736,
-            "externalBytes": 122636419,
-            "arrayBuffersBytes": 118832130
+            "rssBytes": 200568832,
+            "heapUsedBytes": 6694320,
+            "externalBytes": 121107746,
+            "arrayBuffersBytes": 118717262
           },
           "beforeRelease": {
-            "rssBytes": 745508864,
-            "heapUsedBytes": 13112480,
-            "externalBytes": 126695549,
-            "arrayBuffersBytes": 121294822
+            "rssBytes": 581910528,
+            "heapUsedBytes": 13594464,
+            "externalBytes": 127937592,
+            "arrayBuffersBytes": 123043142
           },
           "afterRelease": {
-            "rssBytes": 745771008,
-            "heapUsedBytes": 12021984,
-            "externalBytes": 126695549,
-            "arrayBuffersBytes": 119288965
+            "rssBytes": 582213632,
+            "heapUsedBytes": 10411776,
+            "externalBytes": 127937592,
+            "arrayBuffersBytes": 119402102
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
         }
@@ -13458,10 +13418,10 @@
       "sha256": "1ce4f25e0d3076856ebdc091f43eb6478b4a5f2aebb8003dd6fadd93f7daac1e",
       "bytes": 10008685,
       "status": "pass",
-      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
-      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T02:00:17.216Z",
-      "completedAt": "2026-10-21T02:00:20.560Z",
+      "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
+      "validatorSha256": "f4da932bea629409008584eb0362f049a9f1ae6b607e5373db67ed50b0792106",
+      "startedAt": "2026-10-21T20:12:45.036Z",
+      "completedAt": "2026-10-21T20:12:46.742Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26n-obb.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -13488,7 +13448,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 960.951,
+        "initializeMs": 530.572,
         "input": [
           {
             "name": "images",
@@ -13514,13 +13474,13 @@
         ],
         "image": {
           "fixture": {
-            "file": "tests/fixtures/boats.jpg",
+            "file": "tests\\fixtures\\boats.jpg",
             "url": "https://github.com/ultralytics/assets/releases/download/v0.0.0/boats.jpg",
             "sha256": "8c5ada657cf8110a9f8aaac954c1dd96cde0187315b581276c32b0d1863e756f",
             "width": 1920,
             "height": 1080
           },
-          "latencyMs": 305.655,
+          "latencyMs": 147.577,
           "resultCount": 170,
           "samples": [
             {
@@ -13641,11 +13601,11 @@
             {
               "timeSeconds": 0,
               "fixture": {
-                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "sha256": "96b5fc8d5a16c0eb75477bedba5ee6e949f03f9bc243515539d35795d9ceaecd",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 227.807,
+              "latencyMs": 123.429,
               "resultCount": 0,
               "samples": [],
               "outputTensorStats": [
@@ -13669,11 +13629,11 @@
             {
               "timeSeconds": 1,
               "fixture": {
-                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "sha256": "9fb24a244ba376804d8924faafcbedc27ae719b005e641f0346f3a938f4ffc56",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 252.368,
+              "latencyMs": 137.613,
               "resultCount": 0,
               "samples": [],
               "outputTensorStats": [
@@ -13697,14 +13657,12 @@
           ]
         },
         "render": {
-          "path": "docs/evidence/yolo26/yolo26-obb-n.png",
-          "sha256": "233fdfe37a3cb5acb0bdfd524e3fe11045cc346f8e216473a58a04194c9ba272",
+          "path": "docs\\evidence\\yolo26\\yolo26-obb-n.png",
+          "sha256": "e4b91314b7164472e4e1c0b291d59e049b2db82ec31c2ddee5b4fdfb522d510c",
           "width": 640,
           "height": 360,
-          "changedPixels": 139940,
-          "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
-          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
+          "changedPixels": 127453,
+          "visualReview": "pending"
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -13714,44 +13672,44 @@
           "reloadRounds": [
             {
               "round": 1,
-              "loadInferDisposeMs": 630.071,
+              "loadInferDisposeMs": 306.793,
               "resultCount": 170,
               "memory": {
-                "rssBytes": 477044736,
-                "heapUsedBytes": 12051736,
-                "externalBytes": 19464623,
-                "arrayBuffersBytes": 11072903
+                "rssBytes": 370642944,
+                "heapUsedBytes": 10458280,
+                "externalBytes": 18092296,
+                "arrayBuffersBytes": 11508391
               }
             },
             {
               "round": 2,
-              "loadInferDisposeMs": 602.861,
+              "loadInferDisposeMs": 286.244,
               "resultCount": 170,
               "memory": {
-                "rssBytes": 495919104,
-                "heapUsedBytes": 12084696,
-                "externalBytes": 19464623,
-                "arrayBuffersBytes": 11072903
+                "rssBytes": 306180096,
+                "heapUsedBytes": 10513560,
+                "externalBytes": 18092296,
+                "arrayBuffersBytes": 11508391
               }
             }
           ],
           "initBefore": {
-            "rssBytes": 76017664,
-            "heapUsedBytes": 9679720,
-            "externalBytes": 14224073,
-            "arrayBuffersBytes": 10419784
+            "rssBytes": 100372480,
+            "heapUsedBytes": 7046400,
+            "externalBytes": 12803869,
+            "arrayBuffersBytes": 10413364
           },
           "beforeRelease": {
-            "rssBytes": 385163264,
-            "heapUsedBytes": 20304000,
-            "externalBytes": 21198047,
-            "arrayBuffersBytes": 15767927
+            "rssBytes": 250654720,
+            "heapUsedBytes": 10903104,
+            "externalBytes": 19825720,
+            "arrayBuffersBytes": 15699415
           },
           "afterRelease": {
-            "rssBytes": 385294336,
-            "heapUsedBytes": 11902736,
-            "externalBytes": 21198047,
-            "arrayBuffersBytes": 11072903
+            "rssBytes": 247095296,
+            "heapUsedBytes": 10332184,
+            "externalBytes": 18596920,
+            "arrayBuffersBytes": 11508391
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
         }
@@ -13771,10 +13729,10 @@
       "sha256": "6f7597a07b5b3178cabb7bd58f26c143b652919b50aebfc6a050417207519f6d",
       "bytes": 39239617,
       "status": "pass",
-      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
-      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T02:00:20.731Z",
-      "completedAt": "2026-10-21T02:00:25.076Z",
+      "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
+      "validatorSha256": "f4da932bea629409008584eb0362f049a9f1ae6b607e5373db67ed50b0792106",
+      "startedAt": "2026-10-21T20:12:46.828Z",
+      "completedAt": "2026-10-21T20:12:49.131Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26s-obb.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -13801,7 +13759,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 1464.515,
+        "initializeMs": 832.265,
         "input": [
           {
             "name": "images",
@@ -13827,13 +13785,13 @@
         ],
         "image": {
           "fixture": {
-            "file": "tests/fixtures/boats.jpg",
+            "file": "tests\\fixtures\\boats.jpg",
             "url": "https://github.com/ultralytics/assets/releases/download/v0.0.0/boats.jpg",
             "sha256": "8c5ada657cf8110a9f8aaac954c1dd96cde0187315b581276c32b0d1863e756f",
             "width": 1920,
             "height": 1080
           },
-          "latencyMs": 799.312,
+          "latencyMs": 448.89,
           "resultCount": 163,
           "samples": [
             {
@@ -13954,11 +13912,11 @@
             {
               "timeSeconds": 0,
               "fixture": {
-                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "sha256": "96b5fc8d5a16c0eb75477bedba5ee6e949f03f9bc243515539d35795d9ceaecd",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 875.087,
+              "latencyMs": 418.865,
               "resultCount": 0,
               "samples": [],
               "outputTensorStats": [
@@ -13982,11 +13940,11 @@
             {
               "timeSeconds": 1,
               "fixture": {
-                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "sha256": "9fb24a244ba376804d8924faafcbedc27ae719b005e641f0346f3a938f4ffc56",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 756.954,
+              "latencyMs": 411.934,
               "resultCount": 0,
               "samples": [],
               "outputTensorStats": [
@@ -14010,14 +13968,12 @@
           ]
         },
         "render": {
-          "path": "docs/evidence/yolo26/yolo26-obb-s.png",
-          "sha256": "774c3e54573754024644897c5646593d71950465bfb4d16ccfd2e296a48a953a",
+          "path": "docs\\evidence\\yolo26\\yolo26-obb-s.png",
+          "sha256": "58529a517f3541bd4fa4a7dc4542d0cf5a2cb8a6e1e403a7b2e507d03ed44543",
           "width": 640,
           "height": 360,
-          "changedPixels": 135645,
-          "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
-          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
+          "changedPixels": 122914,
+          "visualReview": "pending"
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -14026,22 +13982,22 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 105488384,
-            "heapUsedBytes": 9685536,
-            "externalBytes": 43459581,
-            "arrayBuffersBytes": 39655292
+            "rssBytes": 130105344,
+            "heapUsedBytes": 7032344,
+            "externalBytes": 42034801,
+            "arrayBuffersBytes": 39644296
           },
           "beforeRelease": {
-            "rssBytes": 539385856,
-            "heapUsedBytes": 14189904,
-            "externalBytes": 54122024,
-            "arrayBuffersBytes": 48684635
+            "rssBytes": 366559232,
+            "heapUsedBytes": 10996504,
+            "externalBytes": 49064051,
+            "arrayBuffersBytes": 44930347
           },
           "afterRelease": {
-            "rssBytes": 539648000,
-            "heapUsedBytes": 11902296,
-            "externalBytes": 52893224,
-            "arrayBuffersBytes": 40303835
+            "rssBytes": 364253184,
+            "heapUsedBytes": 10332056,
+            "externalBytes": 49064051,
+            "arrayBuffersBytes": 41243947
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
         }
@@ -14061,10 +14017,10 @@
       "sha256": "bd6fd51d9c8eb79590c59874c35a5b20d803ecfdd1a9d8995ba3ee902b2bfe09",
       "bytes": 85061671,
       "status": "pass",
-      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
-      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T02:00:25.248Z",
-      "completedAt": "2026-10-21T02:00:35.679Z",
+      "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
+      "validatorSha256": "f4da932bea629409008584eb0362f049a9f1ae6b607e5373db67ed50b0792106",
+      "startedAt": "2026-10-21T20:12:49.210Z",
+      "completedAt": "2026-10-21T20:12:55.251Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26m-obb.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -14091,7 +14047,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 2907.018,
+        "initializeMs": 1690.676,
         "input": [
           {
             "name": "images",
@@ -14117,13 +14073,13 @@
         ],
         "image": {
           "fixture": {
-            "file": "tests/fixtures/boats.jpg",
+            "file": "tests\\fixtures\\boats.jpg",
             "url": "https://github.com/ultralytics/assets/releases/download/v0.0.0/boats.jpg",
             "sha256": "8c5ada657cf8110a9f8aaac954c1dd96cde0187315b581276c32b0d1863e756f",
             "width": 1920,
             "height": 1080
           },
-          "latencyMs": 2368.575,
+          "latencyMs": 1313.017,
           "resultCount": 181,
           "samples": [
             {
@@ -14244,11 +14200,11 @@
             {
               "timeSeconds": 0,
               "fixture": {
-                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "sha256": "96b5fc8d5a16c0eb75477bedba5ee6e949f03f9bc243515539d35795d9ceaecd",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 2365.348,
+              "latencyMs": 1348.798,
               "resultCount": 0,
               "samples": [],
               "outputTensorStats": [
@@ -14272,11 +14228,11 @@
             {
               "timeSeconds": 1,
               "fixture": {
-                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "sha256": "9fb24a244ba376804d8924faafcbedc27ae719b005e641f0346f3a938f4ffc56",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 2334.675,
+              "latencyMs": 1452.775,
               "resultCount": 2,
               "samples": [
                 {
@@ -14359,14 +14315,12 @@
           ]
         },
         "render": {
-          "path": "docs/evidence/yolo26/yolo26-obb-m.png",
-          "sha256": "6fcbbf09c3c6c71835c41d8ca4d8c86c7b1db9918383472698a833c4559ec941",
+          "path": "docs\\evidence\\yolo26\\yolo26-obb-m.png",
+          "sha256": "10147764dc700f163b27412a1ea5ec2e770de2e71e35ddf213e0a96dd85caf47",
           "width": 640,
           "height": 360,
-          "changedPixels": 144063,
-          "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
-          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
+          "changedPixels": 132280,
+          "visualReview": "pending"
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -14375,22 +14329,22 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 151355392,
-            "heapUsedBytes": 9188200,
-            "externalBytes": 89307663,
-            "arrayBuffersBytes": 85503374
+            "rssBytes": 175685632,
+            "heapUsedBytes": 7459320,
+            "externalBytes": 87825374,
+            "arrayBuffersBytes": 85434890
           },
           "beforeRelease": {
-            "rssBytes": 681672704,
-            "heapUsedBytes": 14640568,
-            "externalBytes": 99937863,
-            "arrayBuffersBytes": 94506689
+            "rssBytes": 485351424,
+            "heapUsedBytes": 14461744,
+            "externalBytes": 98566575,
+            "arrayBuffersBytes": 94438177
           },
           "afterRelease": {
-            "rssBytes": 681934848,
-            "heapUsedBytes": 11889992,
-            "externalBytes": 98709063,
-            "arrayBuffersBytes": 86629889
+            "rssBytes": 483086336,
+            "heapUsedBytes": 10319056,
+            "externalBytes": 97337775,
+            "arrayBuffersBytes": 90751777
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
         }
@@ -14410,10 +14364,10 @@
       "sha256": "ec66f909ec3d086556918b1727923ebcfa8675b3140a65bd96bae9c7cbc0dfd8",
       "bytes": 102711733,
       "status": "pass",
-      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
-      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T02:00:35.820Z",
-      "completedAt": "2026-10-21T02:00:48.509Z",
+      "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
+      "validatorSha256": "f4da932bea629409008584eb0362f049a9f1ae6b607e5373db67ed50b0792106",
+      "startedAt": "2026-10-21T20:12:55.336Z",
+      "completedAt": "2026-10-21T20:13:02.831Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26l-obb.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -14440,7 +14394,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 3562.917,
+        "initializeMs": 2025.328,
         "input": [
           {
             "name": "images",
@@ -14466,13 +14420,13 @@
         ],
         "image": {
           "fixture": {
-            "file": "tests/fixtures/boats.jpg",
+            "file": "tests\\fixtures\\boats.jpg",
             "url": "https://github.com/ultralytics/assets/releases/download/v0.0.0/boats.jpg",
             "sha256": "8c5ada657cf8110a9f8aaac954c1dd96cde0187315b581276c32b0d1863e756f",
             "width": 1920,
             "height": 1080
           },
-          "latencyMs": 2952.084,
+          "latencyMs": 1692.146,
           "resultCount": 184,
           "samples": [
             {
@@ -14593,11 +14547,11 @@
             {
               "timeSeconds": 0,
               "fixture": {
-                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "sha256": "96b5fc8d5a16c0eb75477bedba5ee6e949f03f9bc243515539d35795d9ceaecd",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 2813.179,
+              "latencyMs": 1765.602,
               "resultCount": 17,
               "samples": [
                 {
@@ -14709,11 +14663,11 @@
             {
               "timeSeconds": 1,
               "fixture": {
-                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "sha256": "9fb24a244ba376804d8924faafcbedc27ae719b005e641f0346f3a938f4ffc56",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 2762.815,
+              "latencyMs": 1772.67,
               "resultCount": 14,
               "samples": [
                 {
@@ -14825,14 +14779,12 @@
           ]
         },
         "render": {
-          "path": "docs/evidence/yolo26/yolo26-obb-l.png",
-          "sha256": "0cdcf93acd17e91623e656ce1479aaf25643d64f825ad1928d7a34c304c99b77",
+          "path": "docs\\evidence\\yolo26\\yolo26-obb-l.png",
+          "sha256": "5c210173b179cf10557ad6d7502afeeb7d83c1b63f8ceb9567243ea118d1924b",
           "width": 640,
           "height": 360,
-          "changedPixels": 145184,
-          "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
-          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
+          "changedPixels": 134090,
+          "visualReview": "pending"
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -14841,22 +14793,22 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 169357312,
-            "heapUsedBytes": 9523728,
-            "externalBytes": 106964589,
-            "arrayBuffersBytes": 103160300
+            "rssBytes": 192897024,
+            "heapUsedBytes": 7764256,
+            "externalBytes": 105482300,
+            "arrayBuffersBytes": 103091816
           },
           "beforeRelease": {
-            "rssBytes": 682594304,
-            "heapUsedBytes": 12317000,
-            "externalBytes": 116368760,
-            "arrayBuffersBytes": 112156751
+            "rssBytes": 539361280,
+            "heapUsedBytes": 11578256,
+            "externalBytes": 114994449,
+            "arrayBuffersBytes": 112088239
           },
           "afterRelease": {
-            "rssBytes": 682856448,
-            "heapUsedBytes": 11921928,
-            "externalBytes": 116368760,
-            "arrayBuffersBytes": 103775951
+            "rssBytes": 536862720,
+            "heapUsedBytes": 10350864,
+            "externalBytes": 114994449,
+            "arrayBuffersBytes": 108401839
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
         }
@@ -14876,10 +14828,10 @@
       "sha256": "565c3c7f1611027b509d6df2b81a8abbb2d3f3b004f84c17607545394458bfec",
       "bytes": 230526559,
       "status": "pass",
-      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
-      "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T02:00:48.639Z",
-      "completedAt": "2026-10-21T02:01:15.750Z",
+      "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
+      "validatorSha256": "f4da932bea629409008584eb0362f049a9f1ae6b607e5373db67ed50b0792106",
+      "startedAt": "2026-10-21T20:13:02.919Z",
+      "completedAt": "2026-10-21T20:13:18.393Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26x-obb.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -14906,7 +14858,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 7311.124,
+        "initializeMs": 4029.202,
         "input": [
           {
             "name": "images",
@@ -14932,13 +14884,13 @@
         ],
         "image": {
           "fixture": {
-            "file": "tests/fixtures/boats.jpg",
+            "file": "tests\\fixtures\\boats.jpg",
             "url": "https://github.com/ultralytics/assets/releases/download/v0.0.0/boats.jpg",
             "sha256": "8c5ada657cf8110a9f8aaac954c1dd96cde0187315b581276c32b0d1863e756f",
             "width": 1920,
             "height": 1080
           },
-          "latencyMs": 6322.723,
+          "latencyMs": 3800.81,
           "resultCount": 184,
           "samples": [
             {
@@ -15059,11 +15011,11 @@
             {
               "timeSeconds": 0,
               "fixture": {
-                "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+                "sha256": "96b5fc8d5a16c0eb75477bedba5ee6e949f03f9bc243515539d35795d9ceaecd",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 6246.19,
+              "latencyMs": 3738.917,
               "resultCount": 16,
               "samples": [
                 {
@@ -15175,11 +15127,11 @@
             {
               "timeSeconds": 1,
               "fixture": {
-                "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+                "sha256": "9fb24a244ba376804d8924faafcbedc27ae719b005e641f0346f3a938f4ffc56",
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 6594.127,
+              "latencyMs": 3574.487,
               "resultCount": 21,
               "samples": [
                 {
@@ -15291,14 +15243,12 @@
           ]
         },
         "render": {
-          "path": "docs/evidence/yolo26/yolo26-obb-x.png",
-          "sha256": "73b45f4a07a212640a5f013289474ab9ee4df8429e60018f60af95a015613801",
+          "path": "docs\\evidence\\yolo26\\yolo26-obb-x.png",
+          "sha256": "191f1597527161d0c16cfe1ee223492dfb07e6a02316ab5ab3b7e16532c77521",
           "width": 640,
           "height": 360,
-          "changedPixels": 147422,
-          "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
-          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
+          "changedPixels": 135824,
+          "visualReview": "pending"
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -15307,22 +15257,22 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 297635840,
-            "heapUsedBytes": 9762216,
-            "externalBytes": 234830167,
-            "arrayBuffersBytes": 231025878
+            "rssBytes": 320790528,
+            "heapUsedBytes": 8015952,
+            "externalBytes": 233347878,
+            "arrayBuffersBytes": 230957394
           },
           "beforeRelease": {
-            "rssBytes": 1031499776,
-            "heapUsedBytes": 12748992,
-            "externalBytes": 244188755,
-            "arrayBuffersBytes": 239971577
+            "rssBytes": 946442240,
+            "heapUsedBytes": 10667712,
+            "externalBytes": 242814958,
+            "arrayBuffersBytes": 239903065
           },
           "afterRelease": {
-            "rssBytes": 1031630848,
-            "heapUsedBytes": 11926312,
-            "externalBytes": 244188755,
-            "arrayBuffersBytes": 231590777
+            "rssBytes": 944181248,
+            "heapUsedBytes": 10359752,
+            "externalBytes": 242814958,
+            "arrayBuffersBytes": 236216665
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
         }
@@ -15335,23 +15285,14 @@
       }
     }
   ],
-  "sourceFingerprintAfter": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
-  "validatorSha256After": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
+  "sourceFingerprintAfter": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
+  "validatorSha256After": "f4da932bea629409008584eb0362f049a9f1ae6b607e5373db67ed50b0792106",
   "sourceChangedDuringRun": false,
-  "contactSheet": "docs/evidence/yolo26-matrix.png",
+  "contactSheet": "docs\\model-validation-matrix.png",
   "summary": {
     "pass": 25,
     "fail": 0,
     "missing": 0,
     "pending": 0
-  },
-  "visualReview": {
-    "status": "pass",
-    "reviewedAt": "2026-10-21T02:01:55.823846+00:00",
-    "scope": "all25 real primary-image renders",
-    "contactSheet": "docs/evidence/yolo26-matrix.png",
-    "identicalPreviouslyReviewedRenderCount": 25,
-    "priorRunId": "73509e56-8f1a-42ab-8ed5-ec5357b52592",
-    "method": "Current contact sheet inspected; execution fingerprints and actual model outputs not modified."
   }
 }

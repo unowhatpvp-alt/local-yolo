@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
-  "frozenAt": "2026-10-21T01:56:18.979803+00:00",
+  "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
+  "frozenAt": "2026-10-21T20:43:57.582Z",
   "requiredModels": [
     "yolo26-detect-n",
     "yolo26-detect-s",
@@ -29,5 +29,5 @@
     "yolo26-obb-l",
     "yolo26-obb-x"
   ],
-  "scope": "Actual browser EngineClient validation only; production availability is unchanged."
+  "scope": "Actual fresh browser execution for this frozen application."
 }

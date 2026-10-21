@@ -5,6 +5,7 @@ import {getModel, listCachedModels, deleteCachedModel, cacheUsage} from './core/
 import {EngineClient} from './core/engine-client.js';
 import {MediaController, mediaErrorMessage} from './core/media.js';
 import {renderFrame, saveFrame} from './core/render.js';
+import {focusMenuItem} from './ui/menu-navigation.js';
 
 // Minimal owns presentation and scheduling. Task adapters and NMS remain in core.
 const DEFAULT_IOU = 0.45;
@@ -20,7 +21,7 @@ const state = {
   task: 'detect', size: 'N', source: 'online', localTask: 'auto',
   cached: [], info: null, model: null, loading: false, loadEpoch: 0,
   mode: 'camera', modeEpoch: 0, cameraEpoch: 0,
-  running: false, busy: false, generation: 0, completions: [],
+  running: false, busy: false, generation: 0, completions: [], pendingStillInference: null,
   result: null, frame: null, crop: null, mirror: saved('local-yolo-mirror') === 'true',
   theme: saved('local-yolo-theme') || 'system',
   backend: saved('local-yolo-backend') || 'auto',
@@ -98,12 +99,12 @@ function enterPage(id) {
   document.body.classList.toggle('in-workbench', id === 'workbench');
 }
 
-function option(label, detail, selected, callback, disabled = false) {
+function option(label, detail, selected, callback, disabled = false, menuChoice = false) {
   const element = document.createElement('button');
   element.type = 'button';
   element.className = 'menu-option';
-  element.setAttribute('role', 'menuitemradio');
-  element.setAttribute('aria-checked', String(selected));
+  if (menuChoice) element.setAttribute('role', 'menuitemradio');
+  element.setAttribute(menuChoice ? 'aria-checked' : 'aria-pressed', String(selected));
   element.disabled = disabled;
   const title = document.createElement('span');
   title.textContent = label;
@@ -128,11 +129,15 @@ const menuTimers = new Map();
 function closeMenu(triggerId, menuId, restoreFocus = false) {
   const menu = $(menuId);
   if (!menu || menu.hidden) return;
+  for (const [nestedTrigger, nestedMenu] of menuPairs) {
+    if (nestedMenu !== menuId && menu.contains($(nestedMenu))) closeMenu(nestedTrigger, nestedMenu);
+  }
+  const focusTrigger = restoreFocus || menu.contains(document.activeElement);
   menu.classList.remove('is-open');
   $(triggerId)?.setAttribute('aria-expanded', 'false');
   clearTimeout(menuTimers.get(menuId));
   menuTimers.set(menuId, setTimeout(() => { menu.hidden = true; syncPickerScrim(); }, 130));
-  if (restoreFocus) $(triggerId)?.focus();
+  if (focusTrigger) $(triggerId)?.focus();
 }
 function syncPickerScrim() {
   show('picker-scrim', ['task-picker-menu', 'size-picker-menu'].some(id => $(id)?.classList.contains('is-open')));
@@ -180,7 +185,7 @@ function renderPicker() {
   $('size-picker-button').disabled = state.loading;
   $('task-options').replaceChildren(...TASKS.map(item => option(
     item.label, getLanguage() === 'zh' ? item.labelZh : '',
-    item.id === state.task, () => changeSelection(item.id, state.size), state.loading,
+    item.id === state.task, () => changeSelection(item.id, state.size), state.loading, true,
   )));
   $('size-options').replaceChildren(...['N', 'S', 'M', 'L', 'X'].map((size, index) => {
     const candidate = MODELS.find(item => item.task === state.task && item.size === size);
@@ -188,7 +193,7 @@ function renderPicker() {
     const detail = (index === 0 ? tx('推荐 · ', 'Recommended · ') : '') + names[index] +
       (candidate?.status === 'verified' ? '' : tx(' · 验证中', ' · Validation pending'));
     return option(size, detail, size === state.size, () => changeSelection(state.task, size),
-      state.loading || !candidate || candidate.status !== 'verified');
+      state.loading || !candidate || candidate.status !== 'verified', true);
   }));
   $('local-task-options').replaceChildren(...[{id: 'auto', label: tx('自动检查', 'Auto inspect')}, ...TASKS]
     .map(item => option(item.label, '', item.id === state.localTask, () => {
@@ -402,6 +407,7 @@ async function cancelLoad() {
 function stopLoop() {
   state.running = false;
   state.generation++;
+  state.pendingStillInference = null;
   cancelAnimationFrame(frameRequest);
   state.completions.length = 0;
   setText('fps-value', '—');
@@ -472,6 +478,7 @@ function syncMedia() {
   $('save-json').disabled = !state.result;
   $('results-menu-toggle')?.setAttribute('aria-label', tx('检测结果和导出', 'Results and export'));
   setText('file-name', state.fileName);
+  show('file-name', Boolean(state.fileName));
   setText('stage-empty-title', camera ? tx('打开摄像头', 'Open your camera') : tx('选择图片或视频', 'Choose an image or video'));
   setText('stage-source-label', camera ? tx('摄像头', 'Camera') : tx('本地文件', 'Local file'));
   if (state.result) setText('result-summary', state.result.items.length + ' ' + tx('个结果', 'results'));
@@ -489,7 +496,7 @@ async function updateDevices() {
     device.deviceId === media.deviceId, async () => {
       closeMenu('camera-device-button', 'camera-device-menu');
       await startCamera(device.deviceId);
-    })));
+    }, false, true)));
   setText('camera-device-count', usable.length ?
     String(usable.length) + tx(' 台可用', ' available') :
     tx('启动后读取设备', 'Available after permission'));
@@ -603,6 +610,13 @@ async function inferFrame(generation = state.generation) {
     stageMessage(() => errorText(error), true);
   } finally {
     state.busy = false;
+    // A threshold change during a still-frame inference must render the latest value.
+    const pending = state.pendingStillInference;
+    state.pendingStillInference = null;
+    if (pending === generation && generation === state.generation &&
+      !state.running && media.source && !document.hidden) {
+      void inferFrame(pending);
+    }
   }
 }
 
@@ -636,6 +650,8 @@ async function loadFile(file) {
     await waitIdle();
     if (epoch !== state.modeEpoch || !state.info || state.mode !== 'file') return;
     resetResult();
+    state.fileName = '';
+    syncMedia();
     const info = await media.loadFile(file);
     if (epoch !== state.modeEpoch || !state.info || state.mode !== 'file') return;
     state.fileName = file.name;
@@ -649,6 +665,7 @@ async function loadFile(file) {
     if (epoch === state.modeEpoch && error.code !== 'cancelled') {
       show('stage-empty', true);
       stageMessage(() => errorText(error), true);
+      syncMedia();
     }
   }
 }
@@ -730,7 +747,7 @@ function wakeControls() {
   if (!state.fullscreen || !state.running) return;
   idleTimer = setTimeout(() => {
     const interacting = menuPairs.some(pair => $(pair[1])?.classList.contains('is-open')) ||
-      $('stage-toolbar')?.contains(document.activeElement);
+      $('stage-toolbar')?.querySelector(':focus-visible');
     if (!interacting) $('stage-toolbar')?.classList.add('is-idle');
   }, 2600);
 }
@@ -741,6 +758,7 @@ function fullscreenChanged() {
   show('fullscreen-exit', state.fullscreen);
   $('fullscreen-toggle')?.setAttribute('aria-label', state.fullscreen ?
     tx('退出全屏', 'Exit fullscreen') : tx('全屏', 'Fullscreen'));
+  $('fullscreen-toggle').title = $('fullscreen-toggle').getAttribute('aria-label');
   wakeControls();
 }
 
@@ -785,21 +803,23 @@ document.addEventListener('pointerdown', event => {
 });
 document.addEventListener('keydown', event => {
   if (event.key === 'Escape') {
-    for (const pair of menuPairs) closeMenu(...pair, true);
+    const open = [...menuPairs].reverse().filter(([, menu]) => $(menu)?.classList.contains('is-open'));
+    const pair = open.find(([trigger, menu]) => $(trigger) === event.target || $(menu)?.contains(event.target)) || open[0];
+    if (pair) {
+      event.preventDefault();
+      closeMenu(...pair, true);
+      return;
+    }
     if (state.fullscreen) exitFullscreen();
   }
   if (!['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(event.key)) return;
-  const pair = menuPairs.find(([trigger, menu]) => $(trigger) === event.target ||
-    (!$(menu)?.hidden && $(menu)?.contains(event.target)));
+  const pair = [...menuPairs].reverse().find(([trigger, menu]) => $(menu)?.getAttribute('role') === 'menu' &&
+    ($(trigger) === event.target || (!$(menu)?.hidden && $(menu)?.contains(event.target))));
   if (!pair) return;
   event.preventDefault();
   const [trigger, menu] = pair;
-  if ($(menu).hidden) toggleMenu(trigger, menu);
-  const items = [...$(menu).querySelectorAll('button:not(:disabled)')];
-  const current = items.indexOf(document.activeElement);
-  let next = event.key === 'Home' ? 0 : event.key === 'End' ? items.length - 1 :
-    (current + (event.key === 'ArrowUp' ? -1 : 1) + items.length) % items.length;
-  items[next]?.focus();
+  if (!$(menu).classList.contains('is-open')) toggleMenu(trigger, menu);
+  focusMenuItem($(menu), event.key, document.activeElement);
 });
 listen('load-model', 'click', loadModel);
 listen('load-cancel', 'click', cancelLoad);
@@ -882,7 +902,10 @@ listen('confidence', 'input', () => {
   $('confidence').setAttribute('aria-valuetext', $('confidence-value').textContent);
 });
 listen('confidence', 'change', () => {
-  if (!state.running && media.source) inferFrame();
+  if (!state.running && media.source) {
+    if (state.busy) state.pendingStillInference = state.generation;
+    else void inferFrame();
+  }
 });
 listen('save-image', 'click', () => saveFrame($('overlay-canvas'), 'local-yolo-result.png'));
 listen('save-json', 'click', exportJson);

@@ -1,6 +1,6 @@
 {
-  "recordedAt": "2026-10-21T01:56:41.913Z",
-  "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
+  "recordedAt": "2026-10-21T20:48:10.521Z",
+  "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
   "command": "npm audit --json",
   "report": "docs/dependency-audit.json",
   "sha256": "7a23e14b70b0c0e8ea935cb9eee28e7c2a6d064ff26912848f3500b9c721f7e9",
@@ -15,5 +15,5 @@
     "critical": 0,
     "total": 0
   },
-  "scope": "Actual latest npm registry audit response; no package or source changes were made by this report."
+  "scope": "Actual official npm registry response; no dependency changes."
 }

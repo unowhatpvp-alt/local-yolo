@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "type": "static-build-verification",
   "status": "pass",
-  "checkedAt": "2026-10-21T02:15:38.687Z",
+  "checkedAt": "2026-10-21T20:46:32.425Z",
   "base": "/local-yolo/",
-  "revision": "395743021b71",
+  "revision": "fe0bf848230e",
   "artifactFileCount": 24,
   "checks": [
     {
@@ -22,8 +22,8 @@
         "./manifest.webmanifest",
         "./icons/icon-192.png",
         "./icons/icon-192.png",
-        "/local-yolo/assets/index-CeiFdrkD.js",
-        "/local-yolo/assets/index-BgXhbuy3.css"
+        "/local-yolo/assets/index-BppwNdth.js",
+        "/local-yolo/assets/index-Busj7JGf.css"
       ]
     },
     {
@@ -73,7 +73,7 @@
       "observations": [
         "15 precache entries resolve to actual visible artifact files.",
         {
-          "revision": "395743021b71",
+          "revision": "fe0bf848230e",
           "noHiddenEntries": true,
           "runtimeCachedLazily": true
         }

@@ -2,13 +2,17 @@
 
 Current acceptance policy follows the user’s 2026-10-21 instruction: [device limits and actual fallback requirements](RELEASE_POLICY_V1_1.md). Hardware tests unavailable in Work may remain explicitly unverified when the actual automatic WASM fallback and all other necessary checks pass.
 
-Production stays on the existing Minimal V1 until this gate passes and the release is approved. Development validation is not deployment authorization. Required online scope is **25 genuine YOLO26 exports**: detection, segmentation, pose, classification and OBB, each N/S/M/L/X. YOLO11 is a local-import regression target; it does not substitute for any required YOLO26 model.
+Production publication requires this complete gate to pass. The user has authorized completing and publishing the project when its release conditions are satisfied; an unverified candidate must not be published. Required online scope is **25 genuine YOLO26 exports**: detection, segmentation, pose, classification and OBB, each N/S/M/L/X. YOLO11 is a local-import regression target; it does not substitute for any required YOLO26 model.
+
+## Current candidate observations — 2026-10-21
+
+Current fingerprint: `3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c`. Fresh Node WASM25/25, actual Chrome155 WASM25/25, genuine NVIDIA Blackwell WebGPU25/25, 56 automated tests and 14 UI checks passed. Secure PWA11/11, four Chromium-emulated touch checks, the strict local gate (errors=[]), reproducible build revision fe0bf848230e and six static-artifact groups passed. Final GitHub CI, commit, production deployment and live acceptance remain pending. This paragraph records observations only and changes no gate requirement, model scope or failure assertion. See [current validation](VALIDATION.md).
 
 ## Preserved baseline
 
 - Baseline commit: `2cea0ebebd3399a77a2d649c44755e54ca0e16b0`.
 - Preserved remote branch: `backup/minimal-v1-2cea0eb`.
-- Development branch: `develop/minimal-v1.1`.
+- Current isolated development branch: `codex/minimal-v1-release` (continues `develop/minimal-v1.1`).
 - Production branch: `main`.
 
 Only `main` can run the production Pages build/deploy jobs. A manual dispatch on any other branch skips both production jobs. Development push/PR validation has only `contents: read`, no Pages permission, no Pages environment and no publication step. Production build has Pages read permission; only the successful deployment job receives Pages write and OIDC permissions. Do not move, weaken or bypass the gate after a failed check.
@@ -22,7 +26,7 @@ The final command exits nonzero until **all** required evidence is current:
 | Evidence | Required source |
 | --- | --- |
 | Actual Node WASM execution, all 25 | `docs/model-validation-matrix.json` |
-| Actual browser WASM and WebGPU/fallback execution, all 25 | `docs/browser-validation-matrix.json` |
+| Actual browser WASM and WebGPU/fallback execution, all 25 | `docs/browser-validation-matrix.json`; independent hardware run: `docs/hardware-webgpu-matrix.json` |
 | Actual secure-browser PWA/offline/update checks | `docs/pwa-validation.json` |
 
 Every report has `schemaVersion: 1`, a unique actual run ID, start/end timestamps and `sourceFingerprint`. Obtain that value using `node scripts/check-release-gate.mjs --fingerprint` or the exported `sourceFingerprint()` utility. It binds the application files, dependencies, PWA build scripts, icons/manifest and immutable model metadata. Changing only a model's validation label does not change the immutable metadata fingerprint. Changing engine, UI, dependencies or model bytes does. Evidence from a different fingerprint must be rerun; never rewrite its fingerprint after testing.

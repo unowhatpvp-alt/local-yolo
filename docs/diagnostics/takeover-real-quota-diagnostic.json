@@ -1,0 +1,2890 @@
+{
+  "at": "2026-10-21T20:43:04.269Z",
+  "version": "156.0.8078.4",
+  "origin": "http://127.0.0.1:63945",
+  "physicalDevice": false,
+  "cases": [
+    {
+      "name": "fresh-origin-override-before-first-write",
+      "initialBytes": 0,
+      "overrideBefore": true,
+      "writes": [
+        {
+          "status": "aborted",
+          "bytes": 1048576,
+          "key": "after-0",
+          "error": {
+            "name": "QuotaExceededError",
+            "message": ""
+          },
+          "requestError": null,
+          "ms": 1.7999999821186066
+        }
+      ],
+      "states": [
+        {
+          "label": "fresh",
+          "cdp": {
+            "usage": 0,
+            "quota": 2044774169,
+            "overrideActive": false,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 0
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10737418240,
+            "usage": 0,
+            "usageDetails": {}
+          }
+        },
+        {
+          "label": "overridden-to-one-byte",
+          "cdp": {
+            "usage": 0,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 0
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10737418240,
+            "usage": 0,
+            "usageDetails": {}
+          }
+        },
+        {
+          "label": "write-0",
+          "cdp": {
+            "usage": 1122304,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 1122304
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10738540544,
+            "usage": 1122304,
+            "usageDetails": {
+              "indexedDB": 1122304
+            }
+          }
+        },
+        {
+          "label": "recovered",
+          "cdp": {
+            "usage": 1122304,
+            "quota": 2044774169,
+            "overrideActive": false,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 1122304
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10738540544,
+            "usage": 1122304,
+            "usageDetails": {
+              "indexedDB": 1122304
+            }
+          }
+        }
+      ],
+      "recovery": {
+        "status": "committed",
+        "bytes": 1048576,
+        "key": "recovery",
+        "ms": 1.4000000059604645
+      }
+    },
+    {
+      "name": "write-1mb-then-override",
+      "initialBytes": 1048576,
+      "overrideBefore": true,
+      "writes": [
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-0",
+          "ms": 1.2000000178813934
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-1",
+          "ms": 1.0999999940395355
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-2",
+          "ms": 1.199999988079071
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-3",
+          "ms": 1.300000011920929
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-4",
+          "ms": 1.2000000178813934
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-5",
+          "ms": 1.2999999821186066
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-6",
+          "ms": 1.100000023841858
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-7",
+          "ms": 1.2999999821186066
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-8",
+          "ms": 1.0999999940395355
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-9",
+          "ms": 1.4000000059604645
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-10",
+          "ms": 1.199999988079071
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-11",
+          "ms": 1
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-12",
+          "ms": 1.199999988079071
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-13",
+          "ms": 1.199999988079071
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-14",
+          "ms": 1.199999988079071
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-15",
+          "ms": 1.0999999940395355
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-16",
+          "ms": 1.199999988079071
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-17",
+          "ms": 1.300000011920929
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-18",
+          "ms": 1.2999999821186066
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-19",
+          "ms": 1.0999999940395355
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-20",
+          "ms": 1.0999999940395355
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-21",
+          "ms": 1.0999999940395355
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-22",
+          "ms": 1.100000023841858
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-23",
+          "ms": 1.2999999821186066
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-24",
+          "ms": 1.199999988079071
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-25",
+          "ms": 1.399999976158142
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-26",
+          "ms": 1.2000000178813934
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-27",
+          "ms": 1.300000011920929
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-28",
+          "ms": 1.2999999821186066
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-29",
+          "ms": 1.300000011920929
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-30",
+          "ms": 1.199999988079071
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-31",
+          "ms": 1.0999999940395355
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-32",
+          "ms": 1.0999999940395355
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-33",
+          "ms": 1.2000000178813934
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-34",
+          "ms": 1.5
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-35",
+          "ms": 1.0999999940395355
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-36",
+          "ms": 1.199999988079071
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-37",
+          "ms": 1.0999999940395355
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-38",
+          "ms": 1.199999988079071
+        },
+        {
+          "status": "committed",
+          "bytes": 1048576,
+          "key": "after-39",
+          "ms": 1.300000011920929
+        }
+      ],
+      "states": [
+        {
+          "label": "fresh",
+          "cdp": {
+            "usage": 0,
+            "quota": 1890624834,
+            "overrideActive": false,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 0
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10737418240,
+            "usage": 0,
+            "usageDetails": {}
+          }
+        },
+        {
+          "label": "overridden-to-one-byte",
+          "cdp": {
+            "usage": 1122304,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 1122304
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10738540544,
+            "usage": 1122304,
+            "usageDetails": {
+              "indexedDB": 1122304
+            }
+          }
+        },
+        {
+          "label": "write-0",
+          "cdp": {
+            "usage": 2170880,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 2170880
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10739589120,
+            "usage": 2170880,
+            "usageDetails": {
+              "indexedDB": 2170880
+            }
+          }
+        },
+        {
+          "label": "write-1",
+          "cdp": {
+            "usage": 3219456,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 3219456
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10740637696,
+            "usage": 3219456,
+            "usageDetails": {
+              "indexedDB": 3219456
+            }
+          }
+        },
+        {
+          "label": "write-2",
+          "cdp": {
+            "usage": 4276224,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 4276224
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10741694464,
+            "usage": 4276224,
+            "usageDetails": {
+              "indexedDB": 4276224
+            }
+          }
+        },
+        {
+          "label": "write-3",
+          "cdp": {
+            "usage": 5324800,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 5324800
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10742743040,
+            "usage": 5324800,
+            "usageDetails": {
+              "indexedDB": 5324800
+            }
+          }
+        },
+        {
+          "label": "write-4",
+          "cdp": {
+            "usage": 6373376,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 6373376
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10743791616,
+            "usage": 6373376,
+            "usageDetails": {
+              "indexedDB": 6373376
+            }
+          }
+        },
+        {
+          "label": "write-5",
+          "cdp": {
+            "usage": 7426048,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 7426048
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10744844288,
+            "usage": 7426048,
+            "usageDetails": {
+              "indexedDB": 7426048
+            }
+          }
+        },
+        {
+          "label": "write-6",
+          "cdp": {
+            "usage": 8474624,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 8474624
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10745892864,
+            "usage": 8474624,
+            "usageDetails": {
+              "indexedDB": 8474624
+            }
+          }
+        },
+        {
+          "label": "write-7",
+          "cdp": {
+            "usage": 9523200,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 9523200
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10746941440,
+            "usage": 9523200,
+            "usageDetails": {
+              "indexedDB": 9523200
+            }
+          }
+        },
+        {
+          "label": "write-8",
+          "cdp": {
+            "usage": 10575872,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 10575872
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10747994112,
+            "usage": 10575872,
+            "usageDetails": {
+              "indexedDB": 10575872
+            }
+          }
+        },
+        {
+          "label": "write-9",
+          "cdp": {
+            "usage": 11624448,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 11624448
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10749042688,
+            "usage": 11624448,
+            "usageDetails": {
+              "indexedDB": 11624448
+            }
+          }
+        },
+        {
+          "label": "write-10",
+          "cdp": {
+            "usage": 12673024,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 12673024
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10750091264,
+            "usage": 12673024,
+            "usageDetails": {
+              "indexedDB": 12673024
+            }
+          }
+        },
+        {
+          "label": "write-11",
+          "cdp": {
+            "usage": 13725696,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 13725696
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10751143936,
+            "usage": 13725696,
+            "usageDetails": {
+              "indexedDB": 13725696
+            }
+          }
+        },
+        {
+          "label": "write-12",
+          "cdp": {
+            "usage": 14774272,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 14774272
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10752192512,
+            "usage": 14774272,
+            "usageDetails": {
+              "indexedDB": 14774272
+            }
+          }
+        },
+        {
+          "label": "write-13",
+          "cdp": {
+            "usage": 15822848,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 15822848
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10753241088,
+            "usage": 15822848,
+            "usageDetails": {
+              "indexedDB": 15822848
+            }
+          }
+        },
+        {
+          "label": "write-14",
+          "cdp": {
+            "usage": 16875520,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 16875520
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10754293760,
+            "usage": 16875520,
+            "usageDetails": {
+              "indexedDB": 16875520
+            }
+          }
+        },
+        {
+          "label": "write-15",
+          "cdp": {
+            "usage": 17924096,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 17924096
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10755342336,
+            "usage": 17924096,
+            "usageDetails": {
+              "indexedDB": 17924096
+            }
+          }
+        },
+        {
+          "label": "write-16",
+          "cdp": {
+            "usage": 18972672,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 18972672
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10756390912,
+            "usage": 18972672,
+            "usageDetails": {
+              "indexedDB": 18972672
+            }
+          }
+        },
+        {
+          "label": "write-17",
+          "cdp": {
+            "usage": 20025344,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 20025344
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10757443584,
+            "usage": 20025344,
+            "usageDetails": {
+              "indexedDB": 20025344
+            }
+          }
+        },
+        {
+          "label": "write-18",
+          "cdp": {
+            "usage": 21073920,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 21073920
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10758492160,
+            "usage": 21073920,
+            "usageDetails": {
+              "indexedDB": 21073920
+            }
+          }
+        },
+        {
+          "label": "write-19",
+          "cdp": {
+            "usage": 22122496,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 22122496
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10759540736,
+            "usage": 22122496,
+            "usageDetails": {
+              "indexedDB": 22122496
+            }
+          }
+        },
+        {
+          "label": "write-20",
+          "cdp": {
+            "usage": 23175168,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 23175168
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10760593408,
+            "usage": 23175168,
+            "usageDetails": {
+              "indexedDB": 23175168
+            }
+          }
+        },
+        {
+          "label": "write-21",
+          "cdp": {
+            "usage": 24223744,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 24223744
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10761641984,
+            "usage": 24223744,
+            "usageDetails": {
+              "indexedDB": 24223744
+            }
+          }
+        },
+        {
+          "label": "write-22",
+          "cdp": {
+            "usage": 25272320,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 25272320
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10762690560,
+            "usage": 25272320,
+            "usageDetails": {
+              "indexedDB": 25272320
+            }
+          }
+        },
+        {
+          "label": "write-23",
+          "cdp": {
+            "usage": 26324992,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 26324992
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10763743232,
+            "usage": 26324992,
+            "usageDetails": {
+              "indexedDB": 26324992
+            }
+          }
+        },
+        {
+          "label": "write-24",
+          "cdp": {
+            "usage": 27373568,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 27373568
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10764791808,
+            "usage": 27373568,
+            "usageDetails": {
+              "indexedDB": 27373568
+            }
+          }
+        },
+        {
+          "label": "write-25",
+          "cdp": {
+            "usage": 28422144,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 28422144
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10765840384,
+            "usage": 28422144,
+            "usageDetails": {
+              "indexedDB": 28422144
+            }
+          }
+        },
+        {
+          "label": "write-26",
+          "cdp": {
+            "usage": 29474816,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 29474816
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10766893056,
+            "usage": 29474816,
+            "usageDetails": {
+              "indexedDB": 29474816
+            }
+          }
+        },
+        {
+          "label": "write-27",
+          "cdp": {
+            "usage": 30523392,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 30523392
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10767941632,
+            "usage": 30523392,
+            "usageDetails": {
+              "indexedDB": 30523392
+            }
+          }
+        },
+        {
+          "label": "write-28",
+          "cdp": {
+            "usage": 31571968,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 31571968
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10768990208,
+            "usage": 31571968,
+            "usageDetails": {
+              "indexedDB": 31571968
+            }
+          }
+        },
+        {
+          "label": "write-29",
+          "cdp": {
+            "usage": 32624640,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 32624640
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10770042880,
+            "usage": 32624640,
+            "usageDetails": {
+              "indexedDB": 32624640
+            }
+          }
+        },
+        {
+          "label": "write-30",
+          "cdp": {
+            "usage": 33673216,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 33673216
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10771091456,
+            "usage": 33673216,
+            "usageDetails": {
+              "indexedDB": 33673216
+            }
+          }
+        },
+        {
+          "label": "write-31",
+          "cdp": {
+            "usage": 34721792,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 34721792
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10772140032,
+            "usage": 34721792,
+            "usageDetails": {
+              "indexedDB": 34721792
+            }
+          }
+        },
+        {
+          "label": "write-32",
+          "cdp": {
+            "usage": 35774464,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 35774464
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10773192704,
+            "usage": 35774464,
+            "usageDetails": {
+              "indexedDB": 35774464
+            }
+          }
+        },
+        {
+          "label": "write-33",
+          "cdp": {
+            "usage": 36823040,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 36823040
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10774241280,
+            "usage": 36823040,
+            "usageDetails": {
+              "indexedDB": 36823040
+            }
+          }
+        },
+        {
+          "label": "write-34",
+          "cdp": {
+            "usage": 37871616,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 37871616
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10775289856,
+            "usage": 37871616,
+            "usageDetails": {
+              "indexedDB": 37871616
+            }
+          }
+        },
+        {
+          "label": "write-35",
+          "cdp": {
+            "usage": 38924288,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 38924288
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10776342528,
+            "usage": 38924288,
+            "usageDetails": {
+              "indexedDB": 38924288
+            }
+          }
+        },
+        {
+          "label": "write-36",
+          "cdp": {
+            "usage": 39972864,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 39972864
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10777391104,
+            "usage": 39972864,
+            "usageDetails": {
+              "indexedDB": 39972864
+            }
+          }
+        },
+        {
+          "label": "write-37",
+          "cdp": {
+            "usage": 41021440,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 41021440
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10778439680,
+            "usage": 41021440,
+            "usageDetails": {
+              "indexedDB": 41021440
+            }
+          }
+        },
+        {
+          "label": "write-38",
+          "cdp": {
+            "usage": 42074112,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 42074112
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10779492352,
+            "usage": 42074112,
+            "usageDetails": {
+              "indexedDB": 42074112
+            }
+          }
+        },
+        {
+          "label": "write-39",
+          "cdp": {
+            "usage": 43122688,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 43122688
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10780540928,
+            "usage": 43122688,
+            "usageDetails": {
+              "indexedDB": 43122688
+            }
+          }
+        },
+        {
+          "label": "recovered",
+          "cdp": {
+            "usage": 44171264,
+            "quota": 1890624834,
+            "overrideActive": false,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 44171264
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10781589504,
+            "usage": 44171264,
+            "usageDetails": {
+              "indexedDB": 44171264
+            }
+          }
+        }
+      ],
+      "initial": {
+        "status": "committed",
+        "bytes": 1048576,
+        "key": "initial",
+        "ms": 1.4000000059604645
+      },
+      "recovery": {
+        "status": "committed",
+        "bytes": 1048576,
+        "key": "recovery",
+        "ms": 1.0999999940395355
+      }
+    },
+    {
+      "name": "write-10mb-then-override",
+      "initialBytes": 10485760,
+      "overrideBefore": true,
+      "writes": [
+        {
+          "status": "committed",
+          "bytes": 10485760,
+          "key": "after-0",
+          "ms": 8.599999994039536
+        },
+        {
+          "status": "committed",
+          "bytes": 10485760,
+          "key": "after-1",
+          "ms": 8.300000011920929
+        },
+        {
+          "status": "committed",
+          "bytes": 10485760,
+          "key": "after-2",
+          "ms": 4.100000023841858
+        },
+        {
+          "status": "committed",
+          "bytes": 10485760,
+          "key": "after-3",
+          "ms": 4.0999999940395355
+        },
+        {
+          "status": "committed",
+          "bytes": 10485760,
+          "key": "after-4",
+          "ms": 4.0999999940395355
+        },
+        {
+          "status": "committed",
+          "bytes": 10485760,
+          "key": "after-5",
+          "ms": 8.5
+        },
+        {
+          "status": "committed",
+          "bytes": 10485760,
+          "key": "after-6",
+          "ms": 8.5
+        },
+        {
+          "status": "committed",
+          "bytes": 10485760,
+          "key": "after-7",
+          "ms": 8.400000005960464
+        },
+        {
+          "status": "committed",
+          "bytes": 10485760,
+          "key": "after-8",
+          "ms": 9.299999982118607
+        },
+        {
+          "status": "committed",
+          "bytes": 10485760,
+          "key": "after-9",
+          "ms": 8.599999994039536
+        },
+        {
+          "status": "committed",
+          "bytes": 10485760,
+          "key": "after-10",
+          "ms": 8.099999994039536
+        },
+        {
+          "status": "committed",
+          "bytes": 10485760,
+          "key": "after-11",
+          "ms": 8.300000011920929
+        },
+        {
+          "status": "committed",
+          "bytes": 10485760,
+          "key": "after-12",
+          "ms": 8.400000005960464
+        },
+        {
+          "status": "committed",
+          "bytes": 10485760,
+          "key": "after-13",
+          "ms": 8.600000023841858
+        },
+        {
+          "status": "committed",
+          "bytes": 10485760,
+          "key": "after-14",
+          "ms": 8.300000011920929
+        }
+      ],
+      "states": [
+        {
+          "label": "fresh",
+          "cdp": {
+            "usage": 0,
+            "quota": 1872331612,
+            "overrideActive": false,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 0
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10737418240,
+            "usage": 0,
+            "usageDetails": {}
+          }
+        },
+        {
+          "label": "overridden-to-one-byte",
+          "cdp": {
+            "usage": 5320704,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 5320704
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10742738944,
+            "usage": 5320704,
+            "usageDetails": {
+              "indexedDB": 5320704
+            }
+          }
+        },
+        {
+          "label": "write-0",
+          "cdp": {
+            "usage": 10567680,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 10567680
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10747985920,
+            "usage": 10567680,
+            "usageDetails": {
+              "indexedDB": 10567680
+            }
+          }
+        },
+        {
+          "label": "write-1",
+          "cdp": {
+            "usage": 15814656,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 15814656
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10753232896,
+            "usage": 15814656,
+            "usageDetails": {
+              "indexedDB": 15814656
+            }
+          }
+        },
+        {
+          "label": "write-2",
+          "cdp": {
+            "usage": 21069824,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 21069824
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10758488064,
+            "usage": 21069824,
+            "usageDetails": {
+              "indexedDB": 21069824
+            }
+          }
+        },
+        {
+          "label": "write-3",
+          "cdp": {
+            "usage": 26316800,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 26316800
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10763735040,
+            "usage": 26316800,
+            "usageDetails": {
+              "indexedDB": 26316800
+            }
+          }
+        },
+        {
+          "label": "write-4",
+          "cdp": {
+            "usage": 31563776,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 31563776
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10768982016,
+            "usage": 31563776,
+            "usageDetails": {
+              "indexedDB": 31563776
+            }
+          }
+        },
+        {
+          "label": "write-5",
+          "cdp": {
+            "usage": 36814848,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 36814848
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10774233088,
+            "usage": 36814848,
+            "usageDetails": {
+              "indexedDB": 36814848
+            }
+          }
+        },
+        {
+          "label": "write-6",
+          "cdp": {
+            "usage": 42061824,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 42061824
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10779480064,
+            "usage": 42061824,
+            "usageDetails": {
+              "indexedDB": 42061824
+            }
+          }
+        },
+        {
+          "label": "write-7",
+          "cdp": {
+            "usage": 47308800,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 47308800
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10784727040,
+            "usage": 47308800,
+            "usageDetails": {
+              "indexedDB": 47308800
+            }
+          }
+        },
+        {
+          "label": "write-8",
+          "cdp": {
+            "usage": 52559872,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 52559872
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10789978112,
+            "usage": 52559872,
+            "usageDetails": {
+              "indexedDB": 52559872
+            }
+          }
+        },
+        {
+          "label": "write-9",
+          "cdp": {
+            "usage": 57806848,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 57806848
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10795225088,
+            "usage": 57806848,
+            "usageDetails": {
+              "indexedDB": 57806848
+            }
+          }
+        },
+        {
+          "label": "write-10",
+          "cdp": {
+            "usage": 63053824,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 63053824
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10800472064,
+            "usage": 63053824,
+            "usageDetails": {
+              "indexedDB": 63053824
+            }
+          }
+        },
+        {
+          "label": "write-11",
+          "cdp": {
+            "usage": 68304896,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 68304896
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10805723136,
+            "usage": 68304896,
+            "usageDetails": {
+              "indexedDB": 68304896
+            }
+          }
+        },
+        {
+          "label": "write-12",
+          "cdp": {
+            "usage": 73551872,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 73551872
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10810970112,
+            "usage": 73551872,
+            "usageDetails": {
+              "indexedDB": 73551872
+            }
+          }
+        },
+        {
+          "label": "write-13",
+          "cdp": {
+            "usage": 78798848,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 78798848
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10816217088,
+            "usage": 78798848,
+            "usageDetails": {
+              "indexedDB": 78798848
+            }
+          }
+        },
+        {
+          "label": "write-14",
+          "cdp": {
+            "usage": 84049920,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 84049920
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10821468160,
+            "usage": 84049920,
+            "usageDetails": {
+              "indexedDB": 84049920
+            }
+          }
+        },
+        {
+          "label": "recovered",
+          "cdp": {
+            "usage": 85098496,
+            "quota": 1872331612,
+            "overrideActive": false,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 85098496
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10822516736,
+            "usage": 85098496,
+            "usageDetails": {
+              "indexedDB": 85098496
+            }
+          }
+        }
+      ],
+      "initial": {
+        "status": "committed",
+        "bytes": 10485760,
+        "key": "initial",
+        "ms": 8.699999988079071
+      },
+      "recovery": {
+        "status": "committed",
+        "bytes": 1048576,
+        "key": "recovery",
+        "ms": 1.0999999940395355
+      }
+    },
+    {
+      "name": "write-10mb-override-clear-idb",
+      "initialBytes": 10485760,
+      "overrideBefore": true,
+      "writes": [
+        {
+          "status": "aborted",
+          "bytes": 10485760,
+          "key": "after-0",
+          "error": {
+            "name": "QuotaExceededError",
+            "message": ""
+          },
+          "requestError": null,
+          "ms": 4.200000017881393
+        }
+      ],
+      "states": [
+        {
+          "label": "fresh",
+          "cdp": {
+            "usage": 0,
+            "quota": 2207001644,
+            "overrideActive": false,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 0
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10737418240,
+            "usage": 0,
+            "usageDetails": {}
+          }
+        },
+        {
+          "label": "overridden-to-one-byte",
+          "cdp": {
+            "usage": 5320704,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 5320704
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10742738944,
+            "usage": 5320704,
+            "usageDetails": {
+              "indexedDB": 5320704
+            }
+          }
+        },
+        {
+          "label": "indexeddb-cleared",
+          "cdp": {
+            "usage": 0,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 0
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10737418240,
+            "usage": 0,
+            "usageDetails": {}
+          }
+        },
+        {
+          "label": "write-0",
+          "cdp": {
+            "usage": 5320704,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 5320704
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10742738944,
+            "usage": 5320704,
+            "usageDetails": {
+              "indexedDB": 5320704
+            }
+          }
+        },
+        {
+          "label": "recovered",
+          "cdp": {
+            "usage": 1122304,
+            "quota": 2207001644,
+            "overrideActive": false,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 1122304
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10738540544,
+            "usage": 1122304,
+            "usageDetails": {
+              "indexedDB": 1122304
+            }
+          }
+        }
+      ],
+      "initial": {
+        "status": "committed",
+        "bytes": 10485760,
+        "key": "initial",
+        "ms": 8.600000023841858
+      },
+      "recovery": {
+        "status": "committed",
+        "bytes": 1048576,
+        "key": "recovery",
+        "ms": 0.6000000238418579
+      }
+    },
+    {
+      "name": "fresh-origin-override-single-20mb",
+      "initialBytes": 0,
+      "overrideBefore": true,
+      "writes": [
+        {
+          "status": "aborted",
+          "bytes": 20971520,
+          "key": "after-0",
+          "error": {
+            "name": "QuotaExceededError",
+            "message": ""
+          },
+          "requestError": null,
+          "ms": 9.299999982118607
+        }
+      ],
+      "states": [
+        {
+          "label": "fresh",
+          "cdp": {
+            "usage": 0,
+            "quota": 1944991725,
+            "overrideActive": false,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 0
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10737418240,
+            "usage": 0,
+            "usageDetails": {}
+          }
+        },
+        {
+          "label": "overridden-to-one-byte",
+          "cdp": {
+            "usage": 0,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 0
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10737418240,
+            "usage": 0,
+            "usageDetails": {}
+          }
+        },
+        {
+          "label": "write-0",
+          "cdp": {
+            "usage": 5320704,
+            "quota": 1,
+            "overrideActive": true,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 5320704
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10742738944,
+            "usage": 5320704,
+            "usageDetails": {
+              "indexedDB": 5320704
+            }
+          }
+        },
+        {
+          "label": "recovered",
+          "cdp": {
+            "usage": 1122304,
+            "quota": 1944991725,
+            "overrideActive": false,
+            "usageBreakdown": [
+              {
+                "storageType": "file_systems",
+                "usage": 0
+              },
+              {
+                "storageType": "indexeddb",
+                "usage": 1122304
+              },
+              {
+                "storageType": "cache_storage",
+                "usage": 0
+              },
+              {
+                "storageType": "service_workers",
+                "usage": 0
+              }
+            ]
+          },
+          "estimate": {
+            "quota": 10738540544,
+            "usage": 1122304,
+            "usageDetails": {
+              "indexedDB": 1122304
+            }
+          }
+        }
+      ],
+      "recovery": {
+        "status": "committed",
+        "bytes": 1048576,
+        "key": "recovery",
+        "ms": 0.5999999940395355
+      }
+    }
+  ]
+}

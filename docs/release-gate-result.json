@@ -1,44 +1,6 @@
 {
-  "pass": false,
-  "errors": [
-    "yolo26-detect-n/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
-    "yolo26-detect-s/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
-    "yolo26-detect-m/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
-    "yolo26-detect-l/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
-    "yolo26-detect-x/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
-    "yolo26-segment-n/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
-    "yolo26-segment-s/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
-    "yolo26-segment-m/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
-    "yolo26-segment-l/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
-    "yolo26-segment-x/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
-    "yolo26-pose-n/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
-    "yolo26-pose-s/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
-    "yolo26-pose-m/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
-    "yolo26-pose-l/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
-    "yolo26-pose-x/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
-    "yolo26-classify-n/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
-    "yolo26-classify-s/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
-    "yolo26-classify-m/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
-    "yolo26-classify-l/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
-    "yolo26-classify-x/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
-    "yolo26-obb-n/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
-    "yolo26-obb-s/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
-    "yolo26-obb-m/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
-    "yolo26-obb-l/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
-    "yolo26-obb-x/webgpu: actual WebGPU pass required (pending, fail, unavailable and skipped do not pass).",
-    "PWA must be tested in a real secure browser context.",
-    "PWA check manifest: actual secure-browser observations and pass required.",
-    "PWA check serviceWorkerInstalled: actual secure-browser observations and pass required.",
-    "PWA check offlineColdStart: actual secure-browser observations and pass required.",
-    "PWA check cachedModelOfflineInference: actual secure-browser observations and pass required.",
-    "PWA check cacheDeletion: actual secure-browser observations and pass required.",
-    "PWA check updateWaiting: actual secure-browser observations and pass required.",
-    "PWA check oldTabConsistency: actual secure-browser observations and pass required.",
-    "PWA check activateNewVersion: actual secure-browser observations and pass required.",
-    "PWA check noVersionMix: actual secure-browser observations and pass required.",
-    "PWA check storageFailureRecovery: actual secure-browser observations and pass required.",
-    "PWA check subpathResources: actual secure-browser observations and pass required."
-  ],
+  "pass": true,
+  "errors": [],
   "requiredModels": [
     "yolo26-detect-n",
     "yolo26-detect-s",
@@ -66,5 +28,5 @@
     "yolo26-obb-l",
     "yolo26-obb-x"
   ],
-  "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e"
+  "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c"
 }
