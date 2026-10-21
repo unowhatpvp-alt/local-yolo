@@ -57,6 +57,7 @@ export async function getModel(model, { onProgress, signal } = {}) {
       const bytes = new Uint8Array(await entry.blob.arrayBuffer());
       checkAbort(signal);
       if (await validBytes(bytes, model)) {
+        checkAbort(signal);
         emit(onProgress, 'ready', bytes.byteLength, bytes.byteLength, { cached: true });
         return bytes;
       }

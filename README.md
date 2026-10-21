@@ -1,72 +1,86 @@
-# Local YOLO — Minimal V1
+# Local YOLO — Minimal V1.1 release candidate
 
-A real, private, browser-only YOLO inference workbench. No Python service, account, media upload, analytics, remote inference, or API key. English / 中文, light / dark / system, responsive desktop and touch layouts.
+A browser-only YOLO vision workbench for GitHub Pages. Camera frames, uploaded images/videos and inference results stay on the device. There is no inference backend, account, analytics or API key. Public model downloads require a network connection; ONNX Runtime Web is bundled with the static app.
+
+**Candidate status, 2026-10-21:** fresh Node WASM **25/25**, built-in Chrome 155 WASM **25/25**, and genuine NVIDIA Blackwell hardware WebGPU **25/25** passed. All **14 application interaction checks**, six responsive viewports and four Chromium-emulated touch checks passed. Touch emulation does not certify physical phones. Automated tests: **56 passed, no failures or skips**. Secure-context PWA integration is **11/11**. The strict local release gate, six static-artifact checks and a reproducible production build passed. **Local release preparation is complete; GitHub CI, final commit, Pages publication and live acceptance remain pending.** See [current validation](docs/VALIDATION.md) and [delivery status](docs/DELIVERY.md).
+
+Application/model fingerprint: `3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c`.
 
 ## Run and build
+
+Use Node.js 22.12 or later and npm:
 
 ```sh
 npm ci
 npm run dev
-npm test
-npm run test:real
-npm run build
 ```
 
-Development base: `/local-yolo/`. Deploy `dist/` to GitHub Pages. The included Actions workflow downloads integrity-pinned fixtures, runs tests, builds static files, and deploys Pages. Repository Settings → Pages → Source must be **GitHub Actions**. HTTPS is required for camera/WebGPU/PWA; file inference also works with WASM where these APIs are unavailable. No third-party CDN is required for the runtime.
+Open Vite's Local URL under `/local-yolo/`. For camera, WebGPU and service workers, use HTTPS or a browser-trusted localhost origin. A remote HTTP preview does not provide the same capabilities.
 
-## Four workspaces
+```sh
+npm run build
+npm run preview
+```
 
-| Path | State |
-| --- | --- |
-| `/local-yolo/` | Minimal inference V1 |
-| `/local-yolo/studio/` | Reserved, development page |
-| `/local-yolo/experimental-training/` | Reserved, development page |
-| `/local-yolo/studio/experimental-training/` | Reserved, development page |
+The production output is static `dist/`, with the GitHub Pages base `/local-yolo/`. ONNX Runtime Web 1.23.2 modules/WASM are served from the same origin. Opening `index.html` directly as a local file is unsupported.
 
-## Verified models
+## Minimal workflow
 
-YOLO11 **N** detection, segmentation, pose, classification and OBB have passed real-image inference using ONNX Runtime Web 1.23.2 WASM. Online S/M/L/X and YOLO26 are intentionally disabled pending per-export validation. This does not imply those architectures cannot run; no unverified online combination is advertised as ready.
+Select a task and model size, then start. The launcher shows the model name, download size and cache state. Local ONNX import expands only when needed. The camera workspace remains the default after initialization; use Upload file for images or videos.
 
-Models are community ONNX exports of Ultralytics checkpoints, not official Ultralytics-hosted ONNX artifacts. See the in-app source link and `src/core/catalog.js` for immutable revision, observed byte size, SHA-256, input/output shapes and license. Five N models use non-square `[1,3,480,640]` input. Each task has its own preprocessing/decoder/rendering path. SHA-256 is checked before caching and again when loading a cached model.
+The workbench prioritizes the preview. Camera selection, mirror and zoom live in camera options; PNG/JSON exports live in the results menu. Confidence is the only exposed inference slider; applicable raw-head NMS retains the internal IoU default of 0.45. The interface supports Chinese/English and light/dark/system appearance, keyboard navigation, desktop/tablet/phone layouts, safe areas, fullscreen with a page-filling fallback, and controls that fade during active fullscreen inference and return on interaction.
 
-Sources:
+Images infer once and rerun when confidence changes, including a change made while a real inference is busy. Video inference is serialized and composites each completed frame with its own results. Detection boxes, segmentation masks, 17-point human pose, classification labels and rotated boxes use separate task adapters. Switching media/models releases previous resources; backgrounding stops camera capture and pauses video.
 
-- [Pinned export repository](https://huggingface.co/unileon-robotics/YOLO11-ONNX/tree/0e2a3f195ae62a25bc038ee9665b8e4ac5b98793)
-- [YOLO11 model documentation](https://docs.ultralytics.com/models/yolo11/)
-- [YOLO26 formats](https://docs.ultralytics.com/models/yolo26/)
-- [ONNX Runtime Web deployment](https://onnxruntime.ai/docs/tutorials/web/deploy.html)
+Camera zoom uses real track capabilities when available and explicitly uses digital crop otherwise. A compatible camera API does not guarantee access to every physical phone lens. Latency includes preprocessing, ONNX execution and postprocessing; FPS counts completed inferences. Those figures are not camera frame rate or GPU/VRAM measurements.
 
-The application source is AGPL-3.0-only. The selected models are marked AGPL-3.0 upstream. ONNX Runtime Web and other dependencies retain their own licenses. No weights are redistributed in this repository.
+## Models and compatibility
 
-## Local ONNX compatibility
+The online inventory is exactly **25 genuine YOLO26 exports: Detection, Segmentation, Pose, Classification and OBB × N/S/M/L/X**. Each entry pins its source revision, byte length, SHA-256 and graph signatures in [the model manifest](src/core/model-manifest.json). The online picker contains YOLO26 only; compatible YOLO11 local imports remain a regression target.
 
-Import a self-contained float32, single-RGB-input NCHW batch-one model. The importer reads the actual ONNX graph and metadata, validates output tensors during real warm-up, and fails with a specific reason when incompatible. Supported raw Ultralytics layouts include detection, prototypes for instance masks, 17-point human pose, classification probabilities, and rotated boxes. Metadata-identified end-to-end detection rows are supported; unverified end-to-end OBB is rejected.
+| Models | Input / export | Pinned source |
+| --- | --- | --- |
+| Detection, segmentation, pose and OBB; 20 models | FP32 `[1,3,480,640]`; task-specific raw heads and NMS | [unileon-robotics](https://huggingface.co/unileon-robotics/YOLO26-ONNX/tree/e046fc5125ee6b579f1801f0b6df68a60b949c42) |
+| Classification; 5 models | FP32 `[1,3,224,224]`; 1,000 probabilities, no additional softmax or NMS | [prithivMLmods](https://huggingface.co/prithivMLmods/YOLO26-ONNX/tree/c526dae7a5a5b4f1d79d704903b4406011da2716) |
 
-Use task override and comma/newline-separated labels or a JSON string array when needed. Custom class counts require accurate labels to avoid silently interpreting objectness as a class. Multi-input graphs, external `.data` weights, incompatible tensor layouts/types, arbitrary networks, and ambiguous exports are not supported. Dynamic image sizes use metadata/default 640 when dimensions are symbolic. This is not a universal ONNX viewer.
+These are pinned community exports of upstream Ultralytics YOLO26 checkpoints. See [provenance](docs/MODEL_PROVENANCE.md) and the [25-row compatibility matrix](docs/MODEL_COMPATIBILITY.md). Compatibility testing verifies execution, transforms, labels, rendering and resource cleanup. It does not promise prediction accuracy: the primary goldfish reference passes all five classifiers, while a ten-image diagnostic records N/S/M/L/X top-1 counts of **3/3/4/5/6 out of 10**, including every miss. This is not an ImageNet benchmark.
 
-## Media and performance
+Local import supports compatible self-contained float32, single-RGB-input NCHW batch-one YOLO models, including supported raw and metadata-identified end-to-end layouts. Task overrides and class labels are available when needed. External weights, unsupported shapes/types, ambiguous layouts and incompatible networks fail explicitly. This is not a universal ONNX runner. Large models can exceed device memory; the app never silently substitutes a smaller model.
 
-Camera defaults to rear-facing on mobile where available. Device lists and labels depend on permission. Settings/camera availability can be limited by OS and browser. Native hardware zoom is shown only when the actual camera track exposes it; otherwise a clearly labeled 1–4× **digital crop** is offered. Digital crop, letterbox restoration, mirror and overlays share one source-coordinate transform. Browser APIs do not expose every iPhone physical lens.
+## Cache, PWA and export coordinates
 
-Images infer once; videos infer sequentially while playing. A completed frame and its results are composited together, avoiding boxes from another frame. Inference is serialized, normally in a Web Worker. Video presentation follows completed inference, so slow devices can show fewer frames than the source video. Files are decoded by the browser; codec support varies. Backgrounding stops the camera and pauses video; resume explicitly. Switching models releases the old session and camera resources.
+Model downloads are streamed, verified and stored separately in IndexedDB. Actual storage-failure testing passed: the model ran in memory with a warning and caching recovered after the restriction was removed. Browser eviction and quotas limit offline guarantees. Imported media/results are not saved to the model cache or uploaded.
 
-Latency is **preprocessing + session.run + CPU postprocessing**, excluding worker transport, presentation and scheduling. FPS counts completed inference results in a rolling two-second window, not capture or display refresh. No GPU utilization/VRAM estimates are invented. WebGPU is attempted first and initialization/warm-up failure falls back to WASM. WASM uses one thread because GitHub Pages does not provide cross-origin isolation headers. GPU hardware testing is distinct from CPU/WASM validation.
+A versioned service worker supports offline app resources. Updates wait for explicit activation after active inference/media stops. All eleven actual secure-context tests passed, including service-worker installation, offline cold start, cached-model inference, two-version update/isolation and storage-failure recovery; see [PWA evidence and remaining limitation](docs/PWA_VALIDATION.md). iPhone Safari, iOS home-screen installation, physical camera/lens/zoom/touch behavior remain unverified.
 
-PNG exports save the visible composited frame. JSON contains task results, model/backend and an explicit coordinateSpace: processed width/height, original media width/height and scale. Media is reduced to at most 1920 pixels on its longest edge before inference; multiply result coordinates by `1/coordinateSpace.scale` to map to original media. Mirror affects presentation only, not JSON source coordinates.
+JSON records the actual `coordinateSpace.scaleX` and `scaleY`. Divide x/width by scaleX and y/height by scaleY to restore original-media coordinates. The real 3002×2000 → 1920×1279 regression passed; independent rounding means the two scales can differ slightly.
 
-## PWA and storage
+## Reproduce validation
 
-Manifest, standalone mode, icons, iOS safe areas and a versioned service worker are included. Production builds pre-cache the shell and runtime bundle. Runtime WASM assets are cached when first requested. Models use IndexedDB separately and can be removed under Settings. An already downloaded model alone does not guarantee offline use: the app and runtime must also have been opened successfully, and browser storage can be evicted. Cache failures fall back to memory and are shown as warnings. No camera pixels, uploaded files or inference results are persisted by the app.
+The full model inventory downloads approximately 2.17 GB. Python 3 extracts exact validation ZIP members and FFmpeg decodes actual MP4 frames; neither is an application backend.
 
-Android/desktop browsers may show an installation control. On iOS/iPadOS use Safari → Share → Add to Home Screen. Fullscreen uses the Fullscreen API where available, with a viewport-filling fallback otherwise. Actual installation, physical camera zoom, thermal limits and device-specific codec support require testing on those devices.
+```sh
+npm ci
+node scripts/fetch-test-fixtures.mjs
+node scripts/fetch-yolo26-models.mjs
+node scripts/fetch-yolo26-validation-fixtures.mjs
+npm test
+npm run validate:models
+npm run build
+node scripts/validate-browser-release.mjs
+npm run release:check
+```
 
-## Architecture
+The browser runner needs the isolated Playwright/Chromium setup specified in the workflows. The development-only `/local-yolo/tests/browser-harness.html` separately executes all 25 real browser WASM and WebGPU/fallback combinations. A partial run cannot pass the gate. The production build excludes harnesses, fixtures and weights.
 
-- `src/core/engine.js`, `adapters.js`, `onnx-info.js`: UI-independent session, preprocessing and task adapters.
-- `engine-client.js`, `engine-worker.js`: worker RPC with main-thread fallback when required APIs are absent.
-- `catalog.js`, `model-cache.js`: explicit compatibility registry, streaming download, integrity and cache.
-- `media.js`, `render.js`: lifecycle, zoom, crop and task-specific drawing.
-- `src/main.js`, `src/ui/`: Minimal-specific controller and bilingual interface.
-- `public/studio/` and training paths: independent entry points generated at build time; no experimental training code runs in inference.
+Additional current validation: 44 JS/MJS syntax checks, 78 JSON/manifest parses and Git integrity passed; dependency audit reports zero known vulnerabilities at every level. Chromium touch evidence is [explicitly emulated](docs/touch-validation.json).
 
-See [validation record](docs/VALIDATION.md) for tested scope and remaining device checks.
+Current evidence: [Node JSON](docs/model-validation-matrix.json), [browser JSON and 14 UI checks](docs/browser-validation-matrix.json), [hardware WebGPU JSON](docs/hardware-webgpu-matrix.json), [PWA JSON](docs/pwa-validation.json). Source fingerprints prevent old evidence from passing for changed code. Never rewrite an old fingerprint to make evidence appear current.
+
+## Release protection and reserved workspaces
+
+Work is isolated on `codex/minimal-v1-release`. The preserved V1 baseline is `2cea0ebebd3399a77a2d649c44755e54ca0e16b0`, also kept on `backup/minimal-v1-2cea0eb`. Only a passing gated workflow on `main` may deploy Pages. Final release/deployment status will be recorded in [DELIVERY](docs/DELIVERY.md); the current candidate is not a deployment confirmation.
+
+`/local-yolo/` is the Minimal inference app. `/studio/`, `/experimental-training/` and `/studio/experimental-training/` remain reserved development pages; they do not implement a finished studio or training product and are outside this version's scope. The inference core remains independent of the UI.
+
+Application source is AGPL-3.0-only; selected model sources are marked AGPL-3.0. Dependencies retain their own licenses. Model weights and user media are not committed to the repository. Earlier reports remain in `docs/diagnostics/pre-takeover-*` with their original claims and evidence.

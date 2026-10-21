@@ -3,3 +3,7 @@ dist/
 public/ort/
 tests/fixtures/
 *.log
+
+__pycache__/
+*.pyc
+test-results/

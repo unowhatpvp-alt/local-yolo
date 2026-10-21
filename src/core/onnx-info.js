@@ -67,15 +67,26 @@ function signature(bytes) {
 
 export function parseLabels(value) {
   if (!value) return [];
-  if (Array.isArray(value)) return value.map(String);
-  if (typeof value === 'object') return Object.keys(value).sort((a,b)=>+a-+b).map(key=>String(value[key]));
+  const orderedLabels = entries => {
+    entries.sort(([a],[b])=>Number(a)-Number(b));
+    // Class IDs index output channels directly. Compacting a sparse dictionary
+    // silently assigns the wrong name to every class after a missing ID.
+    if (entries.some(([key,label],index)=>String(key)!==String(index)||typeof label!=='string'||!label.trim())) return [];
+    return entries.map(([,label])=>label);
+  };
+  if (Array.isArray(value)) return orderedLabels(Array.from(value,(label,index)=>[index,label]));
+  if (typeof value === 'object') return orderedLabels(Object.entries(value));
+  if (typeof value !== 'string') return [];
   try { return parseLabels(JSON.parse(value)); } catch { /* Ultralytics stores a Python dict. */ }
-  const labels = [];
+  const labels = new Map();
   const entry = /(?:^|[{,])\s*(\d+)\s*:\s*(['"])((?:\\.|(?!\2).)*)\2\s*(?=,|})/g;
+  let cursor=0;
   for (const match of value.matchAll(entry)) {
-    labels[Number(match[1])] = match[3].replace(/\\(['"\\])/g, '$1');
+    if (value.slice(cursor,match.index).trim()) return [];
+    labels.set(Number(match[1]), match[3].replace(/\\(['"\\])/g, '$1'));
+    cursor=match.index+match[0].length;
   }
-  return labels.length && Array.from({length:labels.length},(_,i)=>labels[i]).every(x=>typeof x==='string') ? labels : [];
+  return /^,?\s*}$/.test(value.slice(cursor).trim()) ? orderedLabels([...labels]) : [];
 }
 
 export function inspectOnnx(input) {

@@ -11,6 +11,13 @@ test('letterbox restores original pixels and digital crop offsets without stretc
   assert.throws(()=>letterboxGeometry(1920,1080,640,480,{x:-1,y:0,width:10,height:10}),/outside/);
 });
 
+test('very narrow source images keep finite letterbox scales and coordinates',()=>{
+  const t=letterboxGeometry(1,10000,640,640);
+  assert.equal(t.resizedWidth,1);assert.equal(t.resizedHeight,640);
+  assert.deepEqual(sourcePoint(t.padX,t.padY,t),{x:0,y:0});
+  assert.deepEqual(sourcePoint(t.padX+1,t.padY+640,t),{x:1,y:10000});
+});
+
 test('class-aware NMS keeps distinct classes and rotated IoU respects angle',()=>{
   const a={classId:0,score:.9,box:{x:0,y:0,width:10,height:10}};
   const b={classId:0,score:.8,box:{x:1,y:1,width:10,height:10}};
@@ -38,6 +45,23 @@ test('unsupported logits, ambiguous outputs and truncation fail with useful erro
   assert.deepEqual(parseLabels('{"0":"a","1":"b"}'),['a','b']);
 });
 
+test('class dictionaries preserve output IDs and malformed names never fall back to COCO',()=>{
+  assert.deepEqual(parseLabels('{"1":"dog","0":"cat"}'),['cat','dog']);
+  for(const names of ['{"1":"cat","2":"dog"}','{"0":"cat","2":"dog"}',"{0:'cat', 4294967294:'dog'}",'{"0":"cat","1":""}',"{0:'cat', 1:None}",[undefined,'dog']]) {
+    assert.deepEqual(parseLabels(names),[]);
+    const out={type:'float32',dims:[1,84,100],data:new Float32Array(8400)};
+    assert.throws(()=>createAdapter({out},{task:'detect',names}),/consecutive class IDs/);
+  }
+});
+
+test('classification rejects unnormalized scores even when each score is in range',()=>{
+  const out={type:'float32',dims:[1,2],data:Float32Array.from([.9,.9])};
+  const adapter=createAdapter({out},{task:'classify'});
+  assert.throws(()=>decodeOutputs({out},adapter,null),/normalized to one/);
+  out.data=Float32Array.from([.3,.7]);
+  assert.equal(decodeOutputs({out},adapter,null).length,2);
+});
+
 test('raw output boxes and pose keypoints map to the same uncropped source frame',()=>{
   const t=letterboxGeometry(1600,900,640,480);
   const data=new Float32Array(56*100);
@@ -62,4 +86,44 @@ test('segmentation raster occupies the original source box after letterbox and c
   assert.equal(items.length,1);
   assert.deepEqual(items[0].mask.box,{x:350,y:150,width:100,height:100});
   assert(items[0].mask.data.every(v=>v===255));
+});
+
+test('end-to-end OBB rows retain center xywh geometry instead of detection xyxy',()=>{
+  const tensor={type:'float32',dims:[1,1,7],data:Float32Array.from([320,240,160,80,.9,0,Math.PI/2])};
+  const adapter=createAdapter({out:tensor},{task:'obb',end2end:'True',names:"{0:'ship'}",head:'OBB26'});
+  assert.equal(adapter.format,'ultralytics-end-to-end');assert.equal(adapter.iouApplicable,false);
+  const result=decodeOutputs({out:tensor},adapter,letterboxGeometry(640,480,640,480));
+  assert.equal(result.length,1);assert.equal(result[0].polygon.length,4);
+  assert(Math.abs(result[0].box.width-80)<.001);assert(Math.abs(result[0].box.height-160)<.001);
+  assert(Math.abs(result[0].box.x-280)<.001);assert(Math.abs(result[0].box.y-160)<.001);
+});
+
+test('end-to-end pose and segmentation decode task extras for small max_det',()=>{
+  const pose={type:'float32',dims:[1,1,9],data:Float32Array.from([100,100,200,200,.9,0,150,150,.8])};
+  const a=createAdapter({out:pose},{task:'pose',names:"{0:'person'}",end2end:'true',kpt_shape:'[1,3]'});
+  const t=letterboxGeometry(640,480,640,480),items=decodeOutputs({out:pose},a,t);
+  assert.deepEqual(items[0].box,{x:100,y:100,width:100,height:100});
+  assert.equal(items[0].keypoints[0].x,150);
+  const out={type:'float32',dims:[1,1,7],data:Float32Array.from([100,100,200,200,.9,0,1])};
+  const proto={type:'float32',dims:[1,1,4,4],data:new Float32Array(16).fill(1)};
+  const b=createAdapter({out,proto},{task:'segment',names:"{0:'object'}",end2end:'True'});
+  assert(decodeOutputs({out,proto},b,t)[0].mask.data.every(v=>v===255));
+});
+
+test('inconsistent end-to-end flags, malformed pose shapes and fractional classes are rejected',()=>{
+  assert.throws(()=>createAdapter({out:{type:'float32',dims:[1,84,8400],data:new Float32Array(84*8400)}},{task:'detect',end2end:'True'}),/consistent head metadata/);
+  assert.throws(()=>createAdapter({out:{type:'float32',dims:[1,56,100],data:new Float32Array(5600)}},{task:'pose',kpt_shape:'bad'}),/invalid JSON/);
+  const out={type:'float32',dims:[1,1,6],data:Float32Array.from([10,10,20,20,.9,.4])};
+  const adapter=createAdapter({out},{task:'detect',end2end:'True',names:"{0:'person'}"});
+  assert.equal(decodeOutputs({out},adapter,letterboxGeometry(100,100,640,640)).length,0);
+});
+
+test('non-finite pose coordinates, OBB angles and mask coefficients never reach results',()=>{
+  const t=letterboxGeometry(640,480,640,480);
+  for(const [task,extras,metadata] of [['pose',[NaN,150,.8],{kpt_shape:'[1,3]'}],['obb',[Infinity],{}],['segment',[NaN],{}]]) {
+    const out={type:'float32',dims:[1,1,6+extras.length],data:Float32Array.from([100,100,200,200,.9,0,...extras])};
+    const outputs=task==='segment'?{out,proto:{type:'float32',dims:[1,1,4,4],data:new Float32Array(16).fill(1)}}:{out};
+    const adapter=createAdapter(outputs,{task,names:"{0:'object'}",end2end:'true',...metadata});
+    assert.deepEqual(decodeOutputs(outputs,adapter,t),[],`${task} must discard an invalid prediction`);
+  }
 });

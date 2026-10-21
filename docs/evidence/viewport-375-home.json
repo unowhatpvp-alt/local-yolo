@@ -1,0 +1,272 @@
+{
+  "resourceRequests": [
+    {
+      "name": "http://terminal.local:4173/local-yolo/@vite/client",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/main.js",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/node_modules/vite/dist/client/env.mjs",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/ui/styles.css?t=1792544116935",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/catalog.js?t=1792543708909",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/ui/i18n.js",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/engine-client.js?t=1792543785965",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/model-cache.js",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/media.js",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/render.js?t=1792543760872",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/model-manifest.json?import&t=1792543708888",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/@noble_hashes_sha2__js.js?v=3b87ae60",
+      "initiatorType": "script",
+      "transferSize": 0
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/chunk-DGUM43GV.js?v=bb3c34d7",
+      "initiatorType": "script",
+      "transferSize": 0
+    }
+  ],
+  "measuredAt": "2026-10-21T00:58:43.277Z",
+  "scope": "Chromium iframe viewport only",
+  "url": "http://terminal.local:4173/local-yolo/?viewport-test=1",
+  "viewport": {
+    "requested": {
+      "width": "375",
+      "height": "812"
+    },
+    "frame": {
+      "x": 20,
+      "y": 171,
+      "width": 375,
+      "height": 812,
+      "top": 171,
+      "right": 395,
+      "bottom": 983,
+      "left": 20
+    },
+    "innerWidth": 375,
+    "innerHeight": 812,
+    "devicePixelRatio": 1,
+    "visualWidth": 375,
+    "visualHeight": 812
+  },
+  "document": {
+    "clientWidth": 375,
+    "scrollWidth": 375,
+    "clientHeight": 812,
+    "scrollHeight": 812,
+    "bodyScrollWidth": 375,
+    "bodyScrollHeight": 812,
+    "horizontalOverflow": false,
+    "verticalOverflow": false
+  },
+  "state": {
+    "phase": "choose",
+    "workbenchVisible": false,
+    "fullscreen": false
+  },
+  "stage": {
+    "visible": false,
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0,
+    "top": 0,
+    "right": 0,
+    "bottom": 0,
+    "left": 0,
+    "computedHeight": "100%"
+  },
+  "canvas": {
+    "visible": false,
+    "x": 0,
+    "y": 0,
+    "width": 300,
+    "height": 150,
+    "top": 0,
+    "right": 0,
+    "bottom": 0,
+    "left": 0,
+    "objectFit": "contain",
+    "objectPosition": "50% 50%",
+    "cssWidth": "100%",
+    "cssHeight": "100%"
+  },
+  "source": {
+    "video": {
+      "videoWidth": 0,
+      "videoHeight": 0,
+      "readyState": 0
+    },
+    "image": {
+      "naturalWidth": 0,
+      "naturalHeight": 0
+    }
+  },
+  "targets": {
+    "visibleCount": 8,
+    "below44Count": 0,
+    "items": [
+      {
+        "id": null,
+        "tag": "a",
+        "name": "Local YOLO",
+        "disabled": false,
+        "x": 17,
+        "y": 14,
+        "width": 109.58,
+        "height": 44,
+        "top": 14,
+        "right": 126.58,
+        "bottom": 58,
+        "left": 17,
+        "below44": false
+      },
+      {
+        "id": "language-toggle",
+        "tag": "button",
+        "name": "Switch to Chinese",
+        "disabled": false,
+        "x": 232,
+        "y": 14,
+        "width": 44,
+        "height": 44,
+        "top": 14,
+        "right": 276,
+        "bottom": 58,
+        "left": 232,
+        "below44": false
+      },
+      {
+        "id": "theme-toggle",
+        "tag": "button",
+        "name": "Change theme",
+        "disabled": false,
+        "x": 276,
+        "y": 14,
+        "width": 44,
+        "height": 44,
+        "top": 14,
+        "right": 320,
+        "bottom": 58,
+        "left": 276,
+        "below44": false
+      },
+      {
+        "id": "settings-open",
+        "tag": "button",
+        "name": "Settings",
+        "disabled": false,
+        "x": 320,
+        "y": 14,
+        "width": 44,
+        "height": 44,
+        "top": 14,
+        "right": 364,
+        "bottom": 58,
+        "left": 320,
+        "below44": false
+      },
+      {
+        "id": "task-picker-button",
+        "tag": "button",
+        "name": "TaskDetection",
+        "disabled": false,
+        "x": 79.09,
+        "y": 82,
+        "width": 175.84,
+        "height": 64,
+        "top": 82,
+        "right": 254.94,
+        "bottom": 146,
+        "left": 79.09,
+        "below44": false
+      },
+      {
+        "id": "size-picker-button",
+        "tag": "button",
+        "name": "SizeN",
+        "disabled": false,
+        "x": 262.94,
+        "y": 82,
+        "width": 95.06,
+        "height": 64,
+        "top": 82,
+        "right": 358,
+        "bottom": 146,
+        "left": 262.94,
+        "below44": false
+      },
+      {
+        "id": "load-model",
+        "tag": "button",
+        "name": "Start",
+        "disabled": false,
+        "x": 25,
+        "y": 433.14,
+        "width": 325,
+        "height": 50,
+        "top": 433.14,
+        "right": 350,
+        "bottom": 483.14,
+        "left": 25,
+        "below44": false
+      },
+      {
+        "id": "source-local",
+        "tag": "button",
+        "name": "Import local ONNX",
+        "disabled": false,
+        "x": 102.48,
+        "y": 561.53,
+        "width": 170.03,
+        "height": 44,
+        "top": 561.53,
+        "right": 272.52,
+        "bottom": 605.53,
+        "left": 102.48,
+        "below44": false
+      }
+    ]
+  }
+}

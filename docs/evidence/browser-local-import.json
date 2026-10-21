@@ -1,0 +1,21 @@
+{
+  "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
+  "valid": {
+    "file": "tests/fixtures/yolo26/yolo26n.onnx",
+    "bytes": 9887916,
+    "task": "detect",
+    "backend": "WASM",
+    "realImageResults": 5,
+    "realVideoFile": "repeated-real-video.mp4",
+    "videoEvidence": "browser-video-fullscreen.json",
+    "exportEvidence": "browser-exports.json"
+  },
+  "truncated": {
+    "bytes": 128,
+    "error": "ONNX protobuf is truncated.",
+    "model": "truncated.onnx",
+    "observedAt": "2026-10-21T02:05:17.599Z",
+    "status": "",
+    "workbenchVisible": false
+  }
+}

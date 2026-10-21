@@ -1,4 +1,5 @@
-// Adapters for Ultralytics decoded, float32 ONNX exports (not raw training heads).
+// Adapters for Ultralytics decoded YOLO26 and compatible YOLO11 ONNX exports.
+// Raw heads require class-aware NMS. End-to-end rows retain native task extras.
 // Each output is checked before decoding: incompatible graphs fail explicitly.
 import {parseLabels} from './onnx-info.js';
 
@@ -17,7 +18,9 @@ export function createAdapter(outputs, metadata = {}, config = {}) {
   if (!entries.length) throw new Error('The model returned no tensors.');
   entries.forEach(([,t])=>checkedTensor(t));
   let task = config.task && config.task !== 'auto' ? config.task : metadata.task;
-  let labels = parseLabels(config.labels?.length ? config.labels : metadata.names);
+  const labelSource = config.labels?.length ? config.labels : metadata.names;
+  let labels = parseLabels(labelSource);
+  if (labelSource && !labels.length) throw new Error('Class names must be nonempty strings with consecutive class IDs starting at 0.');
   const primary = entries.find(([,t])=>t.dims.length === 3) || entries[0];
   const [outputName, tensor] = primary;
   const dims = tensor.dims;
@@ -42,15 +45,23 @@ export function createAdapter(outputs, metadata = {}, config = {}) {
   const masks = task === 'segment' ? prototypeEntry?.[1]?.dims[1] : 0;
   if (task === 'segment' && (!prototypeEntry || entries.length !== 2 || masks < 1 || masks > 256)) throw new Error('Segmentation expects decoded predictions plus one [1, mask_channels, H, W] prototype tensor.');
   if (task !== 'segment' && entries.length !== 1) throw new Error(`This ${task} adapter expects one decoded prediction tensor; auxiliary/training heads are unsupported.`);
-  const kptShape = (()=>{try{return JSON.parse(metadata.kpt_shape || '[17,3]');}catch{return [17,3];}})();
-  if (task === 'pose' && (kptShape.length !== 2 || kptShape[0] < 1 || ![2,3].includes(kptShape[1]))) throw new Error('Pose kpt_shape must be [keypoints, 2 or 3].');
+  let kptShape=[17,3];
+  if(task==='pose'&&metadata.kpt_shape) {
+    try{kptShape=typeof metadata.kpt_shape==='string'?JSON.parse(metadata.kpt_shape):metadata.kpt_shape;}
+    catch{throw new Error('Pose metadata kpt_shape is invalid JSON. Expected [keypoints, 2 or 3].');}
+  }
+  if (task === 'pose' && (!Array.isArray(kptShape) || kptShape.length !== 2 || !Number.isInteger(kptShape[0]) || kptShape[0] < 1 || kptShape[0] > 512 || ![2,3].includes(kptShape[1]))) throw new Error('Pose kpt_shape must be [keypoints, 2 or 3].');
   const extras = task === 'pose' ? kptShape[0] * kptShape[1] : task === 'segment' ? masks : task === 'obb' ? 1 : 0;
   // End-to-end rows are [x1,y1,x2,y2,confidence,class,extras]. Never
   // confuse [1,6,anchors] from a two-class raw detector with this layout.
-  const endToEnd = dims[2] === 6 + extras && dims[1] > 6 + extras &&
-    (metadata.end2end === 'True' || /['"]nms['"]\s*:\s*True/.test(metadata.args || '') || config.format === 'end-to-end');
-  if (task === 'obb' && endToEnd) throw new Error('End-to-end OBB exports are not yet verified. Use an Ultralytics raw OBB export (end2end=False, nms=False).');
-  if (!endToEnd && dims[1] >= dims[2]) throw new Error(`Unsupported prediction layout [${dims}]. Use a raw Ultralytics [1, channels, anchors] export (nms=False), or a model with explicit end2end metadata.`);
+  const explicitEnd=String(metadata.end2end).toLowerCase()==='true' || /['"]nms['"]\s*:\s*true/i.test(metadata.args || '') || config.format === 'end-to-end';
+  const rawChannels=labels.length?4+labels.length+extras:null;
+  const rowShape=dims[2]===6+extras;
+  // A trustworthy class count disambiguates older exports without end2end
+  // metadata. An explicit end2end flag must agree with the actual signature.
+  if(explicitEnd&&!rowShape)throw new Error(`End-to-end ${task} metadata expects [1, rows, ${6+extras}], but the graph returned [${dims}]. Re-export with consistent head metadata.`);
+  const endToEnd=rowShape&&(explicitEnd||rawChannels!==null&&dims[1]!==rawChannels);
+  if (!endToEnd && (rawChannels!==null?dims[1]!==rawChannels:dims[1]>=dims[2])) throw new Error(`Unsupported prediction layout [${dims}]. Expected raw [1, ${rawChannels||'class/task channels'}, anchors] or end-to-end [1, rows, ${6+extras}]. YOLOv5/Objectness and arbitrary heads need their own adapter.`);
   const classes = endToEnd ? labels.length : dims[1] - 4 - extras;
   if (!endToEnd && (classes < 1 || classes > 10000)) throw new Error(`Invalid class channel count ${classes}.`);
   if (labels.length && !endToEnd && labels.length !== classes) throw new Error(`Output has ${dims[1]} channels but ${labels.length} class names and ${extras} task channels require ${4 + labels.length + extras}. Objectness/YOLOv5 and other head formats are unsupported.`);
@@ -61,14 +72,16 @@ export function createAdapter(outputs, metadata = {}, config = {}) {
     else if (!endToEnd) throw new Error(`This custom ${task} output has ${classes} possible class channels but no class names. Supply the exact class names to distinguish a decoded Ultralytics export from incompatible objectness/YOLOv5 heads.`);
     else throw new Error('An end-to-end model without class metadata needs explicit class names.');
   }
-  return {task,outputName,prototypeName:prototypeEntry?.[0],masks,kptShape,classes:labels.length,labels,extras,format:endToEnd?'ultralytics-end-to-end':'ultralytics-raw',iouApplicable:!endToEnd};
+  // OBB always carries center-x/center-y/width/height, including NMS-free rows.
+  // Detect, segment and pose switch from raw xywh to end-to-end xyxy.
+  return {task,outputName,prototypeName:prototypeEntry?.[0],masks,kptShape,classes:labels.length,labels,extras,boxFormat:task==='obb'||!endToEnd?'cxcywh':'xyxy',format:endToEnd?'ultralytics-end-to-end':'ultralytics-raw',iouApplicable:!endToEnd};
 }
 
 export function letterboxGeometry(sourceWidth, sourceHeight, inputWidth, inputHeight, crop) {
   const c = crop || {x:0,y:0,width:sourceWidth,height:sourceHeight};
   if (![c.x,c.y,c.width,c.height].every(Number.isFinite) || c.width <= 0 || c.height <= 0 || c.x < 0 || c.y < 0 || c.x+c.width > sourceWidth+.01 || c.y+c.height > sourceHeight+.01) throw new Error('The source crop is outside the media bounds.');
   const ratio = Math.min(inputWidth/c.width,inputHeight/c.height);
-  const resizedWidth = Math.round(c.width*ratio),resizedHeight = Math.round(c.height*ratio);
+  const resizedWidth = Math.max(1,Math.round(c.width*ratio)),resizedHeight = Math.max(1,Math.round(c.height*ratio));
   return {sourceWidth,sourceHeight,inputWidth,inputHeight,crop:c,resizedWidth,resizedHeight,padX:Math.floor((inputWidth-resizedWidth)/2),padY:Math.floor((inputHeight-resizedHeight)/2),scaleX:resizedWidth/c.width,scaleY:resizedHeight/c.height};
 }
 
@@ -148,7 +161,7 @@ export function decodeOutputs(outputs,adapter,t,{confidence=.25,iou=.45}={}) {
     const items=Array.from(data,(score,classId)=>({classId,label:adapter.labels[classId],score}));
     // Ultralytics exports probabilities. Reject arbitrary logits instead of
     // silently pretending a classifier with different normalization is valid.
-    if(items.some(x=>!Number.isFinite(x.score)||x.score<0||x.score>1.0001)) throw new Error('Classification output is not a probability vector. A logits adapter is required.');
+    if(items.some(x=>!Number.isFinite(x.score)||x.score<0||x.score>1.0001)||Math.abs(items.reduce((sum,item)=>sum+item.score,0)-1)>.001) throw new Error('Classification output is not a probability vector normalized to one. A logits adapter is required.');
     return items.sort((a,b)=>b.score-a.score).slice(0,5).filter(x=>x.score>=confidence);
   }
   const end=adapter.format==='ultralytics-end-to-end',rows=end?tensor.dims[1]:tensor.dims[2],columns=end?tensor.dims[2]:tensor.dims[1];
@@ -156,15 +169,18 @@ export function decodeOutputs(outputs,adapter,t,{confidence=.25,iou=.45}={}) {
   const items=[];
   for(let r=0;r<rows;r++) {
     let classId=0,score=0;
-    if(end){score=value(r,4);classId=Math.round(value(r,5));}
+    if(end){score=value(r,4);classId=value(r,5);if(!Number.isInteger(classId))continue;}
     else for(let c=0;c<adapter.classes;c++){const s=value(r,4+c);if(s>score){score=s;classId=c;}}
     if(!Number.isFinite(score)||score<confidence||score>1.0001||classId<0||classId>=adapter.classes)continue;
     const coords=[value(r,0),value(r,1),value(r,2),value(r,3)];
     if(!coords.every(Number.isFinite))continue;
-    const box=end?{x:coords[0],y:coords[1],width:coords[2]-coords[0],height:coords[3]-coords[1]}:{x:coords[0]-coords[2]/2,y:coords[1]-coords[3]/2,width:coords[2],height:coords[3]};
+    const box=adapter.boxFormat==='xyxy'?{x:coords[0],y:coords[1],width:coords[2]-coords[0],height:coords[3]-coords[1]}:{x:coords[0]-coords[2]/2,y:coords[1]-coords[3]/2,width:coords[2],height:coords[3]};
     if(box.width<=0||box.height<=0)continue;
     const item={box,classId,label:adapter.labels[classId],score};
     const start=end?6:4+adapter.classes;
+    // Invalid task extras must not reach Canvas, exported coordinates or mask
+    // reconstruction. The box/score checks above alone do not cover them.
+    if(Array.from({length:adapter.extras},(_,i)=>value(r,start+i)).some(v=>!Number.isFinite(v)))continue;
     if(adapter.task==='pose')item.keypoints=Array.from({length:adapter.kptShape[0]},(_,i)=>({x:value(r,start+i*adapter.kptShape[1]),y:value(r,start+i*adapter.kptShape[1]+1),score:adapter.kptShape[1]===3?value(r,start+i*3+2):1}));
     if(adapter.task==='segment')item.coefficients=Array.from({length:adapter.masks},(_,i)=>value(r,start+i));
     if(adapter.task==='obb') {

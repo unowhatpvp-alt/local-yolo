@@ -1,0 +1,9 @@
+{
+  "backend": "WASM",
+  "fps": "1.0",
+  "latencyMs": "263",
+  "observedAt": "2026-10-21T02:02:29.400Z",
+  "videoTime": "0:05 / 0:12",
+  "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
+  "definition": "Completed real inferences in rolling2s window; latency pre+run+post; cloud concurrent host, not phone benchmark."
+}

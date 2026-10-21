@@ -1,0 +1,19 @@
+{
+  "recordedAt": "2026-10-21T20:48:10.521Z",
+  "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c",
+  "command": "npm audit --json",
+  "report": "docs/dependency-audit.json",
+  "sha256": "7a23e14b70b0c0e8ea935cb9eee28e7c2a6d064ff26912848f3500b9c721f7e9",
+  "developmentDependency": {
+    "vite": "7.3.7"
+  },
+  "vulnerabilities": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  },
+  "scope": "Actual official npm registry response; no dependency changes."
+}

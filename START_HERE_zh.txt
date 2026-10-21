@@ -1,37 +1,43 @@
-Local YOLO — Minimal V1
+Local YOLO — Minimal V1.1 候选版
+更新日期：2026-10-21（America/New_York）
 
-这是实际可运行的纯前端应用，所有模型推理在用户设备执行。
+这是浏览器本地 YOLO 推理工具，通过静态站点运行，无须 Python 推理服务器。
+第一版本优先简化界面、改善交互并保持稳定；不扩展 Studio 或训练功能。
 
-目录：
-- src/：应用源码与独立推理核心。
-- dist/：构建输出，运行 npm run build 生成；完整下载包已附带。
-- .github/workflows/pages.yml：GitHub Pages 自动测试、构建与部署。
-- docs/VALIDATION.md：实际测试记录与未验证项目。
-- README.md：架构、模型来源、格式、缓存和部署说明。
+使用：
+1. 安装 Node.js 22.12 或以上版本，在仓库目录执行 npm ci。
+2. 执行 npm run dev，打开终端显示的 /local-yolo/ 地址。
+3. 选择任务、大小并启动模型。初始化后默认进入摄像头；也可选择上传图片或视频。
+4. 相机选项包含设备、镜像和倍率；右上结果菜单包含 PNG 和 JSON 导出。
+5. npm run build 生成 dist；npm run preview 可预览构建产物。
 
-开发：
-安装 Node.js 22 或更新的受支持版本后，在项目目录执行：
-npm ci
-npm run dev
-打开控制台显示的网址，并使用 /local-yolo/ 子路径。
+在线模型：YOLO26 的检测、分割、姿态、分类、旋转框 × N/S/M/L/X，共25个。
+模型有固定来源、版本、字节数和 SHA-256；本地 ONNX 只接受受支持的 YOLO 格式。
+首次使用需要下载，已缓存模型可再次读取；缓存可能被浏览器清理。
+图片、视频和结果只在设备上处理，应用没有媒体上传接口。
 
-构建：npm run build
-完整真实模型测试：npm run test:real
+本轮真实验证：
+- 自动化测试56/56通过，无失败、无跳过。
+- Node/WASM、内置Chrome155/WASM、真实NVIDIA Blackwell/WebGPU各25/25通过。
+- 14项应用交互检查通过；六种桌面/手机横竖屏/平板视口通过。
+- 安全上下文PWA检查11/11通过；真实存储故障、警告、内存推理和缓存恢复均通过。
+- 严格本地Gate、6组静态产物、可复现构建、44脚本语法、78 JSON解析、Git完整性通过，依赖审计0漏洞。
+- Chromium触摸模拟4/4通过，明确不等于物理手机或真实触摸硬件。
+- iPhone Safari、iOS安装、物理摄像头、镜头、原生倍率和真实触摸硬件未验证。
+- 分类模型存在真实误判；兼容性通过不代表识别准确率100%。
 
-GitHub Pages：
-1. 在 GitHub 创建公开仓库 local-yolo。
-2. 把源码提交到 main。node_modules、tests/fixtures、public/ort 不要提交。
-3. 仓库 Settings → Pages → Source 选择 GitHub Actions。
-4. 运行 Test and deploy GitHub Pages 工作流。
+发布状态：本地发布准备通过。最终CI、提交和GitHub Pages发布/线上验收待完成。
+当前线上地址：https://unowhatpvp-alt.github.io/local-yolo/
+这个地址存在不表示候选版已经部署。以 docs/DELIVERY.md 的最终记录为准。
 
-GitHub 仓库中的源码通过 Actions 自动构建与部署；部署状态以 Actions 页面为准。
+资料：
+- README.md：运行、模型、缓存、导出与发布方式。
+- docs/VALIDATION.md：当前完整验收状态和限制。
+- docs/UI_COMPARISON.md：V1到V1.1的界面简化及本轮交互修复。
+- docs/MODEL_COMPATIBILITY.md：25模型逐项结果。
+- docs/PWA_VALIDATION.md：PWA实测与真机复查步骤。
+- docs/RELEASE_GATE.md：发布门槛和恢复方案。
 
-现已开放：YOLO11 N 的检测、分割、姿态、分类、旋转框五种任务。
-其他尺寸和在线 YOLO26 暂不开放，界面有明确标记。
-本地 ONNX 必须符合适配器支持的输入输出规范，并非所有 ONNX 都能运行。
-
-模型来自有固定版本、大小、SHA-256 和 AGPL-3.0 许可信息的社区 ONNX 导出。
-
-注意：摄像头、PWA 和 WebGPU 需要 HTTPS 安全环境；浏览器能力及设备差异会影响支持范围。
-WASM 和真实图片/视频检测已验证；实机摄像头、硬件 WebGPU、各移动系统安装体验仍需在对应设备上检查。
-不要把本包直接当作双击运行的单文件 HTML；需要静态 HTTP(S) 托管或开发服务器。
+摄像头、WebGPU和PWA需要HTTPS或浏览器信任的localhost。
+不要双击HTML代替静态HTTP(S)托管。不要跳过Gate、强制推送或删除备份分支。
+原稳定SHA：2cea0ebebd3399a77a2d649c44755e54ca0e16b0。

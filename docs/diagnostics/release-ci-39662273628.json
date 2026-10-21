@@ -1,0 +1,15 @@
+{
+  "runId": 39662273628,
+  "jobId": 119438110190,
+  "commit": "38118c0bf1a1d246dde49b3c951fd590c7e77021",
+  "overall": "failure",
+  "unitTests": {
+    "pass": 38,
+    "fail": 0,
+    "skipped": 1
+  },
+  "actualAutomaticModelsPassed": 0,
+  "reason": "The test artifact receiver compared toBlob PNG hash with a separate toDataURL encoding; exact bytes differ. Actual inference was not relabeled as passed. Fixed by transmitting the original encoded Blob through FileReader.",
+  "artifactId": 12375825263,
+  "artifactSha256": "42378cdc88ee7fe411be4eb64c3b5d6e6aa1c7a7c30536ea6c7794a3ea01c732"
+}

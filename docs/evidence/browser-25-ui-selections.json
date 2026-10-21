@@ -1,0 +1,156 @@
+{
+  "observedAt": "2026-10-21T01:58:14.369Z",
+  "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
+  "selections": [
+    {
+      "task": "Detection目标检测",
+      "size": "N推荐 · Nano",
+      "model": "YOLO26n",
+      "enabled": true
+    },
+    {
+      "task": "Detection目标检测",
+      "size": "SSmall",
+      "model": "YOLO26s",
+      "enabled": true
+    },
+    {
+      "task": "Detection目标检测",
+      "size": "MMedium",
+      "model": "YOLO26m",
+      "enabled": true
+    },
+    {
+      "task": "Detection目标检测",
+      "size": "LLarge",
+      "model": "YOLO26l",
+      "enabled": true
+    },
+    {
+      "task": "Detection目标检测",
+      "size": "XXLarge",
+      "model": "YOLO26x",
+      "enabled": true
+    },
+    {
+      "task": "Segmentation实例分割",
+      "size": "N推荐 · Nano",
+      "model": "YOLO26n-seg",
+      "enabled": true
+    },
+    {
+      "task": "Segmentation实例分割",
+      "size": "SSmall",
+      "model": "YOLO26s-seg",
+      "enabled": true
+    },
+    {
+      "task": "Segmentation实例分割",
+      "size": "MMedium",
+      "model": "YOLO26m-seg",
+      "enabled": true
+    },
+    {
+      "task": "Segmentation实例分割",
+      "size": "LLarge",
+      "model": "YOLO26l-seg",
+      "enabled": true
+    },
+    {
+      "task": "Segmentation实例分割",
+      "size": "XXLarge",
+      "model": "YOLO26x-seg",
+      "enabled": true
+    },
+    {
+      "task": "Pose姿态估计",
+      "size": "N推荐 · Nano",
+      "model": "YOLO26n-pose",
+      "enabled": true
+    },
+    {
+      "task": "Pose姿态估计",
+      "size": "SSmall",
+      "model": "YOLO26s-pose",
+      "enabled": true
+    },
+    {
+      "task": "Pose姿态估计",
+      "size": "MMedium",
+      "model": "YOLO26m-pose",
+      "enabled": true
+    },
+    {
+      "task": "Pose姿态估计",
+      "size": "LLarge",
+      "model": "YOLO26l-pose",
+      "enabled": true
+    },
+    {
+      "task": "Pose姿态估计",
+      "size": "XXLarge",
+      "model": "YOLO26x-pose",
+      "enabled": true
+    },
+    {
+      "task": "Classification图像分类",
+      "size": "N推荐 · Nano",
+      "model": "YOLO26n-cls",
+      "enabled": true
+    },
+    {
+      "task": "Classification图像分类",
+      "size": "SSmall",
+      "model": "YOLO26s-cls",
+      "enabled": true
+    },
+    {
+      "task": "Classification图像分类",
+      "size": "MMedium",
+      "model": "YOLO26m-cls",
+      "enabled": true
+    },
+    {
+      "task": "Classification图像分类",
+      "size": "LLarge",
+      "model": "YOLO26l-cls",
+      "enabled": true
+    },
+    {
+      "task": "Classification图像分类",
+      "size": "XXLarge",
+      "model": "YOLO26x-cls",
+      "enabled": true
+    },
+    {
+      "task": "OBB旋转框检测",
+      "size": "N推荐 · Nano",
+      "model": "YOLO26n-obb",
+      "enabled": true
+    },
+    {
+      "task": "OBB旋转框检测",
+      "size": "SSmall",
+      "model": "YOLO26s-obb",
+      "enabled": true
+    },
+    {
+      "task": "OBB旋转框检测",
+      "size": "MMedium",
+      "model": "YOLO26m-obb",
+      "enabled": true
+    },
+    {
+      "task": "OBB旋转框检测",
+      "size": "LLarge",
+      "model": "YOLO26l-obb",
+      "enabled": true
+    },
+    {
+      "task": "OBB旋转框检测",
+      "size": "XXLarge",
+      "model": "YOLO26x-obb",
+      "enabled": true
+    }
+  ]
+}

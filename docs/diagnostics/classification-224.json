@@ -1,0 +1,1436 @@
+{
+  "recordedAt": "2026-10-21T00:48:59.001Z",
+  "scope": "10 labeled held-out ImageNet10 images; diagnostic only, not a validation-set benchmark",
+  "preprocessing": {
+    "square": "RGB center crop preserving aspect, resize to fixed square, NCHW float32 /255",
+    "rectangular": "RGB resize to exact exported H×W, NCHW float32 /255",
+    "reference": "https://github.com/ultralytics/ultralytics/blob/v8.4.100/ultralytics/data/augment.py"
+  },
+  "rows": [
+    {
+      "directory": "tests/fixtures/yolo26-classify224",
+      "model": "yolo26n-cls",
+      "bytes": 11293163,
+      "sha256": "1323630be528baebcaf4d831fde58853d9e70628a78aef898695dedcb070e2f8",
+      "inputs": [
+        {
+          "name": "images",
+          "dims": [
+            1,
+            3,
+            224,
+            224
+          ],
+          "elemType": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output0",
+          "dims": [
+            1,
+            1000
+          ],
+          "elemType": 1
+        }
+      ],
+      "description": "Ultralytics YOLO26n-cls model trained on ../datasets/imagenet",
+      "version": "8.4.100",
+      "tests": [
+        {
+          "file": "classification-val-0.jpg",
+          "expectedClassId": 0,
+          "expectedLabel": "tench",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 0,
+            "label": "tench",
+            "score": 0.980325
+          },
+          "expectedInTop5": 0.980324923992157,
+          "latencyMs": 44.11
+        },
+        {
+          "file": "classification-val-1.jpg",
+          "expectedClassId": 1,
+          "expectedLabel": "goldfish",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 339,
+            "label": "sorrel",
+            "score": 0.191776
+          },
+          "expectedInTop5": null,
+          "latencyMs": 38.7
+        },
+        {
+          "file": "classification-val-2.jpg",
+          "expectedClassId": 2,
+          "expectedLabel": "great_white_shark",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 2,
+            "label": "great_white_shark",
+            "score": 0.468037
+          },
+          "expectedInTop5": 0.46803686022758484,
+          "latencyMs": 36.64
+        },
+        {
+          "file": "classification-val-3.jpg",
+          "expectedClassId": 3,
+          "expectedLabel": "tiger_shark",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 3,
+            "label": "tiger_shark",
+            "score": 0.813095
+          },
+          "expectedInTop5": 0.8130947947502136,
+          "latencyMs": 49.23
+        },
+        {
+          "file": "classification-val-4.jpg",
+          "expectedClassId": 4,
+          "expectedLabel": "hammerhead",
+          "top1": false,
+          "top5": true,
+          "actualTop1": {
+            "id": 3,
+            "label": "tiger_shark",
+            "score": 0.404981
+          },
+          "expectedInTop5": 0.017723947763442993,
+          "latencyMs": 48.98
+        },
+        {
+          "file": "classification-val-5.jpg",
+          "expectedClassId": 5,
+          "expectedLabel": "electric_ray",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 103,
+            "label": "platypus",
+            "score": 0.479561
+          },
+          "expectedInTop5": null,
+          "latencyMs": 49.8
+        },
+        {
+          "file": "classification-val-6.jpg",
+          "expectedClassId": 6,
+          "expectedLabel": "stingray",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 103,
+            "label": "platypus",
+            "score": 0.781006
+          },
+          "expectedInTop5": null,
+          "latencyMs": 49.04
+        },
+        {
+          "file": "classification-val-7.jpg",
+          "expectedClassId": 7,
+          "expectedLabel": "cock",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 8,
+            "label": "hen",
+            "score": 0.288361
+          },
+          "expectedInTop5": null,
+          "latencyMs": 49.81
+        },
+        {
+          "file": "classification-val-8.jpg",
+          "expectedClassId": 8,
+          "expectedLabel": "hen",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 371,
+            "label": "patas",
+            "score": 0.384395
+          },
+          "expectedInTop5": null,
+          "latencyMs": 50.16
+        },
+        {
+          "file": "classification-val-9.jpg",
+          "expectedClassId": 9,
+          "expectedLabel": "ostrich",
+          "top1": false,
+          "top5": true,
+          "actualTop1": {
+            "id": 135,
+            "label": "limpkin",
+            "score": 0.659017
+          },
+          "expectedInTop5": 0.33306899666786194,
+          "latencyMs": 50.79
+        }
+      ],
+      "inputSize": [
+        224,
+        224
+      ],
+      "top1Correct": 3,
+      "top5Correct": 5,
+      "knownReferences": [
+        {
+          "file": "tests/fixtures/bus.jpg",
+          "scope": "Official native-resolution bus scene; verify meaningful bus-family classification",
+          "nativeWidth": 810,
+          "nativeHeight": 1080,
+          "expectedLabels": [
+            "minibus",
+            "trolleybus",
+            "school_bus"
+          ],
+          "top1Matches": true,
+          "top5Matches": true,
+          "top5": [
+            {
+              "id": 654,
+              "label": "minibus",
+              "score": 0.809373
+            },
+            {
+              "id": 734,
+              "label": "police_van",
+              "score": 0.143051
+            },
+            {
+              "id": 874,
+              "label": "trolleybus",
+              "score": 0.024137
+            },
+            {
+              "id": 656,
+              "label": "minivan",
+              "score": 0.005675
+            },
+            {
+              "id": 575,
+              "label": "golfcart",
+              "score": 0.004252
+            }
+          ]
+        },
+        {
+          "file": "tests/fixtures/yolo26/classification.jpg",
+          "scope": "Original tiny labeled goldfish reference; preserve observed score",
+          "nativeWidth": 160,
+          "nativeHeight": 120,
+          "expectedLabels": [
+            "goldfish"
+          ],
+          "top1Matches": true,
+          "top5Matches": true,
+          "top5": [
+            {
+              "id": 1,
+              "label": "goldfish",
+              "score": 0.419126
+            },
+            {
+              "id": 731,
+              "label": "plunger",
+              "score": 0.102745
+            },
+            {
+              "id": 714,
+              "label": "pick",
+              "score": 0.060853
+            },
+            {
+              "id": 641,
+              "label": "maraca",
+              "score": 0.054436
+            },
+            {
+              "id": 78,
+              "label": "tick",
+              "score": 0.031817
+            }
+          ]
+        }
+      ],
+      "pilReferenceGoldfish": [
+        {
+          "id": 339,
+          "label": "sorrel",
+          "score": 0.18272259831428528
+        },
+        {
+          "id": 885,
+          "label": "velvet",
+          "score": 0.09398508071899414
+        },
+        {
+          "id": 43,
+          "label": "frilled_lizard",
+          "score": 0.046509042382240295
+        },
+        {
+          "id": 51,
+          "label": "triceratops",
+          "score": 0.04540671408176422
+        },
+        {
+          "id": 122,
+          "label": "American_lobster",
+          "score": 0.04106350615620613
+        }
+      ]
+    },
+    {
+      "directory": "tests/fixtures/yolo26-classify224",
+      "model": "yolo26s-cls",
+      "bytes": 26925705,
+      "sha256": "471dc921d6b37c7fc7670adc58b247c5c474dc16b1065b1a150db79ed7de7314",
+      "inputs": [
+        {
+          "name": "images",
+          "dims": [
+            1,
+            3,
+            224,
+            224
+          ],
+          "elemType": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output0",
+          "dims": [
+            1,
+            1000
+          ],
+          "elemType": 1
+        }
+      ],
+      "description": "Ultralytics YOLO26s-cls model trained on ../datasets/imagenet",
+      "version": "8.4.100",
+      "tests": [
+        {
+          "file": "classification-val-0.jpg",
+          "expectedClassId": 0,
+          "expectedLabel": "tench",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 0,
+            "label": "tench",
+            "score": 0.998314
+          },
+          "expectedInTop5": 0.9983144998550415,
+          "latencyMs": 79.72
+        },
+        {
+          "file": "classification-val-1.jpg",
+          "expectedClassId": 1,
+          "expectedLabel": "goldfish",
+          "top1": false,
+          "top5": true,
+          "actualTop1": {
+            "id": 51,
+            "label": "triceratops",
+            "score": 0.261382
+          },
+          "expectedInTop5": 0.07154805958271027,
+          "latencyMs": 76.56
+        },
+        {
+          "file": "classification-val-2.jpg",
+          "expectedClassId": 2,
+          "expectedLabel": "great_white_shark",
+          "top1": false,
+          "top5": true,
+          "actualTop1": {
+            "id": 3,
+            "label": "tiger_shark",
+            "score": 0.425748
+          },
+          "expectedInTop5": 0.07323436439037323,
+          "latencyMs": 77.46
+        },
+        {
+          "file": "classification-val-3.jpg",
+          "expectedClassId": 3,
+          "expectedLabel": "tiger_shark",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 3,
+            "label": "tiger_shark",
+            "score": 0.465068
+          },
+          "expectedInTop5": 0.465067982673645,
+          "latencyMs": 77.95
+        },
+        {
+          "file": "classification-val-4.jpg",
+          "expectedClassId": 4,
+          "expectedLabel": "hammerhead",
+          "top1": false,
+          "top5": true,
+          "actualTop1": {
+            "id": 149,
+            "label": "dugong",
+            "score": 0.429729
+          },
+          "expectedInTop5": 0.08471532166004181,
+          "latencyMs": 78.66
+        },
+        {
+          "file": "classification-val-5.jpg",
+          "expectedClassId": 5,
+          "expectedLabel": "electric_ray",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 148,
+            "label": "killer_whale",
+            "score": 0.558385
+          },
+          "expectedInTop5": null,
+          "latencyMs": 82.74
+        },
+        {
+          "file": "classification-val-6.jpg",
+          "expectedClassId": 6,
+          "expectedLabel": "stingray",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 126,
+            "label": "isopod",
+            "score": 0.282955
+          },
+          "expectedInTop5": null,
+          "latencyMs": 77.02
+        },
+        {
+          "file": "classification-val-7.jpg",
+          "expectedClassId": 7,
+          "expectedLabel": "cock",
+          "top1": false,
+          "top5": true,
+          "actualTop1": {
+            "id": 8,
+            "label": "hen",
+            "score": 0.728959
+          },
+          "expectedInTop5": 0.2591509521007538,
+          "latencyMs": 79.7
+        },
+        {
+          "file": "classification-val-8.jpg",
+          "expectedClassId": 8,
+          "expectedLabel": "hen",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 273,
+            "label": "dingo",
+            "score": 0.19639
+          },
+          "expectedInTop5": null,
+          "latencyMs": 74.64
+        },
+        {
+          "file": "classification-val-9.jpg",
+          "expectedClassId": 9,
+          "expectedLabel": "ostrich",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 9,
+            "label": "ostrich",
+            "score": 0.989536
+          },
+          "expectedInTop5": 0.9895364046096802,
+          "latencyMs": 87.16
+        }
+      ],
+      "inputSize": [
+        224,
+        224
+      ],
+      "top1Correct": 3,
+      "top5Correct": 7,
+      "knownReferences": [
+        {
+          "file": "tests/fixtures/bus.jpg",
+          "scope": "Official native-resolution bus scene; verify meaningful bus-family classification",
+          "nativeWidth": 810,
+          "nativeHeight": 1080,
+          "expectedLabels": [
+            "minibus",
+            "trolleybus",
+            "school_bus"
+          ],
+          "top1Matches": true,
+          "top5Matches": true,
+          "top5": [
+            {
+              "id": 654,
+              "label": "minibus",
+              "score": 0.794408
+            },
+            {
+              "id": 734,
+              "label": "police_van",
+              "score": 0.082539
+            },
+            {
+              "id": 874,
+              "label": "trolleybus",
+              "score": 0.059671
+            },
+            {
+              "id": 757,
+              "label": "recreational_vehicle",
+              "score": 0.030812
+            },
+            {
+              "id": 829,
+              "label": "streetcar",
+              "score": 0.007391
+            }
+          ]
+        },
+        {
+          "file": "tests/fixtures/yolo26/classification.jpg",
+          "scope": "Original tiny labeled goldfish reference; preserve observed score",
+          "nativeWidth": 160,
+          "nativeHeight": 120,
+          "expectedLabels": [
+            "goldfish"
+          ],
+          "top1Matches": true,
+          "top5Matches": true,
+          "top5": [
+            {
+              "id": 1,
+              "label": "goldfish",
+              "score": 0.986967
+            },
+            {
+              "id": 301,
+              "label": "ladybug",
+              "score": 0.00449
+            },
+            {
+              "id": 989,
+              "label": "hip",
+              "score": 0.002314
+            },
+            {
+              "id": 522,
+              "label": "croquet_ball",
+              "score": 0.001436
+            },
+            {
+              "id": 78,
+              "label": "tick",
+              "score": 0.00065
+            }
+          ]
+        }
+      ],
+      "pilReferenceGoldfish": [
+        {
+          "id": 51,
+          "label": "triceratops",
+          "score": 0.2863369286060333
+        },
+        {
+          "id": 277,
+          "label": "red_fox",
+          "score": 0.07803300023078918
+        },
+        {
+          "id": 1,
+          "label": "goldfish",
+          "score": 0.07003049552440643
+        },
+        {
+          "id": 271,
+          "label": "red_wolf",
+          "score": 0.06429283320903778
+        },
+        {
+          "id": 103,
+          "label": "platypus",
+          "score": 0.0545293465256691
+        }
+      ]
+    },
+    {
+      "directory": "tests/fixtures/yolo26-classify224",
+      "model": "yolo26m-cls",
+      "bytes": 46567573,
+      "sha256": "0b9bb0e6fa8e725ffca6b67f658043b90af844951ee217cd4aef83ce60d3f0a9",
+      "inputs": [
+        {
+          "name": "images",
+          "dims": [
+            1,
+            3,
+            224,
+            224
+          ],
+          "elemType": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output0",
+          "dims": [
+            1,
+            1000
+          ],
+          "elemType": 1
+        }
+      ],
+      "description": "Ultralytics YOLO26m-cls model trained on ../datasets/imagenet",
+      "version": "8.4.100",
+      "tests": [
+        {
+          "file": "classification-val-0.jpg",
+          "expectedClassId": 0,
+          "expectedLabel": "tench",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 0,
+            "label": "tench",
+            "score": 0.999985
+          },
+          "expectedInTop5": 0.9999853372573853,
+          "latencyMs": 218.66
+        },
+        {
+          "file": "classification-val-1.jpg",
+          "expectedClassId": 1,
+          "expectedLabel": "goldfish",
+          "top1": false,
+          "top5": true,
+          "actualTop1": {
+            "id": 78,
+            "label": "tick",
+            "score": 0.10466
+          },
+          "expectedInTop5": 0.057811085134744644,
+          "latencyMs": 212.94
+        },
+        {
+          "file": "classification-val-2.jpg",
+          "expectedClassId": 2,
+          "expectedLabel": "great_white_shark",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 2,
+            "label": "great_white_shark",
+            "score": 0.491184
+          },
+          "expectedInTop5": 0.49118414521217346,
+          "latencyMs": 210.19
+        },
+        {
+          "file": "classification-val-3.jpg",
+          "expectedClassId": 3,
+          "expectedLabel": "tiger_shark",
+          "top1": false,
+          "top5": true,
+          "actualTop1": {
+            "id": 149,
+            "label": "dugong",
+            "score": 0.579775
+          },
+          "expectedInTop5": 0.4180162250995636,
+          "latencyMs": 211.28
+        },
+        {
+          "file": "classification-val-4.jpg",
+          "expectedClassId": 4,
+          "expectedLabel": "hammerhead",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 149,
+            "label": "dugong",
+            "score": 0.601133
+          },
+          "expectedInTop5": null,
+          "latencyMs": 209.35
+        },
+        {
+          "file": "classification-val-5.jpg",
+          "expectedClassId": 5,
+          "expectedLabel": "electric_ray",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 148,
+            "label": "killer_whale",
+            "score": 0.613343
+          },
+          "expectedInTop5": null,
+          "latencyMs": 213.04
+        },
+        {
+          "file": "classification-val-6.jpg",
+          "expectedClassId": 6,
+          "expectedLabel": "stingray",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 126,
+            "label": "isopod",
+            "score": 0.378552
+          },
+          "expectedInTop5": null,
+          "latencyMs": 223.37
+        },
+        {
+          "file": "classification-val-7.jpg",
+          "expectedClassId": 7,
+          "expectedLabel": "cock",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 7,
+            "label": "cock",
+            "score": 0.676067
+          },
+          "expectedInTop5": 0.6760668754577637,
+          "latencyMs": 217.85
+        },
+        {
+          "file": "classification-val-8.jpg",
+          "expectedClassId": 8,
+          "expectedLabel": "hen",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 278,
+            "label": "kit_fox",
+            "score": 0.335619
+          },
+          "expectedInTop5": null,
+          "latencyMs": 219.7
+        },
+        {
+          "file": "classification-val-9.jpg",
+          "expectedClassId": 9,
+          "expectedLabel": "ostrich",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 9,
+            "label": "ostrich",
+            "score": 0.989889
+          },
+          "expectedInTop5": 0.9898890852928162,
+          "latencyMs": 219.92
+        }
+      ],
+      "inputSize": [
+        224,
+        224
+      ],
+      "top1Correct": 4,
+      "top5Correct": 6,
+      "knownReferences": [
+        {
+          "file": "tests/fixtures/bus.jpg",
+          "scope": "Official native-resolution bus scene; verify meaningful bus-family classification",
+          "nativeWidth": 810,
+          "nativeHeight": 1080,
+          "expectedLabels": [
+            "minibus",
+            "trolleybus",
+            "school_bus"
+          ],
+          "top1Matches": true,
+          "top5Matches": true,
+          "top5": [
+            {
+              "id": 654,
+              "label": "minibus",
+              "score": 0.943802
+            },
+            {
+              "id": 734,
+              "label": "police_van",
+              "score": 0.020407
+            },
+            {
+              "id": 874,
+              "label": "trolleybus",
+              "score": 0.01175
+            },
+            {
+              "id": 757,
+              "label": "recreational_vehicle",
+              "score": 0.005028
+            },
+            {
+              "id": 705,
+              "label": "passenger_car",
+              "score": 0.003472
+            }
+          ]
+        },
+        {
+          "file": "tests/fixtures/yolo26/classification.jpg",
+          "scope": "Original tiny labeled goldfish reference; preserve observed score",
+          "nativeWidth": 160,
+          "nativeHeight": 120,
+          "expectedLabels": [
+            "goldfish"
+          ],
+          "top1Matches": true,
+          "top5Matches": true,
+          "top5": [
+            {
+              "id": 1,
+              "label": "goldfish",
+              "score": 0.865206
+            },
+            {
+              "id": 111,
+              "label": "nematode",
+              "score": 0.025951
+            },
+            {
+              "id": 301,
+              "label": "ladybug",
+              "score": 0.020614
+            },
+            {
+              "id": 78,
+              "label": "tick",
+              "score": 0.01398
+            },
+            {
+              "id": 989,
+              "label": "hip",
+              "score": 0.010239
+            }
+          ]
+        }
+      ],
+      "pilReferenceGoldfish": [
+        {
+          "id": 78,
+          "label": "tick",
+          "score": 0.11926485598087311
+        },
+        {
+          "id": 351,
+          "label": "hartebeest",
+          "score": 0.09616846591234207
+        },
+        {
+          "id": 122,
+          "label": "American_lobster",
+          "score": 0.05701583996415138
+        },
+        {
+          "id": 358,
+          "label": "polecat",
+          "score": 0.04836830124258995
+        },
+        {
+          "id": 271,
+          "label": "red_wolf",
+          "score": 0.04808994010090828
+        }
+      ]
+    },
+    {
+      "directory": "tests/fixtures/yolo26-classify224",
+      "model": "yolo26l-cls",
+      "bytes": 56514543,
+      "sha256": "6c34e63f747b469d748c10212bb1d9d5bd609e84fea5d26881aa6f3716701725",
+      "inputs": [
+        {
+          "name": "images",
+          "dims": [
+            1,
+            3,
+            224,
+            224
+          ],
+          "elemType": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output0",
+          "dims": [
+            1,
+            1000
+          ],
+          "elemType": 1
+        }
+      ],
+      "description": "Ultralytics YOLO26l-cls model trained on ../datasets/imagenet",
+      "version": "8.4.100",
+      "tests": [
+        {
+          "file": "classification-val-0.jpg",
+          "expectedClassId": 0,
+          "expectedLabel": "tench",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 0,
+            "label": "tench",
+            "score": 0.999641
+          },
+          "expectedInTop5": 0.999640941619873,
+          "latencyMs": 276.65
+        },
+        {
+          "file": "classification-val-1.jpg",
+          "expectedClassId": 1,
+          "expectedLabel": "goldfish",
+          "top1": false,
+          "top5": true,
+          "actualTop1": {
+            "id": 51,
+            "label": "triceratops",
+            "score": 0.137663
+          },
+          "expectedInTop5": 0.0930180773139,
+          "latencyMs": 275.91
+        },
+        {
+          "file": "classification-val-2.jpg",
+          "expectedClassId": 2,
+          "expectedLabel": "great_white_shark",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 2,
+            "label": "great_white_shark",
+            "score": 0.866462
+          },
+          "expectedInTop5": 0.8664619326591492,
+          "latencyMs": 303.28
+        },
+        {
+          "file": "classification-val-3.jpg",
+          "expectedClassId": 3,
+          "expectedLabel": "tiger_shark",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 3,
+            "label": "tiger_shark",
+            "score": 0.997216
+          },
+          "expectedInTop5": 0.9972155094146729,
+          "latencyMs": 264.33
+        },
+        {
+          "file": "classification-val-4.jpg",
+          "expectedClassId": 4,
+          "expectedLabel": "hammerhead",
+          "top1": false,
+          "top5": true,
+          "actualTop1": {
+            "id": 149,
+            "label": "dugong",
+            "score": 0.780316
+          },
+          "expectedInTop5": 0.0431949719786644,
+          "latencyMs": 271.05
+        },
+        {
+          "file": "classification-val-5.jpg",
+          "expectedClassId": 5,
+          "expectedLabel": "electric_ray",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 148,
+            "label": "killer_whale",
+            "score": 0.541776
+          },
+          "expectedInTop5": null,
+          "latencyMs": 267.72
+        },
+        {
+          "file": "classification-val-6.jpg",
+          "expectedClassId": 6,
+          "expectedLabel": "stingray",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 5,
+            "label": "electric_ray",
+            "score": 0.583493
+          },
+          "expectedInTop5": null,
+          "latencyMs": 270.86
+        },
+        {
+          "file": "classification-val-7.jpg",
+          "expectedClassId": 7,
+          "expectedLabel": "cock",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 7,
+            "label": "cock",
+            "score": 0.577207
+          },
+          "expectedInTop5": 0.5772067308425903,
+          "latencyMs": 283.24
+        },
+        {
+          "file": "classification-val-8.jpg",
+          "expectedClassId": 8,
+          "expectedLabel": "hen",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 273,
+            "label": "dingo",
+            "score": 0.32308
+          },
+          "expectedInTop5": null,
+          "latencyMs": 289.79
+        },
+        {
+          "file": "classification-val-9.jpg",
+          "expectedClassId": 9,
+          "expectedLabel": "ostrich",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 9,
+            "label": "ostrich",
+            "score": 0.996402
+          },
+          "expectedInTop5": 0.9964016675949097,
+          "latencyMs": 260.84
+        }
+      ],
+      "inputSize": [
+        224,
+        224
+      ],
+      "top1Correct": 5,
+      "top5Correct": 7,
+      "knownReferences": [
+        {
+          "file": "tests/fixtures/bus.jpg",
+          "scope": "Official native-resolution bus scene; verify meaningful bus-family classification",
+          "nativeWidth": 810,
+          "nativeHeight": 1080,
+          "expectedLabels": [
+            "minibus",
+            "trolleybus",
+            "school_bus"
+          ],
+          "top1Matches": true,
+          "top5Matches": true,
+          "top5": [
+            {
+              "id": 654,
+              "label": "minibus",
+              "score": 0.843599
+            },
+            {
+              "id": 734,
+              "label": "police_van",
+              "score": 0.077494
+            },
+            {
+              "id": 874,
+              "label": "trolleybus",
+              "score": 0.05681
+            },
+            {
+              "id": 569,
+              "label": "garbage_truck",
+              "score": 0.003862
+            },
+            {
+              "id": 829,
+              "label": "streetcar",
+              "score": 0.003056
+            }
+          ]
+        },
+        {
+          "file": "tests/fixtures/yolo26/classification.jpg",
+          "scope": "Original tiny labeled goldfish reference; preserve observed score",
+          "nativeWidth": 160,
+          "nativeHeight": 120,
+          "expectedLabels": [
+            "goldfish"
+          ],
+          "top1Matches": true,
+          "top5Matches": true,
+          "top5": [
+            {
+              "id": 1,
+              "label": "goldfish",
+              "score": 0.998275
+            },
+            {
+              "id": 111,
+              "label": "nematode",
+              "score": 0.000727
+            },
+            {
+              "id": 149,
+              "label": "dugong",
+              "score": 0.00016
+            },
+            {
+              "id": 812,
+              "label": "space_shuttle",
+              "score": 0.000147
+            },
+            {
+              "id": 310,
+              "label": "ant",
+              "score": 0.000094
+            }
+          ]
+        }
+      ],
+      "pilReferenceGoldfish": [
+        {
+          "id": 51,
+          "label": "triceratops",
+          "score": 0.16772772371768951
+        },
+        {
+          "id": 274,
+          "label": "dhole",
+          "score": 0.10812299698591232
+        },
+        {
+          "id": 126,
+          "label": "isopod",
+          "score": 0.09620088338851929
+        },
+        {
+          "id": 1,
+          "label": "goldfish",
+          "score": 0.07740868628025055
+        },
+        {
+          "id": 103,
+          "label": "platypus",
+          "score": 0.0691281333565712
+        }
+      ]
+    },
+    {
+      "directory": "tests/fixtures/yolo26-classify224",
+      "model": "yolo26x-cls",
+      "bytes": 118570497,
+      "sha256": "2b6f1386dd3d403f62b1cb68896b6ca3827b1157e451af49bc8105454a05ef78",
+      "inputs": [
+        {
+          "name": "images",
+          "dims": [
+            1,
+            3,
+            224,
+            224
+          ],
+          "elemType": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output0",
+          "dims": [
+            1,
+            1000
+          ],
+          "elemType": 1
+        }
+      ],
+      "description": "Ultralytics YOLO26x-cls model trained on ../datasets/imagenet",
+      "version": "8.4.100",
+      "tests": [
+        {
+          "file": "classification-val-0.jpg",
+          "expectedClassId": 0,
+          "expectedLabel": "tench",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 0,
+            "label": "tench",
+            "score": 0.999992
+          },
+          "expectedInTop5": 0.9999915361404419,
+          "latencyMs": 636.74
+        },
+        {
+          "file": "classification-val-1.jpg",
+          "expectedClassId": 1,
+          "expectedLabel": "goldfish",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 1,
+            "label": "goldfish",
+            "score": 0.769063
+          },
+          "expectedInTop5": 0.7690625786781311,
+          "latencyMs": 595.33
+        },
+        {
+          "file": "classification-val-2.jpg",
+          "expectedClassId": 2,
+          "expectedLabel": "great_white_shark",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 2,
+            "label": "great_white_shark",
+            "score": 0.885044
+          },
+          "expectedInTop5": 0.8850441575050354,
+          "latencyMs": 556.15
+        },
+        {
+          "file": "classification-val-3.jpg",
+          "expectedClassId": 3,
+          "expectedLabel": "tiger_shark",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 3,
+            "label": "tiger_shark",
+            "score": 0.928364
+          },
+          "expectedInTop5": 0.9283639788627625,
+          "latencyMs": 594.36
+        },
+        {
+          "file": "classification-val-4.jpg",
+          "expectedClassId": 4,
+          "expectedLabel": "hammerhead",
+          "top1": false,
+          "top5": true,
+          "actualTop1": {
+            "id": 149,
+            "label": "dugong",
+            "score": 0.568003
+          },
+          "expectedInTop5": 0.15317174792289734,
+          "latencyMs": 649.53
+        },
+        {
+          "file": "classification-val-5.jpg",
+          "expectedClassId": 5,
+          "expectedLabel": "electric_ray",
+          "top1": false,
+          "top5": true,
+          "actualTop1": {
+            "id": 148,
+            "label": "killer_whale",
+            "score": 0.500627
+          },
+          "expectedInTop5": 0.014369121752679348,
+          "latencyMs": 569.36
+        },
+        {
+          "file": "classification-val-6.jpg",
+          "expectedClassId": 6,
+          "expectedLabel": "stingray",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 126,
+            "label": "isopod",
+            "score": 0.55365
+          },
+          "expectedInTop5": null,
+          "latencyMs": 634.58
+        },
+        {
+          "file": "classification-val-7.jpg",
+          "expectedClassId": 7,
+          "expectedLabel": "cock",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 7,
+            "label": "cock",
+            "score": 0.970076
+          },
+          "expectedInTop5": 0.970076322555542,
+          "latencyMs": 667.76
+        },
+        {
+          "file": "classification-val-8.jpg",
+          "expectedClassId": 8,
+          "expectedLabel": "hen",
+          "top1": false,
+          "top5": false,
+          "actualTop1": {
+            "id": 277,
+            "label": "red_fox",
+            "score": 0.298157
+          },
+          "expectedInTop5": null,
+          "latencyMs": 612.97
+        },
+        {
+          "file": "classification-val-9.jpg",
+          "expectedClassId": 9,
+          "expectedLabel": "ostrich",
+          "top1": true,
+          "top5": true,
+          "actualTop1": {
+            "id": 9,
+            "label": "ostrich",
+            "score": 0.999974
+          },
+          "expectedInTop5": 0.9999740123748779,
+          "latencyMs": 570.63
+        }
+      ],
+      "inputSize": [
+        224,
+        224
+      ],
+      "top1Correct": 6,
+      "top5Correct": 8,
+      "knownReferences": [
+        {
+          "file": "tests/fixtures/bus.jpg",
+          "scope": "Official native-resolution bus scene; verify meaningful bus-family classification",
+          "nativeWidth": 810,
+          "nativeHeight": 1080,
+          "expectedLabels": [
+            "minibus",
+            "trolleybus",
+            "school_bus"
+          ],
+          "top1Matches": true,
+          "top5Matches": true,
+          "top5": [
+            {
+              "id": 654,
+              "label": "minibus",
+              "score": 0.952327
+            },
+            {
+              "id": 734,
+              "label": "police_van",
+              "score": 0.027937
+            },
+            {
+              "id": 575,
+              "label": "golfcart",
+              "score": 0.007753
+            },
+            {
+              "id": 874,
+              "label": "trolleybus",
+              "score": 0.004578
+            },
+            {
+              "id": 757,
+              "label": "recreational_vehicle",
+              "score": 0.002124
+            }
+          ]
+        },
+        {
+          "file": "tests/fixtures/yolo26/classification.jpg",
+          "scope": "Original tiny labeled goldfish reference; preserve observed score",
+          "nativeWidth": 160,
+          "nativeHeight": 120,
+          "expectedLabels": [
+            "goldfish"
+          ],
+          "top1Matches": true,
+          "top5Matches": true,
+          "top5": [
+            {
+              "id": 1,
+              "label": "goldfish",
+              "score": 0.987544
+            },
+            {
+              "id": 111,
+              "label": "nematode",
+              "score": 0.002505
+            },
+            {
+              "id": 149,
+              "label": "dugong",
+              "score": 0.002167
+            },
+            {
+              "id": 126,
+              "label": "isopod",
+              "score": 0.001895
+            },
+            {
+              "id": 902,
+              "label": "whistle",
+              "score": 0.000843
+            }
+          ]
+        }
+      ],
+      "pilReferenceGoldfish": [
+        {
+          "id": 1,
+          "label": "goldfish",
+          "score": 0.7433866858482361
+        },
+        {
+          "id": 351,
+          "label": "hartebeest",
+          "score": 0.04339608922600746
+        },
+        {
+          "id": 271,
+          "label": "red_wolf",
+          "score": 0.025496309623122215
+        },
+        {
+          "id": 51,
+          "label": "triceratops",
+          "score": 0.021289194002747536
+        },
+        {
+          "id": 339,
+          "label": "sorrel",
+          "score": 0.018307246267795563
+        }
+      ]
+    }
+  ]
+}

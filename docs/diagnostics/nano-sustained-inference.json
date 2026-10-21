@@ -1,0 +1,949 @@
+{
+  "schemaVersion": 1,
+  "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
+  "run": {
+    "id": "47b8d4b5-b419-4c51-b0d2-3ec489c1195c",
+    "environment": "node",
+    "backend": "WASM",
+    "startedAt": "2026-10-21T01:56:16.634Z",
+    "completedAt": "2026-10-21T01:57:29.581Z",
+    "validatorSha256": "6eff401e07804b659032803f0087f3a44c8cfa27e5e9d2c19e1869b6f3f032e7",
+    "physicalDevice": false,
+    "nodeVersion": "v24.19.0"
+  },
+  "models": [
+    {
+      "id": "yolo26-detect-n",
+      "task": "detect",
+      "size": "N",
+      "sha256": "4f44c33cea12d4b5785e5e7c0a20c13d0c62a77de607ce96a40d6036c7d7bbcf",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
+      "startedAt": "2026-10-21T01:56:16.990Z",
+      "completedAt": "2026-10-21T01:56:31.372Z",
+      "backend": "WASM",
+      "status": "observed",
+      "inferenceCount": 50,
+      "frames": [
+        {
+          "timeSeconds": 0,
+          "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+          "width": 640,
+          "height": 360
+        },
+        {
+          "timeSeconds": 1,
+          "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+          "width": 640,
+          "height": 360
+        }
+      ],
+      "resultCounts": [
+        24,
+        21,
+        24,
+        21,
+        24,
+        21,
+        24,
+        21,
+        24,
+        21,
+        24,
+        21,
+        24,
+        21,
+        24,
+        21,
+        24,
+        21,
+        24,
+        21,
+        24,
+        21,
+        24,
+        21,
+        24,
+        21,
+        24,
+        21,
+        24,
+        21,
+        24,
+        21,
+        24,
+        21,
+        24,
+        21,
+        24,
+        21,
+        24,
+        21,
+        24,
+        21,
+        24,
+        21,
+        24,
+        21,
+        24,
+        21,
+        24,
+        21
+      ],
+      "latencyMs": {
+        "min": 214.74221000000034,
+        "max": 388.0664420000003,
+        "median": 266.49012199999925
+      },
+      "initialMemory": {
+        "rssBytes": 68358144,
+        "heapUsedBytes": 9240920,
+        "externalBytes": 14498131,
+        "arrayBuffersBytes": 10724049
+      },
+      "samples": [
+        {
+          "completedInferences": 5,
+          "rssBytes": 436469760,
+          "heapUsedBytes": 11632376,
+          "externalBytes": 44522438,
+          "arrayBuffersBytes": 10486295
+        },
+        {
+          "completedInferences": 10,
+          "rssBytes": 437317632,
+          "heapUsedBytes": 11752944,
+          "externalBytes": 14277638,
+          "arrayBuffersBytes": 10486295
+        },
+        {
+          "completedInferences": 15,
+          "rssBytes": 437125120,
+          "heapUsedBytes": 11776128,
+          "externalBytes": 35373638,
+          "arrayBuffersBytes": 10486295
+        },
+        {
+          "completedInferences": 20,
+          "rssBytes": 432455680,
+          "heapUsedBytes": 10346016,
+          "externalBytes": 27107594,
+          "arrayBuffersBytes": 22092695
+        },
+        {
+          "completedInferences": 25,
+          "rssBytes": 432541696,
+          "heapUsedBytes": 10311552,
+          "externalBytes": 27107594,
+          "arrayBuffersBytes": 10486295
+        },
+        {
+          "completedInferences": 30,
+          "rssBytes": 432594944,
+          "heapUsedBytes": 10327760,
+          "externalBytes": 27107594,
+          "arrayBuffersBytes": 10486295
+        },
+        {
+          "completedInferences": 35,
+          "rssBytes": 432533504,
+          "heapUsedBytes": 10314648,
+          "externalBytes": 21304394,
+          "arrayBuffersBytes": 10486295
+        },
+        {
+          "completedInferences": 40,
+          "rssBytes": 433856512,
+          "heapUsedBytes": 10337648,
+          "externalBytes": 23421194,
+          "arrayBuffersBytes": 10486295
+        },
+        {
+          "completedInferences": 45,
+          "rssBytes": 432779264,
+          "heapUsedBytes": 10346520,
+          "externalBytes": 23421194,
+          "arrayBuffersBytes": 16289495
+        },
+        {
+          "completedInferences": 50,
+          "rssBytes": 432791552,
+          "heapUsedBytes": 10313040,
+          "externalBytes": 21304394,
+          "arrayBuffersBytes": 10486295
+        }
+      ],
+      "beforeRelease": {
+        "rssBytes": 432791552,
+        "heapUsedBytes": 10316776,
+        "externalBytes": 21304394,
+        "arrayBuffersBytes": 10486295
+      },
+      "afterRelease": {
+        "rssBytes": 432685056,
+        "heapUsedBytes": 10330088,
+        "externalBytes": 14272394,
+        "arrayBuffersBytes": 10486295
+      },
+      "lifecycle": {
+        "releaseResolved": true,
+        "sessionCleared": true,
+        "canvasCleared": true
+      },
+      "lateWindow": {
+        "sampleCount": 5,
+        "rssRangeBytes": 1323008,
+        "rssMedianBytes": 432779264,
+        "externalRangeBytes": 5803200,
+        "externalMedianBytes": 23421194
+      },
+      "note": "These are 50 actual sequential inferences alternating two real decoded MP4 frames, with no overlapping inference and one setImmediate event-loop turn after each result. Host Node memory is sampled after requested GC. The actual predictions, including zero detections, are retained as counts; no physical camera or phone-memory claim is made."
+    },
+    {
+      "id": "yolo26-segment-n",
+      "task": "segment",
+      "size": "N",
+      "sha256": "d4a4da5077847338d50788670b6a81f8f5525b516399bb656247a87b64f85964",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
+      "startedAt": "2026-10-21T01:56:31.707Z",
+      "completedAt": "2026-10-21T01:56:56.193Z",
+      "backend": "WASM",
+      "status": "observed",
+      "inferenceCount": 50,
+      "frames": [
+        {
+          "timeSeconds": 0,
+          "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+          "width": 640,
+          "height": 360
+        },
+        {
+          "timeSeconds": 1,
+          "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+          "width": 640,
+          "height": 360
+        }
+      ],
+      "resultCounts": [
+        17,
+        16,
+        17,
+        16,
+        17,
+        16,
+        17,
+        16,
+        17,
+        16,
+        17,
+        16,
+        17,
+        16,
+        17,
+        16,
+        17,
+        16,
+        17,
+        16,
+        17,
+        16,
+        17,
+        16,
+        17,
+        16,
+        17,
+        16,
+        17,
+        16,
+        17,
+        16,
+        17,
+        16,
+        17,
+        16,
+        17,
+        16,
+        17,
+        16,
+        17,
+        16,
+        17,
+        16,
+        17,
+        16,
+        17,
+        16,
+        17,
+        16
+      ],
+      "latencyMs": {
+        "min": 376.4029569999984,
+        "max": 580.3669400000003,
+        "median": 442.5052029999988
+      },
+      "initialMemory": {
+        "rssBytes": 69627904,
+        "heapUsedBytes": 9239552,
+        "externalBytes": 15786407,
+        "arrayBuffersBytes": 12012325
+      },
+      "samples": [
+        {
+          "completedInferences": 5,
+          "rssBytes": 398286848,
+          "heapUsedBytes": 11721248,
+          "externalBytes": 15572653,
+          "arrayBuffersBytes": 11781310
+        },
+        {
+          "completedInferences": 10,
+          "rssBytes": 397926400,
+          "heapUsedBytes": 10263160,
+          "externalBytes": 15568853,
+          "arrayBuffersBytes": 11782754
+        },
+        {
+          "completedInferences": 15,
+          "rssBytes": 397053952,
+          "heapUsedBytes": 10296624,
+          "externalBytes": 22276415,
+          "arrayBuffersBytes": 11781310
+        },
+        {
+          "completedInferences": 20,
+          "rssBytes": 399151104,
+          "heapUsedBytes": 10330176,
+          "externalBytes": 38739021,
+          "arrayBuffersBytes": 11782754
+        },
+        {
+          "completedInferences": 25,
+          "rssBytes": 399085568,
+          "heapUsedBytes": 10362480,
+          "externalBytes": 22276415,
+          "arrayBuffersBytes": 11781310
+        },
+        {
+          "completedInferences": 30,
+          "rssBytes": 399200256,
+          "heapUsedBytes": 10313352,
+          "externalBytes": 15568853,
+          "arrayBuffersBytes": 11782754
+        },
+        {
+          "completedInferences": 35,
+          "rssBytes": 399200256,
+          "heapUsedBytes": 10394480,
+          "externalBytes": 38737577,
+          "arrayBuffersBytes": 11781310
+        },
+        {
+          "completedInferences": 40,
+          "rssBytes": 399335424,
+          "heapUsedBytes": 10386840,
+          "externalBytes": 15568853,
+          "arrayBuffersBytes": 11782754
+        },
+        {
+          "completedInferences": 45,
+          "rssBytes": 405344256,
+          "heapUsedBytes": 10408768,
+          "externalBytes": 38737577,
+          "arrayBuffersBytes": 20849037
+        },
+        {
+          "completedInferences": 50,
+          "rssBytes": 408125440,
+          "heapUsedBytes": 10407592,
+          "externalBytes": 37433421,
+          "arrayBuffersBytes": 11782754
+        }
+      ],
+      "beforeRelease": {
+        "rssBytes": 408125440,
+        "heapUsedBytes": 10411744,
+        "externalBytes": 37433421,
+        "arrayBuffersBytes": 11782754
+      },
+      "afterRelease": {
+        "rssBytes": 405569536,
+        "heapUsedBytes": 10374384,
+        "externalBytes": 15568853,
+        "arrayBuffersBytes": 11782754
+      },
+      "lifecycle": {
+        "releaseResolved": true,
+        "sessionCleared": true,
+        "canvasCleared": true
+      },
+      "lateWindow": {
+        "sampleCount": 5,
+        "rssRangeBytes": 8925184,
+        "rssMedianBytes": 399335424,
+        "externalRangeBytes": 23168724,
+        "externalMedianBytes": 37433421
+      },
+      "note": "These are 50 actual sequential inferences alternating two real decoded MP4 frames, with no overlapping inference and one setImmediate event-loop turn after each result. Host Node memory is sampled after requested GC. The actual predictions, including zero detections, are retained as counts; no physical camera or phone-memory claim is made."
+    },
+    {
+      "id": "yolo26-pose-n",
+      "task": "pose",
+      "size": "N",
+      "sha256": "af993717f4427d15dc96fc25eb091b3a9d136aba4fd06d8b8e990bc74212d564",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
+      "startedAt": "2026-10-21T01:56:56.510Z",
+      "completedAt": "2026-10-21T01:57:13.052Z",
+      "backend": "WASM",
+      "status": "observed",
+      "inferenceCount": 50,
+      "frames": [
+        {
+          "timeSeconds": 0,
+          "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+          "width": 640,
+          "height": 360
+        },
+        {
+          "timeSeconds": 1,
+          "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+          "width": 640,
+          "height": 360
+        }
+      ],
+      "resultCounts": [
+        7,
+        5,
+        7,
+        5,
+        7,
+        5,
+        7,
+        5,
+        7,
+        5,
+        7,
+        5,
+        7,
+        5,
+        7,
+        5,
+        7,
+        5,
+        7,
+        5,
+        7,
+        5,
+        7,
+        5,
+        7,
+        5,
+        7,
+        5,
+        7,
+        5,
+        7,
+        5,
+        7,
+        5,
+        7,
+        5,
+        7,
+        5,
+        7,
+        5,
+        7,
+        5,
+        7,
+        5,
+        7,
+        5,
+        7,
+        5,
+        7,
+        5
+      ],
+      "latencyMs": {
+        "min": 263.177592,
+        "max": 406.74068799999986,
+        "median": 301.9815209999997
+      },
+      "initialMemory": {
+        "rssBytes": 70180864,
+        "heapUsedBytes": 9243864,
+        "externalBytes": 16655767,
+        "arrayBuffersBytes": 12881685
+      },
+      "samples": [
+        {
+          "completedInferences": 5,
+          "rssBytes": 390598656,
+          "heapUsedBytes": 11676120,
+          "externalBytes": 30497818,
+          "arrayBuffersBytes": 14053675
+        },
+        {
+          "completedInferences": 10,
+          "rssBytes": 391012352,
+          "heapUsedBytes": 11761856,
+          "externalBytes": 16433818,
+          "arrayBuffersBytes": 12642475
+        },
+        {
+          "completedInferences": 15,
+          "rssBytes": 390422528,
+          "heapUsedBytes": 10347672,
+          "externalBytes": 36818974,
+          "arrayBuffersBytes": 12642475
+        },
+        {
+          "completedInferences": 20,
+          "rssBytes": 393072640,
+          "heapUsedBytes": 10293960,
+          "externalBytes": 16428574,
+          "arrayBuffersBytes": 12642475
+        },
+        {
+          "completedInferences": 25,
+          "rssBytes": 393097216,
+          "heapUsedBytes": 10323432,
+          "externalBytes": 35407774,
+          "arrayBuffersBytes": 12642475
+        },
+        {
+          "completedInferences": 30,
+          "rssBytes": 397099008,
+          "heapUsedBytes": 10292944,
+          "externalBytes": 48060574,
+          "arrayBuffersBytes": 12642475
+        },
+        {
+          "completedInferences": 35,
+          "rssBytes": 393854976,
+          "heapUsedBytes": 10315136,
+          "externalBytes": 36818974,
+          "arrayBuffersBytes": 14053675
+        },
+        {
+          "completedInferences": 40,
+          "rssBytes": 393854976,
+          "heapUsedBytes": 10329672,
+          "externalBytes": 21526174,
+          "arrayBuffersBytes": 12642475
+        },
+        {
+          "completedInferences": 45,
+          "rssBytes": 393797632,
+          "heapUsedBytes": 10336872,
+          "externalBytes": 36818974,
+          "arrayBuffersBytes": 12642475
+        },
+        {
+          "completedInferences": 50,
+          "rssBytes": 392749056,
+          "heapUsedBytes": 10332208,
+          "externalBytes": 34178974,
+          "arrayBuffersBytes": 12642475
+        }
+      ],
+      "beforeRelease": {
+        "rssBytes": 392749056,
+        "heapUsedBytes": 10336360,
+        "externalBytes": 34178974,
+        "arrayBuffersBytes": 12642475
+      },
+      "afterRelease": {
+        "rssBytes": 391712768,
+        "heapUsedBytes": 10341808,
+        "externalBytes": 16428574,
+        "arrayBuffersBytes": 12642475
+      },
+      "lifecycle": {
+        "releaseResolved": true,
+        "sessionCleared": true,
+        "canvasCleared": true
+      },
+      "lateWindow": {
+        "sampleCount": 5,
+        "rssRangeBytes": 4349952,
+        "rssMedianBytes": 393854976,
+        "externalRangeBytes": 26534400,
+        "externalMedianBytes": 36818974
+      },
+      "note": "These are 50 actual sequential inferences alternating two real decoded MP4 frames, with no overlapping inference and one setImmediate event-loop turn after each result. Host Node memory is sampled after requested GC. The actual predictions, including zero detections, are retained as counts; no physical camera or phone-memory claim is made."
+    },
+    {
+      "id": "yolo26-classify-n",
+      "task": "classify",
+      "size": "N",
+      "sha256": "1323630be528baebcaf4d831fde58853d9e70628a78aef898695dedcb070e2f8",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
+      "startedAt": "2026-10-21T01:57:13.414Z",
+      "completedAt": "2026-10-21T01:57:15.741Z",
+      "backend": "WASM",
+      "status": "observed",
+      "inferenceCount": 50,
+      "frames": [
+        {
+          "timeSeconds": 0,
+          "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+          "width": 640,
+          "height": 360
+        },
+        {
+          "timeSeconds": 1,
+          "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+          "width": 640,
+          "height": 360
+        }
+      ],
+      "resultCounts": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "latencyMs": {
+        "min": 22.983938999999737,
+        "max": 73.07937100000004,
+        "median": 26.483728000000156
+      },
+      "initialMemory": {
+        "rssBytes": 69660672,
+        "heapUsedBytes": 9224392,
+        "externalBytes": 15904002,
+        "arrayBuffersBytes": 12129920
+      },
+      "samples": [
+        {
+          "completedInferences": 5,
+          "rssBytes": 398446592,
+          "heapUsedBytes": 11657552,
+          "externalBytes": 44614243,
+          "arrayBuffersBytes": 11891542
+        },
+        {
+          "completedInferences": 10,
+          "rssBytes": 416403456,
+          "heapUsedBytes": 11716808,
+          "externalBytes": 19716965,
+          "arrayBuffersBytes": 11891542
+        },
+        {
+          "completedInferences": 15,
+          "rssBytes": 372686848,
+          "heapUsedBytes": 11720184,
+          "externalBytes": 19716965,
+          "arrayBuffersBytes": 11891542
+        },
+        {
+          "completedInferences": 20,
+          "rssBytes": 372776960,
+          "heapUsedBytes": 11723920,
+          "externalBytes": 19716965,
+          "arrayBuffersBytes": 11891542
+        },
+        {
+          "completedInferences": 25,
+          "rssBytes": 372908032,
+          "heapUsedBytes": 11745488,
+          "externalBytes": 19716965,
+          "arrayBuffersBytes": 11891542
+        },
+        {
+          "completedInferences": 30,
+          "rssBytes": 373039104,
+          "heapUsedBytes": 11745608,
+          "externalBytes": 19716965,
+          "arrayBuffersBytes": 11891542
+        },
+        {
+          "completedInferences": 35,
+          "rssBytes": 373432320,
+          "heapUsedBytes": 11746384,
+          "externalBytes": 16686405,
+          "arrayBuffersBytes": 11891542
+        },
+        {
+          "completedInferences": 40,
+          "rssBytes": 373788672,
+          "heapUsedBytes": 11729144,
+          "externalBytes": 16686405,
+          "arrayBuffersBytes": 11891542
+        },
+        {
+          "completedInferences": 45,
+          "rssBytes": 373919744,
+          "heapUsedBytes": 11736176,
+          "externalBytes": 16686405,
+          "arrayBuffersBytes": 11891542
+        },
+        {
+          "completedInferences": 50,
+          "rssBytes": 373919744,
+          "heapUsedBytes": 11748736,
+          "externalBytes": 19716965,
+          "arrayBuffersBytes": 11891542
+        }
+      ],
+      "beforeRelease": {
+        "rssBytes": 373919744,
+        "heapUsedBytes": 11752888,
+        "externalBytes": 19716965,
+        "arrayBuffersBytes": 11891542
+      },
+      "afterRelease": {
+        "rssBytes": 373919744,
+        "heapUsedBytes": 11787312,
+        "externalBytes": 15682885,
+        "arrayBuffersBytes": 11891542
+      },
+      "lifecycle": {
+        "releaseResolved": true,
+        "sessionCleared": true,
+        "canvasCleared": true
+      },
+      "lateWindow": {
+        "sampleCount": 5,
+        "rssRangeBytes": 880640,
+        "rssMedianBytes": 373788672,
+        "externalRangeBytes": 3030560,
+        "externalMedianBytes": 16686405
+      },
+      "note": "These are 50 actual sequential inferences alternating two real decoded MP4 frames, with no overlapping inference and one setImmediate event-loop turn after each result. Host Node memory is sampled after requested GC. The actual predictions, including zero detections, are retained as counts; no physical camera or phone-memory claim is made."
+    },
+    {
+      "id": "yolo26-obb-n",
+      "task": "obb",
+      "size": "N",
+      "sha256": "1ce4f25e0d3076856ebdc091f43eb6478b4a5f2aebb8003dd6fadd93f7daac1e",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
+      "startedAt": "2026-10-21T01:57:16.097Z",
+      "completedAt": "2026-10-21T01:57:29.549Z",
+      "backend": "WASM",
+      "status": "observed",
+      "inferenceCount": 50,
+      "frames": [
+        {
+          "timeSeconds": 0,
+          "sha256": "b7f9abebcafbc7150b947c5e014fab4b5a6180fe4f4d2d1c5f8283aa1c5cf3c1",
+          "width": 640,
+          "height": 360
+        },
+        {
+          "timeSeconds": 1,
+          "sha256": "4dec8f80dd8dd64367c8c37e602e5ede3fed018754622382f704672de068f0f4",
+          "width": 640,
+          "height": 360
+        }
+      ],
+      "resultCounts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "latencyMs": {
+        "min": 213.84784000000036,
+        "max": 386.056509,
+        "median": 235.7033610000001
+      },
+      "initialMemory": {
+        "rssBytes": 68186112,
+        "heapUsedBytes": 9231200,
+        "externalBytes": 14611358,
+        "arrayBuffersBytes": 10837276
+      },
+      "samples": [
+        {
+          "completedInferences": 5,
+          "rssBytes": 377438208,
+          "heapUsedBytes": 11588904,
+          "externalBytes": 26465607,
+          "arrayBuffersBytes": 10607064
+        },
+        {
+          "completedInferences": 10,
+          "rssBytes": 375267328,
+          "heapUsedBytes": 11666448,
+          "externalBytes": 14902407,
+          "arrayBuffersBytes": 10607064
+        },
+        {
+          "completedInferences": 15,
+          "rssBytes": 380178432,
+          "heapUsedBytes": 11675488,
+          "externalBytes": 33617607,
+          "arrayBuffersBytes": 10607064
+        },
+        {
+          "completedInferences": 20,
+          "rssBytes": 375996416,
+          "heapUsedBytes": 10230968,
+          "externalBytes": 14897163,
+          "arrayBuffersBytes": 10607064
+        },
+        {
+          "completedInferences": 25,
+          "rssBytes": 376135680,
+          "heapUsedBytes": 10219792,
+          "externalBytes": 26460363,
+          "arrayBuffersBytes": 10607064
+        },
+        {
+          "completedInferences": 30,
+          "rssBytes": 373678080,
+          "heapUsedBytes": 10238096,
+          "externalBytes": 20316363,
+          "arrayBuffersBytes": 10607064
+        },
+        {
+          "completedInferences": 35,
+          "rssBytes": 376119296,
+          "heapUsedBytes": 10254176,
+          "externalBytes": 34841163,
+          "arrayBuffersBytes": 10607064
+        },
+        {
+          "completedInferences": 40,
+          "rssBytes": 377372672,
+          "heapUsedBytes": 10255504,
+          "externalBytes": 14897163,
+          "arrayBuffersBytes": 10607064
+        },
+        {
+          "completedInferences": 45,
+          "rssBytes": 376184832,
+          "heapUsedBytes": 10266568,
+          "externalBytes": 34841163,
+          "arrayBuffersBytes": 10607064
+        },
+        {
+          "completedInferences": 50,
+          "rssBytes": 375119872,
+          "heapUsedBytes": 10267368,
+          "externalBytes": 18583563,
+          "arrayBuffersBytes": 10607064
+        }
+      ],
+      "beforeRelease": {
+        "rssBytes": 375119872,
+        "heapUsedBytes": 10271104,
+        "externalBytes": 18583563,
+        "arrayBuffersBytes": 10607064
+      },
+      "afterRelease": {
+        "rssBytes": 375250944,
+        "heapUsedBytes": 10265192,
+        "externalBytes": 14393163,
+        "arrayBuffersBytes": 10607064
+      },
+      "lifecycle": {
+        "releaseResolved": true,
+        "sessionCleared": true,
+        "canvasCleared": true
+      },
+      "lateWindow": {
+        "sampleCount": 5,
+        "rssRangeBytes": 3694592,
+        "rssMedianBytes": 376119296,
+        "externalRangeBytes": 19944000,
+        "externalMedianBytes": 20316363
+      },
+      "note": "These are 50 actual sequential inferences alternating two real decoded MP4 frames, with no overlapping inference and one setImmediate event-loop turn after each result. Host Node memory is sampled after requested GC. The actual predictions, including zero detections, are retained as counts; no physical camera or phone-memory claim is made."
+    }
+  ],
+  "sourceFingerprintAfter": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
+  "sourceChangedDuringRun": false,
+  "note": "Diagnostic sustained execution and lifecycle observations only; allocator-retained RSS is not a memory-leak verdict or a physical-device compatibility pass."
+}

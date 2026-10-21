@@ -1,0 +1,32 @@
+{
+  "pass": true,
+  "errors": [],
+  "requiredModels": [
+    "yolo26-detect-n",
+    "yolo26-detect-s",
+    "yolo26-detect-m",
+    "yolo26-detect-l",
+    "yolo26-detect-x",
+    "yolo26-segment-n",
+    "yolo26-segment-s",
+    "yolo26-segment-m",
+    "yolo26-segment-l",
+    "yolo26-segment-x",
+    "yolo26-pose-n",
+    "yolo26-pose-s",
+    "yolo26-pose-m",
+    "yolo26-pose-l",
+    "yolo26-pose-x",
+    "yolo26-classify-n",
+    "yolo26-classify-s",
+    "yolo26-classify-m",
+    "yolo26-classify-l",
+    "yolo26-classify-x",
+    "yolo26-obb-n",
+    "yolo26-obb-s",
+    "yolo26-obb-m",
+    "yolo26-obb-l",
+    "yolo26-obb-x"
+  ],
+  "sourceFingerprint": "3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c"
+}

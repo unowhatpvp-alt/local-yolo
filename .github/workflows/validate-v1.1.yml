@@ -1,0 +1,64 @@
+name: Minimal V1.1 validation only
+on:
+  push:
+    branches: [develop/minimal-v1.1, 'codex/**']
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: validate-v1.1-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - uses: actions/cache@v4
+        with:
+          path: tests/fixtures
+          key: yolo26-fixtures-${{ hashFiles('src/core/model-manifest.json') }}
+      - name: Install real-video validation dependency
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          ffmpeg -version
+      - name: Verify current Node matrix or execute all 25 models when changed
+        run: node scripts/ensure-node-evidence.mjs
+      - name: Fetch only integration fixtures needed for this release
+        run: |
+          node scripts/fetch-yolo26-models.mjs --size=N
+          node scripts/fetch-yolo26-validation-fixtures.mjs
+      - run: npm test
+        env:
+          FETCH_E2E_FIXTURES: '1'
+      - run: npm run build
+      - name: Inspect actual production artifact and subpath resources
+        run: node scripts/verify-build.mjs --output docs/build-verification.json
+      - name: Install pinned CI browser test runner
+        run: |
+          npm install --prefix /tmp/local-yolo-browser-qa --no-save playwright@1.64.1
+          /tmp/local-yolo-browser-qa/node_modules/.bin/playwright install --with-deps chromium
+      - name: Real automatic backend matrix and secure-context PWA integration
+        run: node scripts/validate-browser-release.mjs
+      - name: Check release readiness without publishing
+        run: node scripts/check-release-gate.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v1.1-validation-${{ github.sha }}
+          path: |
+            docs/model-validation-matrix.json
+            docs/browser-validation-matrix.json
+            docs/pwa-validation.json
+            docs/touch-validation.json
+            test-results/browser-release/
+            test-results/touch/
+          if-no-files-found: warn

@@ -62,7 +62,7 @@ test('crop and mirror are applied once to actual overlay geometry',()=>{
  assert.deepEqual([canvas.width,canvas.height],[640,360]);assert.deepEqual(draws[0].slice(1),[320,180,640,360,0,0,640,360]);assert.deepEqual(rectangles,[[460,40,100,80]]);
 });
 
-const fixture=await readFile(new URL('./fixtures/yolo11n.onnx',import.meta.url)).catch(()=>null);
+const fixture=await readFile(new URL('./fixtures/yolo26/yolo26n.onnx',import.meta.url)).catch(()=>null);
 test('real pinned ONNX bytes survive streaming and SHA-256 integrity verification',{skip:!fixture},async()=>{
  const originalFetch=globalThis.fetch;const model={...MODELS.find(m=>m.task==='detect'&&m.size==='N'),status:'verified'};
  globalThis.fetch=async()=>new Response(new ReadableStream({start(controller){for(let i=0;i<fixture.length;i+=137111)controller.enqueue(new Uint8Array(fixture.subarray(i,i+137111)));controller.close()}}));

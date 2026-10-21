@@ -1,0 +1,22 @@
+{
+  "checkedBeforeDevelopmentPushAt": "2026-10-21T01:36:57.699728+00:00",
+  "repository": "unowhatpvp-alt/local-yolo",
+  "defaultBranch": "main",
+  "refs": {
+    "main": "2cea0ebebd3399a77a2d649c44755e54ca0e16b0",
+    "develop/minimal-v1.1": "2cea0ebebd3399a77a2d649c44755e54ca0e16b0",
+    "backup/minimal-v1-2cea0eb": "2cea0ebebd3399a77a2d649c44755e54ca0e16b0"
+  },
+  "lastProductionWorkflow": {
+    "id": 39519330823,
+    "head_sha": "2cea0ebebd3399a77a2d649c44755e54ca0e16b0",
+    "head_branch": "main",
+    "event": "push",
+    "status": "completed",
+    "conclusion": "success",
+    "html_url": "https://github.com/unowhatpvp-alt/local-yolo/actions/runs/39519330823",
+    "updated_at": "2026-10-21T00:11:36Z"
+  },
+  "developmentWorkflow": "Validation only; no Pages/OIDC permissions or deployment job.",
+  "rollback": "Preserved backup branch points to exact original production commit. No production branch mutation performed."
+}

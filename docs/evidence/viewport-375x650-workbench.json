@@ -1,0 +1,378 @@
+{
+  "capturedDownloads": [],
+  "resourceRequests": [
+    {
+      "name": "http://terminal.local:4173/local-yolo/@vite/client",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/main.js",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/node_modules/vite/dist/client/env.mjs",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/ui/styles.css?t=1792544116935",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/catalog.js?t=1792545725027",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/ui/i18n.js",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/model-cache.js",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/engine-client.js?t=1792543785965",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/media.js",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/render.js?t=1792543760872",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/model-manifest.json?import&t=1792545725027",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/@noble_hashes_sha2__js.js?v=3b87ae60",
+      "initiatorType": "script",
+      "transferSize": 0
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/chunk-DGUM43GV.js?v=bb3c34d7",
+      "initiatorType": "script",
+      "transferSize": 0
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/engine-worker.js?worker_file&type=module",
+      "initiatorType": "other",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/node_modules/vite/dist/client/env.mjs",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/engine.js",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/onnxruntime-web_webgpu.js?v=5cfe98f1",
+      "initiatorType": "script",
+      "transferSize": 0
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/onnx-info.js",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/src/core/adapters.js",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/@vite/client",
+      "initiatorType": "script",
+      "transferSize": 300
+    },
+    {
+      "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/chunk-DGUM43GV.js?v=bb3c34d7",
+      "initiatorType": "script",
+      "transferSize": 0
+    }
+  ],
+  "measuredAt": "2026-10-21T01:28:51.221Z",
+  "scope": "Chromium iframe viewport only",
+  "url": "http://terminal.local:4173/local-yolo/?viewport-test=1",
+  "viewport": {
+    "requested": {
+      "width": "375",
+      "height": "650"
+    },
+    "frame": {
+      "x": 20,
+      "y": 171,
+      "width": 375,
+      "height": 650,
+      "top": 171,
+      "right": 395,
+      "bottom": 821,
+      "left": 20
+    },
+    "innerWidth": 375,
+    "innerHeight": 650,
+    "devicePixelRatio": 1,
+    "visualWidth": 375,
+    "visualHeight": 650
+  },
+  "document": {
+    "clientWidth": 375,
+    "scrollWidth": 375,
+    "clientHeight": 650,
+    "scrollHeight": 650,
+    "bodyScrollWidth": 375,
+    "bodyScrollHeight": 650,
+    "horizontalOverflow": false,
+    "verticalOverflow": false
+  },
+  "state": {
+    "phase": "stopped",
+    "workbenchVisible": true,
+    "fullscreen": false
+  },
+  "stage": {
+    "visible": true,
+    "x": 10,
+    "y": 131,
+    "width": 355,
+    "height": 425,
+    "top": 131,
+    "right": 365,
+    "bottom": 556,
+    "left": 10,
+    "computedHeight": "425px"
+  },
+  "canvas": {
+    "visible": true,
+    "x": 10,
+    "y": 131,
+    "width": 810,
+    "height": 1080,
+    "top": 131,
+    "right": 365,
+    "bottom": 556,
+    "left": 10,
+    "objectFit": "contain",
+    "objectPosition": "50% 50%",
+    "cssWidth": "355px",
+    "cssHeight": "425px"
+  },
+  "source": {
+    "video": {
+      "videoWidth": 0,
+      "videoHeight": 0,
+      "readyState": 0
+    },
+    "image": {
+      "naturalWidth": 810,
+      "naturalHeight": 1080
+    }
+  },
+  "targets": {
+    "visibleCount": 12,
+    "below44Count": 0,
+    "items": [
+      {
+        "id": null,
+        "tag": "a",
+        "name": "Local YOLO",
+        "disabled": false,
+        "x": 17,
+        "y": 14,
+        "width": 106.17,
+        "height": 44,
+        "top": 14,
+        "right": 123.17,
+        "bottom": 58,
+        "left": 17,
+        "below44": false
+      },
+      {
+        "id": "switch-model",
+        "tag": "button",
+        "name": "选择模型",
+        "disabled": false,
+        "x": 168.98,
+        "y": 14,
+        "width": 62.02,
+        "height": 44,
+        "top": 14,
+        "right": 231,
+        "bottom": 58,
+        "left": 168.98,
+        "below44": false
+      },
+      {
+        "id": "language-toggle",
+        "tag": "button",
+        "name": "切换为英文",
+        "disabled": false,
+        "x": 232,
+        "y": 14,
+        "width": 44,
+        "height": 44,
+        "top": 14,
+        "right": 276,
+        "bottom": 58,
+        "left": 232,
+        "below44": false
+      },
+      {
+        "id": "theme-toggle",
+        "tag": "button",
+        "name": "切换主题",
+        "disabled": false,
+        "x": 276,
+        "y": 14,
+        "width": 44,
+        "height": 44,
+        "top": 14,
+        "right": 320,
+        "bottom": 58,
+        "left": 276,
+        "below44": false
+      },
+      {
+        "id": "settings-open",
+        "tag": "button",
+        "name": "设置",
+        "disabled": false,
+        "x": 320,
+        "y": 14,
+        "width": 44,
+        "height": 44,
+        "top": 14,
+        "right": 364,
+        "bottom": 58,
+        "left": 320,
+        "below44": false
+      },
+      {
+        "id": "mode-camera",
+        "tag": "button",
+        "name": "摄像头",
+        "disabled": false,
+        "x": 11,
+        "y": 79.5,
+        "width": 81.02,
+        "height": 44,
+        "top": 79.5,
+        "right": 92.02,
+        "bottom": 123.5,
+        "left": 11,
+        "below44": false
+      },
+      {
+        "id": "mode-file",
+        "tag": "button",
+        "name": "上传文件",
+        "disabled": false,
+        "x": 93.02,
+        "y": 79.5,
+        "width": 93.02,
+        "height": 44,
+        "top": 79.5,
+        "right": 186.03,
+        "bottom": 123.5,
+        "left": 93.02,
+        "below44": false
+      },
+      {
+        "id": "choose-file",
+        "tag": "button",
+        "name": "选择图片或视频",
+        "disabled": false,
+        "x": 224.98,
+        "y": 79.5,
+        "width": 88.02,
+        "height": 44,
+        "top": 79.5,
+        "right": 313,
+        "bottom": 123.5,
+        "left": 224.98,
+        "below44": false
+      },
+      {
+        "id": "results-menu-toggle",
+        "tag": "button",
+        "name": "检测结果和导出",
+        "disabled": false,
+        "x": 318,
+        "y": 79.5,
+        "width": 44,
+        "height": 44,
+        "top": 79.5,
+        "right": 362,
+        "bottom": 123.5,
+        "left": 318,
+        "below44": false
+      },
+      {
+        "id": "stage",
+        "tag": "div",
+        "name": "YOLO preview",
+        "disabled": false,
+        "x": 10,
+        "y": 131,
+        "width": 355,
+        "height": 425,
+        "top": 131,
+        "right": 365,
+        "bottom": 556,
+        "left": 10,
+        "below44": false
+      },
+      {
+        "id": "fullscreen-toggle",
+        "tag": "button",
+        "name": "全屏",
+        "disabled": false,
+        "x": 308,
+        "y": 499,
+        "width": 44,
+        "height": 44,
+        "top": 499,
+        "right": 352,
+        "bottom": 543,
+        "left": 308,
+        "below44": false
+      },
+      {
+        "id": "confidence",
+        "tag": "input",
+        "name": "range",
+        "disabled": false,
+        "x": 107.02,
+        "y": 565,
+        "width": 190,
+        "height": 44,
+        "top": 565,
+        "right": 297.02,
+        "bottom": 609,
+        "left": 107.02,
+        "below44": false,
+        "labelTarget": {
+          "width": 349,
+          "height": 44
+        },
+        "labelAtLeast44": true
+      }
+    ]
+  }
+}

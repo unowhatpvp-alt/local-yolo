@@ -1,0 +1,37 @@
+{
+  "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
+  "observedAt": "2026-10-21T02:00:15.013Z",
+  "localImport": {
+    "file": "tests/fixtures/yolo26/yolo26n.onnx",
+    "bytes": 9887916,
+    "autoTask": "detect",
+    "backend": "WASM",
+    "imageResults": "5 个结果"
+  },
+  "fullscreenIdle": {
+    "exitHidden": false,
+    "fullscreen": true,
+    "observedAt": "2026-10-21T02:02:53.497Z",
+    "paused": false,
+    "results": "20 个结果",
+    "time": 5.658627,
+    "toolbarIdle": true,
+    "toolbarOpacity": "1"
+  },
+  "fullscreenRestored": {
+    "toolbarIdle": false
+  },
+  "performance": {
+    "backend": "WASM",
+    "fps": "1.0",
+    "latencyMs": "263",
+    "observedAt": "2026-10-21T02:02:29.400Z",
+    "videoTime": "0:05 / 0:12"
+  },
+  "fullscreenExited": true,
+  "paused": {
+    "paused": true,
+    "time": 1.012994
+  },
+  "mediaNote": "12.4s six-repeat derivative of real H264 footage; used only to exercise controls, no fabricated frames or detections."
+}
