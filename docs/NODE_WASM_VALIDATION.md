@@ -35,17 +35,17 @@ The five Nano variants additionally complete three real load/infer/dispose cycle
 
 ## Sustained Nano inference diagnostic
 
-`node scripts/stress-yolo26-nano.mjs` performs 50 actual sequential inferences for each of the five Nano tasks, alternating two real decoded MP4 frames and yielding one event-loop task turn after every result. All 250 inferences and actual session releases completed against unchanged current source `0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579`. Full samples and real result counts are in [the sustained-inference evidence](diagnostics/nano-sustained-inference.json); the prior aa22 run is preserved separately.
+`node scripts/stress-yolo26-nano.mjs` performs 50 actual sequential inferences for each of the five Nano tasks, alternating two real decoded MP4 frames and yielding one event-loop task turn after every result. All 250 inferences and actual session releases completed against unchanged current source `ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e`. Run `47b8d4b5-b419-4c51-b0d2-3ec489c1195c` executed from `2026-10-21T01:56:16.634Z` to `2026-10-21T01:57:29.581Z`. Full samples and real result counts are in [the sustained-inference evidence](diagnostics/nano-sustained-inference.json). The previous 0f995 and aa22 runs remain preserved separately.
 
 | Nano task | Actual inferences | Late-window RSS range |
 | --- | ---: | ---: |
-| detect | 50 | 2.34 MiB |
-| segment | 50 | 2.32 MiB |
-| pose | 50 | 5.02 MiB |
-| classify | 50 | 0.34 MiB |
-| obb | 50 | 3.50 MiB |
+| detect | 50 | 1.26 MiB |
+| segment | 50 | 8.51 MiB |
+| pose | 50 | 4.15 MiB |
+| classify | 50 | 0.84 MiB |
+| obb | 50 | 3.52 MiB |
 
-The late window comprises the last five requested-GC samples at inferences 30/35/40/45/50. Retained runtime RSS is roughly 300–450 MiB on this host; disposal does not promise that all allocator pages return to the OS. External-buffer totals fluctuate as buffers are collected. A prior microtask-only stress loop showed steadily increasing native Canvas memory; that real observation is retained in [the original tight-loop diagnostic](diagnostics/nano-sustained-interrupted-source.json). Allowing actual event-loop task turns lets native finalizers run and matches the application's worker/frame scheduling. This bounded host test is not proof of iPhone memory capacity or indefinite-run stability.
+The late window comprises the last five requested-GC samples at inferences 30/35/40/45/50. Observed retained RSS in those windows ranged from 355.8 to 413.8 MiB on this host. Disposal does not promise that all allocator pages return to the OS; external-buffer totals fluctuate as buffers are collected. A prior microtask-only stress loop showed steadily increasing native Canvas memory; that actual observation is retained in [the original tight-loop diagnostic](diagnostics/nano-sustained-interrupted-source.json). Allowing real event-loop task turns lets native finalizers run and matches the application's worker/frame scheduling. This bounded host test is not proof of iPhone memory capacity or indefinite-run stability.
 
 ## Classifier export investigation
 
@@ -57,7 +57,7 @@ A further ten held-out, known-label ImageNet10 images run through every classifi
 
 ## Final execution status
 
-Final actual Node WASM result: **25/25 pass, 0 failed, 0 missing, 0 pending**. The complete, nonpartial run `73509e56-8f1a-42ab-8ed5-ec5357b52592` executed from `2026-10-21T01:16:43.263Z` to `2026-10-21T01:21:44.315Z` with ONNX Runtime Web `1.23.2`. Start/end fingerprints and every model-row fingerprint match `0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579`. The runner source digest is `9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a`. The CLI exited successfully. The previous complete aa22 run remains [historical evidence](diagnostics/aa22-complete-node-matrix.json); its fingerprint was not rewritten.
+Final actual Node WASM result after the Vite/esbuild dependency patch: **25/25 pass, 0 failed, 0 missing, 0 pending**. Complete nonpartial run `b1d9dcb7-8dce-48ab-8990-c347ef04e6a3` executed from `2026-10-21T01:56:14.966Z` to `2026-10-21T02:01:15.810Z` with ONNX Runtime Web `1.23.2`. Start/end fingerprints and every model-row fingerprint match `ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e`. The validator source digest is `9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a`. The CLI exited successfully. The previous complete [0f995 report](diagnostics/0f995-complete-node-matrix.json) and [aa22 report](diagnostics/aa22-complete-node-matrix.json) retain their original fingerprints; neither was rebound to the new dependencies.
 
 | Task | N | S | M | L | X |
 | --- | --- | --- | --- | --- | --- |
@@ -67,6 +67,6 @@ Final actual Node WASM result: **25/25 pass, 0 failed, 0 missing, 0 pending**. T
 | classify | Pass; 5 results | Pass; 4 results | Pass; 5 results | Pass; 1 result | Pass; 4 results |
 | obb | Pass; 170 results | Pass; 163 results | Pass; 181 results | Pass; 184 results | Pass; 184 results |
 
-Each pass includes actual file integrity/signature checks, initialization, primary-image inference and decoding, finite raw tensor statistics, two real video-frame inferences, task-specific rendering and awaited session release. Counts above are actual primary-image results at the validator's thresholds; classification counts denote labels, not objects. Every classifier also retains all ten held-out known-label observations. All 25 task renders were qualitatively inspected; all 25 current PNG hashes match the previously inspected renders. Classification labels fit the small primary image. This is not a measured ground-truth accuracy benchmark. The [human 25-row compatibility matrix](MODEL_COMPATIBILITY.md) contains exact input/output signatures, model sizes, actual image counts/labels/confidences/latency, two-frame video counts, release counts and PNG links.
+Each pass includes actual file integrity/signature checks, initialization, primary-image inference and decoding, finite raw tensor statistics, two real video-frame inferences, task rendering and awaited session release. Counts above are actual primary-image results at the validator's thresholds; classification counts denote labels, not objects. Every classifier retains all ten known-label observations, including misses. All 25 current render hashes match the previously inspected renders; the fresh original-resolution contact sheet was also inspected. Classification labels fit the small primary image. This is qualitative rendering validation, not a measured ground-truth accuracy benchmark. The [human 25-row compatibility matrix](MODEL_COMPATIBILITY.md) contains exact input/output signatures, model sizes, actual image counts/labels/confidences/latency, two-frame video counts, releases and PNG links.
 
 This Node result does not establish the complete release gate. Browser WASM, actual WebGPU or genuine operator fallback, secure PWA checks and physical-device status are reported separately. No browser, GPU or phone pass is inferred from Node execution. A stale diagnostic run cannot be rebound to a later application fingerprint.

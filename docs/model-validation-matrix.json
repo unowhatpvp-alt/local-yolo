@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+  "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
   "run": {
-    "id": "73509e56-8f1a-42ab-8ed5-ec5357b52592",
+    "id": "b1d9dcb7-8dce-48ab-8990-c347ef04e6a3",
     "environment": "node",
     "backend": "WASM",
     "runtimeVersion": "1.23.2",
-    "startedAt": "2026-10-21T01:16:43.263Z",
-    "completedAt": "2026-10-21T01:21:44.315Z",
+    "startedAt": "2026-10-21T01:56:14.966Z",
+    "completedAt": "2026-10-21T02:01:15.810Z",
     "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node /workspace/scratch/71226e6aca43/local-yolo-v1.1/scripts/validate-yolo26-matrix.mjs",
     "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
     "physicalDevice": false,
@@ -31,10 +31,10 @@
       "sha256": "4f44c33cea12d4b5785e5e7c0a20c13d0c62a77de607ce96a40d6036c7d7bbcf",
       "bytes": 9887916,
       "status": "pass",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:16:43.371Z",
-      "completedAt": "2026-10-21T01:16:47.071Z",
+      "startedAt": "2026-10-21T01:56:15.072Z",
+      "completedAt": "2026-10-21T01:56:18.719Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26n.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -61,7 +61,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 1093.42,
+        "initializeMs": 1133.496,
         "input": [
           {
             "name": "images",
@@ -93,7 +93,7 @@
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 276.525,
+          "latencyMs": 281.807,
           "resultCount": 5,
           "samples": [
             {
@@ -164,7 +164,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 273.865,
+              "latencyMs": 265.923,
               "resultCount": 24,
               "samples": [
                 {
@@ -226,7 +226,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 249.521,
+              "latencyMs": 253.259,
               "resultCount": 21,
               "samples": [
                 {
@@ -291,7 +291,7 @@
             "height": 540
           },
           "resultCount": 2,
-          "latencyMs": 312.729
+          "latencyMs": 238.91
         },
         "render": {
           "path": "docs/evidence/yolo26/yolo26-detect-n.png",
@@ -300,8 +300,8 @@
           "height": 640,
           "changedPixels": 38677,
           "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T01:23:02.364741+00:00",
-          "visualReviewMethod": "Manual inspection of all25 actual primary-image renders in original-resolution contact sheet. All25 PNG digests also match the previously inspected aa22 renders. Overlays align qualitatively with source subjects; this is not a ground-truth mAP/IoU benchmark."
+          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
+          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -311,43 +311,43 @@
           "reloadRounds": [
             {
               "round": 1,
-              "loadInferDisposeMs": 571.205,
+              "loadInferDisposeMs": 523.251,
               "resultCount": 5,
               "memory": {
-                "rssBytes": 509591552,
-                "heapUsedBytes": 11901200,
+                "rssBytes": 492871680,
+                "heapUsedBytes": 11948168,
                 "externalBytes": 21127107,
                 "arrayBuffersBytes": 10894681
               }
             },
             {
               "round": 2,
-              "loadInferDisposeMs": 530.969,
+              "loadInferDisposeMs": 551.492,
               "resultCount": 5,
               "memory": {
-                "rssBytes": 525307904,
-                "heapUsedBytes": 10514184,
+                "rssBytes": 509935616,
+                "heapUsedBytes": 10489416,
                 "externalBytes": 21121863,
                 "arrayBuffersBytes": 10894681
               }
             }
           ],
           "initBefore": {
-            "rssBytes": 71630848,
-            "heapUsedBytes": 9087568,
+            "rssBytes": 71786496,
+            "heapUsedBytes": 9097480,
             "externalBytes": 14042379,
             "arrayBuffersBytes": 10238090
           },
           "beforeRelease": {
-            "rssBytes": 445759488,
-            "heapUsedBytes": 12262656,
-            "externalBytes": 21127107,
-            "arrayBuffersBytes": 16697881
+            "rssBytes": 375824384,
+            "heapUsedBytes": 12391352,
+            "externalBytes": 23243907,
+            "arrayBuffersBytes": 18814681
           },
           "afterRelease": {
-            "rssBytes": 445890560,
-            "heapUsedBytes": 11863648,
-            "externalBytes": 21127107,
+            "rssBytes": 376086528,
+            "heapUsedBytes": 11857512,
+            "externalBytes": 23243907,
             "arrayBuffersBytes": 10894681
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
@@ -368,10 +368,10 @@
       "sha256": "e3f5515ea1cdbb16d8c6c1a8e58048a0991d5a3b2ee48cc1c82d35b492bcc265",
       "bytes": 38237095,
       "status": "pass",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:16:47.248Z",
-      "completedAt": "2026-10-21T01:16:52.293Z",
+      "startedAt": "2026-10-21T01:56:19.030Z",
+      "completedAt": "2026-10-21T01:56:24.641Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26s.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -398,7 +398,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 1393.925,
+        "initializeMs": 1684.805,
         "input": [
           {
             "name": "images",
@@ -430,7 +430,7 @@
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 786.671,
+          "latencyMs": 884.253,
           "resultCount": 5,
           "samples": [
             {
@@ -501,7 +501,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 804.551,
+              "latencyMs": 949.839,
               "resultCount": 16,
               "samples": [
                 {
@@ -563,7 +563,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 787.3,
+              "latencyMs": 838.446,
               "resultCount": 16,
               "samples": [
                 {
@@ -628,7 +628,7 @@
             "height": 540
           },
           "resultCount": 2,
-          "latencyMs": 777.243
+          "latencyMs": 832.422
         },
         "render": {
           "path": "docs/evidence/yolo26/yolo26-detect-s.png",
@@ -637,8 +637,8 @@
           "height": 640,
           "changedPixels": 40961,
           "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T01:23:02.364741+00:00",
-          "visualReviewMethod": "Manual inspection of all25 actual primary-image renders in original-resolution contact sheet. All25 PNG digests also match the previously inspected aa22 renders. Overlays align qualitatively with source subjects; this is not a ground-truth mAP/IoU benchmark."
+          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
+          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -647,20 +647,20 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 99565568,
-            "heapUsedBytes": 9707600,
-            "externalBytes": 42400230,
-            "arrayBuffersBytes": 38595941
+            "rssBytes": 99532800,
+            "heapUsedBytes": 9635552,
+            "externalBytes": 42397526,
+            "arrayBuffersBytes": 38593237
           },
           "beforeRelease": {
-            "rssBytes": 445243392,
-            "heapUsedBytes": 12325536,
+            "rssBytes": 422494208,
+            "heapUsedBytes": 12332976,
             "externalBytes": 49476283,
             "arrayBuffersBytes": 45047060
           },
           "afterRelease": {
-            "rssBytes": 445505536,
-            "heapUsedBytes": 11859984,
+            "rssBytes": 422756352,
+            "heapUsedBytes": 11872960,
             "externalBytes": 49476283,
             "arrayBuffersBytes": 39243860
           },
@@ -682,10 +682,10 @@
       "sha256": "8d1c032e6f67670e00e0256fd83390fac2e1f9341e2eb627f94ff4a565b4fcce",
       "bytes": 81909133,
       "status": "pass",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:16:52.424Z",
-      "completedAt": "2026-10-21T01:17:04.762Z",
+      "startedAt": "2026-10-21T01:56:24.787Z",
+      "completedAt": "2026-10-21T01:56:38.693Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26m.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -712,7 +712,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 2764.132,
+        "initializeMs": 3219.371,
         "input": [
           {
             "name": "images",
@@ -744,7 +744,7 @@
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 2176.028,
+          "latencyMs": 2234.028,
           "resultCount": 5,
           "samples": [
             {
@@ -815,7 +815,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 2146.634,
+              "latencyMs": 2388.313,
               "resultCount": 15,
               "samples": [
                 {
@@ -877,7 +877,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 2473.871,
+              "latencyMs": 2841.249,
               "resultCount": 16,
               "samples": [
                 {
@@ -942,7 +942,7 @@
             "height": 540
           },
           "resultCount": 3,
-          "latencyMs": 2144.457
+          "latencyMs": 2754.886
         },
         "render": {
           "path": "docs/evidence/yolo26/yolo26-detect-m.png",
@@ -951,8 +951,8 @@
           "height": 640,
           "changedPixels": 40104,
           "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T01:23:02.364741+00:00",
-          "visualReviewMethod": "Manual inspection of all25 actual primary-image renders in original-resolution contact sheet. All25 PNG digests also match the previously inspected aa22 renders. Overlays align qualitatively with source subjects; this is not a ground-truth mAP/IoU benchmark."
+          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
+          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -961,20 +961,20 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 143609856,
-            "heapUsedBytes": 9170640,
+            "rssBytes": 143753216,
+            "heapUsedBytes": 9179896,
             "externalBytes": 86096424,
             "arrayBuffersBytes": 82292135
           },
           "beforeRelease": {
-            "rssBytes": 595218432,
-            "heapUsedBytes": 13056632,
+            "rssBytes": 613732352,
+            "heapUsedBytes": 12705680,
             "externalBytes": 93148426,
             "arrayBuffersBytes": 88719098
           },
           "afterRelease": {
-            "rssBytes": 595480576,
-            "heapUsedBytes": 11858592,
+            "rssBytes": 613994496,
+            "heapUsedBytes": 11874360,
             "externalBytes": 93148426,
             "arrayBuffersBytes": 82915898
           },
@@ -996,10 +996,10 @@
       "sha256": "339eb3bdd2a8855399d5b4e9c53a2b370eb9e319d495600237a252223c981732",
       "bytes": 99559195,
       "status": "pass",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:17:04.901Z",
-      "completedAt": "2026-10-21T01:17:21.162Z",
+      "startedAt": "2026-10-21T01:56:38.824Z",
+      "completedAt": "2026-10-21T01:56:55.790Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26l.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -1026,7 +1026,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 3548.101,
+        "initializeMs": 4061.76,
         "input": [
           {
             "name": "images",
@@ -1058,7 +1058,7 @@
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 2810.59,
+          "latencyMs": 3292.582,
           "resultCount": 5,
           "samples": [
             {
@@ -1129,7 +1129,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 3247.481,
+              "latencyMs": 2988.144,
               "resultCount": 15,
               "samples": [
                 {
@@ -1191,7 +1191,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 2905.278,
+              "latencyMs": 3215.346,
               "resultCount": 17,
               "samples": [
                 {
@@ -1256,7 +1256,7 @@
             "height": 540
           },
           "resultCount": 2,
-          "latencyMs": 3086.192
+          "latencyMs": 2878.969
         },
         "render": {
           "path": "docs/evidence/yolo26/yolo26-detect-l.png",
@@ -1265,8 +1265,8 @@
           "height": 640,
           "changedPixels": 40037,
           "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T01:23:02.364741+00:00",
-          "visualReviewMethod": "Manual inspection of all25 actual primary-image renders in original-resolution contact sheet. All25 PNG digests also match the previously inspected aa22 renders. Overlays align qualitatively with source subjects; this is not a ground-truth mAP/IoU benchmark."
+          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
+          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -1275,20 +1275,20 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 161202176,
-            "heapUsedBytes": 9499752,
+            "rssBytes": 161509376,
+            "heapUsedBytes": 9494208,
             "externalBytes": 103753350,
             "arrayBuffersBytes": 99949061
           },
           "beforeRelease": {
-            "rssBytes": 606547968,
-            "heapUsedBytes": 12410744,
+            "rssBytes": 613232640,
+            "heapUsedBytes": 12823184,
             "externalBytes": 116601663,
             "arrayBuffersBytes": 112172360
           },
           "afterRelease": {
-            "rssBytes": 606810112,
-            "heapUsedBytes": 11841096,
+            "rssBytes": 613363712,
+            "heapUsedBytes": 11882176,
             "externalBytes": 116601663,
             "arrayBuffersBytes": 100565960
           },
@@ -1310,10 +1310,10 @@
       "sha256": "cdb052ff612f4aa018adc982b393fa7e0502d750d970844e393152d030eef095",
       "bytes": 223233339,
       "status": "pass",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:17:21.329Z",
-      "completedAt": "2026-10-21T01:17:55.321Z",
+      "startedAt": "2026-10-21T01:56:55.913Z",
+      "completedAt": "2026-10-21T01:57:29.767Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26x.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -1340,7 +1340,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 7855.485,
+        "initializeMs": 7228.881,
         "input": [
           {
             "name": "images",
@@ -1372,7 +1372,7 @@
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 6065.966,
+          "latencyMs": 6457.797,
           "resultCount": 5,
           "samples": [
             {
@@ -1443,7 +1443,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 6139.244,
+              "latencyMs": 6473.254,
               "resultCount": 22,
               "samples": [
                 {
@@ -1505,7 +1505,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 6117.785,
+              "latencyMs": 6178.431,
               "resultCount": 22,
               "samples": [
                 {
@@ -1570,7 +1570,7 @@
             "height": 540
           },
           "resultCount": 3,
-          "latencyMs": 6647.336
+          "latencyMs": 6824.011
         },
         "render": {
           "path": "docs/evidence/yolo26/yolo26-detect-x.png",
@@ -1579,8 +1579,8 @@
           "height": 640,
           "changedPixels": 40342,
           "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T01:23:02.364741+00:00",
-          "visualReviewMethod": "Manual inspection of all25 actual primary-image renders in original-resolution contact sheet. All25 PNG digests also match the previously inspected aa22 renders. Overlays align qualitatively with source subjects; this is not a ground-truth mAP/IoU benchmark."
+          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
+          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -1589,21 +1589,21 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 285274112,
-            "heapUsedBytes": 9725672,
+            "rssBytes": 285147136,
+            "heapUsedBytes": 9738160,
             "externalBytes": 227476582,
             "arrayBuffersBytes": 223672293
           },
           "beforeRelease": {
-            "rssBytes": 1014714368,
-            "heapUsedBytes": 12760224,
-            "externalBytes": 241505087,
+            "rssBytes": 1013399552,
+            "heapUsedBytes": 12261464,
+            "externalBytes": 240276287,
             "arrayBuffersBytes": 235846504
           },
           "afterRelease": {
-            "rssBytes": 1014845440,
-            "heapUsedBytes": 11846072,
-            "externalBytes": 241505087,
+            "rssBytes": 1013530624,
+            "heapUsedBytes": 11902352,
+            "externalBytes": 240276287,
             "arrayBuffersBytes": 224240104
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
@@ -1624,10 +1624,10 @@
       "sha256": "d4a4da5077847338d50788670b6a81f8f5525b516399bb656247a87b64f85964",
       "bytes": 11161769,
       "status": "pass",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:17:55.453Z",
-      "completedAt": "2026-10-21T01:17:59.801Z",
+      "startedAt": "2026-10-21T01:57:29.895Z",
+      "completedAt": "2026-10-21T01:57:34.358Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26n-seg.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -1654,7 +1654,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 956.523,
+        "initializeMs": 1254.531,
         "input": [
           {
             "name": "images",
@@ -1696,7 +1696,7 @@
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 461.26,
+          "latencyMs": 416.521,
           "resultCount": 5,
           "samples": [
             {
@@ -1819,7 +1819,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 427.264,
+              "latencyMs": 407.361,
               "resultCount": 17,
               "samples": [
                 {
@@ -1933,7 +1933,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 420.922,
+              "latencyMs": 393.71,
               "resultCount": 16,
               "samples": [
                 {
@@ -2049,8 +2049,8 @@
           "height": 640,
           "changedPixels": 147151,
           "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T01:23:02.364741+00:00",
-          "visualReviewMethod": "Manual inspection of all25 actual primary-image renders in original-resolution contact sheet. All25 PNG digests also match the previously inspected aa22 renders. Overlays align qualitatively with source subjects; this is not a ground-truth mAP/IoU benchmark."
+          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
+          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -2060,43 +2060,43 @@
           "reloadRounds": [
             {
               "round": 1,
-              "loadInferDisposeMs": 870.785,
+              "loadInferDisposeMs": 831.465,
               "resultCount": 5,
               "memory": {
-                "rssBytes": 566292480,
-                "heapUsedBytes": 11975984,
+                "rssBytes": 548368384,
+                "heapUsedBytes": 12012528,
                 "externalBytes": 26317653,
                 "arrayBuffersBytes": 12445294
               }
             },
             {
               "round": 2,
-              "loadInferDisposeMs": 869.57,
+              "loadInferDisposeMs": 827.187,
               "resultCount": 5,
               "memory": {
-                "rssBytes": 491405312,
-                "heapUsedBytes": 10540424,
+                "rssBytes": 473505792,
+                "heapUsedBytes": 10555880,
                 "externalBytes": 26566563,
                 "arrayBuffersBytes": 12445294
               }
             }
           ],
           "initBefore": {
-            "rssBytes": 72949760,
-            "heapUsedBytes": 9263920,
-            "externalBytes": 15316232,
-            "arrayBuffersBytes": 11511943
+            "rssBytes": 72286208,
+            "heapUsedBytes": 9730912,
+            "externalBytes": 15321224,
+            "arrayBuffersBytes": 11516935
           },
           "beforeRelease": {
-            "rssBytes": 444395520,
-            "heapUsedBytes": 12220600,
-            "externalBytes": 26929461,
-            "arrayBuffersBytes": 22508302
+            "rssBytes": 468021248,
+            "heapUsedBytes": 14179280,
+            "externalBytes": 35996661,
+            "arrayBuffersBytes": 31575502
           },
           "afterRelease": {
-            "rssBytes": 444526592,
-            "heapUsedBytes": 11931976,
-            "externalBytes": 26929461,
+            "rssBytes": 468283392,
+            "heapUsedBytes": 11927160,
+            "externalBytes": 16612299,
             "arrayBuffersBytes": 12191140
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
@@ -2117,10 +2117,10 @@
       "sha256": "83db44ad9f930e062506099e03388aa523bfeb0c378efe94696013ac9e4ceae2",
       "bytes": 41855456,
       "status": "pass",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:17:59.919Z",
-      "completedAt": "2026-10-21T01:18:06.302Z",
+      "startedAt": "2026-10-21T01:57:34.497Z",
+      "completedAt": "2026-10-21T01:57:40.339Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26s-seg.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -2147,7 +2147,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 2188.213,
+        "initializeMs": 1889.54,
         "input": [
           {
             "name": "images",
@@ -2189,7 +2189,7 @@
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 1178.802,
+          "latencyMs": 1160.471,
           "resultCount": 5,
           "samples": [
             {
@@ -2312,7 +2312,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 1326.198,
+              "latencyMs": 1194.778,
               "resultCount": 26,
               "samples": [
                 {
@@ -2426,7 +2426,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 1264.485,
+              "latencyMs": 1148.753,
               "resultCount": 19,
               "samples": [
                 {
@@ -2542,8 +2542,8 @@
           "height": 640,
           "changedPixels": 148589,
           "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T01:23:02.364741+00:00",
-          "visualReviewMethod": "Manual inspection of all25 actual primary-image renders in original-resolution contact sheet. All25 PNG digests also match the previously inspected aa22 renders. Overlays align qualitatively with source subjects; this is not a ground-truth mAP/IoU benchmark."
+          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
+          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -2552,21 +2552,21 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 104574976,
-            "heapUsedBytes": 8443768,
-            "externalBytes": 46009883,
-            "arrayBuffersBytes": 42205594
+            "rssBytes": 103337984,
+            "heapUsedBytes": 9769728,
+            "externalBytes": 46024831,
+            "arrayBuffersBytes": 42220542
           },
           "beforeRelease": {
-            "rssBytes": 509349888,
-            "heapUsedBytes": 11180448,
-            "externalBytes": 57632063,
-            "arrayBuffersBytes": 53211775
+            "rssBytes": 527765504,
+            "heapUsedBytes": 13904400,
+            "externalBytes": 57862463,
+            "arrayBuffersBytes": 53442175
           },
           "afterRelease": {
-            "rssBytes": 509329408,
-            "heapUsedBytes": 10513544,
-            "externalBytes": 57627940,
+            "rssBytes": 528027648,
+            "heapUsedBytes": 11928832,
+            "externalBytes": 57862463,
             "arrayBuffersBytes": 42887000
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
@@ -2587,10 +2587,10 @@
       "sha256": "8e8235dde37895c45c2fa7248e9fd2a5df1d9e6e32f9591e66e93533fce1057c",
       "bytes": 94558924,
       "status": "pass",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:18:06.436Z",
-      "completedAt": "2026-10-21T01:18:23.924Z",
+      "startedAt": "2026-10-21T01:57:40.456Z",
+      "completedAt": "2026-10-21T01:57:56.912Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26m-seg.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -2617,7 +2617,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 4698.173,
+        "initializeMs": 4777.092,
         "input": [
           {
             "name": "images",
@@ -2659,7 +2659,7 @@
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 4236.668,
+          "latencyMs": 4032.896,
           "resultCount": 5,
           "samples": [
             {
@@ -2782,7 +2782,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 3965.372,
+              "latencyMs": 3685.505,
               "resultCount": 17,
               "samples": [
                 {
@@ -2896,7 +2896,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 3884.119,
+              "latencyMs": 3519.61,
               "resultCount": 16,
               "samples": [
                 {
@@ -3012,8 +3012,8 @@
           "height": 640,
           "changedPixels": 148419,
           "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T01:23:02.364741+00:00",
-          "visualReviewMethod": "Manual inspection of all25 actual primary-image renders in original-resolution contact sheet. All25 PNG digests also match the previously inspected aa22 renders. Overlays align qualitatively with source subjects; this is not a ground-truth mAP/IoU benchmark."
+          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
+          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -3022,21 +3022,21 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 156184576,
-            "heapUsedBytes": 9284904,
+            "rssBytes": 156135424,
+            "heapUsedBytes": 9310576,
             "externalBytes": 98751207,
             "arrayBuffersBytes": 94946918
           },
           "beforeRelease": {
-            "rssBytes": 672804864,
-            "heapUsedBytes": 14152216,
-            "externalBytes": 119394451,
-            "arrayBuffersBytes": 114974042
+            "rssBytes": 683610112,
+            "heapUsedBytes": 13148768,
+            "externalBytes": 110327251,
+            "arrayBuffersBytes": 105906842
           },
           "afterRelease": {
-            "rssBytes": 672890880,
-            "heapUsedBytes": 10495720,
-            "externalBytes": 100004720,
+            "rssBytes": 683601920,
+            "heapUsedBytes": 10509144,
+            "externalBytes": 110323128,
             "arrayBuffersBytes": 95588434
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
@@ -3057,10 +3057,10 @@
       "sha256": "9c06456a2b4cce5bcf1bd73b12b3146938408cc62e56251133e36dce71c8f417",
       "bytes": 112208986,
       "status": "pass",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:18:24.050Z",
-      "completedAt": "2026-10-21T01:18:44.018Z",
+      "startedAt": "2026-10-21T01:57:57.032Z",
+      "completedAt": "2026-10-21T01:58:15.819Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26l-seg.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -3087,7 +3087,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 5050.55,
+        "initializeMs": 5038.703,
         "input": [
           {
             "name": "images",
@@ -3129,7 +3129,7 @@
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 5587.962,
+          "latencyMs": 4280.082,
           "resultCount": 5,
           "samples": [
             {
@@ -3252,7 +3252,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 4297.511,
+              "latencyMs": 4316.688,
               "resultCount": 20,
               "samples": [
                 {
@@ -3366,7 +3366,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 4364.598,
+              "latencyMs": 4637.976,
               "resultCount": 22,
               "samples": [
                 {
@@ -3482,8 +3482,8 @@
           "height": 640,
           "changedPixels": 148220,
           "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T01:23:02.364741+00:00",
-          "visualReviewMethod": "Manual inspection of all25 actual primary-image renders in original-resolution contact sheet. All25 PNG digests also match the previously inspected aa22 renders. Overlays align qualitatively with source subjects; this is not a ground-truth mAP/IoU benchmark."
+          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
+          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -3492,20 +3492,20 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 174374912,
-            "heapUsedBytes": 9594160,
+            "rssBytes": 174530560,
+            "heapUsedBytes": 9607616,
             "externalBytes": 116408341,
             "arrayBuffersBytes": 112604052
           },
           "beforeRelease": {
-            "rssBytes": 726753280,
-            "heapUsedBytes": 11581992,
+            "rssBytes": 727920640,
+            "heapUsedBytes": 11846568,
             "externalBytes": 128441856,
             "arrayBuffersBytes": 124021861
           },
           "afterRelease": {
-            "rssBytes": 727015424,
-            "heapUsedBytes": 10502912,
+            "rssBytes": 728051712,
+            "heapUsedBytes": 10533064,
             "externalBytes": 128437733,
             "arrayBuffersBytes": 113241337
           },
@@ -3527,10 +3527,10 @@
       "sha256": "c815dd6377a436a3c453c435a8da6b88c5136135148304750aa9d8c2300eb25d",
       "bytes": 251623808,
       "status": "pass",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:18:44.166Z",
-      "completedAt": "2026-10-21T01:19:24.776Z",
+      "startedAt": "2026-10-21T01:58:15.960Z",
+      "completedAt": "2026-10-21T01:58:55.869Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26x-seg.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -3557,7 +3557,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 9951.64,
+        "initializeMs": 10377.74,
         "input": [
           {
             "name": "images",
@@ -3599,7 +3599,7 @@
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 9921.152,
+          "latencyMs": 9769.09,
           "resultCount": 5,
           "samples": [
             {
@@ -3722,7 +3722,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 9950.994,
+              "latencyMs": 9590.389,
               "resultCount": 16,
               "samples": [
                 {
@@ -3836,7 +3836,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 9624.598,
+              "latencyMs": 9402.422,
               "resultCount": 20,
               "samples": [
                 {
@@ -3952,8 +3952,8 @@
           "height": 640,
           "changedPixels": 149382,
           "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T01:23:02.364741+00:00",
-          "visualReviewMethod": "Manual inspection of all25 actual primary-image renders in original-resolution contact sheet. All25 PNG digests also match the previously inspected aa22 renders. Overlays align qualitatively with source subjects; this is not a ground-truth mAP/IoU benchmark."
+          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
+          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -3962,20 +3962,20 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 313344000,
-            "heapUsedBytes": 9859472,
+            "rssBytes": 313655296,
+            "heapUsedBytes": 9880736,
             "externalBytes": 255878283,
             "arrayBuffersBytes": 252073994
           },
           "beforeRelease": {
-            "rssBytes": 1137696768,
-            "heapUsedBytes": 10973152,
+            "rssBytes": 1148768256,
+            "heapUsedBytes": 11499400,
             "externalBytes": 267698970,
             "arrayBuffersBytes": 263278706
           },
           "afterRelease": {
-            "rssBytes": 1137958912,
-            "heapUsedBytes": 10500632,
+            "rssBytes": 1149030400,
+            "heapUsedBytes": 10532672,
             "externalBytes": 267694847,
             "arrayBuffersBytes": 252655055
           },
@@ -3997,10 +3997,10 @@
       "sha256": "af993717f4427d15dc96fc25eb091b3a9d136aba4fd06d8b8e990bc74212d564",
       "bytes": 12044096,
       "status": "pass",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:19:24.936Z",
-      "completedAt": "2026-10-21T01:19:28.724Z",
+      "startedAt": "2026-10-21T01:58:56.010Z",
+      "completedAt": "2026-10-21T01:58:59.651Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26n-pose.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -4029,7 +4029,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 1032.107,
+        "initializeMs": 1032.67,
         "input": [
           {
             "name": "images",
@@ -4061,7 +4061,7 @@
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 339.848,
+          "latencyMs": 289.582,
           "resultCount": 4,
           "samples": [
             {
@@ -4399,7 +4399,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 330.262,
+              "latencyMs": 313.8,
               "resultCount": 7,
               "samples": [
                 {
@@ -4728,7 +4728,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 308.046,
+              "latencyMs": 306.072,
               "resultCount": 5,
               "samples": [
                 {
@@ -5059,8 +5059,8 @@
           "height": 640,
           "changedPixels": 39388,
           "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T01:23:02.364741+00:00",
-          "visualReviewMethod": "Manual inspection of all25 actual primary-image renders in original-resolution contact sheet. All25 PNG digests also match the previously inspected aa22 renders. Overlays align qualitatively with source subjects; this is not a ground-truth mAP/IoU benchmark."
+          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
+          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -5070,44 +5070,44 @@
           "reloadRounds": [
             {
               "round": 1,
-              "loadInferDisposeMs": 742.618,
+              "loadInferDisposeMs": 668.366,
               "resultCount": 4,
               "memory": {
-                "rssBytes": 531472384,
-                "heapUsedBytes": 11914440,
-                "externalBytes": 18900740,
+                "rssBytes": 468230144,
+                "heapUsedBytes": 11928224,
+                "externalBytes": 17489540,
                 "arrayBuffersBytes": 13050861
               }
             },
             {
               "round": 2,
-              "loadInferDisposeMs": 669.647,
+              "loadInferDisposeMs": 664.625,
               "resultCount": 4,
               "memory": {
-                "rssBytes": 462323712,
-                "heapUsedBytes": 11953768,
+                "rssBytes": 483172352,
+                "heapUsedBytes": 11962560,
                 "externalBytes": 18900740,
                 "arrayBuffersBytes": 13050861
               }
             }
           ],
           "initBefore": {
-            "rssBytes": 73752576,
-            "heapUsedBytes": 9297448,
+            "rssBytes": 73781248,
+            "heapUsedBytes": 9211048,
             "externalBytes": 16198559,
             "arrayBuffersBytes": 12394270
           },
           "beforeRelease": {
-            "rssBytes": 407973888,
-            "heapUsedBytes": 14544920,
-            "externalBytes": 35239940,
-            "arrayBuffersBytes": 28343661
+            "rssBytes": 423686144,
+            "heapUsedBytes": 14161992,
+            "externalBytes": 58281730,
+            "arrayBuffersBytes": 53843051
           },
           "afterRelease": {
-            "rssBytes": 408236032,
-            "heapUsedBytes": 11871240,
-            "externalBytes": 35239940,
-            "arrayBuffersBytes": 13050861
+            "rssBytes": 421433344,
+            "heapUsedBytes": 11895344,
+            "externalBytes": 58281730,
+            "arrayBuffersBytes": 28343661
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
         }
@@ -5127,10 +5127,10 @@
       "sha256": "b388778b05291db4d8d30c36322aea6723f0b9ffb7c5dd0d078051cd78edb727",
       "bytes": 41777468,
       "status": "pass",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:19:28.854Z",
-      "completedAt": "2026-10-21T01:19:33.761Z",
+      "startedAt": "2026-10-21T01:58:59.777Z",
+      "completedAt": "2026-10-21T01:59:04.295Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26s-pose.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -5159,7 +5159,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 1768.496,
+        "initializeMs": 1474.204,
         "input": [
           {
             "name": "images",
@@ -5191,7 +5191,7 @@
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 902.859,
+          "latencyMs": 827.191,
           "resultCount": 4,
           "samples": [
             {
@@ -5529,7 +5529,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 880.463,
+              "latencyMs": 875.402,
               "resultCount": 4,
               "samples": [
                 {
@@ -5858,7 +5858,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 941.947,
+              "latencyMs": 848.872,
               "resultCount": 4,
               "samples": [
                 {
@@ -6189,8 +6189,8 @@
           "height": 640,
           "changedPixels": 41051,
           "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T01:23:02.364741+00:00",
-          "visualReviewMethod": "Manual inspection of all25 actual primary-image renders in original-resolution contact sheet. All25 PNG digests also match the previously inspected aa22 renders. Overlays align qualitatively with source subjects; this is not a ground-truth mAP/IoU benchmark."
+          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
+          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -6199,20 +6199,20 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 102875136,
-            "heapUsedBytes": 9563376,
-            "externalBytes": 45931931,
-            "arrayBuffersBytes": 42127642
+            "rssBytes": 102916096,
+            "heapUsedBytes": 9698016,
+            "externalBytes": 45936235,
+            "arrayBuffersBytes": 42131946
           },
           "beforeRelease": {
-            "rssBytes": 461832192,
-            "heapUsedBytes": 39462800,
+            "rssBytes": 473907200,
+            "heapUsedBytes": 39523648,
             "externalBytes": 66205462,
             "arrayBuffersBytes": 58077865
           },
           "afterRelease": {
-            "rssBytes": 462225408,
-            "heapUsedBytes": 11868256,
+            "rssBytes": 474300416,
+            "heapUsedBytes": 11881912,
             "externalBytes": 52323030,
             "arrayBuffersBytes": 42784233
           },
@@ -6234,10 +6234,10 @@
       "sha256": "ebc8a97c876a7a557e765b6dccc784e12e7f689ae1607f6e7f800530641f402a",
       "bytes": 86503202,
       "status": "pass",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:19:33.894Z",
-      "completedAt": "2026-10-21T01:19:44.831Z",
+      "startedAt": "2026-10-21T01:59:04.423Z",
+      "completedAt": "2026-10-21T01:59:14.811Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26m-pose.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -6266,7 +6266,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 2991.069,
+        "initializeMs": 2944.31,
         "input": [
           {
             "name": "images",
@@ -6298,7 +6298,7 @@
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 2350.429,
+          "latencyMs": 2313.75,
           "resultCount": 4,
           "samples": [
             {
@@ -6636,7 +6636,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 2447.872,
+              "latencyMs": 2280.633,
               "resultCount": 4,
               "samples": [
                 {
@@ -6965,7 +6965,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 2510.195,
+              "latencyMs": 2373.604,
               "resultCount": 1,
               "samples": [
                 {
@@ -7096,8 +7096,8 @@
           "height": 640,
           "changedPixels": 40534,
           "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T01:23:02.364741+00:00",
-          "visualReviewMethod": "Manual inspection of all25 actual primary-image renders in original-resolution contact sheet. All25 PNG digests also match the previously inspected aa22 renders. Overlays align qualitatively with source subjects; this is not a ground-truth mAP/IoU benchmark."
+          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
+          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -7106,20 +7106,20 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 148226048,
-            "heapUsedBytes": 9212920,
+            "rssBytes": 147849216,
+            "heapUsedBytes": 9223880,
             "externalBytes": 90692157,
             "arrayBuffersBytes": 86887868
           },
           "beforeRelease": {
-            "rssBytes": 729747456,
-            "heapUsedBytes": 15045520,
+            "rssBytes": 676188160,
+            "heapUsedBytes": 15963152,
             "externalBytes": 102145556,
             "arrayBuffersBytes": 97705167
           },
           "afterRelease": {
-            "rssBytes": 729878528,
-            "heapUsedBytes": 11861232,
+            "rssBytes": 676450304,
+            "heapUsedBytes": 11874232,
             "externalBytes": 102145556,
             "arrayBuffersBytes": 87509967
           },
@@ -7141,10 +7141,10 @@
       "sha256": "631b9e1f655d5fec30f457dbed9fe87938100af68322b02f32e1609196725e8e",
       "bytes": 104153264,
       "status": "pass",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:19:44.966Z",
-      "completedAt": "2026-10-21T01:19:57.906Z",
+      "startedAt": "2026-10-21T01:59:14.947Z",
+      "completedAt": "2026-10-21T01:59:28.280Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26l-pose.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -7173,7 +7173,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 3457.893,
+        "initializeMs": 3686.326,
         "input": [
           {
             "name": "images",
@@ -7205,7 +7205,7 @@
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 2996.001,
+          "latencyMs": 2932.755,
           "resultCount": 4,
           "samples": [
             {
@@ -7543,7 +7543,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 2907.969,
+              "latencyMs": 3123.526,
               "resultCount": 4,
               "samples": [
                 {
@@ -7872,7 +7872,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 2907.619,
+              "latencyMs": 2951.998,
               "resultCount": 2,
               "samples": [
                 {
@@ -8103,8 +8103,8 @@
           "height": 640,
           "changedPixels": 41288,
           "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T01:23:02.364741+00:00",
-          "visualReviewMethod": "Manual inspection of all25 actual primary-image renders in original-resolution contact sheet. All25 PNG digests also match the previously inspected aa22 renders. Overlays align qualitatively with source subjects; this is not a ground-truth mAP/IoU benchmark."
+          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
+          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -8113,20 +8113,20 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 166174720,
-            "heapUsedBytes": 9518560,
+            "rssBytes": 166019072,
+            "heapUsedBytes": 9517216,
             "externalBytes": 108349291,
             "arrayBuffersBytes": 104545002
           },
           "beforeRelease": {
-            "rssBytes": 734191616,
-            "heapUsedBytes": 12957424,
+            "rssBytes": 680083456,
+            "heapUsedBytes": 12034776,
             "externalBytes": 119796333,
             "arrayBuffersBytes": 115355229
           },
           "afterRelease": {
-            "rssBytes": 734322688,
-            "heapUsedBytes": 11866600,
+            "rssBytes": 680214528,
+            "heapUsedBytes": 11883136,
             "externalBytes": 119796333,
             "arrayBuffersBytes": 105160029
           },
@@ -8148,10 +8148,10 @@
       "sha256": "f9fa35b3181b72328414649cad937bf752c15ad0bf5131d91dea12f1bf4090e7",
       "bytes": 230646812,
       "status": "pass",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:19:58.039Z",
-      "completedAt": "2026-10-21T01:20:24.235Z",
+      "startedAt": "2026-10-21T01:59:28.415Z",
+      "completedAt": "2026-10-21T01:59:54.401Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26x-pose.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -8180,7 +8180,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 6774.145,
+        "initializeMs": 6849.62,
         "input": [
           {
             "name": "images",
@@ -8212,7 +8212,7 @@
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 6109.076,
+          "latencyMs": 5898.756,
           "resultCount": 4,
           "samples": [
             {
@@ -8550,7 +8550,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 6127.939,
+              "latencyMs": 6363.835,
               "resultCount": 3,
               "samples": [
                 {
@@ -8879,7 +8879,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 6084.752,
+              "latencyMs": 6221.954,
               "resultCount": 2,
               "samples": [
                 {
@@ -9110,8 +9110,8 @@
           "height": 640,
           "changedPixels": 41433,
           "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T01:23:02.364741+00:00",
-          "visualReviewMethod": "Manual inspection of all25 actual primary-image renders in original-resolution contact sheet. All25 PNG digests also match the previously inspected aa22 renders. Overlays align qualitatively with source subjects; this is not a ground-truth mAP/IoU benchmark."
+          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
+          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -9120,20 +9120,20 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 292462592,
-            "heapUsedBytes": 9770152,
+            "rssBytes": 292368384,
+            "heapUsedBytes": 9769912,
             "externalBytes": 234892967,
             "arrayBuffersBytes": 231088678
           },
           "beforeRelease": {
-            "rssBytes": 1135292416,
-            "heapUsedBytes": 12950768,
+            "rssBytes": 1085681664,
+            "heapUsedBytes": 11947592,
             "externalBytes": 246289799,
             "arrayBuffersBytes": 241848777
           },
           "afterRelease": {
-            "rssBytes": 1135423488,
-            "heapUsedBytes": 11866368,
+            "rssBytes": 1085943808,
+            "heapUsedBytes": 11880016,
             "externalBytes": 246289799,
             "arrayBuffersBytes": 231653577
           },
@@ -9155,10 +9155,10 @@
       "sha256": "1323630be528baebcaf4d831fde58853d9e70628a78aef898695dedcb070e2f8",
       "bytes": 11293163,
       "status": "pass",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:20:24.361Z",
-      "completedAt": "2026-10-21T01:20:25.805Z",
+      "startedAt": "2026-10-21T01:59:54.530Z",
+      "completedAt": "2026-10-21T01:59:55.869Z",
       "source": {
         "url": "https://huggingface.co/prithivMLmods/YOLO26-ONNX/resolve/c526dae7a5a5b4f1d79d704903b4406011da2716/yolo26n-cls/yolo26n-cls.onnx",
         "revision": "c526dae7a5a5b4f1d79d704903b4406011da2716",
@@ -9185,7 +9185,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 503.464,
+        "initializeMs": 504.228,
         "input": [
           {
             "name": "images",
@@ -9217,7 +9217,7 @@
             "height": 120,
             "archiveMember": "train/n01443537/n01443537_22323.JPEG"
           },
-          "latencyMs": 53.906,
+          "latencyMs": 49.549,
           "resultCount": 5,
           "samples": [
             {
@@ -9271,7 +9271,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 35.84,
+              "latencyMs": 31.514,
               "resultCount": 5,
               "samples": [
                 {
@@ -9314,7 +9314,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 35.525,
+              "latencyMs": 28.646,
               "resultCount": 5,
               "samples": [
                 {
@@ -9372,7 +9372,7 @@
               "predictedLabel": "tench",
               "confidence": 0.980324923992157,
               "correct": true,
-              "latencyMs": 34.701,
+              "latencyMs": 28.186,
               "top5": [
                 {
                   "label": "tench",
@@ -9432,7 +9432,7 @@
               "predictedLabel": "sorrel",
               "confidence": 0.19177572429180145,
               "correct": false,
-              "latencyMs": 34.19,
+              "latencyMs": 27.607,
               "top5": [
                 {
                   "label": "sorrel",
@@ -9492,7 +9492,7 @@
               "predictedLabel": "great_white_shark",
               "confidence": 0.46803686022758484,
               "correct": true,
-              "latencyMs": 36.261,
+              "latencyMs": 29.286,
               "top5": [
                 {
                   "label": "great_white_shark",
@@ -9552,7 +9552,7 @@
               "predictedLabel": "tiger_shark",
               "confidence": 0.8130947947502136,
               "correct": true,
-              "latencyMs": 34.481,
+              "latencyMs": 27.252,
               "top5": [
                 {
                   "label": "tiger_shark",
@@ -9612,7 +9612,7 @@
               "predictedLabel": "tiger_shark",
               "confidence": 0.40498098731040955,
               "correct": false,
-              "latencyMs": 35.428,
+              "latencyMs": 27.264,
               "top5": [
                 {
                   "label": "tiger_shark",
@@ -9672,7 +9672,7 @@
               "predictedLabel": "platypus",
               "confidence": 0.4795607030391693,
               "correct": false,
-              "latencyMs": 34.955,
+              "latencyMs": 25.552,
               "top5": [
                 {
                   "label": "platypus",
@@ -9732,7 +9732,7 @@
               "predictedLabel": "platypus",
               "confidence": 0.781005859375,
               "correct": false,
-              "latencyMs": 36.411,
+              "latencyMs": 26.016,
               "top5": [
                 {
                   "label": "platypus",
@@ -9792,7 +9792,7 @@
               "predictedLabel": "hen",
               "confidence": 0.28836071491241455,
               "correct": false,
-              "latencyMs": 32.544,
+              "latencyMs": 26.035,
               "top5": [
                 {
                   "label": "hen",
@@ -9852,7 +9852,7 @@
               "predictedLabel": "patas",
               "confidence": 0.3843952715396881,
               "correct": false,
-              "latencyMs": 32.839,
+              "latencyMs": 23.997,
               "top5": [
                 {
                   "label": "patas",
@@ -9912,7 +9912,7 @@
               "predictedLabel": "limpkin",
               "confidence": 0.6590170860290527,
               "correct": false,
-              "latencyMs": 34.33,
+              "latencyMs": 25.301,
               "top5": [
                 {
                   "label": "limpkin",
@@ -9968,8 +9968,8 @@
           "height": 120,
           "changedPixels": 9281,
           "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T01:23:02.364741+00:00",
-          "visualReviewMethod": "Manual inspection of all25 actual primary-image renders in original-resolution contact sheet. All25 PNG digests also match the previously inspected aa22 renders. Overlays align qualitatively with source subjects; this is not a ground-truth mAP/IoU benchmark."
+          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
+          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -9979,44 +9979,44 @@
           "reloadRounds": [
             {
               "round": 1,
-              "loadInferDisposeMs": 102,
+              "loadInferDisposeMs": 97.601,
               "resultCount": 5,
               "memory": {
-                "rssBytes": 426807296,
-                "heapUsedBytes": 12036312,
-                "externalBytes": 17414651,
-                "arrayBuffersBytes": 12005392
+                "rssBytes": 434745344,
+                "heapUsedBytes": 12018880,
+                "externalBytes": 17602539,
+                "arrayBuffersBytes": 13405504
               }
             },
             {
               "round": 2,
-              "loadInferDisposeMs": 90.902,
+              "loadInferDisposeMs": 88.304,
               "resultCount": 5,
               "memory": {
-                "rssBytes": 330141696,
-                "heapUsedBytes": 12035808,
-                "externalBytes": 17414651,
-                "arrayBuffersBytes": 12005392
+                "rssBytes": 439455744,
+                "heapUsedBytes": 12068416,
+                "externalBytes": 17606539,
+                "arrayBuffersBytes": 12193280
               }
             }
           ],
           "initBefore": {
-            "rssBytes": 69541888,
-            "heapUsedBytes": 9145536,
+            "rssBytes": 69615616,
+            "heapUsedBytes": 9301296,
             "externalBytes": 15311697,
             "arrayBuffersBytes": 11507408
           },
           "beforeRelease": {
-            "rssBytes": 472174592,
-            "heapUsedBytes": 12525568,
-            "externalBytes": 18201899,
-            "arrayBuffersBytes": 12800640
+            "rssBytes": 509091840,
+            "heapUsedBytes": 15115616,
+            "externalBytes": 48348601,
+            "arrayBuffersBytes": 41943822
           },
           "afterRelease": {
-            "rssBytes": 472563712,
-            "heapUsedBytes": 11972640,
-            "externalBytes": 18201899,
-            "arrayBuffersBytes": 12005392
+            "rssBytes": 509247488,
+            "heapUsedBytes": 11991472,
+            "externalBytes": 48348601,
+            "arrayBuffersBytes": 12197280
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
         }
@@ -10036,10 +10036,10 @@
       "sha256": "471dc921d6b37c7fc7670adc58b247c5c474dc16b1065b1a150db79ed7de7314",
       "bytes": 26925705,
       "status": "pass",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:20:25.913Z",
-      "completedAt": "2026-10-21T01:20:27.795Z",
+      "startedAt": "2026-10-21T01:59:56.002Z",
+      "completedAt": "2026-10-21T01:59:58.085Z",
       "source": {
         "url": "https://huggingface.co/prithivMLmods/YOLO26-ONNX/resolve/c526dae7a5a5b4f1d79d704903b4406011da2716/yolo26s-cls/yolo26s-cls.onnx",
         "revision": "c526dae7a5a5b4f1d79d704903b4406011da2716",
@@ -10066,7 +10066,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 609.479,
+        "initializeMs": 602.453,
         "input": [
           {
             "name": "images",
@@ -10098,7 +10098,7 @@
             "height": 120,
             "archiveMember": "train/n01443537/n01443537_22323.JPEG"
           },
-          "latencyMs": 73.295,
+          "latencyMs": 111.363,
           "resultCount": 4,
           "samples": [
             {
@@ -10152,7 +10152,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 73.366,
+              "latencyMs": 112.419,
               "resultCount": 5,
               "samples": [
                 {
@@ -10195,7 +10195,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 72.838,
+              "latencyMs": 108.928,
               "resultCount": 5,
               "samples": [
                 {
@@ -10253,7 +10253,7 @@
               "predictedLabel": "tench",
               "confidence": 0.9983144998550415,
               "correct": true,
-              "latencyMs": 71.617,
+              "latencyMs": 110.048,
               "top5": [
                 {
                   "label": "tench",
@@ -10313,7 +10313,7 @@
               "predictedLabel": "triceratops",
               "confidence": 0.26138216257095337,
               "correct": false,
-              "latencyMs": 70.841,
+              "latencyMs": 97.977,
               "top5": [
                 {
                   "label": "triceratops",
@@ -10373,7 +10373,7 @@
               "predictedLabel": "tiger_shark",
               "confidence": 0.425747811794281,
               "correct": false,
-              "latencyMs": 70.006,
+              "latencyMs": 92.508,
               "top5": [
                 {
                   "label": "tiger_shark",
@@ -10433,7 +10433,7 @@
               "predictedLabel": "tiger_shark",
               "confidence": 0.465067982673645,
               "correct": true,
-              "latencyMs": 74.582,
+              "latencyMs": 76.959,
               "top5": [
                 {
                   "label": "tiger_shark",
@@ -10493,7 +10493,7 @@
               "predictedLabel": "dugong",
               "confidence": 0.4297294616699219,
               "correct": false,
-              "latencyMs": 76.387,
+              "latencyMs": 73.859,
               "top5": [
                 {
                   "label": "dugong",
@@ -10553,7 +10553,7 @@
               "predictedLabel": "killer_whale",
               "confidence": 0.5583845973014832,
               "correct": false,
-              "latencyMs": 80.703,
+              "latencyMs": 74.684,
               "top5": [
                 {
                   "label": "killer_whale",
@@ -10613,7 +10613,7 @@
               "predictedLabel": "isopod",
               "confidence": 0.28295451402664185,
               "correct": false,
-              "latencyMs": 83.381,
+              "latencyMs": 73.747,
               "top5": [
                 {
                   "label": "isopod",
@@ -10673,7 +10673,7 @@
               "predictedLabel": "hen",
               "confidence": 0.728958785533905,
               "correct": false,
-              "latencyMs": 77.937,
+              "latencyMs": 75.418,
               "top5": [
                 {
                   "label": "hen",
@@ -10733,7 +10733,7 @@
               "predictedLabel": "dingo",
               "confidence": 0.19639022648334503,
               "correct": false,
-              "latencyMs": 77.865,
+              "latencyMs": 74.144,
               "top5": [
                 {
                   "label": "dingo",
@@ -10793,7 +10793,7 @@
               "predictedLabel": "ostrich",
               "confidence": 0.9895364046096802,
               "correct": true,
-              "latencyMs": 76.524,
+              "latencyMs": 74.622,
               "top5": [
                 {
                   "label": "ostrich",
@@ -10849,8 +10849,8 @@
           "height": 120,
           "changedPixels": 10658,
           "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T01:23:02.364741+00:00",
-          "visualReviewMethod": "Manual inspection of all25 actual primary-image renders in original-resolution contact sheet. All25 PNG digests also match the previously inspected aa22 renders. Overlays align qualitatively with source subjects; this is not a ground-truth mAP/IoU benchmark."
+          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
+          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -10859,22 +10859,22 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 84537344,
-            "heapUsedBytes": 9544776,
-            "externalBytes": 30944799,
-            "arrayBuffersBytes": 27140510
+            "rssBytes": 84553728,
+            "heapUsedBytes": 9654000,
+            "externalBytes": 30946879,
+            "arrayBuffersBytes": 27142590
           },
           "beforeRelease": {
-            "rssBytes": 420917248,
-            "heapUsedBytes": 13069984,
-            "externalBytes": 34448892,
-            "arrayBuffersBytes": 29650030
+            "rssBytes": 401010688,
+            "heapUsedBytes": 13595464,
+            "externalBytes": 36259852,
+            "arrayBuffersBytes": 30256766
           },
           "afterRelease": {
-            "rssBytes": 421179392,
-            "heapUsedBytes": 11990528,
-            "externalBytes": 34448892,
-            "arrayBuffersBytes": 27630690
+            "rssBytes": 401272832,
+            "heapUsedBytes": 12021552,
+            "externalBytes": 36259852,
+            "arrayBuffersBytes": 27644173
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
         }
@@ -10894,10 +10894,10 @@
       "sha256": "0b9bb0e6fa8e725ffca6b67f658043b90af844951ee217cd4aef83ce60d3f0a9",
       "bytes": 46567573,
       "status": "pass",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:20:27.912Z",
-      "completedAt": "2026-10-21T01:20:31.820Z",
+      "startedAt": "2026-10-21T01:59:58.204Z",
+      "completedAt": "2026-10-21T02:00:02.221Z",
       "source": {
         "url": "https://huggingface.co/prithivMLmods/YOLO26-ONNX/resolve/c526dae7a5a5b4f1d79d704903b4406011da2716/yolo26m-cls/yolo26m-cls.onnx",
         "revision": "c526dae7a5a5b4f1d79d704903b4406011da2716",
@@ -10924,7 +10924,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 749.277,
+        "initializeMs": 823.843,
         "input": [
           {
             "name": "images",
@@ -10956,7 +10956,7 @@
             "height": 120,
             "archiveMember": "train/n01443537/n01443537_22323.JPEG"
           },
-          "latencyMs": 210.329,
+          "latencyMs": 235.783,
           "resultCount": 5,
           "samples": [
             {
@@ -11010,7 +11010,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 210.117,
+              "latencyMs": 219.209,
               "resultCount": 5,
               "samples": [
                 {
@@ -11053,7 +11053,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 210.175,
+              "latencyMs": 220.205,
               "resultCount": 5,
               "samples": [
                 {
@@ -11111,7 +11111,7 @@
               "predictedLabel": "tench",
               "confidence": 0.9999853372573853,
               "correct": true,
-              "latencyMs": 211.142,
+              "latencyMs": 202.353,
               "top5": [
                 {
                   "label": "tench",
@@ -11171,7 +11171,7 @@
               "predictedLabel": "tick",
               "confidence": 0.10465993732213974,
               "correct": false,
-              "latencyMs": 214.783,
+              "latencyMs": 207.808,
               "top5": [
                 {
                   "label": "tick",
@@ -11231,7 +11231,7 @@
               "predictedLabel": "great_white_shark",
               "confidence": 0.49118414521217346,
               "correct": true,
-              "latencyMs": 228.872,
+              "latencyMs": 207.16,
               "top5": [
                 {
                   "label": "great_white_shark",
@@ -11291,7 +11291,7 @@
               "predictedLabel": "dugong",
               "confidence": 0.5797749757766724,
               "correct": false,
-              "latencyMs": 232.897,
+              "latencyMs": 207.953,
               "top5": [
                 {
                   "label": "dugong",
@@ -11351,7 +11351,7 @@
               "predictedLabel": "dugong",
               "confidence": 0.6011330485343933,
               "correct": false,
-              "latencyMs": 222.19,
+              "latencyMs": 209.261,
               "top5": [
                 {
                   "label": "dugong",
@@ -11411,7 +11411,7 @@
               "predictedLabel": "killer_whale",
               "confidence": 0.6133428812026978,
               "correct": false,
-              "latencyMs": 220.429,
+              "latencyMs": 208.362,
               "top5": [
                 {
                   "label": "killer_whale",
@@ -11471,7 +11471,7 @@
               "predictedLabel": "isopod",
               "confidence": 0.3785521984100342,
               "correct": false,
-              "latencyMs": 213.257,
+              "latencyMs": 207.91,
               "top5": [
                 {
                   "label": "isopod",
@@ -11531,7 +11531,7 @@
               "predictedLabel": "cock",
               "confidence": 0.6760668754577637,
               "correct": true,
-              "latencyMs": 217.496,
+              "latencyMs": 218.806,
               "top5": [
                 {
                   "label": "cock",
@@ -11591,7 +11591,7 @@
               "predictedLabel": "kit_fox",
               "confidence": 0.33561912178993225,
               "correct": false,
-              "latencyMs": 216.176,
+              "latencyMs": 212.427,
               "top5": [
                 {
                   "label": "kit_fox",
@@ -11651,7 +11651,7 @@
               "predictedLabel": "ostrich",
               "confidence": 0.9898890852928162,
               "correct": true,
-              "latencyMs": 220.446,
+              "latencyMs": 239.996,
               "top5": [
                 {
                   "label": "ostrich",
@@ -11707,8 +11707,8 @@
           "height": 120,
           "changedPixels": 9364,
           "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T01:23:02.364741+00:00",
-          "visualReviewMethod": "Manual inspection of all25 actual primary-image renders in original-resolution contact sheet. All25 PNG digests also match the previously inspected aa22 renders. Overlays align qualitatively with source subjects; this is not a ground-truth mAP/IoU benchmark."
+          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
+          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -11717,22 +11717,22 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 105926656,
-            "heapUsedBytes": 8621128,
+            "rssBytes": 105357312,
+            "heapUsedBytes": 8634520,
             "externalBytes": 50586071,
             "arrayBuffersBytes": 46781782
           },
           "beforeRelease": {
-            "rssBytes": 540139520,
-            "heapUsedBytes": 12625912,
-            "externalBytes": 54082402,
-            "arrayBuffersBytes": 48681162
+            "rssBytes": 445603840,
+            "heapUsedBytes": 12613752,
+            "externalBytes": 53476290,
+            "arrayBuffersBytes": 48075050
           },
           "afterRelease": {
-            "rssBytes": 540270592,
-            "heapUsedBytes": 12005864,
-            "externalBytes": 54082402,
-            "arrayBuffersBytes": 47279802
+            "rssBytes": 445865984,
+            "heapUsedBytes": 12022080,
+            "externalBytes": 53476290,
+            "arrayBuffersBytes": 48074842
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
         }
@@ -11752,10 +11752,10 @@
       "sha256": "6c34e63f747b469d748c10212bb1d9d5bd609e84fea5d26881aa6f3716701725",
       "bytes": 56514543,
       "status": "pass",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:20:31.935Z",
-      "completedAt": "2026-10-21T01:20:36.950Z",
+      "startedAt": "2026-10-21T02:00:02.352Z",
+      "completedAt": "2026-10-21T02:00:07.191Z",
       "source": {
         "url": "https://huggingface.co/prithivMLmods/YOLO26-ONNX/resolve/c526dae7a5a5b4f1d79d704903b4406011da2716/yolo26l-cls/yolo26l-cls.onnx",
         "revision": "c526dae7a5a5b4f1d79d704903b4406011da2716",
@@ -11782,7 +11782,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 1098.256,
+        "initializeMs": 931.642,
         "input": [
           {
             "name": "images",
@@ -11814,7 +11814,7 @@
             "height": 120,
             "archiveMember": "train/n01443537/n01443537_22323.JPEG"
           },
-          "latencyMs": 266.223,
+          "latencyMs": 297.631,
           "resultCount": 1,
           "samples": [
             {
@@ -11858,7 +11858,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 269.153,
+              "latencyMs": 275.116,
               "resultCount": 5,
               "samples": [
                 {
@@ -11901,7 +11901,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 273.568,
+              "latencyMs": 269.57,
               "resultCount": 5,
               "samples": [
                 {
@@ -11959,7 +11959,7 @@
               "predictedLabel": "tench",
               "confidence": 0.999640941619873,
               "correct": true,
-              "latencyMs": 271.844,
+              "latencyMs": 256.641,
               "top5": [
                 {
                   "label": "tench",
@@ -12019,7 +12019,7 @@
               "predictedLabel": "triceratops",
               "confidence": 0.13766321539878845,
               "correct": false,
-              "latencyMs": 275.055,
+              "latencyMs": 266.739,
               "top5": [
                 {
                   "label": "triceratops",
@@ -12079,7 +12079,7 @@
               "predictedLabel": "great_white_shark",
               "confidence": 0.8664619326591492,
               "correct": true,
-              "latencyMs": 273.873,
+              "latencyMs": 266.848,
               "top5": [
                 {
                   "label": "great_white_shark",
@@ -12139,7 +12139,7 @@
               "predictedLabel": "tiger_shark",
               "confidence": 0.9972155094146729,
               "correct": true,
-              "latencyMs": 278.135,
+              "latencyMs": 261.403,
               "top5": [
                 {
                   "label": "tiger_shark",
@@ -12199,7 +12199,7 @@
               "predictedLabel": "dugong",
               "confidence": 0.7803155779838562,
               "correct": false,
-              "latencyMs": 258.75,
+              "latencyMs": 259.968,
               "top5": [
                 {
                   "label": "dugong",
@@ -12259,7 +12259,7 @@
               "predictedLabel": "killer_whale",
               "confidence": 0.5417762994766235,
               "correct": false,
-              "latencyMs": 264.753,
+              "latencyMs": 264.069,
               "top5": [
                 {
                   "label": "killer_whale",
@@ -12319,7 +12319,7 @@
               "predictedLabel": "electric_ray",
               "confidence": 0.5834927558898926,
               "correct": false,
-              "latencyMs": 313.192,
+              "latencyMs": 271.961,
               "top5": [
                 {
                   "label": "electric_ray",
@@ -12379,7 +12379,7 @@
               "predictedLabel": "cock",
               "confidence": 0.5772067308425903,
               "correct": true,
-              "latencyMs": 283.642,
+              "latencyMs": 268.183,
               "top5": [
                 {
                   "label": "cock",
@@ -12439,7 +12439,7 @@
               "predictedLabel": "dingo",
               "confidence": 0.32308048009872437,
               "correct": false,
-              "latencyMs": 260.189,
+              "latencyMs": 270.718,
               "top5": [
                 {
                   "label": "dingo",
@@ -12499,7 +12499,7 @@
               "predictedLabel": "ostrich",
               "confidence": 0.9964016675949097,
               "correct": true,
-              "latencyMs": 260.423,
+              "latencyMs": 261.479,
               "top5": [
                 {
                   "label": "ostrich",
@@ -12555,8 +12555,8 @@
           "height": 120,
           "changedPixels": 2829,
           "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T01:23:02.364741+00:00",
-          "visualReviewMethod": "Manual inspection of all25 actual primary-image renders in original-resolution contact sheet. All25 PNG digests also match the previously inspected aa22 renders. Overlays align qualitatively with source subjects; this is not a ground-truth mAP/IoU benchmark."
+          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
+          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -12565,22 +12565,22 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 115216384,
-            "heapUsedBytes": 8676816,
+            "rssBytes": 114995200,
+            "heapUsedBytes": 8854112,
             "externalBytes": 60533041,
             "arrayBuffersBytes": 56728752
           },
           "beforeRelease": {
-            "rssBytes": 515395584,
-            "heapUsedBytes": 13518176,
-            "externalBytes": 64635469,
-            "arrayBuffersBytes": 59235492
+            "rssBytes": 533045248,
+            "heapUsedBytes": 14050560,
+            "externalBytes": 66249725,
+            "arrayBuffersBytes": 60448340
           },
           "afterRelease": {
-            "rssBytes": 515657728,
-            "heapUsedBytes": 12008448,
-            "externalBytes": 64635469,
-            "arrayBuffersBytes": 57226772
+            "rssBytes": 533307392,
+            "heapUsedBytes": 12022208,
+            "externalBytes": 66249725,
+            "arrayBuffersBytes": 57233011
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
         }
@@ -12600,10 +12600,10 @@
       "sha256": "2b6f1386dd3d403f62b1cb68896b6ca3827b1157e451af49bc8105454a05ef78",
       "bytes": 118570497,
       "status": "pass",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:20:37.073Z",
-      "completedAt": "2026-10-21T01:20:46.458Z",
+      "startedAt": "2026-10-21T02:00:07.323Z",
+      "completedAt": "2026-10-21T02:00:17.069Z",
       "source": {
         "url": "https://huggingface.co/prithivMLmods/YOLO26-ONNX/resolve/c526dae7a5a5b4f1d79d704903b4406011da2716/yolo26x-cls/yolo26x-cls.onnx",
         "revision": "c526dae7a5a5b4f1d79d704903b4406011da2716",
@@ -12630,7 +12630,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 1240.798,
+        "initializeMs": 1344.237,
         "input": [
           {
             "name": "images",
@@ -12662,7 +12662,7 @@
             "height": 120,
             "archiveMember": "train/n01443537/n01443537_22323.JPEG"
           },
-          "latencyMs": 582.418,
+          "latencyMs": 578.924,
           "resultCount": 4,
           "samples": [
             {
@@ -12716,7 +12716,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 560.216,
+              "latencyMs": 608.515,
               "resultCount": 5,
               "samples": [
                 {
@@ -12759,7 +12759,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 569.769,
+              "latencyMs": 606.021,
               "resultCount": 5,
               "samples": [
                 {
@@ -12817,7 +12817,7 @@
               "predictedLabel": "tench",
               "confidence": 0.9999915361404419,
               "correct": true,
-              "latencyMs": 604.628,
+              "latencyMs": 588.413,
               "top5": [
                 {
                   "label": "tench",
@@ -12877,7 +12877,7 @@
               "predictedLabel": "goldfish",
               "confidence": 0.7690625786781311,
               "correct": true,
-              "latencyMs": 580.887,
+              "latencyMs": 619.287,
               "top5": [
                 {
                   "label": "goldfish",
@@ -12937,7 +12937,7 @@
               "predictedLabel": "great_white_shark",
               "confidence": 0.8850441575050354,
               "correct": true,
-              "latencyMs": 579.741,
+              "latencyMs": 593.919,
               "top5": [
                 {
                   "label": "great_white_shark",
@@ -12997,7 +12997,7 @@
               "predictedLabel": "tiger_shark",
               "confidence": 0.9283639788627625,
               "correct": true,
-              "latencyMs": 565.98,
+              "latencyMs": 639.934,
               "top5": [
                 {
                   "label": "tiger_shark",
@@ -13057,7 +13057,7 @@
               "predictedLabel": "dugong",
               "confidence": 0.5680029988288879,
               "correct": false,
-              "latencyMs": 561.766,
+              "latencyMs": 625.473,
               "top5": [
                 {
                   "label": "dugong",
@@ -13117,7 +13117,7 @@
               "predictedLabel": "killer_whale",
               "confidence": 0.5006272792816162,
               "correct": false,
-              "latencyMs": 694.3,
+              "latencyMs": 584.334,
               "top5": [
                 {
                   "label": "killer_whale",
@@ -13177,7 +13177,7 @@
               "predictedLabel": "isopod",
               "confidence": 0.5536495447158813,
               "correct": false,
-              "latencyMs": 598.095,
+              "latencyMs": 589.374,
               "top5": [
                 {
                   "label": "isopod",
@@ -13237,7 +13237,7 @@
               "predictedLabel": "cock",
               "confidence": 0.970076322555542,
               "correct": true,
-              "latencyMs": 602.119,
+              "latencyMs": 589.256,
               "top5": [
                 {
                   "label": "cock",
@@ -13297,7 +13297,7 @@
               "predictedLabel": "red_fox",
               "confidence": 0.2981571853160858,
               "correct": false,
-              "latencyMs": 566.07,
+              "latencyMs": 612.54,
               "top5": [
                 {
                   "label": "red_fox",
@@ -13357,7 +13357,7 @@
               "predictedLabel": "ostrich",
               "confidence": 0.9999740123748779,
               "correct": true,
-              "latencyMs": 585.398,
+              "latencyMs": 586.11,
               "top5": [
                 {
                   "label": "ostrich",
@@ -13413,8 +13413,8 @@
           "height": 120,
           "changedPixels": 10828,
           "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T01:23:02.364741+00:00",
-          "visualReviewMethod": "Manual inspection of all25 actual primary-image renders in original-resolution contact sheet. All25 PNG digests also match the previously inspected aa22 renders. Overlays align qualitatively with source subjects; this is not a ground-truth mAP/IoU benchmark."
+          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
+          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -13423,22 +13423,22 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 176926720,
-            "heapUsedBytes": 9429144,
+            "rssBytes": 176738304,
+            "heapUsedBytes": 9442736,
             "externalBytes": 122636419,
             "arrayBuffersBytes": 118832130
           },
           "beforeRelease": {
-            "rssBytes": 743424000,
-            "heapUsedBytes": 12566096,
-            "externalBytes": 125478701,
-            "arrayBuffersBytes": 120077974
+            "rssBytes": 745508864,
+            "heapUsedBytes": 13112480,
+            "externalBytes": 126695549,
+            "arrayBuffersBytes": 121294822
           },
           "afterRelease": {
-            "rssBytes": 743817216,
-            "heapUsedBytes": 12008256,
-            "externalBytes": 125478701,
-            "arrayBuffersBytes": 119282726
+            "rssBytes": 745771008,
+            "heapUsedBytes": 12021984,
+            "externalBytes": 126695549,
+            "arrayBuffersBytes": 119288965
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
         }
@@ -13458,10 +13458,10 @@
       "sha256": "1ce4f25e0d3076856ebdc091f43eb6478b4a5f2aebb8003dd6fadd93f7daac1e",
       "bytes": 10008685,
       "status": "pass",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:20:46.582Z",
-      "completedAt": "2026-10-21T01:20:49.523Z",
+      "startedAt": "2026-10-21T02:00:17.216Z",
+      "completedAt": "2026-10-21T02:00:20.560Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26n-obb.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -13488,7 +13488,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 876.238,
+        "initializeMs": 960.951,
         "input": [
           {
             "name": "images",
@@ -13520,7 +13520,7 @@
             "width": 1920,
             "height": 1080
           },
-          "latencyMs": 267.033,
+          "latencyMs": 305.655,
           "resultCount": 170,
           "samples": [
             {
@@ -13645,7 +13645,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 229.545,
+              "latencyMs": 227.807,
               "resultCount": 0,
               "samples": [],
               "outputTensorStats": [
@@ -13673,7 +13673,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 226.843,
+              "latencyMs": 252.368,
               "resultCount": 0,
               "samples": [],
               "outputTensorStats": [
@@ -13703,8 +13703,8 @@
           "height": 360,
           "changedPixels": 139940,
           "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T01:23:02.364741+00:00",
-          "visualReviewMethod": "Manual inspection of all25 actual primary-image renders in original-resolution contact sheet. All25 PNG digests also match the previously inspected aa22 renders. Overlays align qualitatively with source subjects; this is not a ground-truth mAP/IoU benchmark."
+          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
+          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -13714,42 +13714,42 @@
           "reloadRounds": [
             {
               "round": 1,
-              "loadInferDisposeMs": 521.022,
+              "loadInferDisposeMs": 630.071,
               "resultCount": 170,
               "memory": {
-                "rssBytes": 491630592,
-                "heapUsedBytes": 12037496,
+                "rssBytes": 477044736,
+                "heapUsedBytes": 12051736,
                 "externalBytes": 19464623,
                 "arrayBuffersBytes": 11072903
               }
             },
             {
               "round": 2,
-              "loadInferDisposeMs": 510.286,
+              "loadInferDisposeMs": 602.861,
               "resultCount": 170,
               "memory": {
-                "rssBytes": 506572800,
-                "heapUsedBytes": 12094224,
+                "rssBytes": 495919104,
+                "heapUsedBytes": 12084696,
                 "externalBytes": 19464623,
                 "arrayBuffersBytes": 11072903
               }
             }
           ],
           "initBefore": {
-            "rssBytes": 76496896,
-            "heapUsedBytes": 9205440,
-            "externalBytes": 14220601,
-            "arrayBuffersBytes": 10416312
+            "rssBytes": 76017664,
+            "heapUsedBytes": 9679720,
+            "externalBytes": 14224073,
+            "arrayBuffersBytes": 10419784
           },
           "beforeRelease": {
-            "rssBytes": 421638144,
-            "heapUsedBytes": 19726536,
+            "rssBytes": 385163264,
+            "heapUsedBytes": 20304000,
             "externalBytes": 21198047,
             "arrayBuffersBytes": 15767927
           },
           "afterRelease": {
-            "rssBytes": 421769216,
-            "heapUsedBytes": 11888480,
+            "rssBytes": 385294336,
+            "heapUsedBytes": 11902736,
             "externalBytes": 21198047,
             "arrayBuffersBytes": 11072903
           },
@@ -13771,10 +13771,10 @@
       "sha256": "6f7597a07b5b3178cabb7bd58f26c143b652919b50aebfc6a050417207519f6d",
       "bytes": 39239617,
       "status": "pass",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:20:49.709Z",
-      "completedAt": "2026-10-21T01:20:53.784Z",
+      "startedAt": "2026-10-21T02:00:20.731Z",
+      "completedAt": "2026-10-21T02:00:25.076Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26s-obb.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -13801,7 +13801,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 1379.453,
+        "initializeMs": 1464.515,
         "input": [
           {
             "name": "images",
@@ -13833,7 +13833,7 @@
             "width": 1920,
             "height": 1080
           },
-          "latencyMs": 769.692,
+          "latencyMs": 799.312,
           "resultCount": 163,
           "samples": [
             {
@@ -13958,7 +13958,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 778.714,
+              "latencyMs": 875.087,
               "resultCount": 0,
               "samples": [],
               "outputTensorStats": [
@@ -13986,7 +13986,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 726.23,
+              "latencyMs": 756.954,
               "resultCount": 0,
               "samples": [],
               "outputTensorStats": [
@@ -14016,8 +14016,8 @@
           "height": 360,
           "changedPixels": 135645,
           "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T01:23:02.364741+00:00",
-          "visualReviewMethod": "Manual inspection of all25 actual primary-image renders in original-resolution contact sheet. All25 PNG digests also match the previously inspected aa22 renders. Overlays align qualitatively with source subjects; this is not a ground-truth mAP/IoU benchmark."
+          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
+          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -14026,20 +14026,20 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 105750528,
-            "heapUsedBytes": 9179560,
-            "externalBytes": 43451533,
-            "arrayBuffersBytes": 39647244
+            "rssBytes": 105488384,
+            "heapUsedBytes": 9685536,
+            "externalBytes": 43459581,
+            "arrayBuffersBytes": 39655292
           },
           "beforeRelease": {
-            "rssBytes": 476872704,
-            "heapUsedBytes": 14928264,
+            "rssBytes": 539385856,
+            "heapUsedBytes": 14189904,
             "externalBytes": 54122024,
             "arrayBuffersBytes": 48684635
           },
           "afterRelease": {
-            "rssBytes": 477003776,
-            "heapUsedBytes": 11887832,
+            "rssBytes": 539648000,
+            "heapUsedBytes": 11902296,
             "externalBytes": 52893224,
             "arrayBuffersBytes": 40303835
           },
@@ -14061,10 +14061,10 @@
       "sha256": "bd6fd51d9c8eb79590c59874c35a5b20d803ecfdd1a9d8995ba3ee902b2bfe09",
       "bytes": 85061671,
       "status": "pass",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:20:53.916Z",
-      "completedAt": "2026-10-21T01:21:04.313Z",
+      "startedAt": "2026-10-21T02:00:25.248Z",
+      "completedAt": "2026-10-21T02:00:35.679Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26m-obb.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -14091,7 +14091,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 2922.648,
+        "initializeMs": 2907.018,
         "input": [
           {
             "name": "images",
@@ -14123,7 +14123,7 @@
             "width": 1920,
             "height": 1080
           },
-          "latencyMs": 2241.228,
+          "latencyMs": 2368.575,
           "resultCount": 181,
           "samples": [
             {
@@ -14248,7 +14248,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 2301.861,
+              "latencyMs": 2365.348,
               "resultCount": 0,
               "samples": [],
               "outputTensorStats": [
@@ -14276,7 +14276,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 2340.124,
+              "latencyMs": 2334.675,
               "resultCount": 2,
               "samples": [
                 {
@@ -14365,8 +14365,8 @@
           "height": 360,
           "changedPixels": 144063,
           "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T01:23:02.364741+00:00",
-          "visualReviewMethod": "Manual inspection of all25 actual primary-image renders in original-resolution contact sheet. All25 PNG digests also match the previously inspected aa22 renders. Overlays align qualitatively with source subjects; this is not a ground-truth mAP/IoU benchmark."
+          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
+          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -14375,22 +14375,22 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 151048192,
-            "heapUsedBytes": 9187856,
+            "rssBytes": 151355392,
+            "heapUsedBytes": 9188200,
             "externalBytes": 89307663,
             "arrayBuffersBytes": 85503374
           },
           "beforeRelease": {
-            "rssBytes": 618049536,
-            "heapUsedBytes": 12829984,
-            "externalBytes": 96252087,
-            "arrayBuffersBytes": 90820913
+            "rssBytes": 681672704,
+            "heapUsedBytes": 14640568,
+            "externalBytes": 99937863,
+            "arrayBuffersBytes": 94506689
           },
           "afterRelease": {
-            "rssBytes": 618180608,
-            "heapUsedBytes": 11897272,
-            "externalBytes": 95023287,
-            "arrayBuffersBytes": 86125889
+            "rssBytes": 681934848,
+            "heapUsedBytes": 11889992,
+            "externalBytes": 98709063,
+            "arrayBuffersBytes": 86629889
           },
           "note": "Memory is process RSS/JS/ArrayBuffer telemetry, not GPU utilization. Allocators may retain released pages; each model is isolated in a fresh process."
         }
@@ -14410,10 +14410,10 @@
       "sha256": "ec66f909ec3d086556918b1727923ebcfa8675b3140a65bd96bae9c7cbc0dfd8",
       "bytes": 102711733,
       "status": "pass",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:21:04.452Z",
-      "completedAt": "2026-10-21T01:21:17.365Z",
+      "startedAt": "2026-10-21T02:00:35.820Z",
+      "completedAt": "2026-10-21T02:00:48.509Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26l-obb.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -14440,7 +14440,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 3554.268,
+        "initializeMs": 3562.917,
         "input": [
           {
             "name": "images",
@@ -14472,7 +14472,7 @@
             "width": 1920,
             "height": 1080
           },
-          "latencyMs": 2952.237,
+          "latencyMs": 2952.084,
           "resultCount": 184,
           "samples": [
             {
@@ -14597,7 +14597,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 2890.487,
+              "latencyMs": 2813.179,
               "resultCount": 17,
               "samples": [
                 {
@@ -14713,7 +14713,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 2856.261,
+              "latencyMs": 2762.815,
               "resultCount": 14,
               "samples": [
                 {
@@ -14831,8 +14831,8 @@
           "height": 360,
           "changedPixels": 145184,
           "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T01:23:02.364741+00:00",
-          "visualReviewMethod": "Manual inspection of all25 actual primary-image renders in original-resolution contact sheet. All25 PNG digests also match the previously inspected aa22 renders. Overlays align qualitatively with source subjects; this is not a ground-truth mAP/IoU benchmark."
+          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
+          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -14841,20 +14841,20 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 169611264,
-            "heapUsedBytes": 9545544,
+            "rssBytes": 169357312,
+            "heapUsedBytes": 9523728,
             "externalBytes": 106964589,
             "arrayBuffersBytes": 103160300
           },
           "beforeRelease": {
-            "rssBytes": 623591424,
-            "heapUsedBytes": 12252088,
+            "rssBytes": 682594304,
+            "heapUsedBytes": 12317000,
             "externalBytes": 116368760,
             "arrayBuffersBytes": 112156751
           },
           "afterRelease": {
-            "rssBytes": 623853568,
-            "heapUsedBytes": 11906256,
+            "rssBytes": 682856448,
+            "heapUsedBytes": 11921928,
             "externalBytes": 116368760,
             "arrayBuffersBytes": 103775951
           },
@@ -14876,10 +14876,10 @@
       "sha256": "565c3c7f1611027b509d6df2b81a8abbb2d3f3b004f84c17607545394458bfec",
       "bytes": 230526559,
       "status": "pass",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "validatorSha256": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
-      "startedAt": "2026-10-21T01:21:17.506Z",
-      "completedAt": "2026-10-21T01:21:44.275Z",
+      "startedAt": "2026-10-21T02:00:48.639Z",
+      "completedAt": "2026-10-21T02:01:15.750Z",
       "source": {
         "url": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26x-obb.onnx",
         "revision": "e046fc5125ee6b579f1801f0b6df68a60b949c42",
@@ -14906,7 +14906,7 @@
       "wasmNode": {
         "status": "pass",
         "backend": "WASM",
-        "initializeMs": 6952.261,
+        "initializeMs": 7311.124,
         "input": [
           {
             "name": "images",
@@ -14938,7 +14938,7 @@
             "width": 1920,
             "height": 1080
           },
-          "latencyMs": 6178.999,
+          "latencyMs": 6322.723,
           "resultCount": 184,
           "samples": [
             {
@@ -15063,7 +15063,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 6305.91,
+              "latencyMs": 6246.19,
               "resultCount": 16,
               "samples": [
                 {
@@ -15179,7 +15179,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 6261.6,
+              "latencyMs": 6594.127,
               "resultCount": 21,
               "samples": [
                 {
@@ -15297,8 +15297,8 @@
           "height": 360,
           "changedPixels": 147422,
           "visualReview": "pass",
-          "visualReviewedAt": "2026-10-21T01:23:02.364741+00:00",
-          "visualReviewMethod": "Manual inspection of all25 actual primary-image renders in original-resolution contact sheet. All25 PNG digests also match the previously inspected aa22 renders. Overlays align qualitatively with source subjects; this is not a ground-truth mAP/IoU benchmark."
+          "visualReviewedAt": "2026-10-21T02:01:55.823846+00:00",
+          "visualReviewMethod": "Current original-resolution contact sheet manually inspected; all25 current PNG SHA-256 digests equal the previously inspected 0f995 renders. Task overlays align qualitatively; not a ground-truth accuracy benchmark."
         },
         "lifecycle": {
           "releaseResolved": true,
@@ -15307,20 +15307,20 @@
           "canvasCleared": true,
           "reloadRounds": [],
           "initBefore": {
-            "rssBytes": 297709568,
-            "heapUsedBytes": 9744568,
+            "rssBytes": 297635840,
+            "heapUsedBytes": 9762216,
             "externalBytes": 234830167,
             "arrayBuffersBytes": 231025878
           },
           "beforeRelease": {
-            "rssBytes": 1094135808,
-            "heapUsedBytes": 12179936,
+            "rssBytes": 1031499776,
+            "heapUsedBytes": 12748992,
             "externalBytes": 244188755,
             "arrayBuffersBytes": 239971577
           },
           "afterRelease": {
-            "rssBytes": 1094397952,
-            "heapUsedBytes": 11911984,
+            "rssBytes": 1031630848,
+            "heapUsedBytes": 11926312,
             "externalBytes": 244188755,
             "arrayBuffersBytes": 231590777
           },
@@ -15335,7 +15335,7 @@
       }
     }
   ],
-  "sourceFingerprintAfter": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+  "sourceFingerprintAfter": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
   "validatorSha256After": "9f3697e6f82e87f0097ee76b971188acc5c6a2350af222efca8144c262b6555a",
   "sourceChangedDuringRun": false,
   "contactSheet": "docs/evidence/yolo26-matrix.png",
@@ -15347,11 +15347,11 @@
   },
   "visualReview": {
     "status": "pass",
-    "reviewedAt": "2026-10-21T01:23:02.364741+00:00",
+    "reviewedAt": "2026-10-21T02:01:55.823846+00:00",
     "scope": "all25 real primary-image renders",
     "contactSheet": "docs/evidence/yolo26-matrix.png",
     "identicalPreviouslyReviewedRenderCount": 25,
-    "priorRunId": "9d405378-d9f7-4483-ba2b-b97db25de68c",
-    "method": "Current generated PNGs inspected; outputs and execution fingerprints not modified."
+    "priorRunId": "73509e56-8f1a-42ab-8ed5-ec5357b52592",
+    "method": "Current contact sheet inspected; execution fingerprints and actual model outputs not modified."
   }
 }

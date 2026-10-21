@@ -1,6 +1,225 @@
 {
-  "observedAt": "2026-10-21T01:32:28.326Z",
-  "phase": "下载模型 · 0.0 MB / 9.4 MB",
-  "value": "0",
-  "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579"
+  "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
+  "cacheDeleted": true,
+  "cacheStateAfterDeletion": "Downloads on first use",
+  "observations": [
+    {
+      "observedAt": "2026-10-21T02:07:12.395Z",
+      "phase": "download",
+      "progress": "0",
+      "status": "Downloading model · 0.0 MB / 9.4 MB",
+      "workbench": false
+    },
+    {
+      "observedAt": "2026-10-21T02:07:12.412Z",
+      "phase": "download",
+      "progress": "0",
+      "status": "Downloading model · 0.0 MB / 9.4 MB",
+      "workbench": false
+    },
+    {
+      "observedAt": "2026-10-21T02:07:12.427Z",
+      "phase": "download",
+      "progress": "0",
+      "status": "Downloading model · 0.0 MB / 9.4 MB",
+      "workbench": false
+    },
+    {
+      "observedAt": "2026-10-21T02:07:12.443Z",
+      "phase": "download",
+      "progress": "0",
+      "status": "Downloading model · 0.0 MB / 9.4 MB",
+      "workbench": false
+    },
+    {
+      "observedAt": "2026-10-21T02:07:12.461Z",
+      "phase": "download",
+      "progress": "0",
+      "status": "Downloading model · 0.0 MB / 9.4 MB",
+      "workbench": false
+    },
+    {
+      "observedAt": "2026-10-21T02:07:12.480Z",
+      "phase": "download",
+      "progress": "0",
+      "status": "Downloading model · 0.0 MB / 9.4 MB",
+      "workbench": false
+    },
+    {
+      "observedAt": "2026-10-21T02:07:12.500Z",
+      "phase": "download",
+      "progress": "0",
+      "status": "Downloading model · 0.0 MB / 9.4 MB",
+      "workbench": false
+    },
+    {
+      "observedAt": "2026-10-21T02:07:12.519Z",
+      "phase": "download",
+      "progress": "0",
+      "status": "Downloading model · 0.0 MB / 9.4 MB",
+      "workbench": false
+    },
+    {
+      "observedAt": "2026-10-21T02:07:12.536Z",
+      "phase": "download",
+      "progress": "0",
+      "status": "Downloading model · 0.0 MB / 9.4 MB",
+      "workbench": false
+    },
+    {
+      "observedAt": "2026-10-21T02:07:12.553Z",
+      "phase": "download",
+      "progress": "0",
+      "status": "Downloading model · 0.0 MB / 9.4 MB",
+      "workbench": false
+    },
+    {
+      "observedAt": "2026-10-21T02:07:12.583Z",
+      "phase": "download",
+      "progress": "0",
+      "status": "Downloading model · 0.0 MB / 9.4 MB",
+      "workbench": false
+    },
+    {
+      "observedAt": "2026-10-21T02:07:12.602Z",
+      "phase": "download",
+      "progress": "0",
+      "status": "Downloading model · 0.0 MB / 9.4 MB",
+      "workbench": false
+    },
+    {
+      "observedAt": "2026-10-21T02:07:12.621Z",
+      "phase": "download",
+      "progress": "0",
+      "status": "Downloading model · 0.0 MB / 9.4 MB",
+      "workbench": false
+    },
+    {
+      "observedAt": "2026-10-21T02:07:12.638Z",
+      "phase": "download",
+      "progress": "0",
+      "status": "Downloading model · 0.0 MB / 9.4 MB",
+      "workbench": false
+    },
+    {
+      "observedAt": "2026-10-21T02:07:12.654Z",
+      "phase": "download",
+      "progress": "0",
+      "status": "Downloading model · 0.0 MB / 9.4 MB",
+      "workbench": false
+    },
+    {
+      "observedAt": "2026-10-21T02:07:12.671Z",
+      "phase": "download",
+      "progress": "0",
+      "status": "Downloading model · 0.0 MB / 9.4 MB",
+      "workbench": false
+    },
+    {
+      "observedAt": "2026-10-21T02:07:12.692Z",
+      "phase": "download",
+      "progress": "0",
+      "status": "Downloading model · 0.0 MB / 9.4 MB",
+      "workbench": false
+    },
+    {
+      "observedAt": "2026-10-21T02:07:12.709Z",
+      "phase": "download",
+      "progress": "0",
+      "status": "Downloading model · 0.0 MB / 9.4 MB",
+      "workbench": false
+    },
+    {
+      "observedAt": "2026-10-21T02:07:12.726Z",
+      "phase": "download",
+      "progress": "0",
+      "status": "Downloading model · 0.0 MB / 9.4 MB",
+      "workbench": false
+    },
+    {
+      "observedAt": "2026-10-21T02:07:12.749Z",
+      "phase": "download",
+      "progress": "0.22209937867595153",
+      "status": "Downloading model · 0.0 MB / 9.4 MB",
+      "workbench": false
+    },
+    {
+      "observedAt": "2026-10-21T02:07:12.768Z",
+      "phase": "download",
+      "progress": "0.527108037730094",
+      "status": "Downloading model · 0.0 MB / 9.4 MB",
+      "workbench": false
+    },
+    {
+      "observedAt": "2026-10-21T02:07:12.789Z",
+      "phase": "download",
+      "progress": "1.0933648708180774",
+      "status": "Downloading model · 0.1 MB / 9.4 MB",
+      "workbench": false
+    },
+    {
+      "observedAt": "2026-10-21T02:07:12.807Z",
+      "phase": "download",
+      "progress": "1.424577231440882",
+      "status": "Downloading model · 0.1 MB / 9.4 MB",
+      "workbench": false
+    },
+    {
+      "observedAt": "2026-10-21T02:07:12.830Z",
+      "phase": "download",
+      "progress": "3.6394220986505146",
+      "status": "Downloading model · 0.3 MB / 9.4 MB",
+      "workbench": false
+    },
+    {
+      "observedAt": "2026-10-21T02:07:12.854Z",
+      "phase": "download",
+      "progress": "7.448364245812768",
+      "status": "Downloading model · 0.7 MB / 9.4 MB",
+      "workbench": false
+    },
+    {
+      "observedAt": "2026-10-21T02:07:12.877Z",
+      "phase": "download",
+      "progress": "15.397460900760079",
+      "status": "Downloading model · 1.5 MB / 9.4 MB",
+      "workbench": false
+    },
+    {
+      "observedAt": "2026-10-21T02:07:12.899Z",
+      "phase": "download",
+      "progress": "28.14913678473806",
+      "status": "Downloading model · 2.7 MB / 9.4 MB",
+      "workbench": false
+    },
+    {
+      "observedAt": "2026-10-21T02:07:12.942Z",
+      "phase": "download",
+      "progress": "51.00278966771158",
+      "status": "Downloading model · 4.8 MB / 9.4 MB",
+      "workbench": false
+    },
+    {
+      "observedAt": "2026-10-21T02:07:12.969Z",
+      "phase": "download",
+      "progress": "70.78184118878032",
+      "status": "Downloading model · 6.7 MB / 9.4 MB",
+      "workbench": false
+    },
+    {
+      "observedAt": "2026-10-21T02:07:12.990Z",
+      "phase": "download",
+      "progress": "84.36154797431531",
+      "status": "Downloading model · 8.0 MB / 9.4 MB",
+      "workbench": false
+    },
+    {
+      "backend": "WASM",
+      "error": "",
+      "observedAt": "2026-10-21T02:08:07.077Z",
+      "phase": "stopped",
+      "status": "",
+      "workbenchVisible": true
+    }
+  ]
 }

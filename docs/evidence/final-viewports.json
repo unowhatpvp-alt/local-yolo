@@ -1,1518 +1,1934 @@
-[
-  {
-    "capturedDownloads": [],
-    "resourceRequests": [
-      {
-        "name": "http://terminal.local:4173/local-yolo/@vite/client",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/main.js",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/node_modules/vite/dist/client/env.mjs",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/ui/styles.css?t=1792544116935",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/catalog.js?t=1792545725027",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/ui/i18n.js",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/model-cache.js",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/engine-client.js?t=1792543785965",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/media.js",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/render.js?t=1792543760872",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/model-manifest.json?import&t=1792545725027",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/@noble_hashes_sha2__js.js?v=3b87ae60",
-        "initiatorType": "script",
-        "transferSize": 0
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/chunk-DGUM43GV.js?v=bb3c34d7",
-        "initiatorType": "script",
-        "transferSize": 0
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/engine-worker.js?worker_file&type=module",
-        "initiatorType": "other",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/node_modules/vite/dist/client/env.mjs",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/engine.js",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/onnxruntime-web_webgpu.js?v=5cfe98f1",
-        "initiatorType": "script",
-        "transferSize": 0
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/onnx-info.js",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/adapters.js",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/@vite/client",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/chunk-DGUM43GV.js?v=bb3c34d7",
-        "initiatorType": "script",
-        "transferSize": 0
-      }
-    ],
-    "measuredAt": "2026-10-21T01:27:37.627Z",
-    "scope": "Chromium iframe viewport only",
-    "url": "http://terminal.local:4173/local-yolo/?viewport-test=1",
-    "viewport": {
-      "requested": {
-        "width": "375",
-        "height": "812"
-      },
-      "frame": {
-        "x": 20,
-        "y": 171,
-        "width": 375,
-        "height": 812,
-        "top": 171,
-        "right": 395,
-        "bottom": 983,
-        "left": 20
-      },
-      "innerWidth": 375,
-      "innerHeight": 812,
-      "devicePixelRatio": 1,
-      "visualWidth": 375,
-      "visualHeight": 812
-    },
-    "document": {
-      "clientWidth": 375,
-      "scrollWidth": 375,
-      "clientHeight": 812,
-      "scrollHeight": 812,
-      "bodyScrollWidth": 375,
-      "bodyScrollHeight": 812,
-      "horizontalOverflow": false,
-      "verticalOverflow": false
-    },
-    "state": {
-      "phase": "stopped",
-      "workbenchVisible": true,
-      "fullscreen": false
-    },
-    "stage": {
-      "visible": true,
-      "x": 10,
-      "y": 131,
-      "width": 355,
-      "height": 587,
-      "top": 131,
-      "right": 365,
-      "bottom": 718,
-      "left": 10,
-      "computedHeight": "587px"
-    },
-    "canvas": {
-      "visible": true,
-      "x": 10,
-      "y": 131,
-      "width": 810,
-      "height": 1080,
-      "top": 131,
-      "right": 365,
-      "bottom": 718,
-      "left": 10,
-      "objectFit": "contain",
-      "objectPosition": "50% 50%",
-      "cssWidth": "355px",
-      "cssHeight": "587px"
-    },
-    "source": {
-      "video": {
-        "videoWidth": 0,
-        "videoHeight": 0,
-        "readyState": 0
-      },
-      "image": {
-        "naturalWidth": 810,
-        "naturalHeight": 1080
-      }
-    },
-    "targets": {
-      "visibleCount": 12,
-      "below44Count": 0,
-      "items": [
+{
+  "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
+  "scope": "Actual Chromium iframe only; not Safari or physical device emulation",
+  "viewports": [
+    {
+      "capturedDownloads": [
         {
-          "id": null,
-          "tag": "a",
-          "name": "Local YOLO",
-          "disabled": false,
-          "x": 17,
-          "y": 14,
-          "width": 106.17,
-          "height": 44,
-          "top": 14,
-          "right": 123.17,
-          "bottom": 58,
-          "left": 17,
-          "below44": false
+          "filename": "local-yolo-results.json",
+          "observedAt": "2026-10-21T01:59:48.587Z",
+          "status": "pass",
+          "transport": "actual app Blob download; captured by development harness only",
+          "bytes": 1804,
+          "type": "application/json",
+          "sha256": "555254f341ab93c98f511bbbf26b37efa473b639296e55bc48b31abc62c5dbd9",
+          "content": {
+            "model": "yolo26n.onnx",
+            "backend": "WASM",
+            "capturedAt": "2026-10-21T01:59:48.586Z",
+            "task": "detect",
+            "items": [
+              {
+                "box": {
+                  "x": 488.120361328125,
+                  "y": 275.15822778621185,
+                  "width": 948.4405517578125,
+                  "height": 605.9131165625345
+                },
+                "classId": 5,
+                "label": "bus",
+                "score": 0.8839160799980164
+              },
+              {
+                "box": {
+                  "x": 532.6739730834961,
+                  "y": 466.94821840384753,
+                  "width": 225.78456115722656,
+                  "height": 610.7380101736724
+                },
+                "classId": 0,
+                "label": "person",
+                "score": 0.8490615487098694
+              },
+              {
+                "box": {
+                  "x": 1273.4830169677734,
+                  "y": 475.75093830807106,
+                  "width": 170.23452758789062,
+                  "height": 561.9051519402876
+                },
+                "classId": 0,
+                "label": "person",
+                "score": 0.8322793245315552
+              },
+              {
+                "box": {
+                  "x": 743.9870681762695,
+                  "y": 477.4156615208012,
+                  "width": 147.43968200683594,
+                  "height": 543.5562719783871
+                },
+                "classId": 0,
+                "label": "person",
+                "score": 0.7914350032806396
+              },
+              {
+                "box": {
+                  "x": 480.73217010498047,
+                  "y": 698.952443619849,
+                  "width": 81.02174377441406,
+                  "height": 334.203286542579
+                },
+                "classId": 0,
+                "label": "person",
+                "score": 0.48555848002433777
+              }
+            ],
+            "latency": 362,
+            "sourceWidth": 1920,
+            "sourceHeight": 1279,
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1279
+            },
+            "format": "ultralytics-raw",
+            "iouApplicable": true,
+            "coordinateSpace": {
+              "width": 1920,
+              "height": 1279,
+              "originalWidth": 3002,
+              "originalHeight": 2000,
+              "scale": 0.6395736175882745,
+              "scaleX": 0.6395736175882745,
+              "scaleY": 0.6395
+            }
+          }
         },
         {
-          "id": "switch-model",
-          "tag": "button",
-          "name": "选择模型",
-          "disabled": false,
-          "x": 168.98,
-          "y": 14,
-          "width": 62.02,
-          "height": 44,
-          "top": 14,
-          "right": 231,
-          "bottom": 58,
-          "left": 168.98,
-          "below44": false
-        },
-        {
-          "id": "language-toggle",
-          "tag": "button",
-          "name": "切换为英文",
-          "disabled": false,
-          "x": 232,
-          "y": 14,
-          "width": 44,
-          "height": 44,
-          "top": 14,
-          "right": 276,
-          "bottom": 58,
-          "left": 232,
-          "below44": false
-        },
-        {
-          "id": "theme-toggle",
-          "tag": "button",
-          "name": "切换主题",
-          "disabled": false,
-          "x": 276,
-          "y": 14,
-          "width": 44,
-          "height": 44,
-          "top": 14,
-          "right": 320,
-          "bottom": 58,
-          "left": 276,
-          "below44": false
-        },
-        {
-          "id": "settings-open",
-          "tag": "button",
-          "name": "设置",
-          "disabled": false,
-          "x": 320,
-          "y": 14,
-          "width": 44,
-          "height": 44,
-          "top": 14,
-          "right": 364,
-          "bottom": 58,
-          "left": 320,
-          "below44": false
-        },
-        {
-          "id": "mode-camera",
-          "tag": "button",
-          "name": "摄像头",
-          "disabled": false,
-          "x": 11,
-          "y": 79.5,
-          "width": 81.02,
-          "height": 44,
-          "top": 79.5,
-          "right": 92.02,
-          "bottom": 123.5,
-          "left": 11,
-          "below44": false
-        },
-        {
-          "id": "mode-file",
-          "tag": "button",
-          "name": "上传文件",
-          "disabled": false,
-          "x": 93.02,
-          "y": 79.5,
-          "width": 93.02,
-          "height": 44,
-          "top": 79.5,
-          "right": 186.03,
-          "bottom": 123.5,
-          "left": 93.02,
-          "below44": false
-        },
-        {
-          "id": "choose-file",
-          "tag": "button",
-          "name": "选择图片或视频",
-          "disabled": false,
-          "x": 224.98,
-          "y": 79.5,
-          "width": 88.02,
-          "height": 44,
-          "top": 79.5,
-          "right": 313,
-          "bottom": 123.5,
-          "left": 224.98,
-          "below44": false
-        },
-        {
-          "id": "results-menu-toggle",
-          "tag": "button",
-          "name": "检测结果和导出",
-          "disabled": false,
-          "x": 318,
-          "y": 79.5,
-          "width": 44,
-          "height": 44,
-          "top": 79.5,
-          "right": 362,
-          "bottom": 123.5,
-          "left": 318,
-          "below44": false
-        },
-        {
-          "id": "stage",
-          "tag": "div",
-          "name": "YOLO preview",
-          "disabled": false,
-          "x": 10,
-          "y": 131,
-          "width": 355,
-          "height": 587,
-          "top": 131,
-          "right": 365,
-          "bottom": 718,
-          "left": 10,
-          "below44": false
-        },
-        {
-          "id": "fullscreen-toggle",
-          "tag": "button",
-          "name": "全屏",
-          "disabled": false,
-          "x": 308,
-          "y": 661,
-          "width": 44,
-          "height": 44,
-          "top": 661,
-          "right": 352,
-          "bottom": 705,
-          "left": 308,
-          "below44": false
-        },
-        {
-          "id": "confidence",
-          "tag": "input",
-          "name": "range",
-          "disabled": false,
-          "x": 107.02,
-          "y": 727,
-          "width": 190,
-          "height": 44,
-          "top": 727,
-          "right": 297.02,
-          "bottom": 771,
-          "left": 107.02,
-          "below44": false,
-          "labelTarget": {
-            "width": 349,
-            "height": 44
-          },
-          "labelAtLeast44": true
+          "filename": "local-yolo-result.png",
+          "observedAt": "2026-10-21T01:59:48.693Z",
+          "status": "pass",
+          "transport": "actual app Blob download; captured by development harness only",
+          "bytes": 2136157,
+          "type": "image/png",
+          "sha256": "0ae3fdec1a1e6ce8769c5ad82eeef87a921a3002bb6845de7f58f23e90726146",
+          "width": 1920,
+          "height": 1279
         }
-      ]
-    },
-    "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579"
-  },
-  {
-    "capturedDownloads": [],
-    "resourceRequests": [
-      {
-        "name": "http://terminal.local:4173/local-yolo/@vite/client",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/main.js",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/node_modules/vite/dist/client/env.mjs",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/ui/styles.css?t=1792544116935",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/catalog.js?t=1792545725027",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/ui/i18n.js",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/model-cache.js",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/engine-client.js?t=1792543785965",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/media.js",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/render.js?t=1792543760872",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/model-manifest.json?import&t=1792545725027",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/@noble_hashes_sha2__js.js?v=3b87ae60",
-        "initiatorType": "script",
-        "transferSize": 0
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/chunk-DGUM43GV.js?v=bb3c34d7",
-        "initiatorType": "script",
-        "transferSize": 0
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/engine-worker.js?worker_file&type=module",
-        "initiatorType": "other",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/node_modules/vite/dist/client/env.mjs",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/engine.js",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/onnxruntime-web_webgpu.js?v=5cfe98f1",
-        "initiatorType": "script",
-        "transferSize": 0
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/onnx-info.js",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/adapters.js",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/@vite/client",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/chunk-DGUM43GV.js?v=bb3c34d7",
-        "initiatorType": "script",
-        "transferSize": 0
-      }
-    ],
-    "measuredAt": "2026-10-21T01:27:39.657Z",
-    "scope": "Chromium iframe viewport only",
-    "url": "http://terminal.local:4173/local-yolo/?viewport-test=1",
-    "viewport": {
-      "requested": {
-        "width": "390",
-        "height": "844"
-      },
-      "frame": {
-        "x": 20,
-        "y": 171,
-        "width": 390,
-        "height": 844,
-        "top": 171,
-        "right": 410,
-        "bottom": 1015,
-        "left": 20
-      },
-      "innerWidth": 390,
-      "innerHeight": 844,
-      "devicePixelRatio": 1,
-      "visualWidth": 390,
-      "visualHeight": 844
-    },
-    "document": {
-      "clientWidth": 390,
-      "scrollWidth": 390,
-      "clientHeight": 844,
-      "scrollHeight": 844,
-      "bodyScrollWidth": 390,
-      "bodyScrollHeight": 844,
-      "horizontalOverflow": false,
-      "verticalOverflow": false
-    },
-    "state": {
-      "phase": "stopped",
-      "workbenchVisible": true,
-      "fullscreen": false
-    },
-    "stage": {
-      "visible": true,
-      "x": 10,
-      "y": 131,
-      "width": 370,
-      "height": 619,
-      "top": 131,
-      "right": 380,
-      "bottom": 750,
-      "left": 10,
-      "computedHeight": "619px"
-    },
-    "canvas": {
-      "visible": true,
-      "x": 10,
-      "y": 131,
-      "width": 810,
-      "height": 1080,
-      "top": 131,
-      "right": 380,
-      "bottom": 750,
-      "left": 10,
-      "objectFit": "contain",
-      "objectPosition": "50% 50%",
-      "cssWidth": "370px",
-      "cssHeight": "619px"
-    },
-    "source": {
-      "video": {
-        "videoWidth": 0,
-        "videoHeight": 0,
-        "readyState": 0
-      },
-      "image": {
-        "naturalWidth": 810,
-        "naturalHeight": 1080
-      }
-    },
-    "targets": {
-      "visibleCount": 12,
-      "below44Count": 0,
-      "items": [
+      ],
+      "resourceRequests": [
         {
-          "id": null,
-          "tag": "a",
-          "name": "Local YOLO",
-          "disabled": false,
-          "x": 17,
-          "y": 14,
-          "width": 106.17,
-          "height": 44,
-          "top": 14,
-          "right": 123.17,
-          "bottom": 58,
-          "left": 17,
-          "below44": false
+          "name": "http://terminal.local:4173/local-yolo/@vite/client",
+          "initiatorType": "script",
+          "transferSize": 300
         },
         {
-          "id": "switch-model",
-          "tag": "button",
-          "name": "选择模型",
-          "disabled": false,
-          "x": 183.98,
-          "y": 14,
-          "width": 62.02,
-          "height": 44,
-          "top": 14,
-          "right": 246,
-          "bottom": 58,
-          "left": 183.98,
-          "below44": false
+          "name": "http://terminal.local:4173/local-yolo/src/main.js",
+          "initiatorType": "script",
+          "transferSize": 300
         },
         {
-          "id": "language-toggle",
-          "tag": "button",
-          "name": "切换为英文",
-          "disabled": false,
-          "x": 247,
-          "y": 14,
-          "width": 44,
-          "height": 44,
-          "top": 14,
-          "right": 291,
-          "bottom": 58,
-          "left": 247,
-          "below44": false
+          "name": "http://terminal.local:4173/local-yolo/node_modules/vite/dist/client/env.mjs",
+          "initiatorType": "script",
+          "transferSize": 300
         },
         {
-          "id": "theme-toggle",
-          "tag": "button",
-          "name": "切换主题",
-          "disabled": false,
-          "x": 291,
-          "y": 14,
-          "width": 44,
-          "height": 44,
-          "top": 14,
-          "right": 335,
-          "bottom": 58,
-          "left": 291,
-          "below44": false
+          "name": "http://terminal.local:4173/local-yolo/src/ui/styles.css",
+          "initiatorType": "script",
+          "transferSize": 300
         },
         {
-          "id": "settings-open",
-          "tag": "button",
-          "name": "设置",
-          "disabled": false,
-          "x": 335,
-          "y": 14,
-          "width": 44,
-          "height": 44,
-          "top": 14,
-          "right": 379,
-          "bottom": 58,
-          "left": 335,
-          "below44": false
+          "name": "http://terminal.local:4173/local-yolo/src/core/catalog.js",
+          "initiatorType": "script",
+          "transferSize": 300
         },
         {
-          "id": "mode-camera",
-          "tag": "button",
-          "name": "摄像头",
-          "disabled": false,
-          "x": 11,
-          "y": 79.5,
-          "width": 81.02,
-          "height": 44,
-          "top": 79.5,
-          "right": 92.02,
-          "bottom": 123.5,
-          "left": 11,
-          "below44": false
+          "name": "http://terminal.local:4173/local-yolo/src/ui/i18n.js",
+          "initiatorType": "script",
+          "transferSize": 300
         },
         {
-          "id": "mode-file",
-          "tag": "button",
-          "name": "上传文件",
-          "disabled": false,
-          "x": 93.02,
-          "y": 79.5,
-          "width": 93.02,
-          "height": 44,
-          "top": 79.5,
-          "right": 186.03,
-          "bottom": 123.5,
-          "left": 93.02,
-          "below44": false
+          "name": "http://terminal.local:4173/local-yolo/src/core/model-cache.js",
+          "initiatorType": "script",
+          "transferSize": 300
         },
         {
-          "id": "choose-file",
-          "tag": "button",
-          "name": "选择图片或视频",
-          "disabled": false,
-          "x": 239.98,
-          "y": 79.5,
-          "width": 88.02,
-          "height": 44,
-          "top": 79.5,
-          "right": 328,
-          "bottom": 123.5,
-          "left": 239.98,
-          "below44": false
+          "name": "http://terminal.local:4173/local-yolo/src/core/engine-client.js",
+          "initiatorType": "script",
+          "transferSize": 300
         },
         {
-          "id": "results-menu-toggle",
-          "tag": "button",
-          "name": "检测结果和导出",
-          "disabled": false,
-          "x": 333,
-          "y": 79.5,
-          "width": 44,
-          "height": 44,
-          "top": 79.5,
-          "right": 377,
-          "bottom": 123.5,
-          "left": 333,
-          "below44": false
+          "name": "http://terminal.local:4173/local-yolo/src/core/render.js",
+          "initiatorType": "script",
+          "transferSize": 300
         },
         {
-          "id": "stage",
-          "tag": "div",
-          "name": "YOLO preview",
-          "disabled": false,
-          "x": 10,
-          "y": 131,
-          "width": 370,
-          "height": 619,
-          "top": 131,
-          "right": 380,
-          "bottom": 750,
-          "left": 10,
-          "below44": false
+          "name": "http://terminal.local:4173/local-yolo/src/core/media.js",
+          "initiatorType": "script",
+          "transferSize": 300
         },
         {
-          "id": "fullscreen-toggle",
-          "tag": "button",
-          "name": "全屏",
-          "disabled": false,
-          "x": 323,
-          "y": 693,
-          "width": 44,
-          "height": 44,
-          "top": 693,
-          "right": 367,
-          "bottom": 737,
-          "left": 323,
-          "below44": false
+          "name": "http://terminal.local:4173/local-yolo/src/core/model-manifest.json?import",
+          "initiatorType": "script",
+          "transferSize": 300
         },
         {
-          "id": "confidence",
-          "tag": "input",
-          "name": "range",
-          "disabled": false,
-          "x": 114.52,
-          "y": 759,
-          "width": 190,
-          "height": 44,
-          "top": 759,
-          "right": 304.52,
-          "bottom": 803,
-          "left": 114.52,
-          "below44": false,
-          "labelTarget": {
-            "width": 364,
-            "height": 44
-          },
-          "labelAtLeast44": true
+          "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/@noble_hashes_sha2__js.js?v=69985b7c",
+          "initiatorType": "script",
+          "transferSize": 0
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/chunk-DGUM43GV.js?v=49f7f539",
+          "initiatorType": "script",
+          "transferSize": 0
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/engine-worker.js?worker_file&type=module",
+          "initiatorType": "other",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/node_modules/vite/dist/client/env.mjs",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/engine.js",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/onnxruntime-web_webgpu.js?v=5b678866",
+          "initiatorType": "script",
+          "transferSize": 0
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/onnx-info.js",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/adapters.js",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/@vite/client",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/chunk-DGUM43GV.js?v=49f7f539",
+          "initiatorType": "script",
+          "transferSize": 0
         }
-      ]
-    },
-    "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579"
-  },
-  {
-    "capturedDownloads": [],
-    "resourceRequests": [
-      {
-        "name": "http://terminal.local:4173/local-yolo/@vite/client",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/main.js",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/node_modules/vite/dist/client/env.mjs",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/ui/styles.css?t=1792544116935",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/catalog.js?t=1792545725027",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/ui/i18n.js",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/model-cache.js",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/engine-client.js?t=1792543785965",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/media.js",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/render.js?t=1792543760872",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/model-manifest.json?import&t=1792545725027",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/@noble_hashes_sha2__js.js?v=3b87ae60",
-        "initiatorType": "script",
-        "transferSize": 0
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/chunk-DGUM43GV.js?v=bb3c34d7",
-        "initiatorType": "script",
-        "transferSize": 0
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/engine-worker.js?worker_file&type=module",
-        "initiatorType": "other",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/node_modules/vite/dist/client/env.mjs",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/engine.js",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/onnxruntime-web_webgpu.js?v=5cfe98f1",
-        "initiatorType": "script",
-        "transferSize": 0
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/onnx-info.js",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/adapters.js",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/@vite/client",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/chunk-DGUM43GV.js?v=bb3c34d7",
-        "initiatorType": "script",
-        "transferSize": 0
-      }
-    ],
-    "measuredAt": "2026-10-21T01:27:41.696Z",
-    "scope": "Chromium iframe viewport only",
-    "url": "http://terminal.local:4173/local-yolo/?viewport-test=1",
-    "viewport": {
-      "requested": {
-        "width": "844",
-        "height": "390"
-      },
-      "frame": {
-        "x": 20,
-        "y": 171,
-        "width": 844,
-        "height": 390,
-        "top": 171,
-        "right": 864,
-        "bottom": 561,
-        "left": 20
-      },
-      "innerWidth": 844,
-      "innerHeight": 390,
-      "devicePixelRatio": 1,
-      "visualWidth": 844,
-      "visualHeight": 390
-    },
-    "document": {
-      "clientWidth": 844,
-      "scrollWidth": 844,
-      "clientHeight": 390,
-      "scrollHeight": 390,
-      "bodyScrollWidth": 844,
-      "bodyScrollHeight": 390,
-      "horizontalOverflow": false,
-      "verticalOverflow": false
-    },
-    "state": {
-      "phase": "stopped",
-      "workbenchVisible": true,
-      "fullscreen": false
-    },
-    "stage": {
-      "visible": true,
-      "x": 24,
-      "y": 106,
-      "width": 796,
-      "height": 224,
-      "top": 106,
-      "right": 820,
-      "bottom": 330,
-      "left": 24,
-      "computedHeight": "224px"
-    },
-    "canvas": {
-      "visible": true,
-      "x": 24,
-      "y": 106,
-      "width": 810,
-      "height": 1080,
-      "top": 106,
-      "right": 820,
-      "bottom": 330,
-      "left": 24,
-      "objectFit": "contain",
-      "objectPosition": "50% 50%",
-      "cssWidth": "796px",
-      "cssHeight": "224px"
-    },
-    "source": {
-      "video": {
-        "videoWidth": 0,
-        "videoHeight": 0,
-        "readyState": 0
-      },
-      "image": {
-        "naturalWidth": 810,
-        "naturalHeight": 1080
-      }
-    },
-    "targets": {
-      "visibleCount": 12,
-      "below44Count": 0,
-      "items": [
-        {
-          "id": null,
-          "tag": "a",
-          "name": "Local YOLO",
-          "disabled": false,
-          "x": 40,
-          "y": 7,
-          "width": 123.14,
-          "height": 44,
-          "top": 7,
-          "right": 163.14,
-          "bottom": 51,
-          "left": 40,
-          "below44": false
+      ],
+      "measuredAt": "2026-10-21T01:59:57.897Z",
+      "scope": "Chromium iframe viewport only",
+      "url": "http://terminal.local:4173/local-yolo/?viewport-test=1",
+      "viewport": {
+        "requested": {
+          "width": "375",
+          "height": "812"
         },
-        {
-          "id": "switch-model",
-          "tag": "button",
-          "name": "选择模型",
-          "disabled": false,
-          "x": 585.98,
-          "y": 7,
-          "width": 68.02,
-          "height": 44,
-          "top": 7,
-          "right": 654,
-          "bottom": 51,
-          "left": 585.98,
-          "below44": false
+        "frame": {
+          "x": 20,
+          "y": 171,
+          "width": 375,
+          "height": 812,
+          "top": 171,
+          "right": 395,
+          "bottom": 983,
+          "left": 20
         },
-        {
-          "id": "language-toggle",
-          "tag": "button",
-          "name": "切换为英文",
-          "disabled": false,
-          "x": 664,
-          "y": 7,
-          "width": 44,
-          "height": 44,
-          "top": 7,
-          "right": 708,
-          "bottom": 51,
-          "left": 664,
-          "below44": false
+        "innerWidth": 375,
+        "innerHeight": 812,
+        "devicePixelRatio": 1,
+        "visualWidth": 375,
+        "visualHeight": 812
+      },
+      "document": {
+        "clientWidth": 375,
+        "scrollWidth": 375,
+        "clientHeight": 812,
+        "scrollHeight": 812,
+        "bodyScrollWidth": 375,
+        "bodyScrollHeight": 812,
+        "horizontalOverflow": false,
+        "verticalOverflow": false
+      },
+      "state": {
+        "phase": "stopped",
+        "workbenchVisible": true,
+        "fullscreen": false
+      },
+      "stage": {
+        "visible": true,
+        "x": 10,
+        "y": 131,
+        "width": 355,
+        "height": 587,
+        "top": 131,
+        "right": 365,
+        "bottom": 718,
+        "left": 10,
+        "computedHeight": "587px"
+      },
+      "canvas": {
+        "visible": true,
+        "x": 10,
+        "y": 131,
+        "width": 1920,
+        "height": 1279,
+        "top": 131,
+        "right": 365,
+        "bottom": 718,
+        "left": 10,
+        "objectFit": "contain",
+        "objectPosition": "50% 50%",
+        "cssWidth": "355px",
+        "cssHeight": "587px"
+      },
+      "source": {
+        "video": {
+          "videoWidth": 0,
+          "videoHeight": 0,
+          "readyState": 0
         },
-        {
-          "id": "theme-toggle",
-          "tag": "button",
-          "name": "切换主题",
-          "disabled": false,
-          "x": 712,
-          "y": 7,
-          "width": 44,
-          "height": 44,
-          "top": 7,
-          "right": 756,
-          "bottom": 51,
-          "left": 712,
-          "below44": false
-        },
-        {
-          "id": "settings-open",
-          "tag": "button",
-          "name": "设置",
-          "disabled": false,
-          "x": 760,
-          "y": 7,
-          "width": 44,
-          "height": 44,
-          "top": 7,
-          "right": 804,
-          "bottom": 51,
-          "left": 760,
-          "below44": false
-        },
-        {
-          "id": "mode-camera",
-          "tag": "button",
-          "name": "摄像头",
-          "disabled": false,
-          "x": 24,
-          "y": 60,
-          "width": 92.02,
-          "height": 44,
-          "top": 60,
-          "right": 116.02,
-          "bottom": 104,
-          "left": 24,
-          "below44": false
-        },
-        {
-          "id": "mode-file",
-          "tag": "button",
-          "name": "上传文件",
-          "disabled": false,
-          "x": 120.02,
-          "y": 60,
-          "width": 105.02,
-          "height": 44,
-          "top": 60,
-          "right": 225.03,
-          "bottom": 104,
-          "left": 120.02,
-          "below44": false
-        },
-        {
-          "id": "choose-file",
-          "tag": "button",
-          "name": "选择图片或视频",
-          "disabled": false,
-          "x": 646.98,
-          "y": 60,
-          "width": 115.02,
-          "height": 44,
-          "top": 60,
-          "right": 762,
-          "bottom": 104,
-          "left": 646.98,
-          "below44": false
-        },
-        {
-          "id": "results-menu-toggle",
-          "tag": "button",
-          "name": "检测结果和导出",
-          "disabled": false,
-          "x": 776,
-          "y": 60,
-          "width": 44,
-          "height": 44,
-          "top": 60,
-          "right": 820,
-          "bottom": 104,
-          "left": 776,
-          "below44": false
-        },
-        {
-          "id": "stage",
-          "tag": "div",
-          "name": "YOLO preview",
-          "disabled": false,
-          "x": 24,
-          "y": 106,
-          "width": 796,
-          "height": 224,
-          "top": 106,
-          "right": 820,
-          "bottom": 330,
-          "left": 24,
-          "below44": false
-        },
-        {
-          "id": "fullscreen-toggle",
-          "tag": "button",
-          "name": "全屏",
-          "disabled": false,
-          "x": 760,
-          "y": 270,
-          "width": 44,
-          "height": 44,
-          "top": 270,
-          "right": 804,
-          "bottom": 314,
-          "left": 760,
-          "below44": false
-        },
-        {
-          "id": "confidence",
-          "tag": "input",
-          "name": "range",
-          "disabled": false,
-          "x": 99.02,
-          "y": 332,
-          "width": 100,
-          "height": 44,
-          "top": 332,
-          "right": 199.02,
-          "bottom": 376,
-          "left": 99.02,
-          "below44": false,
-          "labelTarget": {
-            "width": 217.02,
-            "height": 44
-          },
-          "labelAtLeast44": true
+        "image": {
+          "naturalWidth": 3002,
+          "naturalHeight": 2000
         }
-      ]
-    },
-    "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579"
-  },
-  {
-    "capturedDownloads": [],
-    "resourceRequests": [
-      {
-        "name": "http://terminal.local:4173/local-yolo/@vite/client",
-        "initiatorType": "script",
-        "transferSize": 300
       },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/main.js",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/node_modules/vite/dist/client/env.mjs",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/ui/styles.css?t=1792544116935",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/catalog.js?t=1792545725027",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/ui/i18n.js",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/model-cache.js",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/engine-client.js?t=1792543785965",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/media.js",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/render.js?t=1792543760872",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/model-manifest.json?import&t=1792545725027",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/@noble_hashes_sha2__js.js?v=3b87ae60",
-        "initiatorType": "script",
-        "transferSize": 0
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/chunk-DGUM43GV.js?v=bb3c34d7",
-        "initiatorType": "script",
-        "transferSize": 0
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/engine-worker.js?worker_file&type=module",
-        "initiatorType": "other",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/node_modules/vite/dist/client/env.mjs",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/engine.js",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/onnxruntime-web_webgpu.js?v=5cfe98f1",
-        "initiatorType": "script",
-        "transferSize": 0
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/onnx-info.js",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/src/core/adapters.js",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/@vite/client",
-        "initiatorType": "script",
-        "transferSize": 300
-      },
-      {
-        "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/chunk-DGUM43GV.js?v=bb3c34d7",
-        "initiatorType": "script",
-        "transferSize": 0
-      }
-    ],
-    "measuredAt": "2026-10-21T01:27:43.738Z",
-    "scope": "Chromium iframe viewport only",
-    "url": "http://terminal.local:4173/local-yolo/?viewport-test=1",
-    "viewport": {
-      "requested": {
-        "width": "768",
-        "height": "1024"
-      },
-      "frame": {
-        "x": 20,
-        "y": 171,
-        "width": 768,
-        "height": 1024,
-        "top": 171,
-        "right": 788,
-        "bottom": 1195,
-        "left": 20
-      },
-      "innerWidth": 768,
-      "innerHeight": 1024,
-      "devicePixelRatio": 1,
-      "visualWidth": 768,
-      "visualHeight": 1024
-    },
-    "document": {
-      "clientWidth": 768,
-      "scrollWidth": 768,
-      "clientHeight": 1024,
-      "scrollHeight": 1024,
-      "bodyScrollWidth": 768,
-      "bodyScrollHeight": 1024,
-      "horizontalOverflow": false,
-      "verticalOverflow": false
-    },
-    "state": {
-      "phase": "stopped",
-      "workbenchVisible": true,
-      "fullscreen": false
-    },
-    "stage": {
-      "visible": true,
-      "x": 24,
-      "y": 137,
-      "width": 720,
-      "height": 817,
-      "top": 137,
-      "right": 744,
-      "bottom": 954,
-      "left": 24,
-      "computedHeight": "817px"
-    },
-    "canvas": {
-      "visible": true,
-      "x": 24,
-      "y": 137,
-      "width": 810,
-      "height": 1080,
-      "top": 137,
-      "right": 744,
-      "bottom": 954,
-      "left": 24,
-      "objectFit": "contain",
-      "objectPosition": "50% 50%",
-      "cssWidth": "720px",
-      "cssHeight": "817px"
-    },
-    "source": {
-      "video": {
-        "videoWidth": 0,
-        "videoHeight": 0,
-        "readyState": 0
-      },
-      "image": {
-        "naturalWidth": 810,
-        "naturalHeight": 1080
-      }
-    },
-    "targets": {
-      "visibleCount": 12,
-      "below44Count": 0,
-      "items": [
-        {
-          "id": null,
-          "tag": "a",
-          "name": "Local YOLO",
-          "disabled": false,
-          "x": 40,
-          "y": 16,
-          "width": 123.14,
-          "height": 44,
-          "top": 16,
-          "right": 163.14,
-          "bottom": 60,
-          "left": 40,
-          "below44": false
-        },
-        {
-          "id": "switch-model",
-          "tag": "button",
-          "name": "选择模型",
-          "disabled": false,
-          "x": 509.98,
-          "y": 16,
-          "width": 68.02,
-          "height": 44,
-          "top": 16,
-          "right": 578,
-          "bottom": 60,
-          "left": 509.98,
-          "below44": false
-        },
-        {
-          "id": "language-toggle",
-          "tag": "button",
-          "name": "切换为英文",
-          "disabled": false,
-          "x": 588,
-          "y": 16,
-          "width": 44,
-          "height": 44,
-          "top": 16,
-          "right": 632,
-          "bottom": 60,
-          "left": 588,
-          "below44": false
-        },
-        {
-          "id": "theme-toggle",
-          "tag": "button",
-          "name": "切换主题",
-          "disabled": false,
-          "x": 636,
-          "y": 16,
-          "width": 44,
-          "height": 44,
-          "top": 16,
-          "right": 680,
-          "bottom": 60,
-          "left": 636,
-          "below44": false
-        },
-        {
-          "id": "settings-open",
-          "tag": "button",
-          "name": "设置",
-          "disabled": false,
-          "x": 684,
-          "y": 16,
-          "width": 44,
-          "height": 44,
-          "top": 16,
-          "right": 728,
-          "bottom": 60,
-          "left": 684,
-          "below44": false
-        },
-        {
-          "id": "mode-camera",
-          "tag": "button",
-          "name": "摄像头",
-          "disabled": false,
-          "x": 24,
-          "y": 84.5,
-          "width": 92.02,
-          "height": 44,
-          "top": 84.5,
-          "right": 116.02,
-          "bottom": 128.5,
-          "left": 24,
-          "below44": false
-        },
-        {
-          "id": "mode-file",
-          "tag": "button",
-          "name": "上传文件",
-          "disabled": false,
-          "x": 120.02,
-          "y": 84.5,
-          "width": 105.02,
-          "height": 44,
-          "top": 84.5,
-          "right": 225.03,
-          "bottom": 128.5,
-          "left": 120.02,
-          "below44": false
-        },
-        {
-          "id": "choose-file",
-          "tag": "button",
-          "name": "选择图片或视频",
-          "disabled": false,
-          "x": 570.98,
-          "y": 84.5,
-          "width": 115.02,
-          "height": 44,
-          "top": 84.5,
-          "right": 686,
-          "bottom": 128.5,
-          "left": 570.98,
-          "below44": false
-        },
-        {
-          "id": "results-menu-toggle",
-          "tag": "button",
-          "name": "检测结果和导出",
-          "disabled": false,
-          "x": 700,
-          "y": 84.5,
-          "width": 44,
-          "height": 44,
-          "top": 84.5,
-          "right": 744,
-          "bottom": 128.5,
-          "left": 700,
-          "below44": false
-        },
-        {
-          "id": "stage",
-          "tag": "div",
-          "name": "YOLO preview",
-          "disabled": false,
-          "x": 24,
-          "y": 137,
-          "width": 720,
-          "height": 817,
-          "top": 137,
-          "right": 744,
-          "bottom": 954,
-          "left": 24,
-          "below44": false
-        },
-        {
-          "id": "fullscreen-toggle",
-          "tag": "button",
-          "name": "全屏",
-          "disabled": false,
-          "x": 684,
-          "y": 894,
-          "width": 44,
-          "height": 44,
-          "top": 894,
-          "right": 728,
-          "bottom": 938,
-          "left": 684,
-          "below44": false
-        },
-        {
-          "id": "confidence",
-          "tag": "input",
-          "name": "range",
-          "disabled": false,
-          "x": 100.02,
-          "y": 961,
-          "width": 120,
-          "height": 44,
-          "top": 961,
-          "right": 220.02,
-          "bottom": 1005,
-          "left": 100.02,
-          "below44": false,
-          "labelTarget": {
-            "width": 237.02,
-            "height": 44
+      "targets": {
+        "visibleCount": 12,
+        "below44Count": 0,
+        "items": [
+          {
+            "id": null,
+            "tag": "a",
+            "name": "Local YOLO",
+            "disabled": false,
+            "x": 17,
+            "y": 14,
+            "width": 106.17,
+            "height": 44,
+            "top": 14,
+            "right": 123.17,
+            "bottom": 58,
+            "left": 17,
+            "below44": false
           },
-          "labelAtLeast44": true
-        }
-      ]
+          {
+            "id": "switch-model",
+            "tag": "button",
+            "name": "选择模型",
+            "disabled": false,
+            "x": 168.98,
+            "y": 14,
+            "width": 62.02,
+            "height": 44,
+            "top": 14,
+            "right": 231,
+            "bottom": 58,
+            "left": 168.98,
+            "below44": false
+          },
+          {
+            "id": "language-toggle",
+            "tag": "button",
+            "name": "切换为英文",
+            "disabled": false,
+            "x": 232,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "top": 14,
+            "right": 276,
+            "bottom": 58,
+            "left": 232,
+            "below44": false
+          },
+          {
+            "id": "theme-toggle",
+            "tag": "button",
+            "name": "切换主题",
+            "disabled": false,
+            "x": 276,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "top": 14,
+            "right": 320,
+            "bottom": 58,
+            "left": 276,
+            "below44": false
+          },
+          {
+            "id": "settings-open",
+            "tag": "button",
+            "name": "设置",
+            "disabled": false,
+            "x": 320,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "top": 14,
+            "right": 364,
+            "bottom": 58,
+            "left": 320,
+            "below44": false
+          },
+          {
+            "id": "mode-camera",
+            "tag": "button",
+            "name": "摄像头",
+            "disabled": false,
+            "x": 11,
+            "y": 79.5,
+            "width": 81.02,
+            "height": 44,
+            "top": 79.5,
+            "right": 92.02,
+            "bottom": 123.5,
+            "left": 11,
+            "below44": false
+          },
+          {
+            "id": "mode-file",
+            "tag": "button",
+            "name": "上传文件",
+            "disabled": false,
+            "x": 93.02,
+            "y": 79.5,
+            "width": 93.02,
+            "height": 44,
+            "top": 79.5,
+            "right": 186.03,
+            "bottom": 123.5,
+            "left": 93.02,
+            "below44": false
+          },
+          {
+            "id": "choose-file",
+            "tag": "button",
+            "name": "选择图片或视频",
+            "disabled": false,
+            "x": 224.98,
+            "y": 79.5,
+            "width": 88.02,
+            "height": 44,
+            "top": 79.5,
+            "right": 313,
+            "bottom": 123.5,
+            "left": 224.98,
+            "below44": false
+          },
+          {
+            "id": "results-menu-toggle",
+            "tag": "button",
+            "name": "检测结果和导出",
+            "disabled": false,
+            "x": 318,
+            "y": 79.5,
+            "width": 44,
+            "height": 44,
+            "top": 79.5,
+            "right": 362,
+            "bottom": 123.5,
+            "left": 318,
+            "below44": false
+          },
+          {
+            "id": "stage",
+            "tag": "div",
+            "name": "YOLO preview",
+            "disabled": false,
+            "x": 10,
+            "y": 131,
+            "width": 355,
+            "height": 587,
+            "top": 131,
+            "right": 365,
+            "bottom": 718,
+            "left": 10,
+            "below44": false
+          },
+          {
+            "id": "fullscreen-toggle",
+            "tag": "button",
+            "name": "全屏",
+            "disabled": false,
+            "x": 308,
+            "y": 661,
+            "width": 44,
+            "height": 44,
+            "top": 661,
+            "right": 352,
+            "bottom": 705,
+            "left": 308,
+            "below44": false
+          },
+          {
+            "id": "confidence",
+            "tag": "input",
+            "name": "range",
+            "disabled": false,
+            "x": 107.02,
+            "y": 727,
+            "width": 190,
+            "height": 44,
+            "top": 727,
+            "right": 297.02,
+            "bottom": 771,
+            "left": 107.02,
+            "below44": false,
+            "labelTarget": {
+              "width": 349,
+              "height": 44
+            },
+            "labelAtLeast44": true
+          }
+        ]
+      }
     },
-    "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579"
-  }
-]
+    {
+      "capturedDownloads": [
+        {
+          "filename": "local-yolo-results.json",
+          "observedAt": "2026-10-21T01:59:48.587Z",
+          "status": "pass",
+          "transport": "actual app Blob download; captured by development harness only",
+          "bytes": 1804,
+          "type": "application/json",
+          "sha256": "555254f341ab93c98f511bbbf26b37efa473b639296e55bc48b31abc62c5dbd9",
+          "content": {
+            "model": "yolo26n.onnx",
+            "backend": "WASM",
+            "capturedAt": "2026-10-21T01:59:48.586Z",
+            "task": "detect",
+            "items": [
+              {
+                "box": {
+                  "x": 488.120361328125,
+                  "y": 275.15822778621185,
+                  "width": 948.4405517578125,
+                  "height": 605.9131165625345
+                },
+                "classId": 5,
+                "label": "bus",
+                "score": 0.8839160799980164
+              },
+              {
+                "box": {
+                  "x": 532.6739730834961,
+                  "y": 466.94821840384753,
+                  "width": 225.78456115722656,
+                  "height": 610.7380101736724
+                },
+                "classId": 0,
+                "label": "person",
+                "score": 0.8490615487098694
+              },
+              {
+                "box": {
+                  "x": 1273.4830169677734,
+                  "y": 475.75093830807106,
+                  "width": 170.23452758789062,
+                  "height": 561.9051519402876
+                },
+                "classId": 0,
+                "label": "person",
+                "score": 0.8322793245315552
+              },
+              {
+                "box": {
+                  "x": 743.9870681762695,
+                  "y": 477.4156615208012,
+                  "width": 147.43968200683594,
+                  "height": 543.5562719783871
+                },
+                "classId": 0,
+                "label": "person",
+                "score": 0.7914350032806396
+              },
+              {
+                "box": {
+                  "x": 480.73217010498047,
+                  "y": 698.952443619849,
+                  "width": 81.02174377441406,
+                  "height": 334.203286542579
+                },
+                "classId": 0,
+                "label": "person",
+                "score": 0.48555848002433777
+              }
+            ],
+            "latency": 362,
+            "sourceWidth": 1920,
+            "sourceHeight": 1279,
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1279
+            },
+            "format": "ultralytics-raw",
+            "iouApplicable": true,
+            "coordinateSpace": {
+              "width": 1920,
+              "height": 1279,
+              "originalWidth": 3002,
+              "originalHeight": 2000,
+              "scale": 0.6395736175882745,
+              "scaleX": 0.6395736175882745,
+              "scaleY": 0.6395
+            }
+          }
+        },
+        {
+          "filename": "local-yolo-result.png",
+          "observedAt": "2026-10-21T01:59:48.693Z",
+          "status": "pass",
+          "transport": "actual app Blob download; captured by development harness only",
+          "bytes": 2136157,
+          "type": "image/png",
+          "sha256": "0ae3fdec1a1e6ce8769c5ad82eeef87a921a3002bb6845de7f58f23e90726146",
+          "width": 1920,
+          "height": 1279
+        }
+      ],
+      "resourceRequests": [
+        {
+          "name": "http://terminal.local:4173/local-yolo/@vite/client",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/main.js",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/node_modules/vite/dist/client/env.mjs",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/ui/styles.css",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/catalog.js",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/ui/i18n.js",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/model-cache.js",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/engine-client.js",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/render.js",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/media.js",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/model-manifest.json?import",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/@noble_hashes_sha2__js.js?v=69985b7c",
+          "initiatorType": "script",
+          "transferSize": 0
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/chunk-DGUM43GV.js?v=49f7f539",
+          "initiatorType": "script",
+          "transferSize": 0
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/engine-worker.js?worker_file&type=module",
+          "initiatorType": "other",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/node_modules/vite/dist/client/env.mjs",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/engine.js",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/onnxruntime-web_webgpu.js?v=5b678866",
+          "initiatorType": "script",
+          "transferSize": 0
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/onnx-info.js",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/adapters.js",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/@vite/client",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/chunk-DGUM43GV.js?v=49f7f539",
+          "initiatorType": "script",
+          "transferSize": 0
+        }
+      ],
+      "measuredAt": "2026-10-21T01:59:59.935Z",
+      "scope": "Chromium iframe viewport only",
+      "url": "http://terminal.local:4173/local-yolo/?viewport-test=1",
+      "viewport": {
+        "requested": {
+          "width": "390",
+          "height": "844"
+        },
+        "frame": {
+          "x": 20,
+          "y": 171,
+          "width": 390,
+          "height": 844,
+          "top": 171,
+          "right": 410,
+          "bottom": 1015,
+          "left": 20
+        },
+        "innerWidth": 390,
+        "innerHeight": 844,
+        "devicePixelRatio": 1,
+        "visualWidth": 390,
+        "visualHeight": 844
+      },
+      "document": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "clientHeight": 844,
+        "scrollHeight": 844,
+        "bodyScrollWidth": 390,
+        "bodyScrollHeight": 844,
+        "horizontalOverflow": false,
+        "verticalOverflow": false
+      },
+      "state": {
+        "phase": "stopped",
+        "workbenchVisible": true,
+        "fullscreen": false
+      },
+      "stage": {
+        "visible": true,
+        "x": 10,
+        "y": 131,
+        "width": 370,
+        "height": 619,
+        "top": 131,
+        "right": 380,
+        "bottom": 750,
+        "left": 10,
+        "computedHeight": "619px"
+      },
+      "canvas": {
+        "visible": true,
+        "x": 10,
+        "y": 131,
+        "width": 1920,
+        "height": 1279,
+        "top": 131,
+        "right": 380,
+        "bottom": 750,
+        "left": 10,
+        "objectFit": "contain",
+        "objectPosition": "50% 50%",
+        "cssWidth": "370px",
+        "cssHeight": "619px"
+      },
+      "source": {
+        "video": {
+          "videoWidth": 0,
+          "videoHeight": 0,
+          "readyState": 0
+        },
+        "image": {
+          "naturalWidth": 3002,
+          "naturalHeight": 2000
+        }
+      },
+      "targets": {
+        "visibleCount": 12,
+        "below44Count": 0,
+        "items": [
+          {
+            "id": null,
+            "tag": "a",
+            "name": "Local YOLO",
+            "disabled": false,
+            "x": 17,
+            "y": 14,
+            "width": 106.17,
+            "height": 44,
+            "top": 14,
+            "right": 123.17,
+            "bottom": 58,
+            "left": 17,
+            "below44": false
+          },
+          {
+            "id": "switch-model",
+            "tag": "button",
+            "name": "选择模型",
+            "disabled": false,
+            "x": 183.98,
+            "y": 14,
+            "width": 62.02,
+            "height": 44,
+            "top": 14,
+            "right": 246,
+            "bottom": 58,
+            "left": 183.98,
+            "below44": false
+          },
+          {
+            "id": "language-toggle",
+            "tag": "button",
+            "name": "切换为英文",
+            "disabled": false,
+            "x": 247,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "top": 14,
+            "right": 291,
+            "bottom": 58,
+            "left": 247,
+            "below44": false
+          },
+          {
+            "id": "theme-toggle",
+            "tag": "button",
+            "name": "切换主题",
+            "disabled": false,
+            "x": 291,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "top": 14,
+            "right": 335,
+            "bottom": 58,
+            "left": 291,
+            "below44": false
+          },
+          {
+            "id": "settings-open",
+            "tag": "button",
+            "name": "设置",
+            "disabled": false,
+            "x": 335,
+            "y": 14,
+            "width": 44,
+            "height": 44,
+            "top": 14,
+            "right": 379,
+            "bottom": 58,
+            "left": 335,
+            "below44": false
+          },
+          {
+            "id": "mode-camera",
+            "tag": "button",
+            "name": "摄像头",
+            "disabled": false,
+            "x": 11,
+            "y": 79.5,
+            "width": 81.02,
+            "height": 44,
+            "top": 79.5,
+            "right": 92.02,
+            "bottom": 123.5,
+            "left": 11,
+            "below44": false
+          },
+          {
+            "id": "mode-file",
+            "tag": "button",
+            "name": "上传文件",
+            "disabled": false,
+            "x": 93.02,
+            "y": 79.5,
+            "width": 93.02,
+            "height": 44,
+            "top": 79.5,
+            "right": 186.03,
+            "bottom": 123.5,
+            "left": 93.02,
+            "below44": false
+          },
+          {
+            "id": "choose-file",
+            "tag": "button",
+            "name": "选择图片或视频",
+            "disabled": false,
+            "x": 239.98,
+            "y": 79.5,
+            "width": 88.02,
+            "height": 44,
+            "top": 79.5,
+            "right": 328,
+            "bottom": 123.5,
+            "left": 239.98,
+            "below44": false
+          },
+          {
+            "id": "results-menu-toggle",
+            "tag": "button",
+            "name": "检测结果和导出",
+            "disabled": false,
+            "x": 333,
+            "y": 79.5,
+            "width": 44,
+            "height": 44,
+            "top": 79.5,
+            "right": 377,
+            "bottom": 123.5,
+            "left": 333,
+            "below44": false
+          },
+          {
+            "id": "stage",
+            "tag": "div",
+            "name": "YOLO preview",
+            "disabled": false,
+            "x": 10,
+            "y": 131,
+            "width": 370,
+            "height": 619,
+            "top": 131,
+            "right": 380,
+            "bottom": 750,
+            "left": 10,
+            "below44": false
+          },
+          {
+            "id": "fullscreen-toggle",
+            "tag": "button",
+            "name": "全屏",
+            "disabled": false,
+            "x": 323,
+            "y": 693,
+            "width": 44,
+            "height": 44,
+            "top": 693,
+            "right": 367,
+            "bottom": 737,
+            "left": 323,
+            "below44": false
+          },
+          {
+            "id": "confidence",
+            "tag": "input",
+            "name": "range",
+            "disabled": false,
+            "x": 114.52,
+            "y": 759,
+            "width": 190,
+            "height": 44,
+            "top": 759,
+            "right": 304.52,
+            "bottom": 803,
+            "left": 114.52,
+            "below44": false,
+            "labelTarget": {
+              "width": 364,
+              "height": 44
+            },
+            "labelAtLeast44": true
+          }
+        ]
+      }
+    },
+    {
+      "capturedDownloads": [
+        {
+          "filename": "local-yolo-results.json",
+          "observedAt": "2026-10-21T01:59:48.587Z",
+          "status": "pass",
+          "transport": "actual app Blob download; captured by development harness only",
+          "bytes": 1804,
+          "type": "application/json",
+          "sha256": "555254f341ab93c98f511bbbf26b37efa473b639296e55bc48b31abc62c5dbd9",
+          "content": {
+            "model": "yolo26n.onnx",
+            "backend": "WASM",
+            "capturedAt": "2026-10-21T01:59:48.586Z",
+            "task": "detect",
+            "items": [
+              {
+                "box": {
+                  "x": 488.120361328125,
+                  "y": 275.15822778621185,
+                  "width": 948.4405517578125,
+                  "height": 605.9131165625345
+                },
+                "classId": 5,
+                "label": "bus",
+                "score": 0.8839160799980164
+              },
+              {
+                "box": {
+                  "x": 532.6739730834961,
+                  "y": 466.94821840384753,
+                  "width": 225.78456115722656,
+                  "height": 610.7380101736724
+                },
+                "classId": 0,
+                "label": "person",
+                "score": 0.8490615487098694
+              },
+              {
+                "box": {
+                  "x": 1273.4830169677734,
+                  "y": 475.75093830807106,
+                  "width": 170.23452758789062,
+                  "height": 561.9051519402876
+                },
+                "classId": 0,
+                "label": "person",
+                "score": 0.8322793245315552
+              },
+              {
+                "box": {
+                  "x": 743.9870681762695,
+                  "y": 477.4156615208012,
+                  "width": 147.43968200683594,
+                  "height": 543.5562719783871
+                },
+                "classId": 0,
+                "label": "person",
+                "score": 0.7914350032806396
+              },
+              {
+                "box": {
+                  "x": 480.73217010498047,
+                  "y": 698.952443619849,
+                  "width": 81.02174377441406,
+                  "height": 334.203286542579
+                },
+                "classId": 0,
+                "label": "person",
+                "score": 0.48555848002433777
+              }
+            ],
+            "latency": 362,
+            "sourceWidth": 1920,
+            "sourceHeight": 1279,
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1279
+            },
+            "format": "ultralytics-raw",
+            "iouApplicable": true,
+            "coordinateSpace": {
+              "width": 1920,
+              "height": 1279,
+              "originalWidth": 3002,
+              "originalHeight": 2000,
+              "scale": 0.6395736175882745,
+              "scaleX": 0.6395736175882745,
+              "scaleY": 0.6395
+            }
+          }
+        },
+        {
+          "filename": "local-yolo-result.png",
+          "observedAt": "2026-10-21T01:59:48.693Z",
+          "status": "pass",
+          "transport": "actual app Blob download; captured by development harness only",
+          "bytes": 2136157,
+          "type": "image/png",
+          "sha256": "0ae3fdec1a1e6ce8769c5ad82eeef87a921a3002bb6845de7f58f23e90726146",
+          "width": 1920,
+          "height": 1279
+        }
+      ],
+      "resourceRequests": [
+        {
+          "name": "http://terminal.local:4173/local-yolo/@vite/client",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/main.js",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/node_modules/vite/dist/client/env.mjs",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/ui/styles.css",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/catalog.js",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/ui/i18n.js",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/model-cache.js",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/engine-client.js",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/render.js",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/media.js",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/model-manifest.json?import",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/@noble_hashes_sha2__js.js?v=69985b7c",
+          "initiatorType": "script",
+          "transferSize": 0
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/chunk-DGUM43GV.js?v=49f7f539",
+          "initiatorType": "script",
+          "transferSize": 0
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/engine-worker.js?worker_file&type=module",
+          "initiatorType": "other",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/node_modules/vite/dist/client/env.mjs",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/engine.js",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/onnxruntime-web_webgpu.js?v=5b678866",
+          "initiatorType": "script",
+          "transferSize": 0
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/onnx-info.js",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/adapters.js",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/@vite/client",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/chunk-DGUM43GV.js?v=49f7f539",
+          "initiatorType": "script",
+          "transferSize": 0
+        }
+      ],
+      "measuredAt": "2026-10-21T02:00:01.976Z",
+      "scope": "Chromium iframe viewport only",
+      "url": "http://terminal.local:4173/local-yolo/?viewport-test=1",
+      "viewport": {
+        "requested": {
+          "width": "844",
+          "height": "390"
+        },
+        "frame": {
+          "x": 20,
+          "y": 171,
+          "width": 844,
+          "height": 390,
+          "top": 171,
+          "right": 864,
+          "bottom": 561,
+          "left": 20
+        },
+        "innerWidth": 844,
+        "innerHeight": 390,
+        "devicePixelRatio": 1,
+        "visualWidth": 844,
+        "visualHeight": 390
+      },
+      "document": {
+        "clientWidth": 844,
+        "scrollWidth": 844,
+        "clientHeight": 390,
+        "scrollHeight": 390,
+        "bodyScrollWidth": 844,
+        "bodyScrollHeight": 390,
+        "horizontalOverflow": false,
+        "verticalOverflow": false
+      },
+      "state": {
+        "phase": "stopped",
+        "workbenchVisible": true,
+        "fullscreen": false
+      },
+      "stage": {
+        "visible": true,
+        "x": 24,
+        "y": 106,
+        "width": 796,
+        "height": 224,
+        "top": 106,
+        "right": 820,
+        "bottom": 330,
+        "left": 24,
+        "computedHeight": "224px"
+      },
+      "canvas": {
+        "visible": true,
+        "x": 24,
+        "y": 106,
+        "width": 1920,
+        "height": 1279,
+        "top": 106,
+        "right": 820,
+        "bottom": 330,
+        "left": 24,
+        "objectFit": "contain",
+        "objectPosition": "50% 50%",
+        "cssWidth": "796px",
+        "cssHeight": "224px"
+      },
+      "source": {
+        "video": {
+          "videoWidth": 0,
+          "videoHeight": 0,
+          "readyState": 0
+        },
+        "image": {
+          "naturalWidth": 3002,
+          "naturalHeight": 2000
+        }
+      },
+      "targets": {
+        "visibleCount": 12,
+        "below44Count": 0,
+        "items": [
+          {
+            "id": null,
+            "tag": "a",
+            "name": "Local YOLO",
+            "disabled": false,
+            "x": 40,
+            "y": 7,
+            "width": 123.14,
+            "height": 44,
+            "top": 7,
+            "right": 163.14,
+            "bottom": 51,
+            "left": 40,
+            "below44": false
+          },
+          {
+            "id": "switch-model",
+            "tag": "button",
+            "name": "选择模型",
+            "disabled": false,
+            "x": 585.98,
+            "y": 7,
+            "width": 68.02,
+            "height": 44,
+            "top": 7,
+            "right": 654,
+            "bottom": 51,
+            "left": 585.98,
+            "below44": false
+          },
+          {
+            "id": "language-toggle",
+            "tag": "button",
+            "name": "切换为英文",
+            "disabled": false,
+            "x": 664,
+            "y": 7,
+            "width": 44,
+            "height": 44,
+            "top": 7,
+            "right": 708,
+            "bottom": 51,
+            "left": 664,
+            "below44": false
+          },
+          {
+            "id": "theme-toggle",
+            "tag": "button",
+            "name": "切换主题",
+            "disabled": false,
+            "x": 712,
+            "y": 7,
+            "width": 44,
+            "height": 44,
+            "top": 7,
+            "right": 756,
+            "bottom": 51,
+            "left": 712,
+            "below44": false
+          },
+          {
+            "id": "settings-open",
+            "tag": "button",
+            "name": "设置",
+            "disabled": false,
+            "x": 760,
+            "y": 7,
+            "width": 44,
+            "height": 44,
+            "top": 7,
+            "right": 804,
+            "bottom": 51,
+            "left": 760,
+            "below44": false
+          },
+          {
+            "id": "mode-camera",
+            "tag": "button",
+            "name": "摄像头",
+            "disabled": false,
+            "x": 24,
+            "y": 60,
+            "width": 92.02,
+            "height": 44,
+            "top": 60,
+            "right": 116.02,
+            "bottom": 104,
+            "left": 24,
+            "below44": false
+          },
+          {
+            "id": "mode-file",
+            "tag": "button",
+            "name": "上传文件",
+            "disabled": false,
+            "x": 120.02,
+            "y": 60,
+            "width": 105.02,
+            "height": 44,
+            "top": 60,
+            "right": 225.03,
+            "bottom": 104,
+            "left": 120.02,
+            "below44": false
+          },
+          {
+            "id": "choose-file",
+            "tag": "button",
+            "name": "选择图片或视频",
+            "disabled": false,
+            "x": 646.98,
+            "y": 60,
+            "width": 115.02,
+            "height": 44,
+            "top": 60,
+            "right": 762,
+            "bottom": 104,
+            "left": 646.98,
+            "below44": false
+          },
+          {
+            "id": "results-menu-toggle",
+            "tag": "button",
+            "name": "检测结果和导出",
+            "disabled": false,
+            "x": 776,
+            "y": 60,
+            "width": 44,
+            "height": 44,
+            "top": 60,
+            "right": 820,
+            "bottom": 104,
+            "left": 776,
+            "below44": false
+          },
+          {
+            "id": "stage",
+            "tag": "div",
+            "name": "YOLO preview",
+            "disabled": false,
+            "x": 24,
+            "y": 106,
+            "width": 796,
+            "height": 224,
+            "top": 106,
+            "right": 820,
+            "bottom": 330,
+            "left": 24,
+            "below44": false
+          },
+          {
+            "id": "fullscreen-toggle",
+            "tag": "button",
+            "name": "全屏",
+            "disabled": false,
+            "x": 760,
+            "y": 270,
+            "width": 44,
+            "height": 44,
+            "top": 270,
+            "right": 804,
+            "bottom": 314,
+            "left": 760,
+            "below44": false
+          },
+          {
+            "id": "confidence",
+            "tag": "input",
+            "name": "range",
+            "disabled": false,
+            "x": 99.02,
+            "y": 332,
+            "width": 100,
+            "height": 44,
+            "top": 332,
+            "right": 199.02,
+            "bottom": 376,
+            "left": 99.02,
+            "below44": false,
+            "labelTarget": {
+              "width": 217.02,
+              "height": 44
+            },
+            "labelAtLeast44": true
+          }
+        ]
+      }
+    },
+    {
+      "capturedDownloads": [
+        {
+          "filename": "local-yolo-results.json",
+          "observedAt": "2026-10-21T01:59:48.587Z",
+          "status": "pass",
+          "transport": "actual app Blob download; captured by development harness only",
+          "bytes": 1804,
+          "type": "application/json",
+          "sha256": "555254f341ab93c98f511bbbf26b37efa473b639296e55bc48b31abc62c5dbd9",
+          "content": {
+            "model": "yolo26n.onnx",
+            "backend": "WASM",
+            "capturedAt": "2026-10-21T01:59:48.586Z",
+            "task": "detect",
+            "items": [
+              {
+                "box": {
+                  "x": 488.120361328125,
+                  "y": 275.15822778621185,
+                  "width": 948.4405517578125,
+                  "height": 605.9131165625345
+                },
+                "classId": 5,
+                "label": "bus",
+                "score": 0.8839160799980164
+              },
+              {
+                "box": {
+                  "x": 532.6739730834961,
+                  "y": 466.94821840384753,
+                  "width": 225.78456115722656,
+                  "height": 610.7380101736724
+                },
+                "classId": 0,
+                "label": "person",
+                "score": 0.8490615487098694
+              },
+              {
+                "box": {
+                  "x": 1273.4830169677734,
+                  "y": 475.75093830807106,
+                  "width": 170.23452758789062,
+                  "height": 561.9051519402876
+                },
+                "classId": 0,
+                "label": "person",
+                "score": 0.8322793245315552
+              },
+              {
+                "box": {
+                  "x": 743.9870681762695,
+                  "y": 477.4156615208012,
+                  "width": 147.43968200683594,
+                  "height": 543.5562719783871
+                },
+                "classId": 0,
+                "label": "person",
+                "score": 0.7914350032806396
+              },
+              {
+                "box": {
+                  "x": 480.73217010498047,
+                  "y": 698.952443619849,
+                  "width": 81.02174377441406,
+                  "height": 334.203286542579
+                },
+                "classId": 0,
+                "label": "person",
+                "score": 0.48555848002433777
+              }
+            ],
+            "latency": 362,
+            "sourceWidth": 1920,
+            "sourceHeight": 1279,
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1279
+            },
+            "format": "ultralytics-raw",
+            "iouApplicable": true,
+            "coordinateSpace": {
+              "width": 1920,
+              "height": 1279,
+              "originalWidth": 3002,
+              "originalHeight": 2000,
+              "scale": 0.6395736175882745,
+              "scaleX": 0.6395736175882745,
+              "scaleY": 0.6395
+            }
+          }
+        },
+        {
+          "filename": "local-yolo-result.png",
+          "observedAt": "2026-10-21T01:59:48.693Z",
+          "status": "pass",
+          "transport": "actual app Blob download; captured by development harness only",
+          "bytes": 2136157,
+          "type": "image/png",
+          "sha256": "0ae3fdec1a1e6ce8769c5ad82eeef87a921a3002bb6845de7f58f23e90726146",
+          "width": 1920,
+          "height": 1279
+        }
+      ],
+      "resourceRequests": [
+        {
+          "name": "http://terminal.local:4173/local-yolo/@vite/client",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/main.js",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/node_modules/vite/dist/client/env.mjs",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/ui/styles.css",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/catalog.js",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/ui/i18n.js",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/model-cache.js",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/engine-client.js",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/render.js",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/media.js",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/model-manifest.json?import",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/@noble_hashes_sha2__js.js?v=69985b7c",
+          "initiatorType": "script",
+          "transferSize": 0
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/chunk-DGUM43GV.js?v=49f7f539",
+          "initiatorType": "script",
+          "transferSize": 0
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/engine-worker.js?worker_file&type=module",
+          "initiatorType": "other",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/node_modules/vite/dist/client/env.mjs",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/engine.js",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/onnxruntime-web_webgpu.js?v=5b678866",
+          "initiatorType": "script",
+          "transferSize": 0
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/onnx-info.js",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/src/core/adapters.js",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/@vite/client",
+          "initiatorType": "script",
+          "transferSize": 300
+        },
+        {
+          "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/chunk-DGUM43GV.js?v=49f7f539",
+          "initiatorType": "script",
+          "transferSize": 0
+        }
+      ],
+      "measuredAt": "2026-10-21T02:00:04.006Z",
+      "scope": "Chromium iframe viewport only",
+      "url": "http://terminal.local:4173/local-yolo/?viewport-test=1",
+      "viewport": {
+        "requested": {
+          "width": "768",
+          "height": "1024"
+        },
+        "frame": {
+          "x": 20,
+          "y": 171,
+          "width": 768,
+          "height": 1024,
+          "top": 171,
+          "right": 788,
+          "bottom": 1195,
+          "left": 20
+        },
+        "innerWidth": 768,
+        "innerHeight": 1024,
+        "devicePixelRatio": 1,
+        "visualWidth": 768,
+        "visualHeight": 1024
+      },
+      "document": {
+        "clientWidth": 768,
+        "scrollWidth": 768,
+        "clientHeight": 1024,
+        "scrollHeight": 1024,
+        "bodyScrollWidth": 768,
+        "bodyScrollHeight": 1024,
+        "horizontalOverflow": false,
+        "verticalOverflow": false
+      },
+      "state": {
+        "phase": "stopped",
+        "workbenchVisible": true,
+        "fullscreen": false
+      },
+      "stage": {
+        "visible": true,
+        "x": 24,
+        "y": 137,
+        "width": 720,
+        "height": 817,
+        "top": 137,
+        "right": 744,
+        "bottom": 954,
+        "left": 24,
+        "computedHeight": "817px"
+      },
+      "canvas": {
+        "visible": true,
+        "x": 24,
+        "y": 137,
+        "width": 1920,
+        "height": 1279,
+        "top": 137,
+        "right": 744,
+        "bottom": 954,
+        "left": 24,
+        "objectFit": "contain",
+        "objectPosition": "50% 50%",
+        "cssWidth": "720px",
+        "cssHeight": "817px"
+      },
+      "source": {
+        "video": {
+          "videoWidth": 0,
+          "videoHeight": 0,
+          "readyState": 0
+        },
+        "image": {
+          "naturalWidth": 3002,
+          "naturalHeight": 2000
+        }
+      },
+      "targets": {
+        "visibleCount": 12,
+        "below44Count": 0,
+        "items": [
+          {
+            "id": null,
+            "tag": "a",
+            "name": "Local YOLO",
+            "disabled": false,
+            "x": 40,
+            "y": 16,
+            "width": 123.14,
+            "height": 44,
+            "top": 16,
+            "right": 163.14,
+            "bottom": 60,
+            "left": 40,
+            "below44": false
+          },
+          {
+            "id": "switch-model",
+            "tag": "button",
+            "name": "选择模型",
+            "disabled": false,
+            "x": 509.98,
+            "y": 16,
+            "width": 68.02,
+            "height": 44,
+            "top": 16,
+            "right": 578,
+            "bottom": 60,
+            "left": 509.98,
+            "below44": false
+          },
+          {
+            "id": "language-toggle",
+            "tag": "button",
+            "name": "切换为英文",
+            "disabled": false,
+            "x": 588,
+            "y": 16,
+            "width": 44,
+            "height": 44,
+            "top": 16,
+            "right": 632,
+            "bottom": 60,
+            "left": 588,
+            "below44": false
+          },
+          {
+            "id": "theme-toggle",
+            "tag": "button",
+            "name": "切换主题",
+            "disabled": false,
+            "x": 636,
+            "y": 16,
+            "width": 44,
+            "height": 44,
+            "top": 16,
+            "right": 680,
+            "bottom": 60,
+            "left": 636,
+            "below44": false
+          },
+          {
+            "id": "settings-open",
+            "tag": "button",
+            "name": "设置",
+            "disabled": false,
+            "x": 684,
+            "y": 16,
+            "width": 44,
+            "height": 44,
+            "top": 16,
+            "right": 728,
+            "bottom": 60,
+            "left": 684,
+            "below44": false
+          },
+          {
+            "id": "mode-camera",
+            "tag": "button",
+            "name": "摄像头",
+            "disabled": false,
+            "x": 24,
+            "y": 84.5,
+            "width": 92.02,
+            "height": 44,
+            "top": 84.5,
+            "right": 116.02,
+            "bottom": 128.5,
+            "left": 24,
+            "below44": false
+          },
+          {
+            "id": "mode-file",
+            "tag": "button",
+            "name": "上传文件",
+            "disabled": false,
+            "x": 120.02,
+            "y": 84.5,
+            "width": 105.02,
+            "height": 44,
+            "top": 84.5,
+            "right": 225.03,
+            "bottom": 128.5,
+            "left": 120.02,
+            "below44": false
+          },
+          {
+            "id": "choose-file",
+            "tag": "button",
+            "name": "选择图片或视频",
+            "disabled": false,
+            "x": 570.98,
+            "y": 84.5,
+            "width": 115.02,
+            "height": 44,
+            "top": 84.5,
+            "right": 686,
+            "bottom": 128.5,
+            "left": 570.98,
+            "below44": false
+          },
+          {
+            "id": "results-menu-toggle",
+            "tag": "button",
+            "name": "检测结果和导出",
+            "disabled": false,
+            "x": 700,
+            "y": 84.5,
+            "width": 44,
+            "height": 44,
+            "top": 84.5,
+            "right": 744,
+            "bottom": 128.5,
+            "left": 700,
+            "below44": false
+          },
+          {
+            "id": "stage",
+            "tag": "div",
+            "name": "YOLO preview",
+            "disabled": false,
+            "x": 24,
+            "y": 137,
+            "width": 720,
+            "height": 817,
+            "top": 137,
+            "right": 744,
+            "bottom": 954,
+            "left": 24,
+            "below44": false
+          },
+          {
+            "id": "fullscreen-toggle",
+            "tag": "button",
+            "name": "全屏",
+            "disabled": false,
+            "x": 684,
+            "y": 894,
+            "width": 44,
+            "height": 44,
+            "top": 894,
+            "right": 728,
+            "bottom": 938,
+            "left": 684,
+            "below44": false
+          },
+          {
+            "id": "confidence",
+            "tag": "input",
+            "name": "range",
+            "disabled": false,
+            "x": 100.02,
+            "y": 961,
+            "width": 120,
+            "height": 44,
+            "top": 961,
+            "right": 220.02,
+            "bottom": 1005,
+            "left": 100.02,
+            "below44": false,
+            "labelTarget": {
+              "width": 237.02,
+              "height": 44
+            },
+            "labelAtLeast44": true
+          }
+        ]
+      }
+    }
+  ]
+}

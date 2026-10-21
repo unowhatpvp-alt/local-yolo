@@ -2,16 +2,16 @@
   "capturedDownloads": [
     {
       "filename": "local-yolo-results.json",
-      "observedAt": "2026-10-21T01:12:37.329Z",
+      "observedAt": "2026-10-21T01:59:48.587Z",
       "status": "pass",
       "transport": "actual app Blob download; captured by development harness only",
-      "bytes": 1814,
+      "bytes": 1804,
       "type": "application/json",
-      "sha256": "9f08363e47bcfa2ebcb417c7b5b185fc2304a8751f5edc80aa05f734e68d58ca",
+      "sha256": "555254f341ab93c98f511bbbf26b37efa473b639296e55bc48b31abc62c5dbd9",
       "content": {
-        "model": "YOLO26n",
+        "model": "yolo26n.onnx",
         "backend": "WASM",
-        "capturedAt": "2026-10-21T01:12:37.328Z",
+        "capturedAt": "2026-10-21T01:59:48.586Z",
         "task": "detect",
         "items": [
           {
@@ -70,7 +70,7 @@
             "score": 0.48555848002433777
           }
         ],
-        "latency": 268.19999999925494,
+        "latency": 362,
         "sourceWidth": 1920,
         "sourceHeight": 1279,
         "crop": {
@@ -94,7 +94,7 @@
     },
     {
       "filename": "local-yolo-result.png",
-      "observedAt": "2026-10-21T01:12:47.305Z",
+      "observedAt": "2026-10-21T01:59:48.693Z",
       "status": "pass",
       "transport": "actual app Blob download; captured by development harness only",
       "bytes": 2136157,
@@ -121,12 +121,12 @@
       "transferSize": 300
     },
     {
-      "name": "http://terminal.local:4173/local-yolo/src/ui/styles.css?t=1792544116935",
+      "name": "http://terminal.local:4173/local-yolo/src/ui/styles.css",
       "initiatorType": "script",
       "transferSize": 300
     },
     {
-      "name": "http://terminal.local:4173/local-yolo/src/core/catalog.js?t=1792543708909",
+      "name": "http://terminal.local:4173/local-yolo/src/core/catalog.js",
       "initiatorType": "script",
       "transferSize": 300
     },
@@ -141,12 +141,12 @@
       "transferSize": 300
     },
     {
-      "name": "http://terminal.local:4173/local-yolo/src/core/engine-client.js?t=1792543785965",
+      "name": "http://terminal.local:4173/local-yolo/src/core/engine-client.js",
       "initiatorType": "script",
       "transferSize": 300
     },
     {
-      "name": "http://terminal.local:4173/local-yolo/src/core/render.js?t=1792543760872",
+      "name": "http://terminal.local:4173/local-yolo/src/core/render.js",
       "initiatorType": "script",
       "transferSize": 300
     },
@@ -156,17 +156,17 @@
       "transferSize": 300
     },
     {
-      "name": "http://terminal.local:4173/local-yolo/src/core/model-manifest.json?import&t=1792543708888",
+      "name": "http://terminal.local:4173/local-yolo/src/core/model-manifest.json?import",
       "initiatorType": "script",
       "transferSize": 300
     },
     {
-      "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/@noble_hashes_sha2__js.js?v=3b87ae60",
+      "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/@noble_hashes_sha2__js.js?v=69985b7c",
       "initiatorType": "script",
       "transferSize": 0
     },
     {
-      "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/chunk-DGUM43GV.js?v=bb3c34d7",
+      "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/chunk-DGUM43GV.js?v=49f7f539",
       "initiatorType": "script",
       "transferSize": 0
     },
@@ -186,7 +186,7 @@
       "transferSize": 300
     },
     {
-      "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/onnxruntime-web_webgpu.js?v=5cfe98f1",
+      "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/onnxruntime-web_webgpu.js?v=5b678866",
       "initiatorType": "script",
       "transferSize": 0
     },
@@ -206,12 +206,12 @@
       "transferSize": 300
     },
     {
-      "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/chunk-DGUM43GV.js?v=bb3c34d7",
+      "name": "http://terminal.local:4173/local-yolo/node_modules/.vite/deps/chunk-DGUM43GV.js?v=49f7f539",
       "initiatorType": "script",
       "transferSize": 0
     }
   ],
-  "measuredAt": "2026-10-21T01:14:00.902Z",
+  "measuredAt": "2026-10-21T01:59:48.847Z",
   "scope": "Chromium iframe viewport only",
   "url": "http://terminal.local:4173/local-yolo/?viewport-test=1",
   "viewport": {
@@ -289,7 +289,7 @@
     }
   },
   "targets": {
-    "visibleCount": 14,
+    "visibleCount": 12,
     "below44Count": 0,
     "items": [
       {
@@ -425,36 +425,6 @@
         "right": 377,
         "bottom": 123.5,
         "left": 333,
-        "below44": false
-      },
-      {
-        "id": "save-image",
-        "tag": "button",
-        "name": "保存图片",
-        "disabled": false,
-        "x": 194,
-        "y": 136.5,
-        "width": 179,
-        "height": 44,
-        "top": 136.5,
-        "right": 373,
-        "bottom": 180.5,
-        "left": 194,
-        "below44": false
-      },
-      {
-        "id": "save-json",
-        "tag": "button",
-        "name": "导出 JSON",
-        "disabled": false,
-        "x": 194,
-        "y": 180.5,
-        "width": 179,
-        "height": 44,
-        "top": 180.5,
-        "right": 373,
-        "bottom": 224.5,
-        "left": 194,
         "below44": false
       },
       {

@@ -3,7 +3,7 @@ npm warn Unknown env config "http-proxy". This will stop working in the next maj
 > local-yolo@1.1.0 build
 > node scripts/prepare.mjs && vite build && node scripts/finalize-sw.mjs
 
-vite v7.3.1 building client environment for production...
+vite v7.3.7 building client environment for production...
 transforming...
 ✓ 20 modules transformed.
 rendering chunks...
@@ -14,5 +14,5 @@ dist/assets/ort-wasm-simd-threaded.asyncify-BJtBjfiH.wasm  25,499.39 kB │ gzip
 dist/assets/index-BgXhbuy3.css                                 35.39 kB │ gzip:     7.34 kB
 dist/assets/engine-DBoOEBMO.js                                132.85 kB │ gzip:    44.60 kB
 dist/assets/index-CeiFdrkD.js                                 133.84 kB │ gzip:    31.55 kB
-✓ built in 2.05s
+✓ built in 2.47s
 Service worker shell: 15 files, revision 395743021b71

@@ -1,13 +1,13 @@
 {
-  "observedAt": "2026-10-21T01:34:23.005Z",
-  "model": "YOLO26n",
-  "backend": "WASM",
-  "cacheRecognized": "已缓存",
-  "realModelBytes": 9887916,
-  "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
-  "observations": [
-    "Deleted actual YOLO26n cache through app settings; main page changed to first-download state.",
-    "Main download progress visibly displayed0.0MB/9.4MB, then initialized actual WASM.",
-    "Returned to model page: cached recognized; loaded successfully again."
-  ]
+  "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
+  "observation": {
+    "button": "Start",
+    "cached": "Cached",
+    "model": "YOLO26n",
+    "observedAt": "2026-10-21T02:06:11.286Z"
+  },
+  "cameraErrors": {
+    "zh": "当前浏览器不支持摄像头访问，或页面不是 HTTPS 安全环境。你仍然可以上传图片和视频。",
+    "en": "Camera access is unavailable in this browser or insecure context. You can still open images and videos."
+  }
 }

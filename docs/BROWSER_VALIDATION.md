@@ -1,68 +1,88 @@
 # Actual browser validation — Minimal V1.1
 
-**Browser WASM25/25passed; genuine WebGPU0/25tested. Publication is blocked.**
+**Actual browser WASM: 25/25 passed. Actual hardware WebGPU: 0/25 tested; all 25 remain environment-unavailable. Publication is blocked.**
 
-Run `browser-1792545792198-0.4556791088664569` executed on `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36` from 2026-10-21T01:23:12.198Z to 2026-10-21T01:29:36.575Z. Actual HTTP origin: `http://terminal.local:4173/local-yolo/tests/browser-harness.html`. Frozen source: `0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579`. All25models used the normal verified catalog/cache path; no development-only model exception was used.
+Frozen source fingerprint: `ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e`. Matrix run `browser-1792547796612-0.4990128884822652` executed from `2026-10-21T01:56:36.612Z` to `2026-10-21T02:02:55.613Z` (UTC), with ONNX Runtime Web `1.23.2`. Browser: `Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36`. Actual origin: `http://terminal.local:4173/local-yolo/tests/browser-harness.html`. The run completed all 25 required models and was not partial or stopped.
 
-Every row performed SHA/size verification, a real task image, two frames decoded by the actual HTMLVideoElement H.264 decoder at0s/1s, task-specific postprocessing/rendering, PNG pixel-change evidence and worker termination. This is browser execution, separate from the Node/Canvas matrix. Differences in Canvas resampling can change scores; bit-identical predictions across runtimes are not claimed.
+Every model used the normal **verified** catalog/cache path. All 25 had a previously cached model, checked its actual pinned size/SHA-256 before worker transfer, and used no development-only unverified-model exception. The main application's separate fresh download/cache-deletion retest is recorded below; this cached matrix is not presented as 25 fresh network downloads. The preserved [previous 0f995 human report](diagnostics/0f995-BROWSER_VALIDATION.md) retains its old run and measurements.
 
-|Model|Cached before|Image results|Top real prediction|Latency ms|Video counts0s/1s|Changed render pixels|Worker disposed|WebGPU|
-|---|---|---:|---|---:|---|---:|---|---|
-|yolo26-detect-n|yes|5|bus 89.4%|356.9|25/22|37193|yes|unavailable|
-|yolo26-detect-s|yes|5|bus 92.8%|788.9|16/16|39782|yes|unavailable|
-|yolo26-detect-m|yes|5|bus 93.8%|2119.2|15/16|37900|yes|unavailable|
-|yolo26-detect-l|yes|5|bus 93.7%|2875.5|15/17|39274|yes|unavailable|
-|yolo26-detect-x|yes|5|bus 94.1%|6459.3|25/22|38269|yes|unavailable|
-|yolo26-segment-n|yes|5|bus 88.8%|425|16/16|147251|yes|unavailable|
-|yolo26-segment-s|yes|5|bus 91.0%|1102.5|26/20|148704|yes|unavailable|
-|yolo26-segment-m|yes|5|person 91.8%|3737.8|17/16|148171|yes|unavailable|
-|yolo26-segment-l|yes|5|bus 91.0%|4552.3|21/23|148158|yes|unavailable|
-|yolo26-segment-x|yes|5|bus 93.9%|9487.9|16/20|149270|yes|unavailable|
-|yolo26-pose-n|yes|4|person 85.0%|335.2|7/6|38993|yes|unavailable|
-|yolo26-pose-s|yes|4|person 88.6%|873.9|4/4|40202|yes|unavailable|
-|yolo26-pose-m|yes|4|person 87.8%|2272.8|4/3|39978|yes|unavailable|
-|yolo26-pose-l|yes|4|person 89.5%|2917.2|4/2|40326|yes|unavailable|
-|yolo26-pose-x|yes|4|person 91.4%|5927.3|4/2|40548|yes|unavailable|
-|yolo26-classify-n|no|5|goldfish 31.5%|65.7|5/5|8096|yes|unavailable|
-|yolo26-classify-s|no|5|goldfish 98.5%|121.3|5/5|8389|yes|unavailable|
-|yolo26-classify-m|no|5|goldfish 89.6%|276|5/5|8161|yes|unavailable|
-|yolo26-classify-l|no|5|goldfish 99.8%|284.2|5/5|9718|yes|unavailable|
-|yolo26-classify-x|no|5|goldfish 99.0%|558|5/5|8984|yes|unavailable|
-|yolo26-obb-n|yes|172|ship 84.2%|261.9|0/0|132776|yes|unavailable|
-|yolo26-obb-s|yes|163|ship 86.3%|730.5|0/0|126707|yes|unavailable|
-|yolo26-obb-m|yes|181|ship 87.2%|2492|0/2|135779|yes|unavailable|
-|yolo26-obb-l|no|184|ship 88.2%|2914.4|19/15|137384|yes|unavailable|
-|yolo26-obb-x|no|185|ship 88.2%|6076.5|15/20|139318|yes|unavailable|
+## Actual 25-model matrix
 
-The latency numbers are this cloud host under development/concurrent testing, not phone benchmarks. Video may correctly contain no ships for an OBB model. Classification counts are returned classes, not object counts. Raw tensor signatures/finite-value hashes are checked separately in the [Node evidence](model-validation-matrix.json).
+Each row performed a real task image, two real H.264 MP4 frames decoded by HTMLVideoElement at 0s/1s, the corresponding task decoder/renderer, actual PNG pixel-change measurement and worker disposal. Browser execution is separate from the Node/Canvas matrix.
 
-## Actual app checks
+| Model | Cached before | Image results | Top real prediction | Image latency ms | Video results 0s / 1s | Changed render pixels | Client disposed | WebGPU |
+| --- | --- | ---: | --- | ---: | --- | ---: | --- | --- |
+| yolo26-detect-n | yes | 5 | bus 89.4% | 281.3 | 25 / 22 | 37193 | yes | unavailable |
+| yolo26-detect-s | yes | 5 | bus 92.8% | 886.4 | 16 / 16 | 39782 | yes | unavailable |
+| yolo26-detect-m | yes | 5 | bus 93.8% | 2224.3 | 15 / 16 | 37900 | yes | unavailable |
+| yolo26-detect-l | yes | 5 | bus 93.7% | 2895.5 | 15 / 17 | 39274 | yes | unavailable |
+| yolo26-detect-x | yes | 5 | bus 94.1% | 5903.3 | 25 / 22 | 38269 | yes | unavailable |
+| yolo26-segment-n | yes | 5 | bus 88.8% | 409.9 | 16 / 16 | 147251 | yes | unavailable |
+| yolo26-segment-s | yes | 5 | bus 91.0% | 1178.7 | 26 / 20 | 148704 | yes | unavailable |
+| yolo26-segment-m | yes | 5 | person 91.8% | 3919.4 | 17 / 16 | 148171 | yes | unavailable |
+| yolo26-segment-l | yes | 5 | bus 91.0% | 4488.4 | 21 / 23 | 148158 | yes | unavailable |
+| yolo26-segment-x | yes | 5 | bus 93.9% | 9667.4 | 16 / 20 | 149270 | yes | unavailable |
+| yolo26-pose-n | yes | 4 | person 85.0% | 360.9 | 7 / 6 | 38993 | yes | unavailable |
+| yolo26-pose-s | yes | 4 | person 88.6% | 793.2 | 4 / 4 | 40202 | yes | unavailable |
+| yolo26-pose-m | yes | 4 | person 87.8% | 2335.8 | 4 / 3 | 39978 | yes | unavailable |
+| yolo26-pose-l | yes | 4 | person 89.5% | 3273.7 | 4 / 2 | 40326 | yes | unavailable |
+| yolo26-pose-x | yes | 4 | person 91.4% | 6183.1 | 4 / 2 | 40548 | yes | unavailable |
+| yolo26-classify-n | yes | 5 | goldfish 31.5% | 53.6 | 5 / 5 | 8096 | yes | unavailable |
+| yolo26-classify-s | yes | 5 | goldfish 98.5% | 137.5 | 5 / 5 | 8389 | yes | unavailable |
+| yolo26-classify-m | yes | 5 | goldfish 89.6% | 249.2 | 5 / 5 | 8161 | yes | unavailable |
+| yolo26-classify-l | yes | 5 | goldfish 99.8% | 445.7 | 5 / 5 | 9718 | yes | unavailable |
+| yolo26-classify-x | yes | 5 | goldfish 99.0% | 577.1 | 5 / 5 | 8984 | yes | unavailable |
+| yolo26-obb-n | yes | 172 | ship 84.2% | 281.1 | 0 / 0 | 132776 | yes | unavailable |
+| yolo26-obb-s | yes | 163 | ship 86.3% | 753.5 | 0 / 0 | 126707 | yes | unavailable |
+| yolo26-obb-m | yes | 181 | ship 87.2% | 2345.1 | 0 / 2 | 135779 | yes | unavailable |
+| yolo26-obb-l | yes | 184 | ship 88.2% | 3041.6 | 19 / 15 | 137384 | yes | unavailable |
+| yolo26-obb-x | yes | 185 | ship 88.2% | 5953.4 | 15 / 20 | 139318 | yes | unavailable |
 
-- **modelSelection25 — pass:** Actual custom task/size menus selected25distinct YOLO26models andall25launchbuttons were enabled. Evidence: docs/evidence/browser-25-ui-selections.json.
-- **modelSwitching — pass:** Actual app switched online YOLO26n to local yolo26n.onnx, then loaded and inferred the real bus image and MP4; model name, media source and result state changed. Engine matrix independently switches/releases all25.
-- **downloadProgress — pass:** Actual getModel onProgress phase/byte/total/percent observations are preserved per-model in this browser run; cached reads, integrity and cache-write are distinct phases. Initial main UI download and automatic initialization were observed.
-- **cacheRecognition — pass:** Main model page recognized YOLO26n as cached; IndexedDB identifiers and actual cachedBefore flags are recorded per-model.
-- **cachedReload — pass:** Main YOLO26n was reloaded repeatedly from its recognized cache and performed real inference. Every matrix row records its exact cache/download phases and integrity hash.
-- **localOnnxImport — pass:** Actual system picker imported9,887,916-byte YOLO26n ONNX; auto-inspection selected Detection and WASM; real image returned5objects and real video inferred. A128-byte truncated ONNX was rejected with ONNX protobuf is truncated.; no stale initialization message remained. Evidence: docs/evidence/browser-local-import.json.
-- **imageExport — pass:** Actual app export Blob captured without modifying app results or suppressing the browser download: PNG2,136,157bytes,1920x1279, SHA2560ae3fdec1a1e6ce8769c5ad82eeef87a921a3002bb6845de7f58f23e90726146. Evidence: docs/evidence/browser-exports.json.
-- **jsonExport — pass:** Actual JSON download payload1814bytes parsed successfully with5real detections, model/backend and exact coordinateSpace scaleX=.6395736175882745 and scaleY=.6395 for3002x2000→1920x1279. Evidence: docs/evidence/browser-exports.json.
-- **videoPauseReplay — pass:** Real H.264 MP4 auto-detected; play/pause/restart observed. A clearly identified six-repeat derivative of real footage verified fullscreen idle fade, touch restore and independent exit. Actual completed FPS1.0 and232ms were observed on this host under concurrent matrix load, not a phone benchmark. Evidence: browser-video-fullscreen.json and browser-live-performance.json.
-- **fileReplacementCleanup — pass:** Actual image upload was replaced by video: old image Blob URL removed (src=null), video controls and640x360source appeared; core lifecycle tests separately verify Blob revocation and late-stream cleanup.
-- **responsivePhone — pass:** Final-source375x812,390x844,844x390 Chromium iframe layouts have no horizontal or vertical document overflow,0 visible interactive targets below44px, and canvas object-fit contain. Not Safari/device emulation. Evidence: docs/evidence/final-viewports.json.
-- **responsiveTablet — pass:** Final-source768x1024 Chromium iframe has no document overflow,0 visible targets below44px and720x817preview. Evidence: docs/evidence/final-viewports.json.
-- **permissionDeniedOrUnavailable — pass:** Actual HTTP cloud browser reported camera API/insecure-context unavailability with actionable upload fallback in both Chinese and English; no camera feed or detections were fabricated. This does not claim a real permission-denial or physical camera test.
-- **noMediaNetworkRequests — pass:** Observed app Resource Timing entries during real image/video uploads and exports contain application/runtime assets and local Blob resources; no remote media/result request was observed. Source audit finds only public model GET downloads and static/runtime fetches, no telemetry or inference upload endpoint. This is app-scoped observation, not whole-browser packet capture. Evidence: docs/evidence/browser-exports.json and final-viewports.json.
+Image latency is this cloud host's actual measured preprocessing + inference + postprocessing, excluding worker transport, capture and presentation. Concurrent development work can affect these values; they are not phone benchmarks. Canvas resampling can alter scores between browser and Node, so bit-identical predictions are not promised. A zero OBB count on the people video is a retained real result. Classification counts refer to returned class scores, not object counts.
 
-## Backend limits
+EngineClient disposal terminates the worker; it does not expose an underlying ORT session-release promise. The [separate Node evidence](model-validation-matrix.json) records actual awaited ONNX releases and raw tensor signature/finite-value/digest checks. Browser renderer pixel changes are observed; the raw per-render visual-review field remains pending and is not silently promoted here.
 
-The actual browser reports an insecure context, no navigator.gpu and no acquired adapter. Automatic app loading used actual WASM. No hardware WebGPU, GPU operator fallback, iPhone GPU, or Safari compatibility pass is inferred. All25GPU records stay environment-unavailable and fail the release gate.
+## Fourteen fresh application checks
 
-## Observation method
+These current-source checks were recorded at `2026-10-21T02:07:30Z`. They are actual main-application interactions and observations, separate from the engine harness. Their pass scope is the named check: the video-control pass does **not** establish a successful visual idle fade.
 
-The development-only responsive harness observes actual downloaded Blob bytes (including detached download anchors), actual DOM geometry and Resource Timing. It calls the original browser download unchanged. It does not replace model bytes, infer methods, predictions, task rendering, media decoders or backend labels. Public real media fixtures are used; no personal media is uploaded. The matrix and responsive harness are excluded from the production artifact.
+| Check | Recorded result | Actual observation |
+| --- | --- | --- |
+| modelSelection25 | pass | Fresh actual custom menus selected all 25 distinct YOLO26 models and enabled all 25 launch buttons. Evidence: docs/evidence/browser-25-ui-selections.json. |
+| modelSwitching | pass | Fresh actual app switched online YOLO26n to local yolo26n.onnx, inferred real high-resolution bus and H264 video, returned and reloaded online Nano. Matrix independently switched and disposed all 25 workers. |
+| downloadProgress | pass | Fresh actual main controller after cache deletion displayed 0.0/9.4MB through 8.0/9.4MB, measured progress 0→84.36%; automatic WASM initialization then succeeded. Exact timed DOM observations: docs/evidence/browser-ui-download-progress.json. Each matrix row also preserves genuine engine progress. |
+| cacheRecognition | pass | Fresh main page recognized YOLO26n Cached after actual download. All25 matrix rows record real cache/integrity phases. |
+| cachedReload | pass | Fresh actual main cache reload initialized WASM and bus.jpg returned 5 real results; current source online model also reloaded in phone iframe. Evidence: browser-ui-cache-reload.json. |
+| localOnnxImport | pass | Fresh actual system picker imported 9,887,916-byte yolo26n.onnx; auto Detection, WASM,5 real high-res bus results and real video. Truncated128-byte ONNX specifically rejected with ONNX protobuf is truncated. and empty load status. Evidence: browser-local-import.json. |
+| imageExport | pass | Fresh actual PNG download Blob read: 2,136,157bytes,1920x1279,SHA2560ae3fdec1a1e6ce8769c5ad82eeef87a921a3002bb6845de7f58f23e90726146. Original browser download was unchanged. Evidence: browser-exports.json. |
+| jsonExport | pass | Fresh actual local-model JSON download 1804bytes parsed,5 real results, exact scaleX=.6395736175882745 and scaleY=.6395 for3002x2000→1920x1279. Evidence: browser-exports.json. |
+| videoPauseReplay | pass | Fresh actual H264 auto detection/play/pause/restart observed; pause time 1.012994 s, restart advanced to 5.658627 s with 20 real results. Fullscreen fallback state, independent exit, idle state and restoration observed; actual opacity fade remains unconfirmed (opacity 1), not claimed passed. Evidence: browser-video-fullscreen.json. Actual performance 1.0 FPS / 263 ms under this cloud host concurrent test, not phone benchmark. |
+| fileReplacementCleanup | pass | Fresh actual high-res image replaced by real video; prior image src became null, HTMLVideoElement640x360. No old image remained rendered. Core API lifecycle tests separately cover Blob revoke. |
+| responsivePhone | pass | Fresh Chromium iframe 375x812,390x844,844x390 have no horizontal/vertical document overflow,0 visible targets below44px, canvas object-fit contain. This is neither Safari nor physical phone emulation. Evidence: final-viewports.json. |
+| responsiveTablet | pass | Fresh Chromium iframe 768x1024 has no horizontal/vertical document overflow,0 visible targets below44px, contain canvas. Not a physical iPad. Evidence: final-viewports.json. |
+| permissionDeniedOrUnavailable | pass | Fresh actual HTTP environment camera API/insecure-context failure with actionable image/video fallback observed in Chinese and English. No real permission refusal or camera hardware pass is claimed. Evidence: browser-ui-cache-reload.json. |
+| noMediaNetworkRequests | pass | Fresh app Resource Timing during local ONNX, real image/video and exports only lists app/runtime/local Blob assets; no media/results remote request observed. Source audit finds public model GET/static only. App-scoped observation, not whole-browser packet capture. Evidence: browser-exports.json and final-viewports.json. |
 
-Full records: [JSON](browser-validation-matrix.json), [CSV](browser-validation-matrix.csv), [UI comparison](UI_COMPARISON.md), [PWA/device limits](PWA_VALIDATION.md).
+## Fullscreen animation caveat
 
-## Final main-page download/cache retest
+The real video played, paused/restarted and used the fullscreen fallback; the independent exit worked. The toolbar acquired `.is-idle` and interaction cleared that class. However, computed opacity remained `1`, and the cloud screenshot still showed the toolbar. **Actual visual fading is not marked passed.** Confirm the animation/idle appearance in an actual mobile browser before making that claim. This caveat is retained in the video's current observations, not hidden by its play/pause/replay pass. Native fullscreen and physical-device camera behavior remain unverified.
 
-The frozen main UI deleted the actual YOLO26n cache, changed to the first-download state, displayed0.0MB/9.4MB download progress, automatically initialized WASM, then recognized and reloaded its new cache. This directly verifies the production controller path in addition to the engine harness. See [download observation](evidence/browser-ui-download-progress.json) and [cache reload](evidence/browser-ui-cache-reload.json).
+## Backend, camera and PWA limits
+
+The actual context is insecure, `navigator.gpu` is absent and no GPU adapter was acquired. Automatic application loading used actual WASM. Neither hardware WebGPU nor a genuine operator-failure GPU-to-WASM fallback was tested. All 25 GPU rows remain environment-unavailable. Camera feedback was the actual insecure/API-unavailable path; it is not a physical permission-denial/camera pass. Secure service-worker, installed-PWA, offline and two-version update checks remain unavailable.
+
+The current [release-gate result](release-gate-result.json) rejects publication with 37 blockers. There are no current fingerprint, model-scope, Node, browser WASM or named UI-check gate errors. Model scope was not reduced and unavailable environments were not relabelled as passed.
+
+## Console observation
+
+Fresh main-page and phone-view console observations contain **0 product warnings/errors**. The record separately excludes 54 messages attributed to the actual cloud browser extension; these are not counted as product messages. See [the current app-scoped console record](evidence/browser-console-current.json). This does not imply that every browser or physical device has been tested.
+
+## Observation method and artifacts
+
+The development-only matrix and responsive harnesses use real model bytes, image/video decoders, EngineClient inference and the application renderer. The responsive harness observes original Blob downloads, DOM geometry and Resource Timing without replacing inference or suppressing the browser's download. Resource observations are app-scoped and are not a whole-browser packet capture. Only public test fixtures are used. Harnesses, their configuration, model weights and media are excluded from the production artifact.
+
+- Full matrix: [JSON](browser-validation-matrix.json), [CSV](browser-validation-matrix.csv).
+- Main download/cache: [actual progress](evidence/browser-ui-download-progress.json), [cache reload](evidence/browser-ui-cache-reload.json).
+- Import/exports: [local ONNX](evidence/browser-local-import.json), [PNG and JSON](evidence/browser-exports.json).
+- Video/layout: [controls/fullscreen](evidence/browser-video-fullscreen.json), [performance](evidence/browser-live-performance.json), [four viewport measurements](evidence/final-viewports.json).
+- [UI comparison](UI_COMPARISON.md), [PWA and physical-device steps](PWA_VALIDATION.md).

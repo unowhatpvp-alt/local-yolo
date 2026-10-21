@@ -1,9 +1,9 @@
 {
-  "observedAt": "2026-10-21T01:30:11.787Z",
-  "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
-  "fps": "1.0",
-  "latencyMs": "232",
   "backend": "WASM",
+  "fps": "1.0",
+  "latencyMs": "263",
+  "observedAt": "2026-10-21T02:02:29.400Z",
   "videoTime": "0:05 / 0:12",
-  "definition": "Completed real inferences in rolling2s window; latency pre+run+post, no hardware utilization claims."
+  "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
+  "definition": "Completed real inferences in rolling2s window; latency pre+run+post; cloud concurrent host, not phone benchmark."
 }

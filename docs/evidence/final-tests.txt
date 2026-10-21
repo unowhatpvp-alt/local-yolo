@@ -3,48 +3,48 @@ npm warn Unknown env config "http-proxy". This will stop working in the next maj
 > local-yolo@1.1.0 test
 > node --test tests/*.test.mjs
 
-✔ letterbox restores original pixels and digital crop offsets without stretching (2.379709ms)
-✔ class-aware NMS keeps distinct classes and rotated IoU respects angle (0.667497ms)
-✔ two-class raw output [1,6,N] is not confused with NMS rows (1.504249ms)
-✔ unsupported logits, ambiguous outputs and truncation fail with useful errors (1.123745ms)
-✔ raw output boxes and pose keypoints map to the same uncropped source frame (0.967189ms)
-✔ segmentation raster occupies the original source box after letterbox and crop (6.316578ms)
-✔ end-to-end OBB rows retain center xywh geometry instead of detection xyxy (0.821689ms)
-✔ end-to-end pose and segmentation decode task extras for small max_det (2.783469ms)
-✔ inconsistent end-to-end flags, malformed pose shapes and fractional classes are rejected (0.615518ms)
-✔ large standalone model buffers transfer ownership without a second copy (2.022621ms)
-✔ subarray loading preserves unrelated bytes and cancel rejects pending initialization promptly (1.773034ms)
-✔ camera release stops tracks and digital crop remains source-aligned (3.357254ms)
-✔ native zoom constraints preserve full source crop (0.619364ms)
-✔ camera permission failure is actionable in both languages (1.20652ms)
-✔ cancelled camera acquisition releases a late stream (0.47053ms)
-✔ device change continues across release and stops after final dispose (8.973175ms)
-✔ crop and mirror are applied once to actual overlay geometry (1.282655ms)
-✔ real pinned ONNX bytes survive streaming and SHA-256 integrity verification (32.815334ms)
-✔ corrupt real ONNX bytes fail integrity before model initialization (33.425438ms)
-✔ an aborted download does not make a network request (0.518503ms)
-✔ switching uploaded images releases prior blob URLs without storing media (1.096834ms)
-✔ camera hardware disconnect releases stream and notifies UI (0.356778ms)
-✔ precache excludes unsafe and invisible artifact paths (2.202142ms)
-✔ failed installation removes its partial cache (2.3802ms)
-✔ cold offline app root and reserved route use their matching cached documents (4.769475ms)
-✔ runtime resources cache lazily; storage failure does not replace successful network response (3.115098ms)
-✔ external requests, media uploads, and other origin scopes are not intercepted (0.901029ms)
-✔ waiting update requires explicit matching-version activation (1.959595ms)
-✔ activation deletes old caches only in this app scope (1.365089ms)
-✔ build finalizer rejects the historic hidden-file issue and produces deterministic revision (166.698805ms)
-[0;93m2026-10-20 21:10:43.798620 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+✔ letterbox restores original pixels and digital crop offsets without stretching (2.422978ms)
+✔ class-aware NMS keeps distinct classes and rotated IoU respects angle (0.780008ms)
+✔ two-class raw output [1,6,N] is not confused with NMS rows (1.460756ms)
+✔ unsupported logits, ambiguous outputs and truncation fail with useful errors (0.939108ms)
+✔ raw output boxes and pose keypoints map to the same uncropped source frame (0.797444ms)
+✔ segmentation raster occupies the original source box after letterbox and crop (8.261375ms)
+✔ end-to-end OBB rows retain center xywh geometry instead of detection xyxy (0.664744ms)
+✔ end-to-end pose and segmentation decode task extras for small max_det (1.949624ms)
+✔ inconsistent end-to-end flags, malformed pose shapes and fractional classes are rejected (5.299753ms)
+✔ large standalone model buffers transfer ownership without a second copy (2.063817ms)
+✔ subarray loading preserves unrelated bytes and cancel rejects pending initialization promptly (1.885968ms)
+✔ camera release stops tracks and digital crop remains source-aligned (2.857545ms)
+✔ native zoom constraints preserve full source crop (0.513946ms)
+✔ camera permission failure is actionable in both languages (0.889804ms)
+✔ cancelled camera acquisition releases a late stream (0.280543ms)
+✔ device change continues across release and stops after final dispose (7.849553ms)
+✔ crop and mirror are applied once to actual overlay geometry (1.958588ms)
+✔ real pinned ONNX bytes survive streaming and SHA-256 integrity verification (37.636453ms)
+✔ corrupt real ONNX bytes fail integrity before model initialization (41.622723ms)
+✔ an aborted download does not make a network request (0.633857ms)
+✔ switching uploaded images releases prior blob URLs without storing media (1.036014ms)
+✔ camera hardware disconnect releases stream and notifies UI (0.497941ms)
+✔ precache excludes unsafe and invisible artifact paths (2.466885ms)
+✔ failed installation removes its partial cache (2.33786ms)
+✔ cold offline app root and reserved route use their matching cached documents (7.862462ms)
+✔ runtime resources cache lazily; storage failure does not replace successful network response (5.598504ms)
+✔ external requests, media uploads, and other origin scopes are not intercepted (0.897335ms)
+✔ waiting update requires explicit matching-version activation (3.595749ms)
+✔ activation deletes old caches only in this app scope (2.016124ms)
+✔ build finalizer rejects the historic hidden-file issue and produces deterministic revision (176.94496ms)
+[0;93m2026-10-20 21:56:10.400751 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
 REAL_YOLO26_E2E_EVIDENCE [{"task":"detect","shape":[1,300,6],"count":5,"top":[{"label":"bus","score":0.925},{"label":"person","score":0.9154},{"label":"person","score":0.8994}]},{"task":"segment","shape":[1,300,38],"count":4,"top":[{"label":"bus","score":0.9187},{"label":"person","score":0.8947},{"label":"person","score":0.8207}]},{"task":"pose","shape":[1,300,57],"count":4,"top":[{"label":"person","score":0.8868},{"label":"person","score":0.8744},{"label":"person","score":0.8516}]},{"task":"obb","shape":[1,300,7],"count":168,"top":[{"label":"ship","score":0.9263},{"label":"ship","score":0.9111},{"label":"ship","score":0.909}]},{"task":"classify","shape":[1,1000],"count":3,"top":[{"label":"minibus","score":0.8094},{"label":"police_van","score":0.1431},{"label":"trolleybus","score":0.0241}]}]
-✔ genuine YOLO26 N end-to-end exports run all five tasks on real images (5142.493042ms)
-[0;93m2026-10-20 21:10:43.788887 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
-REAL_INFERENCE_EVIDENCE [{"task":"detect","format":"ultralytics-raw","input":[480,640],"count":5,"top":[{"label":"bus","score":0.9275},{"label":"person","score":0.8866},{"label":"person","score":0.8413}],"latency":443.6},{"task":"segment","format":"ultralytics-raw","input":[480,640],"count":5,"top":[{"label":"bus","score":0.8941},{"label":"person","score":0.8612},{"label":"person","score":0.8485}],"latency":418.8},{"task":"pose","format":"ultralytics-raw","input":[480,640],"count":3,"top":[{"label":"person","score":0.8934},{"label":"person","score":0.8805},{"label":"person","score":0.8316}],"latency":299.2},{"task":"classify","format":"ultralytics-classification","input":[480,640],"count":5,"top":[{"label":"police_van","score":0.171},{"label":"moving_van","score":0.0761},{"label":"bullet_train","score":0.0566}],"latency":131.6},{"task":"obb","format":"ultralytics-raw","input":[480,640],"count":167,"top":[{"label":"ship","score":0.8281},{"label":"ship","score":0.8273},{"label":"ship","score":0.8269}],"latency":279.7}]
-✔ real YOLO11 N five task ONNX models initialize and infer real images (5195.114677ms)
-✔ required set is fixed at all five tasks and five YOLO26 sizes (1.399391ms)
-✔ missing actual evidence fails closed rather than inferring passes from model inventory (1.152669ms)
-✔ reduced catalog and stale reports cannot satisfy the release gate (0.464912ms)
-✔ unavailable browser GPU and absent secure PWA evidence stay blockers (0.638423ms)
-✔ development workflow cannot publish and production dispatch is guarded to main (11.146803ms)
-✔ real YOLO26 Nano five-task import, image and decoded-video inference, rendering and release (17286.665503ms)
+✔ genuine YOLO26 N end-to-end exports run all five tasks on real images (5733.455513ms)
+[0;93m2026-10-20 21:56:10.462007 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+REAL_INFERENCE_EVIDENCE [{"task":"detect","format":"ultralytics-raw","input":[480,640],"count":5,"top":[{"label":"bus","score":0.9275},{"label":"person","score":0.8866},{"label":"person","score":0.8413}],"latency":354},{"task":"segment","format":"ultralytics-raw","input":[480,640],"count":5,"top":[{"label":"bus","score":0.8941},{"label":"person","score":0.8612},{"label":"person","score":0.8485}],"latency":431.4},{"task":"pose","format":"ultralytics-raw","input":[480,640],"count":3,"top":[{"label":"person","score":0.8934},{"label":"person","score":0.8805},{"label":"person","score":0.8316}],"latency":348.9},{"task":"classify","format":"ultralytics-classification","input":[480,640],"count":5,"top":[{"label":"police_van","score":0.171},{"label":"moving_van","score":0.0761},{"label":"bullet_train","score":0.0566}],"latency":158.4},{"task":"obb","format":"ultralytics-raw","input":[480,640],"count":167,"top":[{"label":"ship","score":0.8281},{"label":"ship","score":0.8273},{"label":"ship","score":0.8269}],"latency":292.6}]
+✔ real YOLO11 N five task ONNX models initialize and infer real images (5628.862474ms)
+✔ required set is fixed at all five tasks and five YOLO26 sizes (1.233042ms)
+✔ missing actual evidence fails closed rather than inferring passes from model inventory (1.25206ms)
+✔ reduced catalog and stale reports cannot satisfy the release gate (0.392242ms)
+✔ unavailable browser GPU and absent secure PWA evidence stay blockers (1.252231ms)
+✔ development workflow cannot publish and production dispatch is guarded to main (10.808231ms)
+✔ real YOLO26 Nano five-task import, image and decoded-video inference, rendering and release (20138.212717ms)
 ℹ tests 38
 ℹ suites 0
 ℹ pass 38
@@ -52,4 +52,4 @@ REAL_INFERENCE_EVIDENCE [{"task":"detect","format":"ultralytics-raw","input":[48
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 17511.935736
+ℹ duration_ms 20371.267188

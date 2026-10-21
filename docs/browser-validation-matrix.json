@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+  "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
   "run": {
-    "id": "browser-1792545792198-0.4556791088664569",
+    "id": "browser-1792547796612-0.4990128884822652",
     "environment": "browser",
     "backend": "mixed-explicit-per-model",
     "runtimeVersion": "1.23.2",
@@ -10,8 +10,8 @@
     "url": "http://terminal.local:4173/local-yolo/tests/browser-harness.html",
     "secureContext": false,
     "physicalDevice": false,
-    "startedAt": "2026-10-21T01:23:12.198Z",
-    "completedAt": "2026-10-21T01:29:36.575Z",
+    "startedAt": "2026-10-21T01:56:36.612Z",
+    "completedAt": "2026-10-21T02:02:55.613Z",
     "sourceFingerprintConfigUrl": "http://terminal.local:4173/local-yolo/tests/browser-run-config.json",
     "requestedBackend": "WASM",
     "gpuEnvironment": {
@@ -38,9 +38,9 @@
       "browserWasm": {
         "status": "pass",
         "backend": "WASM",
-        "startedAt": "2026-10-21T01:23:12.290Z",
-        "completedAt": "2026-10-21T01:23:15.256Z",
-        "initializeMs": 1703.4,
+        "startedAt": "2026-10-21T01:56:36.716Z",
+        "completedAt": "2026-10-21T01:56:40.936Z",
+        "initializeMs": 2231.6,
         "image": {
           "fixture": {
             "url": "http://terminal.local:4173/local-yolo/tests/fixtures/bus.jpg",
@@ -48,7 +48,7 @@
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 356.9,
+          "latencyMs": 281.3,
           "resultCount": 5,
           "samples": [
             {
@@ -106,7 +106,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 231.7,
+              "latencyMs": 258.9,
               "resultCount": 25,
               "samples": [
                 {
@@ -153,7 +153,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 220,
+              "latencyMs": 231.1,
               "resultCount": 22,
               "samples": [
                 {
@@ -215,14 +215,14 @@
               "received": 0,
               "total": 9887916,
               "cached": true,
-              "observedAt": "2026-10-21T01:23:12.297Z"
+              "observedAt": "2026-10-21T01:56:36.732Z"
             },
             {
               "phase": "ready",
               "received": 9887916,
               "total": 9887916,
               "cached": true,
-              "observedAt": "2026-10-21T01:23:12.454Z"
+              "observedAt": "2026-10-21T01:56:36.909Z"
             }
           ],
           "catalogAvailabilityAtRun": "verified",
@@ -266,7 +266,7 @@
         "reason": "Current page is not a secure context; no hardware WebGPU pass is claimed."
       },
       "progress": "Actual image + two browser-decoded video frames + renderer + cleanup completed",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "error": null
     },
     {
@@ -280,9 +280,9 @@
       "browserWasm": {
         "status": "pass",
         "backend": "WASM",
-        "startedAt": "2026-10-21T01:23:15.267Z",
-        "completedAt": "2026-10-21T01:23:20.850Z",
-        "initializeMs": 1410,
+        "startedAt": "2026-10-21T01:56:40.943Z",
+        "completedAt": "2026-10-21T01:56:47.489Z",
+        "initializeMs": 1397.8,
         "image": {
           "fixture": {
             "url": "http://terminal.local:4173/local-yolo/tests/fixtures/bus.jpg",
@@ -290,7 +290,7 @@
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 788.9,
+          "latencyMs": 886.4,
           "resultCount": 5,
           "samples": [
             {
@@ -348,7 +348,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 726.6,
+              "latencyMs": 754.4,
               "resultCount": 16,
               "samples": [
                 {
@@ -395,7 +395,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 695.9,
+              "latencyMs": 744.8,
               "resultCount": 16,
               "samples": [
                 {
@@ -457,14 +457,14 @@
               "received": 0,
               "total": 38237095,
               "cached": true,
-              "observedAt": "2026-10-21T01:23:15.278Z"
+              "observedAt": "2026-10-21T01:56:40.947Z"
             },
             {
               "phase": "ready",
               "received": 38237095,
               "total": 38237095,
               "cached": true,
-              "observedAt": "2026-10-21T01:23:15.835Z"
+              "observedAt": "2026-10-21T01:56:41.636Z"
             }
           ],
           "catalogAvailabilityAtRun": "verified",
@@ -508,7 +508,7 @@
         "reason": "Current page is not a secure context; no hardware WebGPU pass is claimed."
       },
       "progress": "Actual image + two browser-decoded video frames + renderer + cleanup completed",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "error": null
     },
     {
@@ -522,9 +522,9 @@
       "browserWasm": {
         "status": "pass",
         "backend": "WASM",
-        "startedAt": "2026-10-21T01:23:20.856Z",
-        "completedAt": "2026-10-21T01:23:35.040Z",
-        "initializeMs": 3488.2,
+        "startedAt": "2026-10-21T01:56:47.498Z",
+        "completedAt": "2026-10-21T01:57:03.173Z",
+        "initializeMs": 3594,
         "image": {
           "fixture": {
             "url": "http://terminal.local:4173/local-yolo/tests/fixtures/bus.jpg",
@@ -532,7 +532,7 @@
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 2119.2,
+          "latencyMs": 2224.3,
           "resultCount": 5,
           "samples": [
             {
@@ -590,7 +590,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 2316.3,
+              "latencyMs": 2245.9,
               "resultCount": 15,
               "samples": [
                 {
@@ -637,7 +637,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 2123.5,
+              "latencyMs": 2197.7,
               "resultCount": 16,
               "samples": [
                 {
@@ -699,14 +699,14 @@
               "received": 0,
               "total": 81909133,
               "cached": true,
-              "observedAt": "2026-10-21T01:23:20.860Z"
+              "observedAt": "2026-10-21T01:56:47.503Z"
             },
             {
               "phase": "ready",
               "received": 81909133,
               "total": 81909133,
               "cached": true,
-              "observedAt": "2026-10-21T01:23:22.084Z"
+              "observedAt": "2026-10-21T01:56:48.949Z"
             }
           ],
           "catalogAvailabilityAtRun": "verified",
@@ -750,7 +750,7 @@
         "reason": "Current page is not a secure context; no hardware WebGPU pass is claimed."
       },
       "progress": "Actual image + two browser-decoded video frames + renderer + cleanup completed",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "error": null
     },
     {
@@ -764,9 +764,9 @@
       "browserWasm": {
         "status": "pass",
         "backend": "WASM",
-        "startedAt": "2026-10-21T01:23:35.054Z",
-        "completedAt": "2026-10-21T01:23:51.596Z",
-        "initializeMs": 3873.4,
+        "startedAt": "2026-10-21T01:57:03.181Z",
+        "completedAt": "2026-10-21T01:57:20.079Z",
+        "initializeMs": 3985.6,
         "image": {
           "fixture": {
             "url": "http://terminal.local:4173/local-yolo/tests/fixtures/bus.jpg",
@@ -774,7 +774,7 @@
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 2875.5,
+          "latencyMs": 2895.5,
           "resultCount": 5,
           "samples": [
             {
@@ -832,7 +832,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 2689.7,
+              "latencyMs": 2788.8,
               "resultCount": 15,
               "samples": [
                 {
@@ -879,7 +879,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 2799.5,
+              "latencyMs": 2857.1,
               "resultCount": 17,
               "samples": [
                 {
@@ -941,14 +941,14 @@
               "received": 0,
               "total": 99559195,
               "cached": true,
-              "observedAt": "2026-10-21T01:23:35.061Z"
+              "observedAt": "2026-10-21T01:57:03.196Z"
             },
             {
               "phase": "ready",
               "received": 99559195,
               "total": 99559195,
               "cached": true,
-              "observedAt": "2026-10-21T01:23:36.514Z"
+              "observedAt": "2026-10-21T01:57:04.817Z"
             }
           ],
           "catalogAvailabilityAtRun": "verified",
@@ -992,7 +992,7 @@
         "reason": "Current page is not a secure context; no hardware WebGPU pass is claimed."
       },
       "progress": "Actual image + two browser-decoded video frames + renderer + cleanup completed",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "error": null
     },
     {
@@ -1006,9 +1006,9 @@
       "browserWasm": {
         "status": "pass",
         "backend": "WASM",
-        "startedAt": "2026-10-21T01:23:51.607Z",
-        "completedAt": "2026-10-21T01:24:25.923Z",
-        "initializeMs": 7609.9,
+        "startedAt": "2026-10-21T01:57:20.089Z",
+        "completedAt": "2026-10-21T01:57:55.238Z",
+        "initializeMs": 8091.9,
         "image": {
           "fixture": {
             "url": "http://terminal.local:4173/local-yolo/tests/fixtures/bus.jpg",
@@ -1016,7 +1016,7 @@
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 6459.3,
+          "latencyMs": 5903.3,
           "resultCount": 5,
           "samples": [
             {
@@ -1074,7 +1074,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 5732.4,
+              "latencyMs": 6181.6,
               "resultCount": 25,
               "samples": [
                 {
@@ -1121,7 +1121,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 5734.2,
+              "latencyMs": 5789.8,
               "resultCount": 22,
               "samples": [
                 {
@@ -1183,14 +1183,14 @@
               "received": 0,
               "total": 223233339,
               "cached": true,
-              "observedAt": "2026-10-21T01:23:51.624Z"
+              "observedAt": "2026-10-21T01:57:20.108Z"
             },
             {
               "phase": "ready",
               "received": 223233339,
               "total": 223233339,
               "cached": true,
-              "observedAt": "2026-10-21T01:23:55.023Z"
+              "observedAt": "2026-10-21T01:57:23.934Z"
             }
           ],
           "catalogAvailabilityAtRun": "verified",
@@ -1234,7 +1234,7 @@
         "reason": "Current page is not a secure context; no hardware WebGPU pass is claimed."
       },
       "progress": "Actual image + two browser-decoded video frames + renderer + cleanup completed",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "error": null
     },
     {
@@ -1248,9 +1248,9 @@
       "browserWasm": {
         "status": "pass",
         "backend": "WASM",
-        "startedAt": "2026-10-21T01:24:25.937Z",
-        "completedAt": "2026-10-21T01:24:29.832Z",
-        "initializeMs": 1585.7,
+        "startedAt": "2026-10-21T01:57:55.274Z",
+        "completedAt": "2026-10-21T01:58:00.133Z",
+        "initializeMs": 1488.5,
         "image": {
           "fixture": {
             "url": "http://terminal.local:4173/local-yolo/tests/fixtures/bus.jpg",
@@ -1258,7 +1258,7 @@
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 425,
+          "latencyMs": 409.9,
           "resultCount": 5,
           "samples": [
             {
@@ -1352,7 +1352,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 391.8,
+              "latencyMs": 403.5,
               "resultCount": 16,
               "samples": [
                 {
@@ -1435,7 +1435,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 384.5,
+              "latencyMs": 369.4,
               "resultCount": 16,
               "samples": [
                 {
@@ -1533,14 +1533,14 @@
               "received": 0,
               "total": 11161769,
               "cached": true,
-              "observedAt": "2026-10-21T01:24:25.990Z"
+              "observedAt": "2026-10-21T01:57:55.290Z"
             },
             {
               "phase": "ready",
               "received": 11161769,
               "total": 11161769,
               "cached": true,
-              "observedAt": "2026-10-21T01:24:26.161Z"
+              "observedAt": "2026-10-21T01:57:55.482Z"
             }
           ],
           "catalogAvailabilityAtRun": "verified",
@@ -1595,7 +1595,7 @@
         "reason": "Current page is not a secure context; no hardware WebGPU pass is claimed."
       },
       "progress": "Actual image + two browser-decoded video frames + renderer + cleanup completed",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "error": null
     },
     {
@@ -1609,9 +1609,9 @@
       "browserWasm": {
         "status": "pass",
         "backend": "WASM",
-        "startedAt": "2026-10-21T01:24:29.851Z",
-        "completedAt": "2026-10-21T01:24:38.873Z",
-        "initializeMs": 2411.5,
+        "startedAt": "2026-10-21T01:58:00.152Z",
+        "completedAt": "2026-10-21T01:58:09.291Z",
+        "initializeMs": 2304.6,
         "image": {
           "fixture": {
             "url": "http://terminal.local:4173/local-yolo/tests/fixtures/bus.jpg",
@@ -1619,7 +1619,7 @@
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 1102.5,
+          "latencyMs": 1178.7,
           "resultCount": 5,
           "samples": [
             {
@@ -1713,7 +1713,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 1205,
+              "latencyMs": 1159.6,
               "resultCount": 26,
               "samples": [
                 {
@@ -1796,7 +1796,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 1131.7,
+              "latencyMs": 1241.2,
               "resultCount": 20,
               "samples": [
                 {
@@ -1894,14 +1894,14 @@
               "received": 0,
               "total": 41855456,
               "cached": true,
-              "observedAt": "2026-10-21T01:24:29.865Z"
+              "observedAt": "2026-10-21T01:58:00.166Z"
             },
             {
               "phase": "ready",
               "received": 41855456,
               "total": 41855456,
               "cached": true,
-              "observedAt": "2026-10-21T01:24:30.518Z"
+              "observedAt": "2026-10-21T01:58:00.882Z"
             }
           ],
           "catalogAvailabilityAtRun": "verified",
@@ -1956,7 +1956,7 @@
         "reason": "Current page is not a secure context; no hardware WebGPU pass is claimed."
       },
       "progress": "Actual image + two browser-decoded video frames + renderer + cleanup completed",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "error": null
     },
     {
@@ -1970,9 +1970,9 @@
       "browserWasm": {
         "status": "pass",
         "backend": "WASM",
-        "startedAt": "2026-10-21T01:24:38.894Z",
-        "completedAt": "2026-10-21T01:25:01.086Z",
-        "initializeMs": 4946.6,
+        "startedAt": "2026-10-21T01:58:09.317Z",
+        "completedAt": "2026-10-21T01:58:30.494Z",
+        "initializeMs": 5403.5,
         "image": {
           "fixture": {
             "url": "http://terminal.local:4173/local-yolo/tests/fixtures/bus.jpg",
@@ -1980,7 +1980,7 @@
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 3737.8,
+          "latencyMs": 3919.4,
           "resultCount": 5,
           "samples": [
             {
@@ -2074,7 +2074,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 4057.6,
+              "latencyMs": 3857.1,
               "resultCount": 17,
               "samples": [
                 {
@@ -2157,7 +2157,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 4036.8,
+              "latencyMs": 3704.2,
               "resultCount": 16,
               "samples": [
                 {
@@ -2255,14 +2255,14 @@
               "received": 0,
               "total": 94558924,
               "cached": true,
-              "observedAt": "2026-10-21T01:24:38.903Z"
+              "observedAt": "2026-10-21T01:58:09.323Z"
             },
             {
               "phase": "ready",
               "received": 94558924,
               "total": 94558924,
               "cached": true,
-              "observedAt": "2026-10-21T01:24:40.319Z"
+              "observedAt": "2026-10-21T01:58:11.014Z"
             }
           ],
           "catalogAvailabilityAtRun": "verified",
@@ -2317,7 +2317,7 @@
         "reason": "Current page is not a secure context; no hardware WebGPU pass is claimed."
       },
       "progress": "Actual image + two browser-decoded video frames + renderer + cleanup completed",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "error": null
     },
     {
@@ -2331,9 +2331,9 @@
       "browserWasm": {
         "status": "pass",
         "backend": "WASM",
-        "startedAt": "2026-10-21T01:25:01.116Z",
-        "completedAt": "2026-10-21T01:25:26.357Z",
-        "initializeMs": 6311.1,
+        "startedAt": "2026-10-21T01:58:30.530Z",
+        "completedAt": "2026-10-21T01:58:55.535Z",
+        "initializeMs": 6321.7,
         "image": {
           "fixture": {
             "url": "http://terminal.local:4173/local-yolo/tests/fixtures/bus.jpg",
@@ -2341,7 +2341,7 @@
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 4552.3,
+          "latencyMs": 4488.4,
           "resultCount": 5,
           "samples": [
             {
@@ -2435,7 +2435,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 4332.5,
+              "latencyMs": 4498.9,
               "resultCount": 21,
               "samples": [
                 {
@@ -2518,7 +2518,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 4264,
+              "latencyMs": 4707.9,
               "resultCount": 23,
               "samples": [
                 {
@@ -2616,14 +2616,14 @@
               "received": 0,
               "total": 112208986,
               "cached": true,
-              "observedAt": "2026-10-21T01:25:01.130Z"
+              "observedAt": "2026-10-21T01:58:30.545Z"
             },
             {
               "phase": "ready",
               "received": 112208986,
               "total": 112208986,
               "cached": true,
-              "observedAt": "2026-10-21T01:25:02.979Z"
+              "observedAt": "2026-10-21T01:58:32.631Z"
             }
           ],
           "catalogAvailabilityAtRun": "verified",
@@ -2678,7 +2678,7 @@
         "reason": "Current page is not a secure context; no hardware WebGPU pass is claimed."
       },
       "progress": "Actual image + two browser-decoded video frames + renderer + cleanup completed",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "error": null
     },
     {
@@ -2692,9 +2692,9 @@
       "browserWasm": {
         "status": "pass",
         "backend": "WASM",
-        "startedAt": "2026-10-21T01:25:26.385Z",
-        "completedAt": "2026-10-21T01:26:15.596Z",
-        "initializeMs": 11801.2,
+        "startedAt": "2026-10-21T01:58:55.569Z",
+        "completedAt": "2026-10-21T01:59:46.076Z",
+        "initializeMs": 11875.3,
         "image": {
           "fixture": {
             "url": "http://terminal.local:4173/local-yolo/tests/fixtures/bus.jpg",
@@ -2702,7 +2702,7 @@
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 9487.9,
+          "latencyMs": 9667.4,
           "resultCount": 5,
           "samples": [
             {
@@ -2796,7 +2796,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 9469.2,
+              "latencyMs": 9242.1,
               "resultCount": 16,
               "samples": [
                 {
@@ -2879,7 +2879,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 9129.2,
+              "latencyMs": 9385.1,
               "resultCount": 20,
               "samples": [
                 {
@@ -2977,14 +2977,14 @@
               "received": 0,
               "total": 251623808,
               "cached": true,
-              "observedAt": "2026-10-21T01:25:26.410Z"
+              "observedAt": "2026-10-21T01:58:55.585Z"
             },
             {
               "phase": "ready",
               "received": 251623808,
               "total": 251623808,
               "cached": true,
-              "observedAt": "2026-10-21T01:25:30.044Z"
+              "observedAt": "2026-10-21T01:59:00.037Z"
             }
           ],
           "catalogAvailabilityAtRun": "verified",
@@ -3039,7 +3039,7 @@
         "reason": "Current page is not a secure context; no hardware WebGPU pass is claimed."
       },
       "progress": "Actual image + two browser-decoded video frames + renderer + cleanup completed",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "error": null
     },
     {
@@ -3053,9 +3053,9 @@
       "browserWasm": {
         "status": "pass",
         "backend": "WASM",
-        "startedAt": "2026-10-21T01:26:15.649Z",
-        "completedAt": "2026-10-21T01:26:20.277Z",
-        "initializeMs": 1310.7,
+        "startedAt": "2026-10-21T01:59:46.125Z",
+        "completedAt": "2026-10-21T01:59:50.354Z",
+        "initializeMs": 1463.6,
         "image": {
           "fixture": {
             "url": "http://terminal.local:4173/local-yolo/tests/fixtures/bus.jpg",
@@ -3063,7 +3063,7 @@
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 335.2,
+          "latencyMs": 360.9,
           "resultCount": 4,
           "samples": [
             {
@@ -3388,7 +3388,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 289.4,
+              "latencyMs": 324.1,
               "resultCount": 7,
               "samples": [
                 {
@@ -3702,7 +3702,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 266.1,
+              "latencyMs": 298.4,
               "resultCount": 6,
               "samples": [
                 {
@@ -4031,14 +4031,14 @@
               "received": 0,
               "total": 12044096,
               "cached": true,
-              "observedAt": "2026-10-21T01:26:15.662Z"
+              "observedAt": "2026-10-21T01:59:46.141Z"
             },
             {
               "phase": "ready",
               "received": 12044096,
               "total": 12044096,
               "cached": true,
-              "observedAt": "2026-10-21T01:26:15.842Z"
+              "observedAt": "2026-10-21T01:59:46.380Z"
             }
           ],
           "catalogAvailabilityAtRun": "verified",
@@ -4082,7 +4082,7 @@
         "reason": "Current page is not a secure context; no hardware WebGPU pass is claimed."
       },
       "progress": "Actual image + two browser-decoded video frames + renderer + cleanup completed",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "error": null
     },
     {
@@ -4096,9 +4096,9 @@
       "browserWasm": {
         "status": "pass",
         "backend": "WASM",
-        "startedAt": "2026-10-21T01:26:20.301Z",
-        "completedAt": "2026-10-21T01:26:28.904Z",
-        "initializeMs": 2757.5,
+        "startedAt": "2026-10-21T01:59:50.378Z",
+        "completedAt": "2026-10-21T01:59:57.385Z",
+        "initializeMs": 2019.7,
         "image": {
           "fixture": {
             "url": "http://terminal.local:4173/local-yolo/tests/fixtures/bus.jpg",
@@ -4106,7 +4106,7 @@
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 873.9,
+          "latencyMs": 793.2,
           "resultCount": 4,
           "samples": [
             {
@@ -4431,7 +4431,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 859.3,
+              "latencyMs": 843.5,
               "resultCount": 4,
               "samples": [
                 {
@@ -4745,7 +4745,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 804.2,
+              "latencyMs": 853.3,
               "resultCount": 4,
               "samples": [
                 {
@@ -5074,14 +5074,14 @@
               "received": 0,
               "total": 41777468,
               "cached": true,
-              "observedAt": "2026-10-21T01:26:20.310Z"
+              "observedAt": "2026-10-21T01:59:50.388Z"
             },
             {
               "phase": "ready",
               "received": 41777468,
               "total": 41777468,
               "cached": true,
-              "observedAt": "2026-10-21T01:26:20.943Z"
+              "observedAt": "2026-10-21T01:59:51.084Z"
             }
           ],
           "catalogAvailabilityAtRun": "verified",
@@ -5125,7 +5125,7 @@
         "reason": "Current page is not a secure context; no hardware WebGPU pass is claimed."
       },
       "progress": "Actual image + two browser-decoded video frames + renderer + cleanup completed",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "error": null
     },
     {
@@ -5139,9 +5139,9 @@
       "browserWasm": {
         "status": "pass",
         "backend": "WASM",
-        "startedAt": "2026-10-21T01:26:28.939Z",
-        "completedAt": "2026-10-21T01:26:43.616Z",
-        "initializeMs": 3466,
+        "startedAt": "2026-10-21T01:59:57.417Z",
+        "completedAt": "2026-10-21T02:00:12.669Z",
+        "initializeMs": 3800.9,
         "image": {
           "fixture": {
             "url": "http://terminal.local:4173/local-yolo/tests/fixtures/bus.jpg",
@@ -5149,7 +5149,7 @@
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 2272.8,
+          "latencyMs": 2335.8,
           "resultCount": 4,
           "samples": [
             {
@@ -5474,7 +5474,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 2251.8,
+              "latencyMs": 2347.4,
               "resultCount": 4,
               "samples": [
                 {
@@ -5788,7 +5788,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 2303.6,
+              "latencyMs": 2286.9,
               "resultCount": 3,
               "samples": [
                 {
@@ -6117,14 +6117,14 @@
               "received": 0,
               "total": 86503202,
               "cached": true,
-              "observedAt": "2026-10-21T01:26:28.951Z"
+              "observedAt": "2026-10-21T01:59:57.427Z"
             },
             {
               "phase": "ready",
               "received": 86503202,
               "total": 86503202,
               "cached": true,
-              "observedAt": "2026-10-21T01:26:30.203Z"
+              "observedAt": "2026-10-21T01:59:58.843Z"
             }
           ],
           "catalogAvailabilityAtRun": "verified",
@@ -6168,7 +6168,7 @@
         "reason": "Current page is not a secure context; no hardware WebGPU pass is claimed."
       },
       "progress": "Actual image + two browser-decoded video frames + renderer + cleanup completed",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "error": null
     },
     {
@@ -6182,9 +6182,9 @@
       "browserWasm": {
         "status": "pass",
         "backend": "WASM",
-        "startedAt": "2026-10-21T01:26:43.680Z",
-        "completedAt": "2026-10-21T01:27:00.684Z",
-        "initializeMs": 4025.5,
+        "startedAt": "2026-10-21T02:00:12.715Z",
+        "completedAt": "2026-10-21T02:00:30.946Z",
+        "initializeMs": 4617.9,
         "image": {
           "fixture": {
             "url": "http://terminal.local:4173/local-yolo/tests/fixtures/bus.jpg",
@@ -6192,7 +6192,7 @@
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 2917.2,
+          "latencyMs": 3273.7,
           "resultCount": 4,
           "samples": [
             {
@@ -6517,7 +6517,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 2792.5,
+              "latencyMs": 2906.7,
               "resultCount": 4,
               "samples": [
                 {
@@ -6831,7 +6831,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 2779.3,
+              "latencyMs": 2800.9,
               "resultCount": 2,
               "samples": [
                 {
@@ -7060,14 +7060,14 @@
               "received": 0,
               "total": 104153264,
               "cached": true,
-              "observedAt": "2026-10-21T01:26:43.702Z"
+              "observedAt": "2026-10-21T02:00:12.750Z"
             },
             {
               "phase": "ready",
               "received": 104153264,
               "total": 104153264,
               "cached": true,
-              "observedAt": "2026-10-21T01:26:45.334Z"
+              "observedAt": "2026-10-21T02:00:14.633Z"
             }
           ],
           "catalogAvailabilityAtRun": "verified",
@@ -7111,7 +7111,7 @@
         "reason": "Current page is not a secure context; no hardware WebGPU pass is claimed."
       },
       "progress": "Actual image + two browser-decoded video frames + renderer + cleanup completed",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "error": null
     },
     {
@@ -7125,9 +7125,9 @@
       "browserWasm": {
         "status": "pass",
         "backend": "WASM",
-        "startedAt": "2026-10-21T01:27:00.730Z",
-        "completedAt": "2026-10-21T01:27:33.974Z",
-        "initializeMs": 7216.4,
+        "startedAt": "2026-10-21T02:00:30.997Z",
+        "completedAt": "2026-10-21T02:01:07.082Z",
+        "initializeMs": 7795.4,
         "image": {
           "fixture": {
             "url": "http://terminal.local:4173/local-yolo/tests/fixtures/bus.jpg",
@@ -7135,7 +7135,7 @@
             "width": 810,
             "height": 1080
           },
-          "latencyMs": 5927.3,
+          "latencyMs": 6183.1,
           "resultCount": 4,
           "samples": [
             {
@@ -7460,7 +7460,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 6246.8,
+              "latencyMs": 6388.2,
               "resultCount": 4,
               "samples": [
                 {
@@ -7774,7 +7774,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 6025.9,
+              "latencyMs": 6171.5,
               "resultCount": 2,
               "samples": [
                 {
@@ -8003,14 +8003,14 @@
               "received": 0,
               "total": 230646812,
               "cached": true,
-              "observedAt": "2026-10-21T01:27:00.757Z"
+              "observedAt": "2026-10-21T02:00:31.027Z"
             },
             {
               "phase": "ready",
               "received": 230646812,
               "total": 230646812,
               "cached": true,
-              "observedAt": "2026-10-21T01:27:04.179Z"
+              "observedAt": "2026-10-21T02:00:35.064Z"
             }
           ],
           "catalogAvailabilityAtRun": "verified",
@@ -8054,7 +8054,7 @@
         "reason": "Current page is not a secure context; no hardware WebGPU pass is claimed."
       },
       "progress": "Actual image + two browser-decoded video frames + renderer + cleanup completed",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "error": null
     },
     {
@@ -8068,9 +8068,9 @@
       "browserWasm": {
         "status": "pass",
         "backend": "WASM",
-        "startedAt": "2026-10-21T01:27:34.035Z",
-        "completedAt": "2026-10-21T01:27:38.166Z",
-        "initializeMs": 779.9,
+        "startedAt": "2026-10-21T02:01:07.142Z",
+        "completedAt": "2026-10-21T02:01:10.256Z",
+        "initializeMs": 854.3,
         "image": {
           "fixture": {
             "url": "http://terminal.local:4173/local-yolo/tests/fixtures/yolo26/classification.jpg",
@@ -8078,7 +8078,7 @@
             "width": 160,
             "height": 120
           },
-          "latencyMs": 65.7,
+          "latencyMs": 53.6,
           "resultCount": 5,
           "samples": [
             {
@@ -8118,7 +8118,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 32.6,
+              "latencyMs": 32.3,
               "resultCount": 5,
               "samples": [
                 {
@@ -8147,7 +8147,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 34.4,
+              "latencyMs": 28.5,
               "resultCount": 5,
               "samples": [
                 {
@@ -8183,34 +8183,22 @@
           "source": "https://huggingface.co/prithivMLmods/YOLO26-ONNX/resolve/c526dae7a5a5b4f1d79d704903b4406011da2716/yolo26n-cls/yolo26n-cls.onnx",
           "sha256": "1323630be528baebcaf4d831fde58853d9e70628a78aef898695dedcb070e2f8",
           "bytes": 11293163,
-          "cachedBefore": false,
+          "cachedBefore": true,
           "cacheWarning": null,
           "phases": [
             {
-              "phase": "download",
+              "phase": "cache",
               "received": 0,
               "total": 11293163,
-              "cached": false,
-              "observedAt": "2026-10-21T01:27:34.069Z"
-            },
-            {
-              "phase": "verify",
-              "received": 11293163,
-              "total": 11293163,
-              "observedAt": "2026-10-21T01:27:35.054Z"
-            },
-            {
-              "phase": "cache-write",
-              "received": 11293163,
-              "total": 11293163,
-              "observedAt": "2026-10-21T01:27:35.219Z"
+              "cached": true,
+              "observedAt": "2026-10-21T02:01:07.177Z"
             },
             {
               "phase": "ready",
               "received": 11293163,
               "total": 11293163,
-              "cached": false,
-              "observedAt": "2026-10-21T01:27:35.247Z"
+              "cached": true,
+              "observedAt": "2026-10-21T02:01:07.367Z"
             }
           ],
           "catalogAvailabilityAtRun": "verified",
@@ -8253,7 +8241,7 @@
         "reason": "Current page is not a secure context; no hardware WebGPU pass is claimed."
       },
       "progress": "Actual image + two browser-decoded video frames + renderer + cleanup completed",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "error": null
     },
     {
@@ -8267,9 +8255,9 @@
       "browserWasm": {
         "status": "pass",
         "backend": "WASM",
-        "startedAt": "2026-10-21T01:27:38.214Z",
-        "completedAt": "2026-10-21T01:27:43.345Z",
-        "initializeMs": 859.8,
+        "startedAt": "2026-10-21T02:01:10.312Z",
+        "completedAt": "2026-10-21T02:01:13.420Z",
+        "initializeMs": 1068.3,
         "image": {
           "fixture": {
             "url": "http://terminal.local:4173/local-yolo/tests/fixtures/yolo26/classification.jpg",
@@ -8277,7 +8265,7 @@
             "width": 160,
             "height": 120
           },
-          "latencyMs": 121.3,
+          "latencyMs": 137.5,
           "resultCount": 5,
           "samples": [
             {
@@ -8317,7 +8305,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 93.5,
+              "latencyMs": 81.4,
               "resultCount": 5,
               "samples": [
                 {
@@ -8346,7 +8334,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 78.9,
+              "latencyMs": 84,
               "resultCount": 5,
               "samples": [
                 {
@@ -8382,34 +8370,22 @@
           "source": "https://huggingface.co/prithivMLmods/YOLO26-ONNX/resolve/c526dae7a5a5b4f1d79d704903b4406011da2716/yolo26s-cls/yolo26s-cls.onnx",
           "sha256": "471dc921d6b37c7fc7670adc58b247c5c474dc16b1065b1a150db79ed7de7314",
           "bytes": 26925705,
-          "cachedBefore": false,
+          "cachedBefore": true,
           "cacheWarning": null,
           "phases": [
             {
-              "phase": "download",
+              "phase": "cache",
               "received": 0,
               "total": 26925705,
-              "cached": false,
-              "observedAt": "2026-10-21T01:27:38.254Z"
-            },
-            {
-              "phase": "verify",
-              "received": 26925705,
-              "total": 26925705,
-              "observedAt": "2026-10-21T01:27:39.362Z"
-            },
-            {
-              "phase": "cache-write",
-              "received": 26925705,
-              "total": 26925705,
-              "observedAt": "2026-10-21T01:27:39.786Z"
+              "cached": true,
+              "observedAt": "2026-10-21T02:01:10.351Z"
             },
             {
               "phase": "ready",
               "received": 26925705,
               "total": 26925705,
-              "cached": false,
-              "observedAt": "2026-10-21T01:27:39.847Z"
+              "cached": true,
+              "observedAt": "2026-10-21T02:01:10.809Z"
             }
           ],
           "catalogAvailabilityAtRun": "verified",
@@ -8452,7 +8428,7 @@
         "reason": "Current page is not a secure context; no hardware WebGPU pass is claimed."
       },
       "progress": "Actual image + two browser-decoded video frames + renderer + cleanup completed",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "error": null
     },
     {
@@ -8466,9 +8442,9 @@
       "browserWasm": {
         "status": "pass",
         "backend": "WASM",
-        "startedAt": "2026-10-21T01:27:43.427Z",
-        "completedAt": "2026-10-21T01:27:50.404Z",
-        "initializeMs": 1530.5,
+        "startedAt": "2026-10-21T02:01:13.470Z",
+        "completedAt": "2026-10-21T02:01:19.020Z",
+        "initializeMs": 1181.1,
         "image": {
           "fixture": {
             "url": "http://terminal.local:4173/local-yolo/tests/fixtures/yolo26/classification.jpg",
@@ -8476,7 +8452,7 @@
             "width": 160,
             "height": 120
           },
-          "latencyMs": 276,
+          "latencyMs": 249.2,
           "resultCount": 5,
           "samples": [
             {
@@ -8516,7 +8492,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 223.5,
+              "latencyMs": 212.5,
               "resultCount": 5,
               "samples": [
                 {
@@ -8545,7 +8521,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 227.3,
+              "latencyMs": 215,
               "resultCount": 5,
               "samples": [
                 {
@@ -8581,34 +8557,22 @@
           "source": "https://huggingface.co/prithivMLmods/YOLO26-ONNX/resolve/c526dae7a5a5b4f1d79d704903b4406011da2716/yolo26m-cls/yolo26m-cls.onnx",
           "sha256": "0b9bb0e6fa8e725ffca6b67f658043b90af844951ee217cd4aef83ce60d3f0a9",
           "bytes": 46567573,
-          "cachedBefore": false,
+          "cachedBefore": true,
           "cacheWarning": null,
           "phases": [
             {
-              "phase": "download",
+              "phase": "cache",
               "received": 0,
               "total": 46567573,
-              "cached": false,
-              "observedAt": "2026-10-21T01:27:43.454Z"
-            },
-            {
-              "phase": "verify",
-              "received": 46567573,
-              "total": 46567573,
-              "observedAt": "2026-10-21T01:27:44.924Z"
-            },
-            {
-              "phase": "cache-write",
-              "received": 46567573,
-              "total": 46567573,
-              "observedAt": "2026-10-21T01:27:45.632Z"
+              "cached": true,
+              "observedAt": "2026-10-21T02:01:13.512Z"
             },
             {
               "phase": "ready",
               "received": 46567573,
               "total": 46567573,
-              "cached": false,
-              "observedAt": "2026-10-21T01:27:45.713Z"
+              "cached": true,
+              "observedAt": "2026-10-21T02:01:14.429Z"
             }
           ],
           "catalogAvailabilityAtRun": "verified",
@@ -8651,7 +8615,7 @@
         "reason": "Current page is not a secure context; no hardware WebGPU pass is claimed."
       },
       "progress": "Actual image + two browser-decoded video frames + renderer + cleanup completed",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "error": null
     },
     {
@@ -8665,9 +8629,9 @@
       "browserWasm": {
         "status": "pass",
         "backend": "WASM",
-        "startedAt": "2026-10-21T01:27:50.473Z",
-        "completedAt": "2026-10-21T01:27:57.592Z",
-        "initializeMs": 1311.8,
+        "startedAt": "2026-10-21T02:01:19.058Z",
+        "completedAt": "2026-10-21T02:01:25.232Z",
+        "initializeMs": 1588.9,
         "image": {
           "fixture": {
             "url": "http://terminal.local:4173/local-yolo/tests/fixtures/yolo26/classification.jpg",
@@ -8675,7 +8639,7 @@
             "width": 160,
             "height": 120
           },
-          "latencyMs": 284.2,
+          "latencyMs": 445.7,
           "resultCount": 5,
           "samples": [
             {
@@ -8715,7 +8679,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 268,
+              "latencyMs": 268.7,
               "resultCount": 5,
               "samples": [
                 {
@@ -8744,7 +8708,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 275.9,
+              "latencyMs": 273,
               "resultCount": 5,
               "samples": [
                 {
@@ -8780,34 +8744,22 @@
           "source": "https://huggingface.co/prithivMLmods/YOLO26-ONNX/resolve/c526dae7a5a5b4f1d79d704903b4406011da2716/yolo26l-cls/yolo26l-cls.onnx",
           "sha256": "6c34e63f747b469d748c10212bb1d9d5bd609e84fea5d26881aa6f3716701725",
           "bytes": 56514543,
-          "cachedBefore": false,
+          "cachedBefore": true,
           "cacheWarning": null,
           "phases": [
             {
-              "phase": "download",
+              "phase": "cache",
               "received": 0,
               "total": 56514543,
-              "cached": false,
-              "observedAt": "2026-10-21T01:27:50.497Z"
-            },
-            {
-              "phase": "verify",
-              "received": 56514543,
-              "total": 56514543,
-              "observedAt": "2026-10-21T01:27:51.793Z"
-            },
-            {
-              "phase": "cache-write",
-              "received": 56514543,
-              "total": 56514543,
-              "observedAt": "2026-10-21T01:27:52.711Z"
+              "cached": true,
+              "observedAt": "2026-10-21T02:01:19.075Z"
             },
             {
               "phase": "ready",
               "received": 56514543,
               "total": 56514543,
-              "cached": false,
-              "observedAt": "2026-10-21T01:27:52.854Z"
+              "cached": true,
+              "observedAt": "2026-10-21T02:01:20.029Z"
             }
           ],
           "catalogAvailabilityAtRun": "verified",
@@ -8850,7 +8802,7 @@
         "reason": "Current page is not a secure context; no hardware WebGPU pass is claimed."
       },
       "progress": "Actual image + two browser-decoded video frames + renderer + cleanup completed",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "error": null
     },
     {
@@ -8864,9 +8816,9 @@
       "browserWasm": {
         "status": "pass",
         "backend": "WASM",
-        "startedAt": "2026-10-21T01:27:57.661Z",
-        "completedAt": "2026-10-21T01:28:09.383Z",
-        "initializeMs": 1682.2,
+        "startedAt": "2026-10-21T02:01:25.280Z",
+        "completedAt": "2026-10-21T02:01:34.973Z",
+        "initializeMs": 1776.4,
         "image": {
           "fixture": {
             "url": "http://terminal.local:4173/local-yolo/tests/fixtures/yolo26/classification.jpg",
@@ -8874,7 +8826,7 @@
             "width": 160,
             "height": 120
           },
-          "latencyMs": 558,
+          "latencyMs": 577.1,
           "resultCount": 5,
           "samples": [
             {
@@ -8914,7 +8866,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 574.7,
+              "latencyMs": 605.9,
               "resultCount": 5,
               "samples": [
                 {
@@ -8943,7 +8895,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 579.1,
+              "latencyMs": 604.8,
               "resultCount": 5,
               "samples": [
                 {
@@ -8979,34 +8931,22 @@
           "source": "https://huggingface.co/prithivMLmods/YOLO26-ONNX/resolve/c526dae7a5a5b4f1d79d704903b4406011da2716/yolo26x-cls/yolo26x-cls.onnx",
           "sha256": "2b6f1386dd3d403f62b1cb68896b6ca3827b1157e451af49bc8105454a05ef78",
           "bytes": 118570497,
-          "cachedBefore": false,
+          "cachedBefore": true,
           "cacheWarning": null,
           "phases": [
             {
-              "phase": "download",
+              "phase": "cache",
               "received": 0,
               "total": 118570497,
-              "cached": false,
-              "observedAt": "2026-10-21T01:27:57.685Z"
-            },
-            {
-              "phase": "verify",
-              "received": 118570497,
-              "total": 118570497,
-              "observedAt": "2026-10-21T01:28:00.451Z"
-            },
-            {
-              "phase": "cache-write",
-              "received": 118570497,
-              "total": 118570497,
-              "observedAt": "2026-10-21T01:28:02.298Z"
+              "cached": true,
+              "observedAt": "2026-10-21T02:01:25.300Z"
             },
             {
               "phase": "ready",
               "received": 118570497,
               "total": 118570497,
-              "cached": false,
-              "observedAt": "2026-10-21T01:28:02.639Z"
+              "cached": true,
+              "observedAt": "2026-10-21T02:01:27.333Z"
             }
           ],
           "catalogAvailabilityAtRun": "verified",
@@ -9049,7 +8989,7 @@
         "reason": "Current page is not a secure context; no hardware WebGPU pass is claimed."
       },
       "progress": "Actual image + two browser-decoded video frames + renderer + cleanup completed",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "error": null
     },
     {
@@ -9063,9 +9003,9 @@
       "browserWasm": {
         "status": "pass",
         "backend": "WASM",
-        "startedAt": "2026-10-21T01:28:09.458Z",
-        "completedAt": "2026-10-21T01:28:13.854Z",
-        "initializeMs": 1190.2,
+        "startedAt": "2026-10-21T02:01:35.131Z",
+        "completedAt": "2026-10-21T02:01:38.389Z",
+        "initializeMs": 1440.8,
         "image": {
           "fixture": {
             "url": "http://terminal.local:4173/local-yolo/tests/fixtures/boats.jpg",
@@ -9073,7 +9013,7 @@
             "width": 1920,
             "height": 1080
           },
-          "latencyMs": 261.9,
+          "latencyMs": 281.1,
           "resultCount": 172,
           "samples": [
             {
@@ -9185,7 +9125,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 250.7,
+              "latencyMs": 275.2,
               "resultCount": 0,
               "samples": [],
               "backend": "WASM"
@@ -9198,7 +9138,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 282,
+              "latencyMs": 251.4,
               "resultCount": 0,
               "samples": [],
               "backend": "WASM"
@@ -9226,14 +9166,14 @@
               "received": 0,
               "total": 10008685,
               "cached": true,
-              "observedAt": "2026-10-21T01:28:09.490Z"
+              "observedAt": "2026-10-21T02:01:35.184Z"
             },
             {
               "phase": "ready",
               "received": 10008685,
               "total": 10008685,
               "cached": true,
-              "observedAt": "2026-10-21T01:28:09.643Z"
+              "observedAt": "2026-10-21T02:01:35.398Z"
             }
           ],
           "catalogAvailabilityAtRun": "verified",
@@ -9277,7 +9217,7 @@
         "reason": "Current page is not a secure context; no hardware WebGPU pass is claimed."
       },
       "progress": "Actual image + two browser-decoded video frames + renderer + cleanup completed",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "error": null
     },
     {
@@ -9291,9 +9231,9 @@
       "browserWasm": {
         "status": "pass",
         "backend": "WASM",
-        "startedAt": "2026-10-21T01:28:13.909Z",
-        "completedAt": "2026-10-21T01:28:20.458Z",
-        "initializeMs": 1832.2,
+        "startedAt": "2026-10-21T02:01:38.426Z",
+        "completedAt": "2026-10-21T02:01:45.968Z",
+        "initializeMs": 2267.9,
         "image": {
           "fixture": {
             "url": "http://terminal.local:4173/local-yolo/tests/fixtures/boats.jpg",
@@ -9301,7 +9241,7 @@
             "width": 1920,
             "height": 1080
           },
-          "latencyMs": 730.5,
+          "latencyMs": 753.5,
           "resultCount": 163,
           "samples": [
             {
@@ -9413,7 +9353,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 794.7,
+              "latencyMs": 826.9,
               "resultCount": 0,
               "samples": [],
               "backend": "WASM"
@@ -9426,7 +9366,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 742.3,
+              "latencyMs": 770.6,
               "resultCount": 0,
               "samples": [],
               "backend": "WASM"
@@ -9454,14 +9394,14 @@
               "received": 0,
               "total": 39239617,
               "cached": true,
-              "observedAt": "2026-10-21T01:28:13.930Z"
+              "observedAt": "2026-10-21T02:01:38.446Z"
             },
             {
               "phase": "ready",
               "received": 39239617,
               "total": 39239617,
               "cached": true,
-              "observedAt": "2026-10-21T01:28:14.627Z"
+              "observedAt": "2026-10-21T02:01:39.124Z"
             }
           ],
           "catalogAvailabilityAtRun": "verified",
@@ -9505,7 +9445,7 @@
         "reason": "Current page is not a secure context; no hardware WebGPU pass is claimed."
       },
       "progress": "Actual image + two browser-decoded video frames + renderer + cleanup completed",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "error": null
     },
     {
@@ -9519,9 +9459,9 @@
       "browserWasm": {
         "status": "pass",
         "backend": "WASM",
-        "startedAt": "2026-10-21T01:28:20.500Z",
-        "completedAt": "2026-10-21T01:28:35.647Z",
-        "initializeMs": 3570.5,
+        "startedAt": "2026-10-21T02:01:46.067Z",
+        "completedAt": "2026-10-21T02:02:00.986Z",
+        "initializeMs": 3350.3,
         "image": {
           "fixture": {
             "url": "http://terminal.local:4173/local-yolo/tests/fixtures/boats.jpg",
@@ -9529,7 +9469,7 @@
             "width": 1920,
             "height": 1080
           },
-          "latencyMs": 2492,
+          "latencyMs": 2345.1,
           "resultCount": 181,
           "samples": [
             {
@@ -9641,7 +9581,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 2490.1,
+              "latencyMs": 2380.2,
               "resultCount": 0,
               "samples": [],
               "backend": "WASM"
@@ -9654,7 +9594,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 2328.6,
+              "latencyMs": 2397.1,
               "resultCount": 2,
               "samples": [
                 {
@@ -9741,14 +9681,14 @@
               "received": 0,
               "total": 85061671,
               "cached": true,
-              "observedAt": "2026-10-21T01:28:20.548Z"
+              "observedAt": "2026-10-21T02:01:46.096Z"
             },
             {
               "phase": "ready",
               "received": 85061671,
               "total": 85061671,
               "cached": true,
-              "observedAt": "2026-10-21T01:28:21.839Z"
+              "observedAt": "2026-10-21T02:01:47.562Z"
             }
           ],
           "catalogAvailabilityAtRun": "verified",
@@ -9792,7 +9732,7 @@
         "reason": "Current page is not a secure context; no hardware WebGPU pass is claimed."
       },
       "progress": "Actual image + two browser-decoded video frames + renderer + cleanup completed",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "error": null
     },
     {
@@ -9806,9 +9746,9 @@
       "browserWasm": {
         "status": "pass",
         "backend": "WASM",
-        "startedAt": "2026-10-21T01:28:35.707Z",
-        "completedAt": "2026-10-21T01:28:55.261Z",
-        "initializeMs": 4231.6,
+        "startedAt": "2026-10-21T02:02:01.049Z",
+        "completedAt": "2026-10-21T02:02:20.217Z",
+        "initializeMs": 4147.8,
         "image": {
           "fixture": {
             "url": "http://terminal.local:4173/local-yolo/tests/fixtures/boats.jpg",
@@ -9816,7 +9756,7 @@
             "width": 1920,
             "height": 1080
           },
-          "latencyMs": 2914.4,
+          "latencyMs": 3041.6,
           "resultCount": 184,
           "samples": [
             {
@@ -9928,7 +9868,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 2816.4,
+              "latencyMs": 3138.8,
               "resultCount": 19,
               "samples": [
                 {
@@ -10029,7 +9969,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 2963.5,
+              "latencyMs": 3145.3,
               "resultCount": 15,
               "samples": [
                 {
@@ -10137,34 +10077,22 @@
           "source": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26l-obb.onnx",
           "sha256": "ec66f909ec3d086556918b1727923ebcfa8675b3140a65bd96bae9c7cbc0dfd8",
           "bytes": 102711733,
-          "cachedBefore": false,
+          "cachedBefore": true,
           "cacheWarning": null,
           "phases": [
             {
-              "phase": "download",
+              "phase": "cache",
               "received": 0,
               "total": 102711733,
-              "cached": false,
-              "observedAt": "2026-10-21T01:28:35.744Z"
-            },
-            {
-              "phase": "verify",
-              "received": 102711733,
-              "total": 102711733,
-              "observedAt": "2026-10-21T01:28:38.070Z"
-            },
-            {
-              "phase": "cache-write",
-              "received": 102711733,
-              "total": 102711733,
-              "observedAt": "2026-10-21T01:28:39.566Z"
+              "cached": true,
+              "observedAt": "2026-10-21T02:02:01.088Z"
             },
             {
               "phase": "ready",
               "received": 102711733,
               "total": 102711733,
-              "cached": false,
-              "observedAt": "2026-10-21T01:28:39.737Z"
+              "cached": true,
+              "observedAt": "2026-10-21T02:02:02.810Z"
             }
           ],
           "catalogAvailabilityAtRun": "verified",
@@ -10208,7 +10136,7 @@
         "reason": "Current page is not a secure context; no hardware WebGPU pass is claimed."
       },
       "progress": "Actual image + two browser-decoded video frames + renderer + cleanup completed",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "error": null
     },
     {
@@ -10222,9 +10150,9 @@
       "browserWasm": {
         "status": "pass",
         "backend": "WASM",
-        "startedAt": "2026-10-21T01:28:55.319Z",
-        "completedAt": "2026-10-21T01:29:36.485Z",
-        "initializeMs": 7894.6,
+        "startedAt": "2026-10-21T02:02:20.315Z",
+        "completedAt": "2026-10-21T02:02:55.540Z",
+        "initializeMs": 7329.9,
         "image": {
           "fixture": {
             "url": "http://terminal.local:4173/local-yolo/tests/fixtures/boats.jpg",
@@ -10232,7 +10160,7 @@
             "width": 1920,
             "height": 1080
           },
-          "latencyMs": 6076.5,
+          "latencyMs": 5953.4,
           "resultCount": 185,
           "samples": [
             {
@@ -10344,7 +10272,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 6523.9,
+              "latencyMs": 6129.3,
               "resultCount": 15,
               "samples": [
                 {
@@ -10445,7 +10373,7 @@
                 "width": 640,
                 "height": 360
               },
-              "latencyMs": 6510.1,
+              "latencyMs": 6256.9,
               "resultCount": 20,
               "samples": [
                 {
@@ -10553,34 +10481,22 @@
           "source": "https://huggingface.co/unileon-robotics/YOLO26-ONNX/resolve/e046fc5125ee6b579f1801f0b6df68a60b949c42/yolo26x-obb.onnx",
           "sha256": "565c3c7f1611027b509d6df2b81a8abbb2d3f3b004f84c17607545394458bfec",
           "bytes": 230526559,
-          "cachedBefore": false,
+          "cachedBefore": true,
           "cacheWarning": null,
           "phases": [
             {
-              "phase": "download",
+              "phase": "cache",
               "received": 0,
               "total": 230526559,
-              "cached": false,
-              "observedAt": "2026-10-21T01:28:55.365Z"
-            },
-            {
-              "phase": "verify",
-              "received": 230526559,
-              "total": 230526559,
-              "observedAt": "2026-10-21T01:28:59.800Z"
-            },
-            {
-              "phase": "cache-write",
-              "received": 230526559,
-              "total": 230526559,
-              "observedAt": "2026-10-21T01:29:03.016Z"
+              "cached": true,
+              "observedAt": "2026-10-21T02:02:20.373Z"
             },
             {
               "phase": "ready",
               "received": 230526559,
               "total": 230526559,
-              "cached": false,
-              "observedAt": "2026-10-21T01:29:04.118Z"
+              "cached": true,
+              "observedAt": "2026-10-21T02:02:24.333Z"
             }
           ],
           "catalogAvailabilityAtRun": "verified",
@@ -10624,7 +10540,7 @@
         "reason": "Current page is not a secure context; no hardware WebGPU pass is claimed."
       },
       "progress": "Actual image + two browser-decoded video frames + renderer + cleanup completed",
-      "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
+      "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
       "error": null
     }
   ],
@@ -10632,95 +10548,105 @@
     "modelSelection25": {
       "status": "pass",
       "observations": [
-        "Actual custom task/size menus selected25distinct YOLO26models andall25launchbuttons were enabled. Evidence: docs/evidence/browser-25-ui-selections.json."
-      ]
+        "Fresh actual custom menus selected all25 distinct YOLO26 models and enabled all25 launch buttons. Evidence: docs/evidence/browser-25-ui-selections.json."
+      ],
+      "observedAt": "2026-10-21T02:07:30Z"
     },
     "modelSwitching": {
       "status": "pass",
       "observations": [
-        "Actual app switched online YOLO26n to local yolo26n.onnx, then loaded and inferred the real bus image and MP4; model name, media source and result state changed. Engine matrix independently switches/releases all25."
-      ]
+        "Fresh actual app switched online YOLO26n to local yolo26n.onnx, inferred real high-resolution bus and H264 video, returned and reloaded online Nano. Matrix independently switched and disposed all25 workers."
+      ],
+      "observedAt": "2026-10-21T02:07:30Z"
     },
     "downloadProgress": {
       "status": "pass",
       "observations": [
-        "Actual getModel onProgress phase/byte/total/percent observations are preserved per-model in this browser run; cached reads, integrity and cache-write are distinct phases. Initial main UI download and automatic initialization were observed.",
-        "Final-source main UI was tested after deleting YOLO26n cache: first-download state, visible0.0MB/9.4MB progress, automatic real WASM initialization. Evidence: docs/evidence/browser-ui-download-progress.json."
-      ]
+        "Fresh actual main controller after cache deletion displayed 0.0/9.4MB through8.0/9.4MB, measured progress0\u219284.36%; automatic WASM initialization then succeeded. Exact timed DOM observations: docs/evidence/browser-ui-download-progress.json. Each matrix row also preserves genuine engine progress."
+      ],
+      "observedAt": "2026-10-21T02:07:30Z"
     },
     "cacheRecognition": {
       "status": "pass",
       "observations": [
-        "Main model page recognized YOLO26n as cached; IndexedDB identifiers and actual cachedBefore flags are recorded per-model.",
-        "Actual settings removed YOLO26n and prior test YOLO11n rows, without affecting other cached models; the YOLO26n was then re-downloaded."
-      ]
+        "Fresh main page recognized YOLO26n Cached after actual download. All25 matrix rows record real cache/integrity phases."
+      ],
+      "observedAt": "2026-10-21T02:07:30Z"
     },
     "cachedReload": {
       "status": "pass",
       "observations": [
-        "Main YOLO26n was reloaded repeatedly from its recognized cache and performed real inference. Every matrix row records its exact cache/download phases and integrity hash.",
-        "After that fresh download, main model page showed已缓存 and initialized actualWASM again. Evidence: docs/evidence/browser-ui-cache-reload.json."
-      ]
+        "Fresh actual main cache reload initialized WASM and bus.jpg returned5 real results; current source online model also reloaded in phone iframe. Evidence: browser-ui-cache-reload.json."
+      ],
+      "observedAt": "2026-10-21T02:07:30Z"
     },
     "localOnnxImport": {
       "status": "pass",
       "observations": [
-        "Actual system picker imported9,887,916-byte YOLO26n ONNX; auto-inspection selected Detection and WASM; real image returned5objects and real video inferred. A128-byte truncated ONNX was rejected with ONNX protobuf is truncated.; no stale initialization message remained. Evidence: docs/evidence/browser-local-import.json."
-      ]
+        "Fresh actual system picker imported9,887,916-byte yolo26n.onnx; auto Detection, WASM,5 real high-res bus results and real video. Truncated128-byte ONNX specifically rejected with ONNX protobuf is truncated. and empty load status. Evidence: browser-local-import.json."
+      ],
+      "observedAt": "2026-10-21T02:07:30Z"
     },
     "imageExport": {
       "status": "pass",
       "observations": [
-        "Actual app export Blob captured without modifying app results or suppressing the browser download: PNG2,136,157bytes,1920x1279, SHA2560ae3fdec1a1e6ce8769c5ad82eeef87a921a3002bb6845de7f58f23e90726146. Evidence: docs/evidence/browser-exports.json."
-      ]
+        "Fresh actual PNG download Blob read:2,136,157bytes,1920x1279,SHA2560ae3fdec1a1e6ce8769c5ad82eeef87a921a3002bb6845de7f58f23e90726146. Original browser download was unchanged. Evidence: browser-exports.json."
+      ],
+      "observedAt": "2026-10-21T02:07:30Z"
     },
     "jsonExport": {
       "status": "pass",
       "observations": [
-        "Actual JSON download payload1814bytes parsed successfully with5real detections, model/backend and exact coordinateSpace scaleX=.6395736175882745 and scaleY=.6395 for3002x2000→1920x1279. Evidence: docs/evidence/browser-exports.json."
-      ]
+        "Fresh actual local-model JSON download1804bytes parsed,5 real results, exact scaleX=.6395736175882745 and scaleY=.6395 for3002x2000\u21921920x1279. Evidence: browser-exports.json."
+      ],
+      "observedAt": "2026-10-21T02:07:30Z"
     },
     "videoPauseReplay": {
       "status": "pass",
       "observations": [
-        "Real H.264 MP4 auto-detected; play/pause/restart observed. A clearly identified six-repeat derivative of real footage verified fullscreen idle fade, touch restore and independent exit. Actual completed FPS1.0 and232ms were observed on this host under concurrent matrix load, not a phone benchmark. Evidence: browser-video-fullscreen.json and browser-live-performance.json."
-      ]
+        "Fresh actual H264 auto detection/play/pause/restart observed; pause time1.012994s, restart advanced to5.658627s with20 real results. Fullscreen fallback state, independent exit, idle state and restoration observed; actual opacity fade remains unconfirmed (opacity1), not claimed passed. Evidence: browser-video-fullscreen.json. Actual performance1.0FPS/263ms under this cloud host concurrent test, not phone benchmark."
+      ],
+      "observedAt": "2026-10-21T02:07:30Z"
     },
     "fileReplacementCleanup": {
       "status": "pass",
       "observations": [
-        "Actual image upload was replaced by video: old image Blob URL removed (src=null), video controls and640x360source appeared; core lifecycle tests separately verify Blob revocation and late-stream cleanup."
-      ]
+        "Fresh actual high-res image replaced by real video; prior image src became null, HTMLVideoElement640x360. No old image remained rendered. Core API lifecycle tests separately cover Blob revoke."
+      ],
+      "observedAt": "2026-10-21T02:07:30Z"
     },
     "responsivePhone": {
       "status": "pass",
       "observations": [
-        "Final-source375x812,390x844,844x390 Chromium iframe layouts have no horizontal or vertical document overflow,0 visible interactive targets below44px, and canvas object-fit contain. Not Safari/device emulation. Evidence: docs/evidence/final-viewports.json."
-      ]
+        "Fresh Chromium iframe375x812,390x844,844x390 have no horizontal/vertical document overflow,0 visible targets below44px, canvas object-fit contain. This is neither Safari nor physical phone emulation. Evidence: final-viewports.json."
+      ],
+      "observedAt": "2026-10-21T02:07:30Z"
     },
     "responsiveTablet": {
       "status": "pass",
       "observations": [
-        "Final-source768x1024 Chromium iframe has no document overflow,0 visible targets below44px and720x817preview. Evidence: docs/evidence/final-viewports.json."
-      ]
+        "Fresh Chromium iframe768x1024 has no horizontal/vertical document overflow,0 visible targets below44px, contain canvas. Not a physical iPad. Evidence: final-viewports.json."
+      ],
+      "observedAt": "2026-10-21T02:07:30Z"
     },
     "permissionDeniedOrUnavailable": {
       "status": "pass",
       "observations": [
-        "Actual HTTP cloud browser reported camera API/insecure-context unavailability with actionable upload fallback in both Chinese and English; no camera feed or detections were fabricated. This does not claim a real permission-denial or physical camera test."
-      ]
+        "Fresh actual HTTP environment camera API/insecure-context failure with actionable image/video fallback observed in Chinese and English. No real permission refusal or camera hardware pass is claimed. Evidence: browser-ui-cache-reload.json."
+      ],
+      "observedAt": "2026-10-21T02:07:30Z"
     },
     "noMediaNetworkRequests": {
       "status": "pass",
       "observations": [
-        "Observed app Resource Timing entries during real image/video uploads and exports contain application/runtime assets and local Blob resources; no remote media/result request was observed. Source audit finds only public model GET downloads and static/runtime fetches, no telemetry or inference upload endpoint. This is app-scoped observation, not whole-browser packet capture. Evidence: docs/evidence/browser-exports.json and final-viewports.json."
-      ]
+        "Fresh app Resource Timing during local ONNX, real image/video and exports only lists app/runtime/local Blob assets; no media/results remote request observed. Source audit finds public model GET/static only. App-scoped observation, not whole-browser packet capture. Evidence: browser-exports.json and final-viewports.json."
+      ],
+      "observedAt": "2026-10-21T02:07:30Z"
     }
   },
   "coverage": "Actual browser EngineClient/model-cache/renderer matrix. Secure PWA and physical device checks are separate. No mocked inference or backend labels.",
-  "uiCheckRun": {
-    "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
-    "completedAt": "2026-10-21T01:31:51.394Z",
-    "method": "Actual cloud browser interaction, real ONNX/media, DOM and development-only Blob/Resource Timing observation; no mocked inference."
-  }
+  "uiObservationsCompletedAt": "2026-10-21T02:07:30Z",
+  "uiCaveats": [
+    "Fullscreen idle class activates and restores; this cloud Chromium capture still reports opacity1 and visible controls, so visual fade is unconfirmed and requires follow-up before release. Native/physical fullscreen remains unverified."
+  ]
 }
