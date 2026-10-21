@@ -1,8 +1,8 @@
-# Local YOLO — Minimal V1.1 release candidate
+# Local YOLO — Minimal V1.1
 
 A browser-only YOLO vision workbench for GitHub Pages. Camera frames, uploaded images/videos and inference results stay on the device. There is no inference backend, account, analytics or API key. Public model downloads require a network connection; ONNX Runtime Web is bundled with the static app.
 
-**Candidate status, 2026-10-21:** fresh Node WASM **25/25**, built-in Chrome 155 WASM **25/25**, and genuine NVIDIA Blackwell hardware WebGPU **25/25** passed. All **14 application interaction checks**, six responsive viewports and four Chromium-emulated touch checks passed. Touch emulation does not certify physical phones. Automated tests: **56 passed, no failures or skips**. Secure-context PWA integration is **11/11**. The strict local release gate, six static-artifact checks and a reproducible production build passed. **Local release preparation is complete; GitHub CI, final commit, Pages publication and live acceptance remain pending.** See [current validation](docs/VALIDATION.md) and [delivery status](docs/DELIVERY.md).
+**Application validation, 2026-10-21:** fresh Node WASM **25/25**, built-in Chrome 155 WASM **25/25**, and genuine NVIDIA Blackwell hardware WebGPU **25/25** passed. All **14 application interaction checks**, six responsive viewports and four Chromium-emulated touch checks passed. Touch emulation does not certify physical phones. Local automated tests: **56 passed, no failures or skips**. Secure-context PWA integration is **11/11**. The strict local release gate, six static-artifact checks and a reproducible production build passed. **Local release validation passed. The first release commit, exact CI results, Pages run and live observations are recorded in the [release receipt](docs/DELIVERY.md).** See [current validation](docs/VALIDATION.md) and [delivery status](docs/DELIVERY.md).
 
 Application/model fingerprint: `3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c`.
 
@@ -79,7 +79,7 @@ Current evidence: [Node JSON](docs/model-validation-matrix.json), [browser JSON 
 
 ## Release protection and reserved workspaces
 
-Work is isolated on `codex/minimal-v1-release`. The preserved V1 baseline is `2cea0ebebd3399a77a2d649c44755e54ca0e16b0`, also kept on `backup/minimal-v1-2cea0eb`. Only a passing gated workflow on `main` may deploy Pages. Final release/deployment status will be recorded in [DELIVERY](docs/DELIVERY.md); the current candidate is not a deployment confirmation.
+Implementation was isolated on `codex/minimal-v1-release` and merged through its reviewed PR. The preserved V1 baseline is `2cea0ebebd3399a77a2d649c44755e54ca0e16b0`, also kept on `backup/minimal-v1-2cea0eb`. Only a passing gated workflow on `main` may deploy Pages. The first application release/deployment receipt is recorded in [DELIVERY](docs/DELIVERY.md), with its exact tested commit and observations.
 
 `/local-yolo/` is the Minimal inference app. `/studio/`, `/experimental-training/` and `/studio/experimental-training/` remain reserved development pages; they do not implement a finished studio or training product and are outside this version's scope. The inference core remains independent of the UI.
 

@@ -1,0 +1,83 @@
+{
+  "model": "YOLO26n",
+  "backend": "WASM",
+  "capturedAt": "2026-10-21T21:41:39.435Z",
+  "task": "detect",
+  "items": [
+    {
+      "box": {
+        "x": 24.52042007446289,
+        "y": 229.06035804748535,
+        "width": 780.3156967163086,
+        "height": 511.1934013366699
+      },
+      "classId": 5,
+      "label": "bus",
+      "score": 0.8942639827728271
+    },
+    {
+      "box": {
+        "x": 51.42228126525879,
+        "y": 397.4720649719238,
+        "width": 178.32880783081055,
+        "height": 509.1437301635742
+      },
+      "classId": 0,
+      "label": "person",
+      "score": 0.8381884098052979
+    },
+    {
+      "box": {
+        "x": 670.9784545898438,
+        "y": 389.0258102416992,
+        "width": 139.02154541015625,
+        "height": 488.88995361328125
+      },
+      "classId": 0,
+      "label": "person",
+      "score": 0.8239372372627258
+    },
+    {
+      "box": {
+        "x": 223.2846221923828,
+        "y": 402.3258934020996,
+        "width": 121.66355895996094,
+        "height": 457.9544448852539
+      },
+      "classId": 0,
+      "label": "person",
+      "score": 0.7895424365997314
+    },
+    {
+      "box": {
+        "x": 0.11775970458984375,
+        "y": 575.9250869750977,
+        "width": 62.38854217529297,
+        "height": 294.427001953125
+      },
+      "classId": 0,
+      "label": "person",
+      "score": 0.5950093269348145
+    }
+  ],
+  "latency": 138.80000001192093,
+  "sourceWidth": 810,
+  "sourceHeight": 1080,
+  "crop": {
+    "x": 0,
+    "y": 0,
+    "width": 810,
+    "height": 1080
+  },
+  "format": "ultralytics-raw",
+  "iouApplicable": true,
+  "coordinateSpace": {
+    "width": 810,
+    "height": 1080,
+    "originalWidth": 810,
+    "originalHeight": 1080,
+    "scale": 1,
+    "scaleX": 1,
+    "scaleY": 1
+  }
+}

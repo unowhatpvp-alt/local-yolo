@@ -46,4 +46,4 @@
 
 ## 适用界限
 
-当前25模型的真实桌面GPU通过不保证所有移动GPU/内存容量。iPhone Safari、iOS安装和物理摄像头/触摸仍未验证。PWA11/11和本地严格Gate通过，GitHub CI/部署及线上验收尚待完成；此模型矩阵不单独构成正式发布证明。历史矩阵说明保存在[接手前文档](diagnostics/pre-takeover-MODEL_COMPATIBILITY.md)。
+当前25模型的真实桌面GPU通过不保证所有移动GPU/内存容量。iPhone Safari、iOS安装和物理摄像头/触摸仍未验证。PWA11/11和本地严格Gate通过，首次GitHub CI、应用提交、部署和线上实测状态见[DELIVERY](DELIVERY.md)；此模型矩阵不单独构成正式发布证明。历史矩阵说明保存在[接手前文档](diagnostics/pre-takeover-MODEL_COMPATIBILITY.md)。

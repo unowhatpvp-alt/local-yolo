@@ -1,6 +1,6 @@
-# Minimal V1.1 当前验收报告 — 候选发布状态
+# Minimal V1.1 应用验收快照
 
-截至2026-10-21，应用已重新执行完整真实模型和浏览器测试：**Node WASM 25/25、内置 Chrome 155 WASM 25/25、真实 NVIDIA Blackwell WebGPU 25/25、56/56自动化测试、14/14应用交互检查均通过**。安全上下文PWA检查为**11/11通过**，严格本地Gate、可复现构建和6组静态验证通过。**本地发布准备通过；最终GitHub CI、提交、Pages部署及线上验收待完成。**
+截至2026-10-21，应用已重新执行完整真实模型和浏览器测试：**Node WASM 25/25、内置 Chrome 155 WASM 25/25、真实 NVIDIA Blackwell WebGPU 25/25、56/56自动化测试、14/14应用交互检查均通过**。安全上下文PWA检查为**11/11通过**，严格本地Gate、可复现构建和6组静态验证通过。**本地发布验证通过。首次应用提交、GitHub CI、Pages运行及线上实测状态统一记录在[发布收据](DELIVERY.md)。**
 
 当前源码/不可变模型指纹：`3f42cae598f691ad6de779f100a6a69f915baeb3075f3454b897f1a6c2bcdb4c`。JSON证据与本指纹绑定；旧报告备份为[接手前报告](diagnostics/pre-takeover-VALIDATION.md)，旧验收和失败记录保留，不把历史结果当作本轮执行。
 
@@ -31,7 +31,7 @@
 | 自动化回归 | 已完成且验证 | 56通过，0失败，0跳过；单元替身不冒充真实推理 |
 | PWA注册/离线/更新隔离/存储恢复 | 已完成且验证 | 11/11真实安全上下文检查通过 |
 | iPhone Safari、iOS PWA、物理摄像头/镜头/触摸 | 因环境限制未验证 | 保留真机复查步骤，不声称通过 |
-| 新CI、最终提交、Pages发布和线上版本 | 待完成 | 本文不是发布确认 |
+| 首次应用提交、CI、Pages与线上状态 | 见发布收据 | [DELIVERY](DELIVERY.md)保存精确版本和实际观察 |
 | Studio/实验训练完整功能 | 尚未实现、超出本版范围 | 保留原入口；额外产品目标待确认 |
 
 ## 测试证据
@@ -54,6 +54,6 @@
 
 存储故障已定位：Chromium已有IndexedDB的预留空间使quota override不立即阻止写入；在隔离测试库中重新建立连接后，真实失败/警告、5个公交结果的内存推理和解除配额后缓存恢复均通过。三次失败与真实配额诊断保留。
 
-最终本地复验：56/56无跳过，生产构建revision `fe0bf848230e`可复现，6组静态产物检查通过，严格Gate通过且`errors=[]`；依赖审计所有级别0，44个JS/MJS语法、78个JSON/manifest解析及`git fsck`通过。下一步执行独立GitHub CI、提交推送，在满足条件后部署和核验线上版本。
+最终本地复验：56/56无跳过，生产构建revision `fe0bf848230e`可复现，6组静态产物检查通过，严格Gate通过且`errors=[]`；依赖审计所有级别0，44个JS/MJS语法、78个JSON/manifest解析及`git fsck`通过。首次发布的独立GitHub CI、提交、部署和线上实测见[发布收据](DELIVERY.md)；本节保留原始本地验收范围。
 
-工作分支为`codex/minimal-v1-release`，原稳定提交`2cea0ebebd3399a77a2d649c44755e54ca0e16b0`与`backup/minimal-v1-2cea0eb`保留。不得强推或重写历史。发布和回滚状态统一记录在[DELIVERY](DELIVERY.md)，恢复步骤见[RELEASE_GATE](RELEASE_GATE.md)。
+实现分支为`codex/minimal-v1-release`，原稳定提交`2cea0ebebd3399a77a2d649c44755e54ca0e16b0`与`backup/minimal-v1-2cea0eb`保留。不得强推或重写历史。发布和回滚状态统一记录在[DELIVERY](DELIVERY.md)，恢复步骤见[RELEASE_GATE](RELEASE_GATE.md)。

@@ -1,4 +1,4 @@
-Local YOLO — Minimal V1.1 候选版
+Local YOLO — Minimal V1.1
 更新日期：2026-10-21（America/New_York）
 
 这是浏览器本地 YOLO 推理工具，通过静态站点运行，无须 Python 推理服务器。
@@ -26,9 +26,9 @@ Local YOLO — Minimal V1.1 候选版
 - iPhone Safari、iOS安装、物理摄像头、镜头、原生倍率和真实触摸硬件未验证。
 - 分类模型存在真实误判；兼容性通过不代表识别准确率100%。
 
-发布状态：本地发布准备通过。最终CI、提交和GitHub Pages发布/线上验收待完成。
+发布状态、首次应用提交、CI/Pages运行和线上实测收据见 docs/DELIVERY.md。
 当前线上地址：https://unowhatpvp-alt.github.io/local-yolo/
-这个地址存在不表示候选版已经部署。以 docs/DELIVERY.md 的最终记录为准。
+页面地址本身不代表某次部署已验收；以首次发布收据中的提交、运行和实测记录为准。
 
 资料：
 - README.md：运行、模型、缓存、导出与发布方式。

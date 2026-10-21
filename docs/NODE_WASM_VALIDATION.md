@@ -35,4 +35,4 @@ npm run validate:models
 
 此前250次Nano持续推理记录使用旧指纹`ee5bfc2d…`，是历史诊断，不声称本轮重跑或对当前源码的无限稳定性证明。旧完整说明保存在[接手前Node报告](diagnostics/pre-takeover-NODE_WASM_VALIDATION.md)。本轮自动化56/56、完整25模型和实际浏览器回归独立执行。
 
-Node通过不代替浏览器、GPU或PWA。浏览器WASM和真实GPU已分别25/25通过，PWA11/11及本地严格Gate已通过，最终GitHub CI/部署及线上验收尚待完成；发布状态见[DELIVERY](DELIVERY.md)。
+Node通过不代替浏览器、GPU或PWA。浏览器WASM和真实GPU已分别25/25通过，PWA11/11及本地严格Gate已通过，首次GitHub CI、应用提交、部署和线上实测状态见[DELIVERY](DELIVERY.md)。
