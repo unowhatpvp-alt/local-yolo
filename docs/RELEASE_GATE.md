@@ -1,5 +1,7 @@
 # Minimal V1.1 release gate
 
+Current acceptance policy follows the user’s 2026-10-21 instruction: [device limits and actual fallback requirements](RELEASE_POLICY_V1_1.md). Hardware tests unavailable in Work may remain explicitly unverified when the actual automatic WASM fallback and all other necessary checks pass.
+
 Production stays on the existing Minimal V1 until this gate passes and the release is approved. Development validation is not deployment authorization. Required online scope is **25 genuine YOLO26 exports**: detection, segmentation, pose, classification and OBB, each N/S/M/L/X. YOLO11 is a local-import regression target; it does not substitute for any required YOLO26 model.
 
 ## Preserved baseline
@@ -13,7 +15,7 @@ Only `main` can run the production Pages build/deploy jobs. A manual dispatch on
 
 ## Required commands and artifacts
 
-Run `npm ci`, `node scripts/fetch-test-fixtures.mjs`, `npm test`, `npm run validate:models`, `npm run build`, then `node scripts/check-release-gate.mjs`.
+Run `npm ci`, `node scripts/verify-model-evidence.mjs`, the required Nano/media fixture preparation, `npm test`, `npm run build`, the actual CI browser integration runner, then `node scripts/check-release-gate.mjs`. Re-execute `npm run validate:models` when application/model inputs change or evidence cannot be verified; unchanged valid real Node results are reused. The isolated browser runner dependency and exact commands are pinned in the workflows.
 
 The final command exits nonzero until **all** required evidence is current:
 
@@ -39,9 +41,10 @@ Keep these backend states separate:
 - `browserWasm.status: pass` means actual browser WASM execution.
 - `webgpu.status: pass` means actual WebGPU execution.
 - `webgpu.status: unsupported-operator-fallback` requires a real acquired GPU adapter, a recorded initialization/inference operator or kernel error and a successful actual browser WASM fallback. It is a supported fallback case, not a GPU pass.
-- `webgpu.status: environment-unavailable`, `pending`, `fail` or missing evidence blocks release. An insecure cloud origin or absent adapter is not proof of browser GPU compatibility and is not an operator fallback.
+- `webgpu.status: environment-wasm-fallback` requires an actual secure-browser capability observation with no acquired GPU adapter, a specific reason, and this model’s actual automatic-backend WASM image/video inference. It passes compatibility under the current user-approved device-limit policy, while hardware WebGPU stays unverified.
+- Bare `environment-unavailable`, `pending`, `fail` or missing execution evidence still blocks release. An insecure cloud observation alone cannot satisfy the new fallback check.
 
-A genuine environmental limitation is recorded honestly. It does not automatically waive a required check. If it prevents completing the release, present the exact remaining limitation and wait for the user's decision; do not silently reduce scope, fabricate a pass or change the gate retrospectively.
+A genuine environmental limitation is recorded honestly. The explicit revised user instruction permits unavailable real-device checks to remain unverified. It does not waive actual WASM/model/PWA execution or permit a reduced model scope. Unknown software failures remain blockers.
 
 ## Browser and PWA checks
 

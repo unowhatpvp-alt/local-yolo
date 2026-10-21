@@ -7,13 +7,16 @@ import {spawn,execFileSync} from 'node:child_process';
 import {resolve,join,extname} from 'node:path';
 import {tmpdir} from 'node:os';
 import {pathToFileURL} from 'node:url';
-import {sourceFingerprint} from './check-release-gate.mjs';
+import {sourceFingerprint,validateReleaseEvidence} from './check-release-gate.mjs';
+import {MODELS} from '../src/core/catalog.js';
 
 const ROOT=process.cwd(),OUT=resolve('test-results/browser-release');
 await mkdir(OUT,{recursive:true});
 const fingerprint=await sourceFingerprint();
 const baseline=JSON.parse(await readFile('docs/browser-validation-matrix.json','utf8'));
 const previousPwa=JSON.parse(await readFile('docs/pwa-validation.json','utf8'));
+const previousNode=JSON.parse(await readFile('docs/model-validation-matrix.json','utf8'));
+const reusableBackend=baseline.backendCompatibilityRun&&validateReleaseEvidence({fingerprint,catalog:MODELS,node:previousNode,browser:baseline,pwa:previousPwa}).errors.every(e=>e.startsWith('PWA '));
 assert.equal(baseline.sourceFingerprint,fingerprint,'Existing model evidence must remain current.');
 const {chromium}=await import(pathToFileURL(process.env.LOCAL_YOLO_PLAYWRIGHT_MODULE||'/tmp/local-yolo-browser-qa/node_modules/playwright/index.mjs').href);
 const checks=['manifest','serviceWorkerInstalled','offlineColdStart','cachedModelOfflineInference','cacheDeletion','updateWaiting','oldTabConsistency','activateNewVersion','noVersionMix','storageFailureRecovery','subpathResources'];
@@ -49,14 +52,16 @@ try{
  browser=await chromium.launch({headless:true});
  context=await browser.newContext({viewport:{width:390,height:844},locale:'en-US',serviceWorkers:'allow',acceptDownloads:true});
  context.on('page',page=>{page.on('pageerror',e=>errors.push({url:page.url(),message:e.stack||e.message}));page.on('console',m=>{if(['error','warning'].includes(m.type()))consoleMessages.push({type:m.type(),text:m.text(),url:page.url()})});page.on('request',r=>requests.push({url:r.url(),method:r.method()}));});
- // Test missing GPU compatibility with actual automatic inference for every model.
- const matrix=await context.newPage();await matrix.exposeFunction('__recordActualRender',async({modelId,sha256,png})=>{assert(/^yolo26-(detect|segment|pose|classify|obb)-[nsmlx]$/.test(modelId));const bytes=Buffer.from(png.split(',')[1],'base64');assert.equal(createHash('sha256').update(bytes).digest('hex'),sha256);await mkdir(join(OUT,'renders'),{recursive:true});await writeFile(join(OUT,'renders',modelId+'.png'),bytes);});
+ // Reuse only fully verified actual backend results for this exact application.
+ if(!reusableBackend){
+ const matrix=await context.newPage();await matrix.exposeFunction('__recordActualRender',async({modelId,sha256,png})=>{assert(/^yolo26-(detect|segment|pose|classify|obb)-[nsmlx]$/.test(modelId));const bytes=Buffer.from(png.split(',')[1],'base64');assert.equal(createHash('sha256').update(bytes).digest('hex'),sha256);await mkdir(join(OUT,'renders'),{recursive:true});await writeFile(join(OUT,'renders',modelId+'.png'),bytes);console.log('ACTUAL_MODEL_RENDER_CAPTURED',modelId,sha256);});
  await matrix.goto('http://127.0.0.1:4173/local-yolo/tests/browser-harness.html');await matrix.locator('#run-gpu').waitFor({state:'visible'});await matrix.waitForFunction(()=>!document.querySelector('#run-gpu').disabled);await matrix.locator('#run-gpu').click();
  await matrix.waitForFunction(()=>{try{return !!JSON.parse(document.querySelector('#evidence-json').value).run.completedAt}catch{return false}},null,{timeout:1800000});
  const auto=JSON.parse(await matrix.locator('#evidence-json').inputValue());await writeFile(join(OUT,'actual-auto-backend-matrix.json'),JSON.stringify(auto,null,2));assert.equal(auto.executedCount,25);assert.equal(auto.partial,false);
  for(const row of auto.models){assert(['pass','environment-wasm-fallback','unsupported-operator-fallback'].includes(row.webgpu.status),row.id+': '+JSON.stringify(row.webgpu));const actual=row.webgpu.status==='pass'?row.webgpu:row.webgpu.fallback;assert.equal(actual.status,'pass');assert.equal(actual.video.frames.length,2);assert(actual.image.resultCount>0);const old=baseline.models.find(r=>r.id===row.id);old.webgpu=row.webgpu;old.backendCompatibilitySourceRun=auto.run.id;}
  baseline.previousBrowserWasmRun=baseline.run;baseline.backendCompatibilityRun=auto.run;baseline.run={...auto.run,backend:'WASM plus actual automatic-backend compatibility; original WASM run retained'};
  await writeFile('docs/browser-validation-matrix.json',JSON.stringify(baseline,null,2)+'\n');await matrix.close();
+ }else{report.backendEvidenceReusedFromRun=baseline.backendCompatibilityRun.id;console.log('REUSED_VERIFIED_AUTO_BACKEND_MODELS',25,baseline.backendCompatibilityRun.id)}
  const page=await context.newPage();await page.goto(report.run.url);await ready(page);
  const environment=await page.evaluate(()=>({secureContext:isSecureContext,navigatorGpu:!!navigator.gpu,userAgent:navigator.userAgent}));assert(environment.secureContext);report.secureContext=true;report.run.userAgent=environment.userAgent;report.environment=environment;report.revisions={prior:priorRevision,candidate:candidateRevision,method:'Two real finalized production artifacts; prior differs by an HTML-only validation marker. No inference code differs.'};
  const manifest=await page.evaluate(async()=>{const response=await fetch(document.querySelector('link[rel=manifest]').href);return response.json()});assert.equal(manifest.display,'standalone');assert.equal(new URL(manifest.scope,report.run.url).pathname,'/local-yolo/');await passed('manifest',{name:manifest.name,display:manifest.display,scope:manifest.scope,icons:manifest.icons});
