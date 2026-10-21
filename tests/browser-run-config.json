@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "sourceFingerprint": "0f9955933f5a6ccf170f3ca1880433c5bc6eef090de993388cda8dcac2d1a579",
-  "frozenAt": "2026-10-21T01:11:16.743Z",
+  "sourceFingerprint": "ee5bfc2de06d9d6032a9be329c8138c097187cfb646fd9528368dc78e32bbb7e",
+  "frozenAt": "2026-10-21T01:56:18.979803+00:00",
   "requiredModels": [
     "yolo26-detect-n",
     "yolo26-detect-s",

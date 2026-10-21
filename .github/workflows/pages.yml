@@ -27,9 +27,16 @@ jobs:
         with:
           path: tests/fixtures
           key: yolo26-fixtures-${{ hashFiles('src/core/model-manifest.json') }}
+      - name: Install real-video validation dependency
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          ffmpeg -version
       - run: node scripts/fetch-test-fixtures.mjs
       - name: Unit, geometry, lifecycle and PWA checks
         run: npm test
+        env:
+          FETCH_E2E_FIXTURES: '1'
       - name: Execute every required real YOLO26 export
         run: npm run validate:models
       - run: npm run build
