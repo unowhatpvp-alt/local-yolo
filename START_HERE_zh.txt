@@ -1,0 +1,37 @@
+Local YOLO — Minimal V1
+
+这是实际可运行的纯前端应用，所有模型推理在用户设备执行。
+
+目录：
+- src/：应用源码与独立推理核心。
+- dist/：构建输出，运行 npm run build 生成；完整下载包已附带。
+- .github/workflows/pages.yml：GitHub Pages 自动测试、构建与部署。
+- docs/VALIDATION.md：实际测试记录与未验证项目。
+- README.md：架构、模型来源、格式、缓存和部署说明。
+
+开发：
+安装 Node.js 22 或更新的受支持版本后，在项目目录执行：
+npm ci
+npm run dev
+打开控制台显示的网址，并使用 /local-yolo/ 子路径。
+
+构建：npm run build
+完整真实模型测试：npm run test:real
+
+GitHub Pages：
+1. 在 GitHub 创建公开仓库 local-yolo。
+2. 把源码提交到 main。node_modules、tests/fixtures、public/ort 不要提交。
+3. 仓库 Settings → Pages → Source 选择 GitHub Actions。
+4. 运行 Test and deploy GitHub Pages 工作流。
+
+GitHub 仓库中的源码通过 Actions 自动构建与部署；部署状态以 Actions 页面为准。
+
+现已开放：YOLO11 N 的检测、分割、姿态、分类、旋转框五种任务。
+其他尺寸和在线 YOLO26 暂不开放，界面有明确标记。
+本地 ONNX 必须符合适配器支持的输入输出规范，并非所有 ONNX 都能运行。
+
+模型来自有固定版本、大小、SHA-256 和 AGPL-3.0 许可信息的社区 ONNX 导出。
+
+注意：摄像头、PWA 和 WebGPU 需要 HTTPS 安全环境；浏览器能力及设备差异会影响支持范围。
+WASM 和真实图片/视频检测已验证；实机摄像头、硬件 WebGPU、各移动系统安装体验仍需在对应设备上检查。
+不要把本包直接当作双击运行的单文件 HTML；需要静态 HTTP(S) 托管或开发服务器。

@@ -1,0 +1,22 @@
+{
+  "name": "local-yolo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/prepare.mjs && vite --host 0.0.0.0",
+    "build": "node scripts/prepare.mjs && vite build && node scripts/finalize-sw.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "preview": "vite preview --host 0.0.0.0",
+    "test:real": "node scripts/fetch-test-fixtures.mjs && node --test tests/real-inference.test.mjs"
+  },
+  "dependencies": {
+    "@noble/hashes": "2.0.1",
+    "onnxruntime-web": "1.23.2"
+  },
+  "devDependencies": {
+    "@napi-rs/canvas": "^1.0.12",
+    "vite": "7.3.1"
+  },
+  "license": "AGPL-3.0-only"
+}
